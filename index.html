@@ -68,9 +68,9 @@
 				<h2 id="table-of-contents">Table of Contents</h2>
 				<ul>
 					<li><a href="#intro">Intro</a></li>
-					<li><a href="#workfloweditor">Workflow/Editor</a></li>
+					<li><a href="#workflow-editor">Workflow/Editor</a></li>
 					<li><a href="#examples">Examples</a></li>
-					<li><a href="#hooks">Hooks</a></li>
+					<li><a href="#hooks-methods">Hooks &amp; Methods</a></li>
 					<li><a href="#hello-world">Hello World</a><ul>
 							<li><a href="#-intro-">Intro</a></li>
 							<li><a href="#-setup-">Setup</a></li>
@@ -83,94 +83,41 @@
 					</li>
 					<li><a href="#debugging">Debugging</a></li>
 					<li><a href="#publishing">Publishing</a></li>
-					<li><a href="#recommended-plugins">Recommended Plugins</a></li>
+					<li><a href="#extracting-wayward-assets">Extracting Wayward Assets</a></li>
+					<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
 					<li><a href="#disclaimer">Disclaimer</a></li>
 				</ul>
 				<h2 id="intro">Intro</h2>
-				<p>Wayward is primarily built using HTML5 technologies, and uses TypeScript (a strict superset of JavaScript), which compiles down to normal JavaScript. This is then run through Electron, a cross-platform application that runs browser languages as a desktop app, outside of your browser. </p>
+				<p>Wayward is primarily built using HTML5 technologies and uses TypeScript (a strict superset of JavaScript), which compiles down to normal JavaScript. This is then run through Electron, a cross-platform application that runs browser languages as a desktop app, outside of your browser. </p>
 				<p>You are not required to use TypeScript in your mods; however, it will become harder to maintain and manage your mods using standard JavaScript. Plus, with TypeScript you will get auto completion on all our internal functions and hooks. TypeScript also has strict compilation and error checking, removing a lot of debugging work. This guide is only tailored towards building TypeScript modifications for Wayward.</p>
 				<p>Wayward uses a combination of HTML, CSS, JavaScript, and WebGL (shaders) for all rendering and UI. It is not necessary to have skills and knowledge in these things to begin modding, although it wouldn&#39;t hurt.</p>
-				<p>NOTE: Wayward modding support is Early Access (or beta), just like Wayward itself is. Many things will change and improve over time. Let us know any issues you run into or if you have any ideas for us.</p>
+				<p><strong>NOTE:</strong> Wayward modding support is Early Access (or beta), just like Wayward itself. Many things will change and improve over time. Let us know any issues you run into or if you have any ideas for us.</p>
 				<h2 id="workflow-editor">Workflow/Editor</h2>
-				<p>Follow along in this section if you are not familiar with TypeScript. To compile and write mods for Wayward, you will need an IDE or editor that supports TypeScript. If you are comfortable with the likes of Node.js and NPM you can set up TypeScript yourself with a variety of editors including Sublime, Atom, WebStorm, Visual Studio and more. Visit the <a href="http://www.typescriptlang.org/#download-links">TypeScript site</a> for more information. This guide will use a Visual Studio Code setup below if you need help getting started.</p>
+				<p>Follow along in this section if you are not familiar with TypeScript. To compile and write mods for Wayward, you will need an IDE or editor that supports TypeScript. If you are comfortable with the likes of Node.js and NPM you can set up TypeScript yourself with a variety of editors including Sublime, Atom, WebStorm, Visual Studio and more. Visit the <a href="http://www.typescriptlang.org/#download-links">TypeScript website</a> for more information. This guide will use a Visual Studio Code setup below if you need help getting started.</p>
 				<p><strong>Visual Studio Code</strong></p>
 				<p>Visual Studio Code is a free, cross-platform, open source editor from Microsoft written with JavaScript and deployed via Electron, just like Wayward! It has built-in support for TypeScript.</p>
 				<p>Download Visual Studio Code here: <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p>
 				<p>Install it with the default options/settings.</p>
 				<p><strong>Node.js/NPM/TypeScript</strong></p>
-				<p>Before you can build/compile in Visual Studio Code (or other editors/IDEs) you will need Node.js (NPM) and TypeScript. Download and install Node.js (using the default installation settings): <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+				<p>Before you can build/compile in Visual Studio Code (or other editors/IDEs) you will need Node.js (with NPM) and TypeScript. Download and install Node.js (using the default installation settings): <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
 				<p>Once you install Node.js, you will have access to NPM, or &quot;Node Package Manager&quot;, which allows you to install TypeScript. Open your terminal (Linux/Mac OS X) or command prompt (Windows) and run the following command: </p>
-				<p><code>npm install -g typescript</code></p>
+				<blockquote>
+					<p><code>npm install -g typescript</code></p>
+				</blockquote>
 				<h2 id="examples">Examples</h2>
 				<p>All official Wayward modifications are open source, allowing you to see how to mod various elements of Wayward. We have a GitHub organization with repositories for all of our mods and examples located here: <a href="https://github.com/WaywardGame">https://github.com/WaywardGame</a></p>
-				<p>If you are familiar with Git and/or GitHub, checking out or cloning the repositories should be fairly self-explanatory. If you are not familiar, you can simply browse the files in each repository for the mods. Clicking on the files will display their contents. There is also a &quot;Download ZIP&quot; button located near the top right hand side of each of the main repository pages which will download a .zip file, containing all the resources to view the files and edit them on your computer.</p>
+				<p>If you are familiar with Git and/or GitHub, checking out or cloning the repositories should be fairly self-explanatory. If you are not familiar, you can simply browse the files in each repository for the mods. Clicking on the files will display their contents. There is also a &quot;Download ZIP&quot; option after clicking the &quot;Clone or download&quot; button, located near the top right hand side of each of the main repository pages which will download a .zip file, containing all the resources to view the files and edit them on your computer.</p>
 				<p>If you are not familiar with Git or GitHub at all and want to learn, we would suggest you try out GitHub Desktop: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
 				<p>GitHub Desktop also has a handy help section to you get started:</p>
 				<ul>
 					<li><a href="https://help.github.com/desktop/guides/getting-started/">Getting Started with GitHub Desktop</a></li>
 					<li><a href="https://help.github.com/desktop/guides/contributing/">Contributing to Projects with GitHub Desktop</a></li>
 				</ul>
-				<h2 id="hooks">Hooks</h2>
+				<h2 id="hooks-methods">Hooks &amp; Methods</h2>
 				<p>The main functionality of Wayward modding comes from hooks. Hooks are special places in our code where we have enabled mods to overwrite or modify functionality within Wayward. If you are not familiar with hooks, you will see how they can be used in the <em>Hello World</em> section.</p>
-				<p>Here&#39;s a list of all the current Wayward hooks:</p>
-				<ul>
-					<li>CalculateCreatureMoveType</li>
-					<li>CanConsumeItem</li>
-					<li>CanCreatureAttack</li>
-					<li>CanCreatureMove</li>
-					<li>CanCreatureSpawn</li>
-					<li>CanDropItem</li>
-					<li>CanPlayerAttack</li>
-					<li>CanSeeCreature</li>
-					<li>GetAmbientColorCave</li>
-					<li>GetAmbientColorDay</li>
-					<li>GetAmbientColorNight</li>
-					<li>GetAmbientLightLevel</li>
-					<li>GetCreatureSpriteBatchLayer</li>
-					<li>GetPlayerMaxHealth</li>
-					<li>GetPlayerSpriteBatchLayer</li>
-					<li>IsPlayerSwimming</li>
-					<li>IsTileInspectable</li>
-					<li>OnBuild</li>
-					<li>OnCraft</li>
-					<li>OnCreateWorld</li>
-					<li>OnCreatureDamage</li>
-					<li>OnCreatureDeath</li>
-					<li>OnCreatureSpawn</li>
-					<li>OnDisplayMessage</li>
-					<li>OnGameEnd</li>
-					<li>OnGameStart</li>
-					<li>OnInspectTile</li>
-					<li>OnInventoryItemAdd</li>
-					<li>OnInventoryItemRemove</li>
-					<li>OnInventoryItemUpdate</li>
-					<li>OnItemEquip</li>
-					<li>OnKeyBindPress</li>
-					<li>OnKeyDown</li>
-					<li>OnKeyUp</li>
-					<li>OnMouseDown</li>
-					<li>OnMouseMove</li>
-					<li>OnMouseScroll</li>
-					<li>OnMouseUpOrLeave</li>
-					<li>OnMove</li>
-					<li>OnMoveDirectionUpdate</li>
-					<li>OnNoInputReceived</li>
-					<li>OnPlayerDamage</li>
-					<li>OnShowInGameScreen</li>
-					<li>OnSpawnCreatureFromGroup</li>
-					<li>OnTurnComplete</li>
-					<li>OnTurnStart</li>
-					<li>OnUpdateWeight</li>
-					<li>PostGenerateWorld</li>
-					<li>PostRender</li>
-					<li>PostRenderPostProcess</li>
-					<li>PostRenderWorld</li>
-					<li>PreRender</li>
-					<li>PreRenderPostProcess</li>
-					<li>PreRenderWorld</li>
-					<li>ProcessInput</li>
-					<li>ShouldRender</li>
-				</ul>
+				<p>For a complete listing of hooks, view the full enumeration listing: <a href="https://waywardgame.github.io/enums/mods.hook.html">Enumeration Hook</a></p>
+				<p>Wayward also features a suite of methods to be used when making mods, adding new functionality into the game. Such things as adding keybinds, messages, items, and more are all done through our provided methods.</p>
+				<p>A full listing of both hooks and methods can be found in the mod class: <a href="https://waywardgame.github.io/classes/mods.mod.html">Class Mod</a></p>
 				<h2 id="hello-world">Hello World</h2>
 				<h3 id="-intro-"><strong>Intro</strong></h3>
 				<p>This section assumes you have an editor capable of compiling TypeScript files, and uses Visual Studio Code as a reference for keybinds and functionality. It should also be noted that this is not a TypeScript tutorial. If you want to learn the TypeScript language, please read through the official <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">Handbook</a>.</p>
@@ -185,6 +132,7 @@
 					<li>tsconfig.json</li>
 					<li>helloworld.ts</li>
 				</ul>
+				<p><strong>NOTE:</strong> Having trouble creating a .vscode folder in Windows? Take a look in the <a href="#windows-is-showing-a-you-must-type-a-file-name-dialog-when-trying-to-rename-a-folder-vscode-">Frequently Asked Questions</a> for the solution.</p>
 				<h3 id="-vscode-tasks-json-"><strong>/.vscode/tasks.json</strong></h3>
 				<p>Visual Studio Code needs to know that we want to build our mods with TypeScript. Adding a tasks.json file in a new folder named &quot;.vscode&quot; with the following inserted will build your project with Ctrl+Shift+B.</p>
 				<pre><code class="lang-json">{
@@ -198,13 +146,13 @@
 </code></pre>
 				<h3 id="-mod-reference-"><strong>/mod-reference/</strong></h3>
 				<p>The contents of this folder is located here: <a href="https://github.com/WaywardGame/mod-reference/">https://github.com/WaywardGame/mod-reference/</a></p>
-				<p>Refer to the <strong>Examples</strong> section if you are not familiar with GitHub. </p>
+				<p>Refer to the <a href="#examples">Examples</a> section if you are not familiar with GitHub. </p>
 				<p>It is recommended you keep this up to date with what is located on GitHub as this will change from version to version of Wayward. This folder contains all the definitions for functions in Wayward so that TypeScript can autocomplete  and compile your mod properly.</p>
 				<h3 id="-mod-json-"><strong>mod.json</strong></h3>
 				<p>You can think of the mod.json file as the description file for your mod. It describes what it does and how it behaves. It does this through a set of properties, which we will describe below. It should be updated every time you publish it to Steam. Here&#39;s a sample of what it should look like for Hello World:</p>
 				<pre><code class="lang-json">{
     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Hello World"</span>,
-    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Hello World is an example mod, shown in the Modding Guide, located here: https://github.com/WaywardGame/mod-reference"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Hello World is an example mod, shown in the Modding Guide, located here: https://waywardgame.github.io/"</span>,
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
     <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Your Name Here"</span>,
     <span class="hljs-attr">"compatible_minor_versions"</span>: [
@@ -220,9 +168,9 @@
 }
 </code></pre>
 				<p>Most of this should be fairly self-explanatory.</p>
-				<p><code>compatible_minor_versions</code> will allow your mod to stop from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have <code>&quot;compatible_minor_versions&quot;: [ 2 ]</code> set, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatible_minor_versions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version.</p>
+				<p><code>compatible_minor_versions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have <code>&quot;compatible_minor_versions&quot;: [ 2 ]</code> set, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatible_minor_versions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version (not recommended).</p>
 				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, terrain you will want to set this to false or omit it completely.</p>
-				<p><code>hooks</code> will contain a list of Hooks, which represent all the functionality you are modifying in Wayward. Refer to the <em>Hooks</em> section for more information. Please note that the hook names in this section are fully <em>CamelHump</em> cased.</p>
+				<p><code>hooks</code> will contain a list of Hooks, which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/mods.hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section are fully <em>CamelHump</em> cased.</p>
 				<p>Other mod.json properties include:</p>
 				<p><code>required_mods</code> is an array which contains strings of Steam Workshop IDs. It is not included in this example, but looks like the following:</p>
 				<pre><code class="lang-json">&quot;required_mods&quot;: [
@@ -251,7 +199,7 @@
     }
 }
 </code></pre>
-				<p>This will be the same across all your mods generally. If you want to know more on tsconfig, review the official documentation on it <a href="http://www.typescriptlang.org/docs/handbook/tsconfig.json.html">here</a>.</p>
+				<p>This will be the same across all your mods generally. If you want to know more on tsconfig, review the official documentation on it <a href="http://www.typescriptlang.org/docs/handbook/tsconfig-json.html">here</a>.</p>
 				<h3 id="-helloworld-ts-"><strong>helloworld.ts</strong></h3>
 				<p>Finally we get to the actual functionality and coding of our mod in helloworld.ts. Let&#39;s start with the basics.</p>
 				<pre><code class="lang-typescript"><span class="hljs-comment">/// &lt;reference path="mod-reference/modreference.d.ts"/&gt;</span>
@@ -287,7 +235,7 @@
     ui.displayMessage(<span class="hljs-keyword">this</span>.helloWorld, MessageType.Good);
 }
 </code></pre>
-				<p>Here&#39;s where the name of the mod comes from. As you can see, we added new message to the game. It will display &quot;Hello World!&quot; when you start a new game, hence the new onGameStart hook. We also added some console logs to the game. These will not be shown to the player, but can be useful for debbuging or logging information. They will only show when you have your console open. You can do this from the Options menu under &quot;Developer&quot;. Let&#39;s add some more functionality:</p>
+				<p>Here&#39;s where the name of the mod comes from. As you can see, we added new message to the game. It will display &quot;Hello World!&quot; when you start a new game, hence the new onGameStart hook. We also added some console logs to the game. These will not be shown to the player, but can be useful for debbuging or logging information. They will only show when you have your console open. Let&#39;s add some more functionality:</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">private</span> helloLeftHand: <span class="hljs-built_in">number</span>;
 <span class="hljs-keyword">private</span> helloRightHand: <span class="hljs-built_in">number</span>;
 
@@ -385,21 +333,59 @@
 }
 </code></pre>
 				<p>You can compile your script with &quot;Ctrl+Shift+B&quot; by default. After it is compiled, you will see a bunch of new files in your helloworld directory. These are the files Wayward will use. If you load Wayward, under &quot;Manage Mods&quot;, you will now see your Hello World mod under &quot;Local Mods&quot;.</p>
-				<p>It&#39;s not much of a mod, but it works! Please review the <em>Example</em> section for a better grasp on what is possible and how to accomplish more in your mods.</p>
+				<p>It&#39;s not much of a mod, but it works!</p>
 				<h2 id="debugging">Debugging</h2>
-				<p>You can open the developer tools at any time within Wayward by clicking the &quot;Toggle Developer Tools&quot; button located in the bottom of the options menu. You can execute arbitrary  code while this menu is opened, log console commands, explore native functions and definitions, inspect UI elements, and more.</p>
+				<p>You can open the developer tools at any time within Wayward by clicking the &quot;Toggle Developer Tools&quot; button located in the bottom of the options menu. You can execute arbitrary code while this menu is opened, log console commands, explore native functions and definitions, inspect UI elements, and more.</p>
 				<p>If you want them to start open by default when you run Wayward, you can open the <code>launch_options.json</code> file within the root directory of Wayward on Steam, and change the following line: <code>&quot;devtools&quot;: false,</code> to <code>&quot;devtools&quot;: true,</code>.</p>
-				<p>We would also recommend subscribing to and enabling the &quot;<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=474819610">Developer Tools</a>&quot; mod, available on the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=474819610">Steam Workshop</a>. This mod allows the changing of tiles, spawning of items, creatures, doodads, refreshing stats, noclip, killing all creatures, and more! Furthermore, it adds an interface for refreshing mods within the bottom of the options menu while in-game on the fly so you don&#39;t have to reload the full game when developing a modification.</p>
+				<p>We would also recommend subscribing to and enabling the &quot;<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=474819610">Developer Tools</a>&quot; mod, available on the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=474819610">Steam Workshop</a>. This mod allows the changing of tiles, spawning of items, creatures, doodads, refreshing stats, adds noclip, allows killing of all creatures, and more! Furthermore, it adds an interface for refreshing mods within the bottom of the options menu while in-game on the fly so you don&#39;t have to reload the full game when testing a modification.</p>
 				<h2 id="publishing">Publishing</h2>
 				<p>After you are happy with your mod, why not publish it to Steam Workshop? You will be able to edit most things via the Steam interface after publishing it, but you&#39;ll want to include a few things before releasing it as described below.</p>
 				<p><strong>NOTE: Please do not upload the Hello World modification to the Steam Workshop. Make something fun!</strong></p>
 				<p>If you place a square formatted .png image in the root mod folder named &quot;mod.png&quot; this will be the thumbnail/main image for the mod when it gets uploaded to the Steam Workshop. We recommend a size of 720x720 pixels, although this gets shrunk down to around 77x77; but normally appears at 268x268 inside the Workshop page, so please use 268x268 as a minimum size.</p>
 				<p>When you are ready to go, and you have performed all the steps outlined in <em>Hello World</em> section, upon launching Wayward and going in the <em>Manage Mods</em> menu, you will see an &quot;arrow&quot; icon to the right hand side of your mod. Clicking it will allow you to publish your mod to the Steam Workshop. At any point you make changes and build/compile your mod, you can simply click this again to send an update to Steam.</p>
 				<p>Everything else about your entry is controlled via Steam. This includes uploading screenshots, links, required mod displaying, stats, and more. You can quickly get to your Workshop entry by clicking the &quot;eye&quot; icon next to your mod in the <em>Manage Mods</em> menu listing. You will see a full suite of administrative options on that page if you are logged in to Steam.</p>
-				<h2 id="recommended-plugins">Recommended Plugins</h2>
-				<p>If you are using Visual Studio Code, the following is a listing of recommended plugins to improve your coding experience with Wayward.</p>
-				<p><strong><a href="https://marketplace.visualstudio.com/items?itemName=eg2.tslint">TSLint</a></strong></p>
-				<p>Integrates the tslint linter for the TypeScript language into VS Code. This requires tslint to be installed locally or globally (using <code>npm install -g tslint typescript</code> for example). It drastically improves code quality, corrects inconsistencies, and helps find potential issues in your code.</p>
+				<h2 id="extracting-wayward-assets">Extracting Wayward Assets</h2>
+				<p>Want to extract the assets (or source files) from Wayward for modifications? The complete repository of Wayward files are located in the resources folder within the Wayward Steam directory, in an archive named &quot;app.asar&quot;. This cannot be opened or extracted using conventional means; however, using NPM you can install a package to extract the files from this archive. Use the following command:</p>
+				<blockquote>
+					<p><code>npm install -g asar</code></p>
+				</blockquote>
+				<p>After it is installed, change directories to where the app.asar is located, for example:</p>
+				<blockquote>
+					<p><code>cd &quot;C:\Program Files (x86)\Steam\steamapps\common\Wayward\resources&quot;</code></p>
+				</blockquote>
+				<p>Next extract it using:</p>
+				<blockquote>
+					<p><code>asar extract app.asar app</code></p>
+				</blockquote>
+				<p>This will extract the full archive to a folder named &quot;app&quot; within the resources folder.</p>
+				<p>Full documentation on asar (Electron Archive) can be found here: <a href="https://github.com/electron/asar">asar - Electron Archive</a></p>
+				<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+				<h3 id="visual-studio-code-is-showing-errors-even-in-example-mods-and-or-cannot-compile-">Visual Studio Code is showing errors (even in example mods) and/or cannot compile.</h3>
+				<p>This is a common issue you may run into if you have followed this guide in the past but is now showing errors, even when copying over the new example mods/references. TypeScript updates will be a fairly constant thing in Wayward until TypeScript is more mature. It&#39;s possible your TypeScript installation is out of date.</p>
+				<p>You can check your current TypeScript version by opening your terminal (Linux/Mac OS X) or command prompt (Windows) and running the following command: </p>
+				<blockquote>
+					<p><code>tsc -v</code></p>
+				</blockquote>
+				<p>You can update it by running the install command again:</p>
+				<blockquote>
+					<p><code>npm install -g typescript</code></p>
+				</blockquote>
+				<p>Make sure to restart your editor before trying again.</p>
+				<h3 id="how-do-i-open-the-console-in-game-">How do I open the console in-game?</h3>
+				<p>This is explained a bit in the <a href="#debugging">Debugging</a> section of this guide.</p>
+				<p>But in short: open the options menu, scroll near the bottom, and click &quot;Toggle Developer Tools&quot;. This will open the Developer Tools which features the console.</p>
+				<h3 id="windows-is-showing-a-you-must-type-a-file-name-dialog-when-trying-to-rename-a-folder-vscode-">Windows is showing a &quot;You must type a file name.&quot; dialog when trying to rename a folder &quot;.vscode&quot;.</h3>
+				<p>You can bypass this limitation by downloading/cloning one of the example mods and just copying the .vscode folder for your own mod, or by creating the directory using the command prompt. To do so, change your directory to the location you wish to make the .vscode folder like so:</p>
+				<blockquote>
+					<p><code>cd &quot;C:\Program Files (x86)\Steam\steamapps\common\Wayward\mods\helloworld&quot;</code></p>
+				</blockquote>
+				<p>Then run the following:</p>
+				<blockquote>
+					<p><code>mkdir .vscode</code></p>
+				</blockquote>
+				<h3 id="i-need-more-help-">I need more help!!!</h3>
+				<p>Calm down! The community is here to help. Simply post your issue or problem in the <a href="http://steamcommunity.com/workshop/discussions/?appid=379210">Workshop discussion forum</a>.</p>
+				<p>Want more of a real-time support approach? You can also try on <a href="https://discordapp.com/invite/0W1JEHHVVKmaxyP9">Discord</a>. Make sure to post in the <code>#wayward-modding</code> channel.</p>
 				<h2 id="disclaimer">Disclaimer</h2>
 				<p>By submitting a Workshop creation for Wayward, you understand that Wayward is a work in progress. As such, many things will change and be added over time. This can result in the following:</p>
 				<ul>
@@ -410,7 +396,7 @@
 				<p>In the case of breaking functionality, we will try our best to limit such things from happening; however, due to the very nature of a beta/Early Access title, many new ideas, systems, and additions will eventually make it into Wayward. As this is the case, we cannot guarantee your Workshop submission will continue to work indefinitely, nor cannot guarantee that your submission will always be necessary as we may build certain features/functionality/content into the game directly.</p>
 				<p>Our &quot;<a href="https://trello.com/b/PWX1Hpjn/wayward-todo">todo</a>&quot; and idea list is huge and it&#39;s likely many ideas are already planned for Wayward or were submitted to us previously. If we have in fact taken direct inspiration from your idea/submission, we will always contact you beforehand. The community and player-base has always delivered us great ideas. Steam Workshop allows for those ideas to become reality faster than they would otherwise appear in the game by us.</p>
 				<p>That being said, we hope this does not hinder you from making Wayward into whatever you want and sharing your creativity with the community.</p>
-				<p>Have fun!</p>
+				<p><strong>Have fun!</strong></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
