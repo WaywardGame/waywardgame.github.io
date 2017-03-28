@@ -109,7 +109,7 @@
 					<p><code>npm install -g typescript</code></p>
 				</blockquote>
 				<h2 id="examples">Examples</h2>
-				<p>All official Wayward modifications are open source, allowing you to see how to mod various elements of Wayward. We have a GitHub organization with repositories for all of our mods and examples located here: <a href="https://github.com/WaywardGame">https://github.com/WaywardGame</a></p>
+				<p>All official Wayward modifications are open source, allowing you to see how to mod various elements of Wayward. We have a GitHub organization with repositories for all our mods and examples located here: <a href="https://github.com/WaywardGame">https://github.com/WaywardGame</a></p>
 				<p>If you are familiar with Git and/or GitHub, checking out or cloning the repositories should be fairly self-explanatory. If you are not familiar, you can simply browse the files in each repository for the mods. Clicking on the files will display their contents. There is also a &quot;Download ZIP&quot; option after clicking the &quot;Clone or download&quot; button, located near the top right hand side of each of the main repository pages which will download a .zip file, containing all the resources to view the files and edit them on your computer.</p>
 				<p>If you are not familiar with Git or GitHub at all and want to learn, we would suggest you try out GitHub Desktop: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
 				<p>GitHub Desktop also has a handy help section to you get started:</p>
@@ -119,9 +119,9 @@
 				</ul>
 				<h2 id="hooks-methods">Hooks &amp; Methods</h2>
 				<p>The main functionality of Wayward modding comes from hooks. Hooks are special places in our code where we have enabled mods to overwrite or modify functionality within Wayward. If you are not familiar with hooks, you will see how they can be used in the <em>Hello World</em> section.</p>
-				<p>For a complete listing of hooks, view the full enumeration listing: <a href="https://waywardgame.github.io/enums/mods.hook.html">Enumeration Hook</a></p>
+				<p>For a complete listing of hooks, view the full enumeration listing: <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a></p>
 				<p>Wayward also features a suite of methods to be used when making mods, adding new functionality into the game. Such things as adding keybinds, messages, items, and more are all done through our provided methods.</p>
-				<p>A full listing of both hooks and methods can be found in the mod class: <a href="https://waywardgame.github.io/classes/mods.mod.html">Class Mod</a></p>
+				<p>A full listing of both hooks and methods can be found in the mod class: <a href="https://waywardgame.github.io/classes/mod.html">Class Mod</a></p>
 				<h2 id="hello-world">Hello World</h2>
 				<h3 id="-intro-"><strong>Intro</strong></h3>
 				<p>This section assumes you have an editor capable of compiling TypeScript files, and uses Visual Studio Code as a reference for keybinds and functionality. It should also be noted that this is not a TypeScript tutorial. If you want to learn the TypeScript language, please read through the official <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">Handbook</a>.</p>
@@ -174,7 +174,7 @@
 				<p>The following is an explanation of the properties in the mod.json file (some not shown above):</p>
 				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have <code>&quot;compatibleMinorVersions&quot;: [ 2 ]</code> set, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatibleMinorVersions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version (not recommended).</p>
 				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, terrain you will want to set this to false or omit it completely.</p>
-				<p><code>hooks</code> will contain a list of Hooks, which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/mods.hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section <em>must</em> be fully <em>CamelHump</em> cased.</p>
+				<p><code>hooks</code> will contain a list of Hooks, which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section <em>must</em> be fully <em>CamelHump</em> cased.</p>
 				<p>Other mod.json properties include:</p>
 				<p><code>requiredMods</code> is an array which contains strings of Steam Workshop IDs. It is not included in this example, but looks like the following:</p>
 				<pre><code class="lang-json">&quot;requiredMods&quot;: [
@@ -222,7 +222,13 @@
 }
 </code></pre>
 				<p>Here we start by importing the &quot;Mod&quot; class which will allow us to extend it with our new &quot;HelloWorld&quot; class. This is where the next bit comes in. We use an export default class where we will include the hooks that we use in our mod. Let&#39;s start off by declaring the onLoad and onUnload hooks.</p>
-				<p>Please note that the onInitialize, onLoad, onUnload, and onSave are special/default hooks that do not need to be defined in the &quot;hooks&quot; listing within the mod.json.</p>
+				<p>Please note that the onInitialize, onLoad, onUnload, and onSave are special/default hooks that do not need to be defined in the &quot;hooks&quot; listing within the mod.json file. They will be executed whether or not you directly use them in your modification.</p>
+				<ul>
+					<li>onInitialize is executed as Wayward is loaded (or enabled via the mod manager). You can setup custom functionality within it or load and interact with global save data.</li>
+					<li>onLoad is executed when you load a Wayward save (or start a new game). This is where the bulk of your modding methods are defined. Things like adding customs messages, adding new items or actions, etc.</li>
+					<li>onUnload is executed when the current game is unloaded (user quits the game or goes back to the main menu). You can use it to remove features the mod added that may persist unintendedly into the next load.</li>
+					<li>onSave is called before onUnload and is used to perform saving functionality.</li>
+				</ul>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { MessageType } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/Messages"</span>;
 <span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 
@@ -454,6 +460,9 @@
 				<blockquote>
 					<p><code>mkdir .vscode</code></p>
 				</blockquote>
+				<h3 id="how-to-i-upgrade-my-mod-from-version-to-version-">How to I upgrade my mod from version to version?</h3>
+				<p>When we make significant changes to our codebase, for example: upgrading from ES5 to ES6 in beta 2.2, or moving to a modular codebase in beta 2.3, you may have to make many changes to your modification so that it runs on the latest version. This is an unfortunate side effect of still being in beta. As we move to towards a more stable, non-beta release, you may expect less of these huge changes.</p>
+				<p>As we make these changes, we always make sure our documentation (and this guide) is up to date and shows how to make mods for the current or upcoming version. You can always find the <a href="#hello-world">Hello World</a> section showcasing how to create a very basic mod for the latest version. Also, we supply all our <a href="https://github.com/WaywardGame">official modifications</a> on GitHub as examples on what we do to update our own mods. You can browse the commits of each mod to see what we did as we upgraded to each Wayward version. You can even browse the repository for this <a href="https://github.com/WaywardGame/waywardgame.github.io/commits/master">guide</a> to see what we are changing in our documentation from version to version.</p>
 				<h3 id="i-need-more-help-">I need more help!!!</h3>
 				<p>Calm down! The community is here to help. Simply post your issue or problem in the <a href="http://steamcommunity.com/workshop/discussions/?appid=379210">Workshop discussion forum</a>.</p>
 				<p>Want more of a real-time support approach? You can also try on <a href="https://discordapp.com/invite/0W1JEHHVVKmaxyP9">Discord</a>. Make sure to post in the <code>#wayward-modding</code> channel.</p>
