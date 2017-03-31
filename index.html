@@ -72,14 +72,15 @@
 					<li><a href="#hello-world">Hello World</a><ul>
 							<li><a href="#-intro-">Intro</a></li>
 							<li><a href="#-setup-">Setup</a></li>
-							<li><a href="#-vscode-tasks-json-">/.vscode/tasks.json</a></li>
-							<li><a href="#-mod-reference-">/mod-reference/</a></li>
-							<li><a href="#-mod-json-">mod.json</a></li>
-							<li><a href="#-tsconfig-json-">tsconfig.json</a></li>
-							<li><a href="#-helloworld-ts-">HelloWorld.ts</a></li>
+							<li><a href="#helloworld-vscode-tasks-json">/.vscode/tasks.json</a></li>
+							<li><a href="#helloworld-mod-reference-">/mod-reference/</a></li>
+							<li><a href="#helloworld-mod-json">mod.json</a></li>
+							<li><a href="#helloworld-tsconfig-json">tsconfig.json</a></li>
+							<li><a href="#helloworld-helloworld-ts">HelloWorld.ts</a></li>
 						</ul>
 					</li>
 					<li><a href="#json-specifications">JSON Specifications</a><ul>
+							<li><a href="#-mod-json-">mod.json</a></li>
 							<li><a href="#-imageoverrides-json-">imageOverrides.json</a></li>
 							<li><a href="#-language-json-">language.json</a></li>
 							<li><a href="#-customizations-json-">customizations.json</a></li>
@@ -118,10 +119,10 @@
 					<li><a href="https://help.github.com/desktop/guides/contributing/">Contributing to Projects with GitHub Desktop</a></li>
 				</ul>
 				<h2 id="hooks-methods">Hooks &amp; Methods</h2>
-				<p>The main functionality of Wayward modding comes from hooks. Hooks are special places in our code where we have enabled mods to overwrite or modify functionality within Wayward. If you are not familiar with hooks, you will see how they can be used in the <em>Hello World</em> section.</p>
-				<p>For a complete listing of hooks, view the full enumeration listing: <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a></p>
-				<p>Wayward also features a suite of methods to be used when making mods, adding new functionality into the game. Such things as adding keybinds, messages, items, and more are all done through our provided methods.</p>
-				<p>A full listing of both hooks and methods can be found in the mod class: <a href="https://waywardgame.github.io/classes/mod.html">Class Mod</a></p>
+				<p>Wayward features a suite of methods to be used when making mods, adding new functionality into the game. Such things as adding keybinds, messages, items, and more are all done through our provided methods.</p>
+				<p>A full listing of the methods and hooks provided out of the box can be found in the mod class: <a href="https://waywardgame.github.io/classes/mod.html">Class Mod</a></p>
+				<p>The main functionality of Wayward modding comes from hooks. Hooks are special places in our code where we have enabled mods to overwrite or modify functionality within Wayward. If you are not familiar with hooks, you will see how they can be used in the <em>Hello World</em> section below.</p>
+				<p>For a listing of the game&#39;s hooks (details of which can be seen in the <code>Mod</code> class), view the full enumeration: <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a></p>
 				<h2 id="hello-world">Hello World</h2>
 				<h3 id="-intro-"><strong>Intro</strong></h3>
 				<p>This section assumes you have an editor capable of compiling TypeScript files, and uses Visual Studio Code as a reference for keybinds and functionality. It should also be noted that this is not a TypeScript tutorial. If you want to learn the TypeScript language, please read through the official <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">Handbook</a>.</p>
@@ -137,7 +138,7 @@
 					<li>HelloWorld.ts</li>
 				</ul>
 				<p><strong>NOTE:</strong> Having trouble creating a .vscode folder in Windows? Take a look in the <a href="#windows-is-showing-a-you-must-type-a-file-name-dialog-when-trying-to-rename-a-folder-vscode-">Frequently Asked Questions</a> for the solution.</p>
-				<h3 id="-vscode-tasks-json-"><strong>/.vscode/tasks.json</strong></h3>
+				<h3 id="helloworld-vscode-tasks-json">helloworld/.vscode/tasks.json</h3>
 				<p>Visual Studio Code needs to know that we want to build our mods with TypeScript. Adding a tasks.json file in a new folder named &quot;.vscode&quot; with the following inserted will build your project with Ctrl+Shift+B.</p>
 				<pre><code class="lang-json">{
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.1.0"</span>,
@@ -148,11 +149,11 @@
     <span class="hljs-attr">"problemMatcher"</span>: <span class="hljs-string">"$tsc"</span>
 }
 </code></pre>
-				<h3 id="-mod-reference-"><strong>/mod-reference/</strong></h3>
+				<h3 id="helloworld-mod-reference-">helloworld/mod-reference/</h3>
 				<p>The contents of this folder is located here: <a href="https://github.com/WaywardGame/mod-reference/">https://github.com/WaywardGame/mod-reference/</a></p>
 				<p>Refer to the <a href="#examples">Examples</a> section if you are not familiar with GitHub. </p>
 				<p>It is recommended you keep this up to date with what is located on GitHub as this will change from version to version of Wayward. This folder contains all the definitions for functions in Wayward so that TypeScript can autocomplete  and compile your mod properly.</p>
-				<h3 id="-mod-json-"><strong>mod.json</strong></h3>
+				<h3 id="helloworld-mod-json">helloworld/mod.json</h3>
 				<p>You can think of the mod.json file as the description file for your mod. It describes what it does and how it behaves. It does this through a set of properties, which we will describe below. It should be updated every time you publish it to Steam. Here&#39;s a sample of what it should look like for Hello World:</p>
 				<pre><code class="lang-json">{
     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Hello World"</span>,
@@ -171,28 +172,12 @@
     ]
 }
 </code></pre>
-				<p>The following is an explanation of the properties in the mod.json file (some not shown above):</p>
-				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have <code>&quot;compatibleMinorVersions&quot;: [ 2 ]</code> set, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatibleMinorVersions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version (not recommended).</p>
-				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, terrain you will want to set this to false or omit it completely.</p>
-				<p><code>hooks</code> will contain a list of Hooks, which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section <em>must</em> be fully <em>CamelHump</em> cased.</p>
-				<p>Other mod.json properties include:</p>
-				<p><code>requiredMods</code> is an array which contains strings of Steam Workshop IDs. It is not included in this example, but looks like the following:</p>
-				<pre><code class="lang-json">&quot;requiredMods&quot;: [
-    &quot;474819610&quot;
-]
-</code></pre>
-				<p>Set this if you want to require another mod from the Workshop for your mod.</p>
-				<p><code>publishedFileId</code> is a property that is automatically filled in after your mod is published to the Steam Workshop. Do not modify or manually add this property. Wayward will use this when you publish updates to your mod.</p>
-				<p><code>imageOverrides</code> is a property that will allow you to override default graphics in the game. When set to true (<code>&quot;imageOverrides&quot;: true</code>), it will load a dedicated <a href="#-imageoverrides-json-">imageOverrides.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
-				<p><code>languages</code> is a property that will allow you to provide a language without requiring scripts. It takes an array of paths to <a href="#-language-json-">language JSON files</a>. Omitting the property loads no language files. This property is not included in this example, but looks like the following:</p>
-				<pre><code class="lang-json">&quot;languages&quot;: [
-    &quot;pirateLanguage&quot;,
-    &quot;spaceLanguages/glaknarLanguage&quot;
-]
-</code></pre>
-				<p>This excerpt would attempt to load the language files <code>&lt;modName&gt;/pirateLanguage.json</code> and <code>&lt;modName&gt;/spaceLanguages/glaknarLanguage.json</code></p>
-				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#-customizations-json-">customizations.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
-				<h3 id="-tsconfig-json-"><strong>tsconfig.json</strong></h3>
+				<p>The following is an explanation of the properties in this mod.json file:</p>
+				<p><code>compatibleMinorVersions</code> only allows the mod to load in 2.3.x.</p>
+				<p><code>unloadable</code> makes it so the mod doesn&#39;t have to be enabled when loading a world which had the mod loaded previously.</p>
+				<p><code>hooks</code> is a list of places in the code we&#39;re going to be injecting our own code into.</p>
+				<p>To see a complete list of the properties you can use in your <code>mod.json</code>, and more in-depth details of the properties used in this example, see the <a href="#-mod-json-"><code>mod.json</code> section</a>.</p>
+				<h3 id="helloworld-tsconfig-json">helloworld/tsconfig.json</h3>
 				<p>tsconfig gives instructions for how TypeScript should compile your project.</p>
 				<pre><code class="lang-json">{
     <span class="hljs-attr">"compilerOptions"</span>: {
@@ -209,7 +194,7 @@
 }
 </code></pre>
 				<p>This will be the same across all your mods generally. If you want to know more on tsconfig, review the official documentation on it <a href="http://www.typescriptlang.org/docs/handbook/tsconfig-json.html">here</a>.</p>
-				<h3 id="-helloworld-ts-"><strong>HelloWorld.ts</strong></h3>
+				<h3 id="helloworld-helloworld-ts">helloworld/HelloWorld.ts</h3>
 				<p>Finally we get to the actual functionality and coding of our mod in <code>HelloWorld.ts</code>. Let&#39;s start with the basics.</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 
@@ -222,9 +207,10 @@
 }
 </code></pre>
 				<p>Here we start by importing the &quot;Mod&quot; class which will allow us to extend it with our new &quot;HelloWorld&quot; class. This is where the next bit comes in. We use an export default class where we will include the hooks that we use in our mod. Let&#39;s start off by declaring the onLoad and onUnload hooks.</p>
-				<p>Please note that the onInitialize, onLoad, onUnload, and onSave are special/default hooks that do not need to be defined in the &quot;hooks&quot; listing within the mod.json file. They will be executed whether or not you directly use them in your modification.</p>
+				<p>Please note that the onInitialize, onUninitialize, onLoad, onUnload, and onSave are special/default hooks that do not need to be defined in the &quot;hooks&quot; listing within the mod.json file. They will be executed whether or not you directly use them in your modification.</p>
 				<ul>
-					<li>onInitialize is executed as Wayward is loaded (or enabled via the mod manager). You can setup custom functionality within it or load and interact with global save data.</li>
+					<li>onInitialize is executed as Wayward is loaded (or your mod is enabled via the mod manager). You can setup your custom functionality within it or load and interact with global save data.</li>
+					<li>onUninitialize is executed when your mod is disabled via the mod manager. Making use of this hook will allow users to disable and enable the custom functionality of your mod at will.</li>
 					<li>onLoad is executed when you load a Wayward save (or start a new game). This is where the bulk of your modding methods are defined. Things like adding customs messages, adding new items or actions, etc.</li>
 					<li>onUnload is executed when the current game is unloaded (user quits the game or goes back to the main menu). You can use it to remove features the mod added that may persist unintendedly into the next load.</li>
 					<li>onSave is called before onUnload and is used to perform saving functionality.</li>
@@ -351,7 +337,28 @@
 				<p>You can compile your script with &quot;Ctrl+Shift+B&quot; by default. After it is compiled, you will see a bunch of new files in your helloworld directory. These are the files Wayward will use. If you load Wayward, under &quot;Manage Mods&quot;, you will now see your Hello World mod under &quot;Local Mods&quot;.</p>
 				<p>It&#39;s not much of a mod, but it works!</p>
 				<h2 id="json-specifications">JSON Specifications</h2>
-				<p>Wayward has support for a variety of .json files that add/modify functionality without the need for coding and compiling a full modification. Currently, there is support of image replacements, language translations, and character customizations, as shown below:</p>
+				<p>Besides the required <code>mod.json</code> file, Wayward has support for a variety of JSON files that add/modify functionality without the need for coding and compiling a full modification. Currently, there is support of image replacements, language translations, and character customizations.
+				This section will elaborate on the various JSON files you may need to write when making a Wayward mod.</p>
+				<h3 id="-mod-json-"><strong>mod.json</strong></h3>
+				<p>The mod.json file is what tells Wayward that your mod folder is a mod, and provides information such as the version it can run on, the version it is, its name, and more. The following is a specification of what properties will appear on your mod.json files.</p>
+				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have it set as <code>&quot;compatibleMinorVersions&quot;: [ 2 ]</code>, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatibleMinorVersions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version (this is not recommended as our API changes between versions).</p>
+				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, terrain you will want to set this to false or omit it completely.</p>
+				<p><code>hooks</code> will contain a list of Hooks which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section <em>must</em> be fully <em>CamelHump</em> cased.</p>
+				<p><code>requiredMods</code> is an array which contains strings of Steam Workshop IDs. Setting it makes your mod load after the required mods, and prevents loading your mod if the required mods aren&#39;t installed and enabled.</p>
+				<pre><code class="lang-json">&quot;requiredMods&quot;: [
+    &quot;474819610&quot;
+]
+</code></pre>
+				<p><code>imageOverrides</code> is a property that will allow you to override default graphics in the game. When set to true (<code>&quot;imageOverrides&quot;: true</code>), it will load a dedicated <a href="#-imageoverrides-json-">imageOverrides.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
+				<p><code>languages</code> is a property that will allow you to provide a language without requiring scripts. It takes an array of paths to <a href="#-language-json-">language JSON files</a>. Omitting the property loads no language files. The property will look like this:</p>
+				<pre><code class="lang-json">&quot;languages&quot;: [
+    &quot;pirateLanguage&quot;,
+    &quot;spaceLanguages/glaknarLanguage&quot;
+]
+</code></pre>
+				<p>This example would attempt to load the language files <code>&lt;modName&gt;/pirateLanguage.json</code> and <code>&lt;modName&gt;/spaceLanguages/glaknarLanguage.json</code></p>
+				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#-customizations-json-">customizations.json</a> file containing the overrides. Omitting this property is the same as setting it to <code>false</code>. </p>
+				<p><code>publishedFileId</code> is a property that is automatically filled in after your mod is published to the Steam Workshop. Do not modify or manually add this property. Wayward will use this when you publish updates to your mod.</p>
 				<h3 id="-imageoverrides-json-"><strong>imageOverrides.json</strong></h3>
 				<p>The <code>imageOverrides.json</code> file will allow you to override default graphics in the game. The file is not required, and will only be loaded by setting the <code>imageOverrides</code> property of your <code>mod.json</code> to <code>true</code>.</p>
 				<p>Here is an example of how the file could look:</p>
@@ -387,7 +394,7 @@
 				<p><code>shouldPluralize</code> determines whether or not names should be pluralized. </p>
 				<p><code>dictionaries</code> is an object containing the dictionaries with translations. Each dictionary you provide is an object containing entries in the dictionary, which are arrays containing the translation.</p>
 				<p>The format of a translation is <code>[string, string, string, string]</code>, where the strings, in order, represent the prefix, the name, the description, and the suffix.</p>
-				<p>You can see an example of image overrides in action in the <a href="https://github.com/WaywardGame/piratelanguage">Pirate Language</a> mod.</p>
+				<p>You can see an example of custom languages provided via a JSON file in the <a href="https://github.com/WaywardGame/piratelanguage">Pirate Language</a> mod.</p>
 				<h3 id="-customizations-json-"><strong>customizations.json</strong></h3>
 				<p>The <code>customizations.json</code> file will allow you to provide extra customizations for character creation (hairstyles, hair colors, and skin tones). The file is not required, and will only be loaded by setting the <code>customizations</code> property of your <code>mod.json</code> to <code>true</code>.</p>
 				<p>Here is an example of how the file could look:</p>
