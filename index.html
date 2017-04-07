@@ -344,8 +344,8 @@
 				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;1&quot; set here, and Wayward beta version 2.<strong>1</strong>.0 is loaded, then it will run. If you have it set as <code>&quot;compatibleMinorVersions&quot;: [ 2 ]</code>, then it will only work in version 2.<strong>2</strong>.0. <code>&quot;compatibleMinorVersions&quot;: [ 1, 2 ]</code> will load in both versions 2.1, and 2.2. You may omit this property if you always wants your mod to run, regardless of the game version (this is not recommended as our API changes between versions).</p>
 				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, terrain you will want to set this to false or omit it completely.</p>
 				<p><code>hooks</code> will contain a list of Hooks which represent all the functionality you are modifying in Wayward. Refer to the <a href="https://waywardgame.github.io/enums/hook.html">Enumeration Hook</a> page for the full listing. Please note that the hook names in this section <em>must</em> be fully <em>CamelHump</em> cased.</p>
-				<p><code>requiredMods</code> is an array which contains strings of Steam Workshop IDs. Setting it makes your mod load after the required mods, and prevents loading your mod if the required mods aren&#39;t installed and enabled.</p>
-				<pre><code class="lang-json">&quot;requiredMods&quot;: [
+				<p><code>dependencies</code> is a list of mods that your mod needs. For instance, if you wanted to extend the functionality of another mod, or use utility functions provided by them. The property takes an array of strings representing Steam Workshop IDs. Your mod won&#39;t be loaded if the dependencies aren&#39;t installed and enabled.</p>
+				<pre><code class="lang-json">&quot;dependencies&quot;: [
     &quot;474819610&quot;
 ]
 </code></pre>
@@ -772,6 +772,12 @@
 					<li class=" tsd-kind-enum">
 						<a href="enums/uimessagestatic.html" class="tsd-kind-icon">Ui<wbr>Message<wbr>Static</a>
 					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/versioninfostage.html" class="tsd-kind-icon">Version<wbr>Info<wbr>Stage</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/weighttype.html" class="tsd-kind-icon">Weight<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/worldz.html" class="tsd-kind-icon">WorldZ</a>
 					</li>
@@ -1086,6 +1092,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ibytegrid.html" class="tsd-kind-icon">IByte<wbr>Grid</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="interfaces/icacheddefaultitem.html" class="tsd-kind-icon">ICached<wbr>Default<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="interfaces/icacheditemweight.html" class="tsd-kind-icon">ICached<wbr>Item<wbr>Weight</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/icanloadinfo.html" class="tsd-kind-icon">ICan<wbr>Load<wbr>Info</a>
@@ -1873,9 +1885,6 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#matchmakingserver" class="tsd-kind-icon">matchmaking<wbr>Server</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#maxdistance" class="tsd-kind-icon">max<wbr>Distance</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#maxslots" class="tsd-kind-icon">max<wbr>Slots</a>
 					</li>
@@ -1907,9 +1916,6 @@
 						<a href="globals.html#recipeleveltomessage" class="tsd-kind-icon">recipe<wbr>Level<wbr>ToMessage</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#refdistance" class="tsd-kind-icon">ref<wbr>Distance</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#requireelectron" class="tsd-kind-icon">require<wbr>Electron</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
@@ -1917,9 +1923,6 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#resource" class="tsd-kind-icon">resource</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#rollofffactor" class="tsd-kind-icon">rolloff<wbr>Factor</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#serializeallproperties" class="tsd-kind-icon">serialize<wbr>All<wbr>Properties</a>
@@ -2290,6 +2293,9 @@
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#sleep" class="tsd-kind-icon">sleep</a>
 					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#sortversioninfo" class="tsd-kind-icon">sort<wbr>Version<wbr>Info</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#spawndoodad" class="tsd-kind-icon">spawn<wbr>Doodad</a>
 					</li>
@@ -2308,11 +2314,11 @@
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#startfire" class="tsd-kind-icon">start<wbr>Fire</a>
 					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#stokefire" class="tsd-kind-icon">stoke<wbr>Fire</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#stripparentdirectoryaccessorsfrompath" class="tsd-kind-icon">strip<wbr>Parent<wbr>Directory<wbr>Accessors<wbr>From<wbr>Path</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#strokefire" class="tsd-kind-icon">stroke<wbr>Fire</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#tame" class="tsd-kind-icon">tame</a>
