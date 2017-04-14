@@ -358,6 +358,15 @@
 </code></pre>
 				<p>This example would attempt to load the language files <code>&lt;modName&gt;/pirateLanguage.json</code> and <code>&lt;modName&gt;/spaceLanguages/glaknarLanguage.json</code></p>
 				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#-customizations-json-">customizations.json</a> file containing the overrides. Omitting this property is the same as setting it to <code>false</code>. </p>
+				<p><code>stylesheets</code> is a property that automatically appends CSS stylesheets as your mod is initialized, and removes them as your mod is uninitialized. It takes an array of strings representing the paths to your stylesheets.
+				The property will look like this:</p>
+				<pre><code class="lang-json">&quot;stylesheets&quot;: [
+    &quot;mainStyle&quot;,
+    &quot;moreStyles/anotherStyle&quot;
+]
+</code></pre>
+				<p>This example would attempt to load the language files <code>&lt;modName&gt;/mainStyle.css</code> and <code>&lt;modName&gt;/moreStyles/anotherStyle.css</code>.
+				You can also see this property in action in our <a href="https://github.com/WaywardGame/developertools">Developer Tools</a> mod.</p>
 				<p><code>publishedFileId</code> is a property that is automatically filled in after your mod is published to the Steam Workshop. Do not modify or manually add this property. Wayward will use this when you publish updates to your mod.</p>
 				<h3 id="-imageoverrides-json-"><strong>imageOverrides.json</strong></h3>
 				<p>The <code>imageOverrides.json</code> file will allow you to override default graphics in the game. The file is not required, and will only be loaded by setting the <code>imageOverrides</code> property of your <code>mod.json</code> to <code>true</code>.</p>
@@ -657,6 +666,9 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/movetype.html" class="tsd-kind-icon">Move<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/multiplayersynccheck.html" class="tsd-kind-icon">Multiplayer<wbr>Sync<wbr>Check</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
 						<a href="enums/note.html" class="tsd-kind-icon">NOTE</a>
@@ -1324,6 +1336,9 @@
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/imatchmakingsessiondescriptionmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Session<wbr>Description<wbr>Message<wbr>Data</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="interfaces/imatchmakingversionmismatchmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Version<wbr>Mismatch<wbr>Message<wbr>Data</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imessagedictionary.html" class="tsd-kind-icon">IMessage<wbr>Dictionary</a>
 					</li>
@@ -1400,6 +1415,9 @@
 						<a href="interfaces/ipacketplayertarget.html" class="tsd-kind-icon">IPacket<wbr>Player<wbr>Target</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/ipacketplayerstarget.html" class="tsd-kind-icon">IPacket<wbr>Players<wbr>Target</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/ipacketsynchronizationcheck.html" class="tsd-kind-icon">IPacket<wbr>Synchronization<wbr>Check</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -1434,6 +1452,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ipropserializable.html" class="tsd-kind-icon">IProp<wbr>Serializable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="interfaces/iqueuedpacket.html" class="tsd-kind-icon">IQueued<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/iqueuedsound.html" class="tsd-kind-icon">IQueued<wbr>Sound</a>
@@ -1756,9 +1777,6 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#ontileupdatedelegate" class="tsd-kind-icon">on<wbr>Tile<wbr>Update<wbr>Delegate</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#autopauseonsyncissue" class="tsd-kind-icon">auto<wbr>Pause<wbr>OnSync<wbr>Issue</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#blockedpenalty" class="tsd-kind-icon">blocked<wbr>Penalty</a>
 					</li>
@@ -1766,7 +1784,13 @@
 						<a href="globals.html#changeloglistregexp" class="tsd-kind-icon">changelog<wbr>List<wbr>Reg<wbr>Exp</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#checkplayerpositions" class="tsd-kind-icon">check<wbr>Player<wbr>Positions</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#checkseedhistory" class="tsd-kind-icon">check<wbr>Seed<wbr>History</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#chunksize" class="tsd-kind-icon">chunk<wbr>Size</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#concretetypekeys" class="tsd-kind-icon">concrete<wbr>Type<wbr>Keys</a>
@@ -1795,6 +1819,9 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#defines" class="tsd-kind-icon">defines</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#disconnectonsyncissue" class="tsd-kind-icon">disconnect<wbr>OnSync<wbr>Issue</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#doodaddescriptions" class="tsd-kind-icon">doodad<wbr>Descriptions</a>
 					</li>
@@ -1803,6 +1830,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#emptyuint8array" class="tsd-kind-icon">empty<wbr>Uint8<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#enablesyncchecks" class="tsd-kind-icon">enable<wbr>Sync<wbr>Checks</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#english" class="tsd-kind-icon">english</a>
@@ -1992,6 +2022,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#cast" class="tsd-kind-icon">cast</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#cleanpacket" class="tsd-kind-icon">clean<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#clearfinishedloading" class="tsd-kind-icon">clear<wbr>Finished<wbr>Loading</a>
@@ -2232,6 +2265,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#plant" class="tsd-kind-icon">plant</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#postrest" class="tsd-kind-icon">post<wbr>Rest</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#pour" class="tsd-kind-icon">pour</a>
