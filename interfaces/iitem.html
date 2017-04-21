@@ -117,6 +117,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#changeinto" class="tsd-kind-icon">change<wbr>Into</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#damage" class="tsd-kind-icon">damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#dropinlava" class="tsd-kind-icon">drop<wbr>InLava</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#dropinwater" class="tsd-kind-icon">drop<wbr>InWater</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#getdecaymax" class="tsd-kind-icon">get<wbr>Decay<wbr>Max</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#getdisassemblyweight" class="tsd-kind-icon">get<wbr>Disassembly<wbr>Weight</a></li>
@@ -128,7 +129,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#isdecayed" class="tsd-kind-icon">is<wbr>Decayed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#isequipped" class="tsd-kind-icon">is<wbr>Equipped</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#placeontile" class="tsd-kind-icon">place<wbr>OnTile</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#rename" class="tsd-kind-icon">rename</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#returns" class="tsd-kind-icon">returns</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#setquality" class="tsd-kind-icon">set<wbr>Quality</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitem.html#spawncreatureonitem" class="tsd-kind-icon">spawn<wbr>Creature<wbr>OnItem</a></li>
@@ -149,7 +149,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="icontainable.html">IContainable</a>.<a href="icontainable.html#containedwithin">containedWithin</a></p>
 						<ul>
-							<li>Defined in item/IItem.ts:91</li>
+							<li>Defined in item/IItem.ts:90</li>
 						</ul>
 					</aside>
 				</section>
@@ -312,7 +312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:81</li>
+									<li>Defined in item/IItem.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -392,10 +392,39 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="dropinlava" class="tsd-anchor"></a>
+					<h3>drop<wbr>InLava</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">drop<wbr>InLava<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in item/IItem.ts:75</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>player: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="dropinwater" class="tsd-anchor"></a>
 					<h3>drop<wbr>InWater</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -408,6 +437,12 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>player: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -515,7 +550,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:77</li>
+									<li>Defined in item/IItem.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -583,7 +618,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:75</li>
+									<li>Defined in item/IItem.ts:76</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -601,23 +636,6 @@
 									<h5>force: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="rename" class="tsd-anchor"></a>
-					<h3>rename</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">rename<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in item/IItem.ts:83</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -649,7 +667,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:79</li>
+									<li>Defined in item/IItem.ts:80</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -820,6 +838,9 @@
 								<a href="iitem.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iitem.html#dropinlava" class="tsd-kind-icon">drop<wbr>InLava</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitem.html#dropinwater" class="tsd-kind-icon">drop<wbr>InWater</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -851,9 +872,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitem.html#placeontile" class="tsd-kind-icon">place<wbr>OnTile</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iitem.html#rename" class="tsd-kind-icon">rename</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitem.html#returns" class="tsd-kind-icon">returns</a>

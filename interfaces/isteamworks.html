@@ -88,6 +88,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#addzoomfactor" class="tsd-kind-icon">add<wbr>Zoom<wbr>Factor</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#clearrichpresence" class="tsd-kind-icon">clear<wbr>Rich<wbr>Presence</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#createarchive" class="tsd-kind-icon">create<wbr>Archive</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#createlobby" class="tsd-kind-icon">create<wbr>Lobby</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#createsavegamemod" class="tsd-kind-icon">create<wbr>Save<wbr>Game<wbr>Mod</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#debuglog" class="tsd-kind-icon">debug<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#deletesavegamemod" class="tsd-kind-icon">delete<wbr>Save<wbr>Game<wbr>Mod</a></li>
@@ -101,11 +102,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#getscreenname" class="tsd-kind-icon">get<wbr>Screen<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#getsteamid" class="tsd-kind-icon">get<wbr>Steam<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#hasservertojoin" class="tsd-kind-icon">has<wbr>Server<wbr>ToJoin</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#importfromsavegamemod" class="tsd-kind-icon">import<wbr>From<wbr>Save<wbr>Game<wbr>Mod</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#iselectron" class="tsd-kind-icon">is<wbr>Electron</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#isgreenworksenabled" class="tsd-kind-icon">is<wbr>Greenworks<wbr>Enabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#islinux" class="tsd-kind-icon">is<wbr>Linux</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#ismac" class="tsd-kind-icon">is<wbr>Mac</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#isoverlayworking" class="tsd-kind-icon">is<wbr>Overlay<wbr>Working</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#joinlobby" class="tsd-kind-icon">join<wbr>Lobby</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#leavelobby" class="tsd-kind-icon">leave<wbr>Lobby</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#multiplayerlog" class="tsd-kind-icon">multiplayer<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#multiplayerlogerror" class="tsd-kind-icon">multiplayer<wbr>Log<wbr>Error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworks.html#multiplayerlogskipconsole" class="tsd-kind-icon">multiplayer<wbr>Log<wbr>Skip<wbr>Console</a></li>
@@ -145,7 +150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:36</li>
+									<li>Defined in steamworks/ISteamworks.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -168,7 +173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:45</li>
+									<li>Defined in steamworks/ISteamworks.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -185,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:19</li>
+									<li>Defined in steamworks/ISteamworks.ts:20</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -223,6 +228,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createlobby" class="tsd-anchor"></a>
+					<h3>create<wbr>Lobby</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Lobby<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/lobbytype.html" class="tsd-signature-type">LobbyType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in steamworks/ISteamworks.ts:48</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <a href="../enums/lobbytype.html" class="tsd-signature-type">LobbyType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="createsavegamemod" class="tsd-anchor"></a>
 					<h3>create<wbr>Save<wbr>Game<wbr>Mod</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -232,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:33</li>
+									<li>Defined in steamworks/ISteamworks.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -279,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:35</li>
+									<li>Defined in steamworks/ISteamworks.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -302,7 +330,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:34</li>
+									<li>Defined in steamworks/ISteamworks.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -325,7 +353,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:17</li>
+									<li>Defined in steamworks/ISteamworks.ts:18</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -374,7 +402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:14</li>
+									<li>Defined in steamworks/ISteamworks.ts:15</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -385,13 +413,13 @@
 					<a name="getmodpath" class="tsd-anchor"></a>
 					<h3>get<wbr>Mod<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Mod<wbr>Path<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modType<span class="tsd-signature-symbol">: </span><a href="../enums/modtype.html" class="tsd-signature-type">ModType</a>, file<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, checkIfExists<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Mod<wbr>Path<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modType<span class="tsd-signature-symbol">: </span><a href="../enums/modtype.html" class="tsd-signature-type">ModType</a>, file<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, checkIfExists<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="imodpath.html" class="tsd-signature-type">IModPath</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:32</li>
+									<li>Defined in steamworks/ISteamworks.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -409,7 +437,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> checkIfExists: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+							<h4 class="tsd-returns-title">Returns <a href="imodpath.html" class="tsd-signature-type">IModPath</a>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
@@ -426,7 +454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:20</li>
+									<li>Defined in steamworks/ISteamworks.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -470,7 +498,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:16</li>
+									<li>Defined in steamworks/ISteamworks.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -496,7 +524,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:15</li>
+									<li>Defined in steamworks/ISteamworks.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="iworkshopitem.html" class="tsd-signature-type">IWorkshopItem</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -513,7 +541,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:13</li>
+									<li>Defined in steamworks/ISteamworks.ts:14</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
@@ -533,7 +561,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:12</li>
+									<li>Defined in steamworks/ISteamworks.ts:13</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="isteamid.html" class="tsd-signature-type">ISteamId</a></h4>
@@ -550,10 +578,57 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:40</li>
+									<li>Defined in steamworks/ISteamworks.ts:41</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="importfromsavegamemod" class="tsd-anchor"></a>
+					<h3>import<wbr>From<wbr>Save<wbr>Game<wbr>Mod</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">import<wbr>From<wbr>Save<wbr>Game<wbr>Mod<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in steamworks/ISteamworks.ts:51</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>modIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>json: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -567,7 +642,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:9</li>
+									<li>Defined in steamworks/ISteamworks.ts:10</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -626,6 +701,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ismac" class="tsd-anchor"></a>
+					<h3>is<wbr>Mac</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Mac<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in steamworks/ISteamworks.ts:9</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="isoverlayworking" class="tsd-anchor"></a>
 					<h3>is<wbr>Overlay<wbr>Working</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -643,6 +735,46 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="joinlobby" class="tsd-anchor"></a>
+					<h3>join<wbr>Lobby</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">join<wbr>Lobby<span class="tsd-signature-symbol">(</span>lobbyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in steamworks/ISteamworks.ts:50</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>lobbyId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="leavelobby" class="tsd-anchor"></a>
+					<h3>leave<wbr>Lobby</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">leave<wbr>Lobby<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in steamworks/ISteamworks.ts:49</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="multiplayerlog" class="tsd-anchor"></a>
 					<h3>multiplayer<wbr>Log</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -652,7 +784,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:23</li>
+									<li>Defined in steamworks/ISteamworks.ts:24</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -675,7 +807,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:25</li>
+									<li>Defined in steamworks/ISteamworks.ts:26</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -698,7 +830,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:24</li>
+									<li>Defined in steamworks/ISteamworks.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -721,7 +853,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:41</li>
+									<li>Defined in steamworks/ISteamworks.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -738,7 +870,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:46</li>
+									<li>Defined in steamworks/ISteamworks.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -755,7 +887,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:39</li>
+									<li>Defined in steamworks/ISteamworks.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -772,7 +904,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:28</li>
+									<li>Defined in steamworks/ISteamworks.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -789,7 +921,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:27</li>
+									<li>Defined in steamworks/ISteamworks.ts:28</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -806,7 +938,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:21</li>
+									<li>Defined in steamworks/ISteamworks.ts:22</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -829,7 +961,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:26</li>
+									<li>Defined in steamworks/ISteamworks.ts:27</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -852,7 +984,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:18</li>
+									<li>Defined in steamworks/ISteamworks.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -899,7 +1031,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:43</li>
+									<li>Defined in steamworks/ISteamworks.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -922,7 +1054,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:30</li>
+									<li>Defined in steamworks/ISteamworks.ts:31</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -948,7 +1080,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:37</li>
+									<li>Defined in steamworks/ISteamworks.ts:38</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -965,7 +1097,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:10</li>
+									<li>Defined in steamworks/ISteamworks.ts:11</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -988,7 +1120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:44</li>
+									<li>Defined in steamworks/ISteamworks.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1014,7 +1146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:11</li>
+									<li>Defined in steamworks/ISteamworks.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1049,7 +1181,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:22</li>
+									<li>Defined in steamworks/ISteamworks.ts:23</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1066,7 +1198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:42</li>
+									<li>Defined in steamworks/ISteamworks.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1083,7 +1215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:31</li>
+									<li>Defined in steamworks/ISteamworks.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1100,7 +1232,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:29</li>
+									<li>Defined in steamworks/ISteamworks.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1144,7 +1276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/ISteamworks.ts:38</li>
+									<li>Defined in steamworks/ISteamworks.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1176,6 +1308,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworks.html#createarchive" class="tsd-kind-icon">create<wbr>Archive</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworks.html#createlobby" class="tsd-kind-icon">create<wbr>Lobby</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworks.html#createsavegamemod" class="tsd-kind-icon">create<wbr>Save<wbr>Game<wbr>Mod</a>
@@ -1217,6 +1352,9 @@
 								<a href="isteamworks.html#hasservertojoin" class="tsd-kind-icon">has<wbr>Server<wbr>ToJoin</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworks.html#importfromsavegamemod" class="tsd-kind-icon">import<wbr>From<wbr>Save<wbr>Game<wbr>Mod</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworks.html#initialize" class="tsd-kind-icon">initialize</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -1229,7 +1367,16 @@
 								<a href="isteamworks.html#islinux" class="tsd-kind-icon">is<wbr>Linux</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworks.html#ismac" class="tsd-kind-icon">is<wbr>Mac</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworks.html#isoverlayworking" class="tsd-kind-icon">is<wbr>Overlay<wbr>Working</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworks.html#joinlobby" class="tsd-kind-icon">join<wbr>Lobby</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworks.html#leavelobby" class="tsd-kind-icon">leave<wbr>Lobby</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworks.html#multiplayerlog" class="tsd-kind-icon">multiplayer<wbr>Log</a>
