@@ -93,7 +93,7 @@
 					<li><a href="#disclaimer">Disclaimer</a></li>
 				</ul>
 				<h2 id="intro">Intro</h2>
-				<p>Wayward is primarily built using HTML5 technologies and uses TypeScript (a strict superset of JavaScript), which compiles down to normal JavaScript. This is then run through Electron, a cross-platform application that runs browser languages as a desktop app, outside of your browser. </p>
+				<p>Wayward is primarily built using HTML5 technologies and uses TypeScript (a strict superset of JavaScript), which compiles down to normal JavaScript. This is then run through Electron, a cross-platform application that runs browser languages as a desktop app, outside of your browser.</p>
 				<p>You are not required to use TypeScript in your mods; however, it will become harder to maintain and manage your mods using standard JavaScript. Plus, with TypeScript you will get auto completion on all our internal functions and hooks. TypeScript also has strict compilation and error checking, removing a lot of debugging work. This guide is only tailored towards building TypeScript modifications for Wayward.</p>
 				<p>Wayward uses a combination of HTML, CSS, JavaScript, and WebGL (shaders) for all rendering and UI. It is not necessary to have skills and knowledge in these things to begin modding, although it wouldn&#39;t hurt.</p>
 				<p><strong>NOTE:</strong> Wayward modding support is Early Access (or beta), just like Wayward itself. Many things will change and improve over time. Let us know any issues you run into or if you have any ideas for us.</p>
@@ -207,6 +207,7 @@
 }
 </code></pre>
 				<p>Here we start by importing the &quot;Mod&quot; class which will allow us to extend it with our new &quot;HelloWorld&quot; class. This is where the next bit comes in. We use an export default class where we will include the hooks that we use in our mod. Let&#39;s start off by declaring the onLoad and onUnload hooks.</p>
+				<p>If you are having issues with figuring out the names and/or paths of imports, please read about our solution with <a href="#how-do-i-find-out-the-name-and-path-of-imports-">TSLint</a>.</p>
 				<p>Please note that the onInitialize, onUninitialize, onLoad, onUnload, and onSave are special/default hooks that do not need to be defined in the &quot;hooks&quot; listing within the mod.json file. They will be executed whether or not you directly use them in your modification.</p>
 				<ul>
 					<li>onInitialize is executed as Wayward is loaded (or your mod is enabled via the mod manager). You can setup your custom functionality within it or load and interact with global save data.</li>
@@ -480,6 +481,23 @@
 				<h3 id="how-to-i-upgrade-my-mod-from-version-to-version-">How to I upgrade my mod from version to version?</h3>
 				<p>When we make significant changes to our codebase, for example: upgrading from ES5 to ES6 in beta 2.2, or moving to a modular codebase in beta 2.3, you may have to make many changes to your modification so that it runs on the latest version. This is an unfortunate side effect of still being in beta. As we move to towards a more stable, non-beta release, you may expect less of these huge changes.</p>
 				<p>As we make these changes, we always make sure our documentation (and this guide) is up to date and shows how to make mods for the current or upcoming version. You can always find the <a href="#hello-world">Hello World</a> section showcasing how to create a very basic mod for the latest version. Also, we supply all our <a href="https://github.com/WaywardGame">official modifications</a> on GitHub as examples on what we do to update our own mods. You can browse the commits of each mod to see what we did as we upgraded to each Wayward version. You can even browse the repository for this <a href="https://github.com/WaywardGame/waywardgame.github.io/commits/master">guide</a> to see what we are changing in our documentation from version to version.</p>
+				<h3 id="how-do-i-find-out-the-name-and-path-of-imports-">How do I find out the name and path of imports?</h3>
+				<p>If you are using Visual Studio Code, we recommend installing the <a href="https://marketplace.visualstudio.com/items?itemName=eg2.tslint">TSLint extension</a>. When typing names of interfaces, enums and more, TSLint will show a red squiggly line underneath if they are not imported already. After clicking on the definition/error/line, a small light bulb will appear in the left gutter. Clicking on this light bulb will allow you to automatically import the declaration. For example, typing:</p>
+				<blockquote>
+					<p><code>ItemType</code></p>
+				</blockquote>
+				<p>Should trigger an error with TSLint. Clicking on the line, then the light bulb, will show:</p>
+				<blockquote>
+					<p><code>Add ItemType to existing import declarations from Enums.</code></p>
+				</blockquote>
+				<p>or:</p>
+				<blockquote>
+					<p><code>Import ItemType from Enums.</code></p>
+				</blockquote>
+				<p>If you don&#39;t have any &quot;Enums&quot; import declarations yet. Clicking this option will add something like following to the top of your file:</p>
+				<blockquote>
+					<p><code>import { ItemType } from &quot;Enums&quot;</code></p>
+				</blockquote>
 				<h3 id="i-need-more-help-">I need more help!!!</h3>
 				<p>Calm down! The community is here to help. Simply post your issue or problem in the <a href="http://steamcommunity.com/workshop/discussions/?appid=379210">Workshop discussion forum</a>.</p>
 				<p>Want more of a real-time support approach? You can also try on <a href="https://discordapp.com/invite/0W1JEHHVVKmaxyP9">Discord</a>. Make sure to post in the <code>#wayward-modding</code> channel.</p>
@@ -2364,7 +2382,7 @@
 						<a href="globals.html#moveto" class="tsd-kind-icon">move<wbr>To</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#nullfilter" class="tsd-kind-icon">null<wbr>Filter</a>
+						<a href="globals.html#nullandundefinedfilter" class="tsd-kind-icon">null<wbr>And<wbr>Undefined<wbr>Filter</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#objecttopacketobject" class="tsd-kind-icon">object<wbr>ToPacket<wbr>Object</a>
