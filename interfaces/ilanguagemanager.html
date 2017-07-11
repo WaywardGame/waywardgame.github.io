@@ -87,15 +87,19 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#add" class="tsd-kind-icon">add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#evalstring" class="tsd-kind-icon">eval<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#extendlanguage" class="tsd-kind-icon">extend<wbr>Language</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#getdefault" class="tsd-kind-icon">get<wbr>Default</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#getdefaulttranslation" class="tsd-kind-icon">get<wbr>Default<wbr>Translation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#getlanguage" class="tsd-kind-icon">get<wbr>Language</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#getlanguages" class="tsd-kind-icon">get<wbr>Languages</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#getloaded" class="tsd-kind-icon">get<wbr>Loaded</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#gettranslation" class="tsd-kind-icon">get<wbr>Translation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#load" class="tsd-kind-icon">load</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#refreshuitranslation" class="tsd-kind-icon">refresh<wbr>UiTranslation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#refreshuitranslations" class="tsd-kind-icon">refresh<wbr>UiTranslations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#reload" class="tsd-kind-icon">reload</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#removeextension" class="tsd-kind-icon">remove<wbr>Extension</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ilanguagemanager.html#shouldwarnoninvalidormissingentry" class="tsd-kind-icon">should<wbr>Warn<wbr>OnInvalid<wbr>OrMissing<wbr>Entry</a></li>
 							</ul>
 						</section>
@@ -114,7 +118,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:4</li>
+									<li>Defined in language/ILanguageManager.ts:6</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -137,7 +141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:14</li>
+									<li>Defined in language/ILanguageManager.ts:20</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -151,6 +155,35 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="extendlanguage" class="tsd-anchor"></a>
+					<h3>extend<wbr>Language</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">extend<wbr>Language<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, languageName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, extension<span class="tsd-signature-symbol">: </span><a href="ilanguageextension.html" class="tsd-signature-type">ILanguageExtension</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:22</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>languageName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>extension: <a href="ilanguageextension.html" class="tsd-signature-type">ILanguageExtension</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="getdefault" class="tsd-anchor"></a>
 					<h3>get<wbr>Default</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -160,10 +193,51 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:6</li>
+									<li>Defined in language/ILanguageManager.ts:8</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="ilanguage.html" class="tsd-signature-type">ILanguage</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getdefaulttranslation" class="tsd-anchor"></a>
+					<h3>get<wbr>Default<wbr>Translation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Default<wbr>Translation<span class="tsd-signature-symbol">(</span>translationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Default<wbr>Translation<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><a href="../enums/dictionary.html" class="tsd-signature-type">Dictionary</a>, entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:12</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>translationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:13</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dictionary: <a href="../enums/dictionary.html" class="tsd-signature-type">Dictionary</a></h5>
+								</li>
+								<li>
+									<h5>entry: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -177,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:8</li>
+									<li>Defined in language/ILanguageManager.ts:10</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -203,7 +277,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:7</li>
+									<li>Defined in language/ILanguageManager.ts:9</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="ilanguage.html" class="tsd-signature-type">ILanguage</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -220,7 +294,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:9</li>
+									<li>Defined in language/ILanguageManager.ts:11</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="ilanguage.html" class="tsd-signature-type">ILanguage</a></h4>
@@ -231,13 +305,28 @@
 					<a name="gettranslation" class="tsd-anchor"></a>
 					<h3>get<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Translation<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><a href="../enums/dictionary.html" class="tsd-signature-type">Dictionary</a>, entryIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Translation<span class="tsd-signature-symbol">(</span>translationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="inamedescription.html" class="tsd-signature-type">INameDescription</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Translation<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><a href="../enums/dictionary.html" class="tsd-signature-type">Dictionary</a>, entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="inamedescription.html" class="tsd-signature-type">INameDescription</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:10</li>
+									<li>Defined in language/ILanguageManager.ts:14</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>translationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="inamedescription.html" class="tsd-signature-type">INameDescription</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:15</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -246,10 +335,10 @@
 									<h5>dictionary: <a href="../enums/dictionary.html" class="tsd-signature-type">Dictionary</a></h5>
 								</li>
 								<li>
-									<h5>entryIndex: <span class="tsd-signature-type">number</span></h5>
+									<h5>entry: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="inamedescription.html" class="tsd-signature-type">INameDescription</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -263,7 +352,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:13</li>
+									<li>Defined in language/ILanguageManager.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -280,13 +369,36 @@
 					<a name="refreshuitranslation" class="tsd-anchor"></a>
 					<h3>refresh<wbr>UiTranslation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">refresh<wbr>UiTranslation<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><a href="../enums/uimessagestatic.html" class="tsd-signature-type">UiMessageStatic</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">refresh<wbr>UiTranslation<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JQuery</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:12</li>
+									<li>Defined in language/ILanguageManager.ts:18</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">JQuery</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="refreshuitranslations" class="tsd-anchor"></a>
+					<h3>refresh<wbr>UiTranslations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">refresh<wbr>UiTranslations<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><a href="../enums/uimessagestatic.html" class="tsd-signature-type">UiMessageStatic</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -309,7 +421,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:11</li>
+									<li>Defined in language/ILanguageManager.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -326,13 +438,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:5</li>
+									<li>Defined in language/ILanguageManager.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>language: <a href="ilanguage.html" class="tsd-signature-type">ILanguage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="removeextension" class="tsd-anchor"></a>
+					<h3>remove<wbr>Extension</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Extension<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in language/ILanguageManager.ts:23</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -349,7 +484,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in language/ILanguageManager.ts:15</li>
+									<li>Defined in language/ILanguageManager.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -386,7 +521,13 @@
 								<a href="ilanguagemanager.html#evalstring" class="tsd-kind-icon">eval<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ilanguagemanager.html#extendlanguage" class="tsd-kind-icon">extend<wbr>Language</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ilanguagemanager.html#getdefault" class="tsd-kind-icon">get<wbr>Default</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ilanguagemanager.html#getdefaulttranslation" class="tsd-kind-icon">get<wbr>Default<wbr>Translation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ilanguagemanager.html#getlanguage" class="tsd-kind-icon">get<wbr>Language</a>
@@ -407,10 +548,16 @@
 								<a href="ilanguagemanager.html#refreshuitranslation" class="tsd-kind-icon">refresh<wbr>UiTranslation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ilanguagemanager.html#refreshuitranslations" class="tsd-kind-icon">refresh<wbr>UiTranslations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ilanguagemanager.html#reload" class="tsd-kind-icon">reload</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ilanguagemanager.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ilanguagemanager.html#removeextension" class="tsd-kind-icon">remove<wbr>Extension</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ilanguagemanager.html#shouldwarnoninvalidormissingentry" class="tsd-kind-icon">should<wbr>Warn<wbr>OnInvalid<wbr>OrMissing<wbr>Entry</a>

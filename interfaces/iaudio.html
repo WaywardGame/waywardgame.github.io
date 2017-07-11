@@ -95,8 +95,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#fadein" class="tsd-kind-icon">fade<wbr>In</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#fadeout" class="tsd-kind-icon">fade<wbr>Out</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#nexttrack" class="tsd-kind-icon">next<wbr>Track</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#playmusic" class="tsd-kind-icon">play<wbr>Music</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#playmusictrack" class="tsd-kind-icon">play<wbr>Music<wbr>Track</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#playnextmusictrack" class="tsd-kind-icon">play<wbr>Next<wbr>Music<wbr>Track</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#processeffects" class="tsd-kind-icon">process<wbr>Effects</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#queueeffect" class="tsd-kind-icon">queue<wbr>Effect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iaudio.html#updatemusicspeed" class="tsd-kind-icon">update<wbr>Music<wbr>Speed</a></li>
@@ -115,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">fading<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in audio/IAudio.ts:6</li>
+							<li>Defined in audio/IAudio.ts:4</li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">music<wbr>Speed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in audio/IAudio.ts:4</li>
+							<li>Defined in audio/IAudio.ts:6</li>
 						</ul>
 					</aside>
 				</section>
@@ -152,7 +153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:10</li>
+									<li>Defined in audio/IAudio.ts:8</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -177,23 +178,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="nexttrack" class="tsd-anchor"></a>
-					<h3>next<wbr>Track</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">next<wbr>Track<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in audio/IAudio.ts:11</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="playmusic" class="tsd-anchor"></a>
 					<h3>play<wbr>Music</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -203,7 +187,47 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:7</li>
+									<li>Defined in audio/IAudio.ts:10</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="playmusictrack" class="tsd-anchor"></a>
+					<h3>play<wbr>Music<wbr>Track</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">play<wbr>Music<wbr>Track<span class="tsd-signature-symbol">(</span>musicTrack<span class="tsd-signature-symbol">: </span><a href="../enums/music.html" class="tsd-signature-type">Music</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in audio/IAudio.ts:11</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>musicTrack: <a href="../enums/music.html" class="tsd-signature-type">Music</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="playnextmusictrack" class="tsd-anchor"></a>
+					<h3>play<wbr>Next<wbr>Music<wbr>Track</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">play<wbr>Next<wbr>Music<wbr>Track<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in audio/IAudio.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -220,7 +244,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:15</li>
+									<li>Defined in audio/IAudio.ts:13</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -278,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:8</li>
+									<li>Defined in audio/IAudio.ts:15</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -301,7 +325,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:13</li>
+									<li>Defined in audio/IAudio.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -318,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in audio/IAudio.ts:12</li>
+									<li>Defined in audio/IAudio.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -358,10 +382,13 @@
 								<a href="iaudio.html#fadeout" class="tsd-kind-icon">fade<wbr>Out</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iaudio.html#nexttrack" class="tsd-kind-icon">next<wbr>Track</a>
+								<a href="iaudio.html#playmusic" class="tsd-kind-icon">play<wbr>Music</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iaudio.html#playmusic" class="tsd-kind-icon">play<wbr>Music</a>
+								<a href="iaudio.html#playmusictrack" class="tsd-kind-icon">play<wbr>Music<wbr>Track</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iaudio.html#playnextmusictrack" class="tsd-kind-icon">play<wbr>Next<wbr>Music<wbr>Track</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iaudio.html#processeffects" class="tsd-kind-icon">process<wbr>Effects</a>
