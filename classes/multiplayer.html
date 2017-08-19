@@ -91,10 +91,12 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addaftersyncchecks" class="tsd-kind-icon">add<wbr>After<wbr>Sync<wbr>Checks</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addbeforesyncchecks" class="tsd-kind-icon">add<wbr>Before<wbr>Sync<wbr>Checks</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#createserver" class="tsd-kind-icon">create<wbr>Server</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#executesyncedpacket" class="tsd-kind-icon">execute<wbr>Synced<wbr>Packet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#getclients" class="tsd-kind-icon">get<wbr>Clients</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#isclient" class="tsd-kind-icon">is<wbr>Client</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#isconnected" class="tsd-kind-icon">is<wbr>Connected</a></li>
@@ -106,6 +108,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#onlobbyentered" class="tsd-kind-icon">on<wbr>Lobby<wbr>Entered</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#sendpacketto" class="tsd-kind-icon">send<wbr>Packet<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#setoptions" class="tsd-kind-icon">set<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#updateplayerid" class="tsd-kind-icon">update<wbr>Player<wbr>Id</a></li>
 							</ul>
@@ -125,7 +129,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:160</li>
+									<li>Defined in multiplayer/Multiplayer.ts:150</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="multiplayer.html" class="tsd-signature-type">Multiplayer</a></h4>
@@ -135,6 +139,54 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addaftersyncchecks" class="tsd-anchor"></a>
+					<h3>add<wbr>After<wbr>Sync<wbr>Checks</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>After<wbr>Sync<wbr>Checks<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addaftersyncchecks">addAfterSyncChecks</a></p>
+								<ul>
+									<li>Defined in multiplayer/Multiplayer.ts:512</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addbeforesyncchecks" class="tsd-anchor"></a>
+					<h3>add<wbr>Before<wbr>Sync<wbr>Checks</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Before<wbr>Sync<wbr>Checks<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addbeforesyncchecks">addBeforeSyncChecks</a></p>
+								<ul>
+									<li>Defined in multiplayer/Multiplayer.ts:499</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="addsynccheck" class="tsd-anchor"></a>
 					<h3>add<wbr>Sync<wbr>Check</h3>
@@ -146,7 +198,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addsynccheck">addSyncCheck</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:480</li>
+									<li>Defined in multiplayer/Multiplayer.ts:486</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -173,7 +225,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#createserver">createServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:211</li>
+									<li>Defined in multiplayer/Multiplayer.ts:207</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -199,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:425</li>
+									<li>Defined in multiplayer/Multiplayer.ts:431</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -228,31 +280,20 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="executesyncedpacket" class="tsd-anchor"></a>
-					<h3>execute<wbr>Synced<wbr>Packet</h3>
+					<a name="getclients" class="tsd-anchor"></a>
+					<h3>get<wbr>Clients</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">execute<wbr>Synced<wbr>Packet<span class="tsd-signature-symbol">(</span>packetObjectOrType<span class="tsd-signature-symbol">: </span><a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a><span class="tsd-signature-symbol"> | </span><a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Clients<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#executesyncedpacket">executeSyncedPacket</a></p>
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getclients">getClients</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:416</li>
+									<li>Defined in multiplayer/Multiplayer.ts:326</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>packetObjectOrType: <a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a><span class="tsd-signature-symbol"> | </span><a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">void</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -267,7 +308,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getoptions">getOptions</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:207</li>
+									<li>Defined in multiplayer/Multiplayer.ts:199</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -285,7 +326,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isclient">isClient</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:199</li>
+									<li>Defined in multiplayer/Multiplayer.ts:191</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -303,7 +344,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isconnected">isConnected</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:177</li>
+									<li>Defined in multiplayer/Multiplayer.ts:169</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -321,7 +362,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isprocessingpacket">isProcessingPacket</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:203</li>
+									<li>Defined in multiplayer/Multiplayer.ts:195</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -339,7 +380,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isready">isReady</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:191</li>
+									<li>Defined in multiplayer/Multiplayer.ts:183</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -357,7 +398,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isserver">isServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:195</li>
+									<li>Defined in multiplayer/Multiplayer.ts:187</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -375,7 +416,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#joinserver">joinServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:271</li>
+									<li>Defined in multiplayer/Multiplayer.ts:267</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -402,7 +443,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#kick">kick</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:303</li>
+									<li>Defined in multiplayer/Multiplayer.ts:299</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -426,7 +467,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#onlobbyentered">onLobbyEntered</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:324</li>
+									<li>Defined in multiplayer/Multiplayer.ts:318</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -453,7 +494,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#onplaying">onPlaying</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:312</li>
+									<li>Defined in multiplayer/Multiplayer.ts:308</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -464,23 +505,77 @@
 					<a name="sendpacket" class="tsd-anchor"></a>
 					<h3>send<wbr>Packet</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Packet<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a>, packetData<span class="tsd-signature-symbol">: </span><a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a>, exclude<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#sendpacket">sendPacket</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:332</li>
+									<li>Defined in multiplayer/Multiplayer.ts:334</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
 								</li>
 								<li>
-									<h5>packetData: <a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> exclude: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="sendpacketto" class="tsd-anchor"></a>
+					<h3>send<wbr>Packet<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Packet<wbr>To<span class="tsd-signature-symbol">(</span>to<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a>, packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#sendpacketto">sendPacketTo</a></p>
+								<ul>
+									<li>Defined in multiplayer/Multiplayer.ts:342</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>to: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a></h5>
+								</li>
+								<li>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> force: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setoptions" class="tsd-anchor"></a>
+					<h3>set<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#setoptions">setOptions</a></p>
+								<ul>
+									<li>Defined in multiplayer/Multiplayer.ts:203</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -491,19 +586,19 @@
 					<a name="syncpacket" class="tsd-anchor"></a>
 					<h3>sync<wbr>Packet</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">sync<wbr>Packet<span class="tsd-signature-symbol">(</span>packetData<span class="tsd-signature-symbol">: </span><a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, checkPacketType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">sync<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, checkId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:341</li>
+									<li>Defined in multiplayer/Multiplayer.ts:355</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>packetData: <a href="../globals.html#packetdata" class="tsd-signature-type">PacketData</a></h5>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientSide: <span class="tsd-signature-type">function</span></h5>
@@ -521,7 +616,7 @@
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> checkPacketType: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> checkId: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -539,7 +634,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#updateplayerid">updatePlayerId</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:464</li>
+									<li>Defined in multiplayer/Multiplayer.ts:470</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -576,6 +671,12 @@
 								<a href="multiplayer.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="multiplayer.html#addaftersyncchecks" class="tsd-kind-icon">add<wbr>After<wbr>Sync<wbr>Checks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="multiplayer.html#addbeforesyncchecks" class="tsd-kind-icon">add<wbr>Before<wbr>Sync<wbr>Checks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -585,7 +686,7 @@
 								<a href="multiplayer.html#disconnect" class="tsd-kind-icon">disconnect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="multiplayer.html#executesyncedpacket" class="tsd-kind-icon">execute<wbr>Synced<wbr>Packet</a>
+								<a href="multiplayer.html#getclients" class="tsd-kind-icon">get<wbr>Clients</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
@@ -619,6 +720,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="multiplayer.html#sendpacketto" class="tsd-kind-icon">send<wbr>Packet<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="multiplayer.html#setoptions" class="tsd-kind-icon">set<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a>
