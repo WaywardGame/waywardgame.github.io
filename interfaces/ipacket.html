@@ -89,9 +89,11 @@
 					<li><a href="../classes/logspacket.html" class="tsd-signature-type">LogsPacket</a></li>
 					<li><a href="../classes/packet.html" class="tsd-signature-type">Packet</a></li>
 					<li><a href="../classes/pausepacket.html" class="tsd-signature-type">PausePacket</a></li>
+					<li><a href="../classes/pingpacket.html" class="tsd-signature-type">PingPacket</a></li>
 					<li><a href="../classes/playertargetedclientpacket.html" class="tsd-signature-type">PlayerTargetedClientPacket</a></li>
 					<li><a href="../classes/playertargetedserverpacket.html" class="tsd-signature-type">PlayerTargetedServerPacket</a></li>
 					<li><a href="../classes/playertargetedsharedpacket.html" class="tsd-signature-type">PlayerTargetedSharedPacket</a></li>
+					<li><a href="../classes/pongpacket.html" class="tsd-signature-type">PongPacket</a></li>
 					<li><a href="../classes/readyplayerpacket.html" class="tsd-signature-type">ReadyPlayerPacket</a></li>
 					<li><a href="../classes/removeplayerpacket.html" class="tsd-signature-type">RemovePlayerPacket</a></li>
 					<li><a href="../classes/serverpacket.html" class="tsd-signature-type">ServerPacket</a></li>
@@ -120,6 +122,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#getid" class="tsd-kind-icon">get<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#getsynchronizationcheckdata" class="tsd-kind-icon">get<wbr>Synchronization<wbr>Check<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#process" class="tsd-kind-icon">process</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a></li>
 							</ul>
@@ -207,7 +210,7 @@
 					<a name="gettype" class="tsd-anchor"></a>
 					<h3>get<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PacketType.Client</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PacketType.Server</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PacketType.Shared</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -216,7 +219,29 @@
 									<li>Defined in multiplayer/packets/IPacket.ts:26</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">PacketType.Client</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">PacketType.Server</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">PacketType.Shared</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="issynccheckenabled" class="tsd-anchor"></a>
+					<h3>is<wbr>Sync<wbr>Check<wbr>Enabled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/packets/IPacket.ts:27</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -230,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/IPacket.ts:27</li>
+									<li>Defined in multiplayer/packets/IPacket.ts:28</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -247,7 +272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/IPacket.ts:28</li>
+									<li>Defined in multiplayer/packets/IPacket.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,6 +316,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ipacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ipacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ipacket.html#process" class="tsd-kind-icon">process</a>
