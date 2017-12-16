@@ -93,8 +93,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#getfieldvalue" class="tsd-kind-icon">get<wbr>Field<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#gethashcodes" class="tsd-kind-icon">get<wbr>Hash<wbr>Codes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#getz" class="tsd-kind-icon">getZ</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#updatefield" class="tsd-kind-icon">update<wbr>Field</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#updatepenaltyfield" class="tsd-kind-icon">update<wbr>Penalty<wbr>Field</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="flowfield.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
 							</ul>
 						</section>
@@ -107,13 +109,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Flow<wbr>Field<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="flowfield.html" class="tsd-signature-type">FlowField</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Flow<wbr>Field<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="flowfield.html" class="tsd-signature-type">FlowField</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/FlowField.ts:17</li>
+									<li>Defined in flowfield/FlowField.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -122,13 +124,7 @@
 									<h5>size: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>tileY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>tileZ: <span class="tsd-signature-type">number</span></h5>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
@@ -152,7 +148,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in flowfield/FlowField.ts:29</li>
+									<li>Defined in flowfield/FlowField.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -170,7 +166,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#getfieldvalue">getFieldValue</a></p>
 								<ul>
-									<li>Defined in flowfield/FlowField.ts:36</li>
+									<li>Defined in flowfield/FlowField.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -187,52 +183,79 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gethashcodes" class="tsd-anchor"></a>
+					<h3>get<wbr>Hash<wbr>Codes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Hash<wbr>Codes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#gethashcodes">getHashCodes</a></p>
+								<ul>
+									<li>Defined in flowfield/FlowField.ts:32</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getz" class="tsd-anchor"></a>
+					<h3>getZ</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">getZ<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#getz">getZ</a></p>
+								<ul>
+									<li>Defined in flowfield/FlowField.ts:21</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#reset">reset</a></p>
+								<ul>
+									<li>Defined in flowfield/FlowField.ts:79</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updatefield" class="tsd-anchor"></a>
 					<h3>update<wbr>Field</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Field<span class="tsd-signature-symbol">(</span>tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offsetX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Field<span class="tsd-signature-symbol">(</span>plys<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#updatefield">updateField</a></p>
 								<ul>
-									<li>Defined in flowfield/FlowField.ts:42</li>
+									<li>Defined in flowfield/FlowField.ts:50</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>tileY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>offsetX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>offsetY: <span class="tsd-signature-type">number</span></h5>
+									<h5>plys: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updatepenaltyfield" class="tsd-anchor"></a>
-					<h3>update<wbr>Penalty<wbr>Field</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Penalty<wbr>Field<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#updatepenaltyfield">updatePenaltyField</a></p>
-								<ul>
-									<li>Defined in flowfield/FlowField.ts:77</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -248,7 +271,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iflowfield.html">IFlowField</a>.<a href="../interfaces/iflowfield.html#updatetile">updateTile</a></p>
 								<ul>
-									<li>Defined in flowfield/FlowField.ts:73</li>
+									<li>Defined in flowfield/FlowField.ts:75</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,10 +314,16 @@
 								<a href="flowfield.html#getfieldvalue" class="tsd-kind-icon">get<wbr>Field<wbr>Value</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="flowfield.html#updatefield" class="tsd-kind-icon">update<wbr>Field</a>
+								<a href="flowfield.html#gethashcodes" class="tsd-kind-icon">get<wbr>Hash<wbr>Codes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="flowfield.html#updatepenaltyfield" class="tsd-kind-icon">update<wbr>Penalty<wbr>Field</a>
+								<a href="flowfield.html#getz" class="tsd-kind-icon">getZ</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="flowfield.html#reset" class="tsd-kind-icon">reset</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="flowfield.html#updatefield" class="tsd-kind-icon">update<wbr>Field</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="flowfield.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a>

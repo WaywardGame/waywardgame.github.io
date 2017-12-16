@@ -87,12 +87,16 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#compresssave" class="tsd-kind-icon">compress<wbr>Save</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#decompresssave" class="tsd-kind-icon">decompress<wbr>Save</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#deleteall" class="tsd-kind-icon">delete<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#deletealldata" class="tsd-kind-icon">delete<wbr>All<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#deleteallslots" class="tsd-kind-icon">delete<wbr>All<wbr>Slots</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#exportsave" class="tsd-kind-icon">export<wbr>Save</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getfirstfreeslot" class="tsd-kind-icon">get<wbr>First<wbr>Free<wbr>Slot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getmostrecentslot" class="tsd-kind-icon">get<wbr>Most<wbr>Recent<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getsavecount" class="tsd-kind-icon">get<wbr>Save<wbr>Count</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getsaveslots" class="tsd-kind-icon">get<wbr>Save<wbr>Slots</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getslots" class="tsd-kind-icon">get<wbr>Slots</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getusedslots" class="tsd-kind-icon">get<wbr>Used<wbr>Slots</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#getusedslotssorted" class="tsd-kind-icon">get<wbr>Used<wbr>Slots<wbr>Sorted</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#importsave" class="tsd-kind-icon">import<wbr>Save</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#isenabled" class="tsd-kind-icon">is<wbr>Enabled</a></li>
@@ -104,8 +108,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#save" class="tsd-kind-icon">save</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#savepartialdata" class="tsd-kind-icon">save<wbr>Partial<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#savepartialdatainside" class="tsd-kind-icon">save<wbr>Partial<wbr>Data<wbr>Inside</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#transfersaves" class="tsd-kind-icon">transfer<wbr>Saves</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savemanager.html#uselocalstorage" class="tsd-kind-icon">use<wbr>Local<wbr>Storage</a></li>
 							</ul>
 						</section>
 					</div>
@@ -124,7 +126,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#compresssave">compressSave</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:238</li>
+									<li>Defined in save/SaveManager.ts:313</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -154,7 +156,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#decompresssave">decompressSave</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:249</li>
+									<li>Defined in save/SaveManager.ts:324</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -174,37 +176,38 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="deleteall" class="tsd-anchor"></a>
-					<h3>delete<wbr>All</h3>
+					<a name="deletealldata" class="tsd-anchor"></a>
+					<h3>delete<wbr>All<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#deletealldata">deleteAllData</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:224</li>
+									<li>Defined in save/SaveManager.ts:305</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deleteallslots" class="tsd-anchor"></a>
+					<h3>delete<wbr>All<wbr>Slots</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#deleteallslots">deleteAllSlots</a></p>
+								<ul>
+									<li>Defined in save/SaveManager.ts:297</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -212,13 +215,14 @@
 					<a name="deleteslot" class="tsd-anchor"></a>
 					<h3>delete<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#deleteslot">deleteSlot</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:217</li>
+									<li>Defined in save/SaveManager.ts:289</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -226,32 +230,8 @@
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -259,13 +239,14 @@
 					<a name="exportsave" class="tsd-anchor"></a>
 					<h3>export<wbr>Save</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">export<wbr>Save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">export<wbr>Save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#exportsave">exportSave</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:195</li>
+									<li>Defined in save/SaveManager.ts:260</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -273,35 +254,8 @@
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-														<li>
-															<h5>json: <span class="tsd-signature-type">string</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -309,40 +263,45 @@
 					<a name="getfirstfreeslot" class="tsd-anchor"></a>
 					<h3>get<wbr>First<wbr>Free<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>First<wbr>Free<wbr>Slot<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>First<wbr>Free<wbr>Slot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getfirstfreeslot">getFirstFreeSlot</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:71</li>
+									<li>Defined in save/SaveManager.ts:83</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the index of the first free slot</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmostrecentslot" class="tsd-anchor"></a>
+					<h3>get<wbr>Most<wbr>Recent<wbr>Slot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Most<wbr>Recent<wbr>Slot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getmostrecentslot">getMostRecentSlot</a></p>
+								<ul>
+									<li>Defined in save/SaveManager.ts:125</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the most recently saved slot</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -350,111 +309,100 @@
 					<a name="getsavecount" class="tsd-anchor"></a>
 					<h3>get<wbr>Save<wbr>Count</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Save<wbr>Count<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, callbackPerSlot<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Save<wbr>Count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getsavecount">getSaveCount</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:50</li>
+									<li>Defined in save/SaveManager.ts:75</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>usedCount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, usedSlots<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>usedCount: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>usedSlots: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callbackPerSlot: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isUsed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>isUsed: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of filled slots</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getsaveslots" class="tsd-anchor"></a>
-					<h3>get<wbr>Save<wbr>Slots</h3>
+					<a name="getslots" class="tsd-anchor"></a>
+					<h3>get<wbr>Slots</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Save<wbr>Slots<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getslots">getSlots</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:32</li>
+									<li>Defined in save/SaveManager.ts:31</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an array where the index is the slot number, and the value is whether or not the slot is filled</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getusedslots" class="tsd-anchor"></a>
+					<h3>get<wbr>Used<wbr>Slots</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Used<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getusedslots">getUsedSlots</a></p>
+								<ul>
+									<li>Defined in save/SaveManager.ts:48</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the indices of the used slots</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getusedslotssorted" class="tsd-anchor"></a>
+					<h3>get<wbr>Used<wbr>Slots<wbr>Sorted</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Used<wbr>Slots<wbr>Sorted<span class="tsd-signature-symbol">(</span>sortBy<span class="tsd-signature-symbol">: </span><a href="../enums/savesort.html" class="tsd-signature-type">SaveSort</a>, direction<span class="tsd-signature-symbol">?: </span><a href="../enums/sortdirection.html" class="tsd-signature-type">SortDirection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#getusedslotssorted">getUsedSlotsSorted</a></p>
+								<ul>
+									<li>Defined in save/SaveManager.ts:91</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the used slots, ordered by one of a few properties of the saveData in that slot</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isUsed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>isUsed: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>sortBy: <a href="../enums/savesort.html" class="tsd-signature-type">SaveSort</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> direction: <a href="../enums/sortdirection.html" class="tsd-signature-type">SortDirection</a><span class="tsd-signature-symbol"> =&nbsp;SortDirection.More</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -462,49 +410,31 @@
 					<a name="importsave" class="tsd-anchor"></a>
 					<h3>import<wbr>Save</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">import<wbr>Save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">import<wbr>Save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#importsave">importSave</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:207</li>
+									<li>Defined in save/SaveManager.ts:274</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of bytes the save takes up, or undefined, if an error occurs</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>data: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-														</li>
-														<li>
-															<h5>bytes: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>saveObject: <a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -512,17 +442,17 @@
 					<a name="initialize" class="tsd-anchor"></a>
 					<h3>initialize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#initialize">initialize</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:21</li>
+									<li>Defined in save/SaveManager.ts:17</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -548,46 +478,28 @@
 					<a name="isslotused" class="tsd-anchor"></a>
 					<h3>is<wbr>Slot<wbr>Used</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#isslotused">isSlotUsed</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:42</li>
+									<li>Defined in save/SaveManager.ts:63</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether or not the slot is used</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isUsed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>isUsed: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -595,46 +507,28 @@
 					<a name="load" class="tsd-anchor"></a>
 					<h3>load</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#load">load</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:102</li>
+									<li>Defined in save/SaveManager.ts:161</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether or not it succeeded</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -642,13 +536,14 @@
 					<a name="loadpartial" class="tsd-anchor"></a>
 					<h3>load<wbr>Partial</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>Partial<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Partial<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#loadpartial">loadPartial</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:134</li>
+									<li>Defined in save/SaveManager.ts:195</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -656,35 +551,8 @@
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-														<li>
-															<h5>saveObject: <a href="saveobject.html" class="tsd-signature-type">SaveObject</a></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -692,14 +560,14 @@
 					<a name="loadpartialdata" class="tsd-anchor"></a>
 					<h3>load<wbr>Partial<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>Partial<wbr>Data<span class="tsd-signature-symbol">(</span>saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, saveObjectKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, skipCompression<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Partial<wbr>Data<span class="tsd-signature-symbol">(</span>saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, saveObjectKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, skipCompression<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, importing<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#loadpartialdata">loadPartialData</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:160</li>
+									<li>Defined in save/SaveManager.ts:221</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -719,6 +587,9 @@
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> skipCompression: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> importing: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -735,7 +606,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#loadpartialdatainside">loadPartialDataInside</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:165</li>
+									<li>Defined in save/SaveManager.ts:226</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -758,49 +629,31 @@
 					<a name="save" class="tsd-anchor"></a>
 					<h3>save</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, unloading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/isaveinfo.html" class="tsd-signature-type">ISaveInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#save">save</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:86</li>
+									<li>Defined in save/SaveManager.ts:133</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an tuple [bytes: number, saveObject: SaveObject]</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">?: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>bytes: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5><span class="tsd-flag ts-flagOptional">Optional</span> saveObject: <a href="saveobject.html" class="tsd-signature-type">SaveObject</a></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> unloading: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/isaveinfo.html" class="tsd-signature-type">ISaveInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -808,15 +661,21 @@
 					<a name="savepartialdata" class="tsd-anchor"></a>
 					<h3>save<wbr>Partial<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>Partial<wbr>Data<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, saveObjectKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Partial<wbr>Data<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, saveObjectKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#savepartialdata">savePartialData</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:171</li>
+									<li>Defined in save/SaveManager.ts:235</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of bytes the save takes up</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -831,32 +690,8 @@
 								<li>
 									<h5>saveObjectKey: <span class="tsd-signature-type">string</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>bytes: <span class="tsd-signature-type">number</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -864,15 +699,21 @@
 					<a name="savepartialdatainside" class="tsd-anchor"></a>
 					<h3>save<wbr>Partial<wbr>Data<wbr>Inside</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>Partial<wbr>Data<wbr>Inside<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObjectKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Partial<wbr>Data<wbr>Inside<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObjectKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#savepartialdatainside">savePartialDataInside</a></p>
 								<ul>
-									<li>Defined in save/SaveManager.ts:179</li>
+									<li>Defined in save/SaveManager.ts:245</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p> Returns the number of bytes the save takes up</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -887,68 +728,8 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>bytes: <span class="tsd-signature-type">number</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="transfersaves" class="tsd-anchor"></a>
-					<h3>transfer<wbr>Saves</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">transfer<wbr>Saves<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#transfersaves">transferSaves</a></p>
-								<ul>
-									<li>Defined in save/SaveManager.ts:231</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="uselocalstorage" class="tsd-anchor"></a>
-					<h3>use<wbr>Local<wbr>Storage</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">use<wbr>Local<wbr>Storage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/isavemanager.html">ISaveManager</a>.<a href="../interfaces/isavemanager.html#uselocalstorage">useLocalStorage</a></p>
-								<ul>
-									<li>Defined in save/SaveManager.ts:17</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -976,7 +757,10 @@
 								<a href="savemanager.html#decompresssave" class="tsd-kind-icon">decompress<wbr>Save</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="savemanager.html#deleteall" class="tsd-kind-icon">delete<wbr>All</a>
+								<a href="savemanager.html#deletealldata" class="tsd-kind-icon">delete<wbr>All<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="savemanager.html#deleteallslots" class="tsd-kind-icon">delete<wbr>All<wbr>Slots</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="savemanager.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a>
@@ -988,10 +772,19 @@
 								<a href="savemanager.html#getfirstfreeslot" class="tsd-kind-icon">get<wbr>First<wbr>Free<wbr>Slot</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="savemanager.html#getmostrecentslot" class="tsd-kind-icon">get<wbr>Most<wbr>Recent<wbr>Slot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="savemanager.html#getsavecount" class="tsd-kind-icon">get<wbr>Save<wbr>Count</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="savemanager.html#getsaveslots" class="tsd-kind-icon">get<wbr>Save<wbr>Slots</a>
+								<a href="savemanager.html#getslots" class="tsd-kind-icon">get<wbr>Slots</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="savemanager.html#getusedslots" class="tsd-kind-icon">get<wbr>Used<wbr>Slots</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="savemanager.html#getusedslotssorted" class="tsd-kind-icon">get<wbr>Used<wbr>Slots<wbr>Sorted</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="savemanager.html#importsave" class="tsd-kind-icon">import<wbr>Save</a>
@@ -1025,12 +818,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="savemanager.html#savepartialdatainside" class="tsd-kind-icon">save<wbr>Partial<wbr>Data<wbr>Inside</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="savemanager.html#transfersaves" class="tsd-kind-icon">transfer<wbr>Saves</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="savemanager.html#uselocalstorage" class="tsd-kind-icon">use<wbr>Local<wbr>Storage</a>
 							</li>
 						</ul>
 					</li>

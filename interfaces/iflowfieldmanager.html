@@ -97,10 +97,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getmovedirection" class="tsd-kind-icon">get<wbr>Move<wbr>Direction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getopposingmovedirection" class="tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getwidth" class="tsd-kind-icon">get<wbr>Width</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#isinflowfield" class="tsd-kind-icon">is<wbr>InFlow<wbr>Field</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#iscreatureinflowfield" class="tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#isplayerinflowfield" class="tsd-kind-icon">is<wbr>Player<wbr>InFlow<wbr>Field</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#setdelegate" class="tsd-kind-icon">set<wbr>Delegate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#setplayers" class="tsd-kind-icon">set<wbr>Players</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#update" class="tsd-kind-icon">update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#updatecenter" class="tsd-kind-icon">update<wbr>Center</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
 							</ul>
 						</section>
@@ -115,7 +117,7 @@
 					<div class="tsd-signature tsd-kind-icon">delegate<span class="tsd-signature-symbol">:</span> <a href="debugrendererdelegate.html" class="tsd-signature-type">DebugRendererDelegate</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in flowfield/IFlowFieldManager.ts:6</li>
+							<li>Defined in flowfield/IFlowFieldManager.ts:8</li>
 						</ul>
 					</aside>
 				</section>
@@ -125,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">flow<wbr>Fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in flowfield/IFlowFieldManager.ts:7</li>
+							<li>Defined in flowfield/IFlowFieldManager.ts:9</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -150,7 +152,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:9</li>
+									<li>Defined in flowfield/IFlowFieldManager.ts:11</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -167,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:10</li>
+									<li>Defined in flowfield/IFlowFieldManager.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -178,89 +180,7 @@
 					<a name="getmovedirection" class="tsd-anchor"></a>
 					<h3>get<wbr>Move<wbr>Direction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FacingDirection.None</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.East</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.North</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.West</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.South</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:11</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>worldX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>worldY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>worldZ: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FacingDirection.None</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.East</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.North</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.West</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.South</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="getopposingmovedirection" class="tsd-anchor"></a>
-					<h3>get<wbr>Opposing<wbr>Move<wbr>Direction</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FacingDirection.None</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.East</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.North</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.West</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">FacingDirection.South</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:12</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>worldX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>worldY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>worldZ: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FacingDirection.None</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.East</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.North</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.West</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">FacingDirection.South</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="getwidth" class="tsd-anchor"></a>
-					<h3>get<wbr>Width</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -269,15 +189,30 @@
 									<li>Defined in flowfield/IFlowFieldManager.ts:13</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>worldY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>worldZ: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="isinflowfield" class="tsd-anchor"></a>
-					<h3>is<wbr>InFlow<wbr>Field</h3>
+					<a name="getopposingmovedirection" class="tsd-anchor"></a>
+					<h3>get<wbr>Opposing<wbr>Move<wbr>Direction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>InFlow<wbr>Field<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -297,8 +232,91 @@
 								<li>
 									<h5>worldZ: <span class="tsd-signature-type">number</span></h5>
 								</li>
+								<li>
+									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getwidth" class="tsd-anchor"></a>
+					<h3>get<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in flowfield/IFlowFieldManager.ts:15</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="iscreatureinflowfield" class="tsd-anchor"></a>
+					<h3>is<wbr>Creature<wbr>InFlow<wbr>Field</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field<span class="tsd-signature-symbol">(</span>creature<span class="tsd-signature-symbol">: </span><a href="icreature.html" class="tsd-signature-type">ICreature</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in flowfield/IFlowFieldManager.ts:16</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>creature: <a href="icreature.html" class="tsd-signature-type">ICreature</a></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="isplayerinflowfield" class="tsd-anchor"></a>
+					<h3>is<wbr>Player<wbr>InFlow<wbr>Field</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Player<wbr>InFlow<wbr>Field<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in flowfield/IFlowFieldManager.ts:17</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>player: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in flowfield/IFlowFieldManager.ts:18</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -312,13 +330,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:15</li>
+									<li>Defined in flowfield/IFlowFieldManager.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>delegate: <a href="debugrendererdelegate.html" class="tsd-signature-type">DebugRendererDelegate</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setplayers" class="tsd-anchor"></a>
+					<h3>set<wbr>Players</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Players<span class="tsd-signature-symbol">(</span>plys<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in flowfield/IFlowFieldManager.ts:20</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>plys: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -335,27 +376,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:16</li>
+									<li>Defined in flowfield/IFlowFieldManager.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="updatecenter" class="tsd-anchor"></a>
-					<h3>update<wbr>Center</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Center<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:17</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -369,7 +393,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in flowfield/IFlowFieldManager.ts:18</li>
+									<li>Defined in flowfield/IFlowFieldManager.ts:22</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -427,16 +451,22 @@
 								<a href="iflowfieldmanager.html#getwidth" class="tsd-kind-icon">get<wbr>Width</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iflowfieldmanager.html#isinflowfield" class="tsd-kind-icon">is<wbr>InFlow<wbr>Field</a>
+								<a href="iflowfieldmanager.html#iscreatureinflowfield" class="tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iflowfieldmanager.html#isplayerinflowfield" class="tsd-kind-icon">is<wbr>Player<wbr>InFlow<wbr>Field</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iflowfieldmanager.html#reset" class="tsd-kind-icon">reset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iflowfieldmanager.html#setdelegate" class="tsd-kind-icon">set<wbr>Delegate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iflowfieldmanager.html#update" class="tsd-kind-icon">update</a>
+								<a href="iflowfieldmanager.html#setplayers" class="tsd-kind-icon">set<wbr>Players</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iflowfieldmanager.html#updatecenter" class="tsd-kind-icon">update<wbr>Center</a>
+								<a href="iflowfieldmanager.html#update" class="tsd-kind-icon">update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iflowfieldmanager.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a>

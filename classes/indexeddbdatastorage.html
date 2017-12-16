@@ -75,7 +75,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/idatastorage.html" class="tsd-signature-type">IDataStorage</a></li>
+					<li><a href="../interfaces/iasyncdatastorage.html" class="tsd-signature-type">IAsyncDataStorage</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -91,14 +91,14 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#deleteall" class="tsd-kind-icon">delete<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#deletealldata" class="tsd-kind-icon">delete<wbr>All<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#deleteallslots" class="tsd-kind-icon">delete<wbr>All<wbr>Slots</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#isenabled" class="tsd-kind-icon">is<wbr>Enabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#isready" class="tsd-kind-icon">is<wbr>Ready</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#isslotused" class="tsd-kind-icon">is<wbr>Slot<wbr>Used</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#loadfromslot" class="tsd-kind-icon">load<wbr>From<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#savetoslot" class="tsd-kind-icon">save<wbr>ToSlot</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="indexeddbdatastorage.html#transfersaves" class="tsd-kind-icon">transfer<wbr>Saves</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,7 +116,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:14</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:15</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="indexeddbdatastorage.html" class="tsd-signature-type">IndexedDbDataStorage</a></h4>
@@ -127,37 +127,38 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="deleteall" class="tsd-anchor"></a>
-					<h3>delete<wbr>All</h3>
+					<a name="deletealldata" class="tsd-anchor"></a>
+					<h3>delete<wbr>All<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#deletealldata">deleteAllData</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:177</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:149</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deleteallslots" class="tsd-anchor"></a>
+					<h3>delete<wbr>All<wbr>Slots</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#deleteallslots">deleteAllSlots</a></p>
+								<ul>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:133</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -165,13 +166,14 @@
 					<a name="deleteslot" class="tsd-anchor"></a>
 					<h3>delete<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#deleteslot">deleteSlot</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:161</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:112</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -179,32 +181,8 @@
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -217,9 +195,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#isenabled">isEnabled</a></p>
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#isenabled">isEnabled</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:44</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -235,9 +213,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#isready">isReady</a></p>
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#isready">isReady</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:48</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -248,13 +226,13 @@
 					<a name="isslotused" class="tsd-anchor"></a>
 					<h3>is<wbr>Slot<wbr>Used</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:73</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -262,35 +240,8 @@
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isUsed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>isUsed: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> interval: <span class="tsd-signature-type">number</span></h5>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -298,13 +249,14 @@
 					<a name="loadfromslot" class="tsd-anchor"></a>
 					<h3>load<wbr>From<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>From<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>From<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#loadfromslot">loadFromSlot</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:138</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:90</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -315,35 +267,8 @@
 								<li>
 									<h5>saveObject: <a href="saveobject.html" class="tsd-signature-type">SaveObject</a></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> interval: <span class="tsd-signature-type">number</span></h5>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -351,13 +276,14 @@
 					<a name="savetoslot" class="tsd-anchor"></a>
 					<h3>save<wbr>ToSlot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>ToSlot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fakeSave<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>ToSlot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="saveobject.html" class="tsd-signature-type">SaveObject</a>, unloading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iasyncdatastorage.html">IAsyncDataStorage</a>.<a href="../interfaces/iasyncdatastorage.html#savetoslot">saveToSlot</a></p>
 								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:107</li>
+									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:57</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -369,52 +295,10 @@
 									<h5>saveObject: <a href="saveobject.html" class="tsd-signature-type">SaveObject</a></h5>
 								</li>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>slot: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>bytes: <span class="tsd-signature-type">number</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fakeSave: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> unloading: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="transfersaves" class="tsd-anchor"></a>
-					<h3>transfer<wbr>Saves</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">transfer<wbr>Saves<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#transfersaves">transferSaves</a></p>
-								<ul>
-									<li>Defined in save/datastorage/IndexedDbDataStorage.ts:52</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -439,7 +323,10 @@
 								<a href="indexeddbdatastorage.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="indexeddbdatastorage.html#deleteall" class="tsd-kind-icon">delete<wbr>All</a>
+								<a href="indexeddbdatastorage.html#deletealldata" class="tsd-kind-icon">delete<wbr>All<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="indexeddbdatastorage.html#deleteallslots" class="tsd-kind-icon">delete<wbr>All<wbr>Slots</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="indexeddbdatastorage.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a>
@@ -458,9 +345,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="indexeddbdatastorage.html#savetoslot" class="tsd-kind-icon">save<wbr>ToSlot</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="indexeddbdatastorage.html#transfersaves" class="tsd-kind-icon">transfer<wbr>Saves</a>
 							</li>
 						</ul>
 					</li>

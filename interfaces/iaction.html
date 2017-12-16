@@ -68,7 +68,15 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IAction</span>
+						<a href="iactionbase.html" class="tsd-signature-type">IActionBase</a>
+					</li>
+					<li>
+						<a href="igenericregistration.html" class="tsd-signature-type">IGenericRegistration</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IAction</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -80,9 +88,10 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaction.html#callback" class="tsd-kind-icon">callback</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaction.html#ignorehasdelay" class="tsd-kind-icon">ignore<wbr>Has<wbr>Delay</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaction.html#type" class="tsd-kind-icon">type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaction.html#usableasghost" class="tsd-kind-icon">usable<wbr>AsGhost</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iaction.html#ignorehasdelay" class="tsd-kind-icon">ignore<wbr>Has<wbr>Delay</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="iaction.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iaction.html#usableasghost" class="tsd-kind-icon">usable<wbr>AsGhost</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iaction.html#validatearguments" class="tsd-kind-icon">validate<wbr>Arguments</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,37 +105,51 @@
 					<div class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">:</span> <a href="../globals.html#actioncallback" class="tsd-signature-type">ActionCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in action/IAction.ts:12</li>
+							<li>Defined in action/IAction.ts:24</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="ignorehasdelay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ignore<wbr>Has<wbr>Delay</h3>
 					<div class="tsd-signature tsd-kind-icon">ignore<wbr>Has<wbr>Delay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="iactionbase.html">IActionBase</a>.<a href="iactionbase.html#ignorehasdelay">ignoreHasDelay</a></p>
 						<ul>
 							<li>Defined in action/IAction.ts:14</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ActionType.Disassemble</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Pickup</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Throw</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Attack</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.StartFire</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Carve</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.SetDown</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Eat</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.DrinkItem</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Rest</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Sleep</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Heal</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Dig</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Paddle</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.GatherWater</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Shoot</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Cast</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.TraverseTheSea</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.LockPick</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Sling</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Repair</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Decode</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Read</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Reinforce</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Gather</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.StokeFire</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Pour</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Plant</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.GatherTreasure</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Ignite</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Build</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.OpenContainer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Preserve</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.OpenBottle</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.DrinkCure</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.TellTime</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.SailToCivilization</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Transmogrify</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Fire</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Teleport</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Extinguish</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.DrawMap</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Dismantle</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.PourOnYourself</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Squeeze</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Pet</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Tame</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Release</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.HealCreature</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.RubClockwise</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.RubCounterclockwise</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.OpenDoor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.CloseDoor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.AddFuel</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Drink</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Grasp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.PickupItem</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.PickupAllItems</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Offer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Drop</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Jump</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Move</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.MoveTo</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.UpdateDirection</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Idle</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.DrinkInFront</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.UseItem</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Equip</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Unequip</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.MoveItem</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Craft</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Till</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Rename</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ActionType.Harvest</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a></div>
 					<aside class="tsd-sources">
+						<p>Overrides <a href="igenericregistration.html">IGenericRegistration</a>.<a href="igenericregistration.html#type">type</a></p>
 						<ul>
-							<li>Defined in action/IAction.ts:11</li>
+							<li>Defined in action/IAction.ts:23</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="usableasghost" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> usable<wbr>AsGhost</h3>
 					<div class="tsd-signature tsd-kind-icon">usable<wbr>AsGhost<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="iactionbase.html">IActionBase</a>.<a href="iactionbase.html#usableasghost">usableAsGhost</a></p>
 						<ul>
 							<li>Defined in action/IAction.ts:13</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="validatearguments" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> validate<wbr>Arguments</h3>
+					<div class="tsd-signature tsd-kind-icon">validate<wbr>Arguments<span class="tsd-signature-symbol">:</span> <a href="iactionargumentvalidator.html" class="tsd-signature-type">IActionArgumentValidator</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iactionbase.html">IActionBase</a>.<a href="iactionbase.html#validatearguments">validateArguments</a></p>
+						<ul>
+							<li>Defined in action/IAction.ts:12</li>
 						</ul>
 					</aside>
 				</section>
@@ -150,14 +173,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iaction.html#callback" class="tsd-kind-icon">callback</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iaction.html#ignorehasdelay" class="tsd-kind-icon">ignore<wbr>Has<wbr>Delay</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="iaction.html#type" class="tsd-kind-icon">type</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iaction.html#usableasghost" class="tsd-kind-icon">usable<wbr>AsGhost</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iaction.html#validatearguments" class="tsd-kind-icon">validate<wbr>Arguments</a>
 							</li>
 						</ul>
 					</li>

@@ -103,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readcreature" class="tsd-kind-icon">read<wbr>Creature</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readdoodad" class="tsd-kind-icon">read<wbr>Doodad</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readitemordoodad" class="tsd-kind-icon">read<wbr>Item<wbr>OrDoodad</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#readitems" class="tsd-kind-icon">read<wbr>Items</a></li>
@@ -120,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writecreature" class="tsd-kind-icon">write<wbr>Creature</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writedoodad" class="tsd-kind-icon">write<wbr>Doodad</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writeitemordoodad" class="tsd-kind-icon">write<wbr>Item<wbr>OrDoodad</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="basepacket.html#writeitems" class="tsd-kind-icon">write<wbr>Items</a></li>
@@ -248,7 +250,7 @@
 					<a name="gettype" class="tsd-anchor"></a>
 					<h3>get<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PacketType.Client</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PacketType.Server</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PacketType.Shared</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -257,12 +259,7 @@
 									<li>Defined in multiplayer/packets/BasePacket.ts:38</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">PacketType.Client</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">PacketType.Server</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">PacketType.Shared</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -276,7 +273,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:96</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:110</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -293,7 +290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:210</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:224</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h4>
@@ -304,16 +301,19 @@
 					<a name="readcreature" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> read<wbr>Creature</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Creature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/icreature.html" class="tsd-signature-type">ICreature</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Creature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/icreature.html" class="tsd-signature-type">ICreature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:258</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:272</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icreature.html" class="tsd-signature-type">ICreature</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icreature.html" class="tsd-signature-type">ICreature</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -321,16 +321,19 @@
 					<a name="readdoodad" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> read<wbr>Doodad</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Doodad<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Doodad<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:267</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:281</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -344,7 +347,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:82</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:96</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="readint8" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> read<wbr>Int8</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int8<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/packets/BasePacket.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -361,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:276</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:290</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a></h4>
@@ -372,18 +392,20 @@
 					<a name="readitemordoodad" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> read<wbr>Item<wbr>OrDoodad</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Item<wbr>OrDoodad<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Item<wbr>OrDoodad<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:285</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:299</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a>
 								<span class="tsd-signature-symbol"> | </span>
 								<a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
 							</h4>
 						</li>
 					</ul>
@@ -398,7 +420,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:296</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:310</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -415,7 +437,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:317</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:331</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -432,7 +454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:199</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ipoint.html" class="tsd-signature-type">IPoint</a></h4>
@@ -449,7 +471,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:151</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:165</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -466,7 +488,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:170</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:184</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -483,7 +505,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:54</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -500,7 +522,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:68</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -517,7 +539,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:122</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:136</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -534,7 +556,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:40</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -551,7 +573,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:104</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:118</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Uint8Array</span></h4>
@@ -568,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:100</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:114</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -591,7 +613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:235</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:249</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -614,7 +636,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:263</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:277</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -637,7 +659,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:272</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:286</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -660,7 +682,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:89</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:103</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="writeint8" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> write<wbr>Int8</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int8<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/packets/BasePacket.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -683,7 +728,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:281</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:295</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -706,7 +751,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:291</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:305</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -729,7 +774,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:309</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:323</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -752,7 +797,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:321</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:335</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -775,7 +820,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:205</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:219</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -798,7 +843,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:162</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:176</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -821,7 +866,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:185</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:199</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -844,7 +889,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:61</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:75</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -867,7 +912,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:75</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:89</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -890,7 +935,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:137</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:151</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -913,7 +958,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:47</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:61</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -936,7 +981,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/packets/BasePacket.ts:114</li>
+									<li>Defined in multiplayer/packets/BasePacket.ts:128</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1049,6 +1094,9 @@
 								<a href="basepacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="basepacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="basepacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
@@ -1098,6 +1146,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="basepacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="basepacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="basepacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a>

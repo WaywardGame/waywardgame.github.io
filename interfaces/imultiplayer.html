@@ -90,7 +90,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#createserver" class="tsd-kind-icon">create<wbr>Server</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#disconnectandresetgamestate" class="tsd-kind-icon">disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#getbannedplayers" class="tsd-kind-icon">get<wbr>Banned<wbr>Players</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#getclients" class="tsd-kind-icon">get<wbr>Clients</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#getdedicatedservermatchmakinginfo" class="tsd-kind-icon">get<wbr>Dedicated<wbr>Server<wbr>Matchmaking<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#getmatchmakinginfo" class="tsd-kind-icon">get<wbr>Matchmaking<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#isclient" class="tsd-kind-icon">is<wbr>Client</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#isconnected" class="tsd-kind-icon">is<wbr>Connected</a></li>
@@ -101,10 +105,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#kick" class="tsd-kind-icon">kick</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#onlobbyentered" class="tsd-kind-icon">on<wbr>Lobby<wbr>Entered</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#resetsyncpacketswaiting" class="tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#sendpacketto" class="tsd-kind-icon">send<wbr>Packet<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#setbanned" class="tsd-kind-icon">set<wbr>Banned</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#setoptions" class="tsd-kind-icon">set<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#suppresssyncchecks" class="tsd-kind-icon">suppress<wbr>Sync<wbr>Checks</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#updateoptions" class="tsd-kind-icon">update<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#updateplayerid" class="tsd-kind-icon">update<wbr>Player<wbr>Id</a></li>
 							</ul>
 						</section>
@@ -123,7 +132,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:8</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:10</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:9</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:11</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -163,19 +172,19 @@
 					<a name="addsynccheck" class="tsd-anchor"></a>
 					<h3>add<wbr>Sync<wbr>Check</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Sync<wbr>Check<span class="tsd-signature-symbol">(</span>syncCheck<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MultiplayerSyncCheck.Stats</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Creature</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CanASeeB</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CanASeeBLightSource</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Weight</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.StaminaChanges</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.InventoryCount</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.ItemWeight</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Ticks</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Seed</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.PlayerPositions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.ItemOrder</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.LastCreationIds</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.IsTileEmpty</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureNearestPlayer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureIsInFlowField</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureMoveDirection</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.FlowFieldValue</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Sync<wbr>Check<span class="tsd-signature-symbol">(</span>syncCheck<span class="tsd-signature-symbol">: </span><a href="../enums/multiplayersynccheck.html" class="tsd-signature-type">MultiplayerSyncCheck</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:10</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>syncCheck: <span class="tsd-signature-type">MultiplayerSyncCheck.Stats</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Creature</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CanASeeB</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CanASeeBLightSource</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Weight</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.StaminaChanges</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.InventoryCount</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.ItemWeight</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Ticks</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Seed</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.PlayerPositions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.ItemOrder</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.LastCreationIds</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.IsTileEmpty</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureNearestPlayer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureIsInFlowField</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.CreatureMoveDirection</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MultiplayerSyncCheck.FlowFieldValue</span></h5>
+									<h5>syncCheck: <a href="../enums/multiplayersynccheck.html" class="tsd-signature-type">MultiplayerSyncCheck</a></h5>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
@@ -189,19 +198,19 @@
 					<a name="createserver" class="tsd-anchor"></a>
 					<h3>create<wbr>Server</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Server<span class="tsd-signature-symbol">(</span>serverId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, options<span class="tsd-signature-symbol">?: </span><a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Server<span class="tsd-signature-symbol">(</span>serverInfo<span class="tsd-signature-symbol">: </span><a href="../globals.html#serverinfo" class="tsd-signature-type">ServerInfo</a>, options<span class="tsd-signature-symbol">?: </span><a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:11</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:13</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>serverId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>serverInfo: <a href="../globals.html#serverinfo" class="tsd-signature-type">ServerInfo</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h5>
@@ -215,16 +224,68 @@
 					<a name="disconnect" class="tsd-anchor"></a>
 					<h3>disconnect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">?: </span><a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:12</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:14</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reason: <a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reasonDescription: <a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="disconnectandresetgamestate" class="tsd-anchor"></a>
+					<h3>disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">: </span><a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:15</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>reason: <a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reasonDescription: <a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getbannedplayers" class="tsd-anchor"></a>
+					<h3>get<wbr>Banned<wbr>Players</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Banned<wbr>Players<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:16</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -238,10 +299,53 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:13</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getdedicatedservermatchmakinginfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Dedicated<wbr>Server<wbr>Matchmaking<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Dedicated<wbr>Server<wbr>Matchmaking<wbr>Info<span class="tsd-signature-symbol">(</span>matchmakingServer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:18</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matchmakingServer: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getmatchmakinginfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Matchmaking<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Matchmaking<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:17</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -255,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:14</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:20</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -272,7 +376,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:15</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -289,7 +393,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:16</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:22</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -306,7 +410,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:17</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:23</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -323,7 +427,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:18</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:24</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -340,7 +444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:19</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -351,22 +455,22 @@
 					<a name="joinserver" class="tsd-anchor"></a>
 					<h3>join<wbr>Server</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">join<wbr>Server<span class="tsd-signature-symbol">(</span>serverId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, playerOptions<span class="tsd-signature-symbol">?: </span><a href="iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">join<wbr>Server<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../globals.html#serverinfo" class="tsd-signature-type">ServerInfo</a>, character<span class="tsd-signature-symbol">?: </span><a href="icharacter.html" class="tsd-signature-type">ICharacter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:20</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:26</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>serverId: <span class="tsd-signature-type">string</span></h5>
+									<h5>info: <a href="../globals.html#serverinfo" class="tsd-signature-type">ServerInfo</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> playerOptions: <a href="iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> character: <a href="icharacter.html" class="tsd-signature-type">ICharacter</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -377,19 +481,22 @@
 					<a name="kick" class="tsd-anchor"></a>
 					<h3>kick</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">kick<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">kick<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a>, message<span class="tsd-signature-symbol">: </span><a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:21</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:27</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>player: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+								</li>
+								<li>
+									<h5>message: <a href="../globals.html#textortranslationdata" class="tsd-signature-type">TextOrTranslationData</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -406,7 +513,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:22</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:28</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -432,7 +539,47 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:23</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:29</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pausepacketprocessing" class="tsd-anchor"></a>
+					<h3>pause<wbr>Packet<wbr>Processing</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pause<wbr>Packet<wbr>Processing<span class="tsd-signature-symbol">(</span>pause<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:38</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pause: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="resetsyncpacketswaiting" class="tsd-anchor"></a>
+					<h3>reset<wbr>Sync<wbr>Packets<wbr>Waiting</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -449,7 +596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:24</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -475,7 +622,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:25</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:31</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -495,6 +642,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setbanned" class="tsd-anchor"></a>
+					<h3>set<wbr>Banned</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Banned<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ban<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:32</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>ban: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="setoptions" class="tsd-anchor"></a>
 					<h3>set<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -504,13 +677,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:26</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>options: <a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="suppresssyncchecks" class="tsd-anchor"></a>
+					<h3>suppress<wbr>Sync<wbr>Checks</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">suppress<wbr>Sync<wbr>Checks<span class="tsd-signature-symbol">(</span>suppress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:35</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>suppress: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -527,7 +723,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:27</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -562,6 +758,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="updateoptions" class="tsd-anchor"></a>
+					<h3>update<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Options<span class="tsd-signature-symbol">(</span>updates<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:34</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>updates: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="updateplayerid" class="tsd-anchor"></a>
 					<h3>update<wbr>Player<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -571,7 +790,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:28</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -620,7 +839,19 @@
 								<a href="imultiplayer.html#disconnect" class="tsd-kind-icon">disconnect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#disconnectandresetgamestate" class="tsd-kind-icon">disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#getbannedplayers" class="tsd-kind-icon">get<wbr>Banned<wbr>Players</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#getclients" class="tsd-kind-icon">get<wbr>Clients</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#getdedicatedservermatchmakinginfo" class="tsd-kind-icon">get<wbr>Dedicated<wbr>Server<wbr>Matchmaking<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#getmatchmakinginfo" class="tsd-kind-icon">get<wbr>Matchmaking<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
@@ -653,16 +884,31 @@
 								<a href="imultiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#resetsyncpacketswaiting" class="tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#sendpacketto" class="tsd-kind-icon">send<wbr>Packet<wbr>To</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#setbanned" class="tsd-kind-icon">set<wbr>Banned</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#setoptions" class="tsd-kind-icon">set<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#suppresssyncchecks" class="tsd-kind-icon">suppress<wbr>Sync<wbr>Checks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#updateoptions" class="tsd-kind-icon">update<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#updateplayerid" class="tsd-kind-icon">update<wbr>Player<wbr>Id</a>
