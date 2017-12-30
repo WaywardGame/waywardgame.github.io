@@ -163,9 +163,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#oninventoryitemupdate" class="tsd-kind-icon">on<wbr>Inventory<wbr>Item<wbr>Update</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onitemequip" class="tsd-kind-icon">on<wbr>Item<wbr>Equip</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onload" class="tsd-kind-icon">on<wbr>Load</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmousemove" class="tsd-kind-icon">on<wbr>Mouse<wbr>Move</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmousescroll" class="tsd-kind-icon">on<wbr>Mouse<wbr>Scroll</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmouseuporleave" class="tsd-kind-icon">on<wbr>Mouse<wbr>UpOr<wbr>Leave</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmove" class="tsd-kind-icon">on<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmovecomplete" class="tsd-kind-icon">on<wbr>Move<wbr>Complete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mod.html#onmovedirectionupdate" class="tsd-kind-icon">on<wbr>Move<wbr>Direction<wbr>Update</a></li>
@@ -274,16 +271,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basemod.html">BaseMod</a>.<a href="basemod.html#addbindable">addBindable</a></p>
 								<ul>
-									<li>Defined in mod/BaseMod.ts:287</li>
+									<li>Defined in mod/BaseMod.ts:292</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a bindable and the default binding for it</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the binding (when translated, the name will be <code>Mod&lt;mod name&gt;&lt;name&gt;</code>)</p>
+									</div>
 								</li>
 								<li>
 									<h5>binding: <a href="../interfaces/ibinding.html" class="tsd-signature-type">IBinding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ibinding.html" class="tsd-signature-type">IBinding</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The default binding or bindings of this bindable</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1435,7 +1443,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basemod.html">BaseMod</a>.<a href="basemod.html#getitembyname">getItemByName</a></p>
 								<ul>
-									<li>Defined in mod/BaseMod.ts:312</li>
+									<li>Defined in mod/BaseMod.ts:317</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1462,7 +1470,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basemod.html">BaseMod</a>.<a href="basemod.html#getitembytype">getItemByType</a></p>
 								<ul>
-									<li>Defined in mod/BaseMod.ts:308</li>
+									<li>Defined in mod/BaseMod.ts:313</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1783,7 +1791,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basemod.html">BaseMod</a>.<a href="basemod.html#itemnametoobjecttype">itemNameToObjectType</a></p>
 								<ul>
-									<li>Defined in mod/BaseMod.ts:295</li>
+									<li>Defined in mod/BaseMod.ts:300</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1862,13 +1870,16 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Called when in-game, on the bind catcher loop (once per frame)</p>
+									<p>Called when in-game, on the bind catcher loop (once per frame). When overriding this method, make sure you return bindPressed.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>bindPressed: <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether a bind has been pressed. Use this as a final check before processing a bind, and set it to true when a bind was pressed.</p>
+									</div>
 								</li>
 								<li>
 									<h5>api: <a href="../interfaces/bindcatcherapi.html" class="tsd-signature-type">BindCatcherApi</a></h5>
@@ -2232,7 +2243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:441</li>
+									<li>Defined in mod/Mod.ts:440</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2720,111 +2731,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="onmousemove" class="tsd-anchor"></a>
-					<h3>on<wbr>Mouse<wbr>Move</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>Move<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JQueryEventObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/Mod.ts:458</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Called when the mouse is moved</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">JQueryEventObject</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The mouse event object</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
-							<p>False to cancel the mouse event or undefined to use the default logic</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="onmousescroll" class="tsd-anchor"></a>
-					<h3>on<wbr>Mouse<wbr>Scroll</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>Scroll<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JQueryEventObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/Mod.ts:467</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Called when the mouse scroll wheel is moved</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">JQueryEventObject</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The mouse event object</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
-							<p>False to cancel the mouse event or undefined to use the default logic</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="onmouseuporleave" class="tsd-anchor"></a>
-					<h3>on<wbr>Mouse<wbr>UpOr<wbr>Leave</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>UpOr<wbr>Leave<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JQueryEventObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/Mod.ts:476</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Called when a mouse button is let go or if the mouse leaves the screen</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">JQueryEventObject</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The mouse event object</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
-							<p>False to cancel the event or undefined to use the default logic</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="onmove" class="tsd-anchor"></a>
 					<h3>on<wbr>Move</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -2834,7 +2740,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:489</li>
+									<li>Defined in mod/Mod.ts:462</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2893,7 +2799,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:497</li>
+									<li>Defined in mod/Mod.ts:470</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2924,7 +2830,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:505</li>
+									<li>Defined in mod/Mod.ts:478</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2961,7 +2867,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:512</li>
+									<li>Defined in mod/Mod.ts:485</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2992,7 +2898,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:520</li>
+									<li>Defined in mod/Mod.ts:493</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3029,7 +2935,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:529</li>
+									<li>Defined in mod/Mod.ts:502</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3070,7 +2976,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:538</li>
+									<li>Defined in mod/Mod.ts:511</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3105,7 +3011,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:546</li>
+									<li>Defined in mod/Mod.ts:519</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3136,7 +3042,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:554</li>
+									<li>Defined in mod/Mod.ts:527</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3168,7 +3074,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:561</li>
+									<li>Defined in mod/Mod.ts:534</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3199,7 +3105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:568</li>
+									<li>Defined in mod/Mod.ts:541</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3230,7 +3136,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:579</li>
+									<li>Defined in mod/Mod.ts:552</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3309,7 +3215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:586</li>
+									<li>Defined in mod/Mod.ts:559</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3331,7 +3237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:598</li>
+									<li>Defined in mod/Mod.ts:571</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3390,7 +3296,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:609</li>
+									<li>Defined in mod/Mod.ts:582</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3439,7 +3345,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:616</li>
+									<li>Defined in mod/Mod.ts:589</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3470,7 +3376,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:623</li>
+									<li>Defined in mod/Mod.ts:596</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3568,7 +3474,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:632</li>
+									<li>Defined in mod/Mod.ts:605</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3609,7 +3515,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:644</li>
+									<li>Defined in mod/Mod.ts:617</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3659,7 +3565,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:651</li>
+									<li>Defined in mod/Mod.ts:624</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3690,7 +3596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:657</li>
+									<li>Defined in mod/Mod.ts:630</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3712,7 +3618,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:663</li>
+									<li>Defined in mod/Mod.ts:636</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3734,7 +3640,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:672</li>
+									<li>Defined in mod/Mod.ts:645</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3777,7 +3683,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:683</li>
+									<li>Defined in mod/Mod.ts:656</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3825,7 +3731,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:694</li>
+									<li>Defined in mod/Mod.ts:667</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3872,7 +3778,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:701</li>
+									<li>Defined in mod/Mod.ts:674</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3894,7 +3800,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:707</li>
+									<li>Defined in mod/Mod.ts:680</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3916,7 +3822,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:716</li>
+									<li>Defined in mod/Mod.ts:689</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3959,7 +3865,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:724</li>
+									<li>Defined in mod/Mod.ts:697</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -4018,7 +3924,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/Mod.ts:732</li>
+									<li>Defined in mod/Mod.ts:705</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -4045,7 +3951,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basemod.html">BaseMod</a>.<a href="basemod.html#unallocateenums">unallocateEnums</a></p>
 								<ul>
-									<li>Defined in mod/BaseMod.ts:324</li>
+									<li>Defined in mod/BaseMod.ts:329</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -4295,15 +4201,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="mod.html#onload" class="tsd-kind-icon">on<wbr>Load</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mod.html#onmousemove" class="tsd-kind-icon">on<wbr>Mouse<wbr>Move</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mod.html#onmousescroll" class="tsd-kind-icon">on<wbr>Mouse<wbr>Scroll</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mod.html#onmouseuporleave" class="tsd-kind-icon">on<wbr>Mouse<wbr>UpOr<wbr>Leave</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="mod.html#onmove" class="tsd-kind-icon">on<wbr>Move</a>
