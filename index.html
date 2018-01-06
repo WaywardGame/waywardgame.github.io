@@ -77,6 +77,7 @@
 							<li><a href="#helloworld-mod-json">mod.json</a></li>
 							<li><a href="#helloworld-tsconfig-json">tsconfig.json</a></li>
 							<li><a href="#helloworld-helloworld-ts">HelloWorld.ts</a></li>
+							<li><a href="#helloworld-lang-english-json">/lang/english.json</a></li>
 						</ul>
 					</li>
 					<li><a href="#json-specifications">JSON Specifications</a><ul>
@@ -127,12 +128,13 @@
 				<h3 id="-intro-"><strong>Intro</strong></h3>
 				<p>This section assumes you have an editor capable of compiling TypeScript files, and uses Visual Studio Code as a reference for keybinds and functionality. It should also be noted that this is not a TypeScript tutorial. If you want to learn the TypeScript language, please read through the official <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">Handbook</a>.</p>
 				<p>The first step of developing a Wayward modification is setting up the primary files. You can skip this guide and file setup by downloading/checking out (via GitHub) the Hello World mod in its entirety here: <a href="https://github.com/WaywardGame/helloworld">https://github.com/WaywardGame/helloworld</a></p>
-				<p>For the sake of this tutorial, we will use the &quot;mods&quot; directory within the Wayward Steam directory as the base for your modification. You can get there by clicking the &quot;Open Mods Folder&quot; button inside of the &quot;Manage Mods&quot; menu while in Wayward. Alternatively, you can right-click Wayward from your Steam library and click &quot;Properties&quot;. From there you can click the &quot;Local files&quot; tab and select &quot;Browse local files&quot;. You are looking for the folder called &quot;mods&quot; within the Wayward folder/directory.</p>
+				<p>For the sake of this tutorial, we will use the &quot;mods&quot; directory within the Wayward Steam directory as the base for your modification. You can get there by clicking the &quot;Open Mods Folder&quot; button inside of the &quot;Mods&quot; menu while in Wayward. Alternatively, you can right-click Wayward from your Steam library and click &quot;Properties&quot;. From there you can click the &quot;Local files&quot; tab and select &quot;Browse local files&quot;. You are looking for the folder called &quot;mods&quot; within the Wayward folder/directory.</p>
 				<h3 id="-setup-"><strong>Setup</strong></h3>
 				<p>After you are inside the &quot;mods&quot; folder, create a new folder called &quot;helloworld&quot;. Inside there, create the following files and folders:</p>
 				<ul>
 					<li>/.vscode/tasks.json</li>
 					<li>/mod-reference/</li>
+					<li>/lang/english.json</li>
 					<li>mod.json</li>
 					<li>tsconfig.json</li>
 					<li>HelloWorld.ts</li>
@@ -152,7 +154,7 @@
 				<h3 id="helloworld-mod-reference-">helloworld/mod-reference/</h3>
 				<p>The contents of this folder is located here: <a href="https://github.com/WaywardGame/mod-reference/">https://github.com/WaywardGame/mod-reference/</a></p>
 				<p>Refer to the <a href="#examples">Examples</a> section if you are not familiar with GitHub. </p>
-				<p>It is recommended you keep this up to date with what is located on GitHub as this will change from version to version of Wayward. This folder contains all the definitions for functions in Wayward so that TypeScript can autocomplete  and compile your mod properly.</p>
+				<p>It is recommended you keep this up to date with what is located on GitHub as this will change from version to version of Wayward. This folder contains all the definitions for functions in Wayward so that TypeScript can autocomplete and compile your mod properly.</p>
 				<h3 id="helloworld-mod-json">helloworld/mod.json</h3>
 				<p>You can think of the mod.json file as the description file for your mod. It describes what it does and how it behaves. It does this through a set of properties, which we will describe below. It should be updated every time you publish it to Steam. Here&#39;s a sample of what it should look like for Hello World:</p>
 				<pre><code class="lang-json">{
@@ -161,10 +163,13 @@
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
     <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Your Name Here"</span>,
     <span class="hljs-attr">"compatibleMinorVersions"</span>: [
-        <span class="hljs-number">3</span>
+        <span class="hljs-number">5</span>
     ],
     <span class="hljs-attr">"unloadable"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"file"</span>: <span class="hljs-string">"HelloWorld.js"</span>,
+    <span class="hljs-attr">"languages"</span>: [
+        <span class="hljs-string">"lang/english"</span>
+    ],
     <span class="hljs-attr">"hooks"</span>: [
         <span class="hljs-string">"OnGameStart"</span>,
         <span class="hljs-string">"OnItemEquip"</span>,
@@ -172,9 +177,10 @@
     ]
 }
 </code></pre>
-				<p>The following is an explanation of the properties in this mod.json file:</p>
-				<p><code>compatibleMinorVersions</code> only allows the mod to load in 2.3.x.</p>
+				<p>The following is an explanation of some of the properties in this mod.json file:</p>
+				<p><code>compatibleMinorVersions</code> only allows the mod to load in 2.5.x.</p>
 				<p><code>unloadable</code> makes it so the mod doesn&#39;t have to be enabled when loading a world which had the mod loaded previously.</p>
+				<p><code>languages</code> looks for a language file, used for text strings in your mod, so others can translate it. Not required for all mods.</p>
 				<p><code>hooks</code> is a list of places in the code we&#39;re going to be injecting our own code into.</p>
 				<p>To see a complete list of the properties you can use in your <code>mod.json</code>, and more in-depth details of the properties used in this example, see the <a href="#-mod-json-"><code>mod.json</code> section</a>.</p>
 				<h3 id="helloworld-tsconfig-json">helloworld/tsconfig.json</h3>
@@ -220,12 +226,14 @@
 <span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> HelloWorld <span class="hljs-keyword">extends</span> Mod {
-    <span class="hljs-keyword">private</span> helloWorld: <span class="hljs-built_in">number</span>;
+    <span class="hljs-keyword">private</span> dictionary: <span class="hljs-built_in">number</span>;
+
+    <span class="hljs-keyword">public</span> onInitialize(): <span class="hljs-built_in">void</span> {
+        <span class="hljs-keyword">this</span>.dictionary = <span class="hljs-keyword">this</span>.addDictionary(<span class="hljs-string">"HelloWorld"</span>, HelloWorldDictionary);
+    }
 
     <span class="hljs-keyword">public</span> onLoad(saveData: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello World!"</span>);
-
-        <span class="hljs-keyword">this</span>.helloWorld = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloWorld"</span>, <span class="hljs-string">"Hello World!"</span>);
     }
 
     <span class="hljs-keyword">public</span> onUnload(): <span class="hljs-built_in">void</span> {
@@ -234,28 +242,31 @@
 
     <span class="hljs-comment">// Hooks</span>
     <span class="hljs-keyword">public</span> onGameStart(isLoadingSave: <span class="hljs-built_in">boolean</span>, playedCount: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-        ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloWorld, MessageType.Good);
+        ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloWorld), MessageType.Good);
     }
 }
+
+<span class="hljs-keyword">enum</span> HelloWorldDictionary {
+    HelloWorld
+}
 </code></pre>
-				<p>Here&#39;s where the name of the mod comes from. As you can see, we added new message to the game. It will display &quot;Hello World!&quot; when you start a new game, hence the new onGameStart hook. We also added some console logs to the game. These will not be shown to the player, but can be useful for debugging or logging information. They will only show when you have your console open. Because we needed to use the MessageType enum, you can see we also imported it from &quot;language/Messages&quot;. Let&#39;s add some more functionality:</p>
+				<p>Here&#39;s where the name of the mod comes from. As you can see, we added new dictionary and message into the game. It will eventually display &quot;Hello World!&quot; when you start a new game, hence the new onGameStart hook. We will set up the actual message within the languages file later in this guide. We also added some console logs to the game. These will not be shown to the player, but can be useful for debugging or logging information. They will only show when you have your console open. Because we needed to use the MessageType enum, you can see we also imported it from &quot;language/Messages&quot;. Let&#39;s add some more functionality:</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { EquipType, ItemType } <span class="hljs-keyword">from</span> <span class="hljs-string">"Enums"</span>;
 <span class="hljs-keyword">import</span> { IItem } <span class="hljs-keyword">from</span> <span class="hljs-string">"item/IItem"</span>;
 <span class="hljs-keyword">import</span> Items <span class="hljs-keyword">from</span> <span class="hljs-string">"item/Items"</span>;
 <span class="hljs-keyword">import</span> { MessageType } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/Messages"</span>;
 <span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
+<span class="hljs-keyword">import</span> { IPlayer } <span class="hljs-keyword">from</span> <span class="hljs-string">"player/IPlayer"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> HelloWorld <span class="hljs-keyword">extends</span> Mod {
-    <span class="hljs-keyword">private</span> helloWorld: <span class="hljs-built_in">number</span>;
-    <span class="hljs-keyword">private</span> helloLeftHand: <span class="hljs-built_in">number</span>;
-    <span class="hljs-keyword">private</span> helloRightHand: <span class="hljs-built_in">number</span>;
+    <span class="hljs-keyword">private</span> dictionary: <span class="hljs-built_in">number</span>;
+
+    <span class="hljs-keyword">public</span> onInitialize(): <span class="hljs-built_in">void</span> {
+        <span class="hljs-keyword">this</span>.dictionary = <span class="hljs-keyword">this</span>.addDictionary(<span class="hljs-string">"HelloWorld"</span>, HelloWorldDictionary);
+    }
 
     <span class="hljs-keyword">public</span> onLoad(saveData: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello World!"</span>);
-
-        <span class="hljs-keyword">this</span>.helloWorld = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloWorld"</span>, <span class="hljs-string">"Hello World!"</span>);
-        <span class="hljs-keyword">this</span>.helloLeftHand = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloLeftHand"</span>, <span class="hljs-string">"Hello Left Hand!"</span>);
-        <span class="hljs-keyword">this</span>.helloRightHand = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloRightHand"</span>, <span class="hljs-string">"Hello Right Hand!"</span>);
     }
 
     <span class="hljs-keyword">public</span> onUnload(): <span class="hljs-built_in">void</span> {
@@ -264,20 +275,27 @@
 
     <span class="hljs-comment">// Hooks</span>
     <span class="hljs-keyword">public</span> onGameStart(isLoadingSave: <span class="hljs-built_in">boolean</span>, playedCount: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-        ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloWorld, MessageType.Good);
+        ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloWorld), MessageType.Good);
         Items[ItemType.Branch].prefix = <span class="hljs-string">"a "</span>;
         Items[ItemType.Branch].name = <span class="hljs-string">"greetings stick"</span>;
     }
 
-    <span class="hljs-keyword">public</span> onItemEquip(item: IItem, slot: EquipType): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">public</span> onItemEquip(player: IPlayer, item: IItem, slot: EquipType): <span class="hljs-built_in">void</span> {
         <span class="hljs-keyword">if</span> (item.type === ItemType.Branch) {
             <span class="hljs-keyword">if</span> (slot === EquipType.LeftHand) {
-                ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloLeftHand, MessageType.None);
+                ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloLeftHand), MessageType.None);
+
             } <span class="hljs-keyword">else</span> {
-                ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloRightHand, MessageType.None);
+                ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloRightHand), MessageType.None);
             }
         }
     }
+}
+
+<span class="hljs-keyword">enum</span> HelloWorldDictionary {
+    HelloWorld,
+    HelloLeftHand,
+    HelloRightHand
 }
 </code></pre>
 				<p>Now we have renamed the branches in the game to &quot;a greetings stick&quot;. We added a new hook (onItemEquip) so that when we equip them, they say hello to our hands. Why? There&#39;s so many reasons I don&#39;t know where to start! As we add functionality, you can see we continue to import enums and classes as we need to. Let&#39;s continue:</p>
@@ -286,23 +304,20 @@
 <span class="hljs-keyword">import</span> Items <span class="hljs-keyword">from</span> <span class="hljs-string">"item/Items"</span>;
 <span class="hljs-keyword">import</span> { MessageType } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/Messages"</span>;
 <span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
+<span class="hljs-keyword">import</span> { IPlayer } <span class="hljs-keyword">from</span> <span class="hljs-string">"player/IPlayer"</span>;
 <span class="hljs-keyword">import</span> { ITile } <span class="hljs-keyword">from</span> <span class="hljs-string">"tile/ITerrain"</span>;
 <span class="hljs-keyword">import</span> Terrains <span class="hljs-keyword">from</span> <span class="hljs-string">"tile/Terrains"</span>;
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Utilities <span class="hljs-keyword">from</span> <span class="hljs-string">"Utilities"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> HelloWorld <span class="hljs-keyword">extends</span> Mod {
-    <span class="hljs-keyword">private</span> helloWorld: <span class="hljs-built_in">number</span>;
-    <span class="hljs-keyword">private</span> helloLeftHand: <span class="hljs-built_in">number</span>;
-    <span class="hljs-keyword">private</span> helloRightHand: <span class="hljs-built_in">number</span>;
-    <span class="hljs-keyword">private</span> helloTerrain: <span class="hljs-built_in">number</span>;
+    <span class="hljs-keyword">private</span> dictionary: <span class="hljs-built_in">number</span>;
+
+    <span class="hljs-keyword">public</span> onInitialize(): <span class="hljs-built_in">void</span> {
+        <span class="hljs-keyword">this</span>.dictionary = <span class="hljs-keyword">this</span>.addDictionary(<span class="hljs-string">"HelloWorld"</span>, HelloWorldDictionary);
+    }
 
     <span class="hljs-keyword">public</span> onLoad(saveData: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello World!"</span>);
-
-        <span class="hljs-keyword">this</span>.helloWorld = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloWorld"</span>, <span class="hljs-string">"Hello World!"</span>);
-        <span class="hljs-keyword">this</span>.helloLeftHand = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloLeftHand"</span>, <span class="hljs-string">"Hello Left Hand!"</span>);
-        <span class="hljs-keyword">this</span>.helloRightHand = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloRightHand"</span>, <span class="hljs-string">"Hello Right Hand!"</span>);
-        <span class="hljs-keyword">this</span>.helloTerrain = <span class="hljs-keyword">this</span>.addMessage(<span class="hljs-string">"HelloTerrain"</span>, <span class="hljs-string">"Hello _0_!"</span>);
     }
 
     <span class="hljs-keyword">public</span> onUnload(): <span class="hljs-built_in">void</span> {
@@ -311,31 +326,53 @@
 
     <span class="hljs-comment">// Hooks</span>
     <span class="hljs-keyword">public</span> onGameStart(isLoadingSave: <span class="hljs-built_in">boolean</span>, playedCount: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-        ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloWorld, MessageType.Good);
+        ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloWorld), MessageType.Good);
         Items[ItemType.Branch].prefix = <span class="hljs-string">"a "</span>;
         Items[ItemType.Branch].name = <span class="hljs-string">"greetings stick"</span>;
     }
 
-    <span class="hljs-keyword">public</span> onItemEquip(item: IItem, slot: EquipType): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">public</span> onItemEquip(player: IPlayer, item: IItem, slot: EquipType): <span class="hljs-built_in">void</span> {
         <span class="hljs-keyword">if</span> (item.type === ItemType.Branch) {
             <span class="hljs-keyword">if</span> (slot === EquipType.LeftHand) {
-                ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloLeftHand, MessageType.None);
+                ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloLeftHand), MessageType.None);
+
             } <span class="hljs-keyword">else</span> {
-                ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloRightHand, MessageType.None);
+                ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloRightHand), MessageType.None);
             }
         }
     }
 
-    <span class="hljs-keyword">public</span> onMove(nextX: <span class="hljs-built_in">number</span>, nextY: <span class="hljs-built_in">number</span>, tile: ITile, direction: FacingDirection): <span class="hljs-built_in">boolean</span> | <span class="hljs-literal">undefined</span> {
+    <span class="hljs-keyword">public</span> onMove(player: IPlayer, nextX: <span class="hljs-built_in">number</span>, nextY: <span class="hljs-built_in">number</span>, tile: ITile, direction: FacingDirection): <span class="hljs-built_in">boolean</span> | <span class="hljs-literal">undefined</span> {
         <span class="hljs-keyword">const</span> getTile = game.getTile(localPlayer.x, localPlayer.y, localPlayer.z);
         <span class="hljs-keyword">const</span> tileType = Utilities.TileHelpers.getType(getTile);
-        ui.displayMessage(localPlayer, <span class="hljs-keyword">this</span>.helloTerrain, MessageType.Stat, Terrains[tileType].name);
+        ui.displayMessage(localPlayer, languageManager.getTranslationString(<span class="hljs-keyword">this</span>.dictionary, HelloWorldDictionary.HelloTerrain), MessageType.Stat, Terrains[tileType].name);
         <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>;
     }
 }
+
+<span class="hljs-keyword">enum</span> HelloWorldDictionary {
+    HelloWorld,
+    HelloLeftHand,
+    HelloRightHand,
+    HelloTerrain
+}
 </code></pre>
-				<p>Now we say hello to the world, literally. As your player moves, you will say hello to the ground beneath your feet, by name!</p>
-				<p>You can compile your script with &quot;Ctrl+Shift+B&quot; by default. After it is compiled, you will see a bunch of new files in your helloworld directory. These are the files Wayward will use. If you load Wayward, under &quot;Manage Mods&quot;, you will now see your Hello World mod under &quot;Local Mods&quot;.</p>
+				<p>Now we say hello to the world, literally. As your player moves, you will say hello to the ground beneath your feet, by name! But not before we add the dictionary entries we were setting up into a file located in the directory we referenced in the languages mod.json property.</p>
+				<h3 id="hellowworld-lang-english-json">hellowworld/lang/english.json</h3>
+				<pre><code class="lang-json">{
+    <span class="hljs-attr">"extends"</span>: <span class="hljs-string">"English"</span>,
+    <span class="hljs-attr">"dictionaries"</span>: {
+        <span class="hljs-attr">"helloWorld"</span>: {
+            <span class="hljs-attr">"helloWorld"</span>: <span class="hljs-string">"Hello World!"</span>,
+            <span class="hljs-attr">"helloLeftHand"</span>: <span class="hljs-string">"Hello Left Hand!"</span>,
+            <span class="hljs-attr">"helloRightHand"</span>: <span class="hljs-string">"Hello Right Hand!"</span>,
+            <span class="hljs-attr">"helloTerrain"</span>: <span class="hljs-string">"Hello _0_!"</span>
+        }
+    }
+}
+</code></pre>
+				<p>As mentioned, we set up our language strings this way so others can translate them in their own mod. This isn&#39;t required, but who wouldn&#39;t want to translate this epic mod? As you can see the JSON properties match the variables we defined in our mod.</p>
+				<p>You can compile your script with &quot;Ctrl+Shift+B&quot; by default in HelloWorld.ts. After it is compiled, you will see a bunch of new files in your helloworld directory. These are the files Wayward will use. If you load Wayward, under &quot;Mods&quot;, you will now see your Hello World mod under &quot;Local Mods&quot;.</p>
 				<p>It&#39;s not much of a mod, but it works!</p>
 				<h2 id="json-specifications">JSON Specifications</h2>
 				<p>Besides the required <code>mod.json</code> file, Wayward has support for a variety of JSON files that add/modify functionality without the need for coding and compiling a full modification. Currently, there is support of image replacements, language translations, and character customizations.
@@ -388,7 +425,7 @@
 				<p>The <code>animated</code> property takes a boolean representing whether or not the image is an animated strip. If the property isn&#39;t provided it defaults to false.</p>
 				<p>You can see an example of image overrides in action in the <a href="https://github.com/WaywardGame/treesonfire">Trees on Fire</a> mod.</p>
 				<h3 id="-language-json-"><strong>language.json</strong></h3>
-				<p>A language json file contains all translations of a language, without requiring scripts, as was the case in versions &lt; 2.3. The file name can be anything as long as it ends in <code>.json</code> Here&#39;s an example file:</p>
+				<p>A language JSON file contains all translations of a language, without requiring scripts, as was the case in versions &lt; 2.3. The file name can be anything as long as it ends in <code>.json</code> Here&#39;s an example file:</p>
 				<pre><code class="lang-json">{
     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"such language"</span>,
     <span class="hljs-attr">"shouldPluralize"</span>: <span class="hljs-literal">true</span>,
@@ -399,7 +436,7 @@
     }
 }
 </code></pre>
-				<p>A description of the properties follows.</p>
+				<p>A description of the properties is as follows:</p>
 				<p><code>name</code> is the name players will see in the language selector dropdown. </p>
 				<p><code>shouldPluralize</code> determines whether or not names should be pluralized. </p>
 				<p><code>extends</code> is used to extend another language (such as English)--rather than providing the <code>name</code> parameter, you may provide this parameter, set to the name of the language you are extending (important--make sure <code>extends</code> is set to a string <em>identical</em> to the <code>name</code> parameter of the extended language, or else it will not work). When using <code>extends</code>, <code>shouldPluralize</code> has no effect. Dictionary entries afterwards will overwrite any entry already set in the language. </p>
@@ -437,8 +474,8 @@
 				<p>After you are happy with your mod, why not publish it to Steam Workshop? You will be able to edit most things via the Steam interface after publishing it, but you&#39;ll want to include a few things before releasing it as described below.</p>
 				<p><strong>NOTE: Please do not upload the Hello World modification to the Steam Workshop. Make something fun!</strong></p>
 				<p>If you place a square formatted .png image in the root mod folder named &quot;mod.png&quot; this will be the thumbnail/main image for the mod when it gets uploaded to the Steam Workshop. We recommend a size of 720x720 pixels, although this gets shrunk down to around 77x77; but normally appears at 268x268 inside the Workshop page, so please use 268x268 as a minimum size.</p>
-				<p>When you are ready to go, and you have performed all the steps outlined in <em>Hello World</em> section, upon launching Wayward and going in the <em>Manage Mods</em> menu, you will see an &quot;arrow&quot; icon to the right hand side of your mod. Clicking it will allow you to publish your mod to the Steam Workshop. At any point you make changes and build/compile your mod, you can simply click this again to send an update to Steam.</p>
-				<p>Everything else about your entry is controlled via Steam. This includes uploading screenshots, links, required mod displaying, stats, and more. You can quickly get to your Workshop entry by clicking the &quot;eye&quot; icon next to your mod in the <em>Manage Mods</em> menu listing. You will see a full suite of administrative options on that page if you are logged in to Steam.</p>
+				<p>When you are ready to go, and you have performed all the steps outlined in <em>Hello World</em> section, upon launching Wayward and going in the <em>Mods</em> menu, you will see an &quot;arrow&quot; icon to the right hand side of your mod. Clicking it will allow you to publish your mod to the Steam Workshop. At any point you make changes and build/compile your mod, you can simply click this again to send an update to Steam.</p>
+				<p>Everything else about your entry is controlled via Steam. This includes uploading screenshots, links, required mod displaying, stats, and more. You can quickly get to your Workshop entry by clicking the &quot;eye&quot; icon next to your mod in the <em>Mods</em> menu listing. You will see a full suite of administrative options on that page if you are logged in to Steam.</p>
 				<h2 id="extracting-wayward-assets">Extracting Wayward Assets</h2>
 				<p>Want to extract the assets (or source files) from Wayward for modifications? The complete repository of Wayward files are located in the resources folder within the Wayward Steam directory, in an archive named &quot;app.asar&quot;. This cannot be opened or extracted using conventional means; however, using NPM you can install a package to extract the files from this archive. Use the following command:</p>
 				<blockquote>
@@ -743,7 +780,7 @@
 					<li class=" tsd-kind-enum">
 						<a href="enums/lootgrouptype.html" class="tsd-kind-icon">Loot<wbr>Group<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-is-not-exported">
+					<li class=" tsd-kind-enum">
 						<a href="enums/matchmakingmessagedatatype.html" class="tsd-kind-icon">Matchmaking<wbr>Message<wbr>Data<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -1077,6 +1114,9 @@
 						<a href="classes/connectedpacket.html" class="tsd-kind-icon">Connected<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/connection.html" class="tsd-kind-icon">Connection</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/corpsemanager.html" class="tsd-kind-icon">Corpse<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1249,6 +1289,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/mapgen250.html" class="tsd-kind-icon">Map<wbr>Gen250</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/matchmaking.html" class="tsd-kind-icon">Matchmaking</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/menu.html" class="tsd-kind-icon">Menu</a>
@@ -1521,6 +1564,15 @@
 						<a href="classes/water.html" class="tsd-kind-icon">Water</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/webrtcconnection.html" class="tsd-kind-icon">WebRTCConnection</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/webrtcwithfallbackconnection.html" class="tsd-kind-icon">WebRTCWith<wbr>Fallback<wbr>Connection</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/websocketconnection.html" class="tsd-kind-icon">Web<wbr>Socket<wbr>Connection</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/world.html" class="tsd-kind-icon">World</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1676,9 +1728,6 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iconnection.html" class="tsd-kind-icon">IConnection</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/iconnectioninternal.html" class="tsd-kind-icon">IConnection<wbr>Internal</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/icontainable.html" class="tsd-kind-icon">IContainable</a>
 					</li>
@@ -1777,9 +1826,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/idoodadresource.html" class="tsd-kind-icon">IDoodad<wbr>Resource</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/idoodadtorchtype.html" class="tsd-kind-icon">IDoodad<wbr>Torch<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iexploremap.html" class="tsd-kind-icon">IExplore<wbr>Map</a>
@@ -1892,40 +1938,49 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imapgen.html" class="tsd-kind-icon">IMap<wbr>Gen</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imatchmaking.html" class="tsd-kind-icon">IMatchmaking</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingbannedmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Banned<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingbuildmismatchmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Build<wbr>Mismatch<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imatchmakingconnectedmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Connected<wbr>Message<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingduplicateidentifiermessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Duplicate<wbr>Identifier<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imatchmakinghostipaddressmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Host<wbr>IpAddress<wbr>Message<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingicecandidatemessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Ice<wbr>Candidate<wbr>Message<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakinginfo.html" class="tsd-kind-icon">IMatchmaking<wbr>Info</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingipaddressmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>IpAddress<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingjoinchannelmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Join<wbr>Channel<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingmaxplayercountexceededmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Max<wbr>Player<wbr>Count<wbr>Exceeded<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingsessiondescriptionmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Session<wbr>Description<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingunknownerrormessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Unknown<wbr>Error<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmakingversionmismatchmessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Version<wbr>Mismatch<wbr>Message<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
@@ -2381,7 +2436,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/loadmenuargs.html" class="tsd-kind-icon">Load<wbr>Menu<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/matchmakingmessage.html" class="tsd-kind-icon">Matchmaking<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2522,7 +2577,7 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#interruptinputoptions" class="tsd-kind-icon">Interrupt<wbr>Input<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#matchmakingmessagedata" class="tsd-kind-icon">Matchmaking<wbr>Message<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -2570,6 +2625,9 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#concretetypemap" class="tsd-kind-icon">concrete<wbr>Type<wbr>Map</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#connectiontimeout" class="tsd-kind-icon">connection<wbr>Timeout</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#corpsemanager" class="tsd-kind-icon">corpse<wbr>Manager</a>
 					</li>
@@ -2599,6 +2657,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#defaultdirectionturndelay" class="tsd-kind-icon">default<wbr>Direction<wbr>Turn<wbr>Delay</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#defaultserverport" class="tsd-kind-icon">default<wbr>Server<wbr>Port</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#defines" class="tsd-kind-icon">defines</a>
@@ -2674,6 +2735,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#hints" class="tsd-kind-icon">hints</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#hostmatchmakingidentifier" class="tsd-kind-icon">host<wbr>Matchmaking<wbr>Identifier</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#hotkeynumbers" class="tsd-kind-icon">hot<wbr>Key<wbr>Numbers</a>
@@ -2929,6 +2993,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#webframe" class="tsd-kind-icon">web<wbr>Frame</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#webrtctimeout" class="tsd-kind-icon">webRTCTimeout</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#weightbonus" class="tsd-kind-icon">weight<wbr>Bonus</a>
