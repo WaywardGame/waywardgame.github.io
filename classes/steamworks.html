@@ -331,7 +331,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#debuglog">debugLog</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1040</li>
+									<li>Defined in steamworks/Steamworks.ts:1047</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -355,7 +355,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#deletesavegamemod">deleteSaveGameMod</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1032</li>
+									<li>Defined in steamworks/Steamworks.ts:1039</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -615,7 +615,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#getmultiplayerlogs">getMultiplayerLogs</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1171</li>
+									<li>Defined in steamworks/Steamworks.ts:1178</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -740,7 +740,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#hasservertojoin">hasServerToJoin</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1046</li>
+									<li>Defined in steamworks/Steamworks.ts:1053</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -751,15 +751,20 @@
 					<a name="importfromsavegamemod" class="tsd-anchor"></a>
 					<h3>import<wbr>From<wbr>Save<wbr>Game<wbr>Mod</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">import<wbr>From<wbr>Save<wbr>Game<wbr>Mod<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">import<wbr>From<wbr>Save<wbr>Game<wbr>Mod<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:989</li>
+									<li>Defined in steamworks/Steamworks.ts:992</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Do not remove callback. It&#39;s required for compatibility with pre 2.4 saves</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -767,6 +772,27 @@
 								</li>
 								<li>
 									<h5>json: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>success: <span class="tsd-signature-type">boolean</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -970,7 +996,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#multiplayerlog">multiplayerLog</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1175</li>
+									<li>Defined in steamworks/Steamworks.ts:1182</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -994,7 +1020,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#multiplayerlogerror">multiplayerLogError</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1186</li>
+									<li>Defined in steamworks/Steamworks.ts:1193</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1113,7 +1139,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#onready">onReady</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1050</li>
+									<li>Defined in steamworks/Steamworks.ts:1057</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1281,7 +1307,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#processbackups">processBackups</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1089</li>
+									<li>Defined in steamworks/Steamworks.ts:1096</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1323,7 +1349,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#recordproblem">recordProblem</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1075</li>
+									<li>Defined in steamworks/Steamworks.ts:1082</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1511,7 +1537,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#setupmultiplayerlog">setupMultiplayerLog</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1163</li>
+									<li>Defined in steamworks/Steamworks.ts:1170</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1529,7 +1555,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isteamworks.html">ISteamworks</a>.<a href="../interfaces/isteamworks.html#setupreporting">setupReporting</a></p>
 								<ul>
-									<li>Defined in steamworks/Steamworks.ts:1059</li>
+									<li>Defined in steamworks/Steamworks.ts:1066</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
