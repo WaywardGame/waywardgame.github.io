@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IItemDescription | Wayward</title>
+	<title>IItemDescription | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -97,6 +97,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iitemdescription.html#description" class="tsd-kind-icon">description</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#disassemble" class="tsd-kind-icon">disassemble</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#dismantle" class="tsd-kind-icon">dismantle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#doodad" class="tsd-kind-icon">doodad</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#doodadcontainer" class="tsd-kind-icon">doodad<wbr>Container</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#doodadtype" class="tsd-kind-icon">doodad<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#durability" class="tsd-kind-icon">durability</a></li>
@@ -104,6 +105,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#flammable" class="tsd-kind-icon">flammable</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#group" class="tsd-kind-icon">group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#hassleepimage" class="tsd-kind-icon">has<wbr>Sleep<wbr>Image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#hidehelmet" class="tsd-kind-icon">hide<wbr>Helmet</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iitemdescription.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#inheritweight" class="tsd-kind-icon">inherit<wbr>Weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#istorch" class="tsd-kind-icon">is<wbr>Torch</a></li>
@@ -121,6 +123,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#recipe" class="tsd-kind-icon">recipe</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#recipes" class="tsd-kind-icon">recipes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#reducedweight" class="tsd-kind-icon">reduced<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#repairanddisassemblyrequiresfire" class="tsd-kind-icon">repair<wbr>And<wbr>Disassembly<wbr>Requires<wbr>Fire</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#repairable" class="tsd-kind-icon">repairable</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#requiredfordisassembly" class="tsd-kind-icon">required<wbr>For<wbr>Disassembly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#returnonuse" class="tsd-kind-icon">return<wbr>OnUse</a></li>
@@ -134,6 +137,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#use" class="tsd-kind-icon">use</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#weight" class="tsd-kind-icon">weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iitemdescription.html#weightcapacity" class="tsd-kind-icon">weight<wbr>Capacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemdescription.html#worth" class="tsd-kind-icon">worth</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -154,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">attack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:139</li>
+							<li>Defined in item/IItem.ts:158</li>
 						</ul>
 					</aside>
 				</section>
@@ -164,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">craftable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:151</li>
+							<li>Defined in item/IItem.ts:170</li>
 						</ul>
 					</aside>
 				</section>
@@ -174,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">damage<wbr>Modifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:134</li>
+							<li>Defined in item/IItem.ts:153</li>
 						</ul>
 					</aside>
 				</section>
@@ -184,7 +188,7 @@
 					<div class="tsd-signature tsd-kind-icon">damage<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/damagetype.html" class="tsd-signature-type">DamageType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:128</li>
+							<li>Defined in item/IItem.ts:147</li>
 						</ul>
 					</aside>
 				</section>
@@ -195,7 +199,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#decaymax">decayMax</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1586</li>
+							<li>Defined in Enums.ts:1566</li>
 						</ul>
 					</aside>
 				</section>
@@ -205,7 +209,7 @@
 					<div class="tsd-signature tsd-kind-icon">decays<wbr>Into<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:147</li>
+							<li>Defined in item/IItem.ts:166</li>
 						</ul>
 					</aside>
 				</section>
@@ -215,7 +219,7 @@
 					<div class="tsd-signature tsd-kind-icon">defense<span class="tsd-signature-symbol">:</span> <a href="../classes/defense.html" class="tsd-signature-type">Defense</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:140</li>
+							<li>Defined in item/IItem.ts:159</li>
 						</ul>
 					</aside>
 				</section>
@@ -226,7 +230,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#description">description</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1583</li>
+							<li>Defined in Enums.ts:1563</li>
 						</ul>
 					</aside>
 				</section>
@@ -236,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">disassemble<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:145</li>
+							<li>Defined in item/IItem.ts:164</li>
 						</ul>
 					</aside>
 				</section>
@@ -246,7 +250,17 @@
 					<div class="tsd-signature tsd-kind-icon">dismantle<span class="tsd-signature-symbol">:</span> <a href="idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:152</li>
+							<li>Defined in item/IItem.ts:171</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="doodad" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> doodad</h3>
+					<div class="tsd-signature tsd-kind-icon">doodad<span class="tsd-signature-symbol">:</span> <a href="idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in item/IItem.ts:142</li>
 						</ul>
 					</aside>
 				</section>
@@ -256,7 +270,7 @@
 					<div class="tsd-signature tsd-kind-icon">doodad<wbr>Container<span class="tsd-signature-symbol">:</span> <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:153</li>
+							<li>Defined in item/IItem.ts:172</li>
 						</ul>
 					</aside>
 				</section>
@@ -266,7 +280,7 @@
 					<div class="tsd-signature tsd-kind-icon">doodad<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:124</li>
+							<li>Defined in item/IItem.ts:143</li>
 						</ul>
 					</aside>
 				</section>
@@ -276,7 +290,7 @@
 					<div class="tsd-signature tsd-kind-icon">durability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:123</li>
+							<li>Defined in item/IItem.ts:141</li>
 						</ul>
 					</aside>
 				</section>
@@ -286,7 +300,7 @@
 					<div class="tsd-signature tsd-kind-icon">equip<span class="tsd-signature-symbol">:</span> <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:136</li>
+							<li>Defined in item/IItem.ts:155</li>
 						</ul>
 					</aside>
 				</section>
@@ -296,7 +310,7 @@
 					<div class="tsd-signature tsd-kind-icon">flammable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:161</li>
+							<li>Defined in item/IItem.ts:181</li>
 						</ul>
 					</aside>
 				</section>
@@ -306,7 +320,7 @@
 					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtypegroup.html" class="tsd-signature-type">ItemTypeGroup</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:129</li>
+							<li>Defined in item/IItem.ts:148</li>
 						</ul>
 					</aside>
 				</section>
@@ -316,7 +330,17 @@
 					<div class="tsd-signature tsd-kind-icon">has<wbr>Sleep<wbr>Image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:160</li>
+							<li>Defined in item/IItem.ts:180</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="hidehelmet" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hide<wbr>Helmet</h3>
+					<div class="tsd-signature tsd-kind-icon">hide<wbr>Helmet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in item/IItem.ts:183</li>
 						</ul>
 					</aside>
 				</section>
@@ -327,7 +351,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#imagepath">imagePath</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1589</li>
+							<li>Defined in Enums.ts:1569</li>
 						</ul>
 					</aside>
 				</section>
@@ -337,7 +361,7 @@
 					<div class="tsd-signature tsd-kind-icon">inherit<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:138</li>
+							<li>Defined in item/IItem.ts:157</li>
 						</ul>
 					</aside>
 				</section>
@@ -347,7 +371,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Torch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:135</li>
+							<li>Defined in item/IItem.ts:154</li>
 						</ul>
 					</aside>
 				</section>
@@ -357,7 +381,7 @@
 					<div class="tsd-signature tsd-kind-icon">keep<wbr>Durability<wbr>OnCraft<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:150</li>
+							<li>Defined in item/IItem.ts:169</li>
 						</ul>
 					</aside>
 				</section>
@@ -367,7 +391,7 @@
 					<div class="tsd-signature tsd-kind-icon">lit<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:133</li>
+							<li>Defined in item/IItem.ts:152</li>
 						</ul>
 					</aside>
 				</section>
@@ -377,7 +401,7 @@
 					<div class="tsd-signature tsd-kind-icon">minimum<wbr>Weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:132</li>
+							<li>Defined in item/IItem.ts:151</li>
 						</ul>
 					</aside>
 				</section>
@@ -388,7 +412,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="imoddable.html">IModdable</a>.<a href="imoddable.html#modindex">modIndex</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1593</li>
+							<li>Defined in Enums.ts:1573</li>
 						</ul>
 					</aside>
 				</section>
@@ -399,7 +423,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#name">name</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1582</li>
+							<li>Defined in Enums.ts:1562</li>
 						</ul>
 					</aside>
 				</section>
@@ -409,7 +433,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Burn<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:125</li>
+							<li>Defined in item/IItem.ts:144</li>
 						</ul>
 					</aside>
 				</section>
@@ -419,7 +443,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Equip<wbr>Effect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:127</li>
+							<li>Defined in item/IItem.ts:146</li>
 						</ul>
 					</aside>
 				</section>
@@ -429,7 +453,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Use<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:126</li>
+							<li>Defined in item/IItem.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -447,7 +471,7 @@
 					<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:162</li>
+							<li>Defined in item/IItem.ts:182</li>
 						</ul>
 					</aside>
 				</section>
@@ -458,7 +482,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#prefix">prefix</a></p>
 						<ul>
-							<li>Defined in item/IItem.ts:156</li>
+							<li>Defined in item/IItem.ts:176</li>
 						</ul>
 					</aside>
 				</section>
@@ -468,7 +492,7 @@
 					<div class="tsd-signature tsd-kind-icon">ranged<span class="tsd-signature-symbol">:</span> <a href="iranged.html" class="tsd-signature-type">IRanged</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:143</li>
+							<li>Defined in item/IItem.ts:162</li>
 						</ul>
 					</aside>
 				</section>
@@ -478,7 +502,7 @@
 					<div class="tsd-signature tsd-kind-icon">recipe<span class="tsd-signature-symbol">:</span> <a href="irecipe.html" class="tsd-signature-type">IRecipe</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:144</li>
+							<li>Defined in item/IItem.ts:163</li>
 						</ul>
 					</aside>
 				</section>
@@ -488,7 +512,7 @@
 					<div class="tsd-signature tsd-kind-icon">recipes<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:149</li>
+							<li>Defined in item/IItem.ts:168</li>
 						</ul>
 					</aside>
 				</section>
@@ -498,7 +522,17 @@
 					<div class="tsd-signature tsd-kind-icon">reduced<wbr>Weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:131</li>
+							<li>Defined in item/IItem.ts:150</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="repairanddisassemblyrequiresfire" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> repair<wbr>And<wbr>Disassembly<wbr>Requires<wbr>Fire</h3>
+					<div class="tsd-signature tsd-kind-icon">repair<wbr>And<wbr>Disassembly<wbr>Requires<wbr>Fire<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in item/IItem.ts:174</li>
 						</ul>
 					</aside>
 				</section>
@@ -508,7 +542,7 @@
 					<div class="tsd-signature tsd-kind-icon">repairable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:154</li>
+							<li>Defined in item/IItem.ts:173</li>
 						</ul>
 					</aside>
 				</section>
@@ -518,7 +552,7 @@
 					<div class="tsd-signature tsd-kind-icon">required<wbr>For<wbr>Disassembly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/itemtypegroup.html" class="tsd-signature-type">ItemTypeGroup</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:146</li>
+							<li>Defined in item/IItem.ts:165</li>
 						</ul>
 					</aside>
 				</section>
@@ -528,7 +562,7 @@
 					<div class="tsd-signature tsd-kind-icon">return<wbr>OnUse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:137</li>
+							<li>Defined in item/IItem.ts:156</li>
 						</ul>
 					</aside>
 				</section>
@@ -538,7 +572,7 @@
 					<div class="tsd-signature tsd-kind-icon">revert<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:141</li>
+							<li>Defined in item/IItem.ts:160</li>
 						</ul>
 					</aside>
 				</section>
@@ -548,7 +582,7 @@
 					<div class="tsd-signature tsd-kind-icon">show<wbr>Over<wbr>Hair<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:159</li>
+							<li>Defined in item/IItem.ts:179</li>
 						</ul>
 					</aside>
 				</section>
@@ -559,7 +593,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#skilluse">skillUse</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1587</li>
+							<li>Defined in Enums.ts:1567</li>
 						</ul>
 					</aside>
 				</section>
@@ -569,7 +603,7 @@
 					<div class="tsd-signature tsd-kind-icon">spawn<wbr>OnBreak<span class="tsd-signature-symbol">:</span> <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:158</li>
+							<li>Defined in item/IItem.ts:178</li>
 						</ul>
 					</aside>
 				</section>
@@ -579,7 +613,7 @@
 					<div class="tsd-signature tsd-kind-icon">spawn<wbr>OnDecay<span class="tsd-signature-symbol">:</span> <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:157</li>
+							<li>Defined in item/IItem.ts:177</li>
 						</ul>
 					</aside>
 				</section>
@@ -590,7 +624,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#suffix">suffix</a></p>
 						<ul>
-							<li>Defined in item/IItem.ts:155</li>
+							<li>Defined in item/IItem.ts:175</li>
 						</ul>
 					</aside>
 				</section>
@@ -600,7 +634,7 @@
 					<div class="tsd-signature tsd-kind-icon">two<wbr>Handed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:148</li>
+							<li>Defined in item/IItem.ts:167</li>
 						</ul>
 					</aside>
 				</section>
@@ -610,7 +644,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<span class="tsd-signature-symbol">:</span> <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:142</li>
+							<li>Defined in item/IItem.ts:161</li>
 						</ul>
 					</aside>
 				</section>
@@ -620,7 +654,7 @@
 					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/IItem.ts:130</li>
+							<li>Defined in item/IItem.ts:149</li>
 						</ul>
 					</aside>
 				</section>
@@ -631,7 +665,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#weightcapacity">weightCapacity</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1588</li>
+							<li>Defined in Enums.ts:1568</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="worth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> worth</h3>
+					<div class="tsd-signature tsd-kind-icon">worth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in item/IItem.ts:184</li>
 						</ul>
 					</aside>
 				</section>
@@ -648,7 +692,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:164</li>
+									<li>Defined in item/IItem.ts:186</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -671,7 +715,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/IItem.ts:165</li>
+									<li>Defined in item/IItem.ts:187</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -732,6 +776,9 @@
 								<a href="iitemdescription.html#dismantle" class="tsd-kind-icon">dismantle</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iitemdescription.html#doodad" class="tsd-kind-icon">doodad</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iitemdescription.html#doodadcontainer" class="tsd-kind-icon">doodad<wbr>Container</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -751,6 +798,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iitemdescription.html#hassleepimage" class="tsd-kind-icon">has<wbr>Sleep<wbr>Image</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iitemdescription.html#hidehelmet" class="tsd-kind-icon">hide<wbr>Helmet</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iitemdescription.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a>
@@ -804,6 +854,9 @@
 								<a href="iitemdescription.html#reducedweight" class="tsd-kind-icon">reduced<wbr>Weight</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iitemdescription.html#repairanddisassemblyrequiresfire" class="tsd-kind-icon">repair<wbr>And<wbr>Disassembly<wbr>Requires<wbr>Fire</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iitemdescription.html#repairable" class="tsd-kind-icon">repairable</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -841,6 +894,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iitemdescription.html#weightcapacity" class="tsd-kind-icon">weight<wbr>Capacity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iitemdescription.html#worth" class="tsd-kind-icon">worth</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitemdescription.html#onequip" class="tsd-kind-icon">on<wbr>Equip</a>

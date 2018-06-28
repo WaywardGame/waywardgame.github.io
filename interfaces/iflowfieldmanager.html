@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IFlowFieldManager | Wayward</title>
+	<title>IFlowFieldManager | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -97,7 +97,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getmovedirection" class="tsd-kind-icon">get<wbr>Move<wbr>Direction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getopposingmovedirection" class="tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#getwidth" class="tsd-kind-icon">get<wbr>Width</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#iscreatureinflowfield" class="tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#isinflowfield" class="tsd-kind-icon">is<wbr>InFlow<wbr>Field</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#isplayerinflowfield" class="tsd-kind-icon">is<wbr>Player<wbr>InFlow<wbr>Field</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iflowfieldmanager.html#setdelegate" class="tsd-kind-icon">set<wbr>Delegate</a></li>
@@ -180,7 +180,7 @@
 					<a name="getmovedirection" class="tsd-anchor"></a>
 					<h3>get<wbr>Move<wbr>Direction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/direction.html" class="tsd-signature-type">Direction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -204,7 +204,7 @@
 									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/direction.html" class="tsd-signature-type">Direction</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -212,7 +212,7 @@
 					<a name="getopposingmovedirection" class="tsd-anchor"></a>
 					<h3>get<wbr>Opposing<wbr>Move<wbr>Direction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Opposing<wbr>Move<wbr>Direction<span class="tsd-signature-symbol">(</span>worldX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, worldZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/direction.html" class="tsd-signature-type">Direction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -236,7 +236,7 @@
 									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/facingdirection.html" class="tsd-signature-type">FacingDirection</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/direction.html" class="tsd-signature-type">Direction</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -258,10 +258,10 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="iscreatureinflowfield" class="tsd-anchor"></a>
-					<h3>is<wbr>Creature<wbr>InFlow<wbr>Field</h3>
+					<a name="isinflowfield" class="tsd-anchor"></a>
+					<h3>is<wbr>InFlow<wbr>Field</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field<span class="tsd-signature-symbol">(</span>creature<span class="tsd-signature-symbol">: </span><a href="icreature.html" class="tsd-signature-type">ICreature</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>InFlow<wbr>Field<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -273,7 +273,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>creature: <a href="icreature.html" class="tsd-signature-type">ICreature</a></h5>
+									<h5>point: <a href="ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -451,7 +451,7 @@
 								<a href="iflowfieldmanager.html#getwidth" class="tsd-kind-icon">get<wbr>Width</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iflowfieldmanager.html#iscreatureinflowfield" class="tsd-kind-icon">is<wbr>Creature<wbr>InFlow<wbr>Field</a>
+								<a href="iflowfieldmanager.html#isinflowfield" class="tsd-kind-icon">is<wbr>InFlow<wbr>Field</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iflowfieldmanager.html#isplayerinflowfield" class="tsd-kind-icon">is<wbr>Player<wbr>InFlow<wbr>Field</a>

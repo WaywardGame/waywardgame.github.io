@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Doodad | Wayward</title>
+	<title>Doodad | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -69,6 +69,11 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">Doodad</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="itemdoodad.html" class="tsd-signature-type">ItemDoodad</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -85,14 +90,9 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="doodad.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#constructor" class="tsd-kind-icon">constructor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#containeditems" class="tsd-kind-icon">contained<wbr>Items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#decay" class="tsd-kind-icon">decay</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#gatherready" class="tsd-kind-icon">gather<wbr>Ready</a></li>
@@ -106,6 +106,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#quality" class="tsd-kind-icon">quality</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#renamed" class="tsd-kind-icon">renamed</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#spread" class="tsd-kind-icon">spread</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#step" class="tsd-kind-icon">step</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#treasure" class="tsd-kind-icon">treasure</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#weight" class="tsd-kind-icon">weight</a></li>
@@ -113,6 +114,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#x" class="tsd-kind-icon">x</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#y" class="tsd-kind-icon">y</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#z" class="tsd-kind-icon">z</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="doodad.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -120,46 +122,54 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#addtreasurechestloot" class="tsd-kind-icon">add<wbr>Treasure<wbr>Chest<wbr>Loot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#blocksmove" class="tsd-kind-icon">blocks<wbr>Move</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cangather" class="tsd-kind-icon">can<wbr>Gather</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cangrow" class="tsd-kind-icon">can<wbr>Grow</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#canharvest" class="tsd-kind-icon">can<wbr>Harvest</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#canpickup" class="tsd-kind-icon">can<wbr>Pickup</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cantrample" class="tsd-kind-icon">can<wbr>Trample</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#causestatus" class="tsd-kind-icon">cause<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#changetype" class="tsd-kind-icon">change<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#checkfortrampling" class="tsd-kind-icon">check<wbr>For<wbr>Trampling</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#damage" class="tsd-kind-icon">damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getactions" class="tsd-kind-icon">get<wbr>Actions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdefaultdurability" class="tsd-kind-icon">get<wbr>Default<wbr>Durability</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdoodadinfo" class="tsd-kind-icon">get<wbr>Doodad<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdurabilitymessage" class="tsd-kind-icon">get<wbr>Durability<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getgrowingmessage" class="tsd-kind-icon">get<wbr>Growing<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getgrowingstage" class="tsd-kind-icon">get<wbr>Growing<wbr>Stage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getinspect" class="tsd-kind-icon">get<wbr>Inspect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getpickuptypes" class="tsd-kind-icon">get<wbr>Pickup<wbr>Types</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isdangerous" class="tsd-kind-icon">is<wbr>Dangerous</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isembers" class="tsd-kind-icon">is<wbr>Embers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isgatherable" class="tsd-kind-icon">is<wbr>Gatherable</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isreadytogather" class="tsd-kind-icon">is<wbr>Ready<wbr>ToGather</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#setgrowingstage" class="tsd-kind-icon">set<wbr>Growing<wbr>Stage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#setofftrap" class="tsd-kind-icon">set<wbr>Off<wbr>Trap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="doodad.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="doodad.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-property tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Doodad<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/idoodadoptions.html" class="tsd-signature-type">IDoodadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodad.html" class="tsd-signature-type">Doodad</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in doodad/Doodad.ts:53</li>
+									<li>Defined in doodad/doodads/Doodad.ts:77</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -184,16 +194,13 @@
 						</li>
 					</ul>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="containeditems" class="tsd-anchor"></a>
 					<h3>contained<wbr>Items</h3>
 					<div class="tsd-signature tsd-kind-icon">contained<wbr>Items<span class="tsd-signature-symbol">:</span> <a href="../globals.html#iitemarray" class="tsd-signature-type">IItemArray</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in doodad/Doodad.ts:32</li>
+							<li>Defined in doodad/doodads/Doodad.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -204,7 +211,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#decay">decay</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:33</li>
+							<li>Defined in doodad/doodads/Doodad.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -215,7 +222,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#gatherready">gatherReady</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:34</li>
+							<li>Defined in doodad/doodads/Doodad.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -226,7 +233,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#gfx">gfx</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:35</li>
+							<li>Defined in doodad/doodads/Doodad.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -237,7 +244,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#id">id</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:36</li>
+							<li>Defined in doodad/doodads/Doodad.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -247,7 +254,7 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Orders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in doodad/Doodad.ts:37</li>
+							<li>Defined in doodad/doodads/Doodad.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -258,7 +265,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#maxdur">maxDur</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:38</li>
+							<li>Defined in doodad/doodads/Doodad.ts:53</li>
 						</ul>
 					</aside>
 				</section>
@@ -269,7 +276,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#mindur">minDur</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:39</li>
+							<li>Defined in doodad/doodads/Doodad.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -279,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">orientation<span class="tsd-signature-symbol">:</span> <a href="../enums/doororientation.html" class="tsd-signature-type">DoorOrientation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in doodad/Doodad.ts:40</li>
+							<li>Defined in doodad/doodads/Doodad.ts:55</li>
 						</ul>
 					</aside>
 				</section>
@@ -290,7 +297,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#owneridentifier">ownerIdentifier</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:41</li>
+							<li>Defined in doodad/doodads/Doodad.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -301,7 +308,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#quality">quality</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:42</li>
+							<li>Defined in doodad/doodads/Doodad.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -312,7 +319,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:43</li>
+							<li>Defined in doodad/doodads/Doodad.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -323,7 +330,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#spread">spread</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:44</li>
+							<li>Defined in doodad/doodads/Doodad.ts:59</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="step" class="tsd-anchor"></a>
+					<h3>step</h3>
+					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#step">step</a></p>
+						<ul>
+							<li>Defined in doodad/doodads/Doodad.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -334,7 +352,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#treasure">treasure</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:45</li>
+							<li>Defined in doodad/doodads/Doodad.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -345,7 +363,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#type">type</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:46</li>
+							<li>Defined in doodad/doodads/Doodad.ts:61</li>
 						</ul>
 					</aside>
 				</section>
@@ -356,7 +374,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#weight">weight</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:47</li>
+							<li>Defined in doodad/doodads/Doodad.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -366,7 +384,7 @@
 					<div class="tsd-signature tsd-kind-icon">weight<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in doodad/Doodad.ts:48</li>
+							<li>Defined in doodad/doodads/Doodad.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -377,7 +395,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#x">x</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:49</li>
+							<li>Defined in doodad/doodads/Doodad.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -388,7 +406,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#y">y</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:50</li>
+							<li>Defined in doodad/doodads/Doodad.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -399,7 +417,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#z">z</a></p>
 						<ul>
-							<li>Defined in doodad/Doodad.ts:51</li>
+							<li>Defined in doodad/doodads/Doodad.ts:66</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static">
+					<a name="registrarid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> registrar<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">registrar<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in doodad/doodads/Doodad.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -417,7 +445,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#addtreasurechestloot">addTreasureChestLoot</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:589</li>
+									<li>Defined in doodad/doodads/Doodad.ts:718</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -435,7 +463,25 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#blocksmove">blocksMove</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:628</li>
+									<li>Defined in doodad/doodads/Doodad.ts:757</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cangather" class="tsd-anchor"></a>
+					<h3>can<wbr>Gather</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Gather<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#cangather">canGather</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:271</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -453,7 +499,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#cangrow">canGrow</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:162</li>
+									<li>Defined in doodad/doodads/Doodad.ts:194</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -471,7 +517,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#canharvest">canHarvest</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:258</li>
+									<li>Defined in doodad/doodads/Doodad.ts:308</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -489,7 +535,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#canpickup">canPickup</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:208</li>
+									<li>Defined in doodad/doodads/Doodad.ts:240</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -503,23 +549,44 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cantrample" class="tsd-anchor"></a>
+					<h3>can<wbr>Trample</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Trample<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#cantrample">canTrample</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:322</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="causestatus" class="tsd-anchor"></a>
 					<h3>cause<wbr>Status</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">cause<wbr>Status<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">cause<wbr>Status<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, equipType<span class="tsd-signature-symbol">?: </span><a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#causestatus">causeStatus</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:913</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1047</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5>human: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> equipType: <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -537,7 +604,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#changetype">changeType</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:149</li>
+									<li>Defined in doodad/doodads/Doodad.ts:181</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -554,20 +621,20 @@
 					<a name="checkfortrampling" class="tsd-anchor"></a>
 					<h3>check<wbr>For<wbr>Trampling</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>For<wbr>Trampling<span class="tsd-signature-symbol">(</span>playerOrCreatureId<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">check<wbr>For<wbr>Trampling<span class="tsd-signature-symbol">(</span>humanOrCreatureId<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#checkfortrampling">checkForTrampling</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:272</li>
+									<li>Defined in doodad/doodads/Doodad.ts:331</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>playerOrCreatureId: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>humanOrCreatureId: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -585,7 +652,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#damage">damage</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:495</li>
+									<li>Defined in doodad/doodads/Doodad.ts:629</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -618,10 +685,31 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#description">description</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:141</li>
+									<li>Defined in doodad/doodads/Doodad.ts:173</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getactions" class="tsd-anchor"></a>
+					<h3>get<wbr>Actions</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Actions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getactions">getActions</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:267</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a><span class="tsd-signature-symbol">[]</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
@@ -639,10 +727,31 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getdefaultdurability">getDefaultDurability</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:579</li>
+									<li>Defined in doodad/doodads/Doodad.ts:714</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getdoodadinfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Doodad<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Doodad<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getdoodadinfo">getDoodadInfo</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:304</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -656,7 +765,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in doodad/Doodad.ts:330</li>
+									<li>Defined in doodad/doodads/Doodad.ts:397</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -680,7 +789,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getgrowingmessage">getGrowingMessage</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:345</li>
+									<li>Defined in doodad/doodads/Doodad.ts:412</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -704,7 +813,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getgrowingstage">getGrowingStage</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:171</li>
+									<li>Defined in doodad/doodads/Doodad.ts:203</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a>
@@ -725,10 +834,48 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getinspect">getInspect</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:379</li>
+									<li>Defined in doodad/doodads/Doodad.ts:446</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iinspect.html" class="tsd-signature-type">IInspect</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpickuptypes" class="tsd-anchor"></a>
+					<h3>get<wbr>Pickup<wbr>Types</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pickup<wbr>Types<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getpickuptypes">getPickupTypes</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:258</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getregistrarid" class="tsd-anchor"></a>
+					<h3>get<wbr>Registrar<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Registrar<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:169</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -743,10 +890,28 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#gettile">getTile</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:158</li>
+									<li>Defined in doodad/doodads/Doodad.ts:190</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isdangerous" class="tsd-anchor"></a>
+					<h3>is<wbr>Dangerous</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Dangerous<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isdangerous">isDangerous</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:616</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -761,7 +926,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isembers">isEmbers</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:249</li>
+									<li>Defined in doodad/doodads/Doodad.ts:295</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -779,25 +944,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isgatherable">isGatherable</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:239</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isreadytogather" class="tsd-anchor"></a>
-					<h3>is<wbr>Ready<wbr>ToGather</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Ready<wbr>ToGather<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isreadytogather">isReadyToGather</a></p>
-								<ul>
-									<li>Defined in doodad/Doodad.ts:225</li>
+									<li>Defined in doodad/doodads/Doodad.ts:285</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -815,7 +962,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isvalid">isValid</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:154</li>
+									<li>Defined in doodad/doodads/Doodad.ts:186</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -833,7 +980,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:1004</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1170</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -851,7 +998,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#setgrowingstage">setGrowingStage</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:197</li>
+									<li>Defined in doodad/doodads/Doodad.ts:229</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -871,20 +1018,20 @@
 					<a name="setofftrap" class="tsd-anchor"></a>
 					<h3>set<wbr>Off<wbr>Trap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Off<wbr>Trap<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a>, withMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Off<wbr>Trap<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, withMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#setofftrap">setOffTrap</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:974</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1138</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> withMessage: <span class="tsd-signature-type">boolean</span></h5>
@@ -905,9 +1052,49 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#update">update</a></p>
 								<ul>
-									<li>Defined in doodad/Doodad.ts:644</li>
+									<li>Defined in doodad/doodads/Doodad.ts:773</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getregistrarid-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Registrar<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Registrar<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:71</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="setregistrarid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> set<wbr>Registrar<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Registrar<wbr>Id<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:75</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -929,7 +1116,7 @@
 					<li class="current tsd-kind-class">
 						<a href="doodad.html" class="tsd-kind-icon">Doodad</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodad.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -972,6 +1159,9 @@
 								<a href="doodad.html#spread" class="tsd-kind-icon">spread</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="doodad.html#step" class="tsd-kind-icon">step</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodad.html#treasure" class="tsd-kind-icon">treasure</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -992,11 +1182,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodad.html#z" class="tsd-kind-icon">z</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static">
+								<a href="doodad.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#addtreasurechestloot" class="tsd-kind-icon">add<wbr>Treasure<wbr>Chest<wbr>Loot</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#blocksmove" class="tsd-kind-icon">blocks<wbr>Move</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#cangather" class="tsd-kind-icon">can<wbr>Gather</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#cangrow" class="tsd-kind-icon">can<wbr>Grow</a>
@@ -1006,6 +1202,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#canpickup" class="tsd-kind-icon">can<wbr>Pickup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#cantrample" class="tsd-kind-icon">can<wbr>Trample</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#causestatus" class="tsd-kind-icon">cause<wbr>Status</a>
@@ -1023,7 +1222,13 @@
 								<a href="doodad.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#getactions" class="tsd-kind-icon">get<wbr>Actions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#getdefaultdurability" class="tsd-kind-icon">get<wbr>Default<wbr>Durability</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#getdoodadinfo" class="tsd-kind-icon">get<wbr>Doodad<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#getdurabilitymessage" class="tsd-kind-icon">get<wbr>Durability<wbr>Message</a>
@@ -1038,16 +1243,22 @@
 								<a href="doodad.html#getinspect" class="tsd-kind-icon">get<wbr>Inspect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#getpickuptypes" class="tsd-kind-icon">get<wbr>Pickup<wbr>Types</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#isdangerous" class="tsd-kind-icon">is<wbr>Dangerous</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#isembers" class="tsd-kind-icon">is<wbr>Embers</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#isgatherable" class="tsd-kind-icon">is<wbr>Gatherable</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="doodad.html#isreadytogather" class="tsd-kind-icon">is<wbr>Ready<wbr>ToGather</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
@@ -1063,6 +1274,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#update" class="tsd-kind-icon">update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="doodad.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="doodad.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a>
 							</li>
 						</ul>
 					</li>

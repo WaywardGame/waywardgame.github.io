@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ItemRecipeRequirementChecker | Wayward</title>
+	<title>ItemRecipeRequirementChecker | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -86,10 +86,10 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#itembasecomponent" class="tsd-kind-icon">item<wbr>Base<wbr>Component</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#itemcomponentscanburn" class="tsd-kind-icon">item<wbr>Components<wbr>Can<wbr>Burn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#itemcomponentsconsumed" class="tsd-kind-icon">item<wbr>Components<wbr>Consumed</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#itemcomponentsrequired" class="tsd-kind-icon">item<wbr>Components<wbr>Required</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#numcomponentsneeded" class="tsd-kind-icon">num<wbr>Components<wbr>Needed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#totalcomponentsneeded" class="tsd-kind-icon">total<wbr>Components<wbr>Needed</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -98,7 +98,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#amountneededforcomponent" class="tsd-kind-icon">amount<wbr>Needed<wbr>For<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#isdiscovered" class="tsd-kind-icon">is<wbr>Discovered</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#process" class="tsd-kind-icon">process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#processadjacent" class="tsd-kind-icon">process<wbr>Adjacent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#processcontainer" class="tsd-kind-icon">process<wbr>Container</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#requirementsmet" class="tsd-kind-icon">requirements<wbr>Met</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="itemreciperequirementchecker.html#setrecipe" class="tsd-kind-icon">set<wbr>Recipe</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,7 +113,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Recipe<wbr>Requirement<wbr>Checker<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a>, recipe<span class="tsd-signature-symbol">: </span><a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a>, trackItems<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="itemreciperequirementchecker.html" class="tsd-signature-type">ItemRecipeRequirementChecker</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Recipe<wbr>Requirement<wbr>Checker<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a>, recipe<span class="tsd-signature-symbol">?: </span><a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a>, trackItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="itemreciperequirementchecker.html" class="tsd-signature-type">ItemRecipeRequirementChecker</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -125,10 +128,10 @@
 									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
 								</li>
 								<li>
-									<h5>recipe: <a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> recipe: <a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a></h5>
 								</li>
 								<li>
-									<h5>trackItems: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> trackItems: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="itemreciperequirementchecker.html" class="tsd-signature-type">ItemRecipeRequirementChecker</a></h4>
@@ -141,10 +144,20 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="itembasecomponent" class="tsd-anchor"></a>
 					<h3>item<wbr>Base<wbr>Component</h3>
-					<div class="tsd-signature tsd-kind-icon">item<wbr>Base<wbr>Component<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a></div>
+					<div class="tsd-signature tsd-kind-icon">item<wbr>Base<wbr>Component<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iitem.html" class="tsd-signature-type">IItem</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in item/ItemRecipeRequirementChecker.ts:20</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="itemcomponentscanburn" class="tsd-anchor"></a>
+					<h3>item<wbr>Components<wbr>Can<wbr>Burn</h3>
+					<div class="tsd-signature tsd-kind-icon">item<wbr>Components<wbr>Can<wbr>Burn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in item/ItemRecipeRequirementChecker.ts:23</li>
 						</ul>
 					</aside>
 				</section>
@@ -174,17 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">num<wbr>Components<wbr>Needed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in item/ItemRecipeRequirementChecker.ts:23</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="totalcomponentsneeded" class="tsd-anchor"></a>
-					<h3>total<wbr>Components<wbr>Needed</h3>
-					<div class="tsd-signature tsd-kind-icon">total<wbr>Components<wbr>Needed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in item/ItemRecipeRequirementChecker.ts:24</li>
+							<li>Defined in item/ItemRecipeRequirementChecker.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -201,7 +204,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/ItemRecipeRequirementChecker.ts:57</li>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -224,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/ItemRecipeRequirementChecker.ts:88</li>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -235,13 +238,71 @@
 					<a name="process" class="tsd-anchor"></a>
 					<h3>process</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">process<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, allowProtectedCraftingItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">process<span class="tsd-signature-symbol">(</span>allowProtectedCraftingItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/ItemRecipeRequirementChecker.ts:70</li>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:76</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Looks inside the players inventory and around adjacent opened doodads</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowProtectedCraftingItems: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if the recipe&#39;s requirements are satisfied</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="processadjacent" class="tsd-anchor"></a>
+					<h3>process<wbr>Adjacent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Adjacent<span class="tsd-signature-symbol">(</span>allowProtectedCraftingItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:118</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Looks around adjacent containers</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowProtectedCraftingItems: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if the recipe&#39;s requirements are satisfied</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="processcontainer" class="tsd-anchor"></a>
+					<h3>process<wbr>Container</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Container<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, allowProtectedCraftingItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:134</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,10 +337,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in item/ItemRecipeRequirementChecker.ts:61</li>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setrecipe" class="tsd-anchor"></a>
+					<h3>set<wbr>Recipe</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Recipe<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in item/ItemRecipeRequirementChecker.ts:88</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>recipe: <a href="../interfaces/irecipe.html" class="tsd-signature-type">IRecipe</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -307,6 +391,9 @@
 								<a href="itemreciperequirementchecker.html#itembasecomponent" class="tsd-kind-icon">item<wbr>Base<wbr>Component</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="itemreciperequirementchecker.html#itemcomponentscanburn" class="tsd-kind-icon">item<wbr>Components<wbr>Can<wbr>Burn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="itemreciperequirementchecker.html#itemcomponentsconsumed" class="tsd-kind-icon">item<wbr>Components<wbr>Consumed</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -314,9 +401,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="itemreciperequirementchecker.html#numcomponentsneeded" class="tsd-kind-icon">num<wbr>Components<wbr>Needed</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="itemreciperequirementchecker.html#totalcomponentsneeded" class="tsd-kind-icon">total<wbr>Components<wbr>Needed</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="itemreciperequirementchecker.html#amountneededforcomponent" class="tsd-kind-icon">amount<wbr>Needed<wbr>For<wbr>Component</a>
@@ -328,7 +412,16 @@
 								<a href="itemreciperequirementchecker.html#process" class="tsd-kind-icon">process</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="itemreciperequirementchecker.html#processadjacent" class="tsd-kind-icon">process<wbr>Adjacent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="itemreciperequirementchecker.html#processcontainer" class="tsd-kind-icon">process<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="itemreciperequirementchecker.html#requirementsmet" class="tsd-kind-icon">requirements<wbr>Met</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="itemreciperequirementchecker.html#setrecipe" class="tsd-kind-icon">set<wbr>Recipe</a>
 							</li>
 						</ul>
 					</li>

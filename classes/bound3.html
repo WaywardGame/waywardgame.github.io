@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Bound3 | Wayward</title>
+	<title>Bound3 | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -72,6 +72,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/ibound3.html" class="tsd-signature-type">IBound3</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -90,6 +96,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="bound3.html#z" class="tsd-kind-icon">z</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="bound3.html#contains" class="tsd-kind-icon">contains</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="bound3.html#containsignorez" class="tsd-kind-icon">contains<wbr>IgnoreZ</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -105,7 +118,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:1197</li>
+									<li>Defined in utilities/math/Bound3.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -132,8 +145,9 @@
 					<h3>max</h3>
 					<div class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vec2</span></div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ibound3.html">IBound3</a>.<a href="../interfaces/ibound3.html#max">max</a></p>
 						<ul>
-							<li>Defined in Utilities.ts:1198</li>
+							<li>Defined in utilities/math/Bound3.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -142,8 +156,9 @@
 					<h3>min</h3>
 					<div class="tsd-signature tsd-kind-icon">min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vec2</span></div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ibound3.html">IBound3</a>.<a href="../interfaces/ibound3.html#min">min</a></p>
 						<ul>
-							<li>Defined in Utilities.ts:1198</li>
+							<li>Defined in utilities/math/Bound3.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -152,10 +167,75 @@
 					<h3>z</h3>
 					<div class="tsd-signature tsd-kind-icon">z<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ibound3.html">IBound3</a>.<a href="../interfaces/ibound3.html#z">z</a></p>
 						<ul>
-							<li>Defined in Utilities.ts:1198</li>
+							<li>Defined in utilities/math/Bound3.ts:50</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="contains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> contains</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">contains<span class="tsd-signature-symbol">(</span>bound<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibound3.html" class="tsd-signature-type">IBound3</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/math/Bound3.ts:22</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bound: <a href="../interfaces/ibound3.html" class="tsd-signature-type">IBound3</a></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="containsignorez" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> contains<wbr>IgnoreZ</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>IgnoreZ<span class="tsd-signature-symbol">(</span>bound<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibound3.html" class="tsd-signature-type">IBound3</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/math/Bound3.ts:30</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bound: <a href="../interfaces/ibound3.html" class="tsd-signature-type">IBound3</a></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -185,6 +265,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="bound3.html#z" class="tsd-kind-icon">z</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="bound3.html#contains" class="tsd-kind-icon">contains</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="bound3.html#containsignorez" class="tsd-kind-icon">contains<wbr>IgnoreZ</a>
 							</li>
 						</ul>
 					</li>

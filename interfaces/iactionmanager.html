@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IActionManager | Wayward</title>
+	<title>IActionManager | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -94,6 +94,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iactionmanager.html#execute" class="tsd-kind-icon">execute</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iactionmanager.html#executemultiplayer" class="tsd-kind-icon">execute<wbr>Multiplayer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="iactionmanager.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iactionmanager.html#processresult" class="tsd-kind-icon">process<wbr>Result</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="iactionmanager.html#remove" class="tsd-kind-icon">remove</a></li>
 							</ul>
 						</section>
@@ -130,19 +131,19 @@
 					<a name="execute" class="tsd-anchor"></a>
 					<h3>execute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a>, actionType<span class="tsd-signature-symbol">: </span><a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a>, executeArgument<span class="tsd-signature-symbol">?: </span><a href="../globals.html#executeargument" class="tsd-signature-type">ExecuteArgument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, actionType<span class="tsd-signature-symbol">: </span><a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a>, executeArgument<span class="tsd-signature-symbol">?: </span><a href="../globals.html#executeargument" class="tsd-signature-type">ExecuteArgument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in action/IActionManager.ts:21</li>
+									<li>Defined in action/IActionManager.ts:22</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5>human: <a href="iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol"> | </span><a href="ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
 								</li>
 								<li>
 									<h5>actionType: <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a></h5>
@@ -168,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in action/IActionManager.ts:22</li>
+									<li>Defined in action/IActionManager.ts:23</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -208,6 +209,32 @@
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="processresult" class="tsd-anchor"></a>
+					<h3>process<wbr>Result</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Result<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, result<span class="tsd-signature-symbol">: </span><a href="iactionresult.html" class="tsd-signature-type">IActionResult</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in action/IActionManager.ts:24</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>human: <a href="ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
+								</li>
+								<li>
+									<h5>result: <a href="iactionresult.html" class="tsd-signature-type">IActionResult</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -263,6 +290,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iactionmanager.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iactionmanager.html#processresult" class="tsd-kind-icon">process<wbr>Result</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iactionmanager.html#remove" class="tsd-kind-icon">remove</a>

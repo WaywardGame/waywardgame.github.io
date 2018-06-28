@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ITileEventDescription | Wayward</title>
+	<title>ITileEventDescription | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -69,6 +69,9 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<a href="iobjectdescription.html" class="tsd-signature-type">IObjectDescription</a>
+					</li>
+					<li>
+						<a href="imoddable.html" class="tsd-signature-type">IModdable</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">ITileEventDescription</span>
@@ -87,8 +90,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#animated" class="tsd-kind-icon">animated</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="itileeventdescription.html#decaymax" class="tsd-kind-icon">decay<wbr>Max</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#graphicvariation" class="tsd-kind-icon">graphic<wbr>Variation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#isflammable" class="tsd-kind-icon">is<wbr>Flammable</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#items" class="tsd-kind-icon">items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#particles" class="tsd-kind-icon">particles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#prefix" class="tsd-kind-icon">prefix</a></li>
@@ -96,6 +102,14 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#spreadmax" class="tsd-kind-icon">spread<wbr>Max</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#suffix" class="tsd-kind-icon">suffix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#weightcapacity" class="tsd-kind-icon">weight<wbr>Capacity</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itileeventdescription.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itileeventdescription.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itileeventdescription.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,7 +123,7 @@
 					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in tile/ITileEvent.ts:19</li>
+							<li>Defined in tile/ITileEvent.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -120,7 +134,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#decaymax">decayMax</a></p>
 						<ul>
-							<li>Defined in tile/ITileEvent.ts:18</li>
+							<li>Defined in tile/ITileEvent.ts:17</li>
 						</ul>
 					</aside>
 				</section>
@@ -131,7 +145,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#description">description</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1583</li>
+							<li>Defined in Enums.ts:1563</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="graphicvariation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> graphic<wbr>Variation</h3>
+					<div class="tsd-signature tsd-kind-icon">graphic<wbr>Variation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in tile/ITileEvent.ts:21</li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +166,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#imagepath">imagePath</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1589</li>
+							<li>Defined in Enums.ts:1569</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isflammable" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Flammable</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Flammable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in tile/ITileEvent.ts:22</li>
 						</ul>
 					</aside>
 				</section>
@@ -152,7 +186,18 @@
 					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="iresourceitem.html" class="tsd-signature-type">IResourceItem</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in tile/ITileEvent.ts:20</li>
+							<li>Defined in tile/ITileEvent.ts:19</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="modindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> mod<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">mod<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="imoddable.html">IModdable</a>.<a href="imoddable.html#modindex">modIndex</a></p>
+						<ul>
+							<li>Defined in Enums.ts:1573</li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +208,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#name">name</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1582</li>
+							<li>Defined in Enums.ts:1562</li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">particles<span class="tsd-signature-symbol">:</span> <a href="irgb.html" class="tsd-signature-type">IRGB</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in tile/ITileEvent.ts:21</li>
+							<li>Defined in tile/ITileEvent.ts:20</li>
 						</ul>
 					</aside>
 				</section>
@@ -184,7 +229,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#prefix">prefix</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1585</li>
+							<li>Defined in Enums.ts:1565</li>
 						</ul>
 					</aside>
 				</section>
@@ -195,17 +240,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#skilluse">skillUse</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1587</li>
+							<li>Defined in Enums.ts:1567</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="spreadmax" class="tsd-anchor"></a>
-					<h3>spread<wbr>Max</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> spread<wbr>Max</h3>
 					<div class="tsd-signature tsd-kind-icon">spread<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in tile/ITileEvent.ts:17</li>
+							<li>Defined in tile/ITileEvent.ts:16</li>
 						</ul>
 					</aside>
 				</section>
@@ -216,7 +261,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#suffix">suffix</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1584</li>
+							<li>Defined in Enums.ts:1564</li>
 						</ul>
 					</aside>
 				</section>
@@ -227,9 +272,81 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobjectdescription.html">IObjectDescription</a>.<a href="iobjectdescription.html#weightcapacity">weightCapacity</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1588</li>
+							<li>Defined in Enums.ts:1568</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="create" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> create</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>tileEvent<span class="tsd-signature-symbol">: </span><a href="itileevent.html" class="tsd-signature-type">ITileEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in tile/ITileEvent.ts:23</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileEvent: <a href="itileevent.html" class="tsd-signature-type">ITileEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>tileEvent<span class="tsd-signature-symbol">: </span><a href="itileevent.html" class="tsd-signature-type">ITileEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in tile/ITileEvent.ts:24</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileEvent: <a href="itileevent.html" class="tsd-signature-type">ITileEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="update" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>tileEvent<span class="tsd-signature-symbol">: </span><a href="itileevent.html" class="tsd-signature-type">ITileEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in tile/ITileEvent.ts:25</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileEvent: <a href="itileevent.html" class="tsd-signature-type">ITileEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -257,11 +374,20 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="itileeventdescription.html#description" class="tsd-kind-icon">description</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#graphicvariation" class="tsd-kind-icon">graphic<wbr>Variation</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="itileeventdescription.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#isflammable" class="tsd-kind-icon">is<wbr>Flammable</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="itileeventdescription.html#items" class="tsd-kind-icon">items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="itileeventdescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="itileeventdescription.html#name" class="tsd-kind-icon">name</a>
@@ -283,6 +409,15 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="itileeventdescription.html#weightcapacity" class="tsd-kind-icon">weight<wbr>Capacity</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#create" class="tsd-kind-icon">create</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#update" class="tsd-kind-icon">update</a>
 							</li>
 						</ul>
 					</li>

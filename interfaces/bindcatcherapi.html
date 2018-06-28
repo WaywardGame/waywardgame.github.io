@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BindCatcherApi | Wayward</title>
+	<title>BindCatcherApi | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -79,6 +79,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bindcatcherapi.html#mouseposition" class="tsd-kind-icon">mouse<wbr>Position</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bindcatcherapi.html#mousex" class="tsd-kind-icon">mouseX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bindcatcherapi.html#mousey" class="tsd-kind-icon">mouseY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bindcatcherapi.html#time" class="tsd-kind-icon">time</a></li>
@@ -90,6 +91,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#isanythingdown" class="tsd-kind-icon">is<wbr>Anything<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#isdown" class="tsd-kind-icon">is<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#ismousewithin" class="tsd-kind-icon">is<wbr>Mouse<wbr>Within</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#mousestartwaswithin" class="tsd-kind-icon">mouse<wbr>Start<wbr>Was<wbr>Within</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#removeallpressstates" class="tsd-kind-icon">remove<wbr>All<wbr>Press<wbr>States</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#removepressstate" class="tsd-kind-icon">remove<wbr>Press<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="bindcatcherapi.html#timedown" class="tsd-kind-icon">time<wbr>Down</a></li>
@@ -102,6 +104,16 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mouseposition" class="tsd-anchor"></a>
+					<h3>mouse<wbr>Position</h3>
+					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Position<span class="tsd-signature-symbol">:</span> <a href="ivector2.html" class="tsd-signature-type">IVector2</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in newui/BindingManager.ts:62</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="mousex" class="tsd-anchor"></a>
 					<h3>mouseX</h3>
@@ -145,7 +157,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:73</li>
+									<li>Defined in newui/BindingManager.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -163,7 +175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:71</li>
+									<li>Defined in newui/BindingManager.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,7 +189,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:72</li>
+									<li>Defined in newui/BindingManager.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,24 +206,10 @@
 					<a name="ismousewithin" class="tsd-anchor"></a>
 					<h3>is<wbr>Mouse<wbr>Within</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Mouse<wbr>Within<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Mouse<wbr>Within<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, mustBeTarget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Mouse<wbr>Within<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Mouse<wbr>Within<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a>, mustBeTarget<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in newui/BindingManager.ts:76</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>element: <span class="tsd-signature-type">Element</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
@@ -221,10 +219,50 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>element: <span class="tsd-signature-type">Element</span></h5>
+									<h5>element: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in newui/BindingManager.ts:78</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a></h5>
 								</li>
 								<li>
-									<h5>mustBeTarget: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mustBeTarget: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="mousestartwaswithin" class="tsd-anchor"></a>
+					<h3>mouse<wbr>Start<wbr>Was<wbr>Within</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">mouse<wbr>Start<wbr>Was<wbr>Within<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a>, mustBeTarget<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in newui/BindingManager.ts:79</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><a href="icomponent.html" class="tsd-signature-type">IComponent</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mustBeTarget: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -241,7 +279,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:70</li>
+									<li>Defined in newui/BindingManager.ts:71</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -265,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:68</li>
+									<li>Defined in newui/BindingManager.ts:69</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -282,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:69</li>
+									<li>Defined in newui/BindingManager.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -309,7 +347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:74</li>
+									<li>Defined in newui/BindingManager.ts:75</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -323,7 +361,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:75</li>
+									<li>Defined in newui/BindingManager.ts:76</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -347,7 +385,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:62</li>
+									<li>Defined in newui/BindingManager.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -361,7 +399,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:63</li>
+									<li>Defined in newui/BindingManager.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -385,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:65</li>
+									<li>Defined in newui/BindingManager.ts:66</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -404,7 +442,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in newui/BindingManager.ts:67</li>
+									<li>Defined in newui/BindingManager.ts:68</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -440,6 +478,9 @@
 						<a href="bindcatcherapi.html" class="tsd-kind-icon">Bind<wbr>Catcher<wbr>Api</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bindcatcherapi.html#mouseposition" class="tsd-kind-icon">mouse<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bindcatcherapi.html#mousex" class="tsd-kind-icon">mouseX</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -456,6 +497,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="bindcatcherapi.html#ismousewithin" class="tsd-kind-icon">is<wbr>Mouse<wbr>Within</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="bindcatcherapi.html#mousestartwaswithin" class="tsd-kind-icon">mouse<wbr>Start<wbr>Was<wbr>Within</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="bindcatcherapi.html#removeallpressstates" class="tsd-kind-icon">remove<wbr>All<wbr>Press<wbr>States</a>

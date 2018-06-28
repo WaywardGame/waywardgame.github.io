@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IModManager | Wayward</title>
+	<title>IModManager | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -85,10 +85,6 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#cachehooks" class="tsd-kind-icon">cache<wbr>Hooks</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#callhook" class="tsd-kind-icon">call<wbr>Hook</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#callhookreduce" class="tsd-kind-icon">call<wbr>Hook<wbr>Reduce</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="imodmanager.html#callhookwithdefault" class="tsd-kind-icon">call<wbr>Hook<wbr>With<wbr>Default</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#canload" class="tsd-kind-icon">can<wbr>Load</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#canloadfromidentifier" class="tsd-kind-icon">can<wbr>Load<wbr>From<wbr>Identifier</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getauthor" class="tsd-kind-icon">get<wbr>Author</a></li>
@@ -97,6 +93,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getenabledmods" class="tsd-kind-icon">get<wbr>Enabled<wbr>Mods</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getfile" class="tsd-kind-icon">get<wbr>File</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getfoldername" class="tsd-kind-icon">get<wbr>Folder<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="imodmanager.html#gethook" class="tsd-kind-icon">get<wbr>Hook</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getidentifier" class="tsd-kind-icon">get<wbr>Identifier</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getindexfromname" class="tsd-kind-icon">get<wbr>Index<wbr>From<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getindexfrompath" class="tsd-kind-icon">get<wbr>Index<wbr>From<wbr>Path</a></li>
@@ -105,6 +102,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getlastupdateddate" class="tsd-kind-icon">get<wbr>Last<wbr>Updated<wbr>Date</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getloadedmodbyname" class="tsd-kind-icon">get<wbr>Loaded<wbr>Mod<wbr>ByName</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getloadedmods" class="tsd-kind-icon">get<wbr>Loaded<wbr>Mods</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getlog" class="tsd-kind-icon">get<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getmodfromindex" class="tsd-kind-icon">get<wbr>Mod<wbr>From<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getmods" class="tsd-kind-icon">get<wbr>Mods</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imodmanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
@@ -148,110 +146,6 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="cachehooks" class="tsd-anchor"></a>
-					<h3>cache<wbr>Hooks</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">cache<wbr>Hooks<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/IModManager.ts:101</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="callhook" class="tsd-anchor"></a>
-					<h3>call<wbr>Hook</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">call<wbr>Hook<span class="tsd-signature-symbol">(</span>hook<span class="tsd-signature-symbol">: </span><a href="../enums/hook.html" class="tsd-signature-type">Hook</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/IModManager.ts:154</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>hook: <a href="../enums/hook.html" class="tsd-signature-type">Hook</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="callhookreduce" class="tsd-anchor"></a>
-					<h3>call<wbr>Hook<wbr>Reduce</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">call<wbr>Hook<wbr>Reduce<span class="tsd-signature-symbol">(</span>hook<span class="tsd-signature-symbol">: </span><a href="../enums/hook.html" class="tsd-signature-type">Hook</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/IModManager.ts:155</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>hook: <a href="../enums/hook.html" class="tsd-signature-type">Hook</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-					<a name="callhookwithdefault" class="tsd-anchor"></a>
-					<h3>call<wbr>Hook<wbr>With<wbr>Default</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">call<wbr>Hook<wbr>With<wbr>Default&lt;T&gt;<span class="tsd-signature-symbol">(</span>hook<span class="tsd-signature-symbol">: </span><a href="../enums/hook.html" class="tsd-signature-type">Hook</a>, defaultValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in mod/IModManager.ts:157</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>hook: <a href="../enums/hook.html" class="tsd-signature-type">Hook</a></h5>
-								</li>
-								<li>
-									<h5>defaultValue: <span class="tsd-signature-type">T</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="canload" class="tsd-anchor"></a>
 					<h3>can<wbr>Load</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -261,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:102</li>
+									<li>Defined in mod/IModManager.ts:38</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -287,7 +181,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:103</li>
+									<li>Defined in mod/IModManager.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -310,7 +204,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:104</li>
+									<li>Defined in mod/IModManager.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -333,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:114</li>
+									<li>Defined in mod/IModManager.ts:50</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -359,7 +253,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:105</li>
+									<li>Defined in mod/IModManager.ts:41</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -382,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:117</li>
+									<li>Defined in mod/IModManager.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -399,7 +293,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:106</li>
+									<li>Defined in mod/IModManager.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -449,7 +343,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:107</li>
+									<li>Defined in mod/IModManager.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -459,6 +353,57 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+					<a name="gethook" class="tsd-anchor"></a>
+					<h3>get<wbr>Hook</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Hook&lt;H, R&gt;<span class="tsd-signature-symbol">(</span>hook<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">H</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/hookcallfactory.html" class="tsd-signature-type">HookCallFactory</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">H</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in mod/IModManager.ts:100</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a <code>HookCallFactory</code> for the given hook name.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><code>Mod</code> or <code>Hook</code> for a list of valid hook names.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>H<span class="tsd-signature-symbol">: </span><a href="../enums/hook.html" class="tsd-signature-type">Hook</a></h4>
+								</li>
+								<li>
+									<h4>R</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hook: <span class="tsd-signature-type">H</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A hook name.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> defaultValue: <span class="tsd-signature-type">R</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The default value to return</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/hookcallfactory.html" class="tsd-signature-type">HookCallFactory</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">H</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -472,7 +417,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:108</li>
+									<li>Defined in mod/IModManager.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -495,7 +440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:109</li>
+									<li>Defined in mod/IModManager.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -518,7 +463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:110</li>
+									<li>Defined in mod/IModManager.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -544,7 +489,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:111</li>
+									<li>Defined in mod/IModManager.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -567,7 +512,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:113</li>
+									<li>Defined in mod/IModManager.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -593,7 +538,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:112</li>
+									<li>Defined in mod/IModManager.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -619,7 +564,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:115</li>
+									<li>Defined in mod/IModManager.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -645,10 +590,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:116</li>
+									<li>Defined in mod/IModManager.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imodinfo.html" class="tsd-signature-type">IModInfo</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getlog" class="tsd-anchor"></a>
+					<h3>get<wbr>Log</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Log<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/log.html" class="tsd-signature-type">Log</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in mod/IModManager.ts:56</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/log.html" class="tsd-signature-type">Log</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -662,7 +630,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:118</li>
+									<li>Defined in mod/IModManager.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -685,7 +653,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:119</li>
+									<li>Defined in mod/IModManager.ts:55</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imodinfo.html" class="tsd-signature-type">IModInfo</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -702,7 +670,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:120</li>
+									<li>Defined in mod/IModManager.ts:57</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -725,7 +693,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:121</li>
+									<li>Defined in mod/IModManager.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -748,7 +716,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:122</li>
+									<li>Defined in mod/IModManager.ts:59</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -771,7 +739,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:123</li>
+									<li>Defined in mod/IModManager.ts:60</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -797,7 +765,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:124</li>
+									<li>Defined in mod/IModManager.ts:61</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -820,7 +788,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:125</li>
+									<li>Defined in mod/IModManager.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -843,7 +811,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:126</li>
+									<li>Defined in mod/IModManager.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -869,7 +837,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:127</li>
+									<li>Defined in mod/IModManager.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -892,7 +860,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:128</li>
+									<li>Defined in mod/IModManager.ts:65</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -915,7 +883,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:129</li>
+									<li>Defined in mod/IModManager.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -938,7 +906,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:130</li>
+									<li>Defined in mod/IModManager.ts:67</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -961,7 +929,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:131</li>
+									<li>Defined in mod/IModManager.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -984,7 +952,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:132</li>
+									<li>Defined in mod/IModManager.ts:69</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1007,7 +975,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:133</li>
+									<li>Defined in mod/IModManager.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1030,7 +998,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:134</li>
+									<li>Defined in mod/IModManager.ts:71</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1047,13 +1015,13 @@
 					<a name="loadall" class="tsd-anchor"></a>
 					<h3>load<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="iplayoptions.html" class="tsd-signature-type">IPlayOptions</a><span class="tsd-signature-symbol">&gt;</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="iplayoptions.html" class="tsd-signature-type">IPlayOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:135</li>
+									<li>Defined in mod/IModManager.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1061,32 +1029,8 @@
 								<li>
 									<h5>options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="iplayoptions.html" class="tsd-signature-type">IPlayOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, mods<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>err: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-														</li>
-														<li>
-															<h5>mods: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1100,7 +1044,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:136</li>
+									<li>Defined in mod/IModManager.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1123,7 +1067,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:137</li>
+									<li>Defined in mod/IModManager.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1146,7 +1090,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:138</li>
+									<li>Defined in mod/IModManager.ts:75</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1172,7 +1116,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:139</li>
+									<li>Defined in mod/IModManager.ts:76</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1195,7 +1139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:140</li>
+									<li>Defined in mod/IModManager.ts:77</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1212,7 +1156,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:143</li>
+									<li>Defined in mod/IModManager.ts:80</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1238,7 +1182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:142</li>
+									<li>Defined in mod/IModManager.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1264,7 +1208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:141</li>
+									<li>Defined in mod/IModManager.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1290,7 +1234,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:144</li>
+									<li>Defined in mod/IModManager.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1316,7 +1260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:145</li>
+									<li>Defined in mod/IModManager.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1363,7 +1307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:146</li>
+									<li>Defined in mod/IModManager.ts:83</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1389,7 +1333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:147</li>
+									<li>Defined in mod/IModManager.ts:84</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1439,7 +1383,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:148</li>
+									<li>Defined in mod/IModManager.ts:85</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1468,13 +1412,13 @@
 					<a name="uninitialize" class="tsd-anchor"></a>
 					<h3>uninitialize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">uninitialize<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">uninitialize<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:149</li>
+									<li>Defined in mod/IModManager.ts:86</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1483,7 +1427,7 @@
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1497,7 +1441,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:150</li>
+									<li>Defined in mod/IModManager.ts:87</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1514,7 +1458,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:151</li>
+									<li>Defined in mod/IModManager.ts:88</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1537,7 +1481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IModManager.ts:152</li>
+									<li>Defined in mod/IModManager.ts:89</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1568,18 +1512,6 @@
 						<a href="imodmanager.html" class="tsd-kind-icon">IMod<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="imodmanager.html#cachehooks" class="tsd-kind-icon">cache<wbr>Hooks</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="imodmanager.html#callhook" class="tsd-kind-icon">call<wbr>Hook</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="imodmanager.html#callhookreduce" class="tsd-kind-icon">call<wbr>Hook<wbr>Reduce</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-								<a href="imodmanager.html#callhookwithdefault" class="tsd-kind-icon">call<wbr>Hook<wbr>With<wbr>Default</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imodmanager.html#canload" class="tsd-kind-icon">can<wbr>Load</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -1602,6 +1534,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imodmanager.html#getfoldername" class="tsd-kind-icon">get<wbr>Folder<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+								<a href="imodmanager.html#gethook" class="tsd-kind-icon">get<wbr>Hook</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imodmanager.html#getidentifier" class="tsd-kind-icon">get<wbr>Identifier</a>
@@ -1626,6 +1561,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imodmanager.html#getloadedmods" class="tsd-kind-icon">get<wbr>Loaded<wbr>Mods</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imodmanager.html#getlog" class="tsd-kind-icon">get<wbr>Log</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imodmanager.html#getmodfromindex" class="tsd-kind-icon">get<wbr>Mod<wbr>From<wbr>Index</a>

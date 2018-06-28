@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ICorpse | Wayward</title>
+	<title>ICorpse | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -71,7 +71,7 @@
 						<a href="iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol">&gt;</span>
 					</li>
 					<li>
-						<a href="ipointz.html" class="tsd-signature-type">IPointZ</a>
+						<a href="ivector3.html" class="tsd-signature-type">IVector3</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">ICorpse</span>
@@ -91,6 +91,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icorpse.html#decay" class="tsd-kind-icon">decay</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="icorpse.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="icorpse.html#renamed" class="tsd-kind-icon">renamed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icorpse.html#step" class="tsd-kind-icon">step</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="icorpse.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="icorpse.html#x" class="tsd-kind-icon">x</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="icorpse.html#y" class="tsd-kind-icon">y</a></li>
@@ -108,7 +109,7 @@
 					<div class="tsd-signature tsd-kind-icon">aberrant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/corpse/ICorpse.ts:36</li>
+							<li>Defined in creature/corpse/ICorpse.ts:37</li>
 						</ul>
 					</aside>
 				</section>
@@ -118,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/corpse/ICorpse.ts:35</li>
+							<li>Defined in creature/corpse/ICorpse.ts:36</li>
 						</ul>
 					</aside>
 				</section>
@@ -129,7 +130,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobject.html">IObject</a>.<a href="iobject.html#id">id</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1570</li>
+							<li>Defined in Enums.ts:1550</li>
 						</ul>
 					</aside>
 				</section>
@@ -140,7 +141,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobject.html">IObject</a>.<a href="iobject.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1571</li>
+							<li>Defined in Enums.ts:1551</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="step" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> step</h3>
+					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in creature/corpse/ICorpse.ts:38</li>
 						</ul>
 					</aside>
 				</section>
@@ -151,7 +162,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iobject.html">IObject</a>.<a href="iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1569</li>
+							<li>Defined in Enums.ts:1549</li>
 						</ul>
 					</aside>
 				</section>
@@ -160,9 +171,9 @@
 					<h3>x</h3>
 					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="ipoint.html">IPoint</a>.<a href="ipoint.html#x">x</a></p>
+						<p>Inherited from <a href="ivector2.html">IVector2</a>.<a href="ivector2.html#x">x</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1560</li>
+							<li>Defined in utilities/math/IVector.ts:13</li>
 						</ul>
 					</aside>
 				</section>
@@ -171,9 +182,9 @@
 					<h3>y</h3>
 					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="ipoint.html">IPoint</a>.<a href="ipoint.html#y">y</a></p>
+						<p>Inherited from <a href="ivector2.html">IVector2</a>.<a href="ivector2.html#y">y</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1561</li>
+							<li>Defined in utilities/math/IVector.ts:14</li>
 						</ul>
 					</aside>
 				</section>
@@ -182,9 +193,9 @@
 					<h3>z</h3>
 					<div class="tsd-signature tsd-kind-icon">z<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="ipointz.html">IPointZ</a>.<a href="ipointz.html#z">z</a></p>
+						<p>Inherited from <a href="ivector3.html">IVector3</a>.<a href="ivector3.html#z">z</a></p>
 						<ul>
-							<li>Defined in Enums.ts:1565</li>
+							<li>Defined in utilities/math/IVector.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -216,6 +227,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="icorpse.html#renamed" class="tsd-kind-icon">renamed</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="icorpse.html#step" class="tsd-kind-icon">step</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="icorpse.html#type" class="tsd-kind-icon">type</a>

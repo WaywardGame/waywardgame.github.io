@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TimeManager | Wayward</title>
+	<title>TimeManager | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -72,6 +72,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/itimemanager.html" class="tsd-signature-type">ITimeManager</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -93,6 +99,7 @@
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="timemanager.html#day" class="tsd-kind-icon">day</a></li>
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="timemanager.html#daypercent" class="tsd-kind-icon">day<wbr>Percent</a></li>
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="timemanager.html#nightpercent" class="tsd-kind-icon">night<wbr>Percent</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="timemanager.html#ticks" class="tsd-kind-icon">ticks</a></li>
@@ -104,11 +111,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#getbrightness" class="tsd-kind-icon">get<wbr>Brightness</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#getdayquarter" class="tsd-kind-icon">get<wbr>Day<wbr>Quarter</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gethour" class="tsd-kind-icon">get<wbr>Hour</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gethourminute" class="tsd-kind-icon">get<wbr>Hour<wbr>Minute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gethoursandminutes" class="tsd-kind-icon">get<wbr>Hours<wbr>And<wbr>Minutes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#getminute" class="tsd-kind-icon">get<wbr>Minute</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#getpartofday" class="tsd-kind-icon">get<wbr>Part<wbr>OfDay</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gettime" class="tsd-kind-icon">get<wbr>Time</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gettimeformat" class="tsd-kind-icon">get<wbr>Time<wbr>Format</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#gettranslation" class="tsd-kind-icon">get<wbr>Translation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#isbefore" class="tsd-kind-icon">is<wbr>Before</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#isbetween" class="tsd-kind-icon">is<wbr>Between</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="timemanager.html#isday" class="tsd-kind-icon">is<wbr>Day</a></li>
@@ -134,7 +141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:115</li>
+									<li>Defined in game/TimeManager.ts:106</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -153,36 +160,58 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="daylength" class="tsd-anchor"></a>
 					<h3>day<wbr>Length</h3>
-					<div class="tsd-signature tsd-kind-icon">day<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;3200</span></div>
+					<div class="tsd-signature tsd-kind-icon">day<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">3200</span><span class="tsd-signature-symbol"> =&nbsp;3200</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in game/TimeManager.ts:110</li>
+							<li>Defined in game/TimeManager.ts:101</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="daystart" class="tsd-anchor"></a>
 					<h3>day<wbr>Start</h3>
-					<div class="tsd-signature tsd-kind-icon">day<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;300</span></div>
+					<div class="tsd-signature tsd-kind-icon">day<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">300</span><span class="tsd-signature-symbol"> =&nbsp;300</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in game/TimeManager.ts:112</li>
+							<li>Defined in game/TimeManager.ts:103</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="transitionpercent" class="tsd-anchor"></a>
 					<h3>transition<wbr>Percent</h3>
-					<div class="tsd-signature tsd-kind-icon">transition<wbr>Percent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0.5</span></div>
+					<div class="tsd-signature tsd-kind-icon">transition<wbr>Percent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0.5</span><span class="tsd-signature-symbol"> =&nbsp;0.5</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in game/TimeManager.ts:111</li>
+							<li>Defined in game/TimeManager.ts:102</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="day" class="tsd-anchor"></a>
+					<h3>day</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> day<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in game/TimeManager.ts:122</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns which day it is. Starts at 1.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
 					<a name="daypercent" class="tsd-anchor"></a>
 					<h3>day<wbr>Percent</h3>
@@ -194,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:188</li>
+									<li>Defined in game/TimeManager.ts:136</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -202,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:192</li>
+									<li>Defined in game/TimeManager.ts:140</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -226,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:196</li>
+									<li>Defined in game/TimeManager.ts:144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -234,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:200</li>
+									<li>Defined in game/TimeManager.ts:148</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -257,9 +286,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:177</li>
+									<li>Defined in game/TimeManager.ts:115</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The total number of ticks passed.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
@@ -277,13 +311,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:286</li>
+									<li>Defined in game/TimeManager.ts:376</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns how bright it is at the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -300,13 +342,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:154</li>
+									<li>Defined in game/TimeManager.ts:296</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the <code>DayQuarter</code> of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/dayquarter.html" class="tsd-signature-type">DayQuarter</a></h4>
@@ -323,13 +373,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:257</li>
+									<li>Defined in game/TimeManager.ts:235</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the hour of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+										<p>Internally calls <code>getHourMinute</code></p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> format: <a href="../enums/timeformat.html" class="tsd-signature-type">TimeFormat</a><span class="tsd-signature-symbol"> =&nbsp;TimeFormat.TwelveHour</span></h5>
@@ -340,22 +399,30 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="gethourminute" class="tsd-anchor"></a>
-					<h3>get<wbr>Hour<wbr>Minute</h3>
+					<a name="gethoursandminutes" class="tsd-anchor"></a>
+					<h3>get<wbr>Hours<wbr>And<wbr>Minutes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Hour<wbr>Minute<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Hours<wbr>And<wbr>Minutes<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:253</li>
+									<li>Defined in game/TimeManager.ts:225</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the hours and minutes of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
@@ -380,13 +447,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:278</li>
+									<li>Defined in game/TimeManager.ts:262</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the minute of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+										<p>Internally calls <code>getHourMinute</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -403,13 +479,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:132</li>
+									<li>Defined in game/TimeManager.ts:270</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the <code>PartOfDay</code> of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/partofday.html" class="tsd-signature-type">PartOfDay</a></h4>
@@ -426,36 +510,52 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:204</li>
+									<li>Defined in game/TimeManager.ts:155</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a decimal representation of the current time. <code>0</code> is the start of the day, and <code>1</code> is the end.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="gettimeformat" class="tsd-anchor"></a>
-					<h3>get<wbr>Time<wbr>Format</h3>
+					<a name="gettranslation" class="tsd-anchor"></a>
+					<h3>get<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Time<wbr>Format<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, format<span class="tsd-signature-symbol">?: </span><a href="../enums/timeformat.html" class="tsd-signature-type">TimeFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Translation<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, format<span class="tsd-signature-symbol">?: </span><a href="../enums/timeformat.html" class="tsd-signature-type">TimeFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:282</li>
+									<li>Defined in game/TimeManager.ts:324</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a string representation of the given time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to use, defaulting to the current time.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> format: <a href="../enums/timeformat.html" class="tsd-signature-type">TimeFormat</a><span class="tsd-signature-symbol"> =&nbsp;TimeFormat.TwelveHour</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The format to use, defaulting to <code>TimeFormat.TwelveHour</code></p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -463,22 +563,33 @@
 					<a name="isbefore" class="tsd-anchor"></a>
 					<h3>is<wbr>Before</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Before<span class="tsd-signature-symbol">(</span>checkTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, currentTime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Before<span class="tsd-signature-symbol">(</span>checkTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:237</li>
+									<li>Defined in game/TimeManager.ts:197</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if the given time is before a formatted time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>checkTime: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A formatted time.</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> currentTime: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to check, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -495,16 +606,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:249</li>
+									<li>Defined in game/TimeManager.ts:217</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns if the given time is between two formatted times.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>checkPast: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A formatted time to check if the given time is after.</p>
+									</div>
 								</li>
 								<li>
 									<h5>checkBefore: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A formatted time to check if the given time is before.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> currentTime: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
@@ -524,13 +646,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:217</li>
+									<li>Defined in game/TimeManager.ts:163</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns if the given time is at day.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to check, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -547,13 +677,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:221</li>
+									<li>Defined in game/TimeManager.ts:171</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns if the given time is at night.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to check, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -564,22 +702,33 @@
 					<a name="ispast" class="tsd-anchor"></a>
 					<h3>is<wbr>Past</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Past<span class="tsd-signature-symbol">(</span>checkTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, currentTime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Past<span class="tsd-signature-symbol">(</span>checkTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:225</li>
+									<li>Defined in game/TimeManager.ts:180</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if the given time is after a formatted time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>checkTime: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A formatted time.</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> currentTime: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.getTime()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time to check, defaulting to the current time.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -596,9 +745,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:181</li>
+									<li>Defined in game/TimeManager.ts:129</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Increments <code>ticks</code>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -613,9 +767,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:122</li>
+									<li>Defined in game/TimeManager.ts:402</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the current time from a <code>dayNight</code> number and a <code>boolean</code> flag of whether it&#39;s day or night.</p>
+								</div>
+								<p>Used exclusively for save conversion.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -639,13 +799,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in game/TimeManager.ts:208</li>
+									<li>Defined in game/TimeManager.ts:419</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the time.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>time: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A number between <code>0</code> and <code>1</code>, where <code>0</code> is the start of the day and <code>1</code> is the end.</p>
+										<p>Setting the time with the result of <code>getTime</code> will likely not set to the same value.
+										This method is provided for save conversion and utility, and should rarely be used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -681,6 +851,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="timemanager.html#transitionpercent" class="tsd-kind-icon">transition<wbr>Percent</a>
 							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="timemanager.html#day" class="tsd-kind-icon">day</a>
+							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
 								<a href="timemanager.html#daypercent" class="tsd-kind-icon">day<wbr>Percent</a>
 							</li>
@@ -700,7 +873,7 @@
 								<a href="timemanager.html#gethour" class="tsd-kind-icon">get<wbr>Hour</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="timemanager.html#gethourminute" class="tsd-kind-icon">get<wbr>Hour<wbr>Minute</a>
+								<a href="timemanager.html#gethoursandminutes" class="tsd-kind-icon">get<wbr>Hours<wbr>And<wbr>Minutes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="timemanager.html#getminute" class="tsd-kind-icon">get<wbr>Minute</a>
@@ -712,7 +885,7 @@
 								<a href="timemanager.html#gettime" class="tsd-kind-icon">get<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="timemanager.html#gettimeformat" class="tsd-kind-icon">get<wbr>Time<wbr>Format</a>
+								<a href="timemanager.html#gettranslation" class="tsd-kind-icon">get<wbr>Translation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="timemanager.html#isbefore" class="tsd-kind-icon">is<wbr>Before</a>

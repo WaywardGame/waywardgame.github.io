@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TileHelpers | Wayward</title>
+	<title>TileHelpers | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -80,8 +80,11 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#findmatchingtile" class="tsd-kind-icon">find<wbr>Matching<wbr>Tile</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getadjacenttiles" class="tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getgfx" class="tsd-kind-icon">get<wbr>Gfx</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getgfxraw" class="tsd-kind-icon">get<wbr>Gfx<wbr>Raw</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getsuitablespawnpoint" class="tsd-kind-icon">get<wbr>Suitable<wbr>Spawn<wbr>Point</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettilevariation" class="tsd-kind-icon">get<wbr>Tile<wbr>Variation</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettyperaw" class="tsd-kind-icon">get<wbr>Type<wbr>Raw</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#isopentile" class="tsd-kind-icon">is<wbr>Open<wbr>Tile</a></li>
@@ -107,7 +110,7 @@
 					<div class="tsd-signature tsd-kind-icon">mask<wbr>Gfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">31</span><span class="tsd-signature-symbol"> =&nbsp;31</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Utilities.ts:315</li>
+							<li>Defined in utilities/TileHelpers.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +120,7 @@
 					<div class="tsd-signature tsd-kind-icon">mask<wbr>Tilled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">4096</span><span class="tsd-signature-symbol"> =&nbsp;4096</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Utilities.ts:317</li>
+							<li>Defined in utilities/TileHelpers.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">mask<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">4064</span><span class="tsd-signature-symbol"> =&nbsp;4064</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Utilities.ts:316</li>
+							<li>Defined in utilities/TileHelpers.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -138,33 +141,33 @@
 					<a name="findmatchingtile" class="tsd-anchor"></a>
 					<h3>find<wbr>Matching<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Matching<wbr>Tile<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>, isMatchingTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, maxTilesChecked<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, canVisitTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Matching<wbr>Tile<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, isMatchingTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, maxTilesChecked<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, canVisitTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:367</li>
+									<li>Defined in utilities/TileHelpers.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>start: <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a></h5>
+									<h5>start: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isMatchingTile: <span class="tsd-signature-type">function</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
 													<h4 class="tsd-parameters-title">Parameters</h4>
 													<ul class="tsd-parameters">
 														<li>
-															<h5>point: <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a></h5>
+															<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 														</li>
 														<li>
 															<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
@@ -183,15 +186,15 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> canVisitTile: <span class="tsd-signature-type">function</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
 													<h4 class="tsd-parameters-title">Parameters</h4>
 													<ul class="tsd-parameters">
 														<li>
-															<h5>point: <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a></h5>
+															<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 														</li>
 														<li>
 															<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
@@ -204,10 +207,36 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getadjacenttiles" class="tsd-anchor"></a>
+					<h3>get<wbr>Adjacent<wbr>Tiles</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, includePoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/TileHelpers.ts:195</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includePoint: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -221,7 +250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:319</li>
+									<li>Defined in utilities/TileHelpers.ts:28</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -244,13 +273,56 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:323</li>
+									<li>Defined in utilities/TileHelpers.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>data: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getsuitablespawnpoint" class="tsd-anchor"></a>
+					<h3>get<wbr>Suitable<wbr>Spawn<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Suitable<wbr>Spawn<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/TileHelpers.ts:210</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="gettilevariation" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile<wbr>Variation</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Variation<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/TileHelpers.ts:76</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -267,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:335</li>
+									<li>Defined in utilities/TileHelpers.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -290,7 +362,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:339</li>
+									<li>Defined in utilities/TileHelpers.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -307,13 +379,13 @@
 					<a name="isopentile" class="tsd-anchor"></a>
 					<h3>is<wbr>Open<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Open<wbr>Tile<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Open<wbr>Tile<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:439</li>
+									<li>Defined in utilities/TileHelpers.ts:153</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,7 +396,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>point: <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a></h5>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 								<li>
 									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
@@ -338,13 +410,13 @@
 					<a name="issuitablespawnpointtile" class="tsd-anchor"></a>
 					<h3>is<wbr>Suitable<wbr>Spawn<wbr>Point<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Suitable<wbr>Spawn<wbr>Point<wbr>Tile<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Suitable<wbr>Spawn<wbr>Point<wbr>Tile<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:461</li>
+									<li>Defined in utilities/TileHelpers.ts:173</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -355,7 +427,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>point: <a href="../interfaces/ipointz.html" class="tsd-signature-type">IPointZ</a></h5>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 								<li>
 									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
@@ -375,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:351</li>
+									<li>Defined in utilities/TileHelpers.ts:60</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -398,7 +470,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:355</li>
+									<li>Defined in utilities/TileHelpers.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -421,7 +493,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:327</li>
+									<li>Defined in utilities/TileHelpers.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -447,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:331</li>
+									<li>Defined in utilities/TileHelpers.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -473,7 +545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:359</li>
+									<li>Defined in utilities/TileHelpers.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -499,7 +571,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:363</li>
+									<li>Defined in utilities/TileHelpers.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -525,7 +597,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:343</li>
+									<li>Defined in utilities/TileHelpers.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -551,7 +623,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Utilities.ts:347</li>
+									<li>Defined in utilities/TileHelpers.ts:56</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -576,31 +648,73 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="appendstrategy.html">Append<wbr>Strategy</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="arrays.html">Arrays</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="collectors.html">Collectors</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="color.html">Color</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="console.html">Console</a>
+						<a href="enummanager.html">Enum<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="enumproperty.html">Enum<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="enums.html">Enums</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="files.html">Files</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="ihookhost.html">IHook<wbr>Host</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="imessagepack.html">IMessage<wbr>Pack</a>
+					</li>
+					<li class=" tsd-kind-module tsd-has-type-parameter">
+						<a href="istatchangeinfo.html">IStat<wbr>Change<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="iterableiterator.html">Iterable<wbr>Iterator</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="math2.html">Math2</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="random.html">Random</a>
+						<a href="objects.html">Objects</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="resourcepath.html">Resource<wbr>Path</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="strings.html">Strings</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="style.html">Style</a>
+					</li>
 					<li class="current tsd-kind-module">
 						<a href="tilehelpers.html">Tile<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="uuid.html">UUID</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="version.html">Version</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="webassemblyhelpers.html">Web<wbr>Assembly<wbr>Helpers</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="webworkerhelpers.html">Web<wbr>Worker<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="__global.html">__global</a>
 					</li>
 				</ul>
 			</nav>
@@ -619,10 +733,19 @@
 						<a href="tilehelpers.html#findmatchingtile" class="tsd-kind-icon">find<wbr>Matching<wbr>Tile</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="tilehelpers.html#getadjacenttiles" class="tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#getgfx" class="tsd-kind-icon">get<wbr>Gfx</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#getgfxraw" class="tsd-kind-icon">get<wbr>Gfx<wbr>Raw</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="tilehelpers.html#getsuitablespawnpoint" class="tsd-kind-icon">get<wbr>Suitable<wbr>Spawn<wbr>Point</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="tilehelpers.html#gettilevariation" class="tsd-kind-icon">get<wbr>Tile<wbr>Variation</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>

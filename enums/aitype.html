@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AiType | Wayward</title>
+	<title>AiType | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward</a>
+					<a href="../index.html" class="title">Wayward Modding Guide</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -73,6 +73,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#defender" class="tsd-kind-icon">Defender</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#fearless" class="tsd-kind-icon">Fearless</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#fleeing" class="tsd-kind-icon">Fleeing</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#follower" class="tsd-kind-icon">Follower</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#hidden" class="tsd-kind-icon">Hidden</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#hostile" class="tsd-kind-icon">Hostile</a></li>
@@ -80,6 +81,7 @@
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#random" class="tsd-kind-icon">Random</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#scared" class="tsd-kind-icon">Scared</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#tamed" class="tsd-kind-icon">Tamed</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="aitype.html#waiting" class="tsd-kind-icon">Waiting</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,7 +95,7 @@
 					<div class="tsd-signature tsd-kind-icon">Defender<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;128</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:94</li>
+							<li>Defined in entity/IEntity.ts:38</li>
 						</ul>
 					</aside>
 				</section>
@@ -103,7 +105,17 @@
 					<div class="tsd-signature tsd-kind-icon">Fearless<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;16</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:91</li>
+							<li>Defined in entity/IEntity.ts:35</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="fleeing" class="tsd-anchor"></a>
+					<h3>Fleeing</h3>
+					<div class="tsd-signature tsd-kind-icon">Fleeing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;256</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in entity/IEntity.ts:39</li>
 						</ul>
 					</aside>
 				</section>
@@ -113,7 +125,7 @@
 					<div class="tsd-signature tsd-kind-icon">Follower<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;64</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:93</li>
+							<li>Defined in entity/IEntity.ts:37</li>
 						</ul>
 					</aside>
 				</section>
@@ -123,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">Hidden<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;8</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:90</li>
+							<li>Defined in entity/IEntity.ts:34</li>
 						</ul>
 					</aside>
 				</section>
@@ -133,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">Hostile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:87</li>
+							<li>Defined in entity/IEntity.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -143,7 +155,7 @@
 					<div class="tsd-signature tsd-kind-icon">Neutral<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:86</li>
+							<li>Defined in entity/IEntity.ts:30</li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">Random<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;4</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:89</li>
+							<li>Defined in entity/IEntity.ts:33</li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">Scared<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:88</li>
+							<li>Defined in entity/IEntity.ts:32</li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +185,17 @@
 					<div class="tsd-signature tsd-kind-icon">Tamed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;32</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/ICreature.ts:92</li>
+							<li>Defined in entity/IEntity.ts:36</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="waiting" class="tsd-anchor"></a>
+					<h3>Waiting</h3>
+					<div class="tsd-signature tsd-kind-icon">Waiting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;512</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in entity/IEntity.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -201,6 +223,9 @@
 								<a href="aitype.html#fearless" class="tsd-kind-icon">Fearless</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="aitype.html#fleeing" class="tsd-kind-icon">Fleeing</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="aitype.html#follower" class="tsd-kind-icon">Follower</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
@@ -220,6 +245,9 @@
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="aitype.html#tamed" class="tsd-kind-icon">Tamed</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="aitype.html#waiting" class="tsd-kind-icon">Waiting</a>
 							</li>
 						</ul>
 					</li>
