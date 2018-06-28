@@ -194,7 +194,7 @@
 				<p><code>compatibleMinorVersions</code> only allows the mod to load in 2.6.x.</p>
 				<p><code>unloadable</code> makes it so the mod doesn&#39;t have to be enabled when loading a world which had the mod loaded previously.</p>
 				<p><code>languages</code> looks for a language file, used for text strings in your mod, so others can translate it. Not required for all mods.</p>
-				<p>To see a complete list of the properties you can use in your <code>mod.json</code>, and more in-depth details of the properties used in this example, see the <a href="#-mod-json-"><code>mod.json</code> section</a>.</p>
+				<p>To see a complete list of the properties you can use in your <code>mod.json</code>, and more in-depth details of the properties used in this example, see the <a href="#mod-json"><code>mod.json</code> section</a>.</p>
 				<h3 id="helloworld-tsconfig-json">helloworld/tsconfig.json</h3>
 				<p>tsconfig gives instructions for how TypeScript should compile your project.</p>
 				<pre><code class="lang-json">{
@@ -203,11 +203,13 @@
         <span class="hljs-attr">"module"</span>: <span class="hljs-string">"amd"</span>,
         <span class="hljs-attr">"declaration"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"noImplicitAny"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"noUnusedLocals"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"removeComments"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"preserveConstEnums"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"inlineSourceMap"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"baseUrl"</span>: <span class="hljs-string">"./mod-reference/definitions"</span>,
-        <span class="hljs-attr">"types"</span>: []
+        <span class="hljs-attr">"types"</span>: [],
+        <span class="hljs-attr">"experimentalDecorators"</span>: <span class="hljs-literal">true</span>
     }
 }
 </code></pre>
@@ -429,15 +431,15 @@
     &quot;474819610&quot;
 ]
 </code></pre>
-				<p><code>imageOverrides</code> is a property that will allow you to override default graphics in the game. When set to true (<code>&quot;imageOverrides&quot;: true</code>), it will load a dedicated <a href="#-imageoverrides-json-">imageOverrides.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
-				<p><code>languages</code> is a property that will allow you to provide a language without requiring scripts. It takes an array of paths to <a href="#-language-json-">language JSON files</a>. Omitting the property loads no language files. The property will look like this:</p>
+				<p><code>imageOverrides</code> is a property that will allow you to override default graphics in the game. When set to true (<code>&quot;imageOverrides&quot;: true</code>), it will load a dedicated <a href="#imageoverrides-json">imageOverrides.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
+				<p><code>languages</code> is a property that will allow you to provide a language without requiring scripts. It takes an array of paths to <a href="#language-json">language JSON files</a>. Omitting the property loads no language files. The property will look like this:</p>
 				<pre><code class="lang-json">&quot;languages&quot;: [
     &quot;pirateLanguage&quot;,
     &quot;spaceLanguages/glaknarLanguage&quot;
 ]
 </code></pre>
 				<p>This example would attempt to load the language files <code>&lt;modName&gt;/pirateLanguage.json</code> and <code>&lt;modName&gt;/spaceLanguages/glaknarLanguage.json</code></p>
-				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#-customizations-json-">customizations.json</a> file containing the overrides. Omitting this property is the same as setting it to <code>false</code>. </p>
+				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#customizations-json">customizations.json</a> file containing the overrides. Omitting this property is the same as setting it to <code>false</code>. </p>
 				<p><code>stylesheets</code> is a property that automatically appends CSS stylesheets as your mod is initialized, and removes them as your mod is uninitialized. It takes an array of strings representing the paths to your stylesheets.
 				The property will look like this:</p>
 				<pre><code class="lang-json">&quot;stylesheets&quot;: [
