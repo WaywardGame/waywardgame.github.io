@@ -57,13 +57,21 @@
 					<a href="quickslots.html">Quickslots</a>
 				</li>
 			</ul>
-			<h1>Class Quickslots</h1>
+			<h1>Class Quickslots&lt;HasApi&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>HasApi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -97,12 +105,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="quickslots.html#igamescreenapi" class="tsd-kind-icon">IGame<wbr>Screen<wbr>Api</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="quickslots.html#api" class="tsd-kind-icon">api</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="quickslots.html#attributes" class="tsd-kind-icon">attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="quickslots.html#children" class="tsd-kind-icon">children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="quickslots.html#classes" class="tsd-kind-icon">classes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="quickslots.html#data" class="tsd-kind-icon">data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="quickslots.html#gsapi" class="tsd-kind-icon">gsapi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="quickslots.html#true" class="tsd-kind-icon">true</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="quickslots.html#preferredquadrant" class="tsd-kind-icon">preferred<wbr>Quadrant</a></li>
 							</ul>
 						</section>
@@ -181,7 +191,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Quickslots<span class="tsd-signature-symbol">(</span>gsapi<span class="tsd-signature-symbol">: </span><a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="quickslots.html" class="tsd-signature-type">Quickslots</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Quickslots<span class="tsd-signature-symbol">(</span>api<span class="tsd-signature-symbol">: </span><a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/uiapi.html" class="tsd-signature-type">UiApi</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="quickslots.html" class="tsd-signature-type">Quickslots</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -189,13 +199,13 @@
 								<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#constructor">constructor</a></p>
 								<p>Overrides <a href="staticelement.html">StaticElement</a>.<a href="staticelement.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:67</li>
+									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:69</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gsapi: <a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a></h5>
+									<h5>api: <a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/uiapi.html" class="tsd-signature-type">UiApi</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="quickslots.html" class="tsd-signature-type">Quickslots</a></h4>
@@ -205,6 +215,17 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="igamescreenapi" class="tsd-anchor"></a>
+					<h3>IGame<wbr>Screen<wbr>Api</h3>
+					<div class="tsd-signature tsd-kind-icon">IGame<wbr>Screen<wbr>Api<span class="tsd-signature-symbol">:</span> <a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#igamescreenapi">IGameScreenApi</a></p>
+						<ul>
+							<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:65</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="api" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> api</h3>
@@ -265,11 +286,22 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="gsapi" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> gsapi</h3>
-					<div class="tsd-signature tsd-kind-icon">gsapi<span class="tsd-signature-symbol">:</span> <a href="../interfaces/igamescreenapi.html" class="tsd-signature-type">IGameScreenApi</a></div>
+					<div class="tsd-signature tsd-kind-icon">gsapi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HasApi</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#gsapi">gsapi</a></p>
 						<ul>
-							<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:69</li>
+							<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:65</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="true" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> true</h3>
+					<div class="tsd-signature tsd-kind-icon">true<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#true">true</a></p>
+						<ul>
+							<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -771,17 +803,17 @@
 					<a name="getcontextmenudescription" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Context<wbr>Menu<wbr>Description</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Context<wbr>Menu<wbr>Description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#ioptiondescription" class="tsd-signature-type">IOptionDescription</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Context<wbr>Menu<wbr>Description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#contextmenuoptionkeyvaluepair" class="tsd-signature-type">ContextMenuOptionKeyValuePair</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#getcontextmenudescription">getContextMenuDescription</a></p>
 								<ul>
-									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:105</li>
+									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:111</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#ioptiondescription" class="tsd-signature-type">IOptionDescription</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#contextmenuoptionkeyvaluepair" class="tsd-signature-type">ContextMenuOptionKeyValuePair</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1471,7 +1503,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="quadrantcomponent.html">QuadrantComponent</a>.<a href="quadrantcomponent.html#setquadrant">setQuadrant</a></p>
 								<ul>
-									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:82</li>
+									<li>Defined in newui/screen/screens/game/component/QuadrantComponent.ts:88</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1875,11 +1907,14 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="quickslots.html" class="tsd-kind-icon">Quickslots</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="quickslots.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="quickslots.html#igamescreenapi" class="tsd-kind-icon">IGame<wbr>Screen<wbr>Api</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="quickslots.html#api" class="tsd-kind-icon">api</a>
@@ -1898,6 +1933,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="quickslots.html#gsapi" class="tsd-kind-icon">gsapi</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="quickslots.html#true" class="tsd-kind-icon">true</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="quickslots.html#preferredquadrant" class="tsd-kind-icon">preferred<wbr>Quadrant</a>
