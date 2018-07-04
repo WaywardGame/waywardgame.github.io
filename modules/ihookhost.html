@@ -153,6 +153,7 @@
 					<li><a href="../classes/modsmenu.html" class="tsd-signature-type">ModsMenu</a></li>
 					<li><a href="../classes/modsmenu.html" class="tsd-signature-type">ModsMenu</a></li>
 					<li><a href="../classes/modswrapper.html" class="tsd-signature-type">ModsWrapper</a></li>
+					<li><a href="../classes/multiplayer.html" class="tsd-signature-type">Multiplayer</a></li>
 					<li><a href="../classes/multiplayermenu.html" class="tsd-signature-type">MultiplayerMenu</a></li>
 					<li><a href="../classes/multiplayermenu.html" class="tsd-signature-type">MultiplayerMenu</a></li>
 					<li><a href="../classes/newgamemenu.html" class="tsd-signature-type">NewGameMenu</a></li>
@@ -309,15 +310,18 @@
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#postrender" class="tsd-kind-icon">post<wbr>Render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#postrenderpostprocess" class="tsd-kind-icon">post<wbr>Render<wbr>Post<wbr>Process</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#postrenderworld" class="tsd-kind-icon">post<wbr>Render<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#postsavegame" class="tsd-kind-icon">post<wbr>Save<wbr>Game</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#preexecuteaction" class="tsd-kind-icon">pre<wbr>Execute<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#preexecutecommand" class="tsd-kind-icon">pre<wbr>Execute<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#preloadworlddifferences" class="tsd-kind-icon">pre<wbr>Load<wbr>World<wbr>Differences</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#prerender" class="tsd-kind-icon">pre<wbr>Render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#prerenderpostprocess" class="tsd-kind-icon">pre<wbr>Render<wbr>Post<wbr>Process</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#prerenderworld" class="tsd-kind-icon">pre<wbr>Render<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#presavegame" class="tsd-kind-icon">pre<wbr>Save<wbr>Game</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#processinput" class="tsd-kind-icon">process<wbr>Input</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#shoulddisplaymessage" class="tsd-kind-icon">should<wbr>Display<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#shouldrender" class="tsd-kind-icon">should<wbr>Render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-module"><a href="ihookhost.html#shouldstopwalktotilemovement" class="tsd-kind-icon">should<wbr>Stop<wbr>Walk<wbr>ToTile<wbr>Movement</a></li>
 							</ul>
 						</section>
 					</div>
@@ -3644,6 +3648,28 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
+					<a name="postsavegame" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> post<wbr>Save<wbr>Game</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">post<wbr>Save<wbr>Game<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in mod/IHookHost.ts:751</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called after the game is saved</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 					<a name="preexecuteaction" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pre<wbr>Execute<wbr>Action</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
@@ -3653,7 +3679,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:756</li>
+									<li>Defined in mod/IHookHost.ts:761</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3701,7 +3727,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:772</li>
+									<li>Defined in mod/IHookHost.ts:777</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3748,7 +3774,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:763</li>
+									<li>Defined in mod/IHookHost.ts:768</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3780,7 +3806,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:777</li>
+									<li>Defined in mod/IHookHost.ts:782</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3802,7 +3828,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:782</li>
+									<li>Defined in mod/IHookHost.ts:787</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3824,7 +3850,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:790</li>
+									<li>Defined in mod/IHookHost.ts:795</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3858,6 +3884,28 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
+					<a name="presavegame" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pre<wbr>Save<wbr>Game</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">pre<wbr>Save<wbr>Game<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in mod/IHookHost.ts:800</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called before the game is saved</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 					<a name="processinput" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> process<wbr>Input</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
@@ -3867,7 +3915,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:797</li>
+									<li>Defined in mod/IHookHost.ts:807</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3902,7 +3950,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:812</li>
+									<li>Defined in mod/IHookHost.ts:822</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3949,7 +3997,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/IHookHost.ts:803</li>
+									<li>Defined in mod/IHookHost.ts:813</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3962,6 +4010,32 @@
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
 							<p>A bitwise list of render flags or undefined to use the default logic</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
+					<a name="shouldstopwalktotilemovement" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> should<wbr>Stop<wbr>Walk<wbr>ToTile<wbr>Movement</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Stop<wbr>Walk<wbr>ToTile<wbr>Movement<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in mod/IHookHost.ts:828</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when determining if the player should stop walking to the tile</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+							<p>True to stop walk to tile movement, False to continue walk to tile movement, or undefined to use the default logic</p>
 						</li>
 					</ul>
 				</section>
@@ -4305,6 +4379,9 @@
 						<a href="ihookhost.html#postrenderworld" class="tsd-kind-icon">post<wbr>Render<wbr>World</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="ihookhost.html#postsavegame" class="tsd-kind-icon">post<wbr>Save<wbr>Game</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
 						<a href="ihookhost.html#preexecuteaction" class="tsd-kind-icon">pre<wbr>Execute<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-module">
@@ -4323,6 +4400,9 @@
 						<a href="ihookhost.html#prerenderworld" class="tsd-kind-icon">pre<wbr>Render<wbr>World</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="ihookhost.html#presavegame" class="tsd-kind-icon">pre<wbr>Save<wbr>Game</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
 						<a href="ihookhost.html#processinput" class="tsd-kind-icon">process<wbr>Input</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-module">
@@ -4330,6 +4410,9 @@
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-module">
 						<a href="ihookhost.html#shouldrender" class="tsd-kind-icon">should<wbr>Render</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="ihookhost.html#shouldstopwalktotilemovement" class="tsd-kind-icon">should<wbr>Stop<wbr>Walk<wbr>ToTile<wbr>Movement</a>
 					</li>
 				</ul>
 			</nav>
