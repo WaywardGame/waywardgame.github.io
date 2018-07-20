@@ -80,10 +80,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#allocate" class="tsd-kind-icon">allocate</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#allocateinternal" class="tsd-kind-icon">allocate<wbr>Internal</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#getmod" class="tsd-kind-icon">get<wbr>Mod</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#initializegamestate" class="tsd-kind-icon">initialize<wbr>Game<wbr>State</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#ismoddable" class="tsd-kind-icon">is<wbr>Moddable</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#modlog" class="tsd-kind-icon">mod<wbr>Log</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enummanager.html#restore" class="tsd-kind-icon">restore</a></li>
@@ -151,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:119</li>
+									<li>Defined in utilities/enum/EnumManager.ts:111</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,13 +220,13 @@
 					<a name="allocateinternal" class="tsd-anchor"></a>
 					<h3>allocate<wbr>Internal</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">allocate<wbr>Internal<span class="tsd-signature-symbol">(</span>enumInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a>, objectValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span>, modIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wasSaved<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">allocate<wbr>Internal<span class="tsd-signature-symbol">(</span>enumInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a>, objectValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span>, infoMessage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:193</li>
+									<li>Defined in utilities/enum/EnumManager.ts:190</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,45 +235,13 @@
 									<h5>enumInfo: <a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> objectValue: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></h5>
+									<h5>objectValue: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modIndex: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wasSaved: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5>infoMessage: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="getmod" class="tsd-anchor"></a>
-					<h3>get<wbr>Mod</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Mod<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, enumName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/imodinfo.html" class="tsd-signature-type">IModInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:52</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>enumName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imodinfo.html" class="tsd-signature-type">IModInfo</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
 						</li>
 					</ul>
 				</section>
@@ -289,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:58</li>
+									<li>Defined in utilities/enum/EnumManager.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -306,7 +272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:88</li>
+									<li>Defined in utilities/enum/EnumManager.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -314,45 +280,22 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="ismoddable" class="tsd-anchor"></a>
-					<h3>is<wbr>Moddable</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Moddable<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:48</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="modlog" class="tsd-anchor"></a>
 					<h3>mod<wbr>Log</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">mod<wbr>Log<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, enumInfo<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/log.html" class="tsd-signature-type">Log</a></li>
+						<li class="tsd-signature tsd-kind-icon">mod<wbr>Log<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, enumInfo<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/log.html" class="tsd-signature-type">Log</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:213</li>
+									<li>Defined in utilities/enum/EnumManager.ts:210</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modIndex: <span class="tsd-signature-type">number</span></h5>
+									<h5>modIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> enumInfo: <a href="../interfaces/ienuminfo.html" class="tsd-signature-type">IEnumInfo</a></h5>
@@ -372,7 +315,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:109</li>
+									<li>Defined in utilities/enum/EnumManager.ts:101</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -389,7 +332,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:101</li>
+									<li>Defined in utilities/enum/EnumManager.ts:91</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -406,7 +349,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:92</li>
+									<li>Defined in utilities/enum/EnumManager.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -438,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:223</li>
+									<li>Defined in utilities/enum/EnumManager.ts:215</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -461,7 +404,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/EnumManager.ts:247</li>
+									<li>Defined in utilities/enum/EnumManager.ts:248</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -568,16 +511,10 @@
 						<a href="enummanager.html#allocateinternal" class="tsd-kind-icon">allocate<wbr>Internal</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="enummanager.html#getmod" class="tsd-kind-icon">get<wbr>Mod</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="enummanager.html#initialize" class="tsd-kind-icon">initialize</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="enummanager.html#initializegamestate" class="tsd-kind-icon">initialize<wbr>Game<wbr>State</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="enummanager.html#ismoddable" class="tsd-kind-icon">is<wbr>Moddable</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="enummanager.html#modlog" class="tsd-kind-icon">mod<wbr>Log</a>
