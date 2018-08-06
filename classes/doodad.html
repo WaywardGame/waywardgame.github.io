@@ -122,6 +122,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#addtreasurechestloot" class="tsd-kind-icon">add<wbr>Treasure<wbr>Chest<wbr>Loot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#blocksmove" class="tsd-kind-icon">blocks<wbr>Move</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cancausestatus" class="tsd-kind-icon">can<wbr>Cause<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cangather" class="tsd-kind-icon">can<wbr>Gather</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cangrow" class="tsd-kind-icon">can<wbr>Grow</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#canharvest" class="tsd-kind-icon">can<wbr>Harvest</a></li>
@@ -133,6 +134,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#damage" class="tsd-kind-icon">damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#description" class="tsd-kind-icon">description</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getactions" class="tsd-kind-icon">get<wbr>Actions</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdamage" class="tsd-kind-icon">get<wbr>Damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdefaultdurability" class="tsd-kind-icon">get<wbr>Default<wbr>Durability</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdoodadinfo" class="tsd-kind-icon">get<wbr>Doodad<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#getdurabilitymessage" class="tsd-kind-icon">get<wbr>Durability<wbr>Message</a></li>
@@ -445,7 +447,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#addtreasurechestloot">addTreasureChestLoot</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:718</li>
+									<li>Defined in doodad/doodads/Doodad.ts:742</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -463,9 +465,36 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#blocksmove">blocksMove</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:757</li>
+									<li>Defined in doodad/doodads/Doodad.ts:781</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cancausestatus" class="tsd-anchor"></a>
+					<h3>can<wbr>Cause<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Cause<wbr>Status<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, equipType<span class="tsd-signature-symbol">?: </span><a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#cancausestatus">canCauseStatus</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:1071</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>human: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> equipType: <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -577,7 +606,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#causestatus">causeStatus</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:1047</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1098</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -652,7 +681,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#damage">damage</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:629</li>
+									<li>Defined in doodad/doodads/Doodad.ts:653</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -717,6 +746,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getdamage" class="tsd-anchor"></a>
+					<h3>get<wbr>Damage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Damage<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a>, equipType<span class="tsd-signature-symbol">?: </span><a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getdamage">getDamage</a></p>
+								<ul>
+									<li>Defined in doodad/doodads/Doodad.ts:632</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>human: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> equipType: <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getdefaultdurability" class="tsd-anchor"></a>
 					<h3>get<wbr>Default<wbr>Durability</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -727,7 +783,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#getdefaultdurability">getDefaultDurability</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:714</li>
+									<li>Defined in doodad/doodads/Doodad.ts:738</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -901,16 +957,22 @@
 					<a name="isdangerous" class="tsd-anchor"></a>
 					<h3>is<wbr>Dangerous</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Dangerous<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Dangerous<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#isdangerous">isDangerous</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:616</li>
+									<li>Defined in doodad/doodads/Doodad.ts:617</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -980,7 +1042,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:1170</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1219</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1025,7 +1087,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#setofftrap">setOffTrap</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:1138</li>
+									<li>Defined in doodad/doodads/Doodad.ts:1187</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1052,7 +1114,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/idoodad.html">IDoodad</a>.<a href="../interfaces/idoodad.html#update">update</a></p>
 								<ul>
-									<li>Defined in doodad/doodads/Doodad.ts:773</li>
+									<li>Defined in doodad/doodads/Doodad.ts:797</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1192,6 +1254,9 @@
 								<a href="doodad.html#blocksmove" class="tsd-kind-icon">blocks<wbr>Move</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#cancausestatus" class="tsd-kind-icon">can<wbr>Cause<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#cangather" class="tsd-kind-icon">can<wbr>Gather</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1223,6 +1288,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#getactions" class="tsd-kind-icon">get<wbr>Actions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#getdamage" class="tsd-kind-icon">get<wbr>Damage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#getdefaultdurability" class="tsd-kind-icon">get<wbr>Default<wbr>Durability</a>

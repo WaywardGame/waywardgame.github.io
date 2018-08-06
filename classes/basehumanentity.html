@@ -157,6 +157,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#damage" class="tsd-kind-icon">damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#damagerandomequipment" class="tsd-kind-icon">damage<wbr>Random<wbr>Equipment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#equip" class="tsd-kind-icon">equip</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#getburndamage" class="tsd-kind-icon">get<wbr>Burn<wbr>Damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#getdamagemodifier" class="tsd-kind-icon">get<wbr>Damage<wbr>Modifier</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#getequipslotforitem" class="tsd-kind-icon">get<wbr>Equip<wbr>Slot<wbr>For<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basehumanentity.html#getequippeditem" class="tsd-kind-icon">get<wbr>Equipped<wbr>Item</a></li>
@@ -305,7 +306,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="deathby" class="tsd-anchor"></a>
 					<h3>death<wbr>By</h3>
-					<div class="tsd-signature tsd-kind-icon">death<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;messages[Message.Mysteriously]</span></div>
+					<div class="tsd-signature tsd-kind-icon">death<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;messages[Message.Mysteriously]</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#deathby">deathBy</a></p>
 						<ul>
@@ -660,7 +661,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#burn">burn</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:437</li>
+									<li>Defined in entity/BaseHumanEntity.ts:463</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -700,7 +701,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:778</li>
+									<li>Defined in entity/BaseHumanEntity.ts:809</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -717,7 +718,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:730</li>
+									<li>Defined in entity/BaseHumanEntity.ts:761</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -885,7 +886,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#checkunder">checkUnder</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:495</li>
+									<li>Defined in entity/BaseHumanEntity.ts:514</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1001,7 +1002,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#equip">equip</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:630</li>
+									<li>Defined in entity/BaseHumanEntity.ts:661</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1014,6 +1015,33 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getburndamage" class="tsd-anchor"></a>
+					<h3>get<wbr>Burn<wbr>Damage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Burn<wbr>Damage<span class="tsd-signature-symbol">(</span>skipParry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, equipType<span class="tsd-signature-symbol">?: </span><a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#getburndamage">getBurnDamage</a></p>
+								<ul>
+									<li>Defined in entity/BaseHumanEntity.ts:435</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParry: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> equipType: <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1462,7 +1490,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:765</li>
+									<li>Defined in entity/BaseHumanEntity.ts:796</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1598,7 +1626,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:672</li>
+									<li>Defined in entity/BaseHumanEntity.ts:703</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1629,7 +1657,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:972</li>
+									<li>Defined in entity/BaseHumanEntity.ts:1003</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1714,7 +1742,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ibasehumanentity.html">IBaseHumanEntity</a>.<a href="../interfaces/ibasehumanentity.html#unequip">unequip</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:650</li>
+									<li>Defined in entity/BaseHumanEntity.ts:681</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2094,6 +2122,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="basehumanentity.html#equip" class="tsd-kind-icon">equip</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="basehumanentity.html#getburndamage" class="tsd-kind-icon">get<wbr>Burn<wbr>Damage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="basehumanentity.html#getdamagemodifier" class="tsd-kind-icon">get<wbr>Damage<wbr>Modifier</a>

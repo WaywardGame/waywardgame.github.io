@@ -178,6 +178,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="player.html#calculateequipmentstats" class="tsd-kind-icon">calculate<wbr>Equipment<wbr>Stats</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="player.html#calculatestats" class="tsd-kind-icon">calculate<wbr>Stats</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="player.html#canjump" class="tsd-kind-icon">can<wbr>Jump</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="player.html#canseeposition" class="tsd-kind-icon">can<wbr>See<wbr>Position</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#cancelresting" class="tsd-kind-icon">cancel<wbr>Resting</a></li>
@@ -195,6 +196,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#damagerandomequipment" class="tsd-kind-icon">damage<wbr>Random<wbr>Equipment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="player.html#equip" class="tsd-kind-icon">equip</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="player.html#facedirection" class="tsd-kind-icon">face<wbr>Direction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#getburndamage" class="tsd-kind-icon">get<wbr>Burn<wbr>Damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="player.html#getconsumebonus" class="tsd-kind-icon">get<wbr>Consume<wbr>Bonus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="player.html#getdamagemodifier" class="tsd-kind-icon">get<wbr>Damage<wbr>Modifier</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="player.html#getdefaultcarvetool" class="tsd-kind-icon">get<wbr>Default<wbr>Carve<wbr>Tool</a></li>
@@ -425,7 +427,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="deathby" class="tsd-anchor"></a>
 					<h3>death<wbr>By</h3>
-					<div class="tsd-signature tsd-kind-icon">death<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;messages[Message.Mysteriously]</span></div>
+					<div class="tsd-signature tsd-kind-icon">death<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;messages[Message.Mysteriously]</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#deathby">deathBy</a></p>
 						<p>Inherited from <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#deathby">deathBy</a></p>
@@ -1131,7 +1133,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#adddelay">addDelay</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1105</li>
+									<li>Defined in player/Player.ts:1108</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1187,7 +1189,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#burn">burn</a></p>
 								<p>Inherited from <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#burn">burn</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:437</li>
+									<li>Defined in entity/BaseHumanEntity.ts:463</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1247,7 +1249,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#calculatestats">calculateStats</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:2059</li>
+									<li>Defined in player/Player.ts:2077</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1268,6 +1270,39 @@
 									<li>Defined in player/Player.ts:343</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="canseeposition" class="tsd-anchor"></a>
+					<h3>can<wbr>See<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Position<span class="tsd-signature-symbol">(</span>tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isClientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#canseeposition">canSeePosition</a></p>
+								<ul>
+									<li>Defined in player/Player.ts:1411</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tileY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tileZ: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -1407,7 +1442,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkandremoveblood">checkAndRemoveBlood</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:812</li>
+									<li>Defined in player/Player.ts:815</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1425,7 +1460,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkforgather">checkForGather</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:898</li>
+									<li>Defined in player/Player.ts:901</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idoodad.html" class="tsd-signature-type">IDoodad</a>
@@ -1446,7 +1481,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkforgatherfire">checkForGatherFire</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:850</li>
+									<li>Defined in player/Player.ts:853</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
@@ -1467,7 +1502,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkforstill">checkForStill</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:880</li>
+									<li>Defined in player/Player.ts:883</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1513,7 +1548,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkreputationmilestones">checkReputationMilestones</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1053</li>
+									<li>Defined in player/Player.ts:1056</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1550,7 +1585,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkunder">checkUnder</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#checkunder">checkUnder</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1727</li>
+									<li>Defined in player/Player.ts:1738</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1586,7 +1621,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#checkweight">checkWeight</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:746</li>
+									<li>Defined in player/Player.ts:749</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1721,7 +1756,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#facedirection">faceDirection</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1928</li>
+									<li>Defined in player/Player.ts:1946</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1737,6 +1772,34 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getburndamage" class="tsd-anchor"></a>
+					<h3>get<wbr>Burn<wbr>Damage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Burn<wbr>Damage<span class="tsd-signature-symbol">(</span>skipParry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, equipType<span class="tsd-signature-symbol">?: </span><a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getburndamage">getBurnDamage</a></p>
+								<p>Inherited from <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#getburndamage">getBurnDamage</a></p>
+								<ul>
+									<li>Defined in entity/BaseHumanEntity.ts:435</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParry: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> equipType: <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getconsumebonus" class="tsd-anchor"></a>
 					<h3>get<wbr>Consume<wbr>Bonus</h3>
@@ -1748,7 +1811,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getconsumebonus">getConsumeBonus</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1949</li>
+									<li>Defined in player/Player.ts:1967</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1815,7 +1878,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getdialoginfo">getDialogInfo</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1445</li>
+									<li>Defined in player/Player.ts:1456</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1936,7 +1999,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getinspecthealthmessage">getInspectHealthMessage</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1349</li>
+									<li>Defined in player/Player.ts:1352</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1961,7 +2024,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getmaxhealth">getMaxHealth</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#getmaxhealth">getMaxHealth</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:577</li>
+									<li>Defined in player/Player.ts:578</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1986,7 +2049,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getmovementfinishtime">getMovementFinishTime</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1957</li>
+									<li>Defined in player/Player.ts:1975</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2004,7 +2067,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getmovementintent">getMovementIntent</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:535</li>
+									<li>Defined in player/Player.ts:536</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imovementintent.html" class="tsd-signature-type">IMovementIntent</a></h4>
@@ -2022,7 +2085,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getmovementprogress">getMovementProgress</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1722</li>
+									<li>Defined in player/Player.ts:1733</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2041,7 +2104,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getname">getName</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#getname">getName</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1404</li>
+									<li>Defined in player/Player.ts:1407</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -2059,7 +2122,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getreputation">getReputation</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1058</li>
+									<li>Defined in player/Player.ts:1061</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2111,7 +2174,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getstrength">getStrength</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:590</li>
+									<li>Defined in player/Player.ts:591</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2137,7 +2200,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getweightmovementpenalty">getWeightMovementPenalty</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:794</li>
+									<li>Defined in player/Player.ts:797</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2155,7 +2218,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#getweightstatus">getWeightStatus</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:776</li>
+									<li>Defined in player/Player.ts:779</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/weightstatus.html" class="tsd-signature-type">WeightStatus</a></h4>
@@ -2173,7 +2236,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#hasdelay">hasDelay</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1101</li>
+									<li>Defined in player/Player.ts:1104</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2259,7 +2322,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#haswalkpath">hasWalkPath</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1762</li>
+									<li>Defined in player/Player.ts:1777</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2277,7 +2340,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#healthsynccheck">healthSyncCheck</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:2043</li>
+									<li>Defined in player/Player.ts:2061</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2295,7 +2358,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#hurthands">hurtHands</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1062</li>
+									<li>Defined in player/Player.ts:1065</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2350,7 +2413,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#inspect">inspect</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1130</li>
+									<li>Defined in player/Player.ts:1133</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2380,7 +2443,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#inspecttile">inspectTile</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1142</li>
+									<li>Defined in player/Player.ts:1145</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2423,7 +2486,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#isghost">isGhost</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#isghost">isGhost</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1396</li>
+									<li>Defined in player/Player.ts:1399</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2441,7 +2504,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#islocalplayer">isLocalPlayer</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1392</li>
+									<li>Defined in player/Player.ts:1395</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2497,7 +2560,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#isserver">isServer</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1400</li>
+									<li>Defined in player/Player.ts:1403</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2514,7 +2577,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/Player.ts:1539</li>
+									<li>Defined in player/Player.ts:1550</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2639,7 +2702,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#passturn">passTurn</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1463</li>
+									<li>Defined in player/Player.ts:1474</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2663,7 +2726,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ipreserializecallback.html">IPreSerializeCallback</a>.<a href="../interfaces/ipreserializecallback.html#preserializeobject">preSerializeObject</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:702</li>
+									<li>Defined in player/Player.ts:705</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2681,7 +2744,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#processinput">processInput</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1785</li>
+									<li>Defined in player/Player.ts:1800</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2724,7 +2787,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#resetdefense">resetDefense</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:765</li>
+									<li>Defined in entity/BaseHumanEntity.ts:796</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2778,7 +2841,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#restoreexploredmap">restoreExploredMap</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:715</li>
+									<li>Defined in player/Player.ts:718</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2796,7 +2859,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#revealitem">revealItem</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1953</li>
+									<li>Defined in player/Player.ts:1971</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2844,7 +2907,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#setposition">setPosition</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1354</li>
+									<li>Defined in player/Player.ts:1357</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2893,7 +2956,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#settamedcreatureenemy">setTamedCreatureEnemy</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1117</li>
+									<li>Defined in player/Player.ts:1120</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2917,7 +2980,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#setz">setZ</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1370</li>
+									<li>Defined in player/Player.ts:1373</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2941,7 +3004,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#setup">setup</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:595</li>
+									<li>Defined in player/Player.ts:596</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3088,7 +3151,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#statgain">statGain</a></p>
 								<ul>
-									<li>Defined in entity/BaseHumanEntity.ts:672</li>
+									<li>Defined in entity/BaseHumanEntity.ts:703</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3120,7 +3183,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#swimcheck">swimCheck</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:2115</li>
+									<li>Defined in player/Player.ts:2133</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3138,7 +3201,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#tick">tick</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1485</li>
+									<li>Defined in player/Player.ts:1496</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3230,7 +3293,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#unequip">unequip</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#unequip">unequip</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:463</li>
+									<li>Defined in player/Player.ts:464</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3263,7 +3326,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#unequipall">unequipAll</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:509</li>
+									<li>Defined in player/Player.ts:510</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3330,7 +3393,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatecrafttable">updateCraftTable</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:924</li>
+									<li>Defined in player/Player.ts:927</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3348,7 +3411,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatedialoginfo">updateDialogInfo</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1431</li>
+									<li>Defined in player/Player.ts:1442</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3372,7 +3435,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatedismantletable">updateDismantleTable</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:973</li>
+									<li>Defined in player/Player.ts:976</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3390,7 +3453,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatemilestones">updateMilestones</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1961</li>
+									<li>Defined in player/Player.ts:1979</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3408,7 +3471,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatemovementintent">updateMovementIntent</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:557</li>
+									<li>Defined in player/Player.ts:558</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3432,7 +3495,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatequickslotinfo">updateQuickSlotInfo</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1408</li>
+									<li>Defined in player/Player.ts:1419</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3463,7 +3526,7 @@
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatereputation">updateReputation</a></p>
 								<p>Overrides <a href="basehumanentity.html">BaseHumanEntity</a>.<a href="basehumanentity.html#updatereputation">updateReputation</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:735</li>
+									<li>Defined in player/Player.ts:738</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3529,7 +3592,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatestrength">updateStrength</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:2054</li>
+									<li>Defined in player/Player.ts:2072</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3557,7 +3620,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatetables">updateTables</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:919</li>
+									<li>Defined in player/Player.ts:922</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3575,7 +3638,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#updatetablesandweight">updateTablesAndWeight</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:998</li>
+									<li>Defined in player/Player.ts:1001</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3623,7 +3686,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iplayer.html">IPlayer</a>.<a href="../interfaces/iplayer.html#walkalongpath">walkAlongPath</a></p>
 								<ul>
-									<li>Defined in player/Player.ts:1766</li>
+									<li>Defined in player/Player.ts:1781</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3967,6 +4030,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="player.html#canjump" class="tsd-kind-icon">can<wbr>Jump</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="player.html#canseeposition" class="tsd-kind-icon">can<wbr>See<wbr>Position</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="player.html#cancel" class="tsd-kind-icon">cancel</a>
 							</li>
@@ -4017,6 +4083,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="player.html#facedirection" class="tsd-kind-icon">face<wbr>Direction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="player.html#getburndamage" class="tsd-kind-icon">get<wbr>Burn<wbr>Damage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="player.html#getconsumebonus" class="tsd-kind-icon">get<wbr>Consume<wbr>Bonus</a>

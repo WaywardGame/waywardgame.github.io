@@ -68,7 +68,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Multiplayer</span>
+						<a href="emitter.html" class="tsd-signature-type">Emitter</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">Multiplayer</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -95,6 +100,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addaftersyncchecks" class="tsd-kind-icon">add<wbr>After<wbr>Sync<wbr>Checks</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addbeforesyncchecks" class="tsd-kind-icon">add<wbr>Before<wbr>Sync<wbr>Checks</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#cancel" class="tsd-kind-icon">cancel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#createserver" class="tsd-kind-icon">create<wbr>Server</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
@@ -115,8 +122,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#joinserver" class="tsd-kind-icon">join<wbr>Server</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#kick" class="tsd-kind-icon">kick</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#on" class="tsd-kind-icon">on</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#onlobbyentered" class="tsd-kind-icon">on<wbr>Lobby<wbr>Entered</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#once" class="tsd-kind-icon">once</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#postsavegame" class="tsd-kind-icon">post<wbr>Save<wbr>Game</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#presavegame" class="tsd-kind-icon">pre<wbr>Save<wbr>Game</a></li>
@@ -129,8 +138,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#suppresssyncchecks" class="tsd-kind-icon">suppress<wbr>Sync<wbr>Checks</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#syncgamestate" class="tsd-kind-icon">sync<wbr>Game<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#trigger" class="tsd-kind-icon">trigger</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="multiplayer.html#triggersync" class="tsd-kind-icon">trigger<wbr>Sync</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#until" class="tsd-kind-icon">until</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#updateoptions" class="tsd-kind-icon">update<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="multiplayer.html#updateplayerid" class="tsd-kind-icon">update<wbr>Player<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="multiplayer.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a></li>
 							</ul>
 						</section>
 					</div>
@@ -169,7 +182,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addaftersyncchecks">addAfterSyncChecks</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:930</li>
+									<li>Defined in multiplayer/Multiplayer.ts:941</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -193,7 +206,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addbeforesyncchecks">addBeforeSyncChecks</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:917</li>
+									<li>Defined in multiplayer/Multiplayer.ts:928</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -217,7 +230,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#addsynccheck">addSyncCheck</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:899</li>
+									<li>Defined in multiplayer/Multiplayer.ts:910</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -233,6 +246,105 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="cancel" class="tsd-anchor"></a>
+					<h3>cancel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#cancel">cancel</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#cancel">cancel</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:124</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all event handlers for the given event(s).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>events: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#cancel">cancel</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:128</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes the given event handler for the given event(s).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>events: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>emitter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>emitter: <span class="tsd-signature-type">this</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="cancelall" class="tsd-anchor"></a>
+					<h3>cancel<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">cancel<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#cancelall">cancelAll</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#cancelall">cancelAll</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:159</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all event handlers.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="closeconnection" class="tsd-anchor"></a>
 					<h3>close<wbr>Connection</h3>
@@ -244,7 +356,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#closeconnection">closeConnection</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:583</li>
+									<li>Defined in multiplayer/Multiplayer.ts:594</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -268,7 +380,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#createserver">createServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:313</li>
+									<li>Defined in multiplayer/Multiplayer.ts:320</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -295,7 +407,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#disconnect">disconnect</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:434</li>
+									<li>Defined in multiplayer/Multiplayer.ts:443</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -322,7 +434,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#disconnectandresetgamestate">disconnectAndResetGameState</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:502</li>
+									<li>Defined in multiplayer/Multiplayer.ts:513</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -349,7 +461,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#displayjoinserverretrydialog">displayJoinServerRetryDialog</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:485</li>
+									<li>Defined in multiplayer/Multiplayer.ts:496</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -373,7 +485,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getbannedplayers">getBannedPlayers</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:292</li>
+									<li>Defined in multiplayer/Multiplayer.ts:299</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -391,7 +503,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getclients">getClients</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:575</li>
+									<li>Defined in multiplayer/Multiplayer.ts:586</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -409,7 +521,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getconnectedmatchmakinginfo">getConnectedMatchmakingInfo</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:279</li>
+									<li>Defined in multiplayer/Multiplayer.ts:286</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a>
@@ -430,7 +542,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getdedicatedservermatchmakinginfo">getDedicatedServerMatchmakingInfo</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:283</li>
+									<li>Defined in multiplayer/Multiplayer.ts:290</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -457,7 +569,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getdefaultoptions">getDefaultOptions</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:233</li>
+									<li>Defined in multiplayer/Multiplayer.ts:235</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -475,7 +587,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getoptions">getOptions</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:244</li>
+									<li>Defined in multiplayer/Multiplayer.ts:246</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -493,7 +605,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#getplayeridentifier">getPlayerIdentifier</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:229</li>
+									<li>Defined in multiplayer/Multiplayer.ts:231</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -511,7 +623,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isclient">isClient</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:221</li>
+									<li>Defined in multiplayer/Multiplayer.ts:223</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -529,7 +641,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isconnected">isConnected</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:205</li>
+									<li>Defined in multiplayer/Multiplayer.ts:207</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -547,7 +659,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isprocessingpacket">isProcessingPacket</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:225</li>
+									<li>Defined in multiplayer/Multiplayer.ts:227</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -565,7 +677,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isready">isReady</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:213</li>
+									<li>Defined in multiplayer/Multiplayer.ts:215</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -583,7 +695,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#isserver">isServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:217</li>
+									<li>Defined in multiplayer/Multiplayer.ts:219</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -600,7 +712,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:894</li>
+									<li>Defined in multiplayer/Multiplayer.ts:905</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -624,7 +736,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#joinserver">joinServer</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:383</li>
+									<li>Defined in multiplayer/Multiplayer.ts:392</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -650,7 +762,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:515</li>
+									<li>Defined in multiplayer/Multiplayer.ts:526</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -666,6 +778,60 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="on" class="tsd-anchor"></a>
+					<h3>on</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#on">on</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Binds an event handler on the given event or events. If the event handler is already bound to one
+									of the given events, does nothing.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>events: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>emitter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>emitter: <span class="tsd-signature-type">this</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="onlobbyentered" class="tsd-anchor"></a>
 					<h3>on<wbr>Lobby<wbr>Entered</h3>
@@ -677,7 +843,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#onlobbyentered">onLobbyEntered</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:545</li>
+									<li>Defined in multiplayer/Multiplayer.ts:556</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -704,10 +870,63 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#onplaying">onPlaying</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:532</li>
+									<li>Defined in multiplayer/Multiplayer.ts:543</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="once" class="tsd-anchor"></a>
+					<h3>once</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#once">once</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:64</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Binds an event handler to the given event. The event handler will be removed after the first trigger.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>emitter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>emitter: <span class="tsd-signature-type">this</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -722,7 +941,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#pausepacketprocessing">pausePacketProcessing</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:803</li>
+									<li>Defined in multiplayer/Multiplayer.ts:814</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -745,7 +964,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:879</li>
+									<li>Defined in multiplayer/Multiplayer.ts:890</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -762,7 +981,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:863</li>
+									<li>Defined in multiplayer/Multiplayer.ts:874</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -779,7 +998,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:783</li>
+									<li>Defined in multiplayer/Multiplayer.ts:794</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -824,7 +1043,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#resetsyncpacketswaiting">resetSyncPacketsWaiting</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:799</li>
+									<li>Defined in multiplayer/Multiplayer.ts:810</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -842,7 +1061,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#sendpacket">sendPacket</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:638</li>
+									<li>Defined in multiplayer/Multiplayer.ts:649</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -869,7 +1088,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#sendpacketto">sendPacketTo</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:662</li>
+									<li>Defined in multiplayer/Multiplayer.ts:673</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -899,7 +1118,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#setbanned">setBanned</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:296</li>
+									<li>Defined in multiplayer/Multiplayer.ts:303</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -926,7 +1145,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#setoptions">setOptions</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:248</li>
+									<li>Defined in multiplayer/Multiplayer.ts:250</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -950,7 +1169,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#suppresssyncchecks">suppressSyncChecks</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:823</li>
+									<li>Defined in multiplayer/Multiplayer.ts:834</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -974,7 +1193,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#syncgamestate">syncGameState</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:827</li>
+									<li>Defined in multiplayer/Multiplayer.ts:838</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -991,7 +1210,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:681</li>
+									<li>Defined in multiplayer/Multiplayer.ts:692</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1025,6 +1244,103 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="trigger" class="tsd-anchor"></a>
+					<h3>trigger</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#trigger">trigger</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#trigger">trigger</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:91</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Triggers the given event with any number of arguments.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="triggersync" class="tsd-anchor"></a>
+					<h3>trigger<wbr>Sync</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">trigger<wbr>Sync&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#triggersync">triggerSync</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#triggersync">triggerSync</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:107</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="until" class="tsd-anchor"></a>
+					<h3>until</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">until<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iemitteruntil.html" class="tsd-signature-type">IEmitterUntil</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#until">until</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#until">until</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:180</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Until the given event happens, allows you to bind an event to another emitter.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iemitteruntil.html" class="tsd-signature-type">IEmitterUntil</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updateoptions" class="tsd-anchor"></a>
 					<h3>update<wbr>Options</h3>
@@ -1036,7 +1352,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#updateoptions">updateOptions</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:252</li>
+									<li>Defined in multiplayer/Multiplayer.ts:259</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1060,7 +1376,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#updateplayerid">updatePlayerId</a></p>
 								<ul>
-									<li>Defined in multiplayer/Multiplayer.ts:807</li>
+									<li>Defined in multiplayer/Multiplayer.ts:818</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1073,6 +1389,36 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="waituntil" class="tsd-anchor"></a>
+					<h3>wait<wbr>Until</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>Until<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imultiplayer.html">IMultiplayer</a>.<a href="../interfaces/imultiplayer.html#waituntil">waitUntil</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#waituntil">waitUntil</a></p>
+								<ul>
+									<li>Defined in utilities/Emitter.ts:169</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a promise that will resolve when the event is triggered.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1104,6 +1450,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#cancel" class="tsd-kind-icon">cancel</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a>
@@ -1165,11 +1517,17 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#kick" class="tsd-kind-icon">kick</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#on" class="tsd-kind-icon">on</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#onlobbyentered" class="tsd-kind-icon">on<wbr>Lobby<wbr>Entered</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#once" class="tsd-kind-icon">once</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a>
@@ -1207,11 +1565,23 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#syncpacket" class="tsd-kind-icon">sync<wbr>Packet</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#trigger" class="tsd-kind-icon">trigger</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="multiplayer.html#triggersync" class="tsd-kind-icon">trigger<wbr>Sync</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#until" class="tsd-kind-icon">until</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#updateoptions" class="tsd-kind-icon">update<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="multiplayer.html#updateplayerid" class="tsd-kind-icon">update<wbr>Player<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="multiplayer.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a>
 							</li>
 						</ul>
 					</li>
