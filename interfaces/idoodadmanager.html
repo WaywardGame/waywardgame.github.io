@@ -186,19 +186,35 @@
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>doodad<span class="tsd-signature-symbol">: </span><a href="idoodad.html" class="tsd-signature-type">IDoodad</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>doodad<span class="tsd-signature-symbol">: </span><a href="idoodad.html" class="tsd-signature-type">IDoodad</a>, removeItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in doodad/IDoodadManager.ts:20</li>
+									<li>Defined in doodad/IDoodadManager.ts:28</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a doodad from the world.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>doodad: <a href="idoodad.html" class="tsd-signature-type">IDoodad</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The doodad to remove</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> removeItems: <span class="tsd-signature-type">true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether to remove items.</p>
+										<p>Note: This method will remove any items in them whether the <code>removeItems</code> parameter is provided or not. If the parameter is not
+										provided, the assumption is that it will only be called on empty doodads. Therefore, if there <em>are</em> items, it will log a warning.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -215,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in doodad/IDoodadManager.ts:21</li>
+									<li>Defined in doodad/IDoodadManager.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -232,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in doodad/IDoodadManager.ts:22</li>
+									<li>Defined in doodad/IDoodadManager.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

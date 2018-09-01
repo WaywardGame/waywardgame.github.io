@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MapConstructor | Wayward Modding Guide</title>
+	<title>RegExp | Wayward Modding Guide</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/__global.html">__global</a>
-				</li>
-				<li>
-					<a href="__global.mapconstructor.html">MapConstructor</a>
+					<a href="regexp.html">RegExp</a>
 				</li>
 			</ul>
-			<h1>Interface MapConstructor</h1>
+			<h1>Interface RegExp</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">MapConstructor</span>
+						<span class="target">RegExp</span>
 					</li>
 				</ul>
 			</section>
@@ -82,7 +79,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-not-exported"><a href="__global.mapconstructor.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="regexp.html#matches" class="tsd-kind-icon">matches</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,40 +87,31 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-					<a name="create" class="tsd-anchor"></a>
-					<h3>create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create&lt;K, V&gt;<span class="tsd-signature-symbol">(</span>entriesIterable<span class="tsd-signature-symbol">: </span><a href="../modules/__global.html#iterableof" class="tsd-signature-type">IterableOf</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="matches" class="tsd-anchor"></a>
+					<h3>matches</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">matches<span class="tsd-signature-symbol">(</span>string<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RegExpExecArray</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/IterableIterator.ts:207</li>
+									<li>Defined in utilities/IterableIterator.ts:354</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a map from an iterable of entries</p>
+									<p>Returns an iterator for the matches of this string.</p>
 								</div>
 							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>K</h4>
-								</li>
-								<li>
-									<h4>V</h4>
-								</li>
-							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entriesIterable: <a href="../modules/__global.html#iterableof" class="tsd-signature-type">IterableOf</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>string: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RegExpExecArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,130 +123,22 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/appendstrategy.html">Append<wbr>Strategy</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/arrays.html">Arrays</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/collectors.html">Collectors</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/color.html">Color</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/enummanager.html">Enum<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/enumproperty.html">Enum<wbr>Property</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/enums.html">Enums</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/files.html">Files</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/ihookhost.html">IHook<wbr>Host</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/imessagepack.html">IMessage<wbr>Pack</a>
-					</li>
-					<li class=" tsd-kind-module tsd-has-type-parameter">
-						<a href="../modules/istatchangeinfo.html">IStat<wbr>Change<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/iterableiterator.html">Iterable<wbr>Iterator</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/math2.html">Math2</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/objects.html">Objects</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/register.html">Register</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/registry.html">Registry</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/resourcepath.html">Resource<wbr>Path</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/strings.html">Strings</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/style.html">Style</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/tilehelpers.html">Tile<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/uuid.html">UUID</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/version.html">Version</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/webassemblyhelpers.html">Web<wbr>Assembly<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/webworkerhelpers.html">Web<wbr>Worker<wbr>Helpers</a>
-					</li>
-					<li class="current tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/__global.html">__global</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="__global.array.html" class="tsd-kind-icon">Array</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="__global.function.html" class="tsd-kind-icon">Function</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="__global.iterableiterator.html" class="tsd-kind-icon">Iterable<wbr>Iterator</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="__global.map.html" class="tsd-kind-icon">Map</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="__global.mapconstructor.html" class="tsd-kind-icon">Map<wbr>Constructor</a>
+					<li class="current tsd-kind-interface tsd-is-not-exported">
+						<a href="regexp.html" class="tsd-kind-icon">Reg<wbr>Exp</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-								<a href="__global.mapconstructor.html#create" class="tsd-kind-icon">create</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="regexp.html#matches" class="tsd-kind-icon">matches</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="__global.promiseconstructor.html" class="tsd-kind-icon">Promise<wbr>Constructor</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="__global.regexp.html" class="tsd-kind-icon">Reg<wbr>Exp</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/__global.html#arrayoftoriterablesoft" class="tsd-kind-icon">Array<wbr>OfTOr<wbr>Iterables<wbr>OfT</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/__global.html#generatorof" class="tsd-kind-icon">Generator<wbr>Of</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/__global.html#generatorort" class="tsd-kind-icon">Generator<wbr>OrT</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/__global.html#iterableof" class="tsd-kind-icon">Iterable<wbr>Of</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/__global.html#splititerablesof" class="tsd-kind-icon">Split<wbr>Iterables<wbr>Of</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

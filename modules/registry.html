@@ -64,6 +64,64 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-module tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">Registry&lt;H, T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in mod/ModRegistry.ts:446</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>This function and module is for retrieving the IDs of other registered things.</p>
+							</div>
+							<h1 id="as-a-module">As a module</h1>
+							<p>Provides the method <code>id</code>, which is for retrieving the ID of <code>@Register</code>&#39;d functions. For more information on using this method,
+							see that method&#39;s documentation.</p>
+							<h1 id="as-a-function">As a function</h1>
+							<p>As a function, its only purpose is for within other <code>@Register</code> decorators. It <em>does not actually return the ID</em>, but a temporary
+								value that is internally used in lieu of it. Do <em>not</em> use this method outside of a decorator, and assume you&#39;re going to get the
+							correct ID. You&#39;re not.</p>
+							<p>To, it requires two type parameters:</p>
+						</div>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>H</h4>
+								<div class="tsd-comment tsd-typography">
+									<p>The &quot;Host&quot; of the registration.</p>
+								</div>
+							</li>
+							<li>
+								<h4>T</h4>
+								<div class="tsd-comment tsd-typography">
+									<p>The type of the registration.</p>
+									<p>For example, if you&#39;re trying to get a bindable that was registered by your mod, you would call it like this:
+									<code>Registry&lt;YourModClass, Bindable&gt;().get(&quot;theNameOfTheFieldThatContainsTheBindableYouWant&quot;)</code></p>
+									<p>Here&#39;s a full example (excerpt from <a href="https://github.com/WaywardGame/starterquest">Starter Quest</a>):</p>
+									<pre><code class="lang-ts"><span class="hljs-meta">@Register</span>.bindable(<span class="hljs-string">"Toggle"</span>, { key: <span class="hljs-string">"KeyJ"</span> })
+    <span class="hljs-keyword">public</span> readonly bindable: Bindable;
+
+    <span class="hljs-meta">@Register</span>.menuBarButton(<span class="hljs-string">"Starter Quest"</span>, {
+        bindable: registry&lt;StarterQuest, Bindable&gt;().get(<span class="hljs-string">"bindable"</span>),
+        tooltip: <span class="hljs-function"><span class="hljs-params">tooltip</span> =&gt;</span> tooltip.addText(<span class="hljs-function"><span class="hljs-params">text</span> =&gt;</span> text
+            .setText(<span class="hljs-keyword">new</span> Translation(<span class="hljs-keyword">this</span>.dictionary, StarterQuestDictionary.StarterQuestTitle))),
+        onActivate: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ui.toggleDialog(<span class="hljs-keyword">this</span>.dialog)
+    })
+    <span class="hljs-keyword">public</span> readonly menuBarButton: MenuBarButtonType;
+</code></pre>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -71,13 +129,13 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/registry.registered.html" class="tsd-kind-icon">Registered</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/registry.registered.html" class="tsd-kind-icon">Registered</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="registry.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="registry.html#id" class="tsd-kind-icon">id</a></li>
 							</ul>
 						</section>
 					</div>
@@ -85,44 +143,40 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="id" class="tsd-anchor"></a>
 					<h3>id</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">id&lt;M&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">M</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in mod/ModRegistry.ts:268</li>
+									<li>Defined in mod/ModRegistry.ts:462</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the ID of a registered action or command callback which was decorated with its respective <code>@Register</code> decorator.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>M<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>method: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>method: <span class="tsd-signature-type">M</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An action or command callback method</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">M</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -179,7 +233,7 @@
 					<li class=" tsd-kind-module">
 						<a href="register.html">Register</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class="current tsd-kind-module tsd-has-type-parameter">
 						<a href="registry.html">Registry</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -213,10 +267,10 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/registry.registered.html" class="tsd-kind-icon">Registered</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="registry.html#id" class="tsd-kind-icon">id</a>
 					</li>
 				</ul>

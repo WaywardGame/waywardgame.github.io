@@ -74,7 +74,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="enums.html#entries" class="tsd-kind-icon">entries</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="enums.html#findbyname" class="tsd-kind-icon">find<wbr>ByName</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enums.html#getlength" class="tsd-kind-icon">get<wbr>Length</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enums.html#getmod" class="tsd-kind-icon">get<wbr>Mod</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="enums.html#getmod" class="tsd-kind-icon">get<wbr>Mod</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="enums.html#getnth" class="tsd-kind-icon">get<wbr>Nth</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="enums.html#getrandom" class="tsd-kind-icon">get<wbr>Random</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="enums.html#ismoddable" class="tsd-kind-icon">is<wbr>Moddable</a></li>
@@ -93,13 +93,13 @@
 					<a name="entries" class="tsd-anchor"></a>
 					<h3>entries</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">entries&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">entries&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/Enums.ts:138</li>
+									<li>Defined in utilities/enum/Enums.ts:139</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -110,16 +110,21 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -127,7 +132,7 @@
 					<a name="findbyname" class="tsd-anchor"></a>
 					<h3>find<wbr>ByName</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>ByName&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>ByName&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -144,28 +149,30 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The full enumeration. EG: ItemType, CreatureType, DoodadType, etc</p>
 									</div>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>name: <span class="tsd-signature-type">K</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The name of the enum entry. Case-insensitive.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Enum</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">E</span></h4>
 							<p>The enum entry, if found; otherwise <code>undefined</code>.</p>
 						</li>
 					</ul>
@@ -204,11 +211,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="getmod" class="tsd-anchor"></a>
 					<h3>get<wbr>Mod</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Mod<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, enumName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isGlobalEnum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/imodinfo.html" class="tsd-signature-type">IModInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Mod&lt;O&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span>, enumName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span>, isGlobalEnum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/imodinfo.html" class="tsd-signature-type">IModInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -217,13 +224,19 @@
 									<li>Defined in utilities/enum/Enums.ts:31</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>O</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">O</span></h5>
 								</li>
 								<li>
-									<h5>enumName: <span class="tsd-signature-type">string</span></h5>
+									<h5>enumName: <span class="tsd-signature-type">keyof O</span></h5>
 								</li>
 								<li>
 									<h5>isGlobalEnum: <span class="tsd-signature-type">boolean</span></h5>
@@ -240,7 +253,7 @@
 					<a name="getnth" class="tsd-anchor"></a>
 					<h3>get<wbr>Nth</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Nth&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Nth&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -257,16 +270,21 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The full enumeration. EG: ItemType, CreatureType, DoodadType, etc</p>
 									</div>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 								<li>
 									<h5>n: <span class="tsd-signature-type">number</span></h5>
@@ -275,7 +293,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Enum</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">E</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
@@ -288,7 +306,7 @@
 					<a name="getrandom" class="tsd-anchor"></a>
 					<h3>get<wbr>Random</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Random&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Enum</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Random&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -305,22 +323,27 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The full enumeration. EG: ItemType, CreatureType, DoodadType, etc</p>
 										<p>Each call to this method requires a loop on the full enum until reaching the
 										index of the randomly chosen entry. Do not call this often.</p>
 										<p>Uses seeded random. Using this method on non-game methods may cause seed desyncs.</p>
 									</div>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Enum</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">E</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -351,7 +374,7 @@
 					<a name="ismodded" class="tsd-anchor"></a>
 					<h3>is<wbr>Modded</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Modded&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Modded&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -368,19 +391,24 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The full enumeration. EG: ItemType, CreatureType, DoodadType, etc</p>
 									</div>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 								<li>
-									<h5>entry: <span class="tsd-signature-type">Enum</span></h5>
+									<h5>entry: <span class="tsd-signature-type">E</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The entry in the enum. Usually its index.</p>
 									</div>
@@ -394,7 +422,7 @@
 					<a name="keys" class="tsd-anchor"></a>
 					<h3>keys</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">keys&lt;K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">keys&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -411,13 +439,18 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
+									<h4>E</h4>
+								</li>
+								<li>
 									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -434,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/Enums.ts:144</li>
+									<li>Defined in utilities/enum/Enums.ts:145</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -454,13 +487,13 @@
 					<a name="values" class="tsd-anchor"></a>
 					<h3>values</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">values&lt;Enum&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">values&lt;E, K&gt;<span class="tsd-signature-symbol">(</span>enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/enum/Enums.ts:129</li>
+									<li>Defined in utilities/enum/Enums.ts:130</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -471,16 +504,21 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Enum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									<h4>E</h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>enumObject: <span class="tsd-signature-type">any</span></h5>
+									<h5>enumObject: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Enum</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -537,7 +575,7 @@
 					<li class=" tsd-kind-module">
 						<a href="register.html">Register</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class=" tsd-kind-module tsd-has-type-parameter">
 						<a href="registry.html">Registry</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -580,7 +618,7 @@
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="enums.html#getlength" class="tsd-kind-icon">get<wbr>Length</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="enums.html#getmod" class="tsd-kind-icon">get<wbr>Mod</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
