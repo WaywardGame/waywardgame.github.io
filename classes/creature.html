@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="baseentity.html" class="tsd-signature-type">BaseEntity</a>
+						<a href="entity.html" class="tsd-signature-type">Entity</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">Creature</span>
@@ -80,7 +80,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/ibaseentity.html" class="tsd-signature-type">IBaseEntity</a></li>
+					<li><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a></li>
 					<li><a href="../interfaces/icreature.html" class="tsd-signature-type">ICreature</a></li>
 					<li><a href="../interfaces/iunserializedcallback.html" class="tsd-signature-type">IUnserializedCallback</a></li>
 				</ul>
@@ -98,7 +98,6 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#istatbase" class="tsd-kind-icon">IStat<wbr>Base</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="creature.html#_movementfinishtime" class="tsd-kind-icon">_movement<wbr>Finish<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#aberrant" class="tsd-kind-icon">aberrant</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#ai" class="tsd-kind-icon">ai</a></li>
@@ -110,9 +109,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#facingdirection" class="tsd-kind-icon">facing<wbr>Direction</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#fromx" class="tsd-kind-icon">fromX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#fromy" class="tsd-kind-icon">fromY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#hitchedto" class="tsd-kind-icon">hitched<wbr>To</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#loot" class="tsd-kind-icon">loot</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#movetype" class="tsd-kind-icon">move<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#originalmovetype" class="tsd-kind-icon">original<wbr>Move<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#properties" class="tsd-kind-icon">properties</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#renamed" class="tsd-kind-icon">renamed</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#respawned" class="tsd-kind-icon">respawned</a></li>
@@ -129,22 +130,43 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#addproperty" class="tsd-kind-icon">add<wbr>Property</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#canseeposition" class="tsd-kind-icon">can<wbr>See<wbr>Position</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#canswapwith" class="tsd-kind-icon">can<wbr>Swap<wbr>With</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#checkforburn" class="tsd-kind-icon">check<wbr>For<wbr>Burn</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#checkunder" class="tsd-kind-icon">check<wbr>Under</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#damage" class="tsd-kind-icon">damage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#getinspecthealthmessage" class="tsd-kind-icon">get<wbr>Inspect<wbr>Health<wbr>Message</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#getinspectresistvulnerabilitymessage" class="tsd-kind-icon">get<wbr>Inspect<wbr>Resist<wbr>Vulnerability<wbr>Message</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#getmovetype" class="tsd-kind-icon">get<wbr>Move<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="creature.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#emitasync" class="tsd-kind-icon">emit<wbr>Async</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getfacingpoint" class="tsd-kind-icon">get<wbr>Facing<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getfacingtile" class="tsd-kind-icon">get<wbr>Facing<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#getmovetype" class="tsd-kind-icon">get<wbr>Move<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getmovementfinishtime" class="tsd-kind-icon">get<wbr>Movement<wbr>Finish<wbr>Time</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#getowner" class="tsd-kind-icon">get<wbr>Owner</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getpoint" class="tsd-kind-icon">get<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="creature.html#getproperty" class="tsd-kind-icon">get<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="creature.html#getstat" class="tsd-kind-icon">get<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getstatinternal" class="tsd-kind-icon">get<wbr>Stat<wbr>Internal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getstatmax" class="tsd-kind-icon">get<wbr>Stat<wbr>Max</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#getstatvalue" class="tsd-kind-icon">get<wbr>Stat<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#hasproperty" class="tsd-kind-icon">has<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#hasstat" class="tsd-kind-icon">has<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#hasstatus" class="tsd-kind-icon">has<wbr>Status</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#increasestat" class="tsd-kind-icon">increase<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#increasetamedcount" class="tsd-kind-icon">increase<wbr>Tamed<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#initstat" class="tsd-kind-icon">init<wbr>Stat</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#initializestats" class="tsd-kind-icon">initialize<wbr>Stats</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#inspect" class="tsd-kind-icon">inspect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#isdefender" class="tsd-kind-icon">is<wbr>Defender</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#ishidden" class="tsd-kind-icon">is<wbr>Hidden</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#isinfov" class="tsd-kind-icon">is<wbr>InFov</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#isonfire" class="tsd-kind-icon">is<wbr>OnFire</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#istamed" class="tsd-kind-icon">is<wbr>Tamed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#moveto" class="tsd-kind-icon">move<wbr>To</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#offer" class="tsd-kind-icon">offer</a></li>
@@ -152,16 +174,29 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="creature.html#once" class="tsd-kind-icon">once</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#pet" class="tsd-kind-icon">pet</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#queuesoundeffect" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#queuesoundeffect" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#queuesoundeffectinfront" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#reducestat" class="tsd-kind-icon">reduce<wbr>Stat</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#release" class="tsd-kind-icon">release</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#removeproperty" class="tsd-kind-icon">remove<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#removestat" class="tsd-kind-icon">remove<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setinfov" class="tsd-kind-icon">set<wbr>InFov</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setmovetype" class="tsd-kind-icon">set<wbr>Move<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstat" class="tsd-kind-icon">set<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstatandmax" class="tsd-kind-icon">set<wbr>Stat<wbr>And<wbr>Max</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstatbonus" class="tsd-kind-icon">set<wbr>Stat<wbr>Bonus</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstatchangetimer" class="tsd-kind-icon">set<wbr>Stat<wbr>Change<wbr>Timer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstatmax" class="tsd-kind-icon">set<wbr>Stat<wbr>Max</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setstatus" class="tsd-kind-icon">set<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#skipnextupdate" class="tsd-kind-icon">skip<wbr>Next<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#statuses" class="tsd-kind-icon">statuses</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#tame" class="tsd-kind-icon">tame</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="creature.html#trigger" class="tsd-kind-icon">trigger</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#triggerasync" class="tsd-kind-icon">trigger<wbr>Async</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#until" class="tsd-kind-icon">until</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#updatestats" class="tsd-kind-icon">update<wbr>Stats</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="creature.html#is" class="tsd-kind-icon">is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="creature.html#isnot" class="tsd-kind-icon">is<wbr>Not</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
@@ -184,9 +219,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#constructor">constructor</a></p>
+								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:67</li>
+									<li>Defined in creature/Creature.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -214,25 +249,14 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="istatbase" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> IStat<wbr>Base</h3>
-					<div class="tsd-signature tsd-kind-icon">IStat<wbr>Base<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#istatbase">IStatBase</a></p>
-						<ul>
-							<li>Defined in entity/BaseEntity.ts:104</li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_movementfinishtime" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _movement<wbr>Finish<wbr>Time</h3>
 					<div class="tsd-signature tsd-kind-icon">_movement<wbr>Finish<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#_movementfinishtime">_movementFinishTime</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#_movementfinishtime">_movementFinishTime</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:58</li>
+							<li>Defined in entity/Entity.ts:76</li>
 						</ul>
 					</aside>
 				</section>
@@ -243,7 +267,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#aberrant">aberrant</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:56</li>
+							<li>Defined in creature/Creature.ts:61</li>
 						</ul>
 					</aside>
 				</section>
@@ -254,7 +278,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#ai">ai</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:57</li>
+							<li>Defined in creature/Creature.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -264,9 +288,9 @@
 					<div class="tsd-signature tsd-kind-icon">anim<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#anim">anim</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#anim">anim</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#anim">anim</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:47</li>
+							<li>Defined in entity/Entity.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -277,7 +301,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#enemy">enemy</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:58</li>
+							<li>Defined in creature/Creature.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -288,7 +312,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#enemyattempts">enemyAttempts</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:59</li>
+							<li>Defined in creature/Creature.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -299,7 +323,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#enemyisplayer">enemyIsPlayer</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:60</li>
+							<li>Defined in creature/Creature.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -309,9 +333,9 @@
 					<div class="tsd-signature tsd-kind-icon">entity<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/entitytype.html#creature" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> =&nbsp;EntityType.Creature</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#entitytype">entityType</a></p>
-						<p>Overrides <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#entitytype">entityType</a></p>
+						<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#entitytype">entityType</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:54</li>
+							<li>Defined in creature/Creature.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -321,9 +345,9 @@
 					<div class="tsd-signature tsd-kind-icon">facing<wbr>Direction<span class="tsd-signature-symbol">:</span> <a href="../enums/direction.html" class="tsd-signature-type">Direction</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#facingdirection">facingDirection</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#facingdirection">facingDirection</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#facingdirection">facingDirection</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:51</li>
+							<li>Defined in entity/Entity.ts:69</li>
 						</ul>
 					</aside>
 				</section>
@@ -333,9 +357,9 @@
 					<div class="tsd-signature tsd-kind-icon">fromX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#fromx">fromX</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#fromx">fromX</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#fromx">fromX</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:42</li>
+							<li>Defined in entity/Entity.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -345,9 +369,20 @@
 					<div class="tsd-signature tsd-kind-icon">fromY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#fromy">fromY</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#fromy">fromY</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#fromy">fromY</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:43</li>
+							<li>Defined in entity/Entity.ts:61</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="hitchedto" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hitched<wbr>To</h3>
+					<div class="tsd-signature tsd-kind-icon">hitched<wbr>To<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#hitchedto">hitchedTo</a></p>
+						<ul>
+							<li>Defined in creature/Creature.ts:71</li>
 						</ul>
 					</aside>
 				</section>
@@ -357,9 +392,9 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#id">id</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#id">id</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#id">id</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:35</li>
+							<li>Defined in entity/Entity.ts:53</li>
 						</ul>
 					</aside>
 				</section>
@@ -370,7 +405,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#loot">loot</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:61</li>
+							<li>Defined in creature/Creature.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -380,9 +415,19 @@
 					<div class="tsd-signature tsd-kind-icon">move<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#movetype">moveType</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#movetype">moveType</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#movetype">moveType</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:45</li>
+							<li>Defined in entity/Entity.ts:63</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="originalmovetype" class="tsd-anchor"></a>
+					<h3>original<wbr>Move<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">original<wbr>Move<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in creature/Creature.ts:70</li>
 						</ul>
 					</aside>
 				</section>
@@ -391,9 +436,9 @@
 					<h3>properties</h3>
 					<div class="tsd-signature tsd-kind-icon">properties<span class="tsd-signature-symbol">:</span> <a href="../globals.html#iproperties" class="tsd-signature-type">IProperties</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#properties">properties</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#properties">properties</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:56</li>
+							<li>Defined in entity/Entity.ts:74</li>
 						</ul>
 					</aside>
 				</section>
@@ -403,9 +448,9 @@
 					<div class="tsd-signature tsd-kind-icon">renamed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#renamed">renamed</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#renamed">renamed</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:36</li>
+							<li>Defined in entity/Entity.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -416,7 +461,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#respawned">respawned</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:62</li>
+							<li>Defined in creature/Creature.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -426,7 +471,7 @@
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Skip<wbr>Next<wbr>Update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in creature/Creature.ts:63</li>
+							<li>Defined in creature/Creature.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -436,9 +481,9 @@
 					<div class="tsd-signature tsd-kind-icon">stats<span class="tsd-signature-symbol">:</span> <a href="../globals.html#istats" class="tsd-signature-type">IStats</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#stats">stats</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#stats">stats</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#stats">stats</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:53</li>
+							<li>Defined in entity/Entity.ts:71</li>
 						</ul>
 					</aside>
 				</section>
@@ -448,9 +493,9 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <a href="../globals.html#istatus" class="tsd-signature-type">IStatus</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#status">status</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#status">status</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#status">status</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:54</li>
+							<li>Defined in entity/Entity.ts:72</li>
 						</ul>
 					</aside>
 				</section>
@@ -460,9 +505,9 @@
 					<div class="tsd-signature tsd-kind-icon">stop<wbr>Next<wbr>Movement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#stopnextmovement">stopNextMovement</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#stopnextmovement">stopNextMovement</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#stopnextmovement">stopNextMovement</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:48</li>
+							<li>Defined in entity/Entity.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -473,7 +518,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#type">type</a></p>
 						<ul>
-							<li>Defined in creature/Creature.ts:64</li>
+							<li>Defined in creature/Creature.ts:69</li>
 						</ul>
 					</aside>
 				</section>
@@ -483,9 +528,9 @@
 					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#x">x</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#x">x</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#x">x</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:39</li>
+							<li>Defined in entity/Entity.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -495,9 +540,9 @@
 					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#y">y</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#y">y</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#y">y</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:40</li>
+							<li>Defined in entity/Entity.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -507,15 +552,77 @@
 					<div class="tsd-signature tsd-kind-icon">z<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#z">z</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#z">z</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#z">z</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:38</li>
+							<li>Defined in entity/Entity.ts:56</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addproperty" class="tsd-anchor"></a>
+					<h3>add<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Property<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><a href="../enums/property.html" class="tsd-signature-type">Property</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#addproperty">addProperty</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#addproperty">addProperty</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:399</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <a href="../enums/property.html" class="tsd-signature-type">Property</a></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="canseeposition" class="tsd-anchor"></a>
+					<h3>can<wbr>See<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Position<span class="tsd-signature-symbol">(</span>tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isClientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#canseeposition">canSeePosition</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#canseeposition">canSeePosition</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:383</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tileY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tileZ: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="canswapwith" class="tsd-anchor"></a>
 					<h3>can<wbr>Swap<wbr>With</h3>
@@ -527,7 +634,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#canswapwith">canSwapWith</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:609</li>
+									<li>Defined in creature/Creature.ts:618</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -650,7 +757,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#checkforburn">checkForBurn</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:258</li>
+									<li>Defined in creature/Creature.ts:234</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -664,23 +771,64 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="damage" class="tsd-anchor"></a>
-					<h3>damage</h3>
+					<a name="checkunder" class="tsd-anchor"></a>
+					<h3>check<wbr>Under</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>damageInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Under<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#damage">damage</a></p>
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#checkunder">checkUnder</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:632</li>
+									<li>Defined in creature/Creature.ts:505</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks under the creature for getting burned, setting off traps, eating items off the ground, and more</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.x</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.y</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Returns whether the creature can keep moving (in the case of creatures with &gt;= 2 speed)</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="damage" class="tsd-anchor"></a>
+					<h3>damage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>damageInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a>, creatureX<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, creatureY<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, creatureZ<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in creature/Creature.ts:641</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>damageInfo: <a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> creatureX: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.x</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> creatureY: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.y</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> creatureZ: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.z</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
@@ -701,7 +849,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#description">description</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:166</li>
+									<li>Defined in creature/Creature.ts:179</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a>
@@ -711,72 +859,196 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getinspecthealthmessage" class="tsd-anchor"></a>
-					<h3>get<wbr>Inspect<wbr>Health<wbr>Message</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Inspect<wbr>Health<wbr>Message<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/imessagepack.html" class="tsd-signature-type">IMessagePack</a></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="emit" class="tsd-anchor"></a>
+					<h3>emit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">emit&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getinspecthealthmessage">getInspectHealthMessage</a></p>
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#emit">emit</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#emit">emit</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:182</li>
+									<li>Defined in utilities/Emitter.ts:117</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../modules/imessagepack.html" class="tsd-signature-type">IMessagePack</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getinspectresistvulnerabilitymessage" class="tsd-anchor"></a>
-					<h3>get<wbr>Inspect<wbr>Resist<wbr>Vulnerability<wbr>Message</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Inspect<wbr>Resist<wbr>Vulnerability<wbr>Message<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/imessagepack.html" class="tsd-signature-type">IMessagePack</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="emitasync" class="tsd-anchor"></a>
+					<h3>emit<wbr>Async</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Async<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getinspectresistvulnerabilitymessage">getInspectResistVulnerabilityMessage</a></p>
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#emitasync">emitAsync</a></p>
+								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#emitasync">emitAsync</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:187</li>
+									<li>Defined in utilities/Emitter.ts:101</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Triggers the given event with any number of arguments.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../modules/imessagepack.html" class="tsd-signature-type">IMessagePack</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getfacingpoint" class="tsd-anchor"></a>
+					<h3>get<wbr>Facing<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Facing<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getfacingpoint">getFacingPoint</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getfacingpoint">getFacingPoint</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:334</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getfacingtile" class="tsd-anchor"></a>
+					<h3>get<wbr>Facing<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Facing<wbr>Tile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getfacingtile">getFacingTile</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getfacingtile">getFacingTile</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:342</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="getmovetype" class="tsd-anchor"></a>
 					<h3>get<wbr>Move<wbr>Type</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getmovetype">getMoveType</a></p>
+								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#getmovetype">getMoveType</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:391</li>
+									<li>Defined in creature/Creature.ts:373</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getmovementfinishtime" class="tsd-anchor"></a>
+					<h3>get<wbr>Movement<wbr>Finish<wbr>Time</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Movement<wbr>Finish<wbr>Time<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getmovementfinishtime">getMovementFinishTime</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getmovementfinishtime">getMovementFinishTime</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:359</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getmovementprogress" class="tsd-anchor"></a>
+					<h3>get<wbr>Movement<wbr>Progress</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Movement<wbr>Progress<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getmovementprogress">getMovementProgress</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getmovementprogress">getMovementProgress</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:346</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="getname" class="tsd-anchor"></a>
+					<h3>get<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getname">getName</a></p>
+								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#getname">getName</a></p>
+								<ul>
+									<li>Defined in creature/Creature.ts:173</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -791,10 +1063,63 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getowner">getOwner</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:613</li>
+									<li>Defined in creature/Creature.ts:622</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getpoint" class="tsd-anchor"></a>
+					<h3>get<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getpoint">getPoint</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getpoint">getPoint</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:326</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="getproperty" class="tsd-anchor"></a>
+					<h3>get<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Property&lt;T&gt;<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><a href="../enums/property.html" class="tsd-signature-type">Property</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getproperty">getProperty</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getproperty">getProperty</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:407</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <a href="../enums/property.html" class="tsd-signature-type">Property</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
@@ -805,15 +1130,14 @@
 					<a name="getstat" class="tsd-anchor"></a>
 					<h3>get<wbr>Stat</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat&lt;StatType&gt;<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StatType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat&lt;StatType&gt;<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a>, allowFailure<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StatType</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">StatType extends IStatBase ? { base: StatType; } : undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#getstat">getStat</a></p>
-								<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#getstat">getStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstat">getStat</a></p>
 								<ul>
-									<li>Defined in entity/BaseEntity.ts:104</li>
+									<li>Defined in entity/Entity.ts:124</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -827,11 +1151,174 @@
 								<li>
 									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowFailure: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">StatType</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">void</span>
+								<span class="tsd-signature-symbol"> &amp; </span>
+								<span class="tsd-signature-type">StatType extends IStatBase ? { base: StatType; } : undefined</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getstatinternal" class="tsd-anchor"></a>
+					<h3>get<wbr>Stat<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Internal<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Internal<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, allowFailure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Internal<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, allowFailure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstatinternal">getStatInternal</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:139</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstatinternal">getStatInternal</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:140</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>allowFailure: <span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstatinternal">getStatInternal</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:141</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>allowFailure: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getstatmax" class="tsd-anchor"></a>
+					<h3>get<wbr>Stat<wbr>Max</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Max<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstatmax">getStatMax</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:235</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getstatvalue" class="tsd-anchor"></a>
+					<h3>get<wbr>Stat<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Value<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#getstatvalue">getStatValue</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:174</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="gettile" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#gettile">getTile</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#gettile">getTile</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:322</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="hasproperty" class="tsd-anchor"></a>
+					<h3>has<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Property<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><a href="../enums/property.html" class="tsd-signature-type">Property</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#hasproperty">hasProperty</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#hasproperty">hasProperty</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:395</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <a href="../enums/property.html" class="tsd-signature-type">Property</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -845,9 +1332,9 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#hasstat">hasStat</a></p>
-								<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#hasstat">hasStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#hasstat">hasStat</a></p>
 								<ul>
-									<li>Defined in entity/BaseEntity.ts:96</li>
+									<li>Defined in entity/Entity.ts:116</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -861,6 +1348,80 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="hasstatus" class="tsd-anchor"></a>
+					<h3>has<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Status<span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#hasstatus">hasStatus</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#hasstatus">hasStatus</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:303</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>status: <a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="increasestat" class="tsd-anchor"></a>
+					<h3>increase<wbr>Stat</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">increase<wbr>Stat<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#increasestat">increaseStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#increasestat">increaseStat</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:203</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> info: <a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="increasetamedcount" class="tsd-anchor"></a>
+					<h3>increase<wbr>Tamed<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">increase<wbr>Tamed<wbr>Count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#increasetamedcount">increaseTamedCount</a></p>
+								<ul>
+									<li>Defined in creature/Creature.ts:319</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="initstat" class="tsd-anchor"></a>
 					<h3>init<wbr>Stat</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -870,9 +1431,9 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#initstat">initStat</a></p>
-								<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#initstat">initStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#initstat">initStat</a></p>
 								<ul>
-									<li>Defined in entity/BaseEntity.ts:91</li>
+									<li>Defined in entity/Entity.ts:111</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -896,7 +1457,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#initializestats">initializeStats</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:146</li>
+									<li>Defined in creature/Creature.ts:153</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -918,6 +1479,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="inspect" class="tsd-anchor"></a>
+					<h3>inspect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">inspect<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, section<span class="tsd-signature-symbol">: </span><a href="inspectionsection.html" class="tsd-signature-type">InspectionSection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in creature/Creature.ts:187</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../enums/inspectioncontext.html#tooltip" class="tsd-signature-type">Tooltip</a><span class="tsd-signature-symbol"> | </span><a href="../enums/inspectioncontext.html#message" class="tsd-signature-type">Message</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>inspect<wbr>Entity<wbr>Health<span class="tsd-signature-symbol">: </span><a href="inspection.html#inspectentityhealth" class="tsd-signature-type">inspectEntityHealth</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>inspector<span class="tsd-signature-symbol">: </span><a href="../interfaces/inpc.html" class="tsd-signature-type">INPC</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ihuman.html" class="tsd-signature-type">IHuman</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>section: <a href="inspectionsection.html" class="tsd-signature-type">InspectionSection</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isdefender" class="tsd-anchor"></a>
 					<h3>is<wbr>Defender</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -928,7 +1526,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#isdefender">isDefender</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:178</li>
+									<li>Defined in creature/Creature.ts:230</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -946,10 +1544,48 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#ishidden">isHidden</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:174</li>
+									<li>Defined in creature/Creature.ts:226</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isinfov" class="tsd-anchor"></a>
+					<h3>is<wbr>InFov</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>InFov<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#isinfov">isInFov</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#isinfov">isInFov</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:371</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isonfire" class="tsd-anchor"></a>
+					<h3>is<wbr>OnFire</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>OnFire<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/firetype.html" class="tsd-signature-type">FireType</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#isonfire">isOnFire</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#isonfire">isOnFire</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:379</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/firetype.html" class="tsd-signature-type">FireType</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -964,7 +1600,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#istamed">isTamed</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:288</li>
+									<li>Defined in creature/Creature.ts:264</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -982,7 +1618,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#moveto">moveTo</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:489</li>
+									<li>Defined in creature/Creature.ts:481</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1012,7 +1648,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#offer">offer</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:736</li>
+									<li>Defined in creature/Creature.ts:749</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1099,7 +1735,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:731</li>
+									<li>Defined in creature/Creature.ts:744</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1176,24 +1812,25 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#pet">pet</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:377</li>
+									<li>Defined in creature/Creature.ts:359</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="queuesoundeffect" class="tsd-anchor"></a>
 					<h3>queue<wbr>Sound<wbr>Effect</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">queue<wbr>Sound<wbr>Effect<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, speed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#queuesoundeffect">queueSoundEffect</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:405</li>
+									<li>Defined in creature/Creature.ts:387</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1212,6 +1849,71 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="queuesoundeffectinfront" class="tsd-anchor"></a>
+					<h3>queue<wbr>Sound<wbr>Effect<wbr>InFront</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, speed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, noPosition<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#queuesoundeffectinfront">queueSoundEffectInFront</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#queuesoundeffectinfront">queueSoundEffectInFront</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:391</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> delay: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> speed: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> noPosition: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="reducestat" class="tsd-anchor"></a>
+					<h3>reduce<wbr>Stat</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">reduce<wbr>Stat<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#reducestat">reduceStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#reducestat">reduceStat</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:199</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> info: <a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="release" class="tsd-anchor"></a>
 					<h3>release</h3>
@@ -1223,9 +1925,34 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#release">release</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:347</li>
+									<li>Defined in creature/Creature.ts:329</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeproperty" class="tsd-anchor"></a>
+					<h3>remove<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Property<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><a href="../enums/property.html" class="tsd-signature-type">Property</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#removeproperty">removeProperty</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#removeproperty">removeProperty</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:411</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <a href="../enums/property.html" class="tsd-signature-type">Property</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -1240,15 +1967,247 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#removestat">removeStat</a></p>
-								<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#removestat">removeStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#removestat">removeStat</a></p>
 								<ul>
-									<li>Defined in entity/BaseEntity.ts:100</li>
+									<li>Defined in entity/Entity.ts:120</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setinfov" class="tsd-anchor"></a>
+					<h3>set<wbr>InFov</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>InFov<span class="tsd-signature-symbol">(</span>inFov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setinfov">setInFov</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setinfov">setInFov</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:375</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>inFov: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setmovetype" class="tsd-anchor"></a>
+					<h3>set<wbr>Move<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Move<wbr>Type<span class="tsd-signature-symbol">(</span>moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setmovetype">setMoveType</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setmovetype">setMoveType</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:367</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstat" class="tsd-anchor"></a>
+					<h3>set<wbr>Stat</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Stat<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setstat">setStat</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstat">setStat</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:180</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> info: <a href="../enums/statchangereason.html" class="tsd-signature-type">StatChangeReason</a><span class="tsd-signature-symbol"> | </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol"> =&nbsp;StatChangeReason.Normal</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstatandmax" class="tsd-anchor"></a>
+					<h3>set<wbr>Stat<wbr>And<wbr>Max</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Stat<wbr>And<wbr>Max<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, current<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstatandmax">setStatAndMax</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:283</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>max: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>current: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstatbonus" class="tsd-anchor"></a>
+					<h3>set<wbr>Stat<wbr>Bonus</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Stat<wbr>Bonus<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, bonus<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setstatbonus">setStatBonus</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstatbonus">setStatBonus</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:209</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>bonus: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> info: <a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstatchangetimer" class="tsd-anchor"></a>
+					<h3>set<wbr>Stat<wbr>Change<wbr>Timer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Stat<wbr>Change<wbr>Timer<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, timer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, amt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setstatchangetimer">setStatChangeTimer</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstatchangetimer">setStatChangeTimer</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:251</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>timer: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> amt: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstatmax" class="tsd-anchor"></a>
+					<h3>set<wbr>Stat<wbr>Max</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Stat<wbr>Max<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setstatmax">setStatMax</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstatmax">setStatMax</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:241</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setstatus" class="tsd-anchor"></a>
+					<h3>set<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Status<span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a>, hasStatusEffect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, reason<span class="tsd-signature-symbol">: </span><a href="../enums/statuseffectchangereason.html" class="tsd-signature-type">StatusEffectChangeReason</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#setstatus">setStatus</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#setstatus">setStatus</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:307</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>status: <a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a></h5>
+								</li>
+								<li>
+									<h5>hasStatusEffect: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>reason: <a href="../enums/statuseffectchangereason.html" class="tsd-signature-type">StatusEffectChangeReason</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1266,10 +2225,29 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#skipnextupdate">skipNextUpdate</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:387</li>
+									<li>Defined in creature/Creature.ts:369</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="statuses" class="tsd-anchor"></a>
+					<h3>statuses</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">statuses<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/statustype.html#bleeding" class="tsd-signature-type">Bleeding</a><span class="tsd-signature-symbol"> | </span><a href="../enums/statustype.html#poisoned" class="tsd-signature-type">Poisoned</a><span class="tsd-signature-symbol"> | </span><a href="../enums/statustype.html#burned" class="tsd-signature-type">Burned</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#statuses">statuses</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#statuses">statuses</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:312</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/statustype.html#bleeding" class="tsd-signature-type">Bleeding</a><span class="tsd-signature-symbol"> | </span><a href="../enums/statustype.html#poisoned" class="tsd-signature-type">Poisoned</a><span class="tsd-signature-symbol"> | </span><a href="../enums/statustype.html#burned" class="tsd-signature-type">Burned</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1284,7 +2262,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#tame">tame</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:292</li>
+									<li>Defined in creature/Creature.ts:268</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1294,73 +2272,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-					<a name="trigger" class="tsd-anchor"></a>
-					<h3>trigger</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">trigger&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#trigger">trigger</a></p>
-								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#trigger">trigger</a></p>
-								<ul>
-									<li>Defined in utilities/Emitter.ts:117</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="triggerasync" class="tsd-anchor"></a>
-					<h3>trigger<wbr>Async</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">trigger<wbr>Async<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#triggerasync">triggerAsync</a></p>
-								<p>Inherited from <a href="emitter.html">Emitter</a>.<a href="emitter.html#triggerasync">triggerAsync</a></p>
-								<ul>
-									<li>Defined in utilities/Emitter.ts:101</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Triggers the given event with any number of arguments.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1405,10 +2316,29 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#update">update</a></p>
 								<ul>
-									<li>Defined in creature/Creature.ts:410</li>
+									<li>Defined in creature/Creature.ts:392</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="updatestats" class="tsd-anchor"></a>
+					<h3>update<wbr>Stats</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Stats<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#updatestats">updateStats</a></p>
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#updatestats">updateStats</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:288</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1442,6 +2372,136 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="is" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#npc" class="tsd-signature-type">NPC</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#creature" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#is">is</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:37</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#npc" class="tsd-signature-type">NPC</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#is">is</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:38</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#creature" class="tsd-signature-type">Creature</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#is">is</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:39</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#player" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="isnot" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Not</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#npc" class="tsd-signature-type">NPC</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#creature" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, entityType<span class="tsd-signature-symbol">: </span><a href="../enums/entitytype.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#isnot">isNot</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:44</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#npc" class="tsd-signature-type">NPC</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#isnot">isNot</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:45</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#creature" class="tsd-signature-type">Creature</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#isnot">isNot</a></p>
+								<ul>
+									<li>Defined in entity/Entity.ts:46</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>entityType: <a href="../enums/entitytype.html#player" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Object literals</h2>
@@ -1451,9 +2511,9 @@
 					<div class="tsd-signature tsd-kind-icon">direction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icreature.html">ICreature</a>.<a href="../interfaces/icreature.html#direction">direction</a></p>
-						<p>Inherited from <a href="baseentity.html">BaseEntity</a>.<a href="baseentity.html#direction">direction</a></p>
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#direction">direction</a></p>
 						<ul>
-							<li>Defined in entity/BaseEntity.ts:50</li>
+							<li>Defined in entity/Entity.ts:68</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1462,7 +2522,7 @@
 						<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in entity/BaseEntity.ts:50</li>
+								<li>Defined in entity/Entity.ts:68</li>
 							</ul>
 						</aside>
 					</section>
@@ -1472,7 +2532,7 @@
 						<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in entity/BaseEntity.ts:50</li>
+								<li>Defined in entity/Entity.ts:68</li>
 							</ul>
 						</aside>
 					</section>
@@ -1496,9 +2556,6 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="creature.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="creature.html#istatbase" class="tsd-kind-icon">IStat<wbr>Base</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="creature.html#_movementfinishtime" class="tsd-kind-icon">_movement<wbr>Finish<wbr>Time</a>
@@ -1533,6 +2590,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#fromy" class="tsd-kind-icon">fromY</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="creature.html#hitchedto" class="tsd-kind-icon">hitched<wbr>To</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#id" class="tsd-kind-icon">id</a>
 							</li>
@@ -1541,6 +2601,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#movetype" class="tsd-kind-icon">move<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="creature.html#originalmovetype" class="tsd-kind-icon">original<wbr>Move<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#properties" class="tsd-kind-icon">properties</a>
@@ -1575,6 +2638,12 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#z" class="tsd-kind-icon">z</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#addproperty" class="tsd-kind-icon">add<wbr>Property</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#canseeposition" class="tsd-kind-icon">can<wbr>See<wbr>Position</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#canswapwith" class="tsd-kind-icon">can<wbr>Swap<wbr>With</a>
 							</li>
@@ -1588,28 +2657,76 @@
 								<a href="creature.html#checkforburn" class="tsd-kind-icon">check<wbr>For<wbr>Burn</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="creature.html#checkunder" class="tsd-kind-icon">check<wbr>Under</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#damage" class="tsd-kind-icon">damage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#description" class="tsd-kind-icon">description</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="creature.html#getinspecthealthmessage" class="tsd-kind-icon">get<wbr>Inspect<wbr>Health<wbr>Message</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="creature.html#emit" class="tsd-kind-icon">emit</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="creature.html#getinspectresistvulnerabilitymessage" class="tsd-kind-icon">get<wbr>Inspect<wbr>Resist<wbr>Vulnerability<wbr>Message</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#emitasync" class="tsd-kind-icon">emit<wbr>Async</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getfacingpoint" class="tsd-kind-icon">get<wbr>Facing<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getfacingtile" class="tsd-kind-icon">get<wbr>Facing<wbr>Tile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="creature.html#getmovetype" class="tsd-kind-icon">get<wbr>Move<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getmovementfinishtime" class="tsd-kind-icon">get<wbr>Movement<wbr>Finish<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="creature.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#getowner" class="tsd-kind-icon">get<wbr>Owner</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getpoint" class="tsd-kind-icon">get<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="creature.html#getproperty" class="tsd-kind-icon">get<wbr>Property</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="creature.html#getstat" class="tsd-kind-icon">get<wbr>Stat</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getstatinternal" class="tsd-kind-icon">get<wbr>Stat<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getstatmax" class="tsd-kind-icon">get<wbr>Stat<wbr>Max</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#getstatvalue" class="tsd-kind-icon">get<wbr>Stat<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#hasproperty" class="tsd-kind-icon">has<wbr>Property</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#hasstat" class="tsd-kind-icon">has<wbr>Stat</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#hasstatus" class="tsd-kind-icon">has<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#increasestat" class="tsd-kind-icon">increase<wbr>Stat</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="creature.html#increasetamedcount" class="tsd-kind-icon">increase<wbr>Tamed<wbr>Count</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#initstat" class="tsd-kind-icon">init<wbr>Stat</a>
@@ -1618,10 +2735,19 @@
 								<a href="creature.html#initializestats" class="tsd-kind-icon">initialize<wbr>Stats</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="creature.html#inspect" class="tsd-kind-icon">inspect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#isdefender" class="tsd-kind-icon">is<wbr>Defender</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#ishidden" class="tsd-kind-icon">is<wbr>Hidden</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#isinfov" class="tsd-kind-icon">is<wbr>InFov</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#isonfire" class="tsd-kind-icon">is<wbr>OnFire</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#istamed" class="tsd-kind-icon">is<wbr>Tamed</a>
@@ -1644,26 +2770,56 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#pet" class="tsd-kind-icon">pet</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="creature.html#queuesoundeffect" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#queuesoundeffectinfront" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#reducestat" class="tsd-kind-icon">reduce<wbr>Stat</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#release" class="tsd-kind-icon">release</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#removeproperty" class="tsd-kind-icon">remove<wbr>Property</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#removestat" class="tsd-kind-icon">remove<wbr>Stat</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setinfov" class="tsd-kind-icon">set<wbr>InFov</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setmovetype" class="tsd-kind-icon">set<wbr>Move<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstat" class="tsd-kind-icon">set<wbr>Stat</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstatandmax" class="tsd-kind-icon">set<wbr>Stat<wbr>And<wbr>Max</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstatbonus" class="tsd-kind-icon">set<wbr>Stat<wbr>Bonus</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstatchangetimer" class="tsd-kind-icon">set<wbr>Stat<wbr>Change<wbr>Timer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstatmax" class="tsd-kind-icon">set<wbr>Stat<wbr>Max</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#setstatus" class="tsd-kind-icon">set<wbr>Status</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#skipnextupdate" class="tsd-kind-icon">skip<wbr>Next<wbr>Update</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#statuses" class="tsd-kind-icon">statuses</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#tame" class="tsd-kind-icon">tame</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="creature.html#trigger" class="tsd-kind-icon">trigger</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="creature.html#triggerasync" class="tsd-kind-icon">trigger<wbr>Async</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#until" class="tsd-kind-icon">until</a>
@@ -1672,7 +2828,16 @@
 								<a href="creature.html#update" class="tsd-kind-icon">update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#updatestats" class="tsd-kind-icon">update<wbr>Stats</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="creature.html#is" class="tsd-kind-icon">is</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="creature.html#isnot" class="tsd-kind-icon">is<wbr>Not</a>
 							</li>
 							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#direction" class="tsd-kind-icon">direction</a>

@@ -119,7 +119,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:102</li>
+									<li>Defined in player/MessageManager.ts:116</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -145,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:248</li>
+									<li>Defined in player/MessageManager.ts:259</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -169,7 +169,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:132</li>
+									<li>Defined in player/MessageManager.ts:148</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -192,7 +192,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#getmessagehistory">getMessageHistory</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:106</li>
+									<li>Defined in player/MessageManager.ts:120</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/imessage.html" class="tsd-signature-type">IMessage</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -209,7 +209,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:177</li>
+									<li>Defined in player/MessageManager.ts:193</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:119</li>
+									<li>Defined in player/MessageManager.ts:135</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,14 +253,13 @@
 					<a name="send" class="tsd-anchor"></a>
 					<h3>send</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../enums/message.html" class="tsd-signature-type">Message</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#send">send</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:189</li>
+									<li>Defined in player/MessageManager.ts:205</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -271,7 +270,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>message: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../enums/message.html" class="tsd-signature-type">Message</a></h5>
+									<h5>message: <a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The message to send.</p>
 									</div>
@@ -279,8 +278,9 @@
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Arguments to interpolate the message with.</p>
-										<p>Note: After sending a message, the message source, type, and human (if any) are reset.</p>
+										<p>Arguments to interpolate the message with.
+											`
+										Note: After sending a message, the message source, type, and human (if any) are reset.</p>
 									</div>
 								</li>
 							</ul>
@@ -298,7 +298,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:260</li>
+									<li>Defined in player/MessageManager.ts:271</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +328,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#source">source</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:142</li>
+									<li>Defined in player/MessageManager.ts:158</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -352,7 +352,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#source">source</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:148</li>
+									<li>Defined in player/MessageManager.ts:164</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -382,7 +382,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#type">type</a></p>
 								<ul>
-									<li>Defined in player/MessageManager.ts:169</li>
+									<li>Defined in player/MessageManager.ts:185</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -404,19 +404,19 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">?: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:62</li>
+									<li>Defined in player/MessageManager.ts:76</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="../interfaces/ibasehumanentity.html" class="tsd-signature-type">IBaseHumanEntity</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></h4>
@@ -433,20 +433,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in player/MessageManager.ts:86</li>
+									<li>Defined in player/MessageManager.ts:100</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Runs a callback with the message manager of every player. For sending messages, equivalent to the following:</p>
-									<pre><code class="lang-ts">players.map(<span class="hljs-function"><span class="hljs-params">player</span> =&gt;</span> callback(player.messages)).some(<span class="hljs-function"><span class="hljs-params">sent</span> =&gt;</span> sent)
-</code></pre>
+									<pre><code class="language-ts">players.map(<span class="hljs-function"><span class="hljs-params">player</span> =&gt;</span> callback(player.messages)).some(<span class="hljs-function"><span class="hljs-params">sent</span> =&gt;</span> sent)</code></pre>
 								</div>
 								<p>Example usage:</p>
-								<pre><code class="lang-ts">MessageManager.toAll(<span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> message.source(Source.Wellbeing)
+								<pre><code class="language-ts">MessageManager.toAll(<span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> message.source(Source.Wellbeing)
     .type(MessageType.Bad)
-    .send(Message.EveryoneHasBecomeInfected, reason));
-</code></pre>
+    .send(Message.EveryoneHasBecomeInfected, reason));</code></pre>
 								<p>Note: When this is called from a client, it actually only displays the message to the client and syncs that with the server.
 								When called from the server, it is sent to every client.</p>
 							</div>

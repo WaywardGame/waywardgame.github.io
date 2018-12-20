@@ -68,7 +68,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IDialogDescription</span>
+						<a href="imoddable.html" class="tsd-signature-type">IModdable</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IDialogDescription</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -82,8 +87,10 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#edges" class="tsd-kind-icon">edges</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#maxsize" class="tsd-kind-icon">max<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#minsize" class="tsd-kind-icon">min<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="idialogdescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#saveopen" class="tsd-kind-icon">save<wbr>Open</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="idialogdescription.html#square" class="tsd-kind-icon">square</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,7 +104,7 @@
 					<div class="tsd-signature tsd-kind-icon">edges<span class="tsd-signature-symbol">:</span> <a href="../globals.html#iedges" class="tsd-signature-type">IEdges</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in newui/screen/screens/game/Dialogs.ts:37</li>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -107,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="ivector2.html" class="tsd-signature-type">IVector2</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in newui/screen/screens/game/Dialogs.ts:36</li>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +124,18 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="ivector2.html" class="tsd-signature-type">IVector2</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in newui/screen/screens/game/Dialogs.ts:34</li>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:40</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="modindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> mod<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">mod<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="imoddable.html">IModdable</a>.<a href="imoddable.html#modindex">modIndex</a></p>
+						<ul>
+							<li>Defined in Enums.ts:1522</li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">save<wbr>Open<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in newui/screen/screens/game/Dialogs.ts:41</li>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,9 +160,24 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <a href="ivector2.html" class="tsd-signature-type">IVector2</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in newui/screen/screens/game/Dialogs.ts:35</li>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:41</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="square" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> square</h3>
+					<div class="tsd-signature tsd-kind-icon">square<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in newui/screen/screens/game/Dialogs.ts:51</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether resizing the dialog will keep it a square. Defaults to false.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -172,11 +205,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="idialogdescription.html#minsize" class="tsd-kind-icon">min<wbr>Size</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="idialogdescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="idialogdescription.html#saveopen" class="tsd-kind-icon">save<wbr>Open</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="idialogdescription.html#size" class="tsd-kind-icon">size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="idialogdescription.html#square" class="tsd-kind-icon">square</a>
 							</li>
 						</ul>
 					</li>

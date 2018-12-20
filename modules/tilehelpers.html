@@ -86,11 +86,11 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#findmatchingtile" class="tsd-kind-icon">find<wbr>Matching<wbr>Tile</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getadjacenttiles" class="tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getgfx" class="tsd-kind-icon">get<wbr>Gfx</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getgfxraw" class="tsd-kind-icon">get<wbr>Gfx<wbr>Raw</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#getsuitablespawnpoint" class="tsd-kind-icon">get<wbr>Suitable<wbr>Spawn<wbr>Point</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettilevariation" class="tsd-kind-icon">get<wbr>Tile<wbr>Variation</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettilesaround" class="tsd-kind-icon">get<wbr>Tiles<wbr>Around</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#gettyperaw" class="tsd-kind-icon">get<wbr>Type<wbr>Raw</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#isopentile" class="tsd-kind-icon">is<wbr>Open<wbr>Tile</a></li>
@@ -103,6 +103,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#settilledraw" class="tsd-kind-icon">set<wbr>Tilled<wbr>Raw</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#settype" class="tsd-kind-icon">set<wbr>Type</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#settyperaw" class="tsd-kind-icon">set<wbr>Type<wbr>Raw</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="tilehelpers.html#tilesaround" class="tsd-kind-icon">tiles<wbr>Around</a></li>
 							</ul>
 						</section>
 					</div>
@@ -221,32 +222,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="getadjacenttiles" class="tsd-anchor"></a>
-					<h3>get<wbr>Adjacent<wbr>Tiles</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, includePoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/TileHelpers.ts:245</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includePoint: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="getgfx" class="tsd-anchor"></a>
 					<h3>get<wbr>Gfx</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -302,7 +277,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/TileHelpers.ts:260</li>
+									<li>Defined in utilities/TileHelpers.ts:245</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
@@ -332,6 +307,37 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="gettilesaround" class="tsd-anchor"></a>
+					<h3>get<wbr>Tiles<wbr>Around</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tiles<wbr>Around<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, includeCurrentTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/TileHelpers.ts:262</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Array version of TileHelpers.tilesAround</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> includeCurrentTile: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -645,6 +651,37 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="tilesaround" class="tsd-anchor"></a>
+					<h3>tiles<wbr>Around</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">tiles<wbr>Around<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, includeCurrentTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in utilities/TileHelpers.ts:280</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>IterableIterator version of TileHelpers.getTilesAround</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> includeCurrentTile: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -678,9 +715,6 @@
 						<a href="tilehelpers.html#findmatchingtile" class="tsd-kind-icon">find<wbr>Matching<wbr>Tile</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="tilehelpers.html#getadjacenttiles" class="tsd-kind-icon">get<wbr>Adjacent<wbr>Tiles</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#getgfx" class="tsd-kind-icon">get<wbr>Gfx</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
@@ -691,6 +725,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#gettilevariation" class="tsd-kind-icon">get<wbr>Tile<wbr>Variation</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="tilehelpers.html#gettilesaround" class="tsd-kind-icon">get<wbr>Tiles<wbr>Around</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
@@ -727,6 +764,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="tilehelpers.html#settyperaw" class="tsd-kind-icon">set<wbr>Type<wbr>Raw</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="tilehelpers.html#tilesaround" class="tsd-kind-icon">tiles<wbr>Around</a>
 					</li>
 				</ul>
 			</nav>

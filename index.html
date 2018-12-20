@@ -149,7 +149,7 @@
 				<p><strong>NOTE:</strong> Having trouble creating a .vscode folder in Windows? Take a look in the <a href="#windows-is-showing-a-you-must-type-a-file-name-dialog-when-trying-to-rename-a-folder-vscode-">Frequently Asked Questions</a> for the solution.</p>
 				<h2 id="helloworld-vscode-tasks-json"><code>helloworld/.vscode/tasks.json</code></h2>
 				<p>Visual Studio Code needs to know that we want to build our mods with TypeScript. Adding a tasks.json file in a new folder named &quot;.vscode&quot; with the following inserted will build your project with Ctrl+Shift+B.</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"2.0.0"</span>,
     <span class="hljs-attr">"tasks"</span>: [
         {
@@ -174,15 +174,14 @@
             <span class="hljs-attr">"problemMatcher"</span>: []
         }
     ]
-}
-</code></pre>
+}</code></pre>
 				<h2 id="helloworld-mod-reference-"><code>helloworld/mod-reference/</code></h2>
 				<p>The contents of this folder is located here: <a href="https://github.com/WaywardGame/mod-reference/">https://github.com/WaywardGame/mod-reference/</a></p>
 				<p>Refer to the <a href="#examples">Examples</a> section if you are not familiar with GitHub. </p>
 				<p>It is recommended you keep this up to date with what is located on GitHub as this will change from version to version of Wayward. This folder contains all the definitions for functions in Wayward so that TypeScript can auto-complete and compile your mod properly.</p>
 				<h2 id="helloworld-mod-json"><code>helloworld/mod.json</code></h2>
 				<p>You can think of the mod.json file as the description file for your mod. It describes what it does and how it behaves. It does this through a set of properties, which we will describe below. It should be updated every time you publish it to Steam. Here&#39;s a sample of what it should look like for Hello World:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Hello World"</span>,
     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Hello World is an example mod, shown in the Modding Guide, located here: https://waywardgame.github.io/"</span>,
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
@@ -195,8 +194,7 @@
     <span class="hljs-attr">"languages"</span>: [
         <span class="hljs-string">"lang/english"</span>
     ]
-}
-</code></pre>
+}</code></pre>
 				<p>The following is an explanation of some of the properties in this mod.json file:</p>
 				<p><code>compatibleMinorVersions</code> only allows the mod to load in 2.6.x.</p>
 				<p><code>unloadable</code> makes it so the mod doesn&#39;t have to be enabled when loading a world which had the mod loaded previously.</p>
@@ -204,7 +202,7 @@
 				<p>To see a complete list of the properties you can use in your <code>mod.json</code>, and more in-depth details of the properties used in this example, see the <a href="#mod-json"><code>mod.json</code> section</a>.</p>
 				<h2 id="helloworld-tsconfig-json"><code>helloworld/tsconfig.json</code></h2>
 				<p>tsconfig gives instructions for how TypeScript should compile your project.</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"compilerOptions"</span>: {
         <span class="hljs-attr">"target"</span>: <span class="hljs-string">"es6"</span>,
         <span class="hljs-attr">"module"</span>: <span class="hljs-string">"amd"</span>,
@@ -218,17 +216,15 @@
         <span class="hljs-attr">"types"</span>: [],
         <span class="hljs-attr">"experimentalDecorators"</span>: <span class="hljs-literal">true</span>
     }
-}
-</code></pre>
+}</code></pre>
 				<p>This will be the same across all your mods generally. If you want to know more about the <code>tsconfig</code> file, review the <a href="http://www.typescriptlang.org/docs/handbook/tsconfig-json.html">TypeScript Documentation</a>.</p>
 				<h2 id="helloworld-helloworld-ts"><code>helloworld/HelloWorld.ts</code></h2>
 				<p>With all of that preparation taken care of, it&#39;s now time to start working on the actual mod. We&#39;re going to stay pretty simple, since this is an introductory tutorial — this means we&#39;re only going to have one script file, which is <code>HelloWorld.ts</code>.</p>
 				<p>Let&#39;s start with the basics:</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> HelloWorld <span class="hljs-keyword">extends</span> Mod {
-}
-</code></pre>
+}</code></pre>
 				<p>In the first line, we &quot;import&quot; the <code>Mod</code> class. This is an <em>abstract</em> class (it can&#39;t be used on its own) which contains default functionality that mod developers can build off of.</p>
 				<p>All mod entry files (the <code>file</code> property in the <code>mod.json</code>) must <code>export default</code> a class which extends <code>Mod</code>. We&#39;ve done that, so at this point, our mod is actually functional, although it does absolutely nothing.</p>
 				<p>You can compile your script with &quot;Ctrl+Shift+B&quot; by default in HelloWorld.ts. After it is compiled, you will see a bunch of new files in your helloworld directory. These are the files Wayward will use. If you load Wayward, under &quot;Mods&quot;, you will now see your Hello World mod under &quot;Local Mods&quot;.</p>
@@ -237,7 +233,7 @@
 				<p>If you open the Options Menu in Wayward, and scroll down to the bottom (or use the Developer tab) you&#39;ll see a checkbox for enabling &quot;Developer Mode&quot;. Enable it. You now have some more options available, including being able to open the Chromium Developer Tools. You can use the bindable <code>F10</code> to open it or use the &quot;Toggle Developer Tools&quot; button in the Developer section of the menu.</p>
 				<p>With the Developer Tools open, you now have access to the Console, which is where the game logs &quot;debug&quot; information. This is by far the easiest way to figure out why your code isn&#39;t working: You can log the values of variables or expressions to the console to figure out why something didn&#39;t do what you expected.</p>
 				<p>Of course, our mod is going to be so simple that we shouldn&#39;t need to debug anything. Regardless, let&#39;s log some information anyway.</p>
-				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 <span class="hljs-keyword">import</span> Log <span class="hljs-keyword">from</span> <span class="hljs-string">"utilities/Log"</span>;
 
 <span class="hljs-keyword">let</span> log: Log;
@@ -254,8 +250,7 @@
     <span class="hljs-keyword">public</span> onUnload() {
         log.info(<span class="hljs-string">"Goodbye World!"</span>);
     }
-}
-</code></pre>
+}</code></pre>
 				<p>You&#39;ll notice we&#39;ve imported something new, the <code>Log</code> class. We&#39;re only going to use that class to specify the type of a variable. </p>
 				<p>First off, we create a variable in the top scope of our file (so that it&#39;s easy to access) and name it <code>log</code>. We give the variable our imported <code>Log</code> type. We&#39;ll store the actual mod log in it later.</p>
 				<p>At this point, you may be wondering what &quot;hooks&quot; actually are. In Wayward, there are specific places in the base game&#39;s code where we allow mods to manipulate the functionality. Each of these places is called a &quot;hook&quot; (we&#39;re going to use some of these in a short while). There is another kind of &quot;hook&quot;, which you can consider &quot;mod loading cycle&quot; hooks. Basically, as the state of your mod changes, your mod can do any required initialization or de-initialization.</p>
@@ -299,7 +294,7 @@
 				<h3 id="registrations-and-hooks">Registrations and Hooks</h3>
 				<p>So, our mod actually does something now, but if a player installed it, it wouldn&#39;t actually seem like it did to them. Why don&#39;t we send a &quot;Hello World!&quot; message to the player?</p>
 				<p>To log messages, we&#39;re going to need to need a bunch more imports. We need <code>HookMethod</code>, <code>Message</code>, <code>MessageType</code>, and <code>Register</code>. You can try to guess the path of an import, but it&#39;s fastest to just start typing it and allow VSCode/TypeScript to suggest the import for you (press <code>Tab</code> when the correct import suggestion is highlighted). You can also use the <a href="#how-do-i-find-out-the-name-and-path-of-imports-">TSLint import fixer</a>.</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { Message, MessageType } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/IMessages"</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Message, MessageType } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/IMessages"</span>;
 <span class="hljs-keyword">import</span> { HookMethod } <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/IHookHost"</span>;
 <span class="hljs-keyword">import</span> Mod <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/Mod"</span>;
 <span class="hljs-keyword">import</span> Register <span class="hljs-keyword">from</span> <span class="hljs-string">"mod/ModRegistry"</span>;
@@ -313,10 +308,9 @@
     <span class="hljs-keyword">public</span> onGameScreenVisible(): <span class="hljs-built_in">void</span> {
         localPlayer.messages.send(<span class="hljs-keyword">this</span>.messageHelloWorld);
     }
-}
-</code></pre>
+}</code></pre>
 				<p><sub>Note: The old logging code has been removed for clarity.</sub></p>
-				<p>You&#39;ll notice two new surprising things here, decorators! We use <a href="mailto:`@Register.message">`@Register.message</a>(<name>)<code>to register a &quot;message&quot; in the game, and</code>@HookMethod<code>to register our</code>onGameScreenVisible` hook.</p>
+				<p>You&#39;ll notice two new surprising things here, decorators! We use <a href="mailto:%60@Register.message">`@Register.message</a>(<name>)<code>to register a &quot;message&quot; in the game, and</code>@HookMethod<code>to register our</code>onGameScreenVisible` hook.</p>
 				<p>When you&#39;re adding new stuff to the game, most of the time you&#39;ll be using the <code>@Register</code> decorators. These usually go on fields, but can sometimes also decorate methods (such as actions, commands, and options sections). The field is &quot;injected&quot; with the ID of your added thing, in this case it injects the ID of the message which we can then use anywhere a message is required.</p>
 				<ul>
 					<li>In old versions of Wayward, registration was done with simple <code>.add</code> methods, such as <code>.addMessage(&lt;name&gt;, &lt;message&gt;)</code>. This was changed because it was impossible to know whether the method should be called in <code>onInitialize</code> or <code>onLoad</code>, and also for simplicity &amp; consistency: Now every registration requires a field which will be injected with the value.</li>
@@ -335,15 +329,14 @@
 				<p>If you run the mod at this point and load a game, you&#39;ll see that it actually doesn&#39;t log <code>Hello World</code>, it logs <code>Message.ModHelloWorldHelloWorld</code>. What gives? </p>
 				<p>Well, what it logged was the internal &quot;translation ID&quot; of our message. We haven&#39;t actually provided an English translation of our message yet. Let&#39;s set this up now.</p>
 				<p>In <code>lang/english.json</code>:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"extends"</span>: <span class="hljs-string">"English"</span>,
     <span class="hljs-attr">"dictionaries"</span>: {
         <span class="hljs-attr">"message"</span>: {
             <span class="hljs-attr">"modHelloWorldHelloWorld"</span>: <span class="hljs-string">"Hello World!"</span>
         }
     }
-}
-</code></pre>
+}</code></pre>
 				<p>This is all we need at this point. Let&#39;s navigate through the JSON file to understand what it&#39;s doing.</p>
 				<ul>
 					<li><code>extends</code> — This is the language we&#39;re adding translations to. In this case, we&#39;re adding to the language of the base game, English.</li>
@@ -356,7 +349,14 @@
 					</li>
 				</ul>
 				<h3 id="renaming-things-at-run-time-other-ways-to-greet-the-player">Renaming Things at Run Time &amp; Other Ways to Greet the Player</h3>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { Direction, EquipType, ItemType } <span class="hljs-keyword">from</span> <span class="hljs-string">"Enums"</span>;
+				<p>Here&#39;s the plan: </p>
+				<ul>
+					<li>We&#39;re going to change the colour of our initial greeting to be <em>green</em>. Because that&#39;s prettier.</li>
+					<li>We&#39;re going to rename the &quot;branch&quot; item to a &quot;greetings stick&quot;.</li>
+					<li>We&#39;re going to make equipping the greetings stick say hello to the hand that equipped it.</li>
+					<li>We&#39;re going to say hello to the ground whenever we move.</li>
+				</ul>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Direction, EquipType, ItemType } <span class="hljs-keyword">from</span> <span class="hljs-string">"Enums"</span>;
 <span class="hljs-keyword">import</span> { IItem } <span class="hljs-keyword">from</span> <span class="hljs-string">"item/IItem"</span>;
 <span class="hljs-keyword">import</span> { itemDescriptions } <span class="hljs-keyword">from</span> <span class="hljs-string">"item/Items"</span>;
 <span class="hljs-keyword">import</span> { Message } <span class="hljs-keyword">from</span> <span class="hljs-string">"language/IMessages"</span>;
@@ -377,12 +377,6 @@
     <span class="hljs-keyword">public</span> readonly messageHelloRightHand: Message;
     <span class="hljs-meta">@Register</span>.message(<span class="hljs-string">"HelloTerrain"</span>)
     <span class="hljs-keyword">public</span> readonly messageHelloTerrain: Message;
-
-    <span class="hljs-keyword">public</span> onLoad() {
-        <span class="hljs-comment">// we change the name of the "branch" item to "greetings stick"</span>
-        itemDescriptions[ItemType.Branch].prefix = <span class="hljs-string">"a "</span>;
-        itemDescriptions[ItemType.Branch].name = <span class="hljs-string">"greetings stick"</span>;
-    }
 
     <span class="hljs-meta">@HookMethod</span>
     <span class="hljs-keyword">public</span> onGameScreenVisible() {
@@ -413,16 +407,17 @@
 
         <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>;
     }
-}
-</code></pre>
-				<p>In our hook for when the game screen becomes visible, we now rename a branch to a &quot;greetings stick&quot;. In the future, this will also be done with language extensions, but for now, you have to do it through the descriptions of objects (it would look the same for changing the name of a creature or the name of a doodad, etc.).</p>
+}</code></pre>
 				<p>When the &quot;greetings stick&quot; is equipped, using the <code>onItemEquip</code> hook, we send a message depending on which hand it was equipped to.</p>
 				<p>We also say hello to the world <em>literally</em>, by hooking into <code>onMove</code>, and sending a message with the name of the terrain the player is moving to.</p>
 				<h2 id="helloworld-lang-english-json"><code>helloworld/lang/english.json</code></h2>
-				<p>To finish up the mod, let&#39;s add translations for the rest of our messages.</p>
-				<pre><code class="lang-json">{
+				<p>To finish up the mod, let&#39;s add translations for the rest of our messages, and rename the branch to the &quot;greetings stick&quot;.</p>
+				<pre><code class="language-json">{
     <span class="hljs-attr">"extends"</span>: <span class="hljs-string">"English"</span>,
     <span class="hljs-attr">"dictionaries"</span>: {
+        <span class="hljs-attr">"item"</span>: {
+            <span class="hljs-attr">"branch"</span>: [<span class="hljs-string">"greetings stick"</span>, <span class="hljs-string">"A tool with which to say hello."</span>]
+        },
         <span class="hljs-attr">"message"</span>: {
             <span class="hljs-attr">"modHelloWorldHelloWorld"</span>: <span class="hljs-string">"Hello World!"</span>,
             <span class="hljs-attr">"modHelloWorldHelloLeftHand"</span>: <span class="hljs-string">"Hello Left Hand!"</span>,
@@ -430,8 +425,7 @@
             <span class="hljs-attr">"modHelloWorldHelloTerrain"</span>: <span class="hljs-string">"Hello {0}!"</span>
         }
     }
-}
-</code></pre>
+}</code></pre>
 				<p>The <code>{0}</code> in the <code>modHelloWorldHelloTerrain</code> translation is called an &quot;interpolation&quot;. Basically, it means the first thing sent with the message is printed at that spot in the message. <code>{1}</code> would print the second thing sent with the message. In our case, we do <code>.send(this.messageHelloTerrain, terrainDescriptions[tileType].name);</code> — the message to send, and then the name of the terrain. So the message ends up being <code>&quot;Hello &lt;name of terrain&gt;!&quot;</code></p>
 				<h2 id="what-s-next-">What&#39;s Next?</h2>
 				<p>That&#39;s the end of the Hello World tutorial. Congratulations for making it this far! If you understand what you&#39;ve done, you&#39;ll probably do fine with the rest of Wayward modding. And if you ever have questions you can always feel free to ask us in the <code>#modding</code> channel of our <a href="https://discord.gg/wayward">Discord</a>.</p>
@@ -446,36 +440,41 @@
 				<p>This section will elaborate on the various JSON files you may need to write when making a Wayward mod.</p>
 				<h2 id="mod-json"><strong>mod.json</strong></h2>
 				<p>The mod.json file is what tells Wayward that your mod folder is a mod, and provides information such as the version it can run on, the version it is, its name, and more. The following is a specification of what properties will appear on your mod.json files.</p>
-				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;6&quot; set here, and Wayward beta version 2.<strong>6</strong>.0 is loaded, then it will run. If you have it set as <code>&quot;compatibleMinorVersions&quot;: [ 5 ]</code>, then it will only work in version 2.<strong>5</strong>.0. <code>&quot;compatibleMinorVersions&quot;: [ 5, 6 ]</code> will load in both versions 2.5, and 2.6. You may omit this property if you always want your mod to run, regardless of the game version (this is not recommended as our API changes between versions).</p>
+				<p><code>compatibleMinorVersions</code> will stop your mod from being loaded if the Wayward&#39;s game version doesn&#39;t match what is set in the array. If you have &quot;6&quot; set here, and Wayward beta version 2.<strong>6**.0 is loaded, then it will run. If you have it set as <code>&quot;compatibleMinorVersions&quot;: [ 5 ]</code>, then it will only work in version 2.</strong>5**.0. <code>&quot;compatibleMinorVersions&quot;: [ 5, 6 ]</code> will load in both versions 2.5, and 2.6. You may omit this property if you always want your mod to run, regardless of the game version (this is not recommended as our API changes between versions).</p>
 				<p><code>unloadable</code> should be set to true if you are <em>not</em> adding new things into the game which modify the save data. If you are creating a mod that adds new monsters, items, doodads, or terrain you will want to set this to false or omit it completely.</p>
 				<p><code>dependencies</code> is a list of mods that your mod needs. For instance, if you wanted to extend the functionality of another mod, or use utility functions provided by them. The property takes an array of strings representing Steam Workshop IDs. Your mod won&#39;t be loaded if the dependencies aren&#39;t installed and enabled.</p>
-				<pre><code class="lang-json">&quot;dependencies&quot;: [
+				<pre><code class="language-json">&quot;dependencies&quot;: [
     &quot;474819610&quot;
-]
-</code></pre>
+]</code></pre>
 				<p><code>imageOverrides</code> is a property that will allow you to override default graphics in the game. When set to true (<code>&quot;imageOverrides&quot;: true</code>), it will load a dedicated <a href="#imageoverrides-json">imageOverrides.json</a> file containing the overrides. This property isn&#39;t required, as not providing it is the same as setting it to <code>false</code>. </p>
 				<p><code>languages</code> is a property that will allow you to provide a language without requiring scripts. It takes an array of paths to <a href="#language-json">language JSON files</a>. Omitting the property loads no language files. The property will look like this:</p>
-				<pre><code class="lang-json">&quot;languages&quot;: [
+				<pre><code class="language-json">&quot;languages&quot;: [
     &quot;pirateLanguage&quot;,
     &quot;spaceLanguages/glaknarLanguage&quot;
-]
-</code></pre>
+]</code></pre>
 				<p>This example would attempt to load the language files <code>&lt;modName&gt;/pirateLanguage.json</code> and <code>&lt;modName&gt;/spaceLanguages/glaknarLanguage.json</code></p>
 				<p><code>customizations</code> is a property that will allow you to provide character customizations. When set to true (<code>&quot;customizations&quot;: true</code>), it will load a dedicated <a href="#customizations-json">customizations.json</a> file containing the overrides. Omitting this property is the same as setting it to <code>false</code>. </p>
 				<p><code>stylesheets</code> is a property that automatically appends CSS stylesheets as your mod is initialized, and removes them as your mod is uninitialized. It takes an array of strings representing the paths to your stylesheets.
 				The property will look like this:</p>
-				<pre><code class="lang-json">&quot;stylesheets&quot;: [
+				<pre><code class="language-json">&quot;stylesheets&quot;: [
     &quot;mainStyle&quot;,
     &quot;moreStyles/anotherStyle&quot;
-]
-</code></pre>
+]</code></pre>
 				<p>This example would attempt to load the language files <code>&lt;modName&gt;/mainStyle.css</code> and <code>&lt;modName&gt;/moreStyles/anotherStyle.css</code>.
 				You can also see this property in action in our <a href="https://github.com/WaywardGame/debugtools">Debug Tools</a> mod.</p>
+				<p><code>multiplayerCompatible</code> is a property that can be set to true to mark compatibility for multiplayer games. All clients must have the mod enabled to be able to connect and play if the host has it enabled.</p>
+				<p><code>multiplayerClientside</code> is a property that can be set to true to allow the mod to be used for multiplayer games for the host and any client. It does not require the host or other clients to have the mod enabled.</p>
+				<p><code>tags</code> is a property that allows you to categorize your modification within the Steam Workshop. Some tags are automatically set based on other properties within the mod.json file. An example of this property set would look like this:</p>
+				<pre><code class="language-json">&quot;tags&quot;: [
+    &quot;Cheat&quot;,
+    &quot;User Interface&quot;
+]</code></pre>
+				<p>A full description on each of the Workshop tags is available on the <a href="https://steamcommunity.com/workshop/discussions/18446744073709551615/1728711392738745300/?appid=379210">Workshop Discussions Forum</a>.</p>
 				<p><code>publishedFileId</code> is a property that is automatically filled in after your mod is published to the Steam Workshop. Do not modify or manually add this property. Wayward will use this when you publish updates to your mod.</p>
 				<h2 id="imageoverrides-json"><strong>imageOverrides.json</strong></h2>
 				<p>The <code>imageOverrides.json</code> file will allow you to override default graphics in the game. The file is not required, and will only be loaded by setting the <code>imageOverrides</code> property of your <code>mod.json</code> to <code>true</code>.</p>
 				<p>Here is an example of how the file could look:</p>
-				<pre><code class="lang-json">[
+				<pre><code class="language-json">[
     {
         <span class="hljs-attr">"replace"</span>: <span class="hljs-string">"doodad/sprucetree"</span>,
         <span class="hljs-attr">"imagePath"</span>: <span class="hljs-string">"doodad/specialTree"</span>
@@ -485,14 +484,13 @@
         <span class="hljs-attr">"imagePath"</span>: <span class="hljs-string">"doodad/superSpecialTree"</span>,
         <span class="hljs-attr">"animated"</span>: <span class="hljs-literal">true</span>
     }
-]
-</code></pre>
+]</code></pre>
 				<p>The <code>replace</code> property specifies the default graphic path, and the <code>imagePath</code> property specifies the mod&#39;s path for the image. The <code>.png</code> is appended automatically. If the <code>imagePath</code> property is not provided, it defaults to using the same path as <code>replace</code>.</p>
 				<p>The <code>animated</code> property takes a boolean representing whether or not the image is an animated strip. If the property isn&#39;t provided it defaults to false.</p>
 				<p>You can see an example of image overrides in action in the <a href="https://github.com/WaywardGame/treesonfire">Trees on Fire</a> mod.</p>
 				<h2 id="language-json"><strong>language.json</strong></h2>
 				<p>A language JSON file contains all translations of a language, without requiring scripts, as was the case in versions &lt; 2.3. The file name can be anything as long as it ends in <code>.json</code> Here&#39;s an example file:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"such language"</span>,
     <span class="hljs-attr">"shouldPluralize"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"dictionaries"</span>: {
@@ -500,8 +498,7 @@
             <span class="hljs-attr">"branch"</span>: [<span class="hljs-string">""</span>, <span class="hljs-string">"real branch"</span>, <span class="hljs-string">"wow very branch"</span>]
         }
     }
-}
-</code></pre>
+}</code></pre>
 				<p>A description of the properties is as follows:</p>
 				<p><code>name</code> is the name players will see in the language selector dropdown. </p>
 				<p><code>shouldPluralize</code> determines whether or not names should be pluralized. </p>
@@ -512,7 +509,7 @@
 				<h2 id="customizations-json"><strong>customizations.json</strong></h2>
 				<p>The <code>customizations.json</code> file will allow you to provide extra customizations for character creation (hairstyles, hair colors, and skin tones). The file is not required, and will only be loaded by setting the <code>customizations</code> property of your <code>mod.json</code> to <code>true</code>.</p>
 				<p>Here is an example of how the file could look:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"skin-colors"</span>: [
         <span class="hljs-string">"#ff0"</span>
     ],
@@ -526,8 +523,7 @@
             <span class="hljs-attr">"imagePath"</span>: <span class="hljs-string">"specialHairstyles/Pigtails"</span>
         }
     ]
-}
-</code></pre>
+}</code></pre>
 				<p>Skin colors and hair colors each take an array of strings representing colors in hex. The <code>#</code> is not required. When providing 3 characters, each character is doubled. For example, <code>ff0</code> is the same as <code>ffff00</code>. This functionality mirrors the functionality of web browsers (CSS).</p>
 				<p>Hair styles takes an array of strings or objects. When a string is provided, the mod attempts to load the sprite from <code>&lt;modName&gt;/static/image/hairstyle/&lt;hairstyleName&gt;.png</code>. When an object is provided, if the <code>imagePath</code> property is set, it will use this as the path to the hairstyle sprite instead.</p>
 				<p>Top-level properties of the file can be left out if you have no customizations of that kind to provide.</p>
@@ -630,6 +626,9 @@
 						<a href="modules/arrays.html">Arrays</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="modules/clipboard.html">Clipboard</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="modules/collectors.html">Collectors</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -650,17 +649,11 @@
 					<li class=" tsd-kind-module">
 						<a href="modules/ihookhost.html">IHook<wbr>Host</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/imessagepack.html">IMessage<wbr>Pack</a>
-					</li>
 					<li class=" tsd-kind-module tsd-has-type-parameter">
 						<a href="modules/istatchangeinfo.html">IStat<wbr>Change<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/intermodregistrymanager.html">Inter<wbr>Mod<wbr>Registry<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/iterableiterator.html">Iterable<wbr>Iterator</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/math2.html">Math2</a>
@@ -687,6 +680,9 @@
 						<a href="modules/tilehelpers.html">Tile<wbr>Helpers</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="modules/translationsegment.html">Translation<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="modules/uuid.html">UUID</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -706,7 +702,16 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum">
+						<a href="enums/actionargument.html" class="tsd-kind-icon">Action<wbr>Argument</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/actiontranslation.html" class="tsd-kind-icon">Action<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/actiontype.html" class="tsd-kind-icon">Action<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/actionusability.html" class="tsd-kind-icon">Action<wbr>Usability</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/aitype.html" class="tsd-kind-icon">Ai<wbr>Type</a>
@@ -721,10 +726,19 @@
 						<a href="enums/background.html" class="tsd-kind-icon">Background</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/basicinspectionpriority.html" class="tsd-kind-icon">Basic<wbr>Inspection<wbr>Priority</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/bindable.html" class="tsd-kind-icon">Bindable</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/bindabletype.html" class="tsd-kind-icon">Bindable<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/bindingmanagerevent.html" class="tsd-kind-icon">Binding<wbr>Manager<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/booktranslation.html" class="tsd-kind-icon">Book<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/booktype.html" class="tsd-kind-icon">Book<wbr>Type</a>
@@ -739,6 +753,9 @@
 						<a href="enums/casestyle.html" class="tsd-kind-icon">Case<wbr>Style</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/challengemodifier.html" class="tsd-kind-icon">Challenge<wbr>Modifier</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/changelogsection.html" class="tsd-kind-icon">Changelog<wbr>Section</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -751,7 +768,13 @@
 						<a href="enums/checkbuttonevent.html" class="tsd-kind-icon">Check<wbr>Button<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/checkbuttonrangeevent.html" class="tsd-kind-icon">Check<wbr>Button<wbr>Range<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/choicelistevent.html" class="tsd-kind-icon">Choice<wbr>List<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/clientdatatype.html" class="tsd-kind-icon">Client<wbr>Data<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/colortype.html" class="tsd-kind-icon">Color<wbr>Type</a>
@@ -784,7 +807,13 @@
 						<a href="enums/craftstatus.html" class="tsd-kind-icon">Craft<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/creaturetranslation.html" class="tsd-kind-icon">Creature<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/creaturetype.html" class="tsd-kind-icon">Creature<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/customgameoptionssection.html" class="tsd-kind-icon">Custom<wbr>Game<wbr>Options<wbr>Section</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/damagetype.html" class="tsd-kind-icon">Damage<wbr>Type</a>
@@ -813,8 +842,23 @@
 					<li class=" tsd-kind-enum">
 						<a href="enums/difficulty.html" class="tsd-kind-icon">Difficulty</a>
 					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/difficultychoiceevent.html" class="tsd-kind-icon">Difficulty<wbr>Choice<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/difficultyoptionsicon.html" class="tsd-kind-icon">Difficulty<wbr>Options<wbr>Icon</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/difficultytranslation.html" class="tsd-kind-icon">Difficulty<wbr>Translation</a>
+					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/direction.html" class="tsd-kind-icon">Direction</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/doodaditemtranslation.html" class="tsd-kind-icon">Doodad<wbr>Item<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/doodadtranslation.html" class="tsd-kind-icon">Doodad<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/doodadtype.html" class="tsd-kind-icon">Doodad<wbr>Type</a>
@@ -835,9 +879,6 @@
 						<a href="enums/edge.html" class="tsd-kind-icon">Edge</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/emitterevent.html" class="tsd-kind-icon">Emitter<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-enum">
 						<a href="enums/entityevent.html" class="tsd-kind-icon">Entity<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -853,7 +894,13 @@
 						<a href="enums/enumid.html" class="tsd-kind-icon">Enum<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/enumsort.html" class="tsd-kind-icon">Enum<wbr>Sort</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/equiptype.html" class="tsd-kind-icon">Equip<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/executionstage.html" class="tsd-kind-icon">Execution<wbr>Stage</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/fading.html" class="tsd-kind-icon">Fading</a>
@@ -863,6 +910,9 @@
 					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
 						<a href="enums/glyph.html" class="tsd-kind-icon">GLYPH</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/gameendmessage.html" class="tsd-kind-icon">Game<wbr>End<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/gameevent.html" class="tsd-kind-icon">Game<wbr>Event</a>
@@ -875,9 +925,6 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/growingstage.html" class="tsd-kind-icon">Growing<wbr>Stage</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="enums/growthstagetranslation.html" class="tsd-kind-icon">Growth<wbr>Stage<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/haircolor.html" class="tsd-kind-icon">Hair<wbr>Color</a>
@@ -900,10 +947,7 @@
 					<li class=" tsd-kind-enum">
 						<a href="enums/highlighttype.html" class="tsd-kind-icon">Highlight<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-is-not-exported">
-						<a href="enums/highscoredifficultyfilter.html" class="tsd-kind-icon">Highscore<wbr>Difficulty<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-is-not-exported">
+					<li class=" tsd-kind-enum">
 						<a href="enums/highscoresort.html" class="tsd-kind-icon">Highscore<wbr>Sort</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -911,6 +955,12 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/hookpriority.html" class="tsd-kind-icon">Hook<wbr>Priority</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/humanevent.html" class="tsd-kind-icon">Human<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/humanname.html" class="tsd-kind-icon">Human<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/inputbuttonevent.html" class="tsd-kind-icon">Input<wbr>Button<wbr>Event</a>
@@ -925,6 +975,9 @@
 						<a href="enums/inspecttype.html" class="tsd-kind-icon">Inspect<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/inspectioncontext.html" class="tsd-kind-icon">Inspection<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/interruptchoice.html" class="tsd-kind-icon">Interrupt<wbr>Choice</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -937,6 +990,9 @@
 						<a href="enums/itemquality.html" class="tsd-kind-icon">Item<wbr>Quality</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/itemtranslation.html" class="tsd-kind-icon">Item<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/itemtype.html" class="tsd-kind-icon">Item<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -946,10 +1002,10 @@
 						<a href="enums/keymodifier.html" class="tsd-kind-icon">Key<wbr>Modifier</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/languageextensions.html" class="tsd-kind-icon">Language<wbr>Extensions</a>
+						<a href="enums/legendarytype.html" class="tsd-kind-icon">Legendary<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/legendarytype.html" class="tsd-kind-icon">Legendary<wbr>Type</a>
+						<a href="enums/listender.html" class="tsd-kind-icon">List<wbr>Ender</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/loadingtype.html" class="tsd-kind-icon">Loading<wbr>Type</a>
@@ -988,13 +1044,25 @@
 						<a href="enums/messageseditfiltersdialogevent.html" class="tsd-kind-icon">Messages<wbr>Edit<wbr>Filters<wbr>Dialog<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/messagesevent.html" class="tsd-kind-icon">Messages<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/milestonedatatype.html" class="tsd-kind-icon">Milestone<wbr>Data<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/milestonesort.html" class="tsd-kind-icon">Milestone<wbr>Sort</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/milestonetranslation.html" class="tsd-kind-icon">Milestone<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/milestonetype.html" class="tsd-kind-icon">Milestone<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/milestonevisibilitytype.html" class="tsd-kind-icon">Milestone<wbr>Visibility<wbr>Type</a>
+						<a href="enums/milestonevisibility.html" class="tsd-kind-icon">Milestone<wbr>Visibility</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/misctranslation.html" class="tsd-kind-icon">Misc<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/modevent.html" class="tsd-kind-icon">Mod<wbr>Event</a>
@@ -1029,6 +1097,12 @@
 					<li class=" tsd-kind-enum">
 						<a href="enums/music.html" class="tsd-kind-icon">Music</a>
 					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/musicplaylist.html" class="tsd-kind-icon">Music<wbr>Playlist</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/musicplaylisttranslation.html" class="tsd-kind-icon">Music<wbr>Playlist<wbr>Translation</a>
+					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
 						<a href="enums/note.html" class="tsd-kind-icon">NOTE</a>
 					</li>
@@ -1045,10 +1119,16 @@
 						<a href="enums/note.html" class="tsd-kind-icon">Note</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/notetranslation.html" class="tsd-kind-icon">Note<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/notesdialogevent.html" class="tsd-kind-icon">Notes<wbr>Dialog<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
 						<a href="enums/notificationtype.html" class="tsd-kind-icon">Notification<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/nountype.html" class="tsd-kind-icon">Noun<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/objectcontext.html" class="tsd-kind-icon">Object<wbr>Context</a>
@@ -1084,10 +1164,16 @@
 						<a href="enums/pathtype.html" class="tsd-kind-icon">Path<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/pintype.html" class="tsd-kind-icon">Pin<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/playerevent.html" class="tsd-kind-icon">Player<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/playerstate.html" class="tsd-kind-icon">Player<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/playertranslation.html" class="tsd-kind-icon">Player<wbr>Translation</a>
+						<a href="enums/powermode.html" class="tsd-kind-icon">Power<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/pre240doodadtype.html" class="tsd-kind-icon">Pre240<wbr>Doodad<wbr>Type</a>
@@ -1111,6 +1197,27 @@
 						<a href="enums/quadrantelementcontextmenu.html" class="tsd-kind-icon">Quadrant<wbr>Element<wbr>Context<wbr>Menu</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/questevent.html" class="tsd-kind-icon">Quest<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/questinstanceevent.html" class="tsd-kind-icon">Quest<wbr>Instance<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/questlinkevent.html" class="tsd-kind-icon">Quest<wbr>Link<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/questmanagerevent.html" class="tsd-kind-icon">Quest<wbr>Manager<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/questpanel.html" class="tsd-kind-icon">Quest<wbr>Panel</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/questtranslation.html" class="tsd-kind-icon">Quest<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/questtype.html" class="tsd-kind-icon">Quest<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/rangeinputevent.html" class="tsd-kind-icon">Range<wbr>Input<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -1120,12 +1227,24 @@
 						<a href="enums/reducestrategy.html" class="tsd-kind-icon">Reduce<wbr>Strategy</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/registryregisteredintermediatetype.html" class="tsd-kind-icon">Registry<wbr>Registered<wbr>Intermediate<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/renderflag.html" class="tsd-kind-icon">Render<wbr>Flag</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/renderpriority.html" class="tsd-kind-icon">Render<wbr>Priority</a>
 					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/requirementevent.html" class="tsd-kind-icon">Requirement<wbr>Event</a>
+					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/requirementtriggerevent.html" class="tsd-kind-icon">Requirement<wbr>Trigger<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/requirementtype.html" class="tsd-kind-icon">Requirement<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/responsibility.html" class="tsd-kind-icon">Responsibility</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -1159,10 +1278,16 @@
 						<a href="enums/selectablelayer.html" class="tsd-kind-icon">Selectable<wbr>Layer</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/sentencecasestyle.html" class="tsd-kind-icon">Sentence<wbr>Case<wbr>Style</a>
+						<a href="enums/sfxtype.html" class="tsd-kind-icon">Sfx<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/skillconfigurationevent.html" class="tsd-kind-icon">Skill<wbr>Configuration<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/skillsort.html" class="tsd-kind-icon">Skill<wbr>Sort</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/sfxtype.html" class="tsd-kind-icon">Sfx<wbr>Type</a>
+						<a href="enums/skilltranslation.html" class="tsd-kind-icon">Skill<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/skilltype.html" class="tsd-kind-icon">Skill<wbr>Type</a>
@@ -1204,7 +1329,13 @@
 						<a href="enums/stattype.html" class="tsd-kind-icon">Stat<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/statuseffectchangereason.html" class="tsd-kind-icon">Status<wbr>Effect<wbr>Change<wbr>Reason</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/statuseffectrenderlayer.html" class="tsd-kind-icon">Status<wbr>Effect<wbr>Render<wbr>Layer</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/statuseffecttranslation.html" class="tsd-kind-icon">Status<wbr>Effect<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/statustype.html" class="tsd-kind-icon">Status<wbr>Type</a>
@@ -1225,6 +1356,9 @@
 						<a href="enums/terraintype.html" class="tsd-kind-icon">Terrain<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/textcontext.html" class="tsd-kind-icon">Text<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/textdecoration.html" class="tsd-kind-icon">Text<wbr>Decoration</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -1232,6 +1366,9 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/tickspeed.html" class="tsd-kind-icon">Tick<wbr>Speed</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/tileeventtranslation.html" class="tsd-kind-icon">Tile<wbr>Event<wbr>Translation</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/tileeventtype.html" class="tsd-kind-icon">Tile<wbr>Event<wbr>Type</a>
@@ -1246,10 +1383,10 @@
 						<a href="enums/timeformat.html" class="tsd-kind-icon">Time<wbr>Format</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/tooltiplocation.html" class="tsd-kind-icon">Tooltip<wbr>Location</a>
+						<a href="enums/tooltipevent.html" class="tsd-kind-icon">Tooltip<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/translationtype.html" class="tsd-kind-icon">Translation<wbr>Type</a>
+						<a href="enums/tooltiplocation.html" class="tsd-kind-icon">Tooltip<wbr>Location</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/turnmode.html" class="tsd-kind-icon">Turn<wbr>Mode</a>
@@ -1276,6 +1413,9 @@
 						<a href="enums/versioninfostage.html" class="tsd-kind-icon">Version<wbr>Info<wbr>Stage</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/watertype.html" class="tsd-kind-icon">Water<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/weightstatus.html" class="tsd-kind-icon">Weight<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -1287,8 +1427,11 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/aboutmenu.html" class="tsd-kind-icon">About<wbr>Menu</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/actionmanager.html" class="tsd-kind-icon">Action<wbr>Manager</a>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/action.html" class="tsd-kind-icon">Action</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/actionexecutor.html" class="tsd-kind-icon">Action<wbr>Executor</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/actionpacket.html" class="tsd-kind-icon">Action<wbr>Packet</a>
@@ -1301,15 +1444,6 @@
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/attributemanipulator.html" class="tsd-kind-icon">Attribute<wbr>Manipulator</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/baseentity.html" class="tsd-kind-icon">Base<wbr>Entity</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/baseentitymanager.html" class="tsd-kind-icon">Base<wbr>Entity<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/basehumanentity.html" class="tsd-kind-icon">Base<wbr>Human<wbr>Entity</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/basemod.html" class="tsd-kind-icon">Base<wbr>Mod</a>
@@ -1342,6 +1476,9 @@
 						<a href="classes/blockrow.html" class="tsd-kind-icon">Block<wbr>Row</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/bookdialog.html" class="tsd-kind-icon">Book<wbr>Dialog</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/bound3.html" class="tsd-kind-icon">Bound3</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1352,6 +1489,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/caughtuppacket.html" class="tsd-kind-icon">Caught<wbr>UpPacket</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/challenge.html" class="tsd-kind-icon">Challenge</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/changelogmenu.html" class="tsd-kind-icon">Changelog<wbr>Menu</a>
@@ -1374,6 +1514,9 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/checkbutton.html" class="tsd-kind-icon">Check<wbr>Button</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/checkbuttonrange.html" class="tsd-kind-icon">Check<wbr>Button<wbr>Range</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/choice.html" class="tsd-kind-icon">Choice</a>
 					</li>
@@ -1385,6 +1528,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/clientpacket.html" class="tsd-kind-icon">Client<wbr>Packet</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/clientstore.html" class="tsd-kind-icon">Client<wbr>Store</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/commandmanager.html" class="tsd-kind-icon">Command<wbr>Manager</a>
@@ -1422,6 +1568,12 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/creaturemanager.html" class="tsd-kind-icon">Creature<wbr>Manager</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/customgameoptionsmenu.html" class="tsd-kind-icon">Custom<wbr>Game<wbr>Options<wbr>Menu</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/customgameoptionstab.html" class="tsd-kind-icon">Custom<wbr>Game<wbr>Options<wbr>Tab</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/datamanipulator.html" class="tsd-kind-icon">Data<wbr>Manipulator</a>
 					</li>
@@ -1430,6 +1582,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/default.html" class="tsd-kind-icon">Default</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/defaultmusichandler.html" class="tsd-kind-icon">Default<wbr>Music<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/defense.html" class="tsd-kind-icon">Defense</a>
@@ -1467,11 +1622,26 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/emitter.html" class="tsd-kind-icon">Emitter</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/entity.html" class="tsd-kind-icon">Entity</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/entitymanager.html" class="tsd-kind-icon">Entity<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/entitytargetedsharedpacket.html" class="tsd-kind-icon">Entity<wbr>Targeted<wbr>Shared<wbr>Packet</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/enumcontextmenu.html" class="tsd-kind-icon">Enum<wbr>Context<wbr>Menu</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/enumcursor.html" class="tsd-kind-icon">Enum<wbr>Cursor</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/exploremap.html" class="tsd-kind-icon">Explore<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/exploredmapclientdata.html" class="tsd-kind-icon">Explored<wbr>Map<wbr>Client<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/fence.html" class="tsd-kind-icon">Fence</a>
@@ -1493,9 +1663,6 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/flowfieldmanager.html" class="tsd-kind-icon">Flow<wbr>Field<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/friendsmenu.html" class="tsd-kind-icon">Friends<wbr>Menu</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/game.html" class="tsd-kind-icon">Game</a>
@@ -1521,7 +1688,7 @@
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="classes/handle.html" class="tsd-kind-icon">Handle</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
+					<li class=" tsd-kind-class">
 						<a href="classes/header.html" class="tsd-kind-icon">Header</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1557,6 +1724,15 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/hookmanager.html" class="tsd-kind-icon">Hook<wbr>Manager</a>
 					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/hookrequirementtrigger.html" class="tsd-kind-icon">Hook<wbr>Requirement<wbr>Trigger</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/hostrequirementtrigger.html" class="tsd-kind-icon">Host<wbr>Requirement<wbr>Trigger</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/human.html" class="tsd-kind-icon">Human</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/ingamescreen.html" class="tsd-kind-icon">In<wbr>Game<wbr>Screen</a>
 					</li>
@@ -1571,6 +1747,12 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/inputbutton.html" class="tsd-kind-icon">Input<wbr>Button</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/inspection.html" class="tsd-kind-icon">Inspection</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/inspectionsection.html" class="tsd-kind-icon">Inspection<wbr>Section</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/intermodregistration.html" class="tsd-kind-icon">Inter<wbr>Mod<wbr>Registration</a>
@@ -1603,7 +1785,7 @@
 						<a href="classes/itemreciperequirementchecker.html" class="tsd-kind-icon">Item<wbr>Recipe<wbr>Requirement<wbr>Checker</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/joindedicatedservermenu.html" class="tsd-kind-icon">Join<wbr>Dedicated<wbr>Server<wbr>Menu</a>
+						<a href="classes/joinservermenu.html" class="tsd-kind-icon">Join<wbr>Server<wbr>Menu</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/keepalivepacket.html" class="tsd-kind-icon">Keep<wbr>Alive<wbr>Packet</a>
@@ -1613,6 +1795,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/language.html" class="tsd-kind-icon">Language</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/languageextension.html" class="tsd-kind-icon">Language<wbr>Extension</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/languagemanager.html" class="tsd-kind-icon">Language<wbr>Manager</a>
@@ -1639,6 +1824,9 @@
 						<a href="classes/mainmenuscreen.html" class="tsd-kind-icon">Main<wbr>Menu<wbr>Screen</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/mapdialog.html" class="tsd-kind-icon">Map<wbr>Dialog</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/mapgen200.html" class="tsd-kind-icon">Map<wbr>Gen200</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1658,6 +1846,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/mapgen260.html" class="tsd-kind-icon">Map<wbr>Gen260</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/mapgen270.html" class="tsd-kind-icon">Map<wbr>Gen270</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/matchmaking.html" class="tsd-kind-icon">Matchmaking</a>
@@ -1696,6 +1887,9 @@
 						<a href="classes/messageseditfiltersdialog.html" class="tsd-kind-icon">Messages<wbr>Edit<wbr>Filters<wbr>Dialog</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/milestonesdialog.html" class="tsd-kind-icon">Milestones<wbr>Dialog</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/mod.html" class="tsd-kind-icon">Mod</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1720,10 +1914,19 @@
 						<a href="classes/multiplayer.html" class="tsd-kind-icon">Multiplayer</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/multiplayermenu.html" class="tsd-kind-icon">Multiplayer<wbr>Menu</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/npcmanager.html" class="tsd-kind-icon">NPCManager</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/newgamemenu.html" class="tsd-kind-icon">New<wbr>Game<wbr>Menu</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/newuidata.html" class="tsd-kind-icon">New<wbr>UiData</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/newuidataupdatepacket.html" class="tsd-kind-icon">New<wbr>UiData<wbr>Update<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/newsmenu.html" class="tsd-kind-icon">News<wbr>Menu</a>
@@ -1768,6 +1971,9 @@
 						<a href="classes/pingpacket.html" class="tsd-kind-icon">Ping<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/pinnedmessage.html" class="tsd-kind-icon">Pinned<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/player.html" class="tsd-kind-icon">Player</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1790,6 +1996,24 @@
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/quadrantcomponent.html" class="tsd-kind-icon">Quadrant<wbr>Component</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/quest.html" class="tsd-kind-icon">Quest</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/questdescription.html" class="tsd-kind-icon">Quest<wbr>Description</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/questdialog.html" class="tsd-kind-icon">Quest<wbr>Dialog</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/questinstance.html" class="tsd-kind-icon">Quest<wbr>Instance</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/questlink.html" class="tsd-kind-icon">Quest<wbr>Link</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/questmanager.html" class="tsd-kind-icon">Quest<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/queue.html" class="tsd-kind-icon">Queue</a>
@@ -1823,6 +2047,15 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/removeplayerpacket.html" class="tsd-kind-icon">Remove<wbr>Player<wbr>Packet</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/requirement.html" class="tsd-kind-icon">Requirement</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/requirementinstance.html" class="tsd-kind-icon">Requirement<wbr>Instance</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/requirementrow.html" class="tsd-kind-icon">Requirement<wbr>Row</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/resistances.html" class="tsd-kind-icon">Resistances</a>
@@ -1869,8 +2102,14 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/serializer.html" class="tsd-kind-icon">Serializer</a>
 					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/serverdirectory.html" class="tsd-kind-icon">Server<wbr>Directory</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/serverpacket.html" class="tsd-kind-icon">Server<wbr>Packet</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/serverrow.html" class="tsd-kind-icon">Server<wbr>Row</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/setplayerzpacket.html" class="tsd-kind-icon">Set<wbr>PlayerZPacket</a>
@@ -1881,8 +2120,14 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/showloadingscreenpacket.html" class="tsd-kind-icon">Show<wbr>Loading<wbr>Screen<wbr>Packet</a>
 					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/skillconfiguration.html" class="tsd-kind-icon">Skill<wbr>Configuration</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/skilllevel.html" class="tsd-kind-icon">Skill<wbr>Level</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/skillsdialog.html" class="tsd-kind-icon">Skills<wbr>Dialog</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/socialrow.html" class="tsd-kind-icon">Social<wbr>Row</a>
@@ -1901,6 +2146,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/splashscreen.html" class="tsd-kind-icon">Splash<wbr>Screen</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/spliterables.html" class="tsd-kind-icon">Spliterables</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/spriteatlas.html" class="tsd-kind-icon">Sprite<wbr>Atlas</a>
@@ -1984,10 +2232,28 @@
 						<a href="classes/tabgeneral.html" class="tsd-kind-icon">Tab<wbr>General</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabitems.html" class="tsd-kind-icon">Tab<wbr>Items</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/tabmods.html" class="tsd-kind-icon">Tab<wbr>Mods</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabreputation.html" class="tsd-kind-icon">Tab<wbr>Reputation</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/tabsavedata.html" class="tsd-kind-icon">Tab<wbr>Save<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabskills.html" class="tsd-kind-icon">Tab<wbr>Skills</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabstats.html" class="tsd-kind-icon">Tab<wbr>Stats</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabstatuseffects.html" class="tsd-kind-icon">Tab<wbr>Status<wbr>Effects</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/tabtime.html" class="tsd-kind-icon">Tab<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/tabvideo.html" class="tsd-kind-icon">Tab<wbr>Video</a>
@@ -2024,6 +2290,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/translation.html" class="tsd-kind-icon">Translation</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/translationsprovider.html" class="tsd-kind-icon">Translations<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/trello.html" class="tsd-kind-icon">Trello</a>
@@ -2103,8 +2372,8 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/worldrenderer.html" class="tsd-kind-icon">World<wbr>Renderer</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<a href="interfaces/array.html" class="tsd-kind-icon">Array</a>
+					<li class=" tsd-kind-class">
+						<a href="classes/worldtooltiphandler.html" class="tsd-kind-icon">World<wbr>Tooltip<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/bindcatcherapi.html" class="tsd-kind-icon">Bind<wbr>Catcher<wbr>Api</a>
@@ -2130,35 +2399,17 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/extendsscreen.html" class="tsd-kind-icon">Extends<wbr>Screen</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/function.html" class="tsd-kind-icon">Function</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iactionapi.html" class="tsd-kind-icon">IAction<wbr>Api</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/gameenddata.html" class="tsd-kind-icon">Game<wbr>End<wbr>Data</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iactionconfirmerapi.html" class="tsd-kind-icon">IAction<wbr>Confirmer<wbr>Api</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iaction.html" class="tsd-kind-icon">IAction</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionargumentvalidator.html" class="tsd-kind-icon">IAction<wbr>Argument<wbr>Validator</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionbase.html" class="tsd-kind-icon">IAction<wbr>Base</a>
-					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/iactiondescription.html" class="tsd-kind-icon">IAction<wbr>Description</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactiondescriptiondescription.html" class="tsd-kind-icon">IAction<wbr>Description<wbr>Description</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactiondescriptionnamed.html" class="tsd-kind-icon">IAction<wbr>Description<wbr>Named</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactiondictionary.html" class="tsd-kind-icon">IAction<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionmanager.html" class="tsd-kind-icon">IAction<wbr>Manager</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iactionhandlerapi.html" class="tsd-kind-icon">IAction<wbr>Handler<wbr>Api</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iactionparticle.html" class="tsd-kind-icon">IAction<wbr>Particle</a>
@@ -2167,19 +2418,7 @@
 						<a href="interfaces/iactionregistration.html" class="tsd-kind-icon">IAction<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionresult.html" class="tsd-kind-icon">IAction<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionresultdelay.html" class="tsd-kind-icon">IAction<wbr>Result<wbr>Delay</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionresultskillgain.html" class="tsd-kind-icon">IAction<wbr>Result<wbr>Skill<wbr>Gain</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionresultsoundeffect.html" class="tsd-kind-icon">IAction<wbr>Result<wbr>Sound<wbr>Effect</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionupdateview.html" class="tsd-kind-icon">IAction<wbr>Update<wbr>View</a>
+						<a href="interfaces/iactionsoundeffect.html" class="tsd-kind-icon">IAction<wbr>Sound<wbr>Effect</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iasyncdatastorage.html" class="tsd-kind-icon">IAsync<wbr>Data<wbr>Storage</a>
@@ -2192,15 +2431,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ibasecontainerreference.html" class="tsd-kind-icon">IBase<wbr>Container<wbr>Reference</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/ibaseentity.html" class="tsd-kind-icon">IBase<wbr>Entity</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/ibaseentitymanager.html" class="tsd-kind-icon">IBase<wbr>Entity<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/ibasehumanentity.html" class="tsd-kind-icon">IBase<wbr>Human<wbr>Entity</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ibasemodregistration.html" class="tsd-kind-icon">IBase<wbr>Mod<wbr>Registration</a>
@@ -2216,9 +2446,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ibindings.html" class="tsd-kind-icon">IBindings</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/ibookdictionary.html" class="tsd-kind-icon">IBook<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ibound3.html" class="tsd-kind-icon">IBound3</a>
@@ -2249,6 +2476,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/iclasslistmanipulatoruntil.html" class="tsd-kind-icon">IClass<wbr>List<wbr>Manipulator<wbr>Until</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iclientdata.html" class="tsd-kind-icon">IClient<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iclientstore.html" class="tsd-kind-icon">IClient<wbr>Store</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/icolordescription.html" class="tsd-kind-icon">IColor<wbr>Description</a>
@@ -2299,9 +2532,6 @@
 						<a href="interfaces/icorpsedescription.html" class="tsd-kind-icon">ICorpse<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/icorpsedictionary.html" class="tsd-kind-icon">ICorpse<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/icorpsemanager.html" class="tsd-kind-icon">ICorpse<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2317,9 +2547,6 @@
 						<a href="interfaces/icreaturedescription.html" class="tsd-kind-icon">ICreature<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/icreaturedictionary.html" class="tsd-kind-icon">ICreature<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/icreatureloot.html" class="tsd-kind-icon">ICreature<wbr>Loot</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2329,7 +2556,16 @@
 						<a href="interfaces/icreatureold.html" class="tsd-kind-icon">ICreature<wbr>Old</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/icreatureregistration.html" class="tsd-kind-icon">ICreature<wbr>Registration</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/icustomizations.html" class="tsd-kind-icon">ICustomizations</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idailychallengemodifier.html" class="tsd-kind-icon">IDaily<wbr>Challenge<wbr>Modifier</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idailychallengemodifierregistration.html" class="tsd-kind-icon">IDaily<wbr>Challenge<wbr>Modifier<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/idamageinfo.html" class="tsd-kind-icon">IDamage<wbr>Info</a>
@@ -2368,6 +2604,21 @@
 						<a href="interfaces/idictionaryschema.html" class="tsd-kind-icon">IDictionary<wbr>Schema</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/idifficultyoptions.html" class="tsd-kind-icon">IDifficulty<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idifficultyoptionsicon.html" class="tsd-kind-icon">IDifficulty<wbr>Options<wbr>Icon</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idifficultyoptionsskill.html" class="tsd-kind-icon">IDifficulty<wbr>Options<wbr>Skill</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idifficultyoptionsstat.html" class="tsd-kind-icon">IDifficulty<wbr>Options<wbr>Stat</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idifficultyoptionsstatuseffect.html" class="tsd-kind-icon">IDifficulty<wbr>Options<wbr>Status<wbr>Effect</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/idisableable.html" class="tsd-kind-icon">IDisableable</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2392,9 +2643,6 @@
 						<a href="interfaces/idoodaddescription.html" class="tsd-kind-icon">IDoodad<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/idoodaddictionary.html" class="tsd-kind-icon">IDoodad<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/idoodaddoor.html" class="tsd-kind-icon">IDoodad<wbr>Door</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2405,6 +2653,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/idoodadparticles.html" class="tsd-kind-icon">IDoodad<wbr>Particles</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/idoodadregistration.html" class="tsd-kind-icon">IDoodad<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/idoodadresource.html" class="tsd-kind-icon">IDoodad<wbr>Resource</a>
@@ -2423,6 +2674,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ientity.html" class="tsd-kind-icon">IEntity</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/ientitymanager.html" class="tsd-kind-icon">IEntity<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ienuminfo.html" class="tsd-kind-icon">IEnum<wbr>Info</a>
@@ -2446,6 +2700,9 @@
 						<a href="interfaces/igame.html" class="tsd-kind-icon">IGame</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/igameenddata.html" class="tsd-kind-icon">IGame<wbr>End<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/igamescreenapi.html" class="tsd-kind-icon">IGame<wbr>Screen<wbr>Api</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
@@ -2456,9 +2713,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/igroupdescription.html" class="tsd-kind-icon">IGroup<wbr>Description</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/igrowthdictionary.html" class="tsd-kind-icon">IGrowth<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ihairstyledescription.html" class="tsd-kind-icon">IHairstyle<wbr>Description</a>
@@ -2479,10 +2733,10 @@
 						<a href="interfaces/ihighscore.html" class="tsd-kind-icon">IHighscore</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ihintdictionary.html" class="tsd-kind-icon">IHint<wbr>Dictionary</a>
+						<a href="interfaces/ihookmanager.html" class="tsd-kind-icon">IHook<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ihookmanager.html" class="tsd-kind-icon">IHook<wbr>Manager</a>
+						<a href="interfaces/ihuman.html" class="tsd-kind-icon">IHuman</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iimageoverridedescription.html" class="tsd-kind-icon">IImage<wbr>Override<wbr>Description</a>
@@ -2500,7 +2754,22 @@
 						<a href="interfaces/iinputmovement.html" class="tsd-kind-icon">IInput<wbr>Movement</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iinspect.html" class="tsd-kind-icon">IInspect</a>
+						<a href="interfaces/iinspectable.html" class="tsd-kind-icon">IInspectable</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iinspection.html" class="tsd-kind-icon">IInspection</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iinspectionhandler.html" class="tsd-kind-icon">IInspection<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iinspectionsection.html" class="tsd-kind-icon">IInspection<wbr>Section</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iinspectionsectionsimple.html" class="tsd-kind-icon">IInspection<wbr>Section<wbr>Simple</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iinspectiontyperegistration.html" class="tsd-kind-icon">IInspection<wbr>Type<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iintermodregistration.html" class="tsd-kind-icon">IInter<wbr>Mod<wbr>Registration</a>
@@ -2530,7 +2799,10 @@
 						<a href="interfaces/iitemdescription.html" class="tsd-kind-icon">IItem<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iitemdictionary.html" class="tsd-kind-icon">IItem<wbr>Dictionary</a>
+						<a href="interfaces/iitemgroupdescription.html" class="tsd-kind-icon">IItem<wbr>Group<wbr>Description</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iitemgroupregistration.html" class="tsd-kind-icon">IItem<wbr>Group<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iitemlegendary.html" class="tsd-kind-icon">IItem<wbr>Legendary</a>
@@ -2548,31 +2820,31 @@
 						<a href="interfaces/iitemold.html" class="tsd-kind-icon">IItem<wbr>Old</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iitemtypegroup.html" class="tsd-kind-icon">IItem<wbr>Type<wbr>Group</a>
+						<a href="interfaces/iitemregistration.html" class="tsd-kind-icon">IItem<wbr>Registration</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/iiterablemap.html" class="tsd-kind-icon">IIterable<wbr>Map</a>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iitemused.html" class="tsd-kind-icon">IItem<wbr>Used</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ikeybind.html" class="tsd-kind-icon">IKey<wbr>Bind</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ilanguage.html" class="tsd-kind-icon">ILanguage</a>
+						<a href="interfaces/ikillcreaturerequirement.html" class="tsd-kind-icon">IKill<wbr>Creature<wbr>Requirement</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ilanguageentryprovider.html" class="tsd-kind-icon">ILanguage<wbr>Entry<wbr>Provider</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/ilanguageextension.html" class="tsd-kind-icon">ILanguage<wbr>Extension</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/ilanguagemanager.html" class="tsd-kind-icon">ILanguage<wbr>Manager</a>
+						<a href="interfaces/ikillcreaturesrequirement.html" class="tsd-kind-icon">IKill<wbr>Creatures<wbr>Requirement</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ilinksection.html" class="tsd-kind-icon">ILink<wbr>Section</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/iliquid.html" class="tsd-kind-icon">ILiquid</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imapgen.html" class="tsd-kind-icon">IMap<wbr>Gen</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imaprequest.html" class="tsd-kind-icon">IMap<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imatchmaking.html" class="tsd-kind-icon">IMatchmaking</a>
@@ -2605,6 +2877,9 @@
 						<a href="interfaces/imatchmakingunabletojoingamemessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Unable<wbr>ToJoin<wbr>Game<wbr>Message<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/imatchmakingupdatedirectorymessagedata.html" class="tsd-kind-icon">IMatchmaking<wbr>Update<wbr>Directory<wbr>Message<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imenu.html" class="tsd-kind-icon">IMenu</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2615,9 +2890,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imessage.html" class="tsd-kind-icon">IMessage</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/imessagedictionary.html" class="tsd-kind-icon">IMessage<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imessagefilter.html" class="tsd-kind-icon">IMessage<wbr>Filter</a>
@@ -2638,13 +2910,13 @@
 						<a href="interfaces/imessagesourceregistration.html" class="tsd-kind-icon">IMessage<wbr>Source<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/imessages.html" class="tsd-kind-icon">IMessages</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/imilestone.html" class="tsd-kind-icon">IMilestone</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imilestonedata.html" class="tsd-kind-icon">IMilestone<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/imilestonedictionary.html" class="tsd-kind-icon">IMilestone<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imobcheck.html" class="tsd-kind-icon">IMob<wbr>Check</a>
@@ -2676,6 +2948,9 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imultiplayer.html" class="tsd-kind-icon">IMultiplayer</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="interfaces/imultiplayerinfo.html" class="tsd-kind-icon">IMultiplayer<wbr>Info</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imultiplayermod.html" class="tsd-kind-icon">IMultiplayer<wbr>Mod</a>
 					</li>
@@ -2684,6 +2959,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imultiplayeroptions.html" class="tsd-kind-icon">IMultiplayer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imultiplayerstate.html" class="tsd-kind-icon">IMultiplayer<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imultiplayerworlddata.html" class="tsd-kind-icon">IMultiplayer<wbr>World<wbr>Data</a>
@@ -2705,6 +2983,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/inpcmanager.html" class="tsd-kind-icon">INPCManager</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inpcregistration.html" class="tsd-kind-icon">INPCRegistration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/inetworkedproperty.html" class="tsd-kind-icon">INetworked<wbr>Property</a>
@@ -2737,9 +3018,6 @@
 						<a href="interfaces/iobjectoptions.html" class="tsd-kind-icon">IObject<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ionequipdictionary.html" class="tsd-kind-icon">IOn<wbr>Equip<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/ionequiptype.html" class="tsd-kind-icon">IOn<wbr>Equip<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2747,9 +3025,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ioptionssectionregistration.html" class="tsd-kind-icon">IOptions<wbr>Section<wbr>Registration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/ioutgoingqueuedpacket.html" class="tsd-kind-icon">IOutgoing<wbr>Queued<wbr>Packet</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ioverlaydescription.html" class="tsd-kind-icon">IOverlay<wbr>Description</a>
@@ -2776,6 +3051,9 @@
 						<a href="interfaces/iperson.html" class="tsd-kind-icon">IPerson</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/ipinnedmessage.html" class="tsd-kind-icon">IPinned<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/iplayoptions.html" class="tsd-kind-icon">IPlay<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -2794,16 +3072,31 @@
 						<a href="interfaces/iplayertraveldata.html" class="tsd-kind-icon">IPlayer<wbr>Travel<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ipreserializecallback.html" class="tsd-kind-icon">IPre<wbr>Serialize<wbr>Callback</a>
+						<a href="interfaces/ipluralizationrules.html" class="tsd-kind-icon">IPluralization<wbr>Rules</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ipressnamedictionary.html" class="tsd-kind-icon">IPress<wbr>Name<wbr>Dictionary</a>
+						<a href="interfaces/ipreserializecallback.html" class="tsd-kind-icon">IPre<wbr>Serialize<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/ipressstates.html" class="tsd-kind-icon">IPress<wbr>States</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ipropserializable.html" class="tsd-kind-icon">IProp<wbr>Serializable</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iprotecteditemoptions.html" class="tsd-kind-icon">IProtected<wbr>Item<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iquest.html" class="tsd-kind-icon">IQuest</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iquestregistration.html" class="tsd-kind-icon">IQuest<wbr>Registration</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iquestrequirementregistration.html" class="tsd-kind-icon">IQuest<wbr>Requirement<wbr>Registration</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iqueueddata.html" class="tsd-kind-icon">IQueued<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/iqueuedsound.html" class="tsd-kind-icon">IQueued<wbr>Sound</a>
@@ -2847,8 +3140,23 @@
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/iregistry.html" class="tsd-kind-icon">IRegistry</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iregistryregisteredactionintermediategetter.html" class="tsd-kind-icon">IRegistry<wbr>Registered<wbr>Action<wbr>Intermediate<wbr>Getter</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iregistryregisteredcommandintermediategetter.html" class="tsd-kind-icon">IRegistry<wbr>Registered<wbr>Command<wbr>Intermediate<wbr>Getter</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/iregistryregisteredpropertyintermediategetter.html" class="tsd-kind-icon">IRegistry<wbr>Registered<wbr>Property<wbr>Intermediate<wbr>Getter</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iregistryregistration.html" class="tsd-kind-icon">IRegistry<wbr>Registration</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/irequirement.html" class="tsd-kind-icon">IRequirement</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/irequirementapi.html" class="tsd-kind-icon">IRequirement<wbr>Api</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iresourcecontainer.html" class="tsd-kind-icon">IResource<wbr>Container</a>
@@ -2879,6 +3187,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/isavedcharacter.html" class="tsd-kind-icon">ISaved<wbr>Character</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/isavededges.html" class="tsd-kind-icon">ISaved<wbr>Edges</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iscalemanager.html" class="tsd-kind-icon">IScale<wbr>Manager</a>
@@ -2914,13 +3225,25 @@
 						<a href="interfaces/iserializedlanguage.html" class="tsd-kind-icon">ISerialized<wbr>Language</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/iserializedlanguageextension.html" class="tsd-kind-icon">ISerialized<wbr>Language<wbr>Extension</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iserializedtranslation.html" class="tsd-kind-icon">ISerialized<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iserializedtranslationsprovider.html" class="tsd-kind-icon">ISerialized<wbr>Translations<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/iserializer.html" class="tsd-kind-icon">ISerializer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iserverlist.html" class="tsd-kind-icon">IServer<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iskilldescription.html" class="tsd-kind-icon">ISkill<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iskilldictionary.html" class="tsd-kind-icon">ISkill<wbr>Dictionary</a>
+						<a href="interfaces/iskillregistration.html" class="tsd-kind-icon">ISkill<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iskillset.html" class="tsd-kind-icon">ISkill<wbr>Set</a>
@@ -2954,6 +3277,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/isourcefilter.html" class="tsd-kind-icon">ISource<wbr>Filter</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ispawnablecreatures.html" class="tsd-kind-icon">ISpawnable<wbr>Creatures</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ispriteatlas.html" class="tsd-kind-icon">ISprite<wbr>Atlas</a>
@@ -3022,9 +3348,6 @@
 						<a href="interfaces/isteamworks.html" class="tsd-kind-icon">ISteamworks</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/istringarray.html" class="tsd-kind-icon">IString<wbr>Array</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/istringsection.html" class="tsd-kind-icon">IString<wbr>Section</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
@@ -3038,6 +3361,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/isynchronizationcheckdata.html" class="tsd-kind-icon">ISynchronization<wbr>Check<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/itamecreaturerequirement.html" class="tsd-kind-icon">ITame<wbr>Creature<wbr>Requirement</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/itamecreaturesrequirement.html" class="tsd-kind-icon">ITame<wbr>Creatures<wbr>Requirement</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/iteammember.html" class="tsd-kind-icon">ITeam<wbr>Member</a>
@@ -3055,7 +3384,10 @@
 						<a href="interfaces/iterraindescription.html" class="tsd-kind-icon">ITerrain<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iterraindictionary.html" class="tsd-kind-icon">ITerrain<wbr>Dictionary</a>
+						<a href="interfaces/iterrainregistration.html" class="tsd-kind-icon">ITerrain<wbr>Registration</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iterrainregistrationdescription.html" class="tsd-kind-icon">ITerrain<wbr>Registration<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iterrainresource.html" class="tsd-kind-icon">ITerrain<wbr>Resource</a>
@@ -3097,16 +3429,13 @@
 						<a href="interfaces/itileeventdescription.html" class="tsd-kind-icon">ITile<wbr>Event<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/itileeventdictionary.html" class="tsd-kind-icon">ITile<wbr>Event<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/itileeventmanager.html" class="tsd-kind-icon">ITile<wbr>Event<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/itileold.html" class="tsd-kind-icon">ITile<wbr>Old</a>
+						<a href="interfaces/itileeventregistration.html" class="tsd-kind-icon">ITile<wbr>Event<wbr>Registration</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/itimemanager.html" class="tsd-kind-icon">ITime<wbr>Manager</a>
+						<a href="interfaces/itileold.html" class="tsd-kind-icon">ITile<wbr>Old</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/itooltip.html" class="tsd-kind-icon">ITooltip</a>
@@ -3122,15 +3451,6 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/itrackedoverlay.html" class="tsd-kind-icon">ITracked<wbr>Overlay</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/itranslationarray.html" class="tsd-kind-icon">ITranslation<wbr>Array</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/itranslationdata.html" class="tsd-kind-icon">ITranslation<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/itranslationobject.html" class="tsd-kind-icon">ITranslation<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/itrello.html" class="tsd-kind-icon">ITrello</a>
@@ -3154,9 +3474,6 @@
 						<a href="interfaces/iui.html" class="tsd-kind-icon">IUi</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iuidictionary.html" class="tsd-kind-icon">IUi<wbr>Dictionary</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/iuiscreen.html" class="tsd-kind-icon">IUi<wbr>Screen</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -3170,6 +3487,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iversioninfo.html" class="tsd-kind-icon">IVersion<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iwell.html" class="tsd-kind-icon">IWell</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iworkshopitem.html" class="tsd-kind-icon">IWorkshop<wbr>Item</a>
@@ -3192,12 +3512,6 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/loadmenuargs.html" class="tsd-kind-icon">Load<wbr>Menu<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<a href="interfaces/map.html" class="tsd-kind-icon">Map</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/mapconstructor.html" class="tsd-kind-icon">Map<wbr>Constructor</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/matchmakingmessage.html" class="tsd-kind-icon">Matchmaking<wbr>Message</a>
 					</li>
@@ -3212,12 +3526,6 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/newsarticle.html" class="tsd-kind-icon">News<wbr>Article</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/promiseconstructor.html" class="tsd-kind-icon">Promise<wbr>Constructor</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/regexp.html" class="tsd-kind-icon">Reg<wbr>Exp</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/registeredmethod.html" class="tsd-kind-icon">Registered<wbr>Method</a>
@@ -3237,11 +3545,32 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/uiapi.html" class="tsd-kind-icon">Ui<wbr>Api</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#actionargumententrytype" class="tsd-kind-icon">Action<wbr>Argument<wbr>Entry<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#actioncallback" class="tsd-kind-icon">Action<wbr>Callback</a>
+						<a href="globals.html#actionargumenttupletypes" class="tsd-kind-icon">Action<wbr>Argument<wbr>Tuple<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#actionargumenttype" class="tsd-kind-icon">Action<wbr>Argument<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#actionarguments" class="tsd-kind-icon">Action<wbr>Arguments</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#characterpreviewrotation" class="tsd-kind-icon">Character<wbr>Preview<wbr>Rotation</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#checkifallpresent" class="tsd-kind-icon">Check<wbr>IfAll<wbr>Present</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#checkifallpresent2" class="tsd-kind-icon">Check<wbr>IfAll<wbr>Present2</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#checker" class="tsd-kind-icon">Checker</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#clientdatamap" class="tsd-kind-icon">Client<wbr>Data<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#commandcallback" class="tsd-kind-icon">Command<wbr>Callback</a>
@@ -3259,10 +3588,22 @@
 						<a href="globals.html#directionalbindstates" class="tsd-kind-icon">Directional<wbr>Bind<wbr>States</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#entity" class="tsd-kind-icon">Entity</a>
+						<a href="globals.html#entityplayercreaturenpc" class="tsd-kind-icon">Entity<wbr>Player<wbr>Creature<wbr>Npc</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#entitytypetupletype" class="tsd-kind-icon">Entity<wbr>Type<wbr>Tuple<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#entitytypetype" class="tsd-kind-icon">Entity<wbr>Type<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#executeargument" class="tsd-kind-icon">Execute<wbr>Argument</a>
+						<a href="globals.html#enum" class="tsd-kind-icon">Enum</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#extractactionargumentarray" class="tsd-kind-icon">Extract<wbr>Action<wbr>Argument<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#extractenum" class="tsd-kind-icon">Extract<wbr>Enum</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-not-exported">
 						<a href="globals.html#helddirections" class="tsd-kind-icon">Held<wbr>Directions</a>
@@ -3272,12 +3613,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-not-exported">
 						<a href="globals.html#highscorefilter" class="tsd-kind-icon">Highscore<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#iactionargument" class="tsd-kind-icon">IAction<wbr>Argument</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#iactionargumentvalidatorbase" class="tsd-kind-icon">IAction<wbr>Argument<wbr>Validator<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#icachedhooks" class="tsd-kind-icon">ICached<wbr>Hooks</a>
@@ -3361,7 +3696,10 @@
 						<a href="globals.html#itiledataold" class="tsd-kind-icon">ITile<wbr>Data<wbr>Old</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#itranslation" class="tsd-kind-icon">ITranslation</a>
+						<a href="globals.html#inspectionresult" class="tsd-kind-icon">Inspection<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#irregularrule" class="tsd-kind-icon">Irregular<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#matchmakingmessagedata" class="tsd-kind-icon">Matchmaking<wbr>Message<wbr>Data</a>
@@ -3376,13 +3714,28 @@
 						<a href="globals.html#movementintent" class="tsd-kind-icon">Movement<wbr>Intent</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#namerule" class="tsd-kind-icon">Name<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#packettarget" class="tsd-kind-icon">Packet<wbr>Target</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#pluralrule" class="tsd-kind-icon">Plural<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#removeproperties" class="tsd-kind-icon">Remove<wbr>Properties</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#requirementapi" class="tsd-kind-icon">Requirement<wbr>Api</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#requirementargs" class="tsd-kind-icon">Requirement<wbr>Args</a>
+					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#serverinfo" class="tsd-kind-icon">Server<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#singularrule" class="tsd-kind-icon">Singular<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#spritelineorrenderlayerimpl" class="tsd-kind-icon">Sprite<wbr>Line<wbr>OrRender<wbr>Layer<wbr>Impl</a>
@@ -3405,6 +3758,27 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#translationgenerator" class="tsd-kind-icon">Translation<wbr>Generator</a>
 					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#translationprovider" class="tsd-kind-icon">Translation<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#tuple1" class="tsd-kind-icon">Tuple1</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#tuple2" class="tsd-kind-icon">Tuple2</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#tuple3" class="tsd-kind-icon">Tuple3</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#tuple4" class="tsd-kind-icon">Tuple4</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#tuple5" class="tsd-kind-icon">Tuple5</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#uncountablerule" class="tsd-kind-icon">Uncountable<wbr>Rule</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#writable" class="tsd-kind-icon">Writable</a>
 					</li>
@@ -3413,6 +3787,12 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#ontileupdatedelegate" class="tsd-kind-icon">on<wbr>Tile<wbr>Update<wbr>Delegate</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#all" class="tsd-kind-icon">ALL</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#challenge_modifiers_min" class="tsd-kind-icon">CHALLENGE_<wbr>MODIFIERS_<wbr>MIN</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#dialog_opacity_default" class="tsd-kind-icon">DIALOG_<wbr>OPACITY_<wbr>DEFAULT</a>
@@ -3423,8 +3803,14 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#epsilon" class="tsd-kind-icon">EPSILON</a>
 					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#exclusive_modifiers" class="tsd-kind-icon">EXCLUSIVE_<wbr>MODIFIERS</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#flee_distance_sq" class="tsd-kind-icon">FLEE_<wbr>DISTANCE_<wbr>SQ</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#inherit" class="tsd-kind-icon">INHERIT</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#invalid" class="tsd-kind-icon">INVALID</a>
@@ -3442,10 +3828,34 @@
 						<a href="globals.html#newui_hook_priority" class="tsd-kind-icon">NEWUI_<wbr>HOOK_<wbr>PRIORITY</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#permanent_status_effect_multiplier" class="tsd-kind-icon">PERMANENT_<wbr>STATUS_<wbr>EFFECT_<wbr>MULTIPLIER</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#permanent_status_effect_multiplier_rate" class="tsd-kind-icon">PERMANENT_<wbr>STATUS_<wbr>EFFECT_<wbr>MULTIPLIER_<wbr>RATE</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#reputation_max" class="tsd-kind-icon">REPUTATION_<wbr>MAX</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#slot_challenge" class="tsd-kind-icon">SLOT_<wbr>CHALLENGE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#slot_count_max" class="tsd-kind-icon">SLOT_<wbr>COUNT_<wbr>MAX</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#slot_global" class="tsd-kind-icon">SLOT_<wbr>GLOBAL</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#slot_multiplayer" class="tsd-kind-icon">SLOT_<wbr>MULTIPLAYER</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#sound_max_distance_sq" class="tsd-kind-icon">SOUND_<wbr>MAX_<wbr>DISTANCE_<wbr>SQ</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#strength_bonus" class="tsd-kind-icon">STRENGTH_<wbr>BONUS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#symbol_any_dictionary" class="tsd-kind-icon">SYMBOL_<wbr>ANY_<wbr>DICTIONARY</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#symbol_data" class="tsd-kind-icon">SYMBOL_<wbr>DATA</a>
@@ -3468,6 +3878,9 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#symbol_wait_for_property" class="tsd-kind-icon">SYMBOL_<wbr>WAIT_<wbr>FOR_<wbr>PROPERTY</a>
 					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#time_eternal_night" class="tsd-kind-icon">TIME_<wbr>ETERNAL_<wbr>NIGHT</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#webassembly" class="tsd-kind-icon">Web<wbr>Assembly</a>
 					</li>
@@ -3480,35 +3893,17 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#absentplayers" class="tsd-kind-icon">absent<wbr>Players</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#actiondescriptions" class="tsd-kind-icon">action<wbr>Descriptions</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#actionmanager" class="tsd-kind-icon">action<wbr>Manager</a>
-					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#actions" class="tsd-kind-icon">actions</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#articles" class="tsd-kind-icon">articles</a>
+						<a href="globals.html#actionentries" class="tsd-kind-icon">action<wbr>Entries</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#basicinterpolator" class="tsd-kind-icon">basic<wbr>Interpolator</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#bindpresses" class="tsd-kind-icon">bind<wbr>Presses</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#bindables" class="tsd-kind-icon">bindables</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#bindingmanager" class="tsd-kind-icon">binding<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#blockedpenalty" class="tsd-kind-icon">blocked<wbr>Penalty</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#books" class="tsd-kind-icon">books</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#changeloglistregexp" class="tsd-kind-icon">changelog<wbr>List<wbr>Reg<wbr>Exp</a>
@@ -3531,20 +3926,11 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#corpsemanager" class="tsd-kind-icon">corpse<wbr>Manager</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#corpses" class="tsd-kind-icon">corpses</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#creaturedescriptions" class="tsd-kind-icon">creature<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#creaturemanager" class="tsd-kind-icon">creature<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#creatures" class="tsd-kind-icon">creatures</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#dailychallengeslot" class="tsd-kind-icon">daily<wbr>Challenge<wbr>Slot</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#damagetypetomessage" class="tsd-kind-icon">damage<wbr>Type<wbr>ToMessage</a>
@@ -3555,26 +3941,23 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#debuggetdirection" class="tsd-kind-icon">debug<wbr>Get<wbr>Direction</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#defaultbackground" class="tsd-kind-icon">default<wbr>Background</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#defaultdirectionturndelay" class="tsd-kind-icon">default<wbr>Direction<wbr>Turn<wbr>Delay</a>
+						<a href="globals.html#defaultserverport" class="tsd-kind-icon">default<wbr>Server<wbr>Port</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#defaulttimemanager" class="tsd-kind-icon">default<wbr>Time<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#defaultserverport" class="tsd-kind-icon">default<wbr>Server<wbr>Port</a>
+						<a href="globals.html#defaultturndelay" class="tsd-kind-icon">default<wbr>Turn<wbr>Delay</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#doodaddescriptions" class="tsd-kind-icon">doodad<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#doodadgroups" class="tsd-kind-icon">doodad<wbr>Groups</a>
-					</li>
-					<li class=" tsd-kind-variable">
 						<a href="globals.html#doodadmanager" class="tsd-kind-icon">doodad<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#doodads" class="tsd-kind-icon">doodads</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#emptyuint8array" class="tsd-kind-icon">empty<wbr>Uint8<wbr>Array</a>
@@ -3591,14 +3974,8 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#finishedloading" class="tsd-kind-icon">finished<wbr>Loading</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fire" class="tsd-kind-icon">fire</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#flowfieldmanager" class="tsd-kind-icon">flow<wbr>Field<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fungus" class="tsd-kind-icon">fungus</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#game" class="tsd-kind-icon">game</a>
@@ -3613,25 +3990,16 @@
 						<a href="globals.html#ghostcolor" class="tsd-kind-icon">ghost<wbr>Color</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#global" class="tsd-kind-icon">global</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#globalchannel" class="tsd-kind-icon">global<wbr>Channel</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#globalhooks" class="tsd-kind-icon">global<wbr>Hooks</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#globalrandom" class="tsd-kind-icon">global<wbr>Random</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#globalslot" class="tsd-kind-icon">global<wbr>Slot</a>
-					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#globaltooltipid" class="tsd-kind-icon">global<wbr>Tooltip<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#growth" class="tsd-kind-icon">growth</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#h" class="tsd-kind-icon">h</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#haircolordescriptions" class="tsd-kind-icon">hair<wbr>Color<wbr>Descriptions</a>
@@ -3643,43 +4011,25 @@
 						<a href="globals.html#hints" class="tsd-kind-icon">hints</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#hooks" class="tsd-kind-icon">hooks</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#hostmatchmakingidentifier" class="tsd-kind-icon">host<wbr>Matchmaking<wbr>Identifier</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#hostswithhook" class="tsd-kind-icon">hosts<wbr>With<wbr>Hook</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#hotkeynumbers" class="tsd-kind-icon">hot<wbr>Key<wbr>Numbers</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#index" class="tsd-kind-icon">index</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#internalstat" class="tsd-kind-icon">internal<wbr>Stat</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#interval" class="tsd-kind-icon">interval</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#itemactiondescriptions" class="tsd-kind-icon">item<wbr>Action<wbr>Descriptions</a>
-					</li>
-					<li class=" tsd-kind-variable">
 						<a href="globals.html#itemdescriptions" class="tsd-kind-icon">item<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#itemgroups" class="tsd-kind-icon">item<wbr>Groups</a>
+						<a href="globals.html#itemgroupdescriptions" class="tsd-kind-icon">item<wbr>Group<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#itemmanager" class="tsd-kind-icon">item<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#itemqualitysortorder" class="tsd-kind-icon">item<wbr>Quality<wbr>Sort<wbr>Order</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#items" class="tsd-kind-icon">items</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#joinservertimeout" class="tsd-kind-icon">join<wbr>Server<wbr>Timeout</a>
@@ -3730,15 +4080,12 @@
 						<a href="globals.html#logmatchmaking" class="tsd-kind-icon">log<wbr>Matchmaking</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#logname" class="tsd-kind-icon">log<wbr>Name</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#logserializer" class="tsd-kind-icon">log<wbr>Serializer</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#lootgroup" class="tsd-kind-icon">loot<wbr>Group</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#map" class="tsd-kind-icon">map</a>
 					</li>
 					<li class=" tsd-kind-variable">
@@ -3757,25 +4104,10 @@
 						<a href="globals.html#maxplayers" class="tsd-kind-icon">max<wbr>Players</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#maxslots" class="tsd-kind-icon">max<wbr>Slots</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#maximumdirectionturndelay" class="tsd-kind-icon">maximum<wbr>Direction<wbr>Turn<wbr>Delay</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#menubarbuttondescriptions" class="tsd-kind-icon">menu<wbr>Bar<wbr>Button<wbr>Descriptions</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#messages" class="tsd-kind-icon">messages</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#milestones" class="tsd-kind-icon">milestones</a>
+						<a href="globals.html#maximumturndelay" class="tsd-kind-icon">maximum<wbr>Turn<wbr>Delay</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#modmanager" class="tsd-kind-icon">mod<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#mods" class="tsd-kind-icon">mods</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#movementintents" class="tsd-kind-icon">movement<wbr>Intents</a>
@@ -3787,16 +4119,13 @@
 						<a href="globals.html#multiplayernetworkingoptions" class="tsd-kind-icon">multiplayer<wbr>Networking<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#multiplayerslot" class="tsd-kind-icon">multiplayer<wbr>Slot</a>
-					</li>
-					<li class=" tsd-kind-variable">
 						<a href="globals.html#musicdescriptions" class="tsd-kind-icon">music<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#newui" class="tsd-kind-icon">newui</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#notes" class="tsd-kind-icon">notes</a>
+						<a href="globals.html#noopnotemanager" class="tsd-kind-icon">no<wbr>OpNote<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#npcmanager" class="tsd-kind-icon">npc<wbr>Manager</a>
@@ -3804,26 +4133,14 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#nulllog" class="tsd-kind-icon">null<wbr>Log</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#oldbonus" class="tsd-kind-icon">old<wbr>Bonus</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#oldvalue" class="tsd-kind-icon">old<wbr>Value</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#onequiptypes" class="tsd-kind-icon">on<wbr>Equip<wbr>Types</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#onequips" class="tsd-kind-icon">on<wbr>Equips</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#overlaydescriptions" class="tsd-kind-icon">overlay<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#particles" class="tsd-kind-icon">particles</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#player" class="tsd-kind-icon">player</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#players" class="tsd-kind-icon">players</a>
@@ -3842,9 +4159,6 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#recipeleveltomessage" class="tsd-kind-icon">recipe<wbr>Level<wbr>ToMessage</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#registeredhookslog" class="tsd-kind-icon">registered<wbr>Hooks<wbr>Log</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#registrar" class="tsd-kind-icon">registrar</a>
@@ -3874,6 +4188,21 @@
 						<a href="globals.html#savemanager" class="tsd-kind-icon">save<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#seededrandom" class="tsd-kind-icon">seeded<wbr>Random</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#serverdirectory" class="tsd-kind-icon">server<wbr>Directory</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#setupbookitems" class="tsd-kind-icon">setup<wbr>Book<wbr>Items</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#setuphealthitems" class="tsd-kind-icon">setup<wbr>Health<wbr>Items</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#setuplightitems" class="tsd-kind-icon">setup<wbr>Light<wbr>Items</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#setupmiscitems" class="tsd-kind-icon">setup<wbr>Misc<wbr>Items</a>
 					</li>
 					<li class=" tsd-kind-variable">
@@ -3885,11 +4214,11 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#setupwateritems" class="tsd-kind-icon">setup<wbr>Water<wbr>Items</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#skill" class="tsd-kind-icon">skill</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#skilldescriptions" class="tsd-kind-icon">skill<wbr>Descriptions</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#skills" class="tsd-kind-icon">skills</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#skincolordescriptions" class="tsd-kind-icon">skin<wbr>Color<wbr>Descriptions</a>
@@ -3918,14 +4247,11 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#statdisplaydescriptions" class="tsd-kind-icon">stat<wbr>Display<wbr>Descriptions</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#statid" class="tsd-kind-icon">stat<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#statobject" class="tsd-kind-icon">stat<wbr>Object</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#statuseffectdescriptions" class="tsd-kind-icon">status<wbr>Effect<wbr>Descriptions</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#steamlobbyprefix" class="tsd-kind-icon">steam<wbr>Lobby<wbr>Prefix</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#steamworks" class="tsd-kind-icon">steamworks</a>
@@ -3945,9 +4271,6 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#terraindescriptions" class="tsd-kind-icon">terrain<wbr>Descriptions</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#terrains" class="tsd-kind-icon">terrains</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#tileatlas" class="tsd-kind-icon">tile<wbr>Atlas</a>
 					</li>
@@ -3958,9 +4281,6 @@
 						<a href="globals.html#tileeventmanager" class="tsd-kind-icon">tile<wbr>Event<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#tileevents" class="tsd-kind-icon">tile<wbr>Events</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#tooltips" class="tsd-kind-icon">tooltips</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
@@ -3968,9 +4288,6 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#trello" class="tsd-kind-icon">trello</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#tumbleweed" class="tsd-kind-icon">tumbleweed</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#ui" class="tsd-kind-icon">ui</a>
@@ -3985,13 +4302,7 @@
 						<a href="globals.html#webrtctimeout" class="tsd-kind-icon">webRTCTimeout</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#weightbonus" class="tsd-kind-icon">weight<wbr>Bonus</a>
-					</li>
-					<li class=" tsd-kind-variable">
 						<a href="globals.html#world" class="tsd-kind-icon">world</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#wstat" class="tsd-kind-icon">wstat</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#_" class="tsd-kind-icon">π</a>
@@ -4030,10 +4341,16 @@
 						<a href="globals.html#adddecoration" class="tsd-kind-icon">add<wbr>Decoration</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#addfuel" class="tsd-kind-icon">add<wbr>Fuel</a>
+						<a href="globals.html#addtogroups" class="tsd-kind-icon">add<wbr>ToGroups</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#attackgeneric" class="tsd-kind-icon">attack<wbr>Generic</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#any" class="tsd-kind-icon">any</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#anyof" class="tsd-kind-icon">any<wbr>Of</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#applychallengemodifiers" class="tsd-kind-icon">apply<wbr>Challenge<wbr>Modifiers</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#bancommand" class="tsd-kind-icon">ban<wbr>Command</a>
@@ -4045,16 +4362,7 @@
 						<a href="globals.html#blockmove" class="tsd-kind-icon">block<wbr>Move</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#buildorplacedown" class="tsd-kind-icon">build<wbr>OrPlace<wbr>Down</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#cancelevent" class="tsd-kind-icon">cancel<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#carve" class="tsd-kind-icon">carve</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#cast" class="tsd-kind-icon">cast</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#clamp" class="tsd-kind-icon">clamp</a>
@@ -4062,11 +4370,8 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#clearfinishedloading" class="tsd-kind-icon">clear<wbr>Finished<wbr>Loading</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#closecontainer" class="tsd-kind-icon">close<wbr>Container</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#closedoor" class="tsd-kind-icon">close<wbr>Door</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#collect" class="tsd-kind-icon">collect</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#commandscommand" class="tsd-kind-icon">commands<wbr>Command</a>
@@ -4077,14 +4382,17 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#compileshaders" class="tsd-kind-icon">compile<wbr>Shaders</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#consumeitem" class="tsd-kind-icon">consume<wbr>Item</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
+					<li class=" tsd-kind-function">
 						<a href="globals.html#consumeitemtype" class="tsd-kind-icon">consume<wbr>Item<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#craft" class="tsd-kind-icon">craft</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#convertratemodifieractualtorange" class="tsd-kind-icon">convert<wbr>Rate<wbr>Modifier<wbr>Actual<wbr>ToRange</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#convertratemodifierrangetoactual" class="tsd-kind-icon">convert<wbr>Rate<wbr>Modifier<wbr>Range<wbr>ToActual</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#convertstringtoseed" class="tsd-kind-icon">convert<wbr>String<wbr>ToSeed</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#createcolordescriptions" class="tsd-kind-icon">create<wbr>Color<wbr>Descriptions</a>
@@ -4098,44 +4406,26 @@
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#debounce" class="tsd-kind-icon">debounce</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#decode" class="tsd-kind-icon">decode</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#default" class="tsd-kind-icon">default</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#deserialize" class="tsd-kind-icon">deserialize</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#dig" class="tsd-kind-icon">dig</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#disassemble" class="tsd-kind-icon">disassemble</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#dismantle" class="tsd-kind-icon">dismantle</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#dissassemblyburn" class="tsd-kind-icon">dissassembly<wbr>Burn</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#drawmap" class="tsd-kind-icon">draw<wbr>Map</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#drinkinfrontaction" class="tsd-kind-icon">drink<wbr>InFront<wbr>Action</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#drop" class="tsd-kind-icon">drop</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#elementcontains" class="tsd-kind-icon">element<wbr>Contains</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#equip" class="tsd-kind-icon">equip</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#entries" class="tsd-kind-icon">entries</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#extinguish" class="tsd-kind-icon">extinguish</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#every" class="tsd-kind-icon">every</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#filter" class="tsd-kind-icon">filter</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#filter2" class="tsd-kind-icon">filter2</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#findpath" class="tsd-kind-icon">find<wbr>Path</a>
@@ -4144,16 +4434,16 @@
 						<a href="globals.html#findunusedid" class="tsd-kind-icon">find<wbr>Unused<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#flatmap" class="tsd-kind-icon">flat<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#foreach" class="tsd-kind-icon">for<wbr>Each</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#foreachcontinue" class="tsd-kind-icon">for<wbr>Each<wbr>Continue</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#fulldamagetype" class="tsd-kind-icon">full<wbr>Damage<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#gather" class="tsd-kind-icon">gather</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#gathertreasure" class="tsd-kind-icon">gather<wbr>Treasure</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#gatherwater" class="tsd-kind-icon">gather<wbr>Water</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#generatedictionaryschema" class="tsd-kind-icon">generate<wbr>Dictionary<wbr>Schema</a>
@@ -4171,13 +4461,25 @@
 						<a href="globals.html#generateworld" class="tsd-kind-icon">generate<wbr>World</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#getargumenttype" class="tsd-kind-icon">get<wbr>Argument<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getcartographydirection" class="tsd-kind-icon">get<wbr>Cartography<wbr>Direction</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getcartographydistance" class="tsd-kind-icon">get<wbr>Cartography<wbr>Distance</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#getcolordescription" class="tsd-kind-icon">get<wbr>Color<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getdecorations" class="tsd-kind-icon">get<wbr>Decorations</a>
 					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getdefaultdifficultyoptions" class="tsd-kind-icon">get<wbr>Default<wbr>Difficulty<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#getdictionaryindexbyname" class="tsd-kind-icon">get<wbr>Dictionary<wbr>Index<wbr>ByName</a>
+						<a href="globals.html#getdictionaryid" class="tsd-kind-icon">get<wbr>Dictionary<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getdirectionfromangle" class="tsd-kind-icon">get<wbr>Direction<wbr>From<wbr>Angle</a>
@@ -4192,13 +4494,25 @@
 						<a href="globals.html#getdirectionsfromangle" class="tsd-kind-icon">get<wbr>Directions<wbr>From<wbr>Angle</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#geteffecttooltip" class="tsd-kind-icon">get<wbr>Effect<wbr>Tooltip</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getentryid" class="tsd-kind-icon">get<wbr>Entry<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#gethelddirections" class="tsd-kind-icon">get<wbr>Held<wbr>Directions</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#gethoursandminutes" class="tsd-kind-icon">get<wbr>Hours<wbr>And<wbr>Minutes</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getitemquantity" class="tsd-kind-icon">get<wbr>Item<wbr>Quantity</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getmanhattandistance" class="tsd-kind-icon">get<wbr>Manhattan<wbr>Distance</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getmultipliervalue" class="tsd-kind-icon">get<wbr>Multiplier<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getnotebodytranslation" class="tsd-kind-icon">get<wbr>Note<wbr>Body<wbr>Translation</a>
@@ -4213,6 +4527,9 @@
 						<a href="globals.html#getpercentagefrompixels" class="tsd-kind-icon">get<wbr>Percentage<wbr>From<wbr>Pixels</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getpixelsfrompercentage" class="tsd-kind-icon">get<wbr>Pixels<wbr>From<wbr>Percentage</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getpressname" class="tsd-kind-icon">get<wbr>Press<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
@@ -4225,16 +4542,31 @@
 						<a href="globals.html#getscreencenter" class="tsd-kind-icon">get<wbr>Screen<wbr>Center</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getslottype" class="tsd-kind-icon">get<wbr>Slot<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getsource" class="tsd-kind-icon">get<wbr>Source</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getsources" class="tsd-kind-icon">get<wbr>Sources</a>
 					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getstattooltip" class="tsd-kind-icon">get<wbr>Stat<wbr>Tooltip</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#gettamablecount" class="tsd-kind-icon">get<wbr>Tamable<wbr>Count</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#gettileid" class="tsd-kind-icon">get<wbr>Tile<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#gettileloc" class="tsd-kind-icon">get<wbr>Tile<wbr>Loc</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#gettileposition" class="tsd-kind-icon">get<wbr>Tile<wbr>Position</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#gettranslationid" class="tsd-kind-icon">get<wbr>Translation<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#getuniqueor" class="tsd-kind-icon">get<wbr>Unique<wbr>Or</a>
@@ -4242,26 +4574,23 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getwatertype" class="tsd-kind-icon">get<wbr>Water<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#grasp" class="tsd-kind-icon">grasp</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#harvest" class="tsd-kind-icon">harvest</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#harvestgatherburn" class="tsd-kind-icon">harvest<wbr>Gather<wbr>Burn</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#hasarticle" class="tsd-kind-icon">has<wbr>Article</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#haseffect" class="tsd-kind-icon">has<wbr>Effect</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#hasfinishedloading" class="tsd-kind-icon">has<wbr>Finished<wbr>Loading</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#healother" class="tsd-kind-icon">heal<wbr>Other</a>
+						<a href="globals.html#hasstat" class="tsd-kind-icon">has<wbr>Stat</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#idle" class="tsd-kind-icon">idle</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#ignite" class="tsd-kind-icon">ignite</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#include" class="tsd-kind-icon">include</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#interpolate" class="tsd-kind-icon">interpolate</a>
@@ -4269,23 +4598,20 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#interpolatesectioned" class="tsd-kind-icon">interpolate<wbr>Sectioned</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#isclass" class="tsd-kind-icon">is<wbr>Class</a>
-					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#iscustomitemtypegroup" class="tsd-kind-icon">is<wbr>Custom<wbr>Item<wbr>Type<wbr>Group</a>
+						<a href="globals.html#iscreaturekilledbyhost" class="tsd-kind-icon">is<wbr>Creature<wbr>Killed<wbr>ByHost</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#isdefined" class="tsd-kind-icon">is<wbr>Defined</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
+					<li class=" tsd-kind-function">
 						<a href="globals.html#isdoor" class="tsd-kind-icon">is<wbr>Door</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#isitemtypegroup" class="tsd-kind-icon">is<wbr>Item<wbr>Type<wbr>Group</a>
+						<a href="globals.html#iseternalnight" class="tsd-kind-icon">is<wbr>Eternal<wbr>Night</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#isitemtypeingroup" class="tsd-kind-icon">is<wbr>Item<wbr>Type<wbr>InGroup</a>
+						<a href="globals.html#isitemmatch" class="tsd-kind-icon">is<wbr>Item<wbr>Match</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#isiterable" class="tsd-kind-icon">is<wbr>Iterable</a>
@@ -4297,13 +4623,16 @@
 						<a href="globals.html#isloadable" class="tsd-kind-icon">is<wbr>Loadable</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#islocalplayer" class="tsd-kind-icon">is<wbr>Local<wbr>Player</a>
+						<a href="globals.html#ismodloadable" class="tsd-kind-icon">is<wbr>Mod<wbr>Loadable</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#isnodeequal" class="tsd-kind-icon">is<wbr>Node<wbr>Equal</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#isplayer" class="tsd-kind-icon">is<wbr>Player</a>
+						<a href="globals.html#ispermanenteffect" class="tsd-kind-icon">is<wbr>Permanent<wbr>Effect</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#ispinofincompletequestrequirement" class="tsd-kind-icon">is<wbr>Pin<wbr>OfIncomplete<wbr>Quest<wbr>Requirement</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#isrgb" class="tsd-kind-icon">isRGB</a>
@@ -4311,20 +4640,17 @@
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#issamebinding" class="tsd-kind-icon">is<wbr>Same<wbr>Binding</a>
 					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#isvaliditem" class="tsd-kind-icon">is<wbr>Valid<wbr>Item</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#iswalktotileblocked" class="tsd-kind-icon">is<wbr>Walk<wbr>ToTile<wbr>Blocked</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#jump" class="tsd-kind-icon">jump</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#keyof" class="tsd-kind-icon">key<wbr>Of</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#kickcommand" class="tsd-kind-icon">kick<wbr>Command</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#learn" class="tsd-kind-icon">learn</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#linkprogram" class="tsd-kind-icon">link<wbr>Program</a>
@@ -4334,12 +4660,6 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#loadshaders" class="tsd-kind-icon">load<wbr>Shaders</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#lockpick" class="tsd-kind-icon">lock<wbr>Pick</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#makestring" class="tsd-kind-icon">make<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#manipulatetemplates" class="tsd-kind-icon">manipulate<wbr>Templates</a>
@@ -4351,37 +4671,19 @@
 						<a href="globals.html#menuswitcher" class="tsd-kind-icon">menu<wbr>Switcher</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#milk" class="tsd-kind-icon">milk</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#mirrortemplate" class="tsd-kind-icon">mirror<wbr>Template</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#move" class="tsd-kind-icon">move</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#nevery" class="tsd-kind-icon">nevery</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#moveitem" class="tsd-kind-icon">move<wbr>Item</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#none" class="tsd-kind-icon">none</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#moveto" class="tsd-kind-icon">move<wbr>To</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#offer" class="tsd-kind-icon">offer</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#noop" class="tsd-kind-icon">noop</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#onload" class="tsd-kind-icon">on<wbr>Load</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#openbottle" class="tsd-kind-icon">open<wbr>Bottle</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#opencontainer" class="tsd-kind-icon">open<wbr>Container</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#opendoor" class="tsd-kind-icon">open<wbr>Door</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#paddle" class="tsd-kind-icon">paddle</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#parsecommandlineargument" class="tsd-kind-icon">parse<wbr>Command<wbr>Line<wbr>Argument</a>
@@ -4390,19 +4692,10 @@
 						<a href="globals.html#parsetimeformat" class="tsd-kind-icon">parse<wbr>Time<wbr>Format</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#parsetranslationid" class="tsd-kind-icon">parse<wbr>Translation<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#pausecommand" class="tsd-kind-icon">pause<wbr>Command</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pet" class="tsd-kind-icon">pet</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pickup" class="tsd-kind-icon">pickup</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pickupallitems" class="tsd-kind-icon">pickup<wbr>All<wbr>Items</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pickupitem" class="tsd-kind-icon">pickup<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#pingcommand" class="tsd-kind-icon">ping<wbr>Command</a>
@@ -4411,52 +4704,25 @@
 						<a href="globals.html#pipe" class="tsd-kind-icon">pipe</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#plant" class="tsd-kind-icon">plant</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#playerscommand" class="tsd-kind-icon">players<wbr>Command</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pour" class="tsd-kind-icon">pour</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#pouronyourself" class="tsd-kind-icon">pour<wbr>OnYourself</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#preserve" class="tsd-kind-icon">preserve</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#prettystringify" class="tsd-kind-icon">pretty<wbr>Stringify</a>
 					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#pushto" class="tsd-kind-icon">push<wbr>To</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#range" class="tsd-kind-icon">range</a>
 					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#reduce" class="tsd-kind-icon">reduce</a>
+					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#read" class="tsd-kind-icon">read</a>
+						<a href="globals.html#regexof" class="tsd-kind-icon">regex<wbr>Of</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#registerhook" class="tsd-kind-icon">register<wbr>Hook</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#reinforce" class="tsd-kind-icon">reinforce</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#release" class="tsd-kind-icon">release</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#rename" class="tsd-kind-icon">rename</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#repair" class="tsd-kind-icon">repair</a>
-					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#replacenullswithundefined" class="tsd-kind-icon">replace<wbr>Nulls<wbr>With<wbr>Undefined</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#rest" class="tsd-kind-icon">rest</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#rotatetemplate" class="tsd-kind-icon">rotate<wbr>Template</a>
@@ -4465,22 +4731,22 @@
 						<a href="globals.html#rotatetiletype90deg" class="tsd-kind-icon">rotate<wbr>Tile<wbr>Type90<wbr>Deg</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#rub" class="tsd-kind-icon">rub</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#savecommand" class="tsd-kind-icon">save<wbr>Command</a>
 					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
+					<li class=" tsd-kind-function">
 						<a href="globals.html#savedproperties" class="tsd-kind-icon">saved<wbr>Properties</a>
 					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#serialize" class="tsd-kind-icon">serialize</a>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#serializepluralizationrules" class="tsd-kind-icon">serialize<wbr>Pluralization<wbr>Rules</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#serializeregex" class="tsd-kind-icon">serialize<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#serializeregexrule" class="tsd-kind-icon">serialize<wbr>Regex<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#setdefaultbackground" class="tsd-kind-icon">set<wbr>Default<wbr>Background</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#setdown" class="tsd-kind-icon">set<wbr>Down</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#setfinishedloading" class="tsd-kind-icon">set<wbr>Finished<wbr>Loading</a>
@@ -4506,8 +4772,8 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#sleep" class="tsd-kind-icon">sleep</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#smotherfire" class="tsd-kind-icon">smother<wbr>Fire</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#slice" class="tsd-kind-icon">slice</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#sortversioninfo" class="tsd-kind-icon">sort<wbr>Version<wbr>Info</a>
@@ -4530,20 +4796,11 @@
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#spriteid" class="tsd-kind-icon">sprite<wbr>Id</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#squeeze" class="tsd-kind-icon">squeeze</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#startfire" class="tsd-kind-icon">start<wbr>Fire</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#startgame" class="tsd-kind-icon">start<wbr>Game</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#statdisplaytype" class="tsd-kind-icon">stat<wbr>Display<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#stokefire" class="tsd-kind-icon">stoke<wbr>Fire</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#stubf" class="tsd-kind-icon">stubF</a>
@@ -4554,29 +4811,11 @@
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#switchmenu" class="tsd-kind-icon">switch<wbr>Menu</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#tame" class="tsd-kind-icon">tame</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#teleport" class="tsd-kind-icon">teleport</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#telltime" class="tsd-kind-icon">tell<wbr>Time</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#till" class="tsd-kind-icon">till</a>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#switchtojoinserver" class="tsd-kind-icon">switch<wbr>ToJoin<wbr>Server</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#toggleclasses" class="tsd-kind-icon">toggle<wbr>Classes</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#trade" class="tsd-kind-icon">trade</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#transmogrify" class="tsd-kind-icon">transmogrify</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#travelaway" class="tsd-kind-icon">travel<wbr>Away</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#tuple" class="tsd-kind-icon">tuple</a>
@@ -4585,13 +4824,16 @@
 						<a href="globals.html#unbancommand" class="tsd-kind-icon">unban<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#unequip" class="tsd-kind-icon">unequip</a>
+						<a href="globals.html#updatecase" class="tsd-kind-icon">update<wbr>Case</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#updatedirection" class="tsd-kind-icon">update<wbr>Direction</a>
+						<a href="globals.html#validate" class="tsd-kind-icon">validate</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#useitem" class="tsd-kind-icon">use<wbr>Item</a>
+						<a href="globals.html#validateargument" class="tsd-kind-icon">validate<wbr>Argument</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#values" class="tsd-kind-icon">values</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#when" class="tsd-kind-icon">when</a>
@@ -4600,10 +4842,16 @@
 						<a href="globals.html#writecorpsenote" class="tsd-kind-icon">write<wbr>Corpse<wbr>Note</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#action" class="tsd-kind-icon">action</a>
+						<a href="globals.html#actiondescriptions" class="tsd-kind-icon">action<wbr>Descriptions</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#actions" class="tsd-kind-icon">actions</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#argumentsegment" class="tsd-kind-icon">argument<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#articles" class="tsd-kind-icon">articles</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#attack" class="tsd-kind-icon">attack</a>
@@ -4617,14 +4865,35 @@
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#axisedges" class="tsd-kind-icon">axis<wbr>Edges</a>
 					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#basestatmax" class="tsd-kind-icon">base<wbr>Stat<wbr>Max</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#bindpresses" class="tsd-kind-icon">bind<wbr>Presses</a>
+					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#bindsegment" class="tsd-kind-icon">bind<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#bindabletypes" class="tsd-kind-icon">bindable<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#bindables" class="tsd-kind-icon">bindables</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#boldsegment" class="tsd-kind-icon">bold<wbr>Segment</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#build" class="tsd-kind-icon">build</a>
+						<a href="globals.html#books" class="tsd-kind-icon">books</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#changelogsections" class="tsd-kind-icon">changelog<wbr>Sections</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#charactersorts" class="tsd-kind-icon">character<wbr>Sorts</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#clientdata" class="tsd-kind-icon">client<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#colorsegment" class="tsd-kind-icon">color<wbr>Segment</a>
@@ -4635,14 +4904,26 @@
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#conditionalsegment" class="tsd-kind-icon">conditional<wbr>Segment</a>
 					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#conditionaltranslationsegment" class="tsd-kind-icon">conditional<wbr>Translation<wbr>Segment</a>
+					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#config" class="tsd-kind-icon">config</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#dayquartermap" class="tsd-kind-icon">day<wbr>Quarter<wbr>Map</a>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#corpses" class="tsd-kind-icon">corpses</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#creatures" class="tsd-kind-icon">creatures</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#dailychallengemodifiers" class="tsd-kind-icon">daily<wbr>Challenge<wbr>Modifiers</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#damagetypes" class="tsd-kind-icon">damage<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#decoratedhookmethods" class="tsd-kind-icon">decorated<wbr>Hook<wbr>Methods</a>
+						<a href="globals.html#dayquartermap" class="tsd-kind-icon">day<wbr>Quarter<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#defense" class="tsd-kind-icon">defense</a>
@@ -4656,20 +4937,26 @@
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#dialogmap" class="tsd-kind-icon">dialog<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#dictionaryenums" class="tsd-kind-icon">dictionary<wbr>Enums</a>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#dictionaries" class="tsd-kind-icon">dictionaries</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#drinkcure" class="tsd-kind-icon">drink<wbr>Cure</a>
+						<a href="globals.html#difficulties" class="tsd-kind-icon">difficulties</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#drinkinfront" class="tsd-kind-icon">drink<wbr>InFront</a>
+						<a href="globals.html#difficultyoptionsicons" class="tsd-kind-icon">difficulty<wbr>Options<wbr>Icons</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#drinkitem" class="tsd-kind-icon">drink<wbr>Item</a>
+						<a href="globals.html#doodadgroups" class="tsd-kind-icon">doodad<wbr>Groups</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#doodaditems" class="tsd-kind-icon">doodad<wbr>Items</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#eat" class="tsd-kind-icon">eat</a>
+						<a href="globals.html#doodads" class="tsd-kind-icon">doodads</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#doormap" class="tsd-kind-icon">door<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#edgeaxes" class="tsd-kind-icon">edge<wbr>Axes</a>
@@ -4678,10 +4965,28 @@
 						<a href="globals.html#edgesigns" class="tsd-kind-icon">edge<wbr>Signs</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#englishdictionaries" class="tsd-kind-icon">english<wbr>Dictionaries</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#entryschema" class="tsd-kind-icon">entry<wbr>Schema</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#escapedsegment" class="tsd-kind-icon">escaped<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#fire" class="tsd-kind-icon">fire</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#fungus" class="tsd-kind-icon">fungus</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#gameendmessages" class="tsd-kind-icon">game<wbr>End<wbr>Messages</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#growth" class="tsd-kind-icon">growth</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#growthfungus" class="tsd-kind-icon">growth<wbr>Fungus</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#handlepositionaxes" class="tsd-kind-icon">handle<wbr>Position<wbr>Axes</a>
@@ -4693,10 +4998,13 @@
 						<a href="globals.html#headingsegment" class="tsd-kind-icon">heading<wbr>Segment</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#heal" class="tsd-kind-icon">heal</a>
+						<a href="globals.html#highscoresorts" class="tsd-kind-icon">highscore<wbr>Sorts</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#hourwordmap" class="tsd-kind-icon">hour<wbr>Word<wbr>Map</a>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#inspecttypes" class="tsd-kind-icon">inspect<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#inspections" class="tsd-kind-icon">inspections</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#interruptchoices" class="tsd-kind-icon">interrupt<wbr>Choices</a>
@@ -4704,17 +5012,53 @@
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#italicizedsegment" class="tsd-kind-icon">italicized<wbr>Segment</a>
 					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#itemgroups" class="tsd-kind-icon">item<wbr>Groups</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#items" class="tsd-kind-icon">items</a>
+					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#iteratorimpl" class="tsd-kind-icon">iterator<wbr>Impl</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#legendaryitems" class="tsd-kind-icon">legendary<wbr>Items</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#linksegment" class="tsd-kind-icon">link<wbr>Segment</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#menubarbuttondescriptions" class="tsd-kind-icon">menu<wbr>Bar<wbr>Button<wbr>Descriptions</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#menumap" class="tsd-kind-icon">menu<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#messages" class="tsd-kind-icon">messages</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#milestones" class="tsd-kind-icon">milestones</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#misctranslations" class="tsd-kind-icon">misc<wbr>Translations</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#modloaderrors" class="tsd-kind-icon">mod<wbr>Load<wbr>Errors</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#modregistrationtimes" class="tsd-kind-icon">mod<wbr>Registration<wbr>Times</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#modsorts" class="tsd-kind-icon">mod<wbr>Sorts</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#modtypes" class="tsd-kind-icon">mod<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#musicplaylists" class="tsd-kind-icon">music<wbr>Playlists</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#names" class="tsd-kind-icon">names</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#networkingoptions" class="tsd-kind-icon">networking<wbr>Options</a>
@@ -4723,7 +5067,19 @@
 						<a href="globals.html#notedescriptions" class="tsd-kind-icon">note<wbr>Descriptions</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#notes" class="tsd-kind-icon">notes</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#notifier" class="tsd-kind-icon">notifier</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#numbersegment" class="tsd-kind-icon">number<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#numbers" class="tsd-kind-icon">numbers</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#onequips" class="tsd-kind-icon">on<wbr>Equips</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#oppositedirection" class="tsd-kind-icon">opposite<wbr>Direction</a>
@@ -4735,13 +5091,31 @@
 						<a href="globals.html#particle" class="tsd-kind-icon">particle</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#placedown" class="tsd-kind-icon">place<wbr>Down</a>
+						<a href="globals.html#partsofday" class="tsd-kind-icon">parts<wbr>OfDay</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#powermodes" class="tsd-kind-icon">power<wbr>Modes</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#quadrant" class="tsd-kind-icon">quadrant</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#qualities" class="tsd-kind-icon">qualities</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#quests" class="tsd-kind-icon">quests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#reformatsegment" class="tsd-kind-icon">reformat<wbr>Segment</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#registrationtypetoenummap" class="tsd-kind-icon">registration<wbr>Type<wbr>ToEnum<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#reputation" class="tsd-kind-icon">reputation</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#requirements" class="tsd-kind-icon">requirements</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#resourceloader" class="tsd-kind-icon">resource<wbr>Loader</a>
@@ -4750,13 +5124,7 @@
 						<a href="globals.html#resourcemap" class="tsd-kind-icon">resource<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#rubclockwise" class="tsd-kind-icon">rub<wbr>Clockwise</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#rubcounterclockwise" class="tsd-kind-icon">rub<wbr>Counterclockwise</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#sailtocivilization" class="tsd-kind-icon">sail<wbr>ToCivilization</a>
+						<a href="globals.html#saveslotsorts" class="tsd-kind-icon">save<wbr>Slot<wbr>Sorts</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#screenmap" class="tsd-kind-icon">screen<wbr>Map</a>
@@ -4765,16 +5133,37 @@
 						<a href="globals.html#sharetypes" class="tsd-kind-icon">share<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#skills" class="tsd-kind-icon">skills</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#slots" class="tsd-kind-icon">slots</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#sources" class="tsd-kind-icon">sources</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#taglinecounts" class="tsd-kind-icon">tagline<wbr>Counts</a>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#stats" class="tsd-kind-icon">stats</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#statuseffects" class="tsd-kind-icon">status<wbr>Effects</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#teammemberresponsibilities" class="tsd-kind-icon">team<wbr>Member<wbr>Responsibilities</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#terrains" class="tsd-kind-icon">terrains</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#tileevents" class="tsd-kind-icon">tile<wbr>Events</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#timeismap" class="tsd-kind-icon">time<wbr>IsMap</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#traversethesea" class="tsd-kind-icon">traverse<wbr>The<wbr>Sea</a>
+						<a href="globals.html#tumbleweed" class="tsd-kind-icon">tumbleweed</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#uiquadrants" class="tsd-kind-icon">ui<wbr>Quadrants</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#uitranslations" class="tsd-kind-icon">ui<wbr>Translations</a>

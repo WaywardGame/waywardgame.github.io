@@ -86,11 +86,8 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#encodeuricomponentpath" class="tsd-kind-icon">encodeURIComponent<wbr>Path</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#escapehtml" class="tsd-kind-icon">escapeHTML</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#fixobjectcasestyle" class="tsd-kind-icon">fix<wbr>Object<wbr>Case<wbr>Style</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#format" class="tsd-kind-icon">format</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#formatcasestyle" class="tsd-kind-icon">format<wbr>Case<wbr>Style</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#formatsentencecase" class="tsd-kind-icon">format<wbr>Sentence<wbr>Case</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#generatetimestamp" class="tsd-kind-icon">generate<wbr>Timestamp</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#isfirstlettercapital" class="tsd-kind-icon">is<wbr>First<wbr>Letter<wbr>Capital</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#parsemarkup" class="tsd-kind-icon">parse<wbr>Markup</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#striphtml" class="tsd-kind-icon">stripHTML</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="strings.html#stripparentdirectoryaccessorsfrompath" class="tsd-kind-icon">strip<wbr>Parent<wbr>Directory<wbr>Accessors<wbr>From<wbr>Path</a></li>
@@ -113,17 +110,17 @@
 					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Bold<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)\*(.*?)\*(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:27</li>
+							<li>Defined in utilities/string/Strings.ts:25</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="markuptextcoderegex" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> markup<wbr>Text<wbr>Code<wbr>Regex</h3>
-					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Code<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)&amp;#x60;(.*?)&amp;#x60;(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
+					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Code<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|[&gt;(]|\s+|)&amp;#x60;(.*?)&amp;#x60;(?&#x3D;\s+|[,.;:&lt;)]|s\b|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:32</li>
+							<li>Defined in utilities/string/Strings.ts:30</li>
 						</ul>
 					</aside>
 				</section>
@@ -133,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Italic<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)&amp;#x2F;(.*?)&amp;#x2F;(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:29</li>
+							<li>Defined in utilities/string/Strings.ts:27</li>
 						</ul>
 					</aside>
 				</section>
@@ -143,7 +140,7 @@
 					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Link<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)\[(.+?)\]\((https?:&amp;#x2F;&amp;#x2F;.+?)\)(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:31</li>
+							<li>Defined in utilities/string/Strings.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Strikethrough<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)-(.*?)-(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:28</li>
+							<li>Defined in utilities/string/Strings.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">markup<wbr>Text<wbr>Underline<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(^|&gt;|\s+)_(.*?)_(?&#x3D;\s+|[,.&lt;]|$)/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:30</li>
+							<li>Defined in utilities/string/Strings.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -180,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:117</li>
+									<li>Defined in utilities/string/Strings.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -203,7 +200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:170</li>
+									<li>Defined in utilities/string/Strings.ts:132</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -226,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:148</li>
+									<li>Defined in utilities/string/Strings.ts:110</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -249,7 +246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:156</li>
+									<li>Defined in utilities/string/Strings.ts:118</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -269,35 +266,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="format" class="tsd-anchor"></a>
-					<h3>format</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, separator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, forceLowerCase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/string/Strings.ts:51</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>separator: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>forceLowerCase: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="formatcasestyle" class="tsd-anchor"></a>
 					<h3>format<wbr>Case<wbr>Style</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -307,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:121</li>
+									<li>Defined in utilities/string/Strings.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -324,32 +292,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="formatsentencecase" class="tsd-anchor"></a>
-					<h3>format<wbr>Sentence<wbr>Case</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">format<wbr>Sentence<wbr>Case<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, textCase<span class="tsd-signature-symbol">: </span><a href="../enums/sentencecasestyle.html" class="tsd-signature-type">SentenceCaseStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/string/Strings.ts:89</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>textCase: <a href="../enums/sentencecasestyle.html" class="tsd-signature-type">SentenceCaseStyle</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="generatetimestamp" class="tsd-anchor"></a>
 					<h3>generate<wbr>Timestamp</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -359,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:174</li>
+									<li>Defined in utilities/string/Strings.ts:136</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -373,29 +315,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="isfirstlettercapital" class="tsd-anchor"></a>
-					<h3>is<wbr>First<wbr>Letter<wbr>Capital</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>First<wbr>Letter<wbr>Capital<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in utilities/string/Strings.ts:113</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="parsemarkup" class="tsd-anchor"></a>
 					<h3>parse<wbr>Markup</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -405,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:34</li>
+									<li>Defined in utilities/string/Strings.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -428,7 +347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:152</li>
+									<li>Defined in utilities/string/Strings.ts:114</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -451,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utilities/string/Strings.ts:166</li>
+									<li>Defined in utilities/string/Strings.ts:128</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -473,7 +392,7 @@
 					<div class="tsd-signature tsd-kind-icon">escape<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utilities/string/Strings.ts:137</li>
+							<li>Defined in utilities/string/Strings.ts:99</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -482,7 +401,7 @@
 						<div class="tsd-signature tsd-kind-icon">"<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;quot;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:141</li>
+								<li>Defined in utilities/string/Strings.ts:103</li>
 							</ul>
 						</aside>
 					</section>
@@ -492,7 +411,7 @@
 						<div class="tsd-signature tsd-kind-icon">&<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;amp;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:138</li>
+								<li>Defined in utilities/string/Strings.ts:100</li>
 							</ul>
 						</aside>
 					</section>
@@ -502,7 +421,7 @@
 						<div class="tsd-signature tsd-kind-icon">'<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;#39;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:142</li>
+								<li>Defined in utilities/string/Strings.ts:104</li>
 							</ul>
 						</aside>
 					</section>
@@ -512,7 +431,7 @@
 						<div class="tsd-signature tsd-kind-icon">/<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;#x2F;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:143</li>
+								<li>Defined in utilities/string/Strings.ts:105</li>
 							</ul>
 						</aside>
 					</section>
@@ -522,7 +441,7 @@
 						<div class="tsd-signature tsd-kind-icon"><<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;lt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:139</li>
+								<li>Defined in utilities/string/Strings.ts:101</li>
 							</ul>
 						</aside>
 					</section>
@@ -532,7 +451,7 @@
 						<div class="tsd-signature tsd-kind-icon">=<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;#x3D;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:145</li>
+								<li>Defined in utilities/string/Strings.ts:107</li>
 							</ul>
 						</aside>
 					</section>
@@ -542,7 +461,7 @@
 						<div class="tsd-signature tsd-kind-icon">><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:140</li>
+								<li>Defined in utilities/string/Strings.ts:102</li>
 							</ul>
 						</aside>
 					</section>
@@ -552,7 +471,7 @@
 						<div class="tsd-signature tsd-kind-icon">`<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&amp;#x60;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in utilities/string/Strings.ts:144</li>
+								<li>Defined in utilities/string/Strings.ts:106</li>
 							</ul>
 						</aside>
 					</section>
@@ -603,19 +522,10 @@
 						<a href="strings.html#fixobjectcasestyle" class="tsd-kind-icon">fix<wbr>Object<wbr>Case<wbr>Style</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="strings.html#format" class="tsd-kind-icon">format</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="strings.html#formatcasestyle" class="tsd-kind-icon">format<wbr>Case<wbr>Style</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="strings.html#formatsentencecase" class="tsd-kind-icon">format<wbr>Sentence<wbr>Case</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="strings.html#generatetimestamp" class="tsd-kind-icon">generate<wbr>Timestamp</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="strings.html#isfirstlettercapital" class="tsd-kind-icon">is<wbr>First<wbr>Letter<wbr>Capital</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="strings.html#parsemarkup" class="tsd-kind-icon">parse<wbr>Markup</a>

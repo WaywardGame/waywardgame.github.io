@@ -93,6 +93,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#get" class="tsd-kind-icon">get</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#initializeon" class="tsd-kind-icon">initialize<wbr>On</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setbonus" class="tsd-kind-icon">set<wbr>Bonus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setchangetimer" class="tsd-kind-icon">set<wbr>Change<wbr>Timer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setmax" class="tsd-kind-icon">set<wbr>Max</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="statfactory.html#getstats" class="tsd-kind-icon">get<wbr>Stats</a></li>
@@ -155,7 +156,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/istatfactory.html">IStatFactory</a>.<a href="../interfaces/istatfactory.html#get">get</a></p>
 								<ul>
-									<li>Defined in entity/StatFactory.ts:62</li>
+									<li>Defined in entity/StatFactory.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a>
@@ -173,13 +174,13 @@
 					<a name="initializeon" class="tsd-anchor"></a>
 					<h3>initialize<wbr>On</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>On<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibaseentity.html" class="tsd-signature-type">IBaseEntity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>On<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:58</li>
+									<li>Defined in entity/StatFactory.ts:66</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,10 +191,38 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entity: <a href="../interfaces/ibaseentity.html" class="tsd-signature-type">IBaseEntity</a></h5>
+									<h5>entity: <a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setbonus" class="tsd-anchor"></a>
+					<h3>set<wbr>Bonus</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Bonus<span class="tsd-signature-symbol">(</span>bonus<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in entity/StatFactory.ts:58</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the &quot;bonus&quot; for the stat. This changes the value that will be returned.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bonus: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -276,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:76</li>
+									<li>Defined in entity/StatFactory.ts:84</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -327,6 +356,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="statfactory.html#initializeon" class="tsd-kind-icon">initialize<wbr>On</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="statfactory.html#setbonus" class="tsd-kind-icon">set<wbr>Bonus</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="statfactory.html#setchangetimer" class="tsd-kind-icon">set<wbr>Change<wbr>Timer</a>
