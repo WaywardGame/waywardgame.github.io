@@ -95,6 +95,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#addsynccheck" class="tsd-kind-icon">add<wbr>Sync<wbr>Check</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="imultiplayer.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="imultiplayer.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#clearsyncpacketwaiting" class="tsd-kind-icon">clear<wbr>Sync<wbr>Packet<wbr>Waiting</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#clearsyncpacketswaiting" class="tsd-kind-icon">clear<wbr>Sync<wbr>Packets<wbr>Waiting</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#convertgamecodetoserverinfo" class="tsd-kind-icon">convert<wbr>Game<wbr>Code<wbr>ToServer<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#createserver" class="tsd-kind-icon">create<wbr>Server</a></li>
@@ -123,8 +125,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#onplaying" class="tsd-kind-icon">on<wbr>Playing</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-inherited"><a href="imultiplayer.html#once" class="tsd-kind-icon">once</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#queuesyncpacket" class="tsd-kind-icon">queue<wbr>Sync<wbr>Packet</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#resetsyncpacketswaiting" class="tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#sendpacketto" class="tsd-kind-icon">send<wbr>Packet<wbr>To</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="imultiplayer.html#setbanned" class="tsd-kind-icon">set<wbr>Banned</a></li>
@@ -314,10 +314,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="closeconnection" class="tsd-anchor"></a>
-					<h3>close<wbr>Connection</h3>
+					<a name="clearsyncpacketwaiting" class="tsd-anchor"></a>
+					<h3>clear<wbr>Sync<wbr>Packet<wbr>Waiting</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">close<wbr>Connection<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">: </span><a href="iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Sync<wbr>Packet<wbr>Waiting<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="ipacket.html" class="tsd-signature-type">IPacket</a>, wait<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:34</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>packet: <a href="ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+								<li>
+									<h5>wait: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="clearsyncpacketswaiting" class="tsd-anchor"></a>
+					<h3>clear<wbr>Sync<wbr>Packets<wbr>Waiting</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Sync<wbr>Packets<wbr>Waiting<span class="tsd-signature-symbol">(</span>waitId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -328,6 +354,32 @@
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> waitId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="closeconnection" class="tsd-anchor"></a>
+					<h3>close<wbr>Connection</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">close<wbr>Connection<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">: </span><a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a>, connection<span class="tsd-signature-symbol">: </span><a href="iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multiplayer/IMultiplayer.ts:35</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>reason: <a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a></h5>
+								</li>
 								<li>
 									<h5>connection: <a href="iconnection.html" class="tsd-signature-type">IConnection</a></h5>
 								</li>
@@ -346,7 +398,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:34</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -369,7 +421,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:35</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -389,19 +441,19 @@
 					<a name="disconnect" class="tsd-anchor"></a>
 					<h3>disconnect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">?: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a>, unloading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">?: </span><a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a>, unloading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:36</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:38</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reason: <a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reason: <a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reasonDescription: <a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a></h5>
@@ -418,19 +470,19 @@
 					<a name="disconnectandresetgamestate" class="tsd-anchor"></a>
 					<h3>disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">disconnect<wbr>And<wbr>Reset<wbr>Game<wbr>State<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">: </span><a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a>, reasonDescription<span class="tsd-signature-symbol">?: </span><a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:37</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>reason: <a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a></h5>
+									<h5>reason: <a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reasonDescription: <a href="../globals.html#translationgenerator" class="tsd-signature-type">TranslationGenerator</a></h5>
@@ -450,7 +502,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:38</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -538,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:39</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:41</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -555,7 +607,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:40</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -572,7 +624,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:41</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
@@ -592,7 +644,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:42</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a>
@@ -612,7 +664,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:43</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -638,7 +690,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:44</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -655,7 +707,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:45</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="imultiplayeroptions.html" class="tsd-signature-type">IMultiplayerOptions</a></h4>
@@ -672,7 +724,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:46</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -689,7 +741,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:47</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -706,7 +758,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:48</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:50</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -723,7 +775,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:49</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -740,7 +792,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:50</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -757,7 +809,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:51</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -774,7 +826,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:52</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -800,7 +852,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:53</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:55</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -886,7 +938,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:54</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:56</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -912,7 +964,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:55</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:57</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -988,7 +1040,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:56</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -997,67 +1049,6 @@
 									<h5>pause: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="queuesyncpacket" class="tsd-anchor"></a>
-					<h3>queue<wbr>Sync<wbr>Packet</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">queue<wbr>Sync<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="ipacket.html" class="tsd-signature-type">IPacket</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, checkId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, waitId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:57</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>packet: <a href="ipacket.html" class="tsd-signature-type">IPacket</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientSide: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> checkId: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> waitId: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="resetsyncpacketswaiting" class="tsd-anchor"></a>
-					<h3>reset<wbr>Sync<wbr>Packets<wbr>Waiting</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:58</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -1210,22 +1201,35 @@
 					<a name="syncpacket" class="tsd-anchor"></a>
 					<h3>sync<wbr>Packet</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">sync<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="ipacket.html" class="tsd-signature-type">IPacket</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, checkId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, waitId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">sync<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="ipacket.html" class="tsd-signature-type">IPacket</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, checkId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, wait<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:65</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:78</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a packet in a synchronized way to the server or clients</p>
+								</div>
+								<p>When ran as a server, clientSide() is called and the packet data is sent to all the clients.</p>
+								<p>When ran as a client, the packet is sent to the server. The server is expected to call this method, which in turn sends the packet back to the client. When the client receives the packet, this method a second time and clientSide() is called.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>packet: <a href="ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The packet</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientSide: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The method to run for the client or server.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
 											<ul class="tsd-signatures tsd-kind-type-literal">
@@ -1241,9 +1245,15 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> checkId: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>When true, this packet will not be sent to the server/client if the same packet is already being processed. When false, this packet will not be sent if any packet is already being processed. Useful when dealing with methods that could end up sending multiple packets while a packet is already being processed.</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> waitId: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> wait: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>When true, the client will keep track of what packets it sent to the server. If the client calls this method again before the server responds, it will not send a duplicate packet. It will wait for the server to send the packet back before allowing another one to be sent. When true, it will keep track of duplicate packets based on the packet type. When it&#39;s a number, it will keep track of duplicate packets based on the packet type + the number.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -1289,7 +1299,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:66</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:80</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1306,7 +1316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:67</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1329,7 +1339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in multiplayer/IMultiplayer.ts:68</li>
+									<li>Defined in multiplayer/IMultiplayer.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1405,6 +1415,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="imultiplayer.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#clearsyncpacketwaiting" class="tsd-kind-icon">clear<wbr>Sync<wbr>Packet<wbr>Waiting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="imultiplayer.html#clearsyncpacketswaiting" class="tsd-kind-icon">clear<wbr>Sync<wbr>Packets<wbr>Waiting</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a>
@@ -1489,12 +1505,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#pausepacketprocessing" class="tsd-kind-icon">pause<wbr>Packet<wbr>Processing</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="imultiplayer.html#queuesyncpacket" class="tsd-kind-icon">queue<wbr>Sync<wbr>Packet</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="imultiplayer.html#resetsyncpacketswaiting" class="tsd-kind-icon">reset<wbr>Sync<wbr>Packets<wbr>Waiting</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="imultiplayer.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a>

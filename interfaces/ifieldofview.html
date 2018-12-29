@@ -92,6 +92,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ifieldofview.html#radius" class="tsd-kind-icon">radius</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ifieldofview.html#texlight" class="tsd-kind-icon">tex<wbr>Light</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ifieldofview.html#texlightold" class="tsd-kind-icon">tex<wbr>Light<wbr>Old</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ifieldofview.html#transitionprogress" class="tsd-kind-icon">transition<wbr>Progress</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -104,8 +105,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#getsubdivisions" class="tsd-kind-icon">get<wbr>Subdivisions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#gettexturesize" class="tsd-kind-icon">get<wbr>Texture<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#resetgl" class="tsd-kind-icon">reset<wbr>Gl</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#resettransitionprogress" class="tsd-kind-icon">reset<wbr>Transition<wbr>Progress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#tickseed" class="tsd-kind-icon">tick<wbr>Seed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#updateradius" class="tsd-kind-icon">update<wbr>Radius</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ifieldofview.html#updatetransitionprogress" class="tsd-kind-icon">update<wbr>Transition<wbr>Progress</a></li>
 							</ul>
 						</section>
 					</div>
@@ -169,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>Light<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in renderer/fieldofview/IFieldOfView.ts:25</li>
+							<li>Defined in renderer/fieldofview/IFieldOfView.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -179,7 +182,17 @@
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>Light<wbr>Old<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in renderer/fieldofview/IFieldOfView.ts:26</li>
+							<li>Defined in renderer/fieldofview/IFieldOfView.ts:27</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="transitionprogress" class="tsd-anchor"></a>
+					<h3>transition<wbr>Progress</h3>
+					<div class="tsd-signature tsd-kind-icon">transition<wbr>Progress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in renderer/fieldofview/IFieldOfView.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +209,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:28</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -231,19 +244,22 @@
 					<a name="compute" class="tsd-anchor"></a>
 					<h3>compute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">compute<span class="tsd-signature-symbol">(</span>force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">compute<span class="tsd-signature-symbol">(</span>force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, ambientLightLevel<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:29</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> force: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ambientLightLevel: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -260,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:30</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:31</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="itexturedebugrenderer.html" class="tsd-signature-type">ITextureDebugRenderer</a></h4>
@@ -277,7 +293,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:31</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -303,7 +319,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:32</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -320,7 +336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:33</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -337,7 +353,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:34</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -346,6 +362,23 @@
 									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="resettransitionprogress" class="tsd-anchor"></a>
+					<h3>reset<wbr>Transition<wbr>Progress</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Transition<wbr>Progress<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:39</li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -360,7 +393,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:35</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -377,7 +410,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in renderer/fieldofview/IFieldOfView.ts:36</li>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -390,6 +423,23 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="updatetransitionprogress" class="tsd-anchor"></a>
+					<h3>update<wbr>Transition<wbr>Progress</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Transition<wbr>Progress<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in renderer/fieldofview/IFieldOfView.ts:38</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -431,6 +481,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="ifieldofview.html#texlightold" class="tsd-kind-icon">tex<wbr>Light<wbr>Old</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ifieldofview.html#transitionprogress" class="tsd-kind-icon">transition<wbr>Progress</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ifieldofview.html#canaseeb" class="tsd-kind-icon">canASeeB</a>
 							</li>
@@ -453,10 +506,16 @@
 								<a href="ifieldofview.html#resetgl" class="tsd-kind-icon">reset<wbr>Gl</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ifieldofview.html#resettransitionprogress" class="tsd-kind-icon">reset<wbr>Transition<wbr>Progress</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ifieldofview.html#tickseed" class="tsd-kind-icon">tick<wbr>Seed</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ifieldofview.html#updateradius" class="tsd-kind-icon">update<wbr>Radius</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ifieldofview.html#updatetransitionprogress" class="tsd-kind-icon">update<wbr>Transition<wbr>Progress</a>
 							</li>
 						</ul>
 					</li>

@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="clientpacket.html" class="tsd-signature-type">ClientPacket</a>
+						<a href="playertargetedsharedpacket.html" class="tsd-signature-type">PlayerTargetedSharedPacket</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">DisconnectPacket</span>
@@ -97,6 +97,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#constructor" class="tsd-kind-icon">constructor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#dataview" class="tsd-kind-icon">data<wbr>View</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="disconnectpacket.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#pid" class="tsd-kind-icon">pid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#player" class="tsd-kind-icon">player</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="disconnectpacket.html#reason" class="tsd-kind-icon">reason</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="disconnectpacket.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a></li>
 							</ul>
@@ -114,9 +117,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="disconnectpacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#isallowedwhenpaused" class="tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="disconnectpacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="disconnectpacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="disconnectpacket.html#process" class="tsd-kind-icon">process</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#processandsend" class="tsd-kind-icon">process<wbr>And<wbr>Send</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="disconnectpacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a></li>
@@ -321,7 +324,39 @@
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <a href="../enums/uitranslation.html" class="tsd-signature-type">UiTranslation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in multiplayer/packets/client/DisconnectPacket.ts:19</li>
+							<li>Defined in multiplayer/packets/shared/DisconnectPacket.ts:23</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="pid" class="tsd-anchor"></a>
+					<h3>pid</h3>
+					<div class="tsd-signature tsd-kind-icon">pid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="playertargetedsharedpacket.html">PlayerTargetedSharedPacket</a>.<a href="playertargetedsharedpacket.html#pid">pid</a></p>
+						<ul>
+							<li>Defined in multiplayer/packets/PlayerTargetedSharedPacket.ts:20</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="player" class="tsd-anchor"></a>
+					<h3>player</h3>
+					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iplayer.html" class="tsd-signature-type">IPlayer</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="playertargetedsharedpacket.html">PlayerTargetedSharedPacket</a>.<a href="playertargetedsharedpacket.html#player">player</a></p>
+						<ul>
+							<li>Defined in multiplayer/packets/PlayerTargetedSharedPacket.ts:22</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="reason" class="tsd-anchor"></a>
+					<h3>reason</h3>
+					<div class="tsd-signature tsd-kind-icon">reason<span class="tsd-signature-symbol">:</span> <a href="../enums/disconnectreason.html" class="tsd-signature-type">DisconnectReason</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in multiplayer/packets/shared/DisconnectPacket.ts:20</li>
 						</ul>
 					</aside>
 				</section>
@@ -498,10 +533,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#gettype">getType</a></p>
-								<p>Inherited from <a href="clientpacket.html">ClientPacket</a>.<a href="clientpacket.html#gettype">getType</a></p>
+								<p>Inherited from <a href="sharedpacket.html">SharedPacket</a>.<a href="sharedpacket.html#gettype">getType</a></p>
 								<p>Overrides <a href="basepacket.html">BasePacket</a>.<a href="basepacket.html#gettype">getType</a></p>
 								<ul>
-									<li>Defined in multiplayer/packets/ClientPacket.ts:19</li>
+									<li>Defined in multiplayer/packets/SharedPacket.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></h4>
@@ -546,54 +581,57 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="preprocess" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> pre<wbr>Process</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<h3>pre<wbr>Process</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">pre<wbr>Process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#preprocess">preProcess</a></p>
+								<p>Inherited from <a href="playertargetedsharedpacket.html">PlayerTargetedSharedPacket</a>.<a href="playertargetedsharedpacket.html#preprocess">preProcess</a></p>
+								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#preprocess">preProcess</a></p>
 								<ul>
-									<li>Defined in multiplayer/packets/Packet.ts:353</li>
+									<li>Defined in multiplayer/packets/PlayerTargetedSharedPacket.ts:24</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 					<a name="prereaddata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> pre<wbr>Read<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">pre<wbr>Read<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#prereaddata">preReadData</a></p>
+								<p>Inherited from <a href="playertargetedsharedpacket.html">PlayerTargetedSharedPacket</a>.<a href="playertargetedsharedpacket.html#prereaddata">preReadData</a></p>
+								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#prereaddata">preReadData</a></p>
 								<ul>
-									<li>Defined in multiplayer/packets/Packet.ts:284</li>
+									<li>Defined in multiplayer/packets/PlayerTargetedSharedPacket.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 					<a name="prewritedata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> pre<wbr>Write<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">pre<wbr>Write<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#prewritedata">preWriteData</a></p>
+								<p>Inherited from <a href="playertargetedsharedpacket.html">PlayerTargetedSharedPacket</a>.<a href="playertargetedsharedpacket.html#prewritedata">preWriteData</a></p>
+								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#prewritedata">preWriteData</a></p>
 								<ul>
-									<li>Defined in multiplayer/packets/Packet.ts:145</li>
+									<li>Defined in multiplayer/packets/PlayerTargetedSharedPacket.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -612,7 +650,7 @@
 								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#process">process</a></p>
 								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#process">process</a></p>
 								<ul>
-									<li>Defined in multiplayer/packets/client/DisconnectPacket.ts:21</li>
+									<li>Defined in multiplayer/packets/shared/DisconnectPacket.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3104,6 +3142,15 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="disconnectpacket.html#message" class="tsd-kind-icon">message</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="disconnectpacket.html#pid" class="tsd-kind-icon">pid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="disconnectpacket.html#player" class="tsd-kind-icon">player</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="disconnectpacket.html#reason" class="tsd-kind-icon">reason</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="disconnectpacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a>
 							</li>
@@ -3140,13 +3187,13 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="disconnectpacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="disconnectpacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 								<a href="disconnectpacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 								<a href="disconnectpacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
