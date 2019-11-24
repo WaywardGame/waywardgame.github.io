@@ -89,6 +89,13 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="statfactory.html#stat" class="tsd-kind-icon">stat</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="statfactory.html#value" class="tsd-kind-icon">value</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#get" class="tsd-kind-icon">get</a></li>
@@ -96,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setbonus" class="tsd-kind-icon">set<wbr>Bonus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setchangetimer" class="tsd-kind-icon">set<wbr>Change<wbr>Timer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setmax" class="tsd-kind-icon">set<wbr>Max</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="statfactory.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="statfactory.html#getstats" class="tsd-kind-icon">get<wbr>Stats</a></li>
 							</ul>
 						</section>
@@ -108,19 +116,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Stat<wbr>Factory<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="statfactory.html" class="tsd-signature-type">StatFactory</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stat<wbr>Factory<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><a href="../interfaces/istathost.html" class="tsd-signature-type">IStatHost</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="statfactory.html" class="tsd-signature-type">StatFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:16</li>
+									<li>Defined in src/entity/StatFactory.ts:64</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>host: <a href="../interfaces/istathost.html" class="tsd-signature-type">IStatHost</a></h5>
+								</li>
 								<li>
 									<h5>type: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a></h5>
 									<div class="tsd-comment tsd-typography">
@@ -144,6 +155,43 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="stat" class="tsd-anchor"></a>
+					<h3>stat</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> stat<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/StatFactory.ts:58</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/stat.html" class="tsd-signature-type">Stat</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="value" class="tsd-anchor"></a>
+					<h3>value</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/StatFactory.ts:62</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="get" class="tsd-anchor"></a>
@@ -156,7 +204,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/istatfactory.html">IStatFactory</a>.<a href="../interfaces/istatfactory.html#get">get</a></p>
 								<ul>
-									<li>Defined in entity/StatFactory.ts:70</li>
+									<li>Defined in src/entity/StatFactory.ts:122</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/istatbase.html" class="tsd-signature-type">IStatBase</a>
@@ -180,13 +228,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:66</li>
+									<li>Defined in src/entity/StatFactory.ts:118</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Initializes the <code>IStat</code> constructed by this factory on the given entity.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <code>Entity.stat.init</code></p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -208,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:58</li>
+									<li>Defined in src/entity/StatFactory.ts:109</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,13 +283,13 @@
 					<a name="setchangetimer" class="tsd-anchor"></a>
 					<h3>set<wbr>Change<wbr>Timer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Change<wbr>Timer<span class="tsd-signature-symbol">(</span>timer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, amt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Change<wbr>Timer<span class="tsd-signature-symbol">(</span>timer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, initializer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:49</li>
+									<li>Defined in src/entity/StatFactory.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,11 +306,25 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> amt: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The amount the stat should change, whenever the timer completes.</p>
-										<p>Stat timers are managed by their parent Entity. Currently, only players support <code>changeTimer</code></p>
-									</div>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initializer: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>factory<span class="tsd-signature-symbol">: </span><a href="statchangetimerfactory.html" class="tsd-signature-type">StatChangeTimerFactory</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>factory: <a href="statchangetimerfactory.html" class="tsd-signature-type">StatChangeTimerFactory</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -274,7 +341,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:32</li>
+									<li>Defined in src/entity/StatFactory.ts:82</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -295,6 +362,29 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setvalue" class="tsd-anchor"></a>
+					<h3>set<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Value<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/StatFactory.ts:74</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="getstats" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Stats</h3>
@@ -305,7 +395,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in entity/StatFactory.ts:84</li>
+									<li>Defined in src/entity/StatFactory.ts:137</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,6 +404,11 @@
 										get the name of the stat. <code>entity.stats[Stat[&lt;your stat here&gt;]]</code>. This is unweildy especially
 									for <code>IStats</code> construction. This function is provided to alleviate that.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <code>StatsFactory</code></p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -351,6 +446,12 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="statfactory.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="statfactory.html#stat" class="tsd-kind-icon">stat</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="statfactory.html#value" class="tsd-kind-icon">value</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="statfactory.html#get" class="tsd-kind-icon">get</a>
 							</li>
@@ -365,6 +466,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="statfactory.html#setmax" class="tsd-kind-icon">set<wbr>Max</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="statfactory.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="statfactory.html#getstats" class="tsd-kind-icon">get<wbr>Stats</a>
