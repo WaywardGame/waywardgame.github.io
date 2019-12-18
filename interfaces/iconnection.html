@@ -76,8 +76,9 @@
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/connection.html" class="tsd-signature-type">Connection</a></li>
+					<li><a href="../classes/smartconnection.html" class="tsd-signature-type">SmartConnection</a></li>
+					<li><a href="../classes/steamnetworkconnection.html" class="tsd-signature-type">SteamNetworkConnection</a></li>
 					<li><a href="../classes/webrtcconnection.html" class="tsd-signature-type">WebRTCConnection</a></li>
-					<li><a href="../classes/webrtcwithfallbackconnection.html" class="tsd-signature-type">WebRTCWithFallbackConnection</a></li>
 					<li><a href="../classes/websocketconnection.html" class="tsd-signature-type">WebSocketConnection</a></li>
 				</ul>
 			</section>
@@ -94,8 +95,10 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#lastpacketnumberreceived" class="tsd-kind-icon">last<wbr>Packet<wbr>Number<wbr>Received</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#lastpacketnumbersent" class="tsd-kind-icon">last<wbr>Packet<wbr>Number<wbr>Sent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#matchmakingidentifier" class="tsd-kind-icon">matchmaking<wbr>Identifier</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#pid" class="tsd-kind-icon">pid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#playeridentifier" class="tsd-kind-icon">player<wbr>Identifier</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#playersteamid" class="tsd-kind-icon">player<wbr>Steam<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iconnection.html#queuedpackets" class="tsd-kind-icon">queued<wbr>Packets</a></li>
 							</ul>
 						</section>
@@ -112,8 +115,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#processmatchmakingmessage" class="tsd-kind-icon">process<wbr>Matchmaking<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#queuepacketdata" class="tsd-kind-icon">queue<wbr>Packet<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#send" class="tsd-kind-icon">send</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#sendkeepalive" class="tsd-kind-icon">send<wbr>Keep<wbr>Alive</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#setstate" class="tsd-kind-icon">set<wbr>State</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iconnection.html#startkeepalive" class="tsd-kind-icon">start<wbr>Keep<wbr>Alive</a></li>
 							</ul>
 						</section>
 					</div>
@@ -127,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">buffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:37</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +140,7 @@
 					<div class="tsd-signature tsd-kind-icon">buffer<wbr>Offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:38</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">buffer<wbr>Packet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:39</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -157,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Packet<wbr>Number<wbr>Received<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:41</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:44</li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Packet<wbr>Number<wbr>Sent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:40</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -177,7 +180,17 @@
 					<div class="tsd-signature tsd-kind-icon">matchmaking<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:27</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:30</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -187,17 +200,27 @@
 					<div class="tsd-signature tsd-kind-icon">pid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:29</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:32</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="playeridentifier" class="tsd-anchor"></a>
 					<h3>player<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">player<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">player<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:26</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:28</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="playersteamid" class="tsd-anchor"></a>
+					<h3>player<wbr>Steam<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">player<wbr>Steam<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -207,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">queued<wbr>Packets<span class="tsd-signature-symbol">:</span> <a href="ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:35</li>
+							<li>Defined in src/multiplayer/networking/IConnection.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -230,7 +253,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:43</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -247,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:44</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -264,7 +287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:45</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -302,7 +325,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:46</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -319,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:47</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:50</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -336,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:48</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/connectionstate.html" class="tsd-signature-type">ConnectionState</a></h4>
@@ -353,7 +376,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:49</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -370,7 +393,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:50</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -393,7 +416,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:51</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -416,7 +439,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:52</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:55</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -425,6 +448,23 @@
 									<h5>data: <span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="sendkeepalive" class="tsd-anchor"></a>
+					<h3>send<wbr>Keep<wbr>Alive</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Keep<wbr>Alive<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:57</li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -439,7 +479,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:53</li>
+									<li>Defined in src/multiplayer/networking/IConnection.ts:56</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -448,23 +488,6 @@
 									<h5>state: <a href="../enums/connectionstate.html" class="tsd-signature-type">ConnectionState</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="startkeepalive" class="tsd-anchor"></a>
-					<h3>start<wbr>Keep<wbr>Alive</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">start<wbr>Keep<wbr>Alive<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/multiplayer/networking/IConnection.ts:54</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -505,10 +528,16 @@
 								<a href="iconnection.html#matchmakingidentifier" class="tsd-kind-icon">matchmaking<wbr>Identifier</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iconnection.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iconnection.html#pid" class="tsd-kind-icon">pid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iconnection.html#playeridentifier" class="tsd-kind-icon">player<wbr>Identifier</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iconnection.html#playersteamid" class="tsd-kind-icon">player<wbr>Steam<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iconnection.html#queuedpackets" class="tsd-kind-icon">queued<wbr>Packets</a>
@@ -544,10 +573,10 @@
 								<a href="iconnection.html#send" class="tsd-kind-icon">send</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iconnection.html#setstate" class="tsd-kind-icon">set<wbr>State</a>
+								<a href="iconnection.html#sendkeepalive" class="tsd-kind-icon">send<wbr>Keep<wbr>Alive</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iconnection.html#startkeepalive" class="tsd-kind-icon">start<wbr>Keep<wbr>Alive</a>
+								<a href="iconnection.html#setstate" class="tsd-kind-icon">set<wbr>State</a>
 							</li>
 						</ul>
 					</li>

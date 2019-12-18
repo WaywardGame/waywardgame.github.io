@@ -80,6 +80,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#fullscreenupdate" class="tsd-kind-icon">fullscreen<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#onp2psessionconnectfail" class="tsd-kind-icon">on<wbr>P2PSession<wbr>Connect<wbr>Fail</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#onp2psessionrequest" class="tsd-kind-icon">on<wbr>P2PSession<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#onrelaynetworkstatus" class="tsd-kind-icon">on<wbr>Relay<wbr>Network<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#overlayhidden" class="tsd-kind-icon">overlay<wbr>Hidden</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="isteamworksevents.html#overlayshown" class="tsd-kind-icon">overlay<wbr>Shown</a></li>
 							</ul>
@@ -109,6 +112,81 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onp2psessionconnectfail" class="tsd-anchor"></a>
+					<h3>on<wbr>P2PSession<wbr>Connect<wbr>Fail</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>P2PSession<wbr>Connect<wbr>Fail<span class="tsd-signature-symbol">(</span>steamIdRemote<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, errorCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/ISteamworks.ts:20</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>steamIdRemote: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>errorCode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onp2psessionrequest" class="tsd-anchor"></a>
+					<h3>on<wbr>P2PSession<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>P2PSession<wbr>Request<span class="tsd-signature-symbol">(</span>steamIdRemote<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/ISteamworks.ts:19</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>steamIdRemote: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onrelaynetworkstatus" class="tsd-anchor"></a>
+					<h3>on<wbr>Relay<wbr>Network<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Relay<wbr>Network<wbr>Status<span class="tsd-signature-symbol">(</span>ready<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, status<span class="tsd-signature-symbol">: </span><a href="isteamnetworkrelaystatus.html" class="tsd-signature-type">ISteamNetworkRelayStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/ISteamworks.ts:18</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ready: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>status: <a href="isteamnetworkrelaystatus.html" class="tsd-signature-type">ISteamNetworkRelayStatus</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -165,6 +243,15 @@
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworksevents.html#fullscreenupdate" class="tsd-kind-icon">fullscreen<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworksevents.html#onp2psessionconnectfail" class="tsd-kind-icon">on<wbr>P2PSession<wbr>Connect<wbr>Fail</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworksevents.html#onp2psessionrequest" class="tsd-kind-icon">on<wbr>P2PSession<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="isteamworksevents.html#onrelaynetworkstatus" class="tsd-kind-icon">on<wbr>Relay<wbr>Network<wbr>Status</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="isteamworksevents.html#overlayhidden" class="tsd-kind-icon">overlay<wbr>Hidden</a>
