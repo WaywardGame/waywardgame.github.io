@@ -132,6 +132,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#contains" class="tsd-kind-icon">contains</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#dump" class="tsd-kind-icon">dump</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#dumpfast" class="tsd-kind-icon">dump<wbr>Fast</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stats.html#exceedsmax" class="tsd-kind-icon">exceeds<wbr>Max</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#exists" class="tsd-kind-icon">exists</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#finddescendants" class="tsd-kind-icon">find<wbr>Descendants</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#forceshowtooltip" class="tsd-kind-icon">force<wbr>Show<wbr>Tooltip</a></li>
@@ -146,6 +147,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="stats.html#getnthchild" class="tsd-kind-icon">get<wbr>Nth<wbr>Child</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="stats.html#getoffset" class="tsd-kind-icon">get<wbr>Offset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="stats.html#getparent" class="tsd-kind-icon">get<wbr>Parent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stats.html#getpercent" class="tsd-kind-icon">get<wbr>Percent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stats.html#gettimeuntilchange" class="tsd-kind-icon">get<wbr>Time<wbr>Until<wbr>Change</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stats.html#getvalue" class="tsd-kind-icon">get<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stats.html#has" class="tsd-kind-icon">has</a></li>
@@ -598,6 +600,34 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="exceedsmax" class="tsd-anchor"></a>
+					<h3>exceeds<wbr>Max</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">exceeds<wbr>Max<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/Stats.ts:266</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether the stat exceeds its <code>max</code> value. If there is no <code>max</code> for this stat, returns <code>false</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="exists" class="tsd-anchor"></a>
 					<h3>exists</h3>
@@ -975,6 +1005,34 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpercent" class="tsd-anchor"></a>
+					<h3>get<wbr>Percent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Percent<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/Stats.ts:258</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the &quot;percent&quot; of the given stat, calculated with <code>value / max</code>. If there is no <code>max</code> for this stat, returns <code>undefined</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stat: <a href="../enums/stat.html" class="tsd-signature-type">Stat</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gettimeuntilchange" class="tsd-anchor"></a>
 					<h3>get<wbr>Time<wbr>Until<wbr>Change</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -984,7 +1042,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:331</li>
+									<li>Defined in src/entity/Stats.ts:347</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1153,7 +1211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:326</li>
+									<li>Defined in src/entity/Stats.ts:342</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1388,7 +1446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:292</li>
+									<li>Defined in src/entity/Stats.ts:308</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1518,7 +1576,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:335</li>
+									<li>Defined in src/entity/Stats.ts:351</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1596,7 +1654,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:278</li>
+									<li>Defined in src/entity/Stats.ts:294</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2050,7 +2108,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:266</li>
+									<li>Defined in src/entity/Stats.ts:282</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2522,7 +2580,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/Stats.ts:348</li>
+									<li>Defined in src/entity/Stats.ts:364</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2849,6 +2907,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="stats.html#dumpfast" class="tsd-kind-icon">dump<wbr>Fast</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stats.html#exceedsmax" class="tsd-kind-icon">exceeds<wbr>Max</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="stats.html#exists" class="tsd-kind-icon">exists</a>
 							</li>
@@ -2890,6 +2951,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="stats.html#getparent" class="tsd-kind-icon">get<wbr>Parent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stats.html#getpercent" class="tsd-kind-icon">get<wbr>Percent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="stats.html#gettimeuntilchange" class="tsd-kind-icon">get<wbr>Time<wbr>Until<wbr>Change</a>

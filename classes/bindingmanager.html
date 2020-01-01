@@ -92,6 +92,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bindingmanager.html#addbinding" class="tsd-kind-icon">add<wbr>Binding</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bindingmanager.html#arebindsdisabled" class="tsd-kind-icon">are<wbr>Binds<wbr>Disabled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bindingmanager.html#arebindsdisabledby" class="tsd-kind-icon">are<wbr>Binds<wbr>Disabled<wbr>By</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="bindingmanager.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="bindingmanager.html#cancelall" class="tsd-kind-icon">cancel<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bindingmanager.html#checkmodifiers" class="tsd-kind-icon">check<wbr>Modifiers</a></li>
@@ -187,11 +188,37 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:546</li>
+									<li>Defined in src/newui/BindingManager.ts:552</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> id: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.defaultBindCatcher</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="arebindsdisabledby" class="tsd-anchor"></a>
+					<h3>are<wbr>Binds<wbr>Disabled<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">are<wbr>Binds<wbr>Disabled<wbr>By<span class="tsd-signature-symbol">(</span>disabler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/newui/BindingManager.ts:556</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>disabler: <span class="tsd-signature-type">string</span></h5>
+								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> id: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.defaultBindCatcher</span></h5>
 								</li>
@@ -307,7 +334,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:618</li>
+									<li>Defined in src/newui/BindingManager.ts:628</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -399,7 +426,7 @@
 					<a name="disablebindsuntil" class="tsd-anchor"></a>
 					<h3>disable<wbr>Binds<wbr>Until</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">disable<wbr>Binds<wbr>Until<span class="tsd-signature-symbol">(</span>until<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">disable<wbr>Binds<wbr>Until<span class="tsd-signature-symbol">(</span>until<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, disabler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -412,6 +439,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>until: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>disabler: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> id: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;this.defaultBindCatcher</span></h5>
@@ -668,7 +698,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:667</li>
+									<li>Defined in src/newui/BindingManager.ts:677</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -691,7 +721,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:554</li>
+									<li>Defined in src/newui/BindingManager.ts:564</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -717,7 +747,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:648</li>
+									<li>Defined in src/newui/BindingManager.ts:658</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -740,7 +770,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:671</li>
+									<li>Defined in src/newui/BindingManager.ts:681</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -769,7 +799,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:644</li>
+									<li>Defined in src/newui/BindingManager.ts:654</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -795,7 +825,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:699</li>
+									<li>Defined in src/newui/BindingManager.ts:709</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -818,7 +848,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:685</li>
+									<li>Defined in src/newui/BindingManager.ts:695</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1018,7 +1048,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:609</li>
+									<li>Defined in src/newui/BindingManager.ts:619</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1041,7 +1071,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:586</li>
+									<li>Defined in src/newui/BindingManager.ts:596</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1116,7 +1146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/BindingManager.ts:550</li>
+									<li>Defined in src/newui/BindingManager.ts:560</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1212,6 +1242,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="bindingmanager.html#arebindsdisabled" class="tsd-kind-icon">are<wbr>Binds<wbr>Disabled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="bindingmanager.html#arebindsdisabledby" class="tsd-kind-icon">are<wbr>Binds<wbr>Disabled<wbr>By</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="bindingmanager.html#cancel" class="tsd-kind-icon">cancel</a>

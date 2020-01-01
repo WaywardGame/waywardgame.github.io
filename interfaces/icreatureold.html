@@ -190,6 +190,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureold.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-protected"><a href="icreatureold.html#premove" class="tsd-kind-icon">pre<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureold.html#preventnextmovement" class="tsd-kind-icon">prevent<wbr>Next<wbr>Movement</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureold.html#processattack" class="tsd-kind-icon">process<wbr>Attack</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureold.html#processspecialabilities" class="tsd-kind-icon">process<wbr>Special<wbr>Abilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="icreatureold.html#queuesoundeffect" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureold.html#queuesoundeffectinfront" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront</a></li>
@@ -1858,7 +1859,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="../classes/creature.html">Creature</a>.<a href="../classes/creature.html#onstatchange">onStatChange</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/Creature.ts:1046</li>
+									<li>Defined in src/entity/creature/Creature.ts:1337</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1906,7 +1907,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="../classes/creature.html">Creature</a>.<a href="../classes/creature.html#premove">preMove</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/Creature.ts:1037</li>
+									<li>Defined in src/entity/creature/Creature.ts:1328</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1955,6 +1956,36 @@
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
+					<a name="processattack" class="tsd-anchor"></a>
+					<h3>process<wbr>Attack</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Attack<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><a href="icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a>, moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a>, enemy<span class="tsd-signature-symbol">: </span><a href="../classes/player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="../classes/creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="../classes/creature.html">Creature</a>.<a href="../classes/creature.html#processattack">processAttack</a></p>
+								<ul>
+									<li>Defined in src/entity/creature/Creature.ts:1031</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>description: <a href="icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a></h5>
+								</li>
+								<li>
+									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
+								</li>
+								<li>
+									<h5>enemy: <a href="../classes/player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="../classes/creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -2636,7 +2667,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="../classes/creature.html">Creature</a>.<a href="../classes/creature.html#updatedoodadoverhiddenstateforcurrenttile">updateDoodadOverHiddenStateForCurrentTile</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/Creature.ts:1032</li>
+									<li>Defined in src/entity/creature/Creature.ts:1323</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3104,6 +3135,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="icreatureold.html#preventnextmovement" class="tsd-kind-icon">prevent<wbr>Next<wbr>Movement</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
+								<a href="icreatureold.html#processattack" class="tsd-kind-icon">process<wbr>Attack</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="icreatureold.html#processspecialabilities" class="tsd-kind-icon">process<wbr>Special<wbr>Abilities</a>
