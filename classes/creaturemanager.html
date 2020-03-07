@@ -145,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:541</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:553</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -174,7 +174,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:368</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:380</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -197,7 +197,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:558</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:570</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -271,7 +271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:424</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:436</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -357,7 +357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:321</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:333</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -397,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:373</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:385</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -421,7 +421,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:392</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:404</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -438,13 +438,13 @@
 					<a name="spawn" class="tsd-anchor"></a>
 					<h3>spawn</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">spawn<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, spawnTiles<span class="tsd-signature-symbol">?: </span><a href="../enums/tilegroup.html" class="tsd-signature-type">TileGroup</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">spawn<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, spawnTiles<span class="tsd-signature-symbol">?: </span><a href="../enums/tilegroup.html" class="tsd-signature-type">TileGroup</a>, bypassCreatureLimit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:108</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:109</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -492,6 +492,15 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> spawnTiles: <a href="../enums/tilegroup.html" class="tsd-signature-type">TileGroup</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If set, this will overwrite the creature&#39;s description for which tiles it can spawn on</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassCreatureLimit: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If set, the creature limit will be ignored and spawn the creature over the set limit</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a>
@@ -505,13 +514,13 @@
 					<a name="spawnfromgroup" class="tsd-anchor"></a>
 					<h3>spawn<wbr>From<wbr>Group</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">spawn<wbr>From<wbr>Group<span class="tsd-signature-symbol">(</span>creatureGroup<span class="tsd-signature-symbol">: </span><a href="../enums/spawngroup.html" class="tsd-signature-type">SpawnGroup</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>From<wbr>Group<span class="tsd-signature-symbol">(</span>creatureGroup<span class="tsd-signature-symbol">: </span><a href="../enums/spawngroup.html" class="tsd-signature-type">SpawnGroup</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, bypassCreatureLimit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:269</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:281</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -531,6 +540,9 @@
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassCreatureLimit: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a>
 								<span class="tsd-signature-symbol"> | </span>
@@ -549,7 +561,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:597</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:609</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -575,7 +587,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:404</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:416</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

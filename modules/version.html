@@ -81,6 +81,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#getversiondisplaystring" class="tsd-kind-icon">get<wbr>Version<wbr>Display<wbr>String</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#getversioninfo" class="tsd-kind-icon">get<wbr>Version<wbr>Info</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#isatleast" class="tsd-kind-icon">is<wbr>AtLeast</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#iscompatible" class="tsd-kind-icon">is<wbr>Compatible</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="version.html#issameversion" class="tsd-kind-icon">is<wbr>Same<wbr>Version</a></li>
 							</ul>
@@ -123,7 +124,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Version.ts:39</li>
+									<li>Defined in src/utilities/Version.ts:67</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -155,7 +156,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Version.ts:83</li>
+									<li>Defined in src/utilities/Version.ts:111</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -178,7 +179,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Version.ts:50</li>
+									<li>Defined in src/utilities/Version.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -192,6 +193,38 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isatleast" class="tsd-anchor"></a>
+					<h3>is<wbr>AtLeast</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>AtLeast<span class="tsd-signature-symbol">(</span>version<span class="tsd-signature-symbol">: </span><a href="../interfaces/iversioninfo.html" class="tsd-signature-type">IVersionInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, atLeast<span class="tsd-signature-symbol">: </span><a href="../interfaces/iversioninfo.html" class="tsd-signature-type">IVersionInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Version.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether the given <code>version</code> is <code>atLeast</code> another version. This can be used, for example,
+									to see if a save or mod was created/edited after a specific thing was implemented.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>version: <a href="../interfaces/iversioninfo.html" class="tsd-signature-type">IVersionInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>atLeast: <a href="../interfaces/iversioninfo.html" class="tsd-signature-type">IVersionInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="iscompatible" class="tsd-anchor"></a>
 					<h3>is<wbr>Compatible</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -201,9 +234,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Version.ts:31</li>
+									<li>Defined in src/utilities/Version.ts:35</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether the given version is compatible with the game&#39;s version. This is used to check, for example,
+									if a mod is compatible with the game&#39;s version.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -224,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Version.ts:76</li>
+									<li>Defined in src/utilities/Version.ts:104</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -269,6 +308,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="version.html#getversioninfo" class="tsd-kind-icon">get<wbr>Version<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="version.html#isatleast" class="tsd-kind-icon">is<wbr>AtLeast</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="version.html#iscompatible" class="tsd-kind-icon">is<wbr>Compatible</a>

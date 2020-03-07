@@ -85,10 +85,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#animated" class="tsd-kind-icon">animated</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#bottomleft" class="tsd-kind-icon">bottom<wbr>Left</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#bottomright" class="tsd-kind-icon">bottom<wbr>Right</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#tall" class="tsd-kind-icon">tall</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#isanimated" class="tsd-kind-icon">is<wbr>Animated</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#istall" class="tsd-kind-icon">is<wbr>Tall</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#topleft" class="tsd-kind-icon">top<wbr>Left</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#topright" class="tsd-kind-icon">top<wbr>Right</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodadinfo.html#type" class="tsd-kind-icon">type</a></li>
@@ -103,7 +103,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Doodad<wbr>Info<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol"> | </span><a href="../enums/terraindecoration.html" class="tsd-signature-type">TerrainDecoration</a>, tall<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, xOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, animated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Doodad<wbr>Info<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol"> | </span><a href="../enums/terraindecoration.html" class="tsd-signature-type">TerrainDecoration</a>, isTall<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, xOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isAnimated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -118,7 +118,7 @@
 									<h5>type: <span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol"> | </span><a href="../enums/terraindecoration.html" class="tsd-signature-type">TerrainDecoration</a></h5>
 								</li>
 								<li>
-									<h5>tall: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>isTall: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5>xOffset: <span class="tsd-signature-type">number</span></h5>
@@ -127,7 +127,7 @@
 									<h5>yOffset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>animated: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>isAnimated: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a></h4>
@@ -137,16 +137,6 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="animated" class="tsd-anchor"></a>
-					<h3>animated</h3>
-					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/doodad/DoodadInfo.ts:23</li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="bottomleft" class="tsd-anchor"></a>
 					<h3>bottom<wbr>Left</h3>
@@ -168,9 +158,19 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tall" class="tsd-anchor"></a>
-					<h3>tall</h3>
-					<div class="tsd-signature tsd-kind-icon">tall<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="isanimated" class="tsd-anchor"></a>
+					<h3>is<wbr>Animated</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/doodad/DoodadInfo.ts:23</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="istall" class="tsd-anchor"></a>
+					<h3>is<wbr>Tall</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Tall<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/doodad/DoodadInfo.ts:23</li>
@@ -228,16 +228,16 @@
 								<a href="doodadinfo.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="doodadinfo.html#animated" class="tsd-kind-icon">animated</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodadinfo.html#bottomleft" class="tsd-kind-icon">bottom<wbr>Left</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodadinfo.html#bottomright" class="tsd-kind-icon">bottom<wbr>Right</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="doodadinfo.html#tall" class="tsd-kind-icon">tall</a>
+								<a href="doodadinfo.html#isanimated" class="tsd-kind-icon">is<wbr>Animated</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="doodadinfo.html#istall" class="tsd-kind-icon">is<wbr>Tall</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodadinfo.html#topleft" class="tsd-kind-icon">top<wbr>Left</a>

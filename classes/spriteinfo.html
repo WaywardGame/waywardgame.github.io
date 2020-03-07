@@ -93,8 +93,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#animated" class="tsd-kind-icon">animated</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#texcoord" class="tsd-kind-icon">tex<wbr>Coord</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#texheight" class="tsd-kind-icon">tex<wbr>Height</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#texoffsety" class="tsd-kind-icon">tex<wbr>OffsetY</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#texsize" class="tsd-kind-icon">tex<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="spriteinfo.html#texwidth" class="tsd-kind-icon">tex<wbr>Width</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,7 +107,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Info<span class="tsd-signature-symbol">(</span>texCoord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span>, texSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, texOffsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, animated<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spriteinfo.html" class="tsd-signature-type">SpriteInfo</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Info<span class="tsd-signature-symbol">(</span>texCoord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span>, texWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, texHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, texOffsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, animated<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spriteinfo.html" class="tsd-signature-type">SpriteInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -121,7 +122,10 @@
 									<h5>texCoord: <span class="tsd-signature-type">Vec2</span></h5>
 								</li>
 								<li>
-									<h5>texSize: <span class="tsd-signature-type">number</span></h5>
+									<h5>texWidth: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>texHeight: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>texOffsetY: <span class="tsd-signature-type">number</span></h5>
@@ -160,6 +164,17 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="texheight" class="tsd-anchor"></a>
+					<h3>tex<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">tex<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ispriteinfo.html">ISpriteInfo</a>.<a href="../interfaces/ispriteinfo.html#texheight">texHeight</a></p>
+						<ul>
+							<li>Defined in src/renderer/SpriteInfo.ts:16</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="texoffsety" class="tsd-anchor"></a>
 					<h3>tex<wbr>OffsetY</h3>
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>OffsetY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -171,11 +186,11 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="texsize" class="tsd-anchor"></a>
-					<h3>tex<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">tex<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="texwidth" class="tsd-anchor"></a>
+					<h3>tex<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">tex<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ispriteinfo.html">ISpriteInfo</a>.<a href="../interfaces/ispriteinfo.html#texsize">texSize</a></p>
+						<p>Implementation of <a href="../interfaces/ispriteinfo.html">ISpriteInfo</a>.<a href="../interfaces/ispriteinfo.html#texwidth">texWidth</a></p>
 						<ul>
 							<li>Defined in src/renderer/SpriteInfo.ts:16</li>
 						</ul>
@@ -208,10 +223,13 @@
 								<a href="spriteinfo.html#texcoord" class="tsd-kind-icon">tex<wbr>Coord</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="spriteinfo.html#texheight" class="tsd-kind-icon">tex<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="spriteinfo.html#texoffsety" class="tsd-kind-icon">tex<wbr>OffsetY</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="spriteinfo.html#texsize" class="tsd-kind-icon">tex<wbr>Size</a>
+								<a href="spriteinfo.html#texwidth" class="tsd-kind-icon">tex<wbr>Width</a>
 							</li>
 						</ul>
 					</li>

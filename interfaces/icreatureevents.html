@@ -85,7 +85,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icreatureevents.html#canattack" class="tsd-kind-icon">can<wbr>Attack</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icreatureevents.html#candespawn" class="tsd-kind-icon">can<wbr>Despawn</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icreatureevents.html#canfacedirections" class="tsd-kind-icon">can<wbr>Face<wbr>Directions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icreatureevents.html#canmove" class="tsd-kind-icon">can<wbr>Move</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icreatureevents.html#canperformspecialabilities" class="tsd-kind-icon">can<wbr>Perform<wbr>Special<wbr>Abilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureevents.html#postmove" class="tsd-kind-icon">post<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureevents.html#premove" class="tsd-kind-icon">pre<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="icreatureevents.html#removed" class="tsd-kind-icon">removed</a></li>
@@ -113,7 +116,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/ICreature.ts:188</li>
+									<li>Defined in src/entity/creature/ICreature.ts:190</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -139,6 +142,73 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="candespawn" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> can<wbr>Despawn</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Despawn<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/creature/ICreature.ts:221</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a creature despawns</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+							<p>True if the creature can despawn, false if the creature can&#39;t despawn, or undefined to use the default logic</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="canfacedirections" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> can<wbr>Face<wbr>Directions</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Face<wbr>Directions<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/creature/ICreature.ts:209</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a creature tries to face a new direction</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The x coordinate of the creature&#39;s facing direction</p>
+									</div>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The y coordinate of the creature&#39;s facing direction</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+							<p>True if the creature can face a new direction, false if the creature can&#39;t face a new direction, or undefined to use the default logic</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="canmove" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> can<wbr>Move</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -148,7 +218,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/ICreature.ts:199</li>
+									<li>Defined in src/entity/creature/ICreature.ts:201</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,6 +264,32 @@
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
 							<p>True if the creature can move, false if the creature cannot move, or undefined to use the default logic</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="canperformspecialabilities" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> can<wbr>Perform<wbr>Special<wbr>Abilities</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Perform<wbr>Special<wbr>Abilities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/creature/ICreature.ts:215</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a creature may attempt to do a special ability</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+							<p>True if the creature can attempt to do a special ability, false if the creature can&#39;t perform special abilities, or undefined to use the default logic</p>
 						</li>
 					</ul>
 				</section>
@@ -624,7 +720,16 @@
 								<a href="icreatureevents.html#canattack" class="tsd-kind-icon">can<wbr>Attack</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="icreatureevents.html#candespawn" class="tsd-kind-icon">can<wbr>Despawn</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="icreatureevents.html#canfacedirections" class="tsd-kind-icon">can<wbr>Face<wbr>Directions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="icreatureevents.html#canmove" class="tsd-kind-icon">can<wbr>Move</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="icreatureevents.html#canperformspecialabilities" class="tsd-kind-icon">can<wbr>Perform<wbr>Special<wbr>Abilities</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="icreatureevents.html#postmove" class="tsd-kind-icon">post<wbr>Move</a>

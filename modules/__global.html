@@ -226,6 +226,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="__global.html#bound" class="tsd-kind-icon">Bound</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="__global.html#debounce" class="tsd-kind-icon">Debounce</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="__global.html#final" class="tsd-kind-icon">Final</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="__global.html#override" class="tsd-kind-icon">Override</a></li>
 							</ul>
@@ -415,7 +416,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="entry" class="tsd-anchor"></a>
 					<h3>Entry</h3>
-					<div class="tsd-signature tsd-kind-icon">Entry&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Entry&lt;O&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Entry&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">O extends Descriptions&lt;infer K, infer V&gt; ? [K, V] : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Objects.ts:15</li>
@@ -455,7 +456,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="firstifone" class="tsd-anchor"></a>
 					<h3>First<wbr>IfOne</h3>
-					<div class="tsd-signature tsd-kind-icon">First<wbr>IfOne&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">FirstIfOne&lt;T&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">First<wbr>IfOne&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T extends [infer FIRST] ? FIRST : T</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Iterables.ts:28</li>
@@ -553,7 +554,7 @@
 					<div class="tsd-signature tsd-kind-icon">IByte<wbr>Grid<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/IGlobal.ts:218</li>
+							<li>Defined in src/IGlobal.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -568,7 +569,7 @@
 					<div class="tsd-signature tsd-kind-icon">IDijkstra<wbr>Map<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/IGlobal.ts:220</li>
+							<li>Defined in src/IGlobal.ts:230</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -583,7 +584,7 @@
 					<div class="tsd-signature tsd-kind-icon">IKDTree<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/IGlobal.ts:262</li>
+							<li>Defined in src/IGlobal.ts:272</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -598,7 +599,7 @@
 					<div class="tsd-signature tsd-kind-icon">INavigation<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/IGlobal.ts:238</li>
+							<li>Defined in src/IGlobal.ts:248</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -610,7 +611,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="instanceof" class="tsd-anchor"></a>
 					<h3>Instance<wbr>Of</h3>
-					<div class="tsd-signature tsd-kind-icon">Instance<wbr>Of&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">InstanceOf&lt;T&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Instance<wbr>Of&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T extends Class&lt;any&gt; ? InstanceType&lt;T&gt; : T extends object ? P : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Class.ts:20</li>
@@ -642,7 +643,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="key" class="tsd-anchor"></a>
 					<h3>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">Key&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Key&lt;O&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Key&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">O extends Descriptions&lt;infer K, any&gt; ? K : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Objects.ts:16</li>
@@ -679,7 +680,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="maskreturn" class="tsd-anchor"></a>
 					<h3>Mask<wbr>Return</h3>
-					<div class="tsd-signature tsd-kind-icon">Mask<wbr>Return&lt;F, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MaskReturn&lt;F, R&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Mask<wbr>Return&lt;F, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">F extends function ? function : function</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Function.ts:34</li>
@@ -810,7 +811,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="propertyof" class="tsd-anchor"></a>
 					<h3>Property<wbr>Of</h3>
-					<div class="tsd-signature tsd-kind-icon">Property<wbr>Of&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PropertyOf&lt;T, K&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Property<wbr>Of&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T extends object ? V : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Misc.ts:21</li>
@@ -829,7 +830,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="returntypeort" class="tsd-anchor"></a>
 					<h3>Return<wbr>Type<wbr>OrT</h3>
-					<div class="tsd-signature tsd-kind-icon">Return<wbr>Type<wbr>OrT&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReturnTypeOrT&lt;T&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Return<wbr>Type<wbr>OrT&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T extends function ? R : T</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Function.ts:29</li>
@@ -917,7 +918,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="tail" class="tsd-anchor"></a>
 					<h3>Tail</h3>
-					<div class="tsd-signature tsd-kind-icon">Tail&lt;A&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Tail&lt;A&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Tail&lt;A&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function extends function ? A2 : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Iterables.ts:24</li>
@@ -973,7 +974,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="value" class="tsd-anchor"></a>
 					<h3>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">Value&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Value&lt;O&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Value&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">O extends Descriptions&lt;any, infer V&gt; ? V : never</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/utilities/typesglobal/Objects.ts:17</li>
@@ -1029,7 +1030,7 @@
 					<div class="tsd-signature tsd-kind-icon">Module<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.iwaywardcpp.html" class="tsd-signature-type">IWaywardCPP</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/IGlobal.ts:188</li>
+							<li>Defined in src/IGlobal.ts:198</li>
 						</ul>
 					</aside>
 				</section>
@@ -1524,6 +1525,73 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<a name="debounce" class="tsd-anchor"></a>
+					<h3>Debounce</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">Debounce<span class="tsd-signature-symbol">(</span>ms<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/IGlobal.ts:151</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Prevents the decorated method from being called at a high speed. Example:</p>
+									<ol>
+										<li>Method is called.</li>
+										<li><code>ms</code> amount of time is waited. If the method is called again in this time, cancel.</li>
+										<li>If the method was not called after <code>ms</code>, <em>actually</em> call the method.</li>
+									</ol>
+								</div>
+								<p>WARNING: This also binds the method to the host, a la <code>@Bound</code>. Do not use both decorators.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ms: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal tsd-has-type-parameter tsd-is-not-exported">
+										<li class="tsd-signature tsd-kind-icon">&lt;T&gt;<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, descriptor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-type-parameters-title">Type parameters</h4>
+											<ul class="tsd-type-parameters">
+												<li>
+													<h4>T<span class="tsd-signature-symbol">: </span><a href="__global.html#anyfunction" class="tsd-signature-type">AnyFunction</a></h4>
+												</li>
+											</ul>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>target: <span class="tsd-signature-type">any</span></h5>
+												</li>
+												<li>
+													<h5>key: <span class="tsd-signature-type">string</span></h5>
+												</li>
+												<li>
+													<h5>descriptor: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+												<span class="tsd-signature-symbol"> | </span>
+												<span class="tsd-signature-type">void</span>
+											</h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 					<a name="final" class="tsd-anchor"></a>
 					<h3>Final</h3>
@@ -2012,6 +2080,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 						<a href="__global.html#bound" class="tsd-kind-icon">Bound</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="__global.html#debounce" class="tsd-kind-icon">Debounce</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 						<a href="__global.html#final" class="tsd-kind-icon">Final</a>
