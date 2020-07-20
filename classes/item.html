@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Item | Wayward Modding Guide</title>
-	<meta name="description" content="">
+	<title>Item | Wayward Documentation</title>
+	<meta name="description" content="Documentation for Wayward Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward Modding Guide</a>
+					<a href="../index.html" class="title">Wayward Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -81,7 +81,8 @@
 					<li><a href="../interfaces/iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/iobjectoptions.html" class="tsd-signature-type">IObjectOptions</a></li>
 					<li><a href="../interfaces/icontainable.html" class="tsd-signature-type">IContainable</a></li>
-					<li><span class="tsd-signature-type">object</span></li>
+					<li><span class="tsd-signature-symbol">{}</span></li>
+					<li><a href="../interfaces/itemperaturesource.html" class="tsd-signature-type">ITemperatureSource</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -97,6 +98,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#_movementfinishtime" class="tsd-kind-icon">_movement<wbr>Finish<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#book" class="tsd-kind-icon">book</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#constructedfrom" class="tsd-kind-icon">constructed<wbr>From</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#containeditems" class="tsd-kind-icon">contained<wbr>Items</a></li>
@@ -105,11 +107,15 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#disassembly" class="tsd-kind-icon">disassembly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#equippedid" class="tsd-kind-icon">equipped<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#equippedtype" class="tsd-kind-icon">equipped<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#fromx" class="tsd-kind-icon">fromX</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#fromy" class="tsd-kind-icon">fromY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#itemorders" class="tsd-kind-icon">item<wbr>Orders</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#legendary" class="tsd-kind-icon">legendary</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#maxdur" class="tsd-kind-icon">max<wbr>Dur</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#mindur" class="tsd-kind-icon">min<wbr>Dur</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#offsetx" class="tsd-kind-icon">offsetX</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#offsety" class="tsd-kind-icon">offsetY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#order" class="tsd-kind-icon">order</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#owneridentifier" class="tsd-kind-icon">owner<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#quality" class="tsd-kind-icon">quality</a></li>
@@ -125,18 +131,13 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Accessors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="item.html#fromdescription" class="tsd-kind-icon">from<wbr>Description</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#acquirenotify" class="tsd-kind-icon">acquire<wbr>Notify</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#areitemsprotectedwithin" class="tsd-kind-icon">are<wbr>Items<wbr>Protected<wbr>Within</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#canberefined" class="tsd-kind-icon">can<wbr>BeRefined</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#canburnplayer" class="tsd-kind-icon">can<wbr>Burn<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#changeid" class="tsd-kind-icon">change<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#changeinto" class="tsd-kind-icon">change<wbr>Into</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#clearquickslot" class="tsd-kind-icon">clear<wbr>Quick<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#damage" class="tsd-kind-icon">damage</a></li>
@@ -150,9 +151,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getdisassemblyweight" class="tsd-kind-icon">get<wbr>Disassembly<wbr>Weight</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getdurabilitycharge" class="tsd-kind-icon">get<wbr>Durability<wbr>Charge</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getequipslot" class="tsd-kind-icon">get<wbr>Equip<wbr>Slot</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getlocation" class="tsd-kind-icon">get<wbr>Location</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getequippedplayer" class="tsd-kind-icon">get<wbr>Equipped<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getonusebonus" class="tsd-kind-icon">get<wbr>OnUse<wbr>Bonus</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getpoint" class="tsd-kind-icon">get<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getproducedtemperature" class="tsd-kind-icon">get<wbr>Produced<wbr>Temperature</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getstokefirebonusvalue" class="tsd-kind-icon">get<wbr>Stoke<wbr>Fire<wbr>Bonus<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getstokefirevalue" class="tsd-kind-icon">get<wbr>Stoke<wbr>Fire<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#gettotalweight" class="tsd-kind-icon">get<wbr>Total<wbr>Weight</a></li>
@@ -164,13 +168,16 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isdecayed" class="tsd-kind-icon">is<wbr>Decayed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isequipped" class="tsd-kind-icon">is<wbr>Equipped</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isintradecontainer" class="tsd-kind-icon">is<wbr>InTrade<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#ismoving" class="tsd-kind-icon">is<wbr>Moving</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isnearby" class="tsd-kind-icon">is<wbr>Nearby</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isprotected" class="tsd-kind-icon">is<wbr>Protected</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#movetotile" class="tsd-kind-icon">move<wbr>ToTile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#placeontile" class="tsd-kind-icon">place<wbr>OnTile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#returns" class="tsd-kind-icon">returns</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#revertfromdoodad" class="tsd-kind-icon">revert<wbr>From<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#setdecay" class="tsd-kind-icon">set<wbr>Decay</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#setlegendary" class="tsd-kind-icon">set<wbr>Legendary</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#setquality" class="tsd-kind-icon">set<wbr>Quality</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#setquickslot" class="tsd-kind-icon">set<wbr>Quick<wbr>Slot</a></li>
@@ -197,7 +204,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:95</li>
+									<li>Defined in src/item/Item.ts:96</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -206,7 +213,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> itemType: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> quality: <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> =&nbsp;Quality.Random</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> quality: <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> = Quality.Random</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
@@ -220,12 +227,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="_movementfinishtime" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> _movement<wbr>Finish<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">_movement<wbr>Finish<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/Item.ts:94</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="book" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> book</h3>
 					<div class="tsd-signature tsd-kind-icon">book<span class="tsd-signature-symbol">:</span> <a href="../enums/booktype.html" class="tsd-signature-type">BookType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:65</li>
+							<li>Defined in src/item/Item.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -235,7 +252,7 @@
 					<div class="tsd-signature tsd-kind-icon">constructed<wbr>From<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iconstructedinfo.html" class="tsd-signature-type">IConstructedInfo</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:66</li>
+							<li>Defined in src/item/Item.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -246,7 +263,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainer.html">IContainer</a>.<a href="../interfaces/icontainer.html#containeditems">containedItems</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:67</li>
+							<li>Defined in src/item/Item.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -257,18 +274,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainable.html">IContainable</a>.<a href="../interfaces/icontainable.html#containedwithin">containedWithin</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:68</li>
+							<li>Defined in src/item/Item.ts:67</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="decay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> decay</h3>
-					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#decay">decay</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:69</li>
+							<li>Defined in src/item/Item.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -278,17 +295,17 @@
 					<div class="tsd-signature tsd-kind-icon">disassembly<span class="tsd-signature-symbol">:</span> <a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:70</li>
+							<li>Defined in src/item/Item.ts:69</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="equippedid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> equipped<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:71</li>
+							<li>Defined in src/item/Item.ts:70</li>
 						</ul>
 					</aside>
 				</section>
@@ -298,7 +315,27 @@
 					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/entitytype.html" class="tsd-signature-type">EntityType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:72</li>
+							<li>Defined in src/item/Item.ts:71</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fromx" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fromX</h3>
+					<div class="tsd-signature tsd-kind-icon">fromX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/Item.ts:92</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fromy" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fromY</h3>
+					<div class="tsd-signature tsd-kind-icon">fromY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/Item.ts:93</li>
 						</ul>
 					</aside>
 				</section>
@@ -309,7 +346,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:73</li>
+							<li>Defined in src/item/Item.ts:72</li>
 						</ul>
 					</aside>
 				</section>
@@ -320,7 +357,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainer.html">IContainer</a>.<a href="../interfaces/icontainer.html#itemorders">itemOrders</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:74</li>
+							<li>Defined in src/item/Item.ts:73</li>
 						</ul>
 					</aside>
 				</section>
@@ -330,7 +367,7 @@
 					<div class="tsd-signature tsd-kind-icon">legendary<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iitemlegendary.html" class="tsd-signature-type">IItemLegendary</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:75</li>
+							<li>Defined in src/item/Item.ts:74</li>
 						</ul>
 					</aside>
 				</section>
@@ -341,7 +378,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#maxdur">maxDur</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:76</li>
+							<li>Defined in src/item/Item.ts:75</li>
 						</ul>
 					</aside>
 				</section>
@@ -352,7 +389,27 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#mindur">minDur</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:77</li>
+							<li>Defined in src/item/Item.ts:76</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="offsetx" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offsetX</h3>
+					<div class="tsd-signature tsd-kind-icon">offsetX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/Item.ts:90</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="offsety" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offsetY</h3>
+					<div class="tsd-signature tsd-kind-icon">offsetY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/Item.ts:91</li>
 						</ul>
 					</aside>
 				</section>
@@ -362,28 +419,28 @@
 					<div class="tsd-signature tsd-kind-icon">order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:78</li>
+							<li>Defined in src/item/Item.ts:77</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="owneridentifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> owner<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:79</li>
+							<li>Defined in src/item/Item.ts:78</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="quality" class="tsd-anchor"></a>
 					<h3>quality</h3>
-					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Quality</span></div>
+					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#quality">quality</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:80</li>
+							<li>Defined in src/item/Item.ts:79</li>
 						</ul>
 					</aside>
 				</section>
@@ -393,7 +450,7 @@
 					<div class="tsd-signature tsd-kind-icon">quick<wbr>Slot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:81</li>
+							<li>Defined in src/item/Item.ts:80</li>
 						</ul>
 					</aside>
 				</section>
@@ -404,17 +461,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:82</li>
+							<li>Defined in src/item/Item.ts:81</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tatteredmap" class="tsd-anchor"></a>
-					<h3>tattered<wbr>Map</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tattered<wbr>Map</h3>
 					<div class="tsd-signature tsd-kind-icon">tattered<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/tatteredmap.html" class="tsd-signature-type">TatteredMap</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:83</li>
+							<li>Defined in src/item/Item.ts:82</li>
 						</ul>
 					</aside>
 				</section>
@@ -424,7 +481,7 @@
 					<div class="tsd-signature tsd-kind-icon">traded<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:84</li>
+							<li>Defined in src/item/Item.ts:83</li>
 						</ul>
 					</aside>
 				</section>
@@ -435,7 +492,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:85</li>
+							<li>Defined in src/item/Item.ts:84</li>
 						</ul>
 					</aside>
 				</section>
@@ -445,7 +502,7 @@
 					<div class="tsd-signature tsd-kind-icon">used<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iitemused.html" class="tsd-signature-type">IItemUsed</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:86</li>
+							<li>Defined in src/item/Item.ts:85</li>
 						</ul>
 					</aside>
 				</section>
@@ -455,7 +512,7 @@
 					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:87</li>
+							<li>Defined in src/item/Item.ts:86</li>
 						</ul>
 					</aside>
 				</section>
@@ -466,7 +523,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainer.html">IContainer</a>.<a href="../interfaces/icontainer.html#weightcapacity">weightCapacity</a></p>
 						<ul>
-							<li>Defined in src/item/Item.ts:88</li>
+							<li>Defined in src/item/Item.ts:87</li>
 						</ul>
 					</aside>
 				</section>
@@ -476,29 +533,9 @@
 					<div class="tsd-signature tsd-kind-icon">weight<wbr>Fraction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/Item.ts:89</li>
+							<li>Defined in src/item/Item.ts:88</li>
 						</ul>
 					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="fromdescription" class="tsd-anchor"></a>
-					<h3>from<wbr>Description</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> fromDescription<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isafefn.html" class="tsd-signature-type">ISafeFn</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iitemdescription.html" class="tsd-signature-type">IItemDescription</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/item/Item.ts:91</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isafefn.html" class="tsd-signature-type">ISafeFn</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iitemdescription.html" class="tsd-signature-type">IItemDescription</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -513,7 +550,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1088</li>
+									<li>Defined in src/item/Item.ts:1165</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -536,7 +573,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:247</li>
+									<li>Defined in src/item/Item.ts:280</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -559,7 +596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1290</li>
+									<li>Defined in src/item/Item.ts:1367</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -576,7 +613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1217</li>
+									<li>Defined in src/item/Item.ts:1294</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -584,16 +621,53 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="changeinto" class="tsd-anchor"></a>
-					<h3>change<wbr>Into</h3>
+					<a name="changeid" class="tsd-anchor"></a>
+					<h3>change<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Into<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Id<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:594</li>
+									<li>Defined in src/item/Item.ts:153</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Changes the item id for this item</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new item id</p>
+									</div>
+								</li>
+								<li>
+									<h5>player: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The player that has the item</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="changeinto" class="tsd-anchor"></a>
+					<h3>change<wbr>Into</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Into<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:629</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -602,7 +676,7 @@
 									<h5>type: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -619,7 +693,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:585</li>
+									<li>Defined in src/item/Item.ts:620</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -630,13 +704,13 @@
 					<a name="damage" class="tsd-anchor"></a>
 					<h3>damage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:445</li>
+									<li>Defined in src/item/Item.ts:478</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -645,7 +719,7 @@
 									<h5>source: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modifier: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modifier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -662,13 +736,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:213</li>
+									<li>Defined in src/item/Item.ts:246</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitemdescription.html" class="tsd-signature-type">IItemDescription</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitemdescription.html" class="tsd-signature-type">IItemDescription</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -676,13 +747,13 @@
 					<a name="dropinwater" class="tsd-anchor"></a>
 					<h3>drop<wbr>InWater</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, skipParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, skipParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:776</li>
+									<li>Defined in src/item/Item.ts:811</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -691,13 +762,13 @@
 									<h5>human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParticles: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParticles: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -714,7 +785,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:913</li>
+									<li>Defined in src/item/Item.ts:990</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/legendarytype.html" class="tsd-signature-type">LegendaryType</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -731,7 +802,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1248</li>
+									<li>Defined in src/item/Item.ts:1325</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -748,7 +819,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1285</li>
+									<li>Defined in src/item/Item.ts:1362</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -765,7 +836,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:523</li>
+									<li>Defined in src/item/Item.ts:554</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -787,7 +858,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:273</li>
+									<li>Defined in src/item/Item.ts:306</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -804,7 +875,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:293</li>
+									<li>Defined in src/item/Item.ts:326</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -821,7 +892,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1258</li>
+									<li>Defined in src/item/Item.ts:1335</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -838,33 +909,50 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:539</li>
+									<li>Defined in src/item/Item.ts:584</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getlocation" class="tsd-anchor"></a>
-					<h3>get<wbr>Location</h3>
+					<a name="getequippedplayer" class="tsd-anchor"></a>
+					<h3>get<wbr>Equipped<wbr>Player</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Location<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Equipped<wbr>Player<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:743</li>
+									<li>Defined in src/item/Item.ts:570</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmovementprogress" class="tsd-anchor"></a>
+					<h3>get<wbr>Movement<wbr>Progress</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Movement<wbr>Progress<span class="tsd-signature-symbol">(</span>timeStamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:931</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>timeStamp: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -872,13 +960,13 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showQuality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showQuality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showRenamedQuotes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:169</li>
+									<li>Defined in src/item/Item.ts:203</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -886,21 +974,33 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether to include an article for the name of the item. Uses the article rules on the language. Defaults to <code>true</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of this item that you&#39;re getting the name of. Defaults to <code>1</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showCount: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showCount: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>If <code>true</code>, adds the passed count to the translation, using <code>MiscTranslation.CountThing</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showQuality: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code>, shows the quality of the item.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showRenamedQuotes: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code>, show the (by default) &quot;&quot; quotes surrounding renamed items.</p>
 										<p>Examples:</p>
 										<ul>
 											<li><code>item.getName()</code> // &quot;a stone axe&quot;</li>
@@ -908,9 +1008,6 @@
 											<li><code>item.getName(undefined, 3)</code> // &quot;stone axes&quot;</li>
 										</ul>
 									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showQuality: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
@@ -927,10 +1024,45 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1150</li>
+									<li>Defined in src/item/Item.ts:1227</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpoint" class="tsd-anchor"></a>
+					<h3>get<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:778</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getproducedtemperature" class="tsd-anchor"></a>
+					<h3>get<wbr>Produced<wbr>Temperature</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Produced<wbr>Temperature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/itemperaturesource.html">ITemperatureSource</a>.<a href="../interfaces/itemperaturesource.html#getproducedtemperature">getProducedTemperature</a></p>
+								<ul>
+									<li>Defined in src/item/Item.ts:1392</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -944,7 +1076,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1137</li>
+									<li>Defined in src/item/Item.ts:1214</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -961,13 +1093,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1128</li>
+									<li>Defined in src/item/Item.ts:1205</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -981,7 +1110,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:278</li>
+									<li>Defined in src/item/Item.ts:311</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -992,13 +1121,13 @@
 					<a name="gettradersellprice" class="tsd-anchor"></a>
 					<h3>get<wbr>Trader<wbr>Sell<wbr>Price</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Trader<wbr>Sell<wbr>Price<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="npc.html" class="tsd-signature-type">NPC</a>, legendaryWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Trader<wbr>Sell<wbr>Price<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="npc.html" class="tsd-signature-type">NPC</a>, legendaryWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1204</li>
+									<li>Defined in src/item/Item.ts:1281</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1007,7 +1136,7 @@
 									<h5>player: <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="npc.html" class="tsd-signature-type">NPC</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> legendaryWorth: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> legendaryWorth: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1024,7 +1153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:154</li>
+									<li>Defined in src/item/Item.ts:186</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1042,19 +1171,19 @@
 					<a name="getworth" class="tsd-anchor"></a>
 					<h3>get<wbr>Worth</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Worth<span class="tsd-signature-symbol">(</span>legendaryWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Worth<span class="tsd-signature-symbol">(</span>legendaryWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1163</li>
+									<li>Defined in src/item/Item.ts:1240</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> legendaryWorth: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> legendaryWorth: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1065,15 +1194,35 @@
 					<a name="initializemap" class="tsd-anchor"></a>
 					<h3>initialize<wbr>Map</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Map<span class="tsd-signature-symbol">(</span>reinitialize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, player<span class="tsd-signature-symbol">?: </span><a href="../enums/message.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:873</li>
+									<li>Defined in src/item/Item.ts:947</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the coordinates for a tattered or drawn map, or set it to reinitialize later.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>reinitialize: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Set to true if you want the map to require decoding before use (the coords will get generated at that point).</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> player: <a href="../enums/message.html#player" class="tsd-signature-type">Player</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The player that decoded the map.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -1088,7 +1237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:527</li>
+									<li>Defined in src/item/Item.ts:558</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1105,7 +1254,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:589</li>
+									<li>Defined in src/item/Item.ts:624</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1122,7 +1271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:535</li>
+									<li>Defined in src/item/Item.ts:566</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1139,7 +1288,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:531</li>
+									<li>Defined in src/item/Item.ts:562</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ismoving" class="tsd-anchor"></a>
+					<h3>is<wbr>Moving</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Moving<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:927</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1150,22 +1316,22 @@
 					<a name="isnearby" class="tsd-anchor"></a>
 					<h3>is<wbr>Nearby</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Nearby<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><a href="../globals.html#entityplayercreaturenpc" class="tsd-signature-type">EntityPlayerCreatureNpc</a>, allowNearby<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Nearby<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, allowNearby<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:318</li>
+									<li>Defined in src/item/Item.ts:351</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>executor: <a href="../globals.html#entityplayercreaturenpc" class="tsd-signature-type">EntityPlayerCreatureNpc</a></h5>
+									<h5>executor: <a href="entity.html" class="tsd-signature-type">Entity</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowNearby: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowNearby: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1182,7 +1348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:225</li>
+									<li>Defined in src/item/Item.ts:258</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1205,10 +1371,45 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:221</li>
+									<li>Defined in src/item/Item.ts:254</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="movetotile" class="tsd-anchor"></a>
+					<h3>move<wbr>ToTile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">move<wbr>ToTile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileContainer<span class="tsd-signature-symbol">?: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, fromPoint<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:912</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tileContainer: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fromPoint: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1223,7 +1424,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/item/Item.ts:1315</li>
+									<li>Defined in src/item/Item.ts:1429</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1234,13 +1435,13 @@
 					<a name="placeontile" class="tsd-anchor"></a>
 					<h3>place<wbr>OnTile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">place<wbr>OnTile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, force<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, skipMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">place<wbr>OnTile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, force<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, skipMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:831</li>
+									<li>Defined in src/item/Item.ts:870</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1258,7 +1459,7 @@
 									<h5>force: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipMessage: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipMessage: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1269,19 +1470,19 @@
 					<a name="returns" class="tsd-anchor"></a>
 					<h3>returns</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">returns<span class="tsd-signature-symbol">(</span>disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">returns<span class="tsd-signature-symbol">(</span>disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:643</li>
+									<li>Defined in src/item/Item.ts:678</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1298,13 +1499,41 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:1262</li>
+									<li>Defined in src/item/Item.ts:1339</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>doodad: <a href="doodad.html" class="tsd-signature-type">Doodad</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setdecay" class="tsd-anchor"></a>
+					<h3>set<wbr>Decay</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Decay<span class="tsd-signature-symbol">(</span>overrideDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/item/Item.ts:1399</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the item&#39;s decay value based on quality, game mode and added some randomization</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> overrideDefault: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1321,13 +1550,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:987</li>
+									<li>Defined in src/item/Item.ts:1064</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bypassType: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bypassType: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1338,13 +1567,13 @@
 					<a name="setquality" class="tsd-anchor"></a>
 					<h3>set<wbr>Quality</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Quality<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, quality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Quality<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, quality<span class="tsd-signature-symbol">?: </span><a href="../enums/message.html#quality" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:896</li>
+									<li>Defined in src/item/Item.ts:973</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1353,7 +1582,7 @@
 									<h5>human: <a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> quality: <span class="tsd-signature-type">Quality</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> quality: <a href="../enums/message.html#quality" class="tsd-signature-type">Quality</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1370,7 +1599,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:553</li>
+									<li>Defined in src/item/Item.ts:588</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1396,7 +1625,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:677</li>
+									<li>Defined in src/item/Item.ts:712</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1416,13 +1645,13 @@
 					<a name="spawncreatureonitem" class="tsd-anchor"></a>
 					<h3>spawn<wbr>Creature<wbr>OnItem</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Creature<wbr>OnItem<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, preferFacingDirection<span class="tsd-signature-symbol">?: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Creature<wbr>OnItem<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, preferFacingDirection<span class="tsd-signature-symbol">?: </span><a href="../enums/message.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:699</li>
+									<li>Defined in src/item/Item.ts:734</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1431,19 +1660,16 @@
 									<h5>creatureType: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> forceAberrant: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> forceAberrant: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> preferFacingDirection: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> preferFacingDirection: <a href="../enums/message.html#player" class="tsd-signature-type">Player</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1457,13 +1683,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:689</li>
+									<li>Defined in src/item/Item.ts:724</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1477,13 +1700,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:694</li>
+									<li>Defined in src/item/Item.ts:729</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1497,7 +1717,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:147</li>
+									<li>Defined in src/item/Item.ts:144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1514,7 +1734,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/Item.ts:324</li>
+									<li>Defined in src/item/Item.ts:357</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1522,8 +1742,6 @@
 					</ul>
 				</section>
 			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
@@ -1531,6 +1749,8 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
@@ -1540,6 +1760,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="item.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#_movementfinishtime" class="tsd-kind-icon">_movement<wbr>Finish<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#book" class="tsd-kind-icon">book</a>
@@ -1566,6 +1789,12 @@
 								<a href="item.html#equippedtype" class="tsd-kind-icon">equipped<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#fromx" class="tsd-kind-icon">fromX</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#fromy" class="tsd-kind-icon">fromY</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -1579,6 +1808,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#mindur" class="tsd-kind-icon">min<wbr>Dur</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#offsetx" class="tsd-kind-icon">offsetX</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#offsety" class="tsd-kind-icon">offsetY</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#order" class="tsd-kind-icon">order</a>
@@ -1616,9 +1851,6 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#weightfraction" class="tsd-kind-icon">weight<wbr>Fraction</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="item.html#fromdescription" class="tsd-kind-icon">from<wbr>Description</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#acquirenotify" class="tsd-kind-icon">acquire<wbr>Notify</a>
 							</li>
@@ -1630,6 +1862,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#canburnplayer" class="tsd-kind-icon">can<wbr>Burn<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#changeid" class="tsd-kind-icon">change<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#changeinto" class="tsd-kind-icon">change<wbr>Into</a>
@@ -1671,13 +1906,22 @@
 								<a href="item.html#getequipslot" class="tsd-kind-icon">get<wbr>Equip<wbr>Slot</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="item.html#getlocation" class="tsd-kind-icon">get<wbr>Location</a>
+								<a href="item.html#getequippedplayer" class="tsd-kind-icon">get<wbr>Equipped<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#getonusebonus" class="tsd-kind-icon">get<wbr>OnUse<wbr>Bonus</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#getpoint" class="tsd-kind-icon">get<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#getproducedtemperature" class="tsd-kind-icon">get<wbr>Produced<wbr>Temperature</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#getstokefirebonusvalue" class="tsd-kind-icon">get<wbr>Stoke<wbr>Fire<wbr>Bonus<wbr>Value</a>
@@ -1713,6 +1957,9 @@
 								<a href="item.html#isintradecontainer" class="tsd-kind-icon">is<wbr>InTrade<wbr>Container</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#ismoving" class="tsd-kind-icon">is<wbr>Moving</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#isnearby" class="tsd-kind-icon">is<wbr>Nearby</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1720,6 +1967,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#movetotile" class="tsd-kind-icon">move<wbr>ToTile</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a>
@@ -1732,6 +1982,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#revertfromdoodad" class="tsd-kind-icon">revert<wbr>From<wbr>Doodad</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#setdecay" class="tsd-kind-icon">set<wbr>Decay</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#setlegendary" class="tsd-kind-icon">set<wbr>Legendary</a>
@@ -1774,37 +2027,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
@@ -1813,18 +2039,17 @@
 				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -1834,6 +2059,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

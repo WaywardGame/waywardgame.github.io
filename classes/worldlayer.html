@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>WorldLayer | Wayward Modding Guide</title>
-	<meta name="description" content="">
+	<title>WorldLayer | Wayward Documentation</title>
+	<meta name="description" content="Documentation for Wayward Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward Modding Guide</a>
+					<a href="../index.html" class="title">Wayward Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -109,11 +109,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettiledecoration" class="tsd-kind-icon">get<wbr>Tile<wbr>Decoration</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettiletype" class="tsd-kind-icon">get<wbr>Tile<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#isdoodadanimationdisabled" class="tsd-kind-icon">is<wbr>Doodad<wbr>Animation<wbr>Disabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#isdoodadoverhidden" class="tsd-kind-icon">is<wbr>Doodad<wbr>Over<wbr>Hidden</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#isfence" class="tsd-kind-icon">is<wbr>Fence</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#istilled" class="tsd-kind-icon">is<wbr>Tilled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#iswall" class="tsd-kind-icon">is<wbr>Wall</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#resetexploredmap" class="tsd-kind-icon">reset<wbr>Explored<wbr>Map</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#settile" class="tsd-kind-icon">set<wbr>Tile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#updateall" class="tsd-kind-icon">update<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
@@ -128,13 +128,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:34</li>
+									<li>Defined in src/renderer/WorldLayer.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,7 +146,7 @@
 									<h5>height: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<h5>level: <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></h4>
@@ -163,51 +163,51 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#exploredmap">exploredMap</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:29</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="height" class="tsd-anchor"></a>
-					<h3>height</h3>
-					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#height">height</a></p>
-						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:36</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="level" class="tsd-anchor"></a>
-					<h3>level</h3>
-					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#level">level</a></p>
-						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:36</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="lightblockmap" class="tsd-anchor"></a>
-					<h3>light<wbr>Block<wbr>Map</h3>
-					<div class="tsd-signature tsd-kind-icon">light<wbr>Block<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ibytegrid.html" class="tsd-signature-type">IByteGrid</a></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#lightblockmap">lightBlockMap</a></p>
-						<ul>
 							<li>Defined in src/renderer/WorldLayer.ts:27</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#height">height</a></p>
+						<ul>
+							<li>Defined in src/renderer/WorldLayer.ts:34</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="level" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> level</h3>
+					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#level">level</a></p>
+						<ul>
+							<li>Defined in src/renderer/WorldLayer.ts:34</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="lightblockmap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> light<wbr>Block<wbr>Map</h3>
+					<div class="tsd-signature tsd-kind-icon">light<wbr>Block<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ibytegrid.html" class="tsd-signature-type">IByteGrid</a></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#lightblockmap">lightBlockMap</a></p>
+						<ul>
+							<li>Defined in src/renderer/WorldLayer.ts:25</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lightlevelmap" class="tsd-anchor"></a>
-					<h3>light<wbr>Level<wbr>Map</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> light<wbr>Level<wbr>Map</h3>
 					<div class="tsd-signature tsd-kind-icon">light<wbr>Level<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.icolorgrid.html" class="tsd-signature-type">IColorGrid</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#lightlevelmap">lightLevelMap</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:26</li>
+							<li>Defined in src/renderer/WorldLayer.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -218,7 +218,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#ondoodadupdate">onDoodadUpdate</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:31</li>
+							<li>Defined in src/renderer/WorldLayer.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -229,18 +229,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#ontileupdate">onTileUpdate</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:30</li>
+							<li>Defined in src/renderer/WorldLayer.ts:28</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="width" class="tsd-anchor"></a>
-					<h3>width</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> width</h3>
 					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#width">width</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:36</li>
+							<li>Defined in src/renderer/WorldLayer.ts:34</li>
 						</ul>
 					</aside>
 				</section>
@@ -258,7 +258,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:48</li>
+									<li>Defined in src/renderer/WorldLayer.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -276,7 +276,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettile">getTile</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:60</li>
+									<li>Defined in src/renderer/WorldLayer.ts:50</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -303,7 +303,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettiledecoration">getTileDecoration</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:68</li>
+									<li>Defined in src/renderer/WorldLayer.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -330,7 +330,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettiletype">getTileType</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:56</li>
+									<li>Defined in src/renderer/WorldLayer.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -357,7 +357,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettype">getType</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:64</li>
+									<li>Defined in src/renderer/WorldLayer.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -367,6 +367,29 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TerrainType</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isdoodadanimationdisabled" class="tsd-anchor"></a>
+					<h3>is<wbr>Doodad<wbr>Animation<wbr>Disabled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Doodad<wbr>Animation<wbr>Disabled<span class="tsd-signature-symbol">(</span>terrain<span class="tsd-signature-symbol">: </span><a href="../globals.html#terraindata" class="tsd-signature-type">TerrainData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/WorldLayer.ts:78</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>terrain: <a href="../globals.html#terraindata" class="tsd-signature-type">TerrainData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -381,7 +404,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#isdoodadoverhidden">isDoodadOverHidden</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:84</li>
+									<li>Defined in src/renderer/WorldLayer.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -405,7 +428,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#isfence">isFence</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:76</li>
+									<li>Defined in src/renderer/WorldLayer.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -429,7 +452,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#istilled">isTilled</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:80</li>
+									<li>Defined in src/renderer/WorldLayer.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -453,7 +476,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#iswall">isWall</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:72</li>
+									<li>Defined in src/renderer/WorldLayer.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -467,24 +490,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="resetexploredmap" class="tsd-anchor"></a>
-					<h3>reset<wbr>Explored<wbr>Map</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Explored<wbr>Map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#resetexploredmap">resetExploredMap</a></p>
-								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:52</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="settile" class="tsd-anchor"></a>
 					<h3>set<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -494,7 +499,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:88</li>
+									<li>Defined in src/renderer/WorldLayer.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -509,7 +514,7 @@
 									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> terrainMasks: <a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol"> =&nbsp;TerrainMask.None</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> terrainMasks: <a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol"> = TerrainMask.None</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -527,7 +532,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#updateall">updateAll</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:92</li>
+									<li>Defined in src/renderer/WorldLayer.ts:86</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -538,13 +543,13 @@
 					<a name="updatetile" class="tsd-anchor"></a>
 					<h3>update<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, shouldUpdate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, updateNeighbors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, shouldUpdate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, updateNeighbors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, flushImmediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:107</li>
+									<li>Defined in src/renderer/WorldLayer.ts:101</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -559,10 +564,16 @@
 									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> shouldUpdate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> shouldUpdate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> updateNeighbors: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> updateNeighbors: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flushImmediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = shouldUpdate &amp;&amp; world.isLoaded()</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> debug: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -570,8 +581,6 @@
 					</ul>
 				</section>
 			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
@@ -579,6 +588,8 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
@@ -629,6 +640,9 @@
 								<a href="worldlayer.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayer.html#isdoodadanimationdisabled" class="tsd-kind-icon">is<wbr>Doodad<wbr>Animation<wbr>Disabled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayer.html#isdoodadoverhidden" class="tsd-kind-icon">is<wbr>Doodad<wbr>Over<wbr>Hidden</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -639,9 +653,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayer.html#iswall" class="tsd-kind-icon">is<wbr>Wall</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="worldlayer.html#resetexploredmap" class="tsd-kind-icon">reset<wbr>Explored<wbr>Map</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayer.html#settile" class="tsd-kind-icon">set<wbr>Tile</a>
@@ -666,37 +677,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
@@ -705,18 +689,17 @@
 				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -726,6 +709,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

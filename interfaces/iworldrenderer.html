@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IWorldRenderer | Wayward Modding Guide</title>
-	<meta name="description" content="">
+	<title>IWorldRenderer | Wayward Documentation</title>
+	<meta name="description" content="Documentation for Wayward Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward Modding Guide</a>
+					<a href="../index.html" class="title">Wayward Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -86,7 +86,6 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iworldrenderer.html#defaultadaptor" class="tsd-kind-icon">default<wbr>Adaptor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iworldrenderer.html#dirtadaptor" class="tsd-kind-icon">dirt<wbr>Adaptor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iworldrenderer.html#fenceadaptor" class="tsd-kind-icon">fence<wbr>Adaptor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iworldrenderer.html#flooradaptor" class="tsd-kind-icon">floor<wbr>Adaptor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iworldrenderer.html#lavaadaptor" class="tsd-kind-icon">lava<wbr>Adaptor</a></li>
@@ -102,7 +101,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#batchcreatures" class="tsd-kind-icon">batch<wbr>Creatures</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#batchmovable" class="tsd-kind-icon">batch<wbr>Movable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#calculateambientcolor" class="tsd-kind-icon">calculate<wbr>Ambient<wbr>Color</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#computespritesinviewport" class="tsd-kind-icon">compute<wbr>Sprites<wbr>InViewport</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#dispose" class="tsd-kind-icon">dispose</a></li>
@@ -122,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#render" class="tsd-kind-icon">render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#renderworld" class="tsd-kind-icon">render<wbr>World</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#screentotile" class="tsd-kind-icon">screen<wbr>ToTile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#screentovector" class="tsd-kind-icon">screen<wbr>ToVector</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#setspritetexture" class="tsd-kind-icon">set<wbr>Sprite<wbr>Texture</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#settilescale" class="tsd-kind-icon">set<wbr>Tile<wbr>Scale</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrenderer.html#setviewport" class="tsd-kind-icon">set<wbr>Viewport</a></li>
@@ -140,17 +140,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:31</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="dirtadaptor" class="tsd-anchor"></a>
-					<h3>dirt<wbr>Adaptor</h3>
-					<div class="tsd-signature tsd-kind-icon">dirt<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:23</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:30</li>
 						</ul>
 					</aside>
 				</section>
@@ -160,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">fence<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="../classes/fence.html" class="tsd-signature-type">Fence</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:27</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -170,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">floor<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:32</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -180,14 +170,14 @@
 					<div class="tsd-signature tsd-kind-icon">lava<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:26</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:25</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="layers" class="tsd-anchor"></a>
 					<h3>layers</h3>
-					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <a href="../classes/worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="../classes/worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/renderer/IWorldRenderer.ts:22</li>
@@ -200,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">mountain<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:28</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:27</li>
 						</ul>
 					</aside>
 				</section>
@@ -210,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">mountain<wbr>Ground<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:29</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">till<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:24</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:23</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">wall<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="../classes/wall.html" class="tsd-signature-type">Wall</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:30</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -250,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">water<wbr>Adaptor<span class="tsd-signature-symbol">:</span> <a href="itileadaptor.html" class="tsd-signature-type">ITileAdaptor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/IWorldRenderer.ts:25</li>
+							<li>Defined in src/renderer/IWorldRenderer.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -258,10 +248,10 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="batchcreatures" class="tsd-anchor"></a>
-					<h3>batch<wbr>Creatures</h3>
+					<a name="batchmovable" class="tsd-anchor"></a>
+					<h3>batch<wbr>Movable</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">batch<wbr>Creatures<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">batch<wbr>Movable<span class="tsd-signature-symbol">(</span>timeStamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -270,6 +260,12 @@
 									<li>Defined in src/renderer/IWorldRenderer.ts:77</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>timeStamp: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -284,7 +280,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:47</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:46</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -340,7 +336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:51</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -362,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:63</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -384,7 +380,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:55</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -406,7 +402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:59</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:58</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -428,7 +424,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:67</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:66</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -450,7 +446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:71</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:70</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -472,7 +468,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:36</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -489,7 +485,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:38</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -500,24 +496,7 @@
 					<a name="gettileviewport" class="tsd-anchor"></a>
 					<h3>get<wbr>Tile<wbr>Viewport</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Viewport<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:43</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vec2</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="getviewport" class="tsd-anchor"></a>
-					<h3>get<wbr>Viewport</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Viewport<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Viewport<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -526,7 +505,24 @@
 									<li>Defined in src/renderer/IWorldRenderer.ts:42</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vec2</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getviewport" class="tsd-anchor"></a>
+					<h3>get<wbr>Viewport</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Viewport<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/IWorldRenderer.ts:41</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -557,7 +553,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:37</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -568,7 +564,7 @@
 					<a name="initializespritebatch" class="tsd-anchor"></a>
 					<h3>initialize<wbr>Sprite<wbr>Batch</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Sprite<wbr>Batch<span class="tsd-signature-symbol">(</span>layer<span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a>, reset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Sprite<wbr>Batch<span class="tsd-signature-symbol">(</span>layer<span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a>, reset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -583,7 +579,7 @@
 									<h5>layer: <a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reset: <span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> reset: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -600,7 +596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:73</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -617,7 +613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:72</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:71</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -640,7 +636,7 @@
 					<a name="screentotile" class="tsd-anchor"></a>
 					<h3>screen<wbr>ToTile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">screen<wbr>ToTile<span class="tsd-signature-symbol">(</span>screenX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span></li>
+						<li class="tsd-signature tsd-kind-icon">screen<wbr>ToTile<span class="tsd-signature-symbol">(</span>screenX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -658,7 +654,33 @@
 									<h5>screenY: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vec2</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="screentovector" class="tsd-anchor"></a>
+					<h3>screen<wbr>ToVector</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">screen<wbr>ToVector<span class="tsd-signature-symbol">(</span>screenX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/IWorldRenderer.ts:73</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>screenX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>screenY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -666,13 +688,13 @@
 					<a name="setspritetexture" class="tsd-anchor"></a>
 					<h3>set<wbr>Sprite<wbr>Texture</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Sprite<wbr>Texture<span class="tsd-signature-symbol">(</span>texture<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span>, textureSizeInversed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Sprite<wbr>Texture<span class="tsd-signature-symbol">(</span>texture<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span>, textureSizeInversed<span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:35</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -681,7 +703,7 @@
 									<h5>texture: <span class="tsd-signature-type">WebGLTexture</span></h5>
 								</li>
 								<li>
-									<h5>textureSizeInversed: <span class="tsd-signature-type">Vec2</span></h5>
+									<h5>textureSizeInversed: <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -698,7 +720,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:39</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:38</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -715,19 +737,19 @@
 					<a name="setviewport" class="tsd-anchor"></a>
 					<h3>set<wbr>Viewport</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Viewport<span class="tsd-signature-symbol">(</span>view<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vec2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Viewport<span class="tsd-signature-symbol">(</span>view<span class="tsd-signature-symbol">: </span><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:41</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>view: <span class="tsd-signature-type">Vec2</span></h5>
+									<h5>view: <a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -744,7 +766,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:40</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -767,7 +789,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/IWorldRenderer.ts:34</li>
+									<li>Defined in src/renderer/IWorldRenderer.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -775,8 +797,6 @@
 					</ul>
 				</section>
 			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
@@ -784,6 +804,8 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
@@ -793,9 +815,6 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iworldrenderer.html#defaultadaptor" class="tsd-kind-icon">default<wbr>Adaptor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iworldrenderer.html#dirtadaptor" class="tsd-kind-icon">dirt<wbr>Adaptor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iworldrenderer.html#fenceadaptor" class="tsd-kind-icon">fence<wbr>Adaptor</a>
@@ -828,7 +847,7 @@
 								<a href="iworldrenderer.html#wateradaptor" class="tsd-kind-icon">water<wbr>Adaptor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iworldrenderer.html#batchcreatures" class="tsd-kind-icon">batch<wbr>Creatures</a>
+								<a href="iworldrenderer.html#batchmovable" class="tsd-kind-icon">batch<wbr>Movable</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iworldrenderer.html#calculateambientcolor" class="tsd-kind-icon">calculate<wbr>Ambient<wbr>Color</a>
@@ -888,6 +907,9 @@
 								<a href="iworldrenderer.html#screentotile" class="tsd-kind-icon">screen<wbr>ToTile</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrenderer.html#screentovector" class="tsd-kind-icon">screen<wbr>ToVector</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iworldrenderer.html#setspritetexture" class="tsd-kind-icon">set<wbr>Sprite<wbr>Texture</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -916,37 +938,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
@@ -955,18 +950,17 @@
 				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -976,6 +970,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

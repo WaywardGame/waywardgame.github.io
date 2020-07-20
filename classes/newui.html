@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>NewUi | Wayward Modding Guide</title>
-	<meta name="description" content="">
+	<title>NewUi | Wayward Documentation</title>
+	<meta name="description" content="Documentation for Wayward Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Wayward Modding Guide</a>
+					<a href="../index.html" class="title">Wayward Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -100,7 +100,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#highlights" class="tsd-kind-icon">highlights</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#scale" class="tsd-kind-icon">scale</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#screens" class="tsd-kind-icon">screens</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#selection" class="tsd-kind-icon">selection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#tooltips" class="tsd-kind-icon">tooltips</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="newui.html#viewport" class="tsd-kind-icon">viewport</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -116,12 +118,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#addstylesheet" class="tsd-kind-icon">add<wbr>Stylesheet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#hideloadinginterrupt" class="tsd-kind-icon">hide<wbr>Loading<wbr>Interrupt</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#interrupt" class="tsd-kind-icon">interrupt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#onfullscreen" class="tsd-kind-icon">on<wbr>Fullscreen</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#onglobalslotloaded" class="tsd-kind-icon">on<wbr>Global<wbr>Slot<wbr>Loaded</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#oninterruptclosed" class="tsd-kind-icon">on<wbr>Interrupt<wbr>Closed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#onlanguagechange" class="tsd-kind-icon">on<wbr>Language<wbr>Change</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#onmessage" class="tsd-kind-icon">on<wbr>Message</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#playactivatesound" class="tsd-kind-icon">play<wbr>Activate<wbr>Sound</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#playselectsound" class="tsd-kind-icon">play<wbr>Select<wbr>Sound</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#onreload" class="tsd-kind-icon">on<wbr>Reload</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#ontoggledevmode" class="tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Mode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="newui.html#ontoggledevtools" class="tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Tools</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#playsound" class="tsd-kind-icon">play<wbr>Sound</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#refreshtranslations" class="tsd-kind-icon">refresh<wbr>Translations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#registerdatahost" class="tsd-kind-icon">register<wbr>Data<wbr>Host</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="newui.html#removestylesheet" class="tsd-kind-icon">remove<wbr>Stylesheet</a></li>
@@ -148,7 +153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:55</li>
+									<li>Defined in src/newui/NewUi.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="newui.html" class="tsd-signature-type">NewUi</a></h4>
@@ -160,53 +165,73 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="event" class="tsd-anchor"></a>
-					<h3>event</h3>
-					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iuievents.html" class="tsd-signature-type">IUiEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter&lt;this, E&gt;(this)</span></div>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> event</h3>
+					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iuievents.html" class="tsd-signature-type">IUiEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
+						<p>Inherited from <a href="tileevent.html">TileEvent</a>.<a href="tileevent.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:207</li>
+							<li>Defined in src/event/EventEmitter.ts:259</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="highlights" class="tsd-anchor"></a>
-					<h3>highlights</h3>
-					<div class="tsd-signature tsd-kind-icon">highlights<span class="tsd-signature-symbol">:</span> <a href="highlightmanager.html" class="tsd-signature-type">HighlightManager</a><span class="tsd-signature-symbol"> =&nbsp;new HighlightManager()</span></div>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> highlights</h3>
+					<div class="tsd-signature tsd-kind-icon">highlights<span class="tsd-signature-symbol">:</span> <a href="highlightmanager.html" class="tsd-signature-type">HighlightManager</a><span class="tsd-signature-symbol"> = new HighlightManager()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/newui/NewUi.ts:46</li>
+							<li>Defined in src/newui/NewUi.ts:52</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="scale" class="tsd-anchor"></a>
-					<h3>scale</h3>
-					<div class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">:</span> <a href="scalemanager.html" class="tsd-signature-type">ScaleManager</a><span class="tsd-signature-symbol"> =&nbsp;new ScaleManager()</span></div>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> scale</h3>
+					<div class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">:</span> <a href="scalemanager.html" class="tsd-signature-type">ScaleManager</a><span class="tsd-signature-symbol"> = new ScaleManager()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/newui/NewUi.ts:45</li>
+							<li>Defined in src/newui/NewUi.ts:51</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="screens" class="tsd-anchor"></a>
-					<h3>screens</h3>
-					<div class="tsd-signature tsd-kind-icon">screens<span class="tsd-signature-symbol">:</span> <a href="screenmanager.html" class="tsd-signature-type">ScreenManager</a><span class="tsd-signature-symbol"> =&nbsp;new ScreenManager()</span></div>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> screens</h3>
+					<div class="tsd-signature tsd-kind-icon">screens<span class="tsd-signature-symbol">:</span> <a href="screenmanager.html" class="tsd-signature-type">ScreenManager</a><span class="tsd-signature-symbol"> = new ScreenManager()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/newui/NewUi.ts:47</li>
+							<li>Defined in src/newui/NewUi.ts:53</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="selection" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> selection</h3>
+					<div class="tsd-signature tsd-kind-icon">selection<span class="tsd-signature-symbol">:</span> <a href="selectionhandler.html" class="tsd-signature-type">SelectionHandler</a><span class="tsd-signature-symbol"> = new SelectionHandler(() &#x3D;&gt; this.screens.getTop&lt;Screen &amp; Partial&lt;MenuScreen&gt;&gt;()?.visibleMenu)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/newui/NewUi.ts:54</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tooltips" class="tsd-anchor"></a>
-					<h3>tooltips</h3>
-					<div class="tsd-signature tsd-kind-icon">tooltips<span class="tsd-signature-symbol">:</span> <a href="tooltipmanager.html" class="tsd-signature-type">TooltipManager</a><span class="tsd-signature-symbol"> =&nbsp;new TooltipManager()</span></div>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> tooltips</h3>
+					<div class="tsd-signature tsd-kind-icon">tooltips<span class="tsd-signature-symbol">:</span> <a href="tooltipmanager.html" class="tsd-signature-type">TooltipManager</a><span class="tsd-signature-symbol"> = new TooltipManager()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/newui/NewUi.ts:44</li>
+							<li>Defined in src/newui/NewUi.ts:50</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="viewport" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> viewport</h3>
+					<div class="tsd-signature tsd-kind-icon">viewport<span class="tsd-signature-symbol">:</span> <a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> = new Vector2(window.innerWidth, window.innerHeight)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/newui/NewUi.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:52</li>
+									<li>Defined in src/newui/NewUi.ts:60</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -240,7 +265,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:50</li>
+									<li>Defined in src/newui/NewUi.ts:59</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -260,7 +285,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:268</li>
+									<li>Defined in src/newui/NewUi.ts:276</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -277,16 +302,16 @@
 					<a name="hideloadinginterrupt" class="tsd-anchor"></a>
 					<h3>hide<wbr>Loading<wbr>Interrupt</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">hide<wbr>Loading<wbr>Interrupt<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">hide<wbr>Loading<wbr>Interrupt<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:101</li>
+									<li>Defined in src/newui/NewUi.ts:111</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -301,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:88</li>
+									<li>Defined in src/newui/NewUi.ts:98</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,7 +348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:92</li>
+									<li>Defined in src/newui/NewUi.ts:102</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -332,6 +357,23 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iinterruptmenufactory.html" class="tsd-signature-type">IInterruptMenuFactory</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onfullscreen" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Fullscreen</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Fullscreen<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/newui/NewUi.ts:335</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -345,7 +387,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:292</li>
+									<li>Defined in src/newui/NewUi.ts:300</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -362,7 +404,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:312</li>
+									<li>Defined in src/newui/NewUi.ts:320</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -379,7 +421,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:321</li>
+									<li>Defined in src/newui/NewUi.ts:329</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -405,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:306</li>
+									<li>Defined in src/newui/NewUi.ts:314</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -421,33 +463,68 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="playactivatesound" class="tsd-anchor"></a>
-					<h3>play<wbr>Activate<wbr>Sound</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">play<wbr>Activate<wbr>Sound<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onreload" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Reload</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Reload<span class="tsd-signature-symbol">(</span>api<span class="tsd-signature-symbol">: </span><a href="../interfaces/ibindhandlerapi.html" class="tsd-signature-type">IBindHandlerApi</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:212</li>
+									<li>Defined in src/newui/NewUi.ts:352</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Plays the &quot;click&quot; sound effect, used for most interface interactions</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api: <a href="../interfaces/ibindhandlerapi.html" class="tsd-signature-type">IBindHandlerApi</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="ontoggledevmode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Toggle<wbr>Dev<wbr>Mode</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Mode<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/newui/NewUi.ts:345</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="ontoggledevtools" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Toggle<wbr>Dev<wbr>Tools</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Tools<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/newui/NewUi.ts:359</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="playselectsound" class="tsd-anchor"></a>
-					<h3>play<wbr>Select<wbr>Sound</h3>
+					<a name="playsound" class="tsd-anchor"></a>
+					<h3>play<wbr>Sound</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">play<wbr>Select<wbr>Sound<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">play<wbr>Sound<span class="tsd-signature-symbol">(</span>sound<span class="tsd-signature-symbol">: </span><a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"activate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"enable"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"disable"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -456,11 +533,12 @@
 									<li>Defined in src/newui/NewUi.ts:219</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Plays the &quot;select&quot; sound effect, used for selecting things in the interface</p>
-								</div>
-							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sound: <a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"activate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"enable"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"disable"</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -469,13 +547,13 @@
 					<a name="refreshtranslations" class="tsd-anchor"></a>
 					<h3>refresh<wbr>Translations</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">refresh<wbr>Translations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">refresh<wbr>Translations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>elements<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:112</li>
+									<li>Defined in src/newui/NewUi.ts:122</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -483,7 +561,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>elements: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>elements: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The elements to refresh translations inside</p>
 									</div>
@@ -503,7 +581,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:139</li>
+									<li>Defined in src/newui/NewUi.ts:149</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -534,7 +612,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:276</li>
+									<li>Defined in src/newui/NewUi.ts:284</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -557,7 +635,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:261</li>
+									<li>Defined in src/newui/NewUi.ts:269</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -565,10 +643,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> opacity: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;saveDataGlobal.options.dialogOpacity * 100</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> opacity: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = saveDataGlobal.options.dialogOpacity * 100</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> save: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> save: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether or not to save the new scale into options. Defaults to true.</p>
 									</div>
@@ -582,13 +660,13 @@
 					<a name="showloadinginterrupt" class="tsd-anchor"></a>
 					<h3>show<wbr>Loading<wbr>Interrupt</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">show<wbr>Loading<wbr>Interrupt<span class="tsd-signature-symbol">(</span>interrupt<span class="tsd-signature-symbol">: </span><a href="../enums/interrupt.html" class="tsd-signature-type">Interrupt</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/interruptchoice.html" class="tsd-signature-type">InterruptChoice</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">show<wbr>Loading<wbr>Interrupt<span class="tsd-signature-symbol">(</span>interrupt<span class="tsd-signature-symbol">: </span><a href="../enums/interrupt.html" class="tsd-signature-type">Interrupt</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#cancel" class="tsd-signature-type">Cancel</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#continueanyway" class="tsd-signature-type">ContinueAnyway</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#localfile" class="tsd-signature-type">LocalFile</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#no" class="tsd-signature-type">No</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#nowarn" class="tsd-signature-type">NoWarn</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#ok" class="tsd-signature-type">Ok</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#opensavefolderandquit" class="tsd-signature-type">OpenSaveFolderAndQuit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#quit" class="tsd-signature-type">Quit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#rejoin" class="tsd-signature-type">Rejoin</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#rename" class="tsd-signature-type">Rename</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#retry" class="tsd-signature-type">Retry</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#saveandquit" class="tsd-signature-type">SaveAndQuit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#steamworkshop" class="tsd-signature-type">SteamWorkshop</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#yes" class="tsd-signature-type">Yes</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:97</li>
+									<li>Defined in src/newui/NewUi.ts:107</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -600,7 +678,7 @@
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/interruptchoice.html" class="tsd-signature-type">InterruptChoice</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#cancel" class="tsd-signature-type">Cancel</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#continueanyway" class="tsd-signature-type">ContinueAnyway</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#localfile" class="tsd-signature-type">LocalFile</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#no" class="tsd-signature-type">No</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#nowarn" class="tsd-signature-type">NoWarn</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#ok" class="tsd-signature-type">Ok</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#opensavefolderandquit" class="tsd-signature-type">OpenSaveFolderAndQuit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#quit" class="tsd-signature-type">Quit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#rejoin" class="tsd-signature-type">Rejoin</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#rename" class="tsd-signature-type">Rename</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#retry" class="tsd-signature-type">Retry</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#saveandquit" class="tsd-signature-type">SaveAndQuit</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#steamworkshop" class="tsd-signature-type">SteamWorkshop</a><span class="tsd-signature-symbol"> | </span><a href="../enums/interruptchoice.html#yes" class="tsd-signature-type">Yes</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -608,19 +686,19 @@
 					<a name="storeelements" class="tsd-anchor"></a>
 					<h3>store<wbr>Elements</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">store<wbr>Elements<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">store<wbr>Elements<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>elements<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:128</li>
+									<li>Defined in src/newui/NewUi.ts:138</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>elements: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>elements: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icomponent.html" class="tsd-signature-type">IComponent</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -632,13 +710,13 @@
 					<h3>toggle<wbr>Fullscreen</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Fullscreen<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Fullscreen<span class="tsd-signature-symbol">(</span>fullscreen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Fullscreen<span class="tsd-signature-symbol">(</span>fullscreen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:226</li>
+									<li>Defined in src/newui/NewUi.ts:234</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -651,7 +729,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:230</li>
+									<li>Defined in src/newui/NewUi.ts:238</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -659,7 +737,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fullscreen: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fullscreen: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether or not fullscreen is enabled</p>
 									</div>
@@ -679,7 +757,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:283</li>
+									<li>Defined in src/newui/NewUi.ts:291</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -696,7 +774,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/newui/NewUi.ts:287</li>
+									<li>Defined in src/newui/NewUi.ts:295</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -704,8 +782,6 @@
 					</ul>
 				</section>
 			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
@@ -713,6 +789,8 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
@@ -736,7 +814,13 @@
 								<a href="newui.html#screens" class="tsd-kind-icon">screens</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="newui.html#selection" class="tsd-kind-icon">selection</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="newui.html#tooltips" class="tsd-kind-icon">tooltips</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="newui.html#viewport" class="tsd-kind-icon">viewport</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="newui.html#windowheight" class="tsd-kind-icon">window<wbr>Height</a>
@@ -754,6 +838,9 @@
 								<a href="newui.html#interrupt" class="tsd-kind-icon">interrupt</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="newui.html#onfullscreen" class="tsd-kind-icon">on<wbr>Fullscreen</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="newui.html#onglobalslotloaded" class="tsd-kind-icon">on<wbr>Global<wbr>Slot<wbr>Loaded</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
@@ -765,11 +852,17 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="newui.html#onmessage" class="tsd-kind-icon">on<wbr>Message</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="newui.html#playactivatesound" class="tsd-kind-icon">play<wbr>Activate<wbr>Sound</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="newui.html#onreload" class="tsd-kind-icon">on<wbr>Reload</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="newui.html#ontoggledevmode" class="tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="newui.html#ontoggledevtools" class="tsd-kind-icon">on<wbr>Toggle<wbr>Dev<wbr>Tools</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="newui.html#playselectsound" class="tsd-kind-icon">play<wbr>Select<wbr>Sound</a>
+								<a href="newui.html#playsound" class="tsd-kind-icon">play<wbr>Sound</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="newui.html#refreshtranslations" class="tsd-kind-icon">refresh<wbr>Translations</a>
@@ -812,37 +905,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
@@ -851,18 +917,17 @@
 				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -872,6 +937,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
