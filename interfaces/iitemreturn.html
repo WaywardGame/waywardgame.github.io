@@ -82,6 +82,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemreturn.html#damaged" class="tsd-kind-icon">damaged</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemreturn.html#returnfromdisassembly" class="tsd-kind-icon">return<wbr>From<wbr>Disassembly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemreturn.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iitemreturn.html#whencrafted" class="tsd-kind-icon">when<wbr>Crafted</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,9 +96,14 @@
 					<div class="tsd-signature tsd-kind-icon">damaged<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/IItem.ts:157</li>
+							<li>Defined in src/item/IItem.ts:159</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the returned item will be damaged by 1 point.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="returnfromdisassembly" class="tsd-anchor"></a>
@@ -105,9 +111,14 @@
 					<div class="tsd-signature tsd-kind-icon">return<wbr>From<wbr>Disassembly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/item/IItem.ts:159</li>
+							<li>Defined in src/item/IItem.ts:164</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, it will check the disassembly data for the item and return the first instance of the ItemType set in type.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="type" class="tsd-anchor"></a>
@@ -118,6 +129,21 @@
 							<li>Defined in src/item/IItem.ts:155</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="whencrafted" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> when<wbr>Crafted</h3>
+					<div class="tsd-signature tsd-kind-icon">when<wbr>Crafted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/item/IItem.ts:169</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to true, this item will return the item when consumed in a craft, otherwise, it won&#39;t.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<nav class="tsd-navigation primary">
@@ -144,6 +170,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iitemreturn.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iitemreturn.html#whencrafted" class="tsd-kind-icon">when<wbr>Crafted</a>
 							</li>
 						</ul>
 					</li>

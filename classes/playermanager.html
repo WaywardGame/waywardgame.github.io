@@ -118,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ientitymanagerevents.html" class="tsd-signature-type">IEntityManagerEvents</a><span class="tsd-signature-symbol">&lt;</span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="tileevent.html">TileEvent</a>.<a href="tileevent.html#event">event</a></p>
+						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
 						<ul>
 							<li>Defined in src/event/EventEmitter.ts:259</li>
 						</ul>
@@ -141,7 +141,7 @@
 					<a name="add" class="tsd-anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>playerOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>playerOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span>, allowMultiplayerSetup<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -154,6 +154,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> playerOptions: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allowMultiplayerSetup: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="player.html" class="tsd-signature-type">Player</a></h4>
@@ -170,7 +173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:235</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:226</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -236,7 +239,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:186</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:177</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -251,7 +254,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:187</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:178</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

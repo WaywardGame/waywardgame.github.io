@@ -88,6 +88,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-class tsd-is-static"><a href="../enums/log.logtype.html" class="tsd-kind-icon">Log<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/log.ilogfile.html" class="tsd-kind-icon">ILog<wbr>File</a></li>
@@ -109,9 +115,10 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="log.html#trace" class="tsd-kind-icon">trace</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="log.html#warn" class="tsd-kind-icon">warn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#callback" class="tsd-kind-icon">callback</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#disabledsourcecache" class="tsd-kind-icon">disabled<wbr>Source<wbr>Cache</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filelogger" class="tsd-kind-icon">file<wbr>Logger</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filesize" class="tsd-kind-icon">file<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filestream" class="tsd-kind-icon">file<wbr>Stream</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#sourcefilterregexcache" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex<wbr>Cache</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -121,6 +128,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="log.html#setup" class="tsd-kind-icon">setup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#debug-1" class="tsd-kind-icon">debug</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#error-1" class="tsd-kind-icon">error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#finalizesetup" class="tsd-kind-icon">finalize<wbr>Setup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#getfilestreaminfo" class="tsd-kind-icon">get<wbr>File<wbr>Stream<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#info-1" class="tsd-kind-icon">info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#refresh" class="tsd-kind-icon">refresh</a></li>
@@ -128,8 +136,16 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#setupfilelogger" class="tsd-kind-icon">setup<wbr>File<wbr>Logger</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#shouldlog" class="tsd-kind-icon">should<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#sourcefilter" class="tsd-kind-icon">source<wbr>Filter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#sourcefilterregex" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#startsetup" class="tsd-kind-icon">start<wbr>Setup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#trace-1" class="tsd-kind-icon">trace</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#warn-1" class="tsd-kind-icon">warn</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="log.html#sourcefiltercache" class="tsd-kind-icon">source<wbr>Filter<wbr>Cache</a></li>
 							</ul>
 						</section>
 					</div>
@@ -148,7 +164,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/utilities/Log.ts:146</li>
+									<li>Defined in src/utilities/Log.ts:147</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -172,7 +188,7 @@
 						<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#debug">debug</a></p>
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#debug">debug</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:140</li>
+							<li>Defined in src/utilities/Log.ts:141</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -205,7 +221,7 @@
 						<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#error">error</a></p>
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#error">error</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:141</li>
+							<li>Defined in src/utilities/Log.ts:142</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -238,7 +254,7 @@
 						<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#info">info</a></p>
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#info">info</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:142</li>
+							<li>Defined in src/utilities/Log.ts:143</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -270,7 +286,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#sources">sources</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:146</li>
+							<li>Defined in src/utilities/Log.ts:147</li>
 						</ul>
 					</aside>
 				</section>
@@ -282,7 +298,7 @@
 						<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#trace">trace</a></p>
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#trace">trace</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:143</li>
+							<li>Defined in src/utilities/Log.ts:144</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -315,7 +331,7 @@
 						<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#warn">warn</a></p>
 						<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#warn">warn</a></p>
 						<ul>
-							<li>Defined in src/utilities/Log.ts:144</li>
+							<li>Defined in src/utilities/Log.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -346,17 +362,17 @@
 					<div class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:238</li>
+							<li>Defined in src/utilities/Log.ts:311</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="disabledsourcecache" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> disabled<wbr>Source<wbr>Cache</h3>
-					<div class="tsd-signature tsd-kind-icon">disabled<wbr>Source<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Set()</span></div>
+					<a name="filelogger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> file<wbr>Logger</h3>
+					<div class="tsd-signature tsd-kind-icon">file<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:236</li>
+							<li>Defined in src/utilities/Log.ts:312</li>
 						</ul>
 					</aside>
 				</section>
@@ -366,7 +382,7 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:241</li>
+							<li>Defined in src/utilities/Log.ts:315</li>
 						</ul>
 					</aside>
 				</section>
@@ -376,7 +392,17 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Stream<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.ifilestream.html" class="tsd-signature-type">IFileStream</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:240</li>
+							<li>Defined in src/utilities/Log.ts:314</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="sourcefilterregexcache" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> source<wbr>Filter<wbr>Regex<wbr>Cache</h3>
+					<div class="tsd-signature tsd-kind-icon">source<wbr>Filter<wbr>Regex<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"developer"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"default"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/utilities/Log.ts:262</li>
 						</ul>
 					</aside>
 				</section>
@@ -395,7 +421,7 @@
 								<p>Implementation of <a href="../interfaces/ilog.html">ILog</a>.<a href="../interfaces/ilog.html#setsources">setSources</a></p>
 								<p>Inherited from <a href="baselog.html">BaseLog</a>.<a href="baselog.html#setsources">setSources</a></p>
 								<ul>
-									<li>Defined in src/utilities/Log.ts:156</li>
+									<li>Defined in src/utilities/Log.ts:157</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -419,7 +445,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="baselog.html">BaseLog</a>.<a href="baselog.html#setup">setup</a></p>
 								<ul>
-									<li>Defined in src/utilities/Log.ts:172</li>
+									<li>Defined in src/utilities/Log.ts:173</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -441,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:518</li>
+									<li>Defined in src/utilities/Log.ts:500</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -490,7 +516,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:494</li>
+									<li>Defined in src/utilities/Log.ts:476</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -530,6 +556,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="finalizesetup" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> finalize<wbr>Setup</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">finalize<wbr>Setup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:369</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="getfilestreaminfo" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>File<wbr>Stream<wbr>Info</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -539,7 +582,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:526</li>
+									<li>Defined in src/utilities/Log.ts:508</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -576,7 +619,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:470</li>
+									<li>Defined in src/utilities/Log.ts:452</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -625,7 +668,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:411</li>
+									<li>Defined in src/utilities/Log.ts:264</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -642,7 +685,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:416</li>
+									<li>Defined in src/utilities/Log.ts:374</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -665,7 +708,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:283</li>
+									<li>Defined in src/utilities/Log.ts:387</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -693,17 +736,20 @@
 					<a name="shouldlog" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> should<wbr>Log</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">should<wbr>Log<span class="tsd-signature-symbol">(</span>sources<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Log<span class="tsd-signature-symbol">(</span>logType<span class="tsd-signature-symbol">: </span><a href="../enums/log.logtype.html" class="tsd-signature-type">LogType</a>, sources<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:252</li>
+									<li>Defined in src/utilities/Log.ts:286</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>logType: <a href="../enums/log.logtype.html" class="tsd-signature-type">LogType</a></h5>
+								</li>
 								<li>
 									<h5>sources: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
@@ -722,10 +768,44 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:248</li>
+									<li>Defined in src/utilities/Log.ts:273</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isourcefilter.html" class="tsd-signature-type">ISourceFilter</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="sourcefilterregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> source<wbr>Filter<wbr>Regex</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">source<wbr>Filter<wbr>Regex<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:277</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RegExp</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="startsetup" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> start<wbr>Setup</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">start<wbr>Setup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:322</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -739,7 +819,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:506</li>
+									<li>Defined in src/utilities/Log.ts:488</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -788,7 +868,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:482</li>
+									<li>Defined in src/utilities/Log.ts:464</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -828,6 +908,39 @@
 					</ul>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+					<a name="sourcefiltercache" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> source<wbr>Filter<wbr>Cache</h3>
+					<div class="tsd-signature tsd-kind-icon">source<wbr>Filter<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/utilities/Log.ts:257</li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="sourcefiltercache._logtype_console_" class="tsd-anchor"></a>
+						<h3>[<wbr>Log<wbr>Type.<wbr>Console]</h3>
+						<div class="tsd-signature tsd-kind-icon">[<wbr>Log<wbr>Type.<wbr>Console]<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/utilities/Log.ts:258</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="sourcefiltercache._logtype_file_" class="tsd-anchor"></a>
+						<h3>[<wbr>Log<wbr>Type.<wbr>File]</h3>
+						<div class="tsd-signature tsd-kind-icon">[<wbr>Log<wbr>Type.<wbr>File]<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/utilities/Log.ts:259</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
@@ -844,6 +957,9 @@
 					<li class="current tsd-kind-class">
 						<a href="log.html" class="tsd-kind-icon">Log</a>
 						<ul>
+							<li class=" tsd-kind-enum tsd-parent-kind-class tsd-is-static">
+								<a href="../enums/log.logtype.html" class="tsd-kind-icon">Log<wbr>Type</a>
+							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="../interfaces/log.ilogfile.html" class="tsd-kind-icon">ILog<wbr>File</a>
 							</li>
@@ -872,13 +988,16 @@
 								<a href="log.html#callback" class="tsd-kind-icon">callback</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="log.html#disabledsourcecache" class="tsd-kind-icon">disabled<wbr>Source<wbr>Cache</a>
+								<a href="log.html#filelogger" class="tsd-kind-icon">file<wbr>Logger</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#filesize" class="tsd-kind-icon">file<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#filestream" class="tsd-kind-icon">file<wbr>Stream</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#sourcefilterregexcache" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex<wbr>Cache</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="log.html#setsources" class="tsd-kind-icon">set<wbr>Sources</a>
@@ -891,6 +1010,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#error-1" class="tsd-kind-icon">error</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#finalizesetup" class="tsd-kind-icon">finalize<wbr>Setup</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#getfilestreaminfo" class="tsd-kind-icon">get<wbr>File<wbr>Stream<wbr>Info</a>
@@ -914,10 +1036,19 @@
 								<a href="log.html#sourcefilter" class="tsd-kind-icon">source<wbr>Filter</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#sourcefilterregex" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#startsetup" class="tsd-kind-icon">start<wbr>Setup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#trace-1" class="tsd-kind-icon">trace</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#warn-1" class="tsd-kind-icon">warn</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#sourcefiltercache" class="tsd-kind-icon">source<wbr>Filter<wbr>Cache</a>
 							</li>
 						</ul>
 					</li>

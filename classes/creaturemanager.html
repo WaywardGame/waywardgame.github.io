@@ -103,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creaturemanager.html#getentities" class="tsd-kind-icon">get<wbr>Entities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creaturemanager.html#gethappinesslevel" class="tsd-kind-icon">get<wbr>Happiness<wbr>Level</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creaturemanager.html#getmovepenalty" class="tsd-kind-icon">get<wbr>Move<wbr>Penalty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creaturemanager.html#getmovepenaltyfromwasm" class="tsd-kind-icon">get<wbr>Move<wbr>Penalty<wbr>From<wbr>Wasm</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creaturemanager.html#getmovetypesinfov" class="tsd-kind-icon">get<wbr>Move<wbr>Types<wbr>InFov</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creaturemanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creaturemanager.html#getspawnablecreatures" class="tsd-kind-icon">get<wbr>Spawnable<wbr>Creatures</a></li>
@@ -126,9 +127,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/icreaturemanagerevents.html" class="tsd-signature-type">ICreatureManagerEvents</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Overrides <a href="tileevent.html">TileEvent</a>.<a href="tileevent.html#event">event</a></p>
+						<p>Overrides <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/entity/creature/CreatureManager.ts:58</li>
+							<li>Defined in src/entity/creature/CreatureManager.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -145,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:551</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:562</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -174,7 +175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:379</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:381</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -197,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:570</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:581</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -228,7 +229,7 @@
 								<p>Implementation of <a href="../interfaces/ientitymanager.html">IEntityManager</a>.<a href="../interfaces/ientitymanager.html#getentities">getEntities</a></p>
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#getentities">getEntities</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:60</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -245,7 +246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:75</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:77</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -271,7 +272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:434</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:436</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -293,6 +294,43 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 							<p>Blocked penalty - Do no return 0!</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmovepenaltyfromwasm" class="tsd-anchor"></a>
+					<h3>get<wbr>Move<wbr>Penalty<wbr>From<wbr>Wasm</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Move<wbr>Penalty<wbr>From<wbr>Wasm<span class="tsd-signature-symbol">(</span>moveType<span class="tsd-signature-symbol">: </span><a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/creature/CreatureManager.ts:556</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>wasm calls this when calculating penalties for flow fields</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>moveType: <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -325,7 +363,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:64</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -357,7 +395,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:332</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:334</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -397,7 +435,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:384</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:386</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -421,7 +459,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:402</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:404</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -444,7 +482,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:107</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:109</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -517,7 +555,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:280</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:282</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -555,7 +593,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:612</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:623</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -575,15 +613,21 @@
 					<a name="updateall" class="tsd-anchor"></a>
 					<h3>update<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>All<span class="tsd-signature-symbol">(</span>realPlayers<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/CreatureManager.ts:414</li>
+									<li>Defined in src/entity/creature/CreatureManager.ts:416</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>realPlayers: <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -649,6 +693,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creaturemanager.html#getmovepenalty" class="tsd-kind-icon">get<wbr>Move<wbr>Penalty</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="creaturemanager.html#getmovepenaltyfromwasm" class="tsd-kind-icon">get<wbr>Move<wbr>Penalty<wbr>From<wbr>Wasm</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creaturemanager.html#getmovetypesinfov" class="tsd-kind-icon">get<wbr>Move<wbr>Types<wbr>InFov</a>
