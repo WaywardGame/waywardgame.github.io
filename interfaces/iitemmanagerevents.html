@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ItemManagerEvents | Wayward Documentation</title>
+	<title>IItemManagerEvents | Wayward Documentation</title>
 	<meta name="description" content="Welcome to the Wayward Documentation. This documentation and website is generated automatically using TypeDoc and is updated every release.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="itemmanagerevents.html">ItemManagerEvents</a>
+					<a href="iitemmanagerevents.html">IItemManagerEvents</a>
 				</li>
 			</ul>
-			<h1>Interface ItemManagerEvents</h1>
+			<h1>Interface IItemManagerEvents</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ItemManagerEvents</span>
+						<span class="target">IItemManagerEvents</span>
 					</li>
 				</ul>
 			</section>
@@ -79,13 +79,13 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#canmoveitem" class="tsd-kind-icon">can<wbr>Move<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#canmoveitems" class="tsd-kind-icon">can<wbr>Move<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#containeritemadd" class="tsd-kind-icon">container<wbr>Item<wbr>Add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#containeritemremove" class="tsd-kind-icon">container<wbr>Item<wbr>Remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#create" class="tsd-kind-icon">create</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="itemmanagerevents.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#canmoveitem" class="tsd-kind-icon">can<wbr>Move<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#canmoveitems" class="tsd-kind-icon">can<wbr>Move<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemadd" class="tsd-kind-icon">container<wbr>Item<wbr>Add</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemremove" class="tsd-kind-icon">container<wbr>Item<wbr>Remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#remove" class="tsd-kind-icon">remove</a></li>
 							</ul>
 						</section>
 					</div>
@@ -161,22 +161,33 @@
 					<a name="containeritemadd" class="tsd-anchor"></a>
 					<h3>container<wbr>Item<wbr>Add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">container<wbr>Item<wbr>Add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a>, newContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">container<wbr>Item<wbr>Add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a>, container<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/ItemManager.ts:82</li>
+									<li>Defined in src/item/ItemManager.ts:98</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when an item is added to a container.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>item: <a href="../classes/item.html" class="tsd-signature-type">Item</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item object</p>
+									</div>
 								</li>
 								<li>
-									<h5>newContainer: <a href="icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+									<h5>container: <a href="icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The container object the item was added to. This container might be inventory or a container within the inventory.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -193,16 +204,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/ItemManager.ts:80</li>
+									<li>Defined in src/item/ItemManager.ts:85</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when an item is removed from a container.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>item: <a href="../classes/item.html" class="tsd-signature-type">Item</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item object</p>
+									</div>
 								</li>
 								<li>
 									<h5>previousContainer: <a href="icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The container object the item was removed from.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -213,25 +235,39 @@
 					<a name="containeritemupdate" class="tsd-anchor"></a>
 					<h3>container<wbr>Item<wbr>Update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">container<wbr>Item<wbr>Update<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a>, previousContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, newContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">container<wbr>Item<wbr>Update<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a>, containerFrom<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, containerTo<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/item/ItemManager.ts:81</li>
+									<li>Defined in src/item/ItemManager.ts:92</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when an item is moved from one container to another.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>item: <a href="../classes/item.html" class="tsd-signature-type">Item</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item object</p>
+									</div>
 								</li>
 								<li>
-									<h5>previousContainer: <a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>containerFrom: <a href="icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The container object the item was moved to. This container might be inventory or a container within the inventory.</p>
+									</div>
 								</li>
 								<li>
-									<h5>newContainer: <a href="icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+									<h5>containerTo: <a href="icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The container object the item was moved to. This container might be inventory or a container within the inventory.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -299,28 +335,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="itemmanagerevents.html" class="tsd-kind-icon">Item<wbr>Manager<wbr>Events</a>
+						<a href="iitemmanagerevents.html" class="tsd-kind-icon">IItem<wbr>Manager<wbr>Events</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#canmoveitem" class="tsd-kind-icon">can<wbr>Move<wbr>Item</a>
+								<a href="iitemmanagerevents.html#canmoveitem" class="tsd-kind-icon">can<wbr>Move<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#canmoveitems" class="tsd-kind-icon">can<wbr>Move<wbr>Items</a>
+								<a href="iitemmanagerevents.html#canmoveitems" class="tsd-kind-icon">can<wbr>Move<wbr>Items</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#containeritemadd" class="tsd-kind-icon">container<wbr>Item<wbr>Add</a>
+								<a href="iitemmanagerevents.html#containeritemadd" class="tsd-kind-icon">container<wbr>Item<wbr>Add</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#containeritemremove" class="tsd-kind-icon">container<wbr>Item<wbr>Remove</a>
+								<a href="iitemmanagerevents.html#containeritemremove" class="tsd-kind-icon">container<wbr>Item<wbr>Remove</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a>
+								<a href="iitemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#create" class="tsd-kind-icon">create</a>
+								<a href="iitemmanagerevents.html#create" class="tsd-kind-icon">create</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="itemmanagerevents.html#remove" class="tsd-kind-icon">remove</a>
+								<a href="iitemmanagerevents.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
 						</ul>
 					</li>
