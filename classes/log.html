@@ -114,10 +114,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="log.html#sources" class="tsd-kind-icon">sources</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="log.html#trace" class="tsd-kind-icon">trace</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="log.html#warn" class="tsd-kind-icon">warn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#callback" class="tsd-kind-icon">callback</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filecallback" class="tsd-kind-icon">file<wbr>Callback</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filelogger" class="tsd-kind-icon">file<wbr>Logger</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filesize" class="tsd-kind-icon">file<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#filestream" class="tsd-kind-icon">file<wbr>Stream</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#preconsolecallbacks" class="tsd-kind-icon">pre<wbr>Console<wbr>Callbacks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="log.html#sourcefilterregexcache" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex<wbr>Cache</a></li>
 							</ul>
 						</section>
@@ -126,12 +127,15 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="log.html#setsources" class="tsd-kind-icon">set<wbr>Sources</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="log.html#setup" class="tsd-kind-icon">setup</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#addpreconsolecallback" class="tsd-kind-icon">add<wbr>Pre<wbr>Console<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#debug-1" class="tsd-kind-icon">debug</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#error-1" class="tsd-kind-icon">error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#finalizesetup" class="tsd-kind-icon">finalize<wbr>Setup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#getfilestreaminfo" class="tsd-kind-icon">get<wbr>File<wbr>Stream<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#info-1" class="tsd-kind-icon">info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#initializegamestate" class="tsd-kind-icon">initialize<wbr>Game<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#refresh" class="tsd-kind-icon">refresh</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#removepreconsolecallback" class="tsd-kind-icon">remove<wbr>Pre<wbr>Console<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#setcallback" class="tsd-kind-icon">set<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#setupfilelogger" class="tsd-kind-icon">setup<wbr>File<wbr>Logger</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="log.html#shouldlog" class="tsd-kind-icon">should<wbr>Log</a></li>
@@ -357,12 +361,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="callback" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> callback</h3>
-					<div class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<a name="filecallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> file<wbr>Callback</h3>
+					<div class="tsd-signature tsd-kind-icon">file<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:315</li>
+							<li>Defined in src/utilities/Log.ts:318</li>
 						</ul>
 					</aside>
 				</section>
@@ -372,7 +376,7 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:316</li>
+							<li>Defined in src/utilities/Log.ts:319</li>
 						</ul>
 					</aside>
 				</section>
@@ -382,7 +386,7 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:319</li>
+							<li>Defined in src/utilities/Log.ts:322</li>
 						</ul>
 					</aside>
 				</section>
@@ -392,7 +396,17 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Stream<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.ifilestream.html" class="tsd-signature-type">IFileStream</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/utilities/Log.ts:318</li>
+							<li>Defined in src/utilities/Log.ts:321</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="preconsolecallbacks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> pre<wbr>Console<wbr>Callbacks</h3>
+					<div class="tsd-signature tsd-kind-icon">pre<wbr>Console<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/utilities/Log.ts:316</li>
 						</ul>
 					</aside>
 				</section>
@@ -458,6 +472,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="addpreconsolecallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Pre<wbr>Console<wbr>Callback</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Pre<wbr>Console<wbr>Callback<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:403</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cb: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="debug-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> debug</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -467,7 +522,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:508</li>
+									<li>Defined in src/utilities/Log.ts:530</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -516,7 +571,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:484</li>
+									<li>Defined in src/utilities/Log.ts:506</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -565,7 +620,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:377</li>
+									<li>Defined in src/utilities/Log.ts:384</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -582,7 +637,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:516</li>
+									<li>Defined in src/utilities/Log.ts:538</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -619,7 +674,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:460</li>
+									<li>Defined in src/utilities/Log.ts:482</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -659,6 +714,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="initializegamestate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Game<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Game<wbr>State<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:389</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="refresh" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> refresh</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -676,6 +748,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="removepreconsolecallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> remove<wbr>Pre<wbr>Console<wbr>Callback</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Pre<wbr>Console<wbr>Callback<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/Log.ts:407</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cb: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="setcallback" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> set<wbr>Callback</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -685,7 +798,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:382</li>
+									<li>Defined in src/utilities/Log.ts:393</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -708,7 +821,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:395</li>
+									<li>Defined in src/utilities/Log.ts:417</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -802,7 +915,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:326</li>
+									<li>Defined in src/utilities/Log.ts:329</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -819,7 +932,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:496</li>
+									<li>Defined in src/utilities/Log.ts:518</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -868,7 +981,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Log.ts:472</li>
+									<li>Defined in src/utilities/Log.ts:494</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -985,7 +1098,7 @@
 								<a href="log.html#warn" class="tsd-kind-icon">warn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="log.html#callback" class="tsd-kind-icon">callback</a>
+								<a href="log.html#filecallback" class="tsd-kind-icon">file<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#filelogger" class="tsd-kind-icon">file<wbr>Logger</a>
@@ -997,6 +1110,9 @@
 								<a href="log.html#filestream" class="tsd-kind-icon">file<wbr>Stream</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#preconsolecallbacks" class="tsd-kind-icon">pre<wbr>Console<wbr>Callbacks</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#sourcefilterregexcache" class="tsd-kind-icon">source<wbr>Filter<wbr>Regex<wbr>Cache</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -1004,6 +1120,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="log.html#setup" class="tsd-kind-icon">setup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#addpreconsolecallback" class="tsd-kind-icon">add<wbr>Pre<wbr>Console<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#debug-1" class="tsd-kind-icon">debug</a>
@@ -1021,7 +1140,13 @@
 								<a href="log.html#info-1" class="tsd-kind-icon">info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#initializegamestate" class="tsd-kind-icon">initialize<wbr>Game<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#refresh" class="tsd-kind-icon">refresh</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="log.html#removepreconsolecallback" class="tsd-kind-icon">remove<wbr>Pre<wbr>Console<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="log.html#setcallback" class="tsd-kind-icon">set<wbr>Callback</a>
