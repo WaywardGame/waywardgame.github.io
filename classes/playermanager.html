@@ -99,10 +99,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="playermanager.html#add" class="tsd-kind-icon">add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="playermanager.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="playermanager.html#getentities" class="tsd-kind-icon">get<wbr>Entities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playermanager.html#getmovetypesinfov" class="tsd-kind-icon">get<wbr>Move<wbr>Types<wbr>InFov</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="playermanager.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="playermanager.html#repair" class="tsd-kind-icon">repair</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="playermanager.html#setlocal" class="tsd-kind-icon">set<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playermanager.html#updatefov" class="tsd-kind-icon">update<wbr>Fov</a></li>
 							</ul>
@@ -130,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">INSTANCE<span class="tsd-signature-symbol">:</span> <a href="playermanager.html" class="tsd-signature-type">PlayerManager</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/player/PlayerManager.ts:29</li>
+							<li>Defined in src/entity/player/PlayerManager.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -141,13 +141,13 @@
 					<a name="add" class="tsd-anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>playerOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span>, allowMultiplayerSetup<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>playerOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span>, allowSetup<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:40</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,36 +156,10 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> playerOptions: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayeroptions.html" class="tsd-signature-type">IPlayerOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allowMultiplayerSetup: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allowSetup: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="player.html" class="tsd-signature-type">Player</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="delete" class="tsd-anchor"></a>
-					<h3>delete</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>plys<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">[]</span>, identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:216</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>plys: <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -201,7 +175,7 @@
 								<p>Implementation of <a href="../interfaces/ientitymanager.html">IEntityManager</a>.<a href="../interfaces/ientitymanager.html#getentities">getEntities</a></p>
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#getentities">getEntities</a></p>
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:31</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -220,7 +194,7 @@
 								<p>Implementation of <a href="../interfaces/ientitymanager.html">IEntityManager</a>.<a href="../interfaces/ientitymanager.html#getmovetypesinfov">getMoveTypesInFov</a></p>
 								<p>Inherited from <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#getmovetypesinfov">getMoveTypesInFov</a></p>
 								<ul>
-									<li>Defined in src/entity/EntityManager.ts:81</li>
+									<li>Defined in src/entity/EntityManager.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imovetypez.html" class="tsd-signature-type">IMoveTypeZ</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -239,7 +213,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:172</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:170</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -254,13 +228,43 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:173</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:171</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>pid: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="repair" class="tsd-anchor"></a>
+					<h3>repair</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">repair<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayoptions.html" class="tsd-signature-type">IPlayOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/entity/player/PlayerManager.ts:218</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Support loading dedicated server saves &amp; backups in single player games
+										Support loading single player saves in dedicated servers
+									All while not losing data for any players - regardless of if the player was in the server or not at the time of the backup</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iplayoptions.html" class="tsd-signature-type">IPlayOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -277,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/player/PlayerManager.ts:35</li>
+									<li>Defined in src/entity/player/PlayerManager.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -301,7 +305,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="entitymanager.html">EntityManager</a>.<a href="entitymanager.html#updatefov">updateFov</a></p>
 								<ul>
-									<li>Defined in src/entity/EntityManager.ts:44</li>
+									<li>Defined in src/entity/EntityManager.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -340,9 +344,6 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="playermanager.html#add" class="tsd-kind-icon">add</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="playermanager.html#delete" class="tsd-kind-icon">delete</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="playermanager.html#getentities" class="tsd-kind-icon">get<wbr>Entities</a>
 							</li>
@@ -351,6 +352,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="playermanager.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="playermanager.html#repair" class="tsd-kind-icon">repair</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="playermanager.html#setlocal" class="tsd-kind-icon">set<wbr>Local</a>

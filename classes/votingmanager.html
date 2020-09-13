@@ -80,7 +80,6 @@
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="votingmanager.html#activevoteinterrupt" class="tsd-kind-icon">active<wbr>Vote<wbr>Interrupt</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="votingmanager.html#isvoting" class="tsd-kind-icon">is<wbr>Voting</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -89,6 +88,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#addvote" class="tsd-kind-icon">add<wbr>Vote</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#canstartvote" class="tsd-kind-icon">can<wbr>Start<wbr>Vote</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#getsecondsbeforevotingisallowed" class="tsd-kind-icon">get<wbr>Seconds<wbr>Before<wbr>Voting<wbr>IsAllowed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#isvoting" class="tsd-kind-icon">is<wbr>Voting</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#resethistory" class="tsd-kind-icon">reset<wbr>History</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="votingmanager.html#startvote" class="tsd-kind-icon">start<wbr>Vote</a></li>
 							</ul>
@@ -108,27 +108,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:48</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/interrupt.html" class="tsd-signature-type">Interrupt</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="isvoting" class="tsd-anchor"></a>
-					<h3>is<wbr>Voting</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isVoting<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
 									<li>Defined in src/game/VotingManager.ts:44</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/interrupt.html" class="tsd-signature-type">Interrupt</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -145,7 +128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:108</li>
+									<li>Defined in src/game/VotingManager.ts:120</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -171,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:61</li>
+									<li>Defined in src/game/VotingManager.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:56</li>
+									<li>Defined in src/game/VotingManager.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -208,6 +191,30 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isvoting" class="tsd-anchor"></a>
+					<h3>is<wbr>Voting</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Voting<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/VotingManager.ts:53</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if voting is active
+									It will also end the existing vote if players left since the vote started</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>True if there an active vote</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="resethistory" class="tsd-anchor"></a>
 					<h3>reset<wbr>History</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -217,7 +224,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:52</li>
+									<li>Defined in src/game/VotingManager.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -234,7 +241,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/VotingManager.ts:70</li>
+									<li>Defined in src/game/VotingManager.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -276,9 +283,6 @@
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="votingmanager.html#activevoteinterrupt" class="tsd-kind-icon">active<wbr>Vote<wbr>Interrupt</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="votingmanager.html#isvoting" class="tsd-kind-icon">is<wbr>Voting</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="votingmanager.html#addvote" class="tsd-kind-icon">add<wbr>Vote</a>
 							</li>
@@ -287,6 +291,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="votingmanager.html#getsecondsbeforevotingisallowed" class="tsd-kind-icon">get<wbr>Seconds<wbr>Before<wbr>Voting<wbr>IsAllowed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="votingmanager.html#isvoting" class="tsd-kind-icon">is<wbr>Voting</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="votingmanager.html#resethistory" class="tsd-kind-icon">reset<wbr>History</a>

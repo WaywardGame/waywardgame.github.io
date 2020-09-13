@@ -135,6 +135,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#initializespritebatch" class="tsd-kind-icon">initialize<wbr>Sprite<wbr>Batch</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#render" class="tsd-kind-icon">render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#renderworld" class="tsd-kind-icon">render<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#renderworldlayer" class="tsd-kind-icon">render<wbr>World<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#screentotile" class="tsd-kind-icon">screen<wbr>ToTile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#screentovector" class="tsd-kind-icon">screen<wbr>ToVector</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldrenderer.html#setspritetexture" class="tsd-kind-icon">set<wbr>Sprite<wbr>Texture</a></li>
@@ -343,7 +344,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#batchmovable">batchMovable</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:860</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:870</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -385,7 +386,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#computespritesinviewport">computeSpritesInViewport</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:856</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:866</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -601,7 +602,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#getviewportbounds">getViewportBounds</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:836</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:846</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>max<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">; </span>z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
@@ -674,7 +675,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#render">render</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:784</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:794</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -712,6 +713,50 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="renderworldlayer" class="tsd-anchor"></a>
+					<h3>render<wbr>World<wbr>Layer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">render<wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>worldLayer<span class="tsd-signature-symbol">: </span><a href="worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, renderFlags<span class="tsd-signature-symbol">: </span><a href="../enums/renderflag.html" class="tsd-signature-type">RenderFlag</a>, enableDepth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/WorldRenderer.ts:740</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldLayer: <a href="worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tileScale: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>viewWidth: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>viewHeight: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>renderFlags: <a href="../enums/renderflag.html" class="tsd-signature-type">RenderFlag</a></h5>
+								</li>
+								<li>
+									<h5>enableDepth: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="screentotile" class="tsd-anchor"></a>
 					<h3>screen<wbr>ToTile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -722,7 +767,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#screentotile">screenToTile</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:831</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:841</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -749,7 +794,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iworldrenderer.html">IWorldRenderer</a>.<a href="../interfaces/iworldrenderer.html#screentovector">screenToVector</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:817</li>
+									<li>Defined in src/renderer/WorldRenderer.ts:827</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1023,6 +1068,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldrenderer.html#renderworld" class="tsd-kind-icon">render<wbr>World</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldrenderer.html#renderworldlayer" class="tsd-kind-icon">render<wbr>World<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldrenderer.html#screentotile" class="tsd-kind-icon">screen<wbr>ToTile</a>
