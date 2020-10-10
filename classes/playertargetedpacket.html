@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LogsPacket | Wayward Documentation</title>
+	<title>PlayerTargetedPacket | Wayward Documentation</title>
 	<meta name="description" content="Welcome to the Wayward Documentation. This documentation and website is generated automatically using TypeDoc and is updated every release.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="logspacket.html">LogsPacket</a>
+					<a href="playertargetedpacket.html">PlayerTargetedPacket</a>
 				</li>
 			</ul>
-			<h1>Class LogsPacket</h1>
+			<h1>Class PlayerTargetedPacket</h1>
 		</div>
 	</div>
 </header>
@@ -68,10 +68,21 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="playertargetedserverpacket.html" class="tsd-signature-type">PlayerTargetedServerPacket</a>
+						<a href="packet.html" class="tsd-signature-type">Packet</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">LogsPacket</span>
+								<span class="target">PlayerTargetedPacket</span>
+								<ul class="tsd-hierarchy">
+									<li>
+										<a href="playertargetedserverpacket.html" class="tsd-signature-type">PlayerTargetedServerPacket</a>
+									</li>
+									<li>
+										<a href="playertargetedclientpacket.html" class="tsd-signature-type">PlayerTargetedClientPacket</a>
+									</li>
+									<li>
+										<a href="playertargetedsharedpacket.html" class="tsd-signature-type">PlayerTargetedSharedPacket</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -90,160 +101,158 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#buffersize" class="tsd-kind-icon">buffer<wbr>Size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#bytearray" class="tsd-kind-icon">byte<wbr>Array</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#byteoffset" class="tsd-kind-icon">byte<wbr>Offset</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#connection" class="tsd-kind-icon">connection</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="logspacket.html#containsservergamestate" class="tsd-kind-icon">contains<wbr>Server<wbr>Game<wbr>State</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#dataview" class="tsd-kind-icon">data<wbr>View</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="logspacket.html#logs" class="tsd-kind-icon">logs</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#pid" class="tsd-kind-icon">pid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#player" class="tsd-kind-icon">player</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="logspacket.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#buffersize" class="tsd-kind-icon">buffer<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#bytearray" class="tsd-kind-icon">byte<wbr>Array</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#byteoffset" class="tsd-kind-icon">byte<wbr>Offset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#connection" class="tsd-kind-icon">connection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#dataview" class="tsd-kind-icon">data<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="playertargetedpacket.html#pid" class="tsd-kind-icon">pid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="playertargetedpacket.html#player" class="tsd-kind-icon">player</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="playertargetedpacket.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#getallowedstates" class="tsd-kind-icon">get<wbr>Allowed<wbr>States</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#getdebuginfo" class="tsd-kind-icon">get<wbr>Debug<wbr>Info</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="logspacket.html#getindexsize" class="tsd-kind-icon">get<wbr>Index<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#getinitialbuffersize" class="tsd-kind-icon">get<wbr>Initial<wbr>Buffer<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#getsynchronizationcheckdata" class="tsd-kind-icon">get<wbr>Synchronization<wbr>Check<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="logspacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="logspacket.html#isallowedwhenpaused" class="tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="logspacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="logspacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="logspacket.html#process" class="tsd-kind-icon">process</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#processandsend" class="tsd-kind-icon">process<wbr>And<wbr>Send</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readbool" class="tsd-kind-icon">read<wbr>Bool</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readcontainer" class="tsd-kind-icon">read<wbr>Container</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readcorpse" class="tsd-kind-icon">read<wbr>Corpse</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readcreature" class="tsd-kind-icon">read<wbr>Creature</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readdata" class="tsd-kind-icon">read<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readdoodad" class="tsd-kind-icon">read<wbr>Doodad</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readentity" class="tsd-kind-icon">read<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readhuman" class="tsd-kind-icon">read<wbr>Human</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedbool" class="tsd-kind-icon">read<wbr>Indexed<wbr>Bool</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedcontainer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Container</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedcorpse" class="tsd-kind-icon">read<wbr>Indexed<wbr>Corpse</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedcreature" class="tsd-kind-icon">read<wbr>Indexed<wbr>Creature</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeddoodad" class="tsd-kind-icon">read<wbr>Indexed<wbr>Doodad</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedentity" class="tsd-kind-icon">read<wbr>Indexed<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedfloat64" class="tsd-kind-icon">read<wbr>Indexed<wbr>Float64</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedhuman" class="tsd-kind-icon">read<wbr>Indexed<wbr>Human</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Int8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeditem" class="tsd-kind-icon">read<wbr>Indexed<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeditems" class="tsd-kind-icon">read<wbr>Indexed<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedmovementintent" class="tsd-kind-icon">read<wbr>Indexed<wbr>Movement<wbr>Intent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexednpc" class="tsd-kind-icon">read<wbr>IndexedNPC</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedobject" class="tsd-kind-icon">read<wbr>Indexed<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedplayer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedstring" class="tsd-kind-icon">read<wbr>Indexed<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedstringarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>String<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeduint16" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint16</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeduint32" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeduint32numberarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeduint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexeduint8array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedvector2" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedvector2array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readindexedvector3" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector3</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readitems" class="tsd-kind-icon">read<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readmovementintent" class="tsd-kind-icon">read<wbr>Movement<wbr>Intent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readnpc" class="tsd-kind-icon">readNPC</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readobject" class="tsd-kind-icon">read<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readplayer" class="tsd-kind-icon">read<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readstring" class="tsd-kind-icon">read<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readstringarray" class="tsd-kind-icon">read<wbr>String<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readtileevent" class="tsd-kind-icon">read<wbr>Tile<wbr>Event</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readuint16" class="tsd-kind-icon">read<wbr>Uint16</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readuint32" class="tsd-kind-icon">read<wbr>Uint32</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readuint32numberarray" class="tsd-kind-icon">read<wbr>Uint32<wbr>Number<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readuint8" class="tsd-kind-icon">read<wbr>Uint8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readuint8array" class="tsd-kind-icon">read<wbr>Uint8<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readvector2" class="tsd-kind-icon">read<wbr>Vector2</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readvector2array" class="tsd-kind-icon">read<wbr>Vector2<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#readvector3" class="tsd-kind-icon">read<wbr>Vector3</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#resetindexes" class="tsd-kind-icon">reset<wbr>Indexes</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#send" class="tsd-kind-icon">send</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="logspacket.html#sendto" class="tsd-kind-icon">send<wbr>To</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="logspacket.html#setplayer" class="tsd-kind-icon">set<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writebool" class="tsd-kind-icon">write<wbr>Bool</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writecontainer" class="tsd-kind-icon">write<wbr>Container</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writecorpse" class="tsd-kind-icon">write<wbr>Corpse</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writecreature" class="tsd-kind-icon">write<wbr>Creature</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writedata" class="tsd-kind-icon">write<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writedoodad" class="tsd-kind-icon">write<wbr>Doodad</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeentity" class="tsd-kind-icon">write<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writehuman" class="tsd-kind-icon">write<wbr>Human</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedbool" class="tsd-kind-icon">write<wbr>Indexed<wbr>Bool</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedcontainer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Container</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedcorpse" class="tsd-kind-icon">write<wbr>Indexed<wbr>Corpse</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedcreature" class="tsd-kind-icon">write<wbr>Indexed<wbr>Creature</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeddoodad" class="tsd-kind-icon">write<wbr>Indexed<wbr>Doodad</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedentity" class="tsd-kind-icon">write<wbr>Indexed<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedfloat64" class="tsd-kind-icon">write<wbr>Indexed<wbr>Float64</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedhuman" class="tsd-kind-icon">write<wbr>Indexed<wbr>Human</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Int8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeditem" class="tsd-kind-icon">write<wbr>Indexed<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeditems" class="tsd-kind-icon">write<wbr>Indexed<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedmovementintent" class="tsd-kind-icon">write<wbr>Indexed<wbr>Movement<wbr>Intent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexednpc" class="tsd-kind-icon">write<wbr>IndexedNPC</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedobject" class="tsd-kind-icon">write<wbr>Indexed<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedplayer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedstring" class="tsd-kind-icon">write<wbr>Indexed<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedstringarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>String<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeduint16" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint16</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeduint32" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeduint32numberarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeduint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexeduint8array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedvector2" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedvector2array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeindexedvector3" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector3</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeitems" class="tsd-kind-icon">write<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writemovementintent" class="tsd-kind-icon">write<wbr>Movement<wbr>Intent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writenpc" class="tsd-kind-icon">writeNPC</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeobject" class="tsd-kind-icon">write<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeplayer" class="tsd-kind-icon">write<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writestring" class="tsd-kind-icon">write<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writestringarray" class="tsd-kind-icon">write<wbr>String<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writetileevent" class="tsd-kind-icon">write<wbr>Tile<wbr>Event</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeuint16" class="tsd-kind-icon">write<wbr>Uint16</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeuint32" class="tsd-kind-icon">write<wbr>Uint32</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeuint32numberarray" class="tsd-kind-icon">write<wbr>Uint32<wbr>Number<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeuint8" class="tsd-kind-icon">write<wbr>Uint8</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writeuint8array" class="tsd-kind-icon">write<wbr>Uint8<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writevector2" class="tsd-kind-icon">write<wbr>Vector2</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writevector2array" class="tsd-kind-icon">write<wbr>Vector2<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="logspacket.html#writevector3" class="tsd-kind-icon">write<wbr>Vector3</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="logspacket.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="logspacket.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#getallowedstates" class="tsd-kind-icon">get<wbr>Allowed<wbr>States</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#getdebuginfo" class="tsd-kind-icon">get<wbr>Debug<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#getindexsize" class="tsd-kind-icon">get<wbr>Index<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#getinitialbuffersize" class="tsd-kind-icon">get<wbr>Initial<wbr>Buffer<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#getsynchronizationcheckdata" class="tsd-kind-icon">get<wbr>Synchronization<wbr>Check<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#isallowedwhenpaused" class="tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="playertargetedpacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#process" class="tsd-kind-icon">process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#processandsend" class="tsd-kind-icon">process<wbr>And<wbr>Send</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readbool" class="tsd-kind-icon">read<wbr>Bool</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readcontainer" class="tsd-kind-icon">read<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readcorpse" class="tsd-kind-icon">read<wbr>Corpse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readcreature" class="tsd-kind-icon">read<wbr>Creature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readdata" class="tsd-kind-icon">read<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readdoodad" class="tsd-kind-icon">read<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readentity" class="tsd-kind-icon">read<wbr>Entity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readhuman" class="tsd-kind-icon">read<wbr>Human</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedbool" class="tsd-kind-icon">read<wbr>Indexed<wbr>Bool</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedcontainer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedcorpse" class="tsd-kind-icon">read<wbr>Indexed<wbr>Corpse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedcreature" class="tsd-kind-icon">read<wbr>Indexed<wbr>Creature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeddoodad" class="tsd-kind-icon">read<wbr>Indexed<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedentity" class="tsd-kind-icon">read<wbr>Indexed<wbr>Entity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedfloat64" class="tsd-kind-icon">read<wbr>Indexed<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedhuman" class="tsd-kind-icon">read<wbr>Indexed<wbr>Human</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Int8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeditem" class="tsd-kind-icon">read<wbr>Indexed<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeditems" class="tsd-kind-icon">read<wbr>Indexed<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedmovementintent" class="tsd-kind-icon">read<wbr>Indexed<wbr>Movement<wbr>Intent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexednpc" class="tsd-kind-icon">read<wbr>IndexedNPC</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedobject" class="tsd-kind-icon">read<wbr>Indexed<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedplayer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedstring" class="tsd-kind-icon">read<wbr>Indexed<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedstringarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>String<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeduint16" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint16</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeduint32" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeduint32numberarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeduint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexeduint8array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedvector2" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedvector2array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readindexedvector3" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector3</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readitems" class="tsd-kind-icon">read<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readmovementintent" class="tsd-kind-icon">read<wbr>Movement<wbr>Intent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readnpc" class="tsd-kind-icon">readNPC</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readobject" class="tsd-kind-icon">read<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readplayer" class="tsd-kind-icon">read<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readstring" class="tsd-kind-icon">read<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readstringarray" class="tsd-kind-icon">read<wbr>String<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readtileevent" class="tsd-kind-icon">read<wbr>Tile<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readuint16" class="tsd-kind-icon">read<wbr>Uint16</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readuint32" class="tsd-kind-icon">read<wbr>Uint32</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readuint32numberarray" class="tsd-kind-icon">read<wbr>Uint32<wbr>Number<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readuint8" class="tsd-kind-icon">read<wbr>Uint8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readuint8array" class="tsd-kind-icon">read<wbr>Uint8<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readvector2" class="tsd-kind-icon">read<wbr>Vector2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readvector2array" class="tsd-kind-icon">read<wbr>Vector2<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#readvector3" class="tsd-kind-icon">read<wbr>Vector3</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#resetindexes" class="tsd-kind-icon">reset<wbr>Indexes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#send" class="tsd-kind-icon">send</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="playertargetedpacket.html#sendto" class="tsd-kind-icon">send<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="playertargetedpacket.html#setplayer" class="tsd-kind-icon">set<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writebool" class="tsd-kind-icon">write<wbr>Bool</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writecontainer" class="tsd-kind-icon">write<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writecorpse" class="tsd-kind-icon">write<wbr>Corpse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writecreature" class="tsd-kind-icon">write<wbr>Creature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writedata" class="tsd-kind-icon">write<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writedoodad" class="tsd-kind-icon">write<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeentity" class="tsd-kind-icon">write<wbr>Entity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writehuman" class="tsd-kind-icon">write<wbr>Human</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedbool" class="tsd-kind-icon">write<wbr>Indexed<wbr>Bool</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedcontainer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedcorpse" class="tsd-kind-icon">write<wbr>Indexed<wbr>Corpse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedcreature" class="tsd-kind-icon">write<wbr>Indexed<wbr>Creature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeddoodad" class="tsd-kind-icon">write<wbr>Indexed<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedentity" class="tsd-kind-icon">write<wbr>Indexed<wbr>Entity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedfloat64" class="tsd-kind-icon">write<wbr>Indexed<wbr>Float64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedhuman" class="tsd-kind-icon">write<wbr>Indexed<wbr>Human</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Int8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeditem" class="tsd-kind-icon">write<wbr>Indexed<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeditems" class="tsd-kind-icon">write<wbr>Indexed<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedmovementintent" class="tsd-kind-icon">write<wbr>Indexed<wbr>Movement<wbr>Intent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexednpc" class="tsd-kind-icon">write<wbr>IndexedNPC</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedobject" class="tsd-kind-icon">write<wbr>Indexed<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedplayer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedstring" class="tsd-kind-icon">write<wbr>Indexed<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedstringarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>String<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeduint16" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint16</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeduint32" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeduint32numberarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeduint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexeduint8array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedvector2" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedvector2array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeindexedvector3" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector3</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeitems" class="tsd-kind-icon">write<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writemovementintent" class="tsd-kind-icon">write<wbr>Movement<wbr>Intent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writenpc" class="tsd-kind-icon">writeNPC</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeobject" class="tsd-kind-icon">write<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeplayer" class="tsd-kind-icon">write<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writestring" class="tsd-kind-icon">write<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writestringarray" class="tsd-kind-icon">write<wbr>String<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writetileevent" class="tsd-kind-icon">write<wbr>Tile<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeuint16" class="tsd-kind-icon">write<wbr>Uint16</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeuint32" class="tsd-kind-icon">write<wbr>Uint32</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeuint32numberarray" class="tsd-kind-icon">write<wbr>Uint32<wbr>Number<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeuint8" class="tsd-kind-icon">write<wbr>Uint8</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writeuint8array" class="tsd-kind-icon">write<wbr>Uint8<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writevector2" class="tsd-kind-icon">write<wbr>Vector2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writevector2array" class="tsd-kind-icon">write<wbr>Vector2<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="playertargetedpacket.html#writevector3" class="tsd-kind-icon">write<wbr>Vector3</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="playertargetedpacket.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="playertargetedpacket.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a></li>
 							</ul>
 						</section>
 					</div>
@@ -255,7 +264,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Logs<wbr>Packet<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="logspacket.html" class="tsd-signature-type">LogsPacket</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Player<wbr>Targeted<wbr>Packet<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="playertargetedpacket.html" class="tsd-signature-type">PlayerTargetedPacket</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -271,7 +280,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> connection: <a href="../interfaces/iconnection.html" class="tsd-signature-type">IConnection</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="logspacket.html" class="tsd-signature-type">LogsPacket</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="playertargetedpacket.html" class="tsd-signature-type">PlayerTargetedPacket</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -322,16 +331,6 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="containsservergamestate" class="tsd-anchor"></a>
-					<h3>contains<wbr>Server<wbr>Game<wbr>State</h3>
-					<div class="tsd-signature tsd-kind-icon">contains<wbr>Server<wbr>Game<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/multiplayer/packets/server/LogsPacket.ts:21</li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="dataview" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> data<wbr>View</h3>
@@ -344,32 +343,20 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="logs" class="tsd-anchor"></a>
-					<h3>logs</h3>
-					<div class="tsd-signature tsd-kind-icon">logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/multiplayer/packets/server/LogsPacket.ts:18</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="pid" class="tsd-anchor"></a>
 					<h3>pid</h3>
 					<div class="tsd-signature tsd-kind-icon">pid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="playertargetedpacket.html">PlayerTargetedPacket</a>.<a href="playertargetedpacket.html#pid">pid</a></p>
 						<ul>
 							<li>Defined in src/multiplayer/packets/PlayerTargetedPacket.ts:17</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="player" class="tsd-anchor"></a>
 					<h3>player</h3>
 					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <a href="player.html" class="tsd-signature-type">Player</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="playertargetedpacket.html">PlayerTargetedPacket</a>.<a href="playertargetedpacket.html#player">player</a></p>
 						<ul>
 							<li>Defined in src/multiplayer/packets/PlayerTargetedPacket.ts:19</li>
 						</ul>
@@ -559,39 +546,57 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="gettype" class="tsd-anchor"></a>
-					<h3>get<wbr>Type</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> get<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#gettype">getType</a></p>
-								<p>Inherited from <a href="playertargetedserverpacket.html">PlayerTargetedServerPacket</a>.<a href="playertargetedserverpacket.html#gettype">getType</a></p>
-								<p>Overrides <a href="basepacket.html">BasePacket</a>.<a href="basepacket.html#gettype">getType</a></p>
+								<p>Inherited from <a href="basepacket.html">BasePacket</a>.<a href="basepacket.html#gettype">getType</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/packets/PlayerTargetedServerPacket.ts:21</li>
+									<li>Defined in src/multiplayer/packets/BasePacket.ts:59</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/packettype.html" class="tsd-signature-type">PacketType</a></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="isallowedwhenpaused" class="tsd-anchor"></a>
 					<h3>is<wbr>Allowed<wbr>When<wbr>Paused</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#isallowedwhenpaused">isAllowedWhenPaused</a></p>
-								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#isallowedwhenpaused">isAllowedWhenPaused</a></p>
+								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#isallowedwhenpaused">isAllowedWhenPaused</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/packets/server/LogsPacket.ts:27</li>
+									<li>Defined in src/multiplayer/packets/Packet.ts:43</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="issynccheckenabled" class="tsd-anchor"></a>
+					<h3>is<wbr>Sync<wbr>Check<wbr>Enabled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#issynccheckenabled">isSyncCheckEnabled</a></p>
+								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#issynccheckenabled">isSyncCheckEnabled</a></p>
+								<ul>
+									<li>Defined in src/multiplayer/packets/Packet.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -599,34 +604,14 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a name="issynccheckenabled" class="tsd-anchor"></a>
-					<h3>is<wbr>Sync<wbr>Check<wbr>Enabled</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#issynccheckenabled">isSyncCheckEnabled</a></p>
-								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#issynccheckenabled">isSyncCheckEnabled</a></p>
-								<ul>
-									<li>Defined in src/multiplayer/packets/server/LogsPacket.ts:23</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="preprocess" class="tsd-anchor"></a>
 					<h3>pre<wbr>Process</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">pre<wbr>Process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="playertargetedpacket.html">PlayerTargetedPacket</a>.<a href="playertargetedpacket.html#preprocess">preProcess</a></p>
 								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#preprocess">preProcess</a></p>
 								<ul>
 									<li>Defined in src/multiplayer/packets/PlayerTargetedPacket.ts:23</li>
@@ -672,22 +657,22 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="process" class="tsd-anchor"></a>
-					<h3>process</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> process</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ipacket.html">IPacket</a>.<a href="../interfaces/ipacket.html#process">process</a></p>
-								<p>Overrides <a href="packet.html">Packet</a>.<a href="packet.html#process">process</a></p>
+								<p>Inherited from <a href="packet.html">Packet</a>.<a href="packet.html#process">process</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/packets/server/LogsPacket.ts:31</li>
+									<li>Defined in src/multiplayer/packets/Packet.ts:101</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1751,19 +1736,17 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setplayer" class="tsd-anchor"></a>
-					<h3>set<wbr>Player</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> set<wbr>Player</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Player<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="playertargetedserverpacket.html">PlayerTargetedServerPacket</a>.<a href="playertargetedserverpacket.html#setplayer">setPlayer</a></p>
-								<p>Overrides <a href="playertargetedpacket.html">PlayerTargetedPacket</a>.<a href="playertargetedpacket.html#setplayer">setPlayer</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/packets/PlayerTargetedServerPacket.ts:17</li>
+									<li>Defined in src/multiplayer/packets/PlayerTargetedPacket.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3069,424 +3052,418 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="logspacket.html" class="tsd-kind-icon">Logs<wbr>Packet</a>
+						<a href="playertargetedpacket.html" class="tsd-kind-icon">Player<wbr>Targeted<wbr>Packet</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="playertargetedpacket.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#buffersize" class="tsd-kind-icon">buffer<wbr>Size</a>
+								<a href="playertargetedpacket.html#buffersize" class="tsd-kind-icon">buffer<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#bytearray" class="tsd-kind-icon">byte<wbr>Array</a>
+								<a href="playertargetedpacket.html#bytearray" class="tsd-kind-icon">byte<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#byteoffset" class="tsd-kind-icon">byte<wbr>Offset</a>
+								<a href="playertargetedpacket.html#byteoffset" class="tsd-kind-icon">byte<wbr>Offset</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#connection" class="tsd-kind-icon">connection</a>
+								<a href="playertargetedpacket.html#connection" class="tsd-kind-icon">connection</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#dataview" class="tsd-kind-icon">data<wbr>View</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="logspacket.html#containsservergamestate" class="tsd-kind-icon">contains<wbr>Server<wbr>Game<wbr>State</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#dataview" class="tsd-kind-icon">data<wbr>View</a>
+								<a href="playertargetedpacket.html#pid" class="tsd-kind-icon">pid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="logspacket.html#logs" class="tsd-kind-icon">logs</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#pid" class="tsd-kind-icon">pid</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#player" class="tsd-kind-icon">player</a>
+								<a href="playertargetedpacket.html#player" class="tsd-kind-icon">player</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a>
+								<a href="playertargetedpacket.html#synchronizationcheckdata" class="tsd-kind-icon">synchronization<wbr>Check<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
-								<a href="logspacket.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a>
+								<a href="playertargetedpacket.html#registrarid" class="tsd-kind-icon">registrar<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a>
+								<a href="playertargetedpacket.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#getallowedstates" class="tsd-kind-icon">get<wbr>Allowed<wbr>States</a>
+								<a href="playertargetedpacket.html#getallowedstates" class="tsd-kind-icon">get<wbr>Allowed<wbr>States</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a>
+								<a href="playertargetedpacket.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#getdebuginfo" class="tsd-kind-icon">get<wbr>Debug<wbr>Info</a>
+								<a href="playertargetedpacket.html#getdebuginfo" class="tsd-kind-icon">get<wbr>Debug<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#getindexsize" class="tsd-kind-icon">get<wbr>Index<wbr>Size</a>
+								<a href="playertargetedpacket.html#getindexsize" class="tsd-kind-icon">get<wbr>Index<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#getinitialbuffersize" class="tsd-kind-icon">get<wbr>Initial<wbr>Buffer<wbr>Size</a>
+								<a href="playertargetedpacket.html#getinitialbuffersize" class="tsd-kind-icon">get<wbr>Initial<wbr>Buffer<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
+								<a href="playertargetedpacket.html#getregistrarid" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#getsynchronizationcheckdata" class="tsd-kind-icon">get<wbr>Synchronization<wbr>Check<wbr>Data</a>
+								<a href="playertargetedpacket.html#getsynchronizationcheckdata" class="tsd-kind-icon">get<wbr>Synchronization<wbr>Check<wbr>Data</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="logspacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="playertargetedpacket.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="playertargetedpacket.html#isallowedwhenpaused" class="tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="playertargetedpacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="logspacket.html#isallowedwhenpaused" class="tsd-kind-icon">is<wbr>Allowed<wbr>When<wbr>Paused</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="logspacket.html#issynccheckenabled" class="tsd-kind-icon">is<wbr>Sync<wbr>Check<wbr>Enabled</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="logspacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a>
+								<a href="playertargetedpacket.html#preprocess" class="tsd-kind-icon">pre<wbr>Process</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a>
+								<a href="playertargetedpacket.html#prereaddata" class="tsd-kind-icon">pre<wbr>Read<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="logspacket.html#process" class="tsd-kind-icon">process</a>
+								<a href="playertargetedpacket.html#prewritedata" class="tsd-kind-icon">pre<wbr>Write<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#processandsend" class="tsd-kind-icon">process<wbr>And<wbr>Send</a>
+								<a href="playertargetedpacket.html#process" class="tsd-kind-icon">process</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readbool" class="tsd-kind-icon">read<wbr>Bool</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readcontainer" class="tsd-kind-icon">read<wbr>Container</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readcorpse" class="tsd-kind-icon">read<wbr>Corpse</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readcreature" class="tsd-kind-icon">read<wbr>Creature</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readdata" class="tsd-kind-icon">read<wbr>Data</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readdoodad" class="tsd-kind-icon">read<wbr>Doodad</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readentity" class="tsd-kind-icon">read<wbr>Entity</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readhuman" class="tsd-kind-icon">read<wbr>Human</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedbool" class="tsd-kind-icon">read<wbr>Indexed<wbr>Bool</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedcontainer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Container</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedcorpse" class="tsd-kind-icon">read<wbr>Indexed<wbr>Corpse</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedcreature" class="tsd-kind-icon">read<wbr>Indexed<wbr>Creature</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeddoodad" class="tsd-kind-icon">read<wbr>Indexed<wbr>Doodad</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedentity" class="tsd-kind-icon">read<wbr>Indexed<wbr>Entity</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedfloat64" class="tsd-kind-icon">read<wbr>Indexed<wbr>Float64</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedhuman" class="tsd-kind-icon">read<wbr>Indexed<wbr>Human</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Int8</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeditem" class="tsd-kind-icon">read<wbr>Indexed<wbr>Item</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeditems" class="tsd-kind-icon">read<wbr>Indexed<wbr>Items</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedmovementintent" class="tsd-kind-icon">read<wbr>Indexed<wbr>Movement<wbr>Intent</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexednpc" class="tsd-kind-icon">read<wbr>IndexedNPC</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedobject" class="tsd-kind-icon">read<wbr>Indexed<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedplayer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Player</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedstring" class="tsd-kind-icon">read<wbr>Indexed<wbr>String</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedstringarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>String<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeduint16" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint16</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeduint32" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeduint32numberarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeduint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexeduint8array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedvector2" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedvector2array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readindexedvector3" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector3</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readitems" class="tsd-kind-icon">read<wbr>Items</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readmovementintent" class="tsd-kind-icon">read<wbr>Movement<wbr>Intent</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readnpc" class="tsd-kind-icon">readNPC</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readobject" class="tsd-kind-icon">read<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readplayer" class="tsd-kind-icon">read<wbr>Player</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readstring" class="tsd-kind-icon">read<wbr>String</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readstringarray" class="tsd-kind-icon">read<wbr>String<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readtileevent" class="tsd-kind-icon">read<wbr>Tile<wbr>Event</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readuint16" class="tsd-kind-icon">read<wbr>Uint16</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readuint32" class="tsd-kind-icon">read<wbr>Uint32</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readuint32numberarray" class="tsd-kind-icon">read<wbr>Uint32<wbr>Number<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readuint8" class="tsd-kind-icon">read<wbr>Uint8</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readuint8array" class="tsd-kind-icon">read<wbr>Uint8<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readvector2" class="tsd-kind-icon">read<wbr>Vector2</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readvector2array" class="tsd-kind-icon">read<wbr>Vector2<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#readvector3" class="tsd-kind-icon">read<wbr>Vector3</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#resetindexes" class="tsd-kind-icon">reset<wbr>Indexes</a>
+								<a href="playertargetedpacket.html#processandsend" class="tsd-kind-icon">process<wbr>And<wbr>Send</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#send" class="tsd-kind-icon">send</a>
+								<a href="playertargetedpacket.html#processdata" class="tsd-kind-icon">process<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readbool" class="tsd-kind-icon">read<wbr>Bool</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readcontainer" class="tsd-kind-icon">read<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readcorpse" class="tsd-kind-icon">read<wbr>Corpse</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readcreature" class="tsd-kind-icon">read<wbr>Creature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readdata" class="tsd-kind-icon">read<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readdoodad" class="tsd-kind-icon">read<wbr>Doodad</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readentity" class="tsd-kind-icon">read<wbr>Entity</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readfloat64" class="tsd-kind-icon">read<wbr>Float64</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readhuman" class="tsd-kind-icon">read<wbr>Human</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedbool" class="tsd-kind-icon">read<wbr>Indexed<wbr>Bool</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedcontainer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedcorpse" class="tsd-kind-icon">read<wbr>Indexed<wbr>Corpse</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedcreature" class="tsd-kind-icon">read<wbr>Indexed<wbr>Creature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeddoodad" class="tsd-kind-icon">read<wbr>Indexed<wbr>Doodad</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedentity" class="tsd-kind-icon">read<wbr>Indexed<wbr>Entity</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedfloat64" class="tsd-kind-icon">read<wbr>Indexed<wbr>Float64</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedhuman" class="tsd-kind-icon">read<wbr>Indexed<wbr>Human</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Int8</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeditem" class="tsd-kind-icon">read<wbr>Indexed<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeditems" class="tsd-kind-icon">read<wbr>Indexed<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedmovementintent" class="tsd-kind-icon">read<wbr>Indexed<wbr>Movement<wbr>Intent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexednpc" class="tsd-kind-icon">read<wbr>IndexedNPC</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedobject" class="tsd-kind-icon">read<wbr>Indexed<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedplayer" class="tsd-kind-icon">read<wbr>Indexed<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedstring" class="tsd-kind-icon">read<wbr>Indexed<wbr>String</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedstringarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>String<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeduint16" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint16</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeduint32" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeduint32numberarray" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeduint8" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexeduint8array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Uint8<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedvector2" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedvector2array" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector2<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readindexedvector3" class="tsd-kind-icon">read<wbr>Indexed<wbr>Vector3</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readint8" class="tsd-kind-icon">read<wbr>Int8</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readitem" class="tsd-kind-icon">read<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readitems" class="tsd-kind-icon">read<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readmovementintent" class="tsd-kind-icon">read<wbr>Movement<wbr>Intent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readnpc" class="tsd-kind-icon">readNPC</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readobject" class="tsd-kind-icon">read<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readplayer" class="tsd-kind-icon">read<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readstring" class="tsd-kind-icon">read<wbr>String</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readstringarray" class="tsd-kind-icon">read<wbr>String<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readtileevent" class="tsd-kind-icon">read<wbr>Tile<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readuint16" class="tsd-kind-icon">read<wbr>Uint16</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readuint32" class="tsd-kind-icon">read<wbr>Uint32</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readuint32numberarray" class="tsd-kind-icon">read<wbr>Uint32<wbr>Number<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readuint8" class="tsd-kind-icon">read<wbr>Uint8</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readuint8array" class="tsd-kind-icon">read<wbr>Uint8<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readvector2" class="tsd-kind-icon">read<wbr>Vector2</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readvector2array" class="tsd-kind-icon">read<wbr>Vector2<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#readvector3" class="tsd-kind-icon">read<wbr>Vector3</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#resetindexes" class="tsd-kind-icon">reset<wbr>Indexes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="logspacket.html#sendto" class="tsd-kind-icon">send<wbr>To</a>
+								<a href="playertargetedpacket.html#send" class="tsd-kind-icon">send</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="logspacket.html#setplayer" class="tsd-kind-icon">set<wbr>Player</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="playertargetedpacket.html#sendto" class="tsd-kind-icon">send<wbr>To</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writebool" class="tsd-kind-icon">write<wbr>Bool</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writecontainer" class="tsd-kind-icon">write<wbr>Container</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="playertargetedpacket.html#setplayer" class="tsd-kind-icon">set<wbr>Player</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writecorpse" class="tsd-kind-icon">write<wbr>Corpse</a>
+								<a href="playertargetedpacket.html#writebool" class="tsd-kind-icon">write<wbr>Bool</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writecreature" class="tsd-kind-icon">write<wbr>Creature</a>
+								<a href="playertargetedpacket.html#writecontainer" class="tsd-kind-icon">write<wbr>Container</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writedata" class="tsd-kind-icon">write<wbr>Data</a>
+								<a href="playertargetedpacket.html#writecorpse" class="tsd-kind-icon">write<wbr>Corpse</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writedoodad" class="tsd-kind-icon">write<wbr>Doodad</a>
+								<a href="playertargetedpacket.html#writecreature" class="tsd-kind-icon">write<wbr>Creature</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeentity" class="tsd-kind-icon">write<wbr>Entity</a>
+								<a href="playertargetedpacket.html#writedata" class="tsd-kind-icon">write<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a>
+								<a href="playertargetedpacket.html#writedoodad" class="tsd-kind-icon">write<wbr>Doodad</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writehuman" class="tsd-kind-icon">write<wbr>Human</a>
+								<a href="playertargetedpacket.html#writeentity" class="tsd-kind-icon">write<wbr>Entity</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedbool" class="tsd-kind-icon">write<wbr>Indexed<wbr>Bool</a>
+								<a href="playertargetedpacket.html#writefloat64" class="tsd-kind-icon">write<wbr>Float64</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedcontainer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Container</a>
+								<a href="playertargetedpacket.html#writehuman" class="tsd-kind-icon">write<wbr>Human</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedcorpse" class="tsd-kind-icon">write<wbr>Indexed<wbr>Corpse</a>
+								<a href="playertargetedpacket.html#writeindexedbool" class="tsd-kind-icon">write<wbr>Indexed<wbr>Bool</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedcreature" class="tsd-kind-icon">write<wbr>Indexed<wbr>Creature</a>
+								<a href="playertargetedpacket.html#writeindexedcontainer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Container</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeddoodad" class="tsd-kind-icon">write<wbr>Indexed<wbr>Doodad</a>
+								<a href="playertargetedpacket.html#writeindexedcorpse" class="tsd-kind-icon">write<wbr>Indexed<wbr>Corpse</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedentity" class="tsd-kind-icon">write<wbr>Indexed<wbr>Entity</a>
+								<a href="playertargetedpacket.html#writeindexedcreature" class="tsd-kind-icon">write<wbr>Indexed<wbr>Creature</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedfloat64" class="tsd-kind-icon">write<wbr>Indexed<wbr>Float64</a>
+								<a href="playertargetedpacket.html#writeindexeddoodad" class="tsd-kind-icon">write<wbr>Indexed<wbr>Doodad</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedhuman" class="tsd-kind-icon">write<wbr>Indexed<wbr>Human</a>
+								<a href="playertargetedpacket.html#writeindexedentity" class="tsd-kind-icon">write<wbr>Indexed<wbr>Entity</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Int8</a>
+								<a href="playertargetedpacket.html#writeindexedfloat64" class="tsd-kind-icon">write<wbr>Indexed<wbr>Float64</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeditem" class="tsd-kind-icon">write<wbr>Indexed<wbr>Item</a>
+								<a href="playertargetedpacket.html#writeindexedhuman" class="tsd-kind-icon">write<wbr>Indexed<wbr>Human</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeditems" class="tsd-kind-icon">write<wbr>Indexed<wbr>Items</a>
+								<a href="playertargetedpacket.html#writeindexedint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Int8</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedmovementintent" class="tsd-kind-icon">write<wbr>Indexed<wbr>Movement<wbr>Intent</a>
+								<a href="playertargetedpacket.html#writeindexeditem" class="tsd-kind-icon">write<wbr>Indexed<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexednpc" class="tsd-kind-icon">write<wbr>IndexedNPC</a>
+								<a href="playertargetedpacket.html#writeindexeditems" class="tsd-kind-icon">write<wbr>Indexed<wbr>Items</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedobject" class="tsd-kind-icon">write<wbr>Indexed<wbr>Object</a>
+								<a href="playertargetedpacket.html#writeindexedmovementintent" class="tsd-kind-icon">write<wbr>Indexed<wbr>Movement<wbr>Intent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedplayer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Player</a>
+								<a href="playertargetedpacket.html#writeindexednpc" class="tsd-kind-icon">write<wbr>IndexedNPC</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedstring" class="tsd-kind-icon">write<wbr>Indexed<wbr>String</a>
+								<a href="playertargetedpacket.html#writeindexedobject" class="tsd-kind-icon">write<wbr>Indexed<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedstringarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>String<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeindexedplayer" class="tsd-kind-icon">write<wbr>Indexed<wbr>Player</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeduint16" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint16</a>
+								<a href="playertargetedpacket.html#writeindexedstring" class="tsd-kind-icon">write<wbr>Indexed<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeduint32" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32</a>
+								<a href="playertargetedpacket.html#writeindexedstringarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>String<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeduint32numberarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeindexeduint16" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint16</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeduint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8</a>
+								<a href="playertargetedpacket.html#writeindexeduint32" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexeduint8array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeindexeduint32numberarray" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint32<wbr>Number<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedvector2" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2</a>
+								<a href="playertargetedpacket.html#writeindexeduint8" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedvector2array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeindexeduint8array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Uint8<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeindexedvector3" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector3</a>
+								<a href="playertargetedpacket.html#writeindexedvector2" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a>
+								<a href="playertargetedpacket.html#writeindexedvector2array" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector2<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a>
+								<a href="playertargetedpacket.html#writeindexedvector3" class="tsd-kind-icon">write<wbr>Indexed<wbr>Vector3</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeitems" class="tsd-kind-icon">write<wbr>Items</a>
+								<a href="playertargetedpacket.html#writeint8" class="tsd-kind-icon">write<wbr>Int8</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writemovementintent" class="tsd-kind-icon">write<wbr>Movement<wbr>Intent</a>
+								<a href="playertargetedpacket.html#writeitem" class="tsd-kind-icon">write<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writenpc" class="tsd-kind-icon">writeNPC</a>
+								<a href="playertargetedpacket.html#writeitems" class="tsd-kind-icon">write<wbr>Items</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeobject" class="tsd-kind-icon">write<wbr>Object</a>
+								<a href="playertargetedpacket.html#writemovementintent" class="tsd-kind-icon">write<wbr>Movement<wbr>Intent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeplayer" class="tsd-kind-icon">write<wbr>Player</a>
+								<a href="playertargetedpacket.html#writenpc" class="tsd-kind-icon">writeNPC</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writestring" class="tsd-kind-icon">write<wbr>String</a>
+								<a href="playertargetedpacket.html#writeobject" class="tsd-kind-icon">write<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writestringarray" class="tsd-kind-icon">write<wbr>String<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeplayer" class="tsd-kind-icon">write<wbr>Player</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writetileevent" class="tsd-kind-icon">write<wbr>Tile<wbr>Event</a>
+								<a href="playertargetedpacket.html#writestring" class="tsd-kind-icon">write<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeuint16" class="tsd-kind-icon">write<wbr>Uint16</a>
+								<a href="playertargetedpacket.html#writestringarray" class="tsd-kind-icon">write<wbr>String<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeuint32" class="tsd-kind-icon">write<wbr>Uint32</a>
+								<a href="playertargetedpacket.html#writetileevent" class="tsd-kind-icon">write<wbr>Tile<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeuint32numberarray" class="tsd-kind-icon">write<wbr>Uint32<wbr>Number<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeuint16" class="tsd-kind-icon">write<wbr>Uint16</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeuint8" class="tsd-kind-icon">write<wbr>Uint8</a>
+								<a href="playertargetedpacket.html#writeuint32" class="tsd-kind-icon">write<wbr>Uint32</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writeuint8array" class="tsd-kind-icon">write<wbr>Uint8<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeuint32numberarray" class="tsd-kind-icon">write<wbr>Uint32<wbr>Number<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writevector2" class="tsd-kind-icon">write<wbr>Vector2</a>
+								<a href="playertargetedpacket.html#writeuint8" class="tsd-kind-icon">write<wbr>Uint8</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writevector2array" class="tsd-kind-icon">write<wbr>Vector2<wbr>Array</a>
+								<a href="playertargetedpacket.html#writeuint8array" class="tsd-kind-icon">write<wbr>Uint8<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="logspacket.html#writevector3" class="tsd-kind-icon">write<wbr>Vector3</a>
+								<a href="playertargetedpacket.html#writevector2" class="tsd-kind-icon">write<wbr>Vector2</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#writevector2array" class="tsd-kind-icon">write<wbr>Vector2<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="playertargetedpacket.html#writevector3" class="tsd-kind-icon">write<wbr>Vector3</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="logspacket.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
+								<a href="playertargetedpacket.html#getregistrarid-1" class="tsd-kind-icon">get<wbr>Registrar<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="logspacket.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a>
+								<a href="playertargetedpacket.html#setregistrarid" class="tsd-kind-icon">set<wbr>Registrar<wbr>Id</a>
 							</li>
 						</ul>
 					</li>
