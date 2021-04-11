@@ -77,6 +77,8 @@
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#happiness" class="tsd-kind-icon">Happiness</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#health" class="tsd-kind-icon">Health</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#hunger" class="tsd-kind-icon">Hunger</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#insulationcold" class="tsd-kind-icon">Insulation<wbr>Cold</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#insulationheat" class="tsd-kind-icon">Insulation<wbr>Heat</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#malignity" class="tsd-kind-icon">Malignity</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#metabolism" class="tsd-kind-icon">Metabolism</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="stat.html#petting" class="tsd-kind-icon">Petting</a></li>
@@ -101,7 +103,7 @@
 					<div class="tsd-signature tsd-kind-icon">Attack<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:26</li>
+							<li>Defined in src/game/entity/IStats.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -111,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">Benignity<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:30</li>
+							<li>Defined in src/game/entity/IStats.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -126,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">Defense<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:39</li>
+							<li>Defined in src/game/entity/IStats.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">Happiness<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:64</li>
+							<li>Defined in src/game/entity/IStats.ts:73</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">Health<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:18</li>
+							<li>Defined in src/game/entity/IStats.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -167,9 +169,34 @@
 					<div class="tsd-signature tsd-kind-icon">Hunger<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:23</li>
+							<li>Defined in src/game/entity/IStats.ts:23</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="insulationcold" class="tsd-anchor"></a>
+					<h3>Insulation<wbr>Cold</h3>
+					<div class="tsd-signature tsd-kind-icon">Insulation<wbr>Cold<span class="tsd-signature-symbol">:</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/entity/IStats.ts:62</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="insulationheat" class="tsd-anchor"></a>
+					<h3>Insulation<wbr>Heat</h3>
+					<div class="tsd-signature tsd-kind-icon">Insulation<wbr>Heat<span class="tsd-signature-symbol">:</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/entity/IStats.ts:61</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How much this human and their inventory is affected by temperature</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="malignity" class="tsd-anchor"></a>
@@ -177,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">Malignity<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:34</li>
+							<li>Defined in src/game/entity/IStats.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,13 +219,13 @@
 					<div class="tsd-signature tsd-kind-icon">Metabolism<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:49</li>
+							<li>Defined in src/game/entity/IStats.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A combination of <code>Stat.Hunger</code> + <code>Stat.Thirst</code>
-							Does not exist on <code>Player</code> instances. Used for item legendaries.</p>
+							Does not exist on <code>Player</code> instances. Used for magical items.</p>
 						</div>
 					</div>
 				</section>
@@ -208,7 +235,7 @@
 					<div class="tsd-signature tsd-kind-icon">Petting<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:66</li>
+							<li>Defined in src/game/entity/IStats.ts:75</li>
 						</ul>
 					</aside>
 				</section>
@@ -218,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">Produce<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:60</li>
+							<li>Defined in src/game/entity/IStats.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -233,7 +260,7 @@
 					<div class="tsd-signature tsd-kind-icon">Reputation<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:44</li>
+							<li>Defined in src/game/entity/IStats.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -249,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">Stamina<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:22</li>
+							<li>Defined in src/game/entity/IStats.ts:22</li>
 						</ul>
 					</aside>
 				</section>
@@ -259,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">Strength<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:53</li>
+							<li>Defined in src/game/entity/IStats.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -274,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">Tamed<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:65</li>
+							<li>Defined in src/game/entity/IStats.ts:74</li>
 						</ul>
 					</aside>
 				</section>
@@ -284,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">Thirst<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:24</li>
+							<li>Defined in src/game/entity/IStats.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -294,7 +321,7 @@
 					<div class="tsd-signature tsd-kind-icon">Waste<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:67</li>
+							<li>Defined in src/game/entity/IStats.ts:76</li>
 						</ul>
 					</aside>
 				</section>
@@ -304,7 +331,7 @@
 					<div class="tsd-signature tsd-kind-icon">Weight<span class="tsd-signature-symbol">:</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IStats.ts:25</li>
+							<li>Defined in src/game/entity/IStats.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -342,6 +369,12 @@
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="stat.html#hunger" class="tsd-kind-icon">Hunger</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="stat.html#insulationcold" class="tsd-kind-icon">Insulation<wbr>Cold</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="stat.html#insulationheat" class="tsd-kind-icon">Insulation<wbr>Heat</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="stat.html#malignity" class="tsd-kind-icon">Malignity</a>

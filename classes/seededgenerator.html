@@ -89,16 +89,11 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="seededgenerator.html#history" class="tsd-kind-icon">history</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#generateseed" class="tsd-kind-icon">generate<wbr>Seed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#gethistory" class="tsd-kind-icon">get<wbr>History</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#getseed" class="tsd-kind-icon">get<wbr>Seed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#popseed" class="tsd-kind-icon">pop<wbr>Seed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#pushseed" class="tsd-kind-icon">push<wbr>Seed</a></li>
@@ -106,6 +101,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#setseed" class="tsd-kind-icon">set<wbr>Seed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#starthistory" class="tsd-kind-icon">start<wbr>History</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#stophistory" class="tsd-kind-icon">stop<wbr>History</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#takehistory" class="tsd-kind-icon">take<wbr>History</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="seededgenerator.html#tickseed" class="tsd-kind-icon">tick<wbr>Seed</a></li>
 							</ul>
 						</section>
@@ -118,31 +114,24 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Seeded<wbr>Generator<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Seeded<wbr>Generator<span class="tsd-signature-symbol">(</span>seed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:223</li>
+									<li>Defined in src/utilities/random/Random.ts:226</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> seed: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a></h4>
 						</li>
 					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="history" class="tsd-anchor"></a>
-					<h3>history</h3>
-					<div class="tsd-signature tsd-kind-icon">history<span class="tsd-signature-symbol">:</span> <a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/utilities/Random.ts:218</li>
-						</ul>
-					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -157,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:241</li>
+									<li>Defined in src/utilities/random/Random.ts:248</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -175,10 +164,27 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/irandomgenerator.html">IRandomGenerator</a>.<a href="../interfaces/irandomgenerator.html#get">get</a></p>
 								<ul>
-									<li>Defined in src/utilities/Random.ts:281</li>
+									<li>Defined in src/utilities/random/Random.ts:288</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gethistory" class="tsd-anchor"></a>
+					<h3>get<wbr>History</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>History<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/random/Random.ts:334</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -192,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:233</li>
+									<li>Defined in src/utilities/random/Random.ts:240</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -209,7 +215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:264</li>
+									<li>Defined in src/utilities/random/Random.ts:271</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -226,7 +232,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:249</li>
+									<li>Defined in src/utilities/random/Random.ts:256</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -249,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:245</li>
+									<li>Defined in src/utilities/random/Random.ts:252</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -272,7 +278,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:237</li>
+									<li>Defined in src/utilities/random/Random.ts:244</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -289,15 +295,21 @@
 					<a name="starthistory" class="tsd-anchor"></a>
 					<h3>start<wbr>History</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">start<wbr>History<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">start<wbr>History<span class="tsd-signature-symbol">(</span>maxHistory<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:323</li>
+									<li>Defined in src/utilities/random/Random.ts:329</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxHistory: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -306,16 +318,39 @@
 					<a name="stophistory" class="tsd-anchor"></a>
 					<h3>stop<wbr>History</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">stop<wbr>History<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>History<span class="tsd-signature-symbol">(</span>print<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:327</li>
+									<li>Defined in src/utilities/random/Random.ts:348</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> print: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="takehistory" class="tsd-anchor"></a>
+					<h3>take<wbr>History</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">take<wbr>History<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/utilities/random/Random.ts:338</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/irandomhistory.html" class="tsd-signature-type">IRandomHistory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -329,7 +364,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/utilities/Random.ts:229</li>
+									<li>Defined in src/utilities/random/Random.ts:236</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -362,14 +397,14 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="seededgenerator.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="seededgenerator.html#history" class="tsd-kind-icon">history</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="seededgenerator.html#generateseed" class="tsd-kind-icon">generate<wbr>Seed</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="seededgenerator.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="seededgenerator.html#gethistory" class="tsd-kind-icon">get<wbr>History</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="seededgenerator.html#getseed" class="tsd-kind-icon">get<wbr>Seed</a>
@@ -391,6 +426,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="seededgenerator.html#stophistory" class="tsd-kind-icon">stop<wbr>History</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="seededgenerator.html#takehistory" class="tsd-kind-icon">take<wbr>History</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="seededgenerator.html#tickseed" class="tsd-kind-icon">tick<wbr>Seed</a>

@@ -106,14 +106,25 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getbase" class="tsd-kind-icon">get<wbr>Base</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getcachedcalculated" class="tsd-kind-icon">get<wbr>Cached<wbr>Calculated</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getcachedproduced" class="tsd-kind-icon">get<wbr>Cached<wbr>Produced</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getcontainer" class="tsd-kind-icon">get<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getcontaineritemstemperature" class="tsd-kind-icon">get<wbr>Container<wbr>Items<wbr>Temperature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getcontainerproducedtemperature" class="tsd-kind-icon">get<wbr>Container<wbr>Produced<wbr>Temperature</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getlayer" class="tsd-kind-icon">get<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#getoftype" class="tsd-kind-icon">get<wbr>OfType</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#gettime" class="tsd-kind-icon">get<wbr>Time</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#invalidateall" class="tsd-kind-icon">invalidate<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#oncreateorremovedoodadortileevent" class="tsd-kind-icon">on<wbr>Create<wbr>OrRemove<wbr>Doodad<wbr>OrTile<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onentitymove" class="tsd-kind-icon">on<wbr>Entity<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onfireupdate" class="tsd-kind-icon">on<wbr>Fire<wbr>Update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onitemcontainerremove" class="tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onitemcontainerupdate" class="tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onitemfireupdate" class="tsd-kind-icon">on<wbr>Item<wbr>Fire<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onplay" class="tsd-kind-icon">on<wbr>Play</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#ontickend" class="tsd-kind-icon">on<wbr>Tick<wbr>End</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="temperaturemanager.html#onupdatetile" class="tsd-kind-icon">on<wbr>Update<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#schedulecontainerinvalidation" class="tsd-kind-icon">schedule<wbr>Container<wbr>Invalidation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="temperaturemanager.html#scheduleupdate" class="tsd-kind-icon">schedule<wbr>Update</a></li>
 							</ul>
 						</section>
 					</div>
@@ -131,7 +142,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:61</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -153,9 +164,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/itempmanagerevents.html" class="tsd-signature-type">ITempManagerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
+						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:259</li>
+							<li>Defined in src/event/EventEmitter.ts:287</li>
 						</ul>
 					</aside>
 				</section>
@@ -166,13 +177,14 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, isClientSide<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, isClientSide<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, source<span class="tsd-signature-symbol">: </span><a href="../modules/__global.html#getterofor" class="tsd-signature-type">GetterOfOr</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:70</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:170</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,6 +203,40 @@
 								<li>
 									<h5>z: <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></h5>
 								</li>
+								<li>
+									<h5>isClientSide: <span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:174</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current overall temperature for the given tile.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></h5>
+								</li>
+								<li>
+									<h5>isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>source: <a href="../modules/__global.html#getterofor" class="tsd-signature-type">GetterOfOr</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
@@ -206,7 +252,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:81</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:194</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,12 +274,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:122</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:241</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the cached calculated temperature for a tile. If a tile has not been calculated yet, this will return <code>-1</code>.</p>
+									<p>Returns the cached calculated temperature for a tile. If a tile has not been calculated yet, this will return <code>TEMPERATURE_INVALID</code>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -265,12 +311,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:129</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:248</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the cached produced temperature on a tile. If the production of a tile has not been calculated yet, this will return <code>-1</code>.</p>
+									<p>Returns the cached produced temperature on a tile. If the production of a tile has not been calculated yet, this will return <code>TEMPERATURE_INVALID</code>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -293,6 +339,101 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcontainer" class="tsd-anchor"></a>
+					<h3>get<wbr>Container</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Container<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, isClientSide<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:82</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current temperature for a container, calculated by combining the tile temperature and the combined temperature of the items inside</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>container: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+								<li>
+									<h5>isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcontaineritemstemperature" class="tsd-anchor"></a>
+					<h3>get<wbr>Container<wbr>Items<wbr>Temperature</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Container<wbr>Items<wbr>Temperature<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:141</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the combined temperature of the items in the container.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>container: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcontainerproducedtemperature" class="tsd-anchor"></a>
+					<h3>get<wbr>Container<wbr>Produced<wbr>Temperature</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Container<wbr>Produced<wbr>Temperature<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, applyInsulation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:127</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the produced temperature for this container, calculated by combining the min and max temperatures of the items inside.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>container: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> applyInsulation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether to apply the container&#39;s insulation to the produced temperature value. For example,
+											containers with no insulation return the exact temperature they produce, while containers with maximum insulation return
+										<code>Temperature.Neutral</code></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getlayer" class="tsd-anchor"></a>
 					<h3>get<wbr>Layer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -302,7 +443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:95</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:208</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -327,13 +468,13 @@
 					<a name="getoftype" class="tsd-anchor"></a>
 					<h3>get<wbr>OfType</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>OfType<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/temptype.html" class="tsd-signature-type">TempType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>OfType<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/temptype.html" class="tsd-signature-type">TempType</a>, isClientSide<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:111</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:224</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -356,6 +497,9 @@
 								<li>
 									<h5>type: <a href="../enums/temptype.html" class="tsd-signature-type">TempType</a></h5>
 								</li>
+								<li>
+									<h5>isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
@@ -365,13 +509,13 @@
 					<a name="gettile" class="tsd-anchor"></a>
 					<h3>get<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, isClientSide<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:103</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:216</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -390,6 +534,9 @@
 								<li>
 									<h5>z: <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></h5>
 								</li>
+								<li>
+									<h5>isClientSide: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
@@ -405,7 +552,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:88</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:201</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -433,7 +580,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:147</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:277</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -450,7 +597,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:192</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:324</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -467,16 +614,63 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-					<a name="onfireupdate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Fire<wbr>Update</h3>
+					<a name="onentitymove" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Entity<wbr>Move</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Fire<wbr>Update<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><a href="doodad.html" class="tsd-signature-type">Doodad</a><span class="tsd-signature-symbol"> | </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Entity<wbr>Move<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, lastX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lastY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lastZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lastTile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:184</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:331</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="entity.html" class="tsd-signature-type">Entity</a></h5>
+								</li>
+								<li>
+									<h5>lastX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>lastY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>lastZ: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>lastTile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onfireupdate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Fire<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Fire<wbr>Update<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><a href="doodad.html" class="tsd-signature-type">Doodad</a><span class="tsd-signature-symbol"> | </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:316</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -484,22 +678,204 @@
 								<li>
 									<h5>object: <a href="doodad.html" class="tsd-signature-type">Doodad</a><span class="tsd-signature-symbol"> | </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a></h5>
 								</li>
+								<li>
+									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onitemcontainerremove" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Item<wbr>Container<wbr>Remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Remove<span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, item<span class="tsd-signature-symbol">: </span><a href="item.html" class="tsd-signature-type">Item</a>, container<span class="tsd-signature-symbol">: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:365</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>_: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>item: <a href="item.html" class="tsd-signature-type">Item</a></h5>
+								</li>
+								<li>
+									<h5>container: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onitemcontainerupdate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Item<wbr>Container<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Update<span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, item<span class="tsd-signature-symbol">: </span><a href="item.html" class="tsd-signature-type">Item</a>, container1<span class="tsd-signature-symbol">?: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a>, container2<span class="tsd-signature-symbol">?: </span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:354</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>_: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>item: <a href="item.html" class="tsd-signature-type">Item</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> container1: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> container2: <a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onitemfireupdate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Item<wbr>Fire<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Fire<wbr>Update<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:387</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <a href="item.html" class="tsd-signature-type">Item</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onplay" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Play</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Play<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:395</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="ontickend" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Tick<wbr>End</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Tick<wbr>End<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:400</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="onupdatetile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Update<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Update<wbr>Tile<span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, oldType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:346</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>_: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+								</li>
+								<li>
+									<h5>oldType: <span class="tsd-signature-type">TerrainType</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>update</h3>
+					<a name="schedulecontainerinvalidation" class="tsd-anchor"></a>
+					<h3>schedule<wbr>Container<wbr>Invalidation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a>, invalidate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">schedule<wbr>Container<wbr>Invalidation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>containers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/TemperatureManager.ts:137</li>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:272</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>containers: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/icontainer.html" class="tsd-signature-type">IContainer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="scheduleupdate" class="tsd-anchor"></a>
+					<h3>schedule<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">schedule<wbr>Update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#scheduledupdate" class="tsd-signature-type">ScheduledUpdate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/temperature/TemperatureManager.ts:256</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -510,22 +886,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>x: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>y: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>z: <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> invalidate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Whether to invalidate the temperature calculations of surrounding tiles.</p>
-									</div>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <a href="../globals.html#scheduledupdate" class="tsd-signature-type">ScheduledUpdate</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -565,6 +929,15 @@
 								<a href="temperaturemanager.html#getcachedproduced" class="tsd-kind-icon">get<wbr>Cached<wbr>Produced</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="temperaturemanager.html#getcontainer" class="tsd-kind-icon">get<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="temperaturemanager.html#getcontaineritemstemperature" class="tsd-kind-icon">get<wbr>Container<wbr>Items<wbr>Temperature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="temperaturemanager.html#getcontainerproducedtemperature" class="tsd-kind-icon">get<wbr>Container<wbr>Produced<wbr>Temperature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="temperaturemanager.html#getlayer" class="tsd-kind-icon">get<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -583,10 +956,34 @@
 								<a href="temperaturemanager.html#oncreateorremovedoodadortileevent" class="tsd-kind-icon">on<wbr>Create<wbr>OrRemove<wbr>Doodad<wbr>OrTile<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onentitymove" class="tsd-kind-icon">on<wbr>Entity<wbr>Move</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="temperaturemanager.html#onfireupdate" class="tsd-kind-icon">on<wbr>Fire<wbr>Update</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onitemcontainerremove" class="tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onitemcontainerupdate" class="tsd-kind-icon">on<wbr>Item<wbr>Container<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onitemfireupdate" class="tsd-kind-icon">on<wbr>Item<wbr>Fire<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onplay" class="tsd-kind-icon">on<wbr>Play</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#ontickend" class="tsd-kind-icon">on<wbr>Tick<wbr>End</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="temperaturemanager.html#onupdatetile" class="tsd-kind-icon">on<wbr>Update<wbr>Tile</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="temperaturemanager.html#update" class="tsd-kind-icon">update</a>
+								<a href="temperaturemanager.html#schedulecontainerinvalidation" class="tsd-kind-icon">schedule<wbr>Container<wbr>Invalidation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="temperaturemanager.html#scheduleupdate" class="tsd-kind-icon">schedule<wbr>Update</a>
 							</li>
 						</ul>
 					</li>

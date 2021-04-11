@@ -80,6 +80,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/ireferenceable.html" class="tsd-signature-type">IReferenceable</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -106,12 +112,14 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#npcs" class="tsd-kind-icon">npcs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#referenceid" class="tsd-kind-icon">reference<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#saveversion" class="tsd-kind-icon">save<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#temperature" class="tsd-kind-icon">temperature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#tilecontainers" class="tsd-kind-icon">tile<wbr>Containers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#tiledata" class="tsd-kind-icon">tile<wbr>Data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#tileevents" class="tsd-kind-icon">tile<wbr>Events</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#time" class="tsd-kind-icon">time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#treasuremaps" class="tsd-kind-icon">treasure<wbr>Maps</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#version" class="tsd-kind-icon">version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="island.html#welldata" class="tsd-kind-icon">well<wbr>Data</a></li>
 							</ul>
@@ -155,7 +163,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:79</li>
+									<li>Defined in src/game/Island.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -180,27 +188,27 @@
 					<div class="tsd-signature tsd-kind-icon">biome<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../globals.html#biometypes" class="tsd-signature-type">BiomeTypes</a><span class="tsd-signature-symbol"> = BiomeType.Coastal</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:38</li>
+							<li>Defined in src/game/Island.ts:39</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="contaminatedwater" class="tsd-anchor"></a>
 					<h3>contaminated<wbr>Water</h3>
-					<div class="tsd-signature tsd-kind-icon">contaminated<wbr>Water<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+					<div class="tsd-signature tsd-kind-icon">contaminated<wbr>Water<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iwatercontamination.html" class="tsd-signature-type">IWaterContamination</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:39</li>
+							<li>Defined in src/game/Island.ts:40</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="corpses" class="tsd-anchor"></a>
 					<h3>corpses</h3>
-					<div class="tsd-signature tsd-kind-icon">corpses<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
+					<div class="tsd-signature tsd-kind-icon">corpses<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:40</li>
+							<li>Defined in src/game/Island.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -210,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">creature<wbr>Spawn<wbr>Timer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:42</li>
+							<li>Defined in src/game/Island.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -220,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">creatures<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:41</li>
+							<li>Defined in src/game/Island.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +238,7 @@
 					<div class="tsd-signature tsd-kind-icon">doodads<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="doodad.html" class="tsd-signature-type">Doodad</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:43</li>
+							<li>Defined in src/game/Island.ts:44</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,17 +248,17 @@
 					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:44</li>
+							<li>Defined in src/game/Island.ts:45</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lastcreationids" class="tsd-anchor"></a>
 					<h3>last<wbr>Creation<wbr>Ids</h3>
-					<div class="tsd-signature tsd-kind-icon">last<wbr>Creation<wbr>Ids<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.safernumberindexedobject.html" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">last<wbr>Creation<wbr>Ids<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#safernumberindexedobject" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:45</li>
+							<li>Defined in src/game/Island.ts:46</li>
 						</ul>
 					</aside>
 				</section>
@@ -260,7 +268,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:46</li>
+							<li>Defined in src/game/Island.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -270,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">map<wbr>Gen<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:47</li>
+							<li>Defined in src/game/Island.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -280,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:48</li>
+							<li>Defined in src/game/Island.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -290,7 +298,7 @@
 					<div class="tsd-signature tsd-kind-icon">npcs<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="npc.html" class="tsd-signature-type">NPC</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:49</li>
+							<li>Defined in src/game/Island.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -300,7 +308,18 @@
 					<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:50</li>
+							<li>Defined in src/game/Island.ts:51</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="referenceid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reference<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ireferenceable.html">IReferenceable</a>.<a href="../interfaces/ireferenceable.html#referenceid">referenceId</a></p>
+						<ul>
+							<li>Defined in src/game/Island.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -310,17 +329,17 @@
 					<div class="tsd-signature tsd-kind-icon">save<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:51</li>
+							<li>Defined in src/game/Island.ts:53</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="temperature" class="tsd-anchor"></a>
 					<h3>temperature</h3>
-					<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <a href="temperaturemanager.html" class="tsd-signature-type">TemperatureManager</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <a href="temperaturemanager.html" class="tsd-signature-type">TemperatureManager</a><span class="tsd-signature-symbol"> = new TemperatureManager(this)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:60</li>
+							<li>Defined in src/game/Island.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -330,17 +349,17 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>Containers<span class="tsd-signature-symbol">:</span> <a href="../globals.html#itilecontainer" class="tsd-signature-type">ITileContainer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:52</li>
+							<li>Defined in src/game/Island.ts:54</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tiledata" class="tsd-anchor"></a>
 					<h3>tile<wbr>Data</h3>
-					<div class="tsd-signature tsd-kind-icon">tile<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.safernumberindexedobject.html" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/__global.safernumberindexedobject.html" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/__global.safernumberindexedobject.html" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/itiledata.html" class="tsd-signature-type">ITileData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tile<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#safernumberindexedobject" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/__global.html#safernumberindexedobject" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/__global.html#safernumberindexedobject" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/itiledata.html" class="tsd-signature-type">ITileData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:53</li>
+							<li>Defined in src/game/Island.ts:55</li>
 						</ul>
 					</aside>
 				</section>
@@ -350,7 +369,7 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>Events<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#saferarray" class="tsd-signature-type">SaferArray</a><span class="tsd-signature-symbol">&lt;</span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:54</li>
+							<li>Defined in src/game/Island.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -360,7 +379,17 @@
 					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <a href="timemanager.html" class="tsd-signature-type">TimeManager</a><span class="tsd-signature-symbol"> = new TimeManager(0)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:55</li>
+							<li>Defined in src/game/Island.ts:57</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="treasuremaps" class="tsd-anchor"></a>
+					<h3>treasure<wbr>Maps</h3>
+					<div class="tsd-signature tsd-kind-icon">treasure<wbr>Maps<span class="tsd-signature-symbol">:</span> <a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/Island.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -370,17 +399,17 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = gameVersion</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:56</li>
+							<li>Defined in src/game/Island.ts:59</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="welldata" class="tsd-anchor"></a>
 					<h3>well<wbr>Data</h3>
-					<div class="tsd-signature tsd-kind-icon">well<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.safernumberindexedobject.html" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iwell.html" class="tsd-signature-type">IWell</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">well<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#safernumberindexedobject" class="tsd-signature-type">SaferNumberIndexedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iwell.html" class="tsd-signature-type">IWell</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:57</li>
+							<li>Defined in src/game/Island.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -397,7 +426,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:113</li>
+									<li>Defined in src/game/Island.ts:116</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ibiomedescription.html" class="tsd-signature-type">IBiomeDescription</a></h4>
@@ -414,7 +443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:109</li>
+									<li>Defined in src/game/Island.ts:112</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -428,13 +457,13 @@
 					<a name="findunusedid" class="tsd-anchor"></a>
 					<h3>find<wbr>Unused<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Unused<wbr>Id&lt;T&gt;<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a>, things<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Unused<wbr>Id&lt;T&gt;<span class="tsd-signature-symbol">(</span>creationId<span class="tsd-signature-symbol">: </span><a href="../enums/creationid.html" class="tsd-signature-type">CreationId</a>, things<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:168</li>
+									<li>Defined in src/game/Island.ts:171</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -446,7 +475,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>source: <a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a></h5>
+									<h5>creationId: <a href="../enums/creationid.html" class="tsd-signature-type">CreationId</a></h5>
 								</li>
 								<li>
 									<h5>things: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -466,7 +495,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:137</li>
+									<li>Defined in src/game/Island.ts:140</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -489,7 +518,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:117</li>
+									<li>Defined in src/game/Island.ts:120</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -506,7 +535,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:127</li>
+									<li>Defined in src/game/Island.ts:130</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -523,7 +552,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:66</li>
+									<li>Defined in src/game/Island.ts:69</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -546,7 +575,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:62</li>
+									<li>Defined in src/game/Island.ts:65</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -568,7 +597,7 @@
 					<div class="tsd-signature tsd-kind-icon">seeds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/Island.ts:58</li>
+							<li>Defined in src/game/Island.ts:61</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -577,7 +606,7 @@
 						<div class="tsd-signature tsd-kind-icon">base<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/game/Island.ts:58</li>
+								<li>Defined in src/game/Island.ts:61</li>
 							</ul>
 						</aside>
 					</section>
@@ -587,7 +616,7 @@
 						<div class="tsd-signature tsd-kind-icon">milestone<wbr>Modifier<wbr>Saved<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/game/Island.ts:58</li>
+								<li>Defined in src/game/Island.ts:61</li>
 							</ul>
 						</aside>
 					</section>
@@ -597,7 +626,7 @@
 						<div class="tsd-signature tsd-kind-icon">saved<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/game/Island.ts:58</li>
+								<li>Defined in src/game/Island.ts:61</li>
 							</ul>
 						</aside>
 					</section>
@@ -662,6 +691,9 @@
 								<a href="island.html#position" class="tsd-kind-icon">position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="island.html#referenceid" class="tsd-kind-icon">reference<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="island.html#saveversion" class="tsd-kind-icon">save<wbr>Version</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -678,6 +710,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="island.html#time" class="tsd-kind-icon">time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="island.html#treasuremaps" class="tsd-kind-icon">treasure<wbr>Maps</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="island.html#version" class="tsd-kind-icon">version</a>

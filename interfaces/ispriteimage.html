@@ -80,9 +80,11 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#animated" class="tsd-kind-icon">animated</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#image" class="tsd-kind-icon">image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#imageorbuffer" class="tsd-kind-icon">image<wbr>OrBuffer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#padding" class="tsd-kind-icon">padding</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#src" class="tsd-kind-icon">src</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ispriteimage.html#width" class="tsd-kind-icon">width</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -102,17 +104,27 @@
 					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:26</li>
+							<li>Defined in src/renderer/SpritePacker.ts:29</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="image" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> image</h3>
-					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLImageElement</span></div>
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:23</li>
+							<li>Defined in src/renderer/SpritePacker.ts:25</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="imageorbuffer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> image<wbr>OrBuffer</h3>
+					<div class="tsd-signature tsd-kind-icon">image<wbr>OrBuffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ArrayBuffer</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/renderer/SpritePacker.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -122,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">padding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:25</li>
+							<li>Defined in src/renderer/SpritePacker.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -130,6 +142,16 @@
 					<a name="src" class="tsd-anchor"></a>
 					<h3>src</h3>
 					<div class="tsd-signature tsd-kind-icon">src<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/renderer/SpritePacker.ts:27</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="width" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/renderer/SpritePacker.ts:24</li>
@@ -143,13 +165,13 @@
 					<a name="callback" class="tsd-anchor"></a>
 					<h3>callback</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, imageElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, spriteImage<span class="tsd-signature-symbol">?: </span><a href="ispriteimage.html" class="tsd-signature-type">ISpriteImage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpritePacker.ts:27</li>
+									<li>Defined in src/renderer/SpritePacker.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -158,7 +180,7 @@
 									<h5>si: <a href="ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> imageElement: <span class="tsd-signature-type">HTMLImageElement</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> spriteImage: <a href="ispriteimage.html" class="tsd-signature-type">ISpriteImage</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -186,13 +208,19 @@
 								<a href="ispriteimage.html#animated" class="tsd-kind-icon">animated</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ispriteimage.html#image" class="tsd-kind-icon">image</a>
+								<a href="ispriteimage.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ispriteimage.html#imageorbuffer" class="tsd-kind-icon">image<wbr>OrBuffer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="ispriteimage.html#padding" class="tsd-kind-icon">padding</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="ispriteimage.html#src" class="tsd-kind-icon">src</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ispriteimage.html#width" class="tsd-kind-icon">width</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ispriteimage.html#callback" class="tsd-kind-icon">callback</a>

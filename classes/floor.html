@@ -103,14 +103,15 @@
 					<a name="adapt" class="tsd-anchor"></a>
 					<h3>adapt</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">adapt<span class="tsd-signature-symbol">(</span>world<span class="tsd-signature-symbol">: </span><a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, result<span class="tsd-signature-symbol">: </span><a href="../interfaces/itileadaptation.html" class="tsd-signature-type">ITileAdaptation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">adapt<span class="tsd-signature-symbol">(</span>world<span class="tsd-signature-symbol">: </span><a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, result<span class="tsd-signature-symbol">: </span><a href="../interfaces/itileadaptation.html" class="tsd-signature-type">ITileAdaptation</a>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/itileadaptor.html">ITileAdaptor</a>.<a href="../interfaces/itileadaptor.html#adapt">adapt</a></p>
 								<p>Overrides <a href="default.html">Default</a>.<a href="default.html#adapt">adapt</a></p>
 								<ul>
-									<li>Defined in src/renderer/tileAdaptors/Floor.ts:23</li>
+									<li>Defined in src/renderer/tileAdaptors/Floor.ts:24</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -130,6 +131,9 @@
 								<li>
 									<h5>result: <a href="../interfaces/itileadaptation.html" class="tsd-signature-type">ITileAdaptation</a></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> debug: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -139,14 +143,14 @@
 					<a name="getterrainbeneathtile" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Terrain<wbr>Beneath<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Terrain<wbr>Beneath<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Terrain<wbr>Beneath<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ignoreWater<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="default.html">Default</a>.<a href="default.html#getterrainbeneathtile">getTerrainBeneathTile</a></p>
 								<ul>
-									<li>Defined in src/renderer/tileAdaptors/Default.ts:148</li>
+									<li>Defined in src/renderer/tileAdaptors/Default.ts:147</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,6 +160,9 @@
 								</li>
 								<li>
 									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreWater: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TerrainType</span></h4>

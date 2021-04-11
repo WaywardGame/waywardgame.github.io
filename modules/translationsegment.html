@@ -64,28 +64,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-namespace">
-					<li class="tsd-signature tsd-kind-icon">Translation<wbr>Segment<span class="tsd-signature-symbol">(</span>random<span class="tsd-signature-symbol">: </span><a href="../classes/random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isegment.html" class="tsd-signature-type">ISegment</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>isTranslationSegment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in src/language/segment/TranslationSegment.ts:16</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>random: <a href="../classes/random.html" class="tsd-signature-type">Random</a></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="../interfaces/isegment.html" class="tsd-signature-type">ISegment</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>isTranslationSegment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -95,6 +73,14 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="translationsegment.html#getsubtranslationargs" class="tsd-kind-icon">get<wbr>Sub<wbr>Translation<wbr>Args</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="translationsegment.html#resolvetranslation" class="tsd-kind-icon">resolve<wbr>Translation</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-namespace"><a href="translationsegment.html#conditional" class="tsd-kind-icon">conditional</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-namespace"><a href="translationsegment.html#include" class="tsd-kind-icon">include</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-namespace"><a href="translationsegment.html#thisentry" class="tsd-kind-icon">this<wbr>Entry</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,7 +98,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/segment/TranslationSegment.ts:49</li>
+									<li>Defined in src/language/segment/TranslationSegment.ts:109</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,13 +121,13 @@
 					<a name="resolvetranslation" class="tsd-anchor"></a>
 					<h3>resolve<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Translation<span class="tsd-signature-symbol">(</span>random<span class="tsd-signature-symbol">: </span><a href="../classes/random.html" class="tsd-signature-type">Random</a>, api<span class="tsd-signature-symbol">: </span><a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a>, dictionaryName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, entryName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, subTranslationArgsString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Translation<span class="tsd-signature-symbol">(</span>random<span class="tsd-signature-symbol">: </span><a href="../classes/random.html" class="tsd-signature-type">Random</a>, api<span class="tsd-signature-symbol">: </span><a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a>, dictionaryName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, entryName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, subTranslationArgsString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/segment/TranslationSegment.ts:28</li>
+									<li>Defined in src/language/segment/TranslationSegment.ts:83</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -159,7 +145,7 @@
 									<h5>entryName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>index: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> index: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;0&quot;</span></h5>
 								</li>
 								<li>
 									<h5>subTranslationArgsString: <span class="tsd-signature-type">string</span></h5>
@@ -171,6 +157,185 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-namespace">
+					<a name="conditional" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> conditional</h3>
+					<div class="tsd-signature tsd-kind-icon">conditional<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/language/segment/TranslationSegment.ts:70</li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="conditional.match" class="tsd-anchor"></a>
+						<h3>match</h3>
+						<div class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.regexp.html" class="tsd-signature-type">RegExp</a><span class="tsd-signature-symbol"> = /^\s*(\w+):(\w+|\{\w+(?:\.\w+)*\})(?::(random|RANDOM|\*|\d+|\{\w+(?:\.\w+)*\}))?(?::\((.*)\))?\s*\?/</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/language/segment/TranslationSegment.ts:71</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="conditional.handle" class="tsd-anchor"></a>
+						<h3>handle</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">handle<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span>, segment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, api<span class="tsd-signature-symbol">: </span><a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in src/language/segment/TranslationSegment.ts:72</li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>__namedParameters: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li>
+										<h5>segment: <span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li>
+										<h5>api: <a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a></h5>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-namespace">
+					<a name="include" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> include</h3>
+					<div class="tsd-signature tsd-kind-icon">include<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/language/segment/TranslationSegment.ts:20</li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="include.match-1" class="tsd-anchor"></a>
+						<h3>match</h3>
+						<div class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.regexp.html" class="tsd-signature-type">RegExp</a><span class="tsd-signature-symbol"> = /^\s*(\w+):(\w+|\{\w+(?:\.\w+)*\})(?::(random|RANDOM|\*|\d+|\{\w+(?:\.\w+)*\}))?(?::\((.*)\))?\s*$/</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/language/segment/TranslationSegment.ts:21</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="include.handle-1" class="tsd-anchor"></a>
+						<h3>handle</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">handle<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span>, segment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, api<span class="tsd-signature-symbol">: </span><a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in src/language/segment/TranslationSegment.ts:22</li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>__namedParameters: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li>
+										<h5>segment: <span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li>
+										<h5>api: <a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a></h5>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-namespace">
+					<a name="thisentry" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> this<wbr>Entry</h3>
+					<div class="tsd-signature tsd-kind-icon">this<wbr>Entry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/language/segment/TranslationSegment.ts:28</li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="thisentry.ends" class="tsd-anchor"></a>
+						<h3>ends</h3>
+						<div class="tsd-signature tsd-kind-icon">ends<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [[&quot;{@&quot;]]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/language/segment/TranslationSegment.ts:30</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="thisentry.match-2" class="tsd-anchor"></a>
+						<h3>match</h3>
+						<div class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.regexp.html" class="tsd-signature-type">RegExp</a><span class="tsd-signature-symbol"> = /^(?:(%)$|(\d+)?(?:(\.\.\.?|-)(\d+)?(%)?)?)/</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/language/segment/TranslationSegment.ts:31</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="thisentry.translationchain" class="tsd-anchor"></a>
+						<h3>translation<wbr>Chain</h3>
+						<div class="tsd-signature tsd-kind-icon">translation<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/language/segment/TranslationSegment.ts:29</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="thisentry.handle-2" class="tsd-anchor"></a>
+						<h3>handle</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">handle<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span>, segment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, api<span class="tsd-signature-symbol">: </span><a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in src/language/segment/TranslationSegment.ts:32</li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>__namedParameters: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li>
+										<h5>segment: <span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li>
+										<h5>api: <a href="../interfaces/isegmentapi.html" class="tsd-signature-type">ISegmentApi</a></h5>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/istringsection.html" class="tsd-signature-type">IStringSection</a><span class="tsd-signature-symbol">[]</span></h4>
+							</li>
+						</ul>
+					</section>
 				</section>
 			</section>
 			<nav class="tsd-navigation primary">
@@ -192,6 +357,15 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="translationsegment.html#resolvetranslation" class="tsd-kind-icon">resolve<wbr>Translation</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-namespace">
+						<a href="translationsegment.html#conditional" class="tsd-kind-icon">conditional</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-namespace">
+						<a href="translationsegment.html#include" class="tsd-kind-icon">include</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-namespace">
+						<a href="translationsegment.html#thisentry" class="tsd-kind-icon">this<wbr>Entry</a>
 					</li>
 				</ul>
 			</nav>

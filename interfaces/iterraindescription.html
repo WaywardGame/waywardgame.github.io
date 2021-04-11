@@ -94,6 +94,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#background" class="tsd-kind-icon">background</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#baseterrain" class="tsd-kind-icon">base<wbr>Terrain</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#burnitem" class="tsd-kind-icon">burn<wbr>Item</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#contaminatedtype" class="tsd-kind-icon">contaminated<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#cooledtile" class="tsd-kind-icon">cooled<wbr>Tile</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#decaytemperaturerange" class="tsd-kind-icon">decay<wbr>Temperature<wbr>Range</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#deepwater" class="tsd-kind-icon">deep<wbr>Water</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#doodad" class="tsd-kind-icon">doodad</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#durability" class="tsd-kind-icon">durability</a></li>
@@ -108,6 +111,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#ismountainground" class="tsd-kind-icon">is<wbr>Mountain<wbr>Ground</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#isore" class="tsd-kind-icon">is<wbr>Ore</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#leftovers" class="tsd-kind-icon">left<wbr>Overs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#meltfromitem" class="tsd-kind-icon">melt<wbr>From<wbr>Item</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#meltsinto" class="tsd-kind-icon">melts<wbr>Into</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterraindescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#nobackground" class="tsd-kind-icon">no<wbr>Background</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#nogfxswitch" class="tsd-kind-icon">no<wbr>Gfx<wbr>Switch</a></li>
@@ -115,6 +120,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#noresting" class="tsd-kind-icon">no<wbr>Resting</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#particles" class="tsd-kind-icon">particles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#passable" class="tsd-kind-icon">passable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#puddletype" class="tsd-kind-icon">puddle<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#reducerest" class="tsd-kind-icon">reduce<wbr>Rest</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#regathered" class="tsd-kind-icon">regathered</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iterraindescription.html#renderoverothermountains" class="tsd-kind-icon">render<wbr>Over<wbr>Other<wbr>Mountains</a></li>
@@ -139,15 +145,15 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="abovetype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> above<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">above<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">above<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:82</li>
+							<li>Defined in src/game/tile/ITerrain.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The water terrain type that is a step above, or a less deep version of itself.</p>
+							<p>The water terrain type that is a step above, or a less deep version of itself (which has specific rules based on the biometype).</p>
 						</div>
 					</div>
 				</section>
@@ -157,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:49</li>
+							<li>Defined in src/game/tile/ITerrain.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:46</li>
+							<li>Defined in src/game/tile/ITerrain.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -177,7 +183,7 @@
 					<div class="tsd-signature tsd-kind-icon">base<wbr>Terrain<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:42</li>
+							<li>Defined in src/game/tile/ITerrain.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +193,47 @@
 					<div class="tsd-signature tsd-kind-icon">burn<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:58</li>
+							<li>Defined in src/game/tile/ITerrain.ts:66</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="contaminatedtype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> contaminated<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">contaminated<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:86</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The reversed or contaminated type that this water turns into.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cooledtile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cooled<wbr>Tile</h3>
+					<div class="tsd-signature tsd-kind-icon">cooled<wbr>Tile<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:107</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Puddles will cool down tiles and create the following TerrainType on this tile.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="decaytemperaturerange" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> decay<wbr>Temperature<wbr>Range</h3>
+					<div class="tsd-signature tsd-kind-icon">decay<wbr>Temperature<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="idecaytemperaturerange.html" class="tsd-signature-type">IDecayTemperatureRange</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:95</li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">deep<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:52</li>
+							<li>Defined in src/game/tile/ITerrain.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -207,19 +253,24 @@
 					<div class="tsd-signature tsd-kind-icon">doodad<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#doodadtype" class="tsd-signature-type">DoodadType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:44</li>
+							<li>Defined in src/game/tile/ITerrain.ts:52</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="durability" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> durability</h3>
-					<div class="tsd-signature tsd-kind-icon">durability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">durability<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:30</li>
+							<li>Defined in src/game/tile/ITerrain.ts:38</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Bases the durability on an item type. Any item that has a SetDown action should have this set for the matching terrain type.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="flammable" class="tsd-anchor"></a>
@@ -227,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">flammable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:38</li>
+							<li>Defined in src/game/tile/ITerrain.ts:46</li>
 						</ul>
 					</aside>
 				</section>
@@ -237,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">fresh<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:34</li>
+							<li>Defined in src/game/tile/ITerrain.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -247,7 +298,7 @@
 					<div class="tsd-signature tsd-kind-icon">gather<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:35</li>
+							<li>Defined in src/game/tile/ITerrain.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -257,7 +308,7 @@
 					<div class="tsd-signature tsd-kind-icon">gather<wbr>Skill<wbr>Use<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#skilltype" class="tsd-signature-type">SkillType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:39</li>
+							<li>Defined in src/game/tile/ITerrain.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -267,7 +318,7 @@
 					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintypegroup.html" class="tsd-signature-type">TerrainTypeGroup</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:69</li>
+							<li>Defined in src/game/tile/ITerrain.ts:77</li>
 						</ul>
 					</aside>
 				</section>
@@ -277,7 +328,7 @@
 					<div class="tsd-signature tsd-kind-icon">has<wbr>Mound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:51</li>
+							<li>Defined in src/game/tile/ITerrain.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -287,7 +338,7 @@
 					<div class="tsd-signature tsd-kind-icon">ice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:59</li>
+							<li>Defined in src/game/tile/ITerrain.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -297,7 +348,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:45</li>
+							<li>Defined in src/game/tile/ITerrain.ts:53</li>
 						</ul>
 					</aside>
 				</section>
@@ -307,7 +358,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<wbr>Ground<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:57</li>
+							<li>Defined in src/game/tile/ITerrain.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -317,7 +368,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Ore<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:48</li>
+							<li>Defined in src/game/tile/ITerrain.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -327,9 +378,39 @@
 					<div class="tsd-signature tsd-kind-icon">left<wbr>Overs<span class="tsd-signature-symbol">:</span> <a href="ileftovertile.html" class="tsd-signature-type">ILeftOverTile</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:41</li>
+							<li>Defined in src/game/tile/ITerrain.ts:49</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="meltfromitem" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> melt<wbr>From<wbr>Item</h3>
+					<div class="tsd-signature tsd-kind-icon">melt<wbr>From<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:103</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Item that defines the decay amount when this doodad is melting.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="meltsinto" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> melts<wbr>Into</h3>
+					<div class="tsd-signature tsd-kind-icon">melts<wbr>Into<span class="tsd-signature-symbol">:</span> <a href="../enums/tileeventtype.html" class="tsd-signature-type">TileEventType</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:99</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array of tile events that are spawned when terrain decays (or melts).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="modindex" class="tsd-anchor"></a>
@@ -338,7 +419,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="itileeventdescription.html">ITileEventDescription</a>.<a href="itileeventdescription.html#modindex">modIndex</a></p>
 						<ul>
-							<li>Defined in src/mod/ModRegistry.ts:62</li>
+							<li>Defined in src/mod/ModRegistry.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -348,7 +429,7 @@
 					<div class="tsd-signature tsd-kind-icon">no<wbr>Background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:47</li>
+							<li>Defined in src/game/tile/ITerrain.ts:55</li>
 						</ul>
 					</aside>
 				</section>
@@ -358,7 +439,7 @@
 					<div class="tsd-signature tsd-kind-icon">no<wbr>Gfx<wbr>Switch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:36</li>
+							<li>Defined in src/game/tile/ITerrain.ts:44</li>
 						</ul>
 					</aside>
 				</section>
@@ -368,7 +449,7 @@
 					<div class="tsd-signature tsd-kind-icon">no<wbr>Los<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:37</li>
+							<li>Defined in src/game/tile/ITerrain.ts:45</li>
 						</ul>
 					</aside>
 				</section>
@@ -378,7 +459,7 @@
 					<div class="tsd-signature tsd-kind-icon">no<wbr>Resting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:54</li>
+							<li>Defined in src/game/tile/ITerrain.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -388,7 +469,7 @@
 					<div class="tsd-signature tsd-kind-icon">particles<span class="tsd-signature-symbol">:</span> <a href="irgb.html" class="tsd-signature-type">IRGB</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:29</li>
+							<li>Defined in src/game/tile/ITerrain.ts:34</li>
 						</ul>
 					</aside>
 				</section>
@@ -398,9 +479,24 @@
 					<div class="tsd-signature tsd-kind-icon">passable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:28</li>
+							<li>Defined in src/game/tile/ITerrain.ts:33</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="puddletype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> puddle<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">puddle<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#tileeventtype" class="tsd-signature-type">TileEventType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITerrain.ts:111</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of puddle it produces when splashed.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="reducerest" class="tsd-anchor"></a>
@@ -408,7 +504,7 @@
 					<div class="tsd-signature tsd-kind-icon">reduce<wbr>Rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:53</li>
+							<li>Defined in src/game/tile/ITerrain.ts:61</li>
 						</ul>
 					</aside>
 				</section>
@@ -418,7 +514,7 @@
 					<div class="tsd-signature tsd-kind-icon">regathered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:32</li>
+							<li>Defined in src/game/tile/ITerrain.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -428,17 +524,17 @@
 					<div class="tsd-signature tsd-kind-icon">render<wbr>Over<wbr>Other<wbr>Mountains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:60</li>
+							<li>Defined in src/game/tile/ITerrain.ts:68</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="shallowwater" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> shallow<wbr>Water</h3>
-					<div class="tsd-signature tsd-kind-icon">shallow<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">shallow<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:33</li>
+							<li>Defined in src/game/tile/ITerrain.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -448,7 +544,7 @@
 					<div class="tsd-signature tsd-kind-icon">sound<span class="tsd-signature-symbol">:</span> <a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:40</li>
+							<li>Defined in src/game/tile/ITerrain.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -458,7 +554,7 @@
 					<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:78</li>
+							<li>Defined in src/game/tile/ITerrain.ts:90</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -473,7 +569,7 @@
 					<div class="tsd-signature tsd-kind-icon">terrain<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:43</li>
+							<li>Defined in src/game/tile/ITerrain.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -483,7 +579,7 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>OnConsume<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:56</li>
+							<li>Defined in src/game/tile/ITerrain.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -493,17 +589,17 @@
 					<div class="tsd-signature tsd-kind-icon">tillable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:50</li>
+							<li>Defined in src/game/tile/ITerrain.ts:58</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="water" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> water</h3>
-					<div class="tsd-signature tsd-kind-icon">water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:31</li>
+							<li>Defined in src/game/tile/ITerrain.ts:39</li>
 						</ul>
 					</aside>
 				</section>
@@ -513,12 +609,12 @@
 					<div class="tsd-signature tsd-kind-icon">water<wbr>Base<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:74</li>
+							<li>Defined in src/game/tile/ITerrain.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Base version of the water. Type is used for mapping and when the tile becomes when contaminated</p>
+							<p>Base version of the water used for tilemapping.</p>
 						</div>
 					</div>
 				</section>
@@ -528,7 +624,7 @@
 					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnDig<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:64</li>
+							<li>Defined in src/game/tile/ITerrain.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -543,7 +639,7 @@
 					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnRoute<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:68</li>
+							<li>Defined in src/game/tile/ITerrain.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -558,7 +654,7 @@
 					<div class="tsd-signature tsd-kind-icon">wet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/ITerrain.ts:55</li>
+							<li>Defined in src/game/tile/ITerrain.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -593,6 +689,15 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iterraindescription.html#burnitem" class="tsd-kind-icon">burn<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#contaminatedtype" class="tsd-kind-icon">contaminated<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#cooledtile" class="tsd-kind-icon">cooled<wbr>Tile</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#decaytemperaturerange" class="tsd-kind-icon">decay<wbr>Temperature<wbr>Range</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iterraindescription.html#deepwater" class="tsd-kind-icon">deep<wbr>Water</a>
@@ -636,6 +741,12 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iterraindescription.html#leftovers" class="tsd-kind-icon">left<wbr>Overs</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#meltfromitem" class="tsd-kind-icon">melt<wbr>From<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#meltsinto" class="tsd-kind-icon">melts<wbr>Into</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iterraindescription.html#modindex" class="tsd-kind-icon">mod<wbr>Index</a>
 							</li>
@@ -656,6 +767,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iterraindescription.html#passable" class="tsd-kind-icon">passable</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iterraindescription.html#puddletype" class="tsd-kind-icon">puddle<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iterraindescription.html#reducerest" class="tsd-kind-icon">reduce<wbr>Rest</a>

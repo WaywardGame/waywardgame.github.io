@@ -87,10 +87,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#creatures" class="tsd-kind-icon">creatures</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#disablemods" class="tsd-kind-icon">disable<wbr>Mods</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#island" class="tsd-kind-icon">island</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#items" class="tsd-kind-icon">items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#milestonemodifiers" class="tsd-kind-icon">milestone<wbr>Modifiers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#npcs" class="tsd-kind-icon">npcs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#player" class="tsd-kind-icon">player</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#respawn" class="tsd-kind-icon">respawn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#rest" class="tsd-kind-icon">rest</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igameoptions.html#time" class="tsd-kind-icon">time</a></li>
 							</ul>
 						</section>
@@ -184,7 +186,7 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Mods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:139</li>
+							<li>Defined in src/game/options/IGameOptions.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -225,12 +227,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="items" class="tsd-anchor"></a>
+					<h3>items</h3>
+					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>decayMultiplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/options/IGameOptions.ts:155</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>decay<wbr>Multiplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Multiplier for decay of items.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="milestonemodifiers" class="tsd-anchor"></a>
 					<h3>milestone<wbr>Modifiers</h3>
 					<div class="tsd-signature tsd-kind-icon">milestone<wbr>Modifiers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/milestone.html" class="tsd-signature-type">Milestone</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:141</li>
+							<li>Defined in src/game/options/IGameOptions.ts:153</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">npcs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>merchants<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>initialItems<span class="tsd-signature-symbol">: </span><a href="../classes/randomrange.html" class="tsd-signature-type">RandomRange</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>priceMultiplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:122</li>
+							<li>Defined in src/game/options/IGameOptions.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -276,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <a href="igameoptionsplayer.html" class="tsd-signature-type">IGameOptionsPlayer</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:120</li>
+							<li>Defined in src/game/options/IGameOptions.ts:132</li>
 						</ul>
 					</aside>
 				</section>
@@ -293,6 +318,37 @@
 						<div class="lead">
 							<p>Whether players respawn when they die</p>
 						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="rest" class="tsd-anchor"></a>
+					<h3>rest</h3>
+					<div class="tsd-signature tsd-kind-icon">rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>startDelay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>tickInterval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/options/IGameOptions.ts:120</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> start<wbr>Delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>How long to delay before resting begins</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> tick<wbr>Interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Delay between rest ticks</p>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -369,6 +425,9 @@
 								<a href="igameoptions.html#island" class="tsd-kind-icon">island</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="igameoptions.html#items" class="tsd-kind-icon">items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="igameoptions.html#milestonemodifiers" class="tsd-kind-icon">milestone<wbr>Modifiers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -379,6 +438,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="igameoptions.html#respawn" class="tsd-kind-icon">respawn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="igameoptions.html#rest" class="tsd-kind-icon">rest</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="igameoptions.html#time" class="tsd-kind-icon">time</a>

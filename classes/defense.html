@@ -95,6 +95,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="defense.html#vulnerable" class="tsd-kind-icon">vulnerable</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defense.html#setresistance" class="tsd-kind-icon">set<wbr>Resistance</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defense.html#setvulnerability" class="tsd-kind-icon">set<wbr>Vulnerability</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -104,25 +111,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Defense<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, resist<span class="tsd-signature-symbol">: </span><a href="resistances.html" class="tsd-signature-type">Resistances</a>, vulnerable<span class="tsd-signature-symbol">: </span><a href="vulnerabilities.html" class="tsd-signature-type">Vulnerabilities</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="defense.html" class="tsd-signature-type">Defense</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Defense<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="defense.html" class="tsd-signature-type">Defense</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/IEntity.ts:187</li>
+									<li>Defined in src/game/entity/IEntity.ts:201</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>base: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>resist: <a href="resistances.html" class="tsd-signature-type">Resistances</a></h5>
-								</li>
-								<li>
-									<h5>vulnerable: <a href="vulnerabilities.html" class="tsd-signature-type">Vulnerabilities</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="defense.html" class="tsd-signature-type">Defense</a></h4>
@@ -138,29 +139,84 @@
 					<div class="tsd-signature tsd-kind-icon">base<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IEntity.ts:183</li>
+							<li>Defined in src/game/entity/IEntity.ts:197</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="resist" class="tsd-anchor"></a>
 					<h3>resist</h3>
-					<div class="tsd-signature tsd-kind-icon">resist<span class="tsd-signature-symbol">:</span> <a href="resistances.html" class="tsd-signature-type">Resistances</a></div>
+					<div class="tsd-signature tsd-kind-icon">resist<span class="tsd-signature-symbol">:</span> <a href="../globals.html#attributes" class="tsd-signature-type">Attributes</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IEntity.ts:185</li>
+							<li>Defined in src/game/entity/IEntity.ts:199</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vulnerable" class="tsd-anchor"></a>
 					<h3>vulnerable</h3>
-					<div class="tsd-signature tsd-kind-icon">vulnerable<span class="tsd-signature-symbol">:</span> <a href="vulnerabilities.html" class="tsd-signature-type">Vulnerabilities</a></div>
+					<div class="tsd-signature tsd-kind-icon">vulnerable<span class="tsd-signature-symbol">:</span> <a href="../globals.html#attributes" class="tsd-signature-type">Attributes</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/entity/IEntity.ts:187</li>
+							<li>Defined in src/game/entity/IEntity.ts:201</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setresistance" class="tsd-anchor"></a>
+					<h3>set<wbr>Resistance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Resistance<span class="tsd-signature-symbol">(</span>damageTypes<span class="tsd-signature-symbol">: </span><a href="../enums/damagetype.html" class="tsd-signature-type">DamageType</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/entity/IEntity.ts:209</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>damageTypes: <a href="../enums/damagetype.html" class="tsd-signature-type">DamageType</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setvulnerability" class="tsd-anchor"></a>
+					<h3>set<wbr>Vulnerability</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Vulnerability<span class="tsd-signature-symbol">(</span>damageTypes<span class="tsd-signature-symbol">: </span><a href="../enums/damagetype.html" class="tsd-signature-type">DamageType</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/entity/IEntity.ts:214</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>damageTypes: <a href="../enums/damagetype.html" class="tsd-signature-type">DamageType</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<nav class="tsd-navigation primary">
@@ -190,6 +246,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="defense.html#vulnerable" class="tsd-kind-icon">vulnerable</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="defense.html#setresistance" class="tsd-kind-icon">set<wbr>Resistance</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="defense.html#setvulnerability" class="tsd-kind-icon">set<wbr>Vulnerability</a>
 							</li>
 						</ul>
 					</li>

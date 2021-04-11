@@ -75,10 +75,17 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="register.html#extractregisteredtype" class="tsd-kind-icon">Extract<wbr>Registered<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="register.html#action" class="tsd-kind-icon">action</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="register.html#bindable" class="tsd-kind-icon">bindable</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter"><a href="register.html#bulk" class="tsd-kind-icon">bulk</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="register.html#command" class="tsd-kind-icon">command</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="register.html#creature" class="tsd-kind-icon">creature</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="register.html#dialog" class="tsd-kind-icon">dialog</a></li>
@@ -123,6 +130,25 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="extractregisteredtype" class="tsd-anchor"></a>
+					<h3>Extract<wbr>Registered<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Extract<wbr>Registered<wbr>Type&lt;F&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">F</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">infer </span> F2<span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">F2</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> T, k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> K<span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/mod/ModRegistry.ts:858</li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>F</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="action" class="tsd-anchor"></a>
@@ -134,7 +160,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:828</li>
+									<li>Defined in src/mod/ModRegistry.ts:840</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -168,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:656</li>
+									<li>Defined in src/mod/ModRegistry.ts:668</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -197,6 +223,61 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="bulk" class="tsd-anchor"></a>
+					<h3>bulk</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">bulk&lt;REG_TYPE&gt;<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">REG_TYPE</span>, <span class="tsd-signature-symbol">...</span>entries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Parameters</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Register</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">REG_TYPE</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/mod/ModRegistry.ts:878</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Registers any number of registrations of a single type. Any other registration type can be used.</p>
+								</div>
+								<p>Note: Not all registration types have been tested. If you run into any issues with one report a bug!</p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> itemColors = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>];
+<span class="hljs-keyword">class</span> Mod {
+    <span class="hljs-meta">@Register</span>.bulk(<span class="hljs-string">&quot;item&quot;</span>, ...itemColors
+        .map(<span class="hljs-function"><span class="hljs-params">color</span> =&gt;</span> Tuple(<span class="hljs-string">`<span class="hljs-subst">${color}</span>Item`</span>, { weight: <span class="hljs-number">1</span> })))
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">readonly</span> items: ItemType[];
+}</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>REG_TYPE<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="register.html" class="tsd-signature-type">Register</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">REG_TYPE</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of registration to register — the name of another <code>@Register.&lt;type&gt;</code> decorator.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>entries: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Parameters</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Register</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">REG_TYPE</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The registration definitions — each entry is a tuple containing the parameters that would be given to the
+										registration decorator.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="command" class="tsd-anchor"></a>
 					<h3>command</h3>
@@ -207,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:856</li>
+									<li>Defined in src/mod/ModRegistry.ts:909</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -239,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:576</li>
+									<li>Defined in src/mod/ModRegistry.ts:588</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -280,7 +361,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:641</li>
+									<li>Defined in src/mod/ModRegistry.ts:653</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -326,7 +407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:669</li>
+									<li>Defined in src/mod/ModRegistry.ts:681</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -364,7 +445,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:614</li>
+									<li>Defined in src/mod/ModRegistry.ts:626</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -402,7 +483,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:780</li>
+									<li>Defined in src/mod/ModRegistry.ts:792</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -436,7 +517,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:498</li>
+									<li>Defined in src/mod/ModRegistry.ts:510</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -474,7 +555,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:740</li>
+									<li>Defined in src/mod/ModRegistry.ts:752</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -508,7 +589,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:840</li>
+									<li>Defined in src/mod/ModRegistry.ts:852</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -543,7 +624,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:834</li>
+									<li>Defined in src/mod/ModRegistry.ts:846</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -572,7 +653,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:696</li>
+									<li>Defined in src/mod/ModRegistry.ts:708</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -604,7 +685,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:708</li>
+									<li>Defined in src/mod/ModRegistry.ts:720</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -636,7 +717,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:563</li>
+									<li>Defined in src/mod/ModRegistry.ts:575</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -674,7 +755,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:770</li>
+									<li>Defined in src/mod/ModRegistry.ts:782</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -708,7 +789,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:423</li>
+									<li>Defined in src/mod/ModRegistry.ts:435</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -746,7 +827,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:435</li>
+									<li>Defined in src/mod/ModRegistry.ts:447</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -784,7 +865,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:760</li>
+									<li>Defined in src/mod/ModRegistry.ts:772</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -818,7 +899,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:684</li>
+									<li>Defined in src/mod/ModRegistry.ts:696</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -852,7 +933,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:720</li>
+									<li>Defined in src/mod/ModRegistry.ts:732</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -884,7 +965,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:448</li>
+									<li>Defined in src/mod/ModRegistry.ts:460</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -915,7 +996,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:511</li>
+									<li>Defined in src/mod/ModRegistry.ts:523</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -953,7 +1034,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:485</li>
+									<li>Defined in src/mod/ModRegistry.ts:497</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -994,7 +1075,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:867</li>
+									<li>Defined in src/mod/ModRegistry.ts:920</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1029,7 +1110,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:730</li>
+									<li>Defined in src/mod/ModRegistry.ts:742</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1063,7 +1144,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:473</li>
+									<li>Defined in src/mod/ModRegistry.ts:485</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1101,7 +1182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:808</li>
+									<li>Defined in src/mod/ModRegistry.ts:820</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1135,7 +1216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:818</li>
+									<li>Defined in src/mod/ModRegistry.ts:830</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1169,7 +1250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:915</li>
+									<li>Defined in src/mod/ModRegistry.ts:969</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1207,7 +1288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:405</li>
+									<li>Defined in src/mod/ModRegistry.ts:417</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1238,7 +1319,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:524</li>
+									<li>Defined in src/mod/ModRegistry.ts:536</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1276,7 +1357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:461</li>
+									<li>Defined in src/mod/ModRegistry.ts:473</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1310,7 +1391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:537</li>
+									<li>Defined in src/mod/ModRegistry.ts:549</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1348,7 +1429,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:550</li>
+									<li>Defined in src/mod/ModRegistry.ts:562</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1382,7 +1463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:589</li>
+									<li>Defined in src/mod/ModRegistry.ts:601</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1420,7 +1501,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:601</li>
+									<li>Defined in src/mod/ModRegistry.ts:613</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1455,7 +1536,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:627</li>
+									<li>Defined in src/mod/ModRegistry.ts:639</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1493,7 +1574,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:798</li>
+									<li>Defined in src/mod/ModRegistry.ts:810</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1521,7 +1602,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/mod/ModRegistry.ts:789</li>
+									<li>Defined in src/mod/ModRegistry.ts:801</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1557,11 +1638,17 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
 						<a href="../interfaces/register.registrationmap.html" class="tsd-kind-icon">Registration<wbr>Map</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="register.html#extractregisteredtype" class="tsd-kind-icon">Extract<wbr>Registered<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="register.html#action" class="tsd-kind-icon">action</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="register.html#bindable" class="tsd-kind-icon">bindable</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="register.html#bulk" class="tsd-kind-icon">bulk</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="register.html#command" class="tsd-kind-icon">command</a>

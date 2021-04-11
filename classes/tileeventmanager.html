@@ -100,13 +100,17 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#cangather" class="tsd-kind-icon">can<wbr>Gather</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#canpickup" class="tsd-kind-icon">can<wbr>Pickup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#clearblood" class="tsd-kind-icon">clear<wbr>Blood</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#clearpuddles" class="tsd-kind-icon">clear<wbr>Puddles</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#containsdamagingtileevents" class="tsd-kind-icon">contains<wbr>Damaging<wbr>Tile<wbr>Events</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#createblood" class="tsd-kind-icon">create<wbr>Blood</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#createfake" class="tsd-kind-icon">create<wbr>Fake</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#fireoverflow" class="tsd-kind-icon">fire<wbr>Overflow</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#is" class="tsd-kind-icon">is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#geteventlisttranslation" class="tsd-kind-icon">get<wbr>Event<wbr>List<wbr>Translation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#geteventtranslations" class="tsd-kind-icon">get<wbr>Event<wbr>Translations</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#getpuddles" class="tsd-kind-icon">get<wbr>Puddles</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#moveexcrement" class="tsd-kind-icon">move<wbr>Excrement</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#remove" class="tsd-kind-icon">remove</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileeventmanager.html#updateall" class="tsd-kind-icon">update<wbr>All</a></li>
@@ -123,9 +127,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/itilemanagerevents.html" class="tsd-signature-type">ITileManagerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
+						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:259</li>
+							<li>Defined in src/event/EventEmitter.ts:287</li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:219</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:240</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -165,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:127</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:154</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -188,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:206</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:227</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -211,7 +215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:269</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:290</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -228,6 +232,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearpuddles" class="tsd-anchor"></a>
+					<h3>clear<wbr>Puddles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Puddles<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, executor<span class="tsd-signature-symbol">: </span><a href="npc.html" class="tsd-signature-type">NPC</a><span class="tsd-signature-symbol"> | </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/tile/TileEventManager.ts:310</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clears all the water puddles on a specified tile.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The point to check for water puddles at.</p>
+									</div>
+								</li>
+								<li>
+									<h5>executor: <a href="npc.html" class="tsd-signature-type">NPC</a><span class="tsd-signature-symbol"> | </span><a href="player.html" class="tsd-signature-type">Player</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The player to send the message to.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="containsdamagingtileevents" class="tsd-anchor"></a>
 					<h3>contains<wbr>Damaging<wbr>Tile<wbr>Events</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -237,7 +278,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:305</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:353</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -260,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:65</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:67</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -292,7 +333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:230</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:251</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -336,7 +377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:93</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:111</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -368,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:170</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:197</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -397,7 +438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:123</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:141</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -414,25 +455,124 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="is" class="tsd-anchor"></a>
-					<h3>is</h3>
+					<a name="geteventlisttranslation" class="tsd-anchor"></a>
+					<h3>get<wbr>Event<wbr>List<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>thing<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">thing</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">TileEvent</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Event<wbr>List<wbr>Translation<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:200</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:397</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>thing: <span class="tsd-signature-type">any</span></h5>
+									<h5>events: <a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">thing</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">TileEvent</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="geteventtranslations" class="tsd-anchor"></a>
+					<h3>get<wbr>Event<wbr>Translations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Event<wbr>Translations<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stream</span><span class="tsd-signature-symbol">&lt;</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/tile/TileEventManager.ts:376</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>events: <a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> article: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Stream</span><span class="tsd-signature-symbol">&lt;</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getname" class="tsd-anchor"></a>
+					<h3>get<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>typeOrEvent<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/tile/TileEventManager.ts:361</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>typeOrEvent: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showCount: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpuddles" class="tsd-anchor"></a>
+					<h3>get<wbr>Puddles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Puddles<span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/tile/TileEventManager.ts:150</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets an array of tile events that have the water property at a given tile.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>ITile that you want to look at.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="tileevent.html" class="tsd-signature-type">TileEvent</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>Array of TileEvent or undefined if no tile events have the water property at the given tile.</p>
 						</li>
 					</ul>
 				</section>
@@ -446,7 +586,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:284</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:332</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -469,7 +609,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:110</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:128</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -492,7 +632,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEventManager.ts:141</li>
+									<li>Defined in src/game/tile/TileEventManager.ts:168</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -532,6 +672,9 @@
 								<a href="tileeventmanager.html#clearblood" class="tsd-kind-icon">clear<wbr>Blood</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileeventmanager.html#clearpuddles" class="tsd-kind-icon">clear<wbr>Puddles</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileeventmanager.html#containsdamagingtileevents" class="tsd-kind-icon">contains<wbr>Damaging<wbr>Tile<wbr>Events</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -550,7 +693,16 @@
 								<a href="tileeventmanager.html#get" class="tsd-kind-icon">get</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="tileeventmanager.html#is" class="tsd-kind-icon">is</a>
+								<a href="tileeventmanager.html#geteventlisttranslation" class="tsd-kind-icon">get<wbr>Event<wbr>List<wbr>Translation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileeventmanager.html#geteventtranslations" class="tsd-kind-icon">get<wbr>Event<wbr>Translations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileeventmanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileeventmanager.html#getpuddles" class="tsd-kind-icon">get<wbr>Puddles</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileeventmanager.html#moveexcrement" class="tsd-kind-icon">move<wbr>Excrement</a>

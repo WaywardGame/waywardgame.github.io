@@ -81,9 +81,10 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/itileeventevents.html" class="tsd-signature-type">ITileEventEvents</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/ireferenceable.html" class="tsd-signature-type">IReferenceable</a></li>
 					<li><a href="../interfaces/iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/tileeventtype.html" class="tsd-signature-type">TileEventType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
-					<li><a href="../interfaces/itemperaturesource.html" class="tsd-signature-type">ITemperatureSource</a></li>
+					<li><a href="../modules/itemperaturesource.html" class="tsd-signature-type">ITemperatureSource</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -103,10 +104,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="tileevent.html#event" class="tsd-kind-icon">event</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#fromx" class="tsd-kind-icon">fromX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#fromy" class="tsd-kind-icon">fromY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#fuel" class="tsd-kind-icon">fuel</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#gfx" class="tsd-kind-icon">gfx</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#maxdur" class="tsd-kind-icon">max<wbr>Dur</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#mindur" class="tsd-kind-icon">min<wbr>Dur</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#objecttype" class="tsd-kind-icon">object<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#referenceid" class="tsd-kind-icon">reference<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#renamed" class="tsd-kind-icon">renamed</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#spread" class="tsd-kind-icon">spread</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileevent.html#step" class="tsd-kind-icon">step</a></li>
@@ -127,6 +131,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileevent.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileevent.html#moveto" class="tsd-kind-icon">move<wbr>To</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileevent.html#removefromtile" class="tsd-kind-icon">remove<wbr>From<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileevent.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileevent.html#updatefire" class="tsd-kind-icon">update<wbr>Fire</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tileevent.html#is" class="tsd-kind-icon">is</a></li>
 							</ul>
@@ -146,7 +151,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:58</li>
+									<li>Defined in src/game/tile/TileEvent.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:47</li>
+							<li>Defined in src/game/tile/TileEvent.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -187,9 +192,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/itileeventevents.html" class="tsd-signature-type">ITileEventEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
+						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:259</li>
+							<li>Defined in src/event/EventEmitter.ts:287</li>
 						</ul>
 					</aside>
 				</section>
@@ -199,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">fromX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:48</li>
+							<li>Defined in src/game/tile/TileEvent.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -209,9 +214,25 @@
 					<div class="tsd-signature tsd-kind-icon">fromY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:49</li>
+							<li>Defined in src/game/tile/TileEvent.ts:58</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fuel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fuel</h3>
+					<div class="tsd-signature tsd-kind-icon">fuel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/TileEvent.ts:69</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>For use with the Fire TileEvent to check if it has a fuel source and should create ash by default.
+							Set to 0 to stop all ash production.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="gfx" class="tsd-anchor"></a>
@@ -219,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">gfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:50</li>
+							<li>Defined in src/game/tile/TileEvent.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +251,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:39</li>
+							<li>Defined in src/game/tile/TileEvent.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +261,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Dur<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:51</li>
+							<li>Defined in src/game/tile/TileEvent.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -250,7 +271,29 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Dur<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:52</li>
+							<li>Defined in src/game/tile/TileEvent.ts:61</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="objecttype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> object<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">object<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/creationid.html" class="tsd-signature-type">CreationId</a></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#objecttype">objectType</a></p>
+						<ul>
+							<li>Defined in src/game/tile/TileEvent.ts:44</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="referenceid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reference<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ireferenceable.html">IReferenceable</a>.<a href="../interfaces/ireferenceable.html#referenceid">referenceId</a></p>
+						<ul>
+							<li>Defined in src/game/tile/TileEvent.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -261,7 +304,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:45</li>
+							<li>Defined in src/game/tile/TileEvent.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -271,7 +314,7 @@
 					<div class="tsd-signature tsd-kind-icon">spread<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:53</li>
+							<li>Defined in src/game/tile/TileEvent.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -281,7 +324,7 @@
 					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:54</li>
+							<li>Defined in src/game/tile/TileEvent.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -292,7 +335,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:38</li>
+							<li>Defined in src/game/tile/TileEvent.ts:46</li>
 						</ul>
 					</aside>
 				</section>
@@ -303,7 +346,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#x">x</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:42</li>
+							<li>Defined in src/game/tile/TileEvent.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -314,7 +357,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#y">y</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:43</li>
+							<li>Defined in src/game/tile/TileEvent.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -325,7 +368,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#z">z</a></p>
 						<ul>
-							<li>Defined in src/tile/TileEvent.ts:41</li>
+							<li>Defined in src/game/tile/TileEvent.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -342,7 +385,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:140</li>
+									<li>Defined in src/game/tile/TileEvent.ts:161</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -365,7 +408,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:99</li>
+									<li>Defined in src/game/tile/TileEvent.ts:119</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itileeventdescription.html" class="tsd-signature-type">ITileEventDescription</a></h4>
@@ -382,7 +425,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:166</li>
+									<li>Defined in src/game/tile/TileEvent.ts:187</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -399,15 +442,24 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:107</li>
+									<li>Defined in src/game/tile/TileEvent.ts:127</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
 						</li>
 					</ul>
@@ -421,9 +473,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itemperaturesource.html">ITemperatureSource</a>.<a href="../interfaces/itemperaturesource.html#getproducedtemperature">getProducedTemperature</a></p>
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:115</li>
+									<li>Defined in src/game/tile/TileEvent.ts:136</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
@@ -440,7 +491,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:111</li>
+									<li>Defined in src/game/tile/TileEvent.ts:132</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
@@ -457,7 +508,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:127</li>
+									<li>Defined in src/game/tile/TileEvent.ts:148</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -486,7 +537,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:148</li>
+									<li>Defined in src/game/tile/TileEvent.ts:169</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -500,18 +551,41 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updatefire" class="tsd-anchor"></a>
-					<h3>update<wbr>Fire</h3>
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3>to<wbr>String</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Fire<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:119</li>
+									<li>Defined in src/game/tile/TileEvent.ts:115</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatefire" class="tsd-anchor"></a>
+					<h3>update<wbr>Fire</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Fire<span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/tile/TileEvent.ts:140</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -526,7 +600,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/tile/TileEvent.ts:34</li>
+									<li>Defined in src/game/tile/TileEvent.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -572,6 +646,9 @@
 								<a href="tileevent.html#fromy" class="tsd-kind-icon">fromY</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="tileevent.html#fuel" class="tsd-kind-icon">fuel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="tileevent.html#gfx" class="tsd-kind-icon">gfx</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -582,6 +659,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="tileevent.html#mindur" class="tsd-kind-icon">min<wbr>Dur</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="tileevent.html#objecttype" class="tsd-kind-icon">object<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="tileevent.html#referenceid" class="tsd-kind-icon">reference<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="tileevent.html#renamed" class="tsd-kind-icon">renamed</a>
@@ -627,6 +710,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileevent.html#removefromtile" class="tsd-kind-icon">remove<wbr>From<wbr>Tile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileevent.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileevent.html#updatefire" class="tsd-kind-icon">update<wbr>Fire</a>

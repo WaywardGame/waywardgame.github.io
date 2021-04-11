@@ -80,8 +80,11 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#init" class="tsd-kind-icon">init</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#recheckhascontent" class="tsd-kind-icon">recheck<wbr>Has<wbr>Content</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#refresh" class="tsd-kind-icon">refresh</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#refreshdisplaylevel" class="tsd-kind-icon">refresh<wbr>Display<wbr>Level</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#updatedisplaylevel" class="tsd-kind-icon">update<wbr>Display<wbr>Level</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,12 +102,34 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:53</li>
+									<li>Defined in src/game/inspection/InfoProvider.ts:28</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Should be emitted when the info provider is initialized.</p>
+									<p>Should be emitted when the info provider is starting to initialize its component.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="recheckhascontent" class="tsd-anchor"></a>
+					<h3>recheck<wbr>Has<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">recheck<wbr>Has<wbr>Content<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/inspection/InfoProvider.ts:48</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Should be emitted when the info provider has detected an update and it needs to check whether to have contents.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -121,12 +146,34 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:57</li>
+									<li>Defined in src/game/inspection/InfoProvider.ts:32</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Should be emitted when the info provider has detected an update and its contents will need to be refreshed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="refreshdisplaylevel" class="tsd-anchor"></a>
+					<h3>refresh<wbr>Display<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">refresh<wbr>Display<wbr>Level<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/inspection/InfoProvider.ts:44</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Emitted when the info provider&#39;s display level is overridden.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -143,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:61</li>
+									<li>Defined in src/game/inspection/InfoProvider.ts:36</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -151,6 +198,40 @@
 									<p>Should be emitted when the info provider should be removed.</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="updatedisplaylevel" class="tsd-anchor"></a>
+					<h3>update<wbr>Display<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Display<wbr>Level<span class="tsd-signature-symbol">(</span>displayLevels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/infodisplaylevel.html" class="tsd-signature-type">InfoDisplayLevel</a><span class="tsd-signature-symbol">&gt;</span>, classes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>, oldClasses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/inspection/InfoProvider.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Should be emitted when the info provider&#39;s display level changes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>displayLevels: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/infodisplaylevel.html" class="tsd-signature-type">InfoDisplayLevel</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>classes: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>oldClasses: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
@@ -176,10 +257,19 @@
 								<a href="iinfoproviderevents.html#init" class="tsd-kind-icon">init</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#recheckhascontent" class="tsd-kind-icon">recheck<wbr>Has<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iinfoproviderevents.html#refresh" class="tsd-kind-icon">refresh</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#refreshdisplaylevel" class="tsd-kind-icon">refresh<wbr>Display<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iinfoproviderevents.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#updatedisplaylevel" class="tsd-kind-icon">update<wbr>Display<wbr>Level</a>
 							</li>
 						</ul>
 					</li>

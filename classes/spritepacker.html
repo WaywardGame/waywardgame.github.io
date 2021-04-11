@@ -107,17 +107,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Packer<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nullSprite<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, padding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, packLargeToSmall<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spritepacker.html" class="tsd-signature-type">SpritePacker</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Packer<span class="tsd-signature-symbol">(</span>spritePack<span class="tsd-signature-symbol">: </span><a href="spritepack.html" class="tsd-signature-type">SpritePack</a>, gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nullSprite<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, padding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, packLargeToSmall<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spritepacker.html" class="tsd-signature-type">SpritePacker</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpritePacker.ts:104</li>
+									<li>Defined in src/renderer/SpritePacker.ts:107</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>spritePack: <a href="spritepack.html" class="tsd-signature-type">SpritePack</a></h5>
+								</li>
 								<li>
 									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
 								</li>
@@ -147,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">inverse<wbr>Texture<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="vector2.html" class="tsd-signature-type">Vector2</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:95</li>
+							<li>Defined in src/renderer/SpritePacker.ts:98</li>
 						</ul>
 					</aside>
 				</section>
@@ -157,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:108</li>
+							<li>Defined in src/renderer/SpritePacker.ts:112</li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">texture<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpritePacker.ts:94</li>
+							<li>Defined in src/renderer/SpritePacker.ts:97</li>
 						</ul>
 					</aside>
 				</section>
@@ -178,13 +181,13 @@
 					<a name="addsprite" class="tsd-anchor"></a>
 					<h3>add<wbr>Sprite</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Sprite<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, imageElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Sprite<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, spriteImage<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ispriteimage.html" class="tsd-signature-type">ISpriteImage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpritePacker.ts:164</li>
+									<li>Defined in src/renderer/SpritePacker.ts:168</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -193,11 +196,11 @@
 									<h5>src: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>callback: <span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, imageElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, spriteImage<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ispriteimage.html" class="tsd-signature-type">ISpriteImage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, imageElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>si<span class="tsd-signature-symbol">: </span><a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a>, spriteImage<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ispriteimage.html" class="tsd-signature-type">ISpriteImage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
@@ -207,7 +210,7 @@
 															<h5>si: <a href="../interfaces/ispriteinfo.html" class="tsd-signature-type">ISpriteInfo</a></h5>
 														</li>
 														<li>
-															<h5><span class="tsd-flag ts-flagOptional">Optional</span> imageElement: <span class="tsd-signature-type">HTMLImageElement</span></h5>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> spriteImage: <a href="../interfaces/ispriteimage.html" class="tsd-signature-type">ISpriteImage</a></h5>
 														</li>
 													</ul>
 													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -231,7 +234,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpritePacker.ts:145</li>
+									<li>Defined in src/renderer/SpritePacker.ts:149</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -248,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpritePacker.ts:151</li>
+									<li>Defined in src/renderer/SpritePacker.ts:155</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>

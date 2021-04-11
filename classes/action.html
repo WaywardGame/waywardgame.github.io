@@ -57,7 +57,7 @@
 					<a href="action.html">Action</a>
 				</li>
 			</ul>
-			<h1>Class Action&lt;A, E, R&gt;</h1>
+			<h1>Class Action&lt;A, E, R, AV&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,13 +68,16 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>A<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/actionargument.html" class="tsd-signature-type">ActionArgument</a><span class="tsd-signature-symbol"> | </span><a href="../enums/actionargument.html" class="tsd-signature-type">ActionArgument</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/actionargument.html" class="tsd-signature-type">ActionArgument</a><span class="tsd-signature-symbol"> | </span><a href="../enums/actionargument.html" class="tsd-signature-type">ActionArgument</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 					<li>
 						<h4>E<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a></h4>
 					</li>
 					<li>
 						<h4>R</h4>
+					</li>
+					<li>
+						<h4>AV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -89,7 +92,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/iactiondescription.html" class="tsd-signature-type">IActionDescription</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/iactiondescription.html" class="tsd-signature-type">IActionDescription</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -107,6 +110,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#argumenttypes" class="tsd-kind-icon">argument<wbr>Types</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#confirmer" class="tsd-kind-icon">confirmer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#flags" class="tsd-kind-icon">flags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#handler" class="tsd-kind-icon">handler</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#preexecutionhandler" class="tsd-kind-icon">pre<wbr>Execution<wbr>Handler</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="action.html#usability" class="tsd-kind-icon">usability</a></li>
@@ -117,7 +121,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#clone" class="tsd-kind-icon">clone</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#execute" class="tsd-kind-icon">execute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#hasflag" class="tsd-kind-icon">has<wbr>Flag</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#setconfirmer" class="tsd-kind-icon">set<wbr>Confirmer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#setflags" class="tsd-kind-icon">set<wbr>Flags</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="action.html#sethandler" class="tsd-kind-icon">set<wbr>Handler</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="action.html#setpreexecutionhandler" class="tsd-kind-icon">set<wbr>Pre<wbr>Execution<wbr>Handler</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="action.html#setusableby" class="tsd-kind-icon">set<wbr>Usable<wbr>By</a></li>
@@ -139,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:25</li>
+									<li>Defined in src/game/entity/action/Action.ts:27</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,29 +169,45 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#argumenttypes">argumentTypes</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:20</li>
+							<li>Defined in src/game/entity/action/Action.ts:21</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="confirmer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> confirmer</h3>
-					<div class="tsd-signature tsd-kind-icon">confirmer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+					<div class="tsd-signature tsd-kind-icon">confirmer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#confirmer">confirmer</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:25</li>
+							<li>Defined in src/game/entity/action/Action.ts:27</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="flags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> flags</h3>
+					<div class="tsd-signature tsd-kind-icon">flags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#flags">flags</a></p>
+						<ul>
+							<li>Defined in src/game/entity/action/Action.ts:23</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="handler" class="tsd-anchor"></a>
 					<h3>handler</h3>
-					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">R</span></div>
+					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">R</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#handler">handler</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:24</li>
+							<li>Defined in src/game/entity/action/Action.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -192,7 +215,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -202,7 +225,7 @@
 												<h5>actionApi: <a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h5>
 											</li>
 											<li>
-												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h5>
+												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">AV</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span></h4>
@@ -215,11 +238,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="preexecutionhandler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pre<wbr>Execution<wbr>Handler</h3>
-					<div class="tsd-signature tsd-kind-icon">pre<wbr>Execution<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></div>
+					<div class="tsd-signature tsd-kind-icon">pre<wbr>Execution<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#preexecutionhandler">preExecutionHandler</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:23</li>
+							<li>Defined in src/game/entity/action/Action.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +253,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#usability">usability</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:21</li>
+							<li>Defined in src/game/entity/action/Action.ts:22</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -246,7 +269,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#validexecutors">validExecutors</a></p>
 						<ul>
-							<li>Defined in src/entity/action/Action.ts:22</li>
+							<li>Defined in src/game/entity/action/Action.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -257,14 +280,14 @@
 					<a name="clone" class="tsd-anchor"></a>
 					<h3>clone</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">clone<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="action.html" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">clone<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iactiondescription.html" class="tsd-signature-type">IActionDescription</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#clone">clone</a></p>
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:92</li>
+									<li>Defined in src/game/entity/action/Action.ts:120</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -272,7 +295,85 @@
 									<p>Creates an identical clone of this action.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="action.html" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iactiondescription.html" class="tsd-signature-type">IActionDescription</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="execute" class="tsd-anchor"></a>
+					<h3>execute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#execute">execute</a></p>
+								<ul>
+									<li>Defined in src/game/entity/action/Action.ts:33</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>actionApi: <a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">AV</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#execute">execute</a></p>
+								<ul>
+									<li>Defined in src/game/entity/action/Action.ts:34</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>executor: <span class="tsd-signature-type">E</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">AV</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="hasflag" class="tsd-anchor"></a>
+					<h3>has<wbr>Flag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Flag<span class="tsd-signature-symbol">(</span>flag<span class="tsd-signature-symbol">: </span><a href="../enums/actionflag.html" class="tsd-signature-type">ActionFlag</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iactiondescription.html">IActionDescription</a>.<a href="../interfaces/iactiondescription.html#hasflag">hasFlag</a></p>
+								<ul>
+									<li>Defined in src/game/entity/action/Action.ts:113</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if a flag is set</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>flag: <a href="../enums/actionflag.html" class="tsd-signature-type">ActionFlag</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Flag to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -280,13 +381,13 @@
 					<a name="setconfirmer" class="tsd-anchor"></a>
 					<h3>set<wbr>Confirmer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Confirmer<span class="tsd-signature-symbol">(</span>confirmer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Confirmer<span class="tsd-signature-symbol">(</span>confirmer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:55</li>
+									<li>Defined in src/game/entity/action/Action.ts:64</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -301,11 +402,11 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>confirmer: <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>confirmer: <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
@@ -315,7 +416,7 @@
 															<h5>actionApi: <a href="../interfaces/iactionconfirmerapi.html" class="tsd-signature-type">IActionConfirmerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h5>
 														</li>
 														<li>
-															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h5>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">AV</span></h5>
 														</li>
 													</ul>
 													<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -330,6 +431,34 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setflags" class="tsd-anchor"></a>
+					<h3>set<wbr>Flags</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Flags<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>flags<span class="tsd-signature-symbol">: </span><a href="../enums/actionflag.html" class="tsd-signature-type">ActionFlag</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/entity/action/Action.ts:93</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets additional flags for this action.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>flags: <a href="../enums/actionflag.html" class="tsd-signature-type">ActionFlag</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="sethandler" class="tsd-anchor"></a>
 					<h3>set<wbr>Handler</h3>
@@ -340,7 +469,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:65</li>
+									<li>Defined in src/game/entity/action/Action.ts:74</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -352,7 +481,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>H<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
+									<h4>H<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionhandlerapi.html" class="tsd-signature-type">IActionHandlerApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -369,13 +498,13 @@
 					<a name="setpreexecutionhandler" class="tsd-anchor"></a>
 					<h3>set<wbr>Pre<wbr>Execution<wbr>Handler</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Pre<wbr>Execution<wbr>Handler<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Pre<wbr>Execution<wbr>Handler<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:39</li>
+									<li>Defined in src/game/entity/action/Action.ts:48</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -388,11 +517,11 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>handler: <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<h5>handler: <span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>actionApi<span class="tsd-signature-symbol">: </span><a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
@@ -402,7 +531,7 @@
 															<h5>actionApi: <a href="../interfaces/iactionapi.html" class="tsd-signature-type">IActionApi</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h5>
 														</li>
 														<li>
-															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <a href="../globals.html#actionargumenttupletypes" class="tsd-signature-type">ActionArgumentTupleTypes</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h5>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">AV</span></h5>
 														</li>
 													</ul>
 													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -427,7 +556,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:84</li>
+									<li>Defined in src/game/entity/action/Action.ts:104</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -461,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/action/Action.ts:73</li>
+									<li>Defined in src/game/entity/action/Action.ts:82</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -506,6 +635,9 @@
 								<a href="action.html#confirmer" class="tsd-kind-icon">confirmer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="action.html#flags" class="tsd-kind-icon">flags</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="action.html#handler" class="tsd-kind-icon">handler</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -521,7 +653,16 @@
 								<a href="action.html#clone" class="tsd-kind-icon">clone</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="action.html#execute" class="tsd-kind-icon">execute</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="action.html#hasflag" class="tsd-kind-icon">has<wbr>Flag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="action.html#setconfirmer" class="tsd-kind-icon">set<wbr>Confirmer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="action.html#setflags" class="tsd-kind-icon">set<wbr>Flags</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 								<a href="action.html#sethandler" class="tsd-kind-icon">set<wbr>Handler</a>

@@ -72,12 +72,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/itileatlas.html" class="tsd-signature-type">ITileAtlas</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -88,9 +82,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#doodaditems" class="tsd-kind-icon">doodad<wbr>Items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#doodads" class="tsd-kind-icon">doodads</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#mounds" class="tsd-kind-icon">mounds</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#terrain" class="tsd-kind-icon">terrain</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#terraindecoration" class="tsd-kind-icon">terrain<wbr>Decoration</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="tileatlas.html#terraintilled" class="tsd-kind-icon">terrain<wbr>Tilled</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -98,6 +90,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#generatelookups" class="tsd-kind-icon">generate<wbr>Lookups</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#getbasewatertype" class="tsd-kind-icon">get<wbr>Base<wbr>Water<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#getterrain" class="tsd-kind-icon">get<wbr>Terrain</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#getterraintilled" class="tsd-kind-icon">get<wbr>Terrain<wbr>Tilled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#isfloor" class="tsd-kind-icon">is<wbr>Floor</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#isfreezingwater" class="tsd-kind-icon">is<wbr>Freezing<wbr>Water</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#isfreshwater" class="tsd-kind-icon">is<wbr>Fresh<wbr>Water</a></li>
@@ -108,6 +102,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#isore" class="tsd-kind-icon">is<wbr>Ore</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#iswater" class="tsd-kind-icon">is<wbr>Water</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#iswaterorice" class="tsd-kind-icon">is<wbr>Water<wbr>OrIce</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#setterrain" class="tsd-kind-icon">set<wbr>Terrain</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#setterraintilled" class="tsd-kind-icon">set<wbr>Terrain<wbr>Tilled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tileatlas.html#shouldrenderovermountaintypes" class="tsd-kind-icon">should<wbr>Render<wbr>Over<wbr>Mountain<wbr>Types</a></li>
 							</ul>
 						</section>
@@ -121,7 +117,6 @@
 					<h3>doodad<wbr>Items</h3>
 					<div class="tsd-signature tsd-kind-icon">doodad<wbr>Items<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">, </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#doodaditems">doodadItems</a></p>
 						<ul>
 							<li>Defined in src/renderer/TileAtlas.ts:134</li>
 						</ul>
@@ -132,7 +127,6 @@
 					<h3>doodads</h3>
 					<div class="tsd-signature tsd-kind-icon">doodads<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol">, </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#doodads">doodads</a></p>
 						<ul>
 							<li>Defined in src/renderer/TileAtlas.ts:133</li>
 						</ul>
@@ -143,20 +137,8 @@
 					<h3>mounds</h3>
 					<div class="tsd-signature tsd-kind-icon">mounds<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">, </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#mounds">mounds</a></p>
 						<ul>
 							<li>Defined in src/renderer/TileAtlas.ts:135</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="terrain" class="tsd-anchor"></a>
-					<h3>terrain</h3>
-					<div class="tsd-signature tsd-kind-icon">terrain<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">, </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#terrain">terrain</a></p>
-						<ul>
-							<li>Defined in src/renderer/TileAtlas.ts:130</li>
 						</ul>
 					</aside>
 				</section>
@@ -165,20 +147,8 @@
 					<h3>terrain<wbr>Decoration</h3>
 					<div class="tsd-signature tsd-kind-icon">terrain<wbr>Decoration<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/terraindecoration.html" class="tsd-signature-type">TerrainDecoration</a><span class="tsd-signature-symbol">, </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#terraindecoration">terrainDecoration</a></p>
 						<ul>
 							<li>Defined in src/renderer/TileAtlas.ts:132</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="terraintilled" class="tsd-anchor"></a>
-					<h3>terrain<wbr>Tilled</h3>
-					<div class="tsd-signature tsd-kind-icon">terrain<wbr>Tilled<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">, </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#terraintilled">terrainTilled</a></p>
-						<ul>
-							<li>Defined in src/renderer/TileAtlas.ts:131</li>
 						</ul>
 					</aside>
 				</section>
@@ -194,9 +164,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#generatelookups">generateLookups</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:146</li>
+									<li>Defined in src/renderer/TileAtlas.ts:162</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -213,7 +182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:242</li>
+									<li>Defined in src/renderer/TileAtlas.ts:258</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -227,6 +196,58 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getterrain" class="tsd-anchor"></a>
+					<h3>get<wbr>Terrain</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Terrain<span class="tsd-signature-symbol">(</span>terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, biomeType<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/TileAtlas.ts:146</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
+								</li>
+								<li>
+									<h5>biomeType: <a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getterraintilled" class="tsd-anchor"></a>
+					<h3>get<wbr>Terrain<wbr>Tilled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Terrain<wbr>Tilled<span class="tsd-signature-symbol">(</span>terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, biomeType<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/TileAtlas.ts:150</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
+								</li>
+								<li>
+									<h5>biomeType: <a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isfloor" class="tsd-anchor"></a>
 					<h3>is<wbr>Floor</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -235,9 +256,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#isfloor">isFloor</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:233</li>
+									<li>Defined in src/renderer/TileAtlas.ts:249</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -260,7 +280,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:221</li>
+									<li>Defined in src/renderer/TileAtlas.ts:237</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -283,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:229</li>
+									<li>Defined in src/renderer/TileAtlas.ts:245</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -306,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:225</li>
+									<li>Defined in src/renderer/TileAtlas.ts:241</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -328,9 +348,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#islava">isLava</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:209</li>
+									<li>Defined in src/renderer/TileAtlas.ts:225</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -352,9 +371,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#ismountain">isMountain</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:197</li>
+									<li>Defined in src/renderer/TileAtlas.ts:213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -376,9 +394,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#ismountainground">isMountainGround</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:201</li>
+									<li>Defined in src/renderer/TileAtlas.ts:217</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -400,9 +417,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#isore">isOre</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:205</li>
+									<li>Defined in src/renderer/TileAtlas.ts:221</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -425,7 +441,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:217</li>
+									<li>Defined in src/renderer/TileAtlas.ts:233</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -447,9 +463,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/itileatlas.html">ITileAtlas</a>.<a href="../interfaces/itileatlas.html#iswaterorice">isWaterOrIce</a></p>
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:213</li>
+									<li>Defined in src/renderer/TileAtlas.ts:229</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -463,6 +478,64 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setterrain" class="tsd-anchor"></a>
+					<h3>set<wbr>Terrain</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Terrain<span class="tsd-signature-symbol">(</span>terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, terrainTileInfo<span class="tsd-signature-symbol">: </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a>, biomeType<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/TileAtlas.ts:154</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
+								</li>
+								<li>
+									<h5>terrainTileInfo: <a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></h5>
+								</li>
+								<li>
+									<h5>biomeType: <a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setterraintilled" class="tsd-anchor"></a>
+					<h3>set<wbr>Terrain<wbr>Tilled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Terrain<wbr>Tilled<span class="tsd-signature-symbol">(</span>terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, terrainTileInfo<span class="tsd-signature-symbol">: </span><a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a>, biomeType<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/TileAtlas.ts:158</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
+								</li>
+								<li>
+									<h5>terrainTileInfo: <a href="terraintileinfo.html" class="tsd-signature-type">TerrainTileInfo</a></h5>
+								</li>
+								<li>
+									<h5>biomeType: <a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="shouldrenderovermountaintypes" class="tsd-anchor"></a>
 					<h3>should<wbr>Render<wbr>Over<wbr>Mountain<wbr>Types</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -472,7 +545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileAtlas.ts:238</li>
+									<li>Defined in src/renderer/TileAtlas.ts:254</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -512,19 +585,19 @@
 								<a href="tileatlas.html#mounds" class="tsd-kind-icon">mounds</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="tileatlas.html#terrain" class="tsd-kind-icon">terrain</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="tileatlas.html#terraindecoration" class="tsd-kind-icon">terrain<wbr>Decoration</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="tileatlas.html#terraintilled" class="tsd-kind-icon">terrain<wbr>Tilled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileatlas.html#generatelookups" class="tsd-kind-icon">generate<wbr>Lookups</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileatlas.html#getbasewatertype" class="tsd-kind-icon">get<wbr>Base<wbr>Water<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileatlas.html#getterrain" class="tsd-kind-icon">get<wbr>Terrain</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileatlas.html#getterraintilled" class="tsd-kind-icon">get<wbr>Terrain<wbr>Tilled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileatlas.html#isfloor" class="tsd-kind-icon">is<wbr>Floor</a>
@@ -555,6 +628,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileatlas.html#iswaterorice" class="tsd-kind-icon">is<wbr>Water<wbr>OrIce</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileatlas.html#setterrain" class="tsd-kind-icon">set<wbr>Terrain</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tileatlas.html#setterraintilled" class="tsd-kind-icon">set<wbr>Terrain<wbr>Tilled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tileatlas.html#shouldrenderovermountaintypes" class="tsd-kind-icon">should<wbr>Render<wbr>Over<wbr>Mountain<wbr>Types</a>

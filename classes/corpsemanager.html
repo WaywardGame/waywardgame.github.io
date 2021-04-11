@@ -100,8 +100,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#getcorpselisttranslation" class="tsd-kind-icon">get<wbr>Corpse<wbr>List<wbr>Translation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#getcorpsetranslations" class="tsd-kind-icon">get<wbr>Corpse<wbr>Translations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#getresources" class="tsd-kind-icon">get<wbr>Resources</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#is" class="tsd-kind-icon">is</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#remove" class="tsd-kind-icon">remove</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="corpsemanager.html#updateall" class="tsd-kind-icon">update<wbr>All</a></li>
 							</ul>
@@ -117,9 +115,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/icorpsemanagerevents.html" class="tsd-signature-type">ICorpseManagerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
+						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:259</li>
+							<li>Defined in src/event/EventEmitter.ts:287</li>
 						</ul>
 					</aside>
 				</section>
@@ -130,13 +128,13 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, decay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, aberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, qualityBonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, decay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, aberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, qualityBonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:41</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -166,7 +164,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> qualityBonus: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -174,19 +172,19 @@
 					<a name="getcorpselisttranslation" class="tsd-anchor"></a>
 					<h3>get<wbr>Corpse<wbr>List<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Corpse<wbr>List<wbr>Translation<span class="tsd-signature-symbol">(</span>corpses<span class="tsd-signature-symbol">: </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Corpse<wbr>List<wbr>Translation<span class="tsd-signature-symbol">(</span>corpses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:236</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:154</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>corpses: <a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>corpses: <span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
@@ -203,19 +201,19 @@
 					<a name="getcorpsetranslations" class="tsd-anchor"></a>
 					<h3>get<wbr>Corpse<wbr>Translations</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Corpse<wbr>Translations<span class="tsd-signature-symbol">(</span>corpses<span class="tsd-signature-symbol">: </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stream</span><span class="tsd-signature-symbol">&lt;</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Corpse<wbr>Translations<span class="tsd-signature-symbol">(</span>corpses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">[]</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">?: </span><a href="../enums/textcontext.html" class="tsd-signature-type">TextContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stream</span><span class="tsd-signature-symbol">&lt;</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:211</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:129</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>corpses: <a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>corpses: <span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> article: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
@@ -232,19 +230,19 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>typeOrCorpse<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>typeOrCorpse<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Corpse</span>, article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:194</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:109</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>typeOrCorpse: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a></h5>
+									<h5>typeOrCorpse: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Corpse</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
@@ -261,71 +259,22 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getresources" class="tsd-anchor"></a>
-					<h3>get<wbr>Resources</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Resources<span class="tsd-signature-symbol">(</span>corpse<span class="tsd-signature-symbol">: </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a>, clientSide<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:140</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>corpse: <a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientSide: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="is" class="tsd-anchor"></a>
-					<h3>is</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>thing<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">thing</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ICorpse</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:241</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>thing: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">thing</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ICorpse</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>corpse<span class="tsd-signature-symbol">: </span><a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>corpse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Corpse</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:170</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:85</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>corpse: <a href="../interfaces/icorpse.html" class="tsd-signature-type">ICorpse</a></h5>
+									<h5>corpse: <span class="tsd-signature-type">Corpse</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -342,7 +291,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/entity/creature/corpse/CorpseManager.ts:92</li>
+									<li>Defined in src/game/entity/creature/corpse/CorpseManager.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -380,12 +329,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="corpsemanager.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="corpsemanager.html#getresources" class="tsd-kind-icon">get<wbr>Resources</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="corpsemanager.html#is" class="tsd-kind-icon">is</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="corpsemanager.html#remove" class="tsd-kind-icon">remove</a>

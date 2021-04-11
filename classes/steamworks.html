@@ -137,6 +137,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#incrementstat" class="tsd-kind-icon">increment<wbr>Stat</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#isabsolutepath" class="tsd-kind-icon">is<wbr>Absolute<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#iscontenttracingrecording" class="tsd-kind-icon">is<wbr>Content<wbr>Tracing<wbr>Recording</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#isdedicatedserver" class="tsd-kind-icon">is<wbr>Dedicated<wbr>Server</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#iselectron" class="tsd-kind-icon">is<wbr>Electron</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#isgreenworksenabled" class="tsd-kind-icon">is<wbr>Greenworks<wbr>Enabled</a></li>
@@ -156,6 +157,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#onunload" class="tsd-kind-icon">on<wbr>Unload</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#openinvitedialog" class="tsd-kind-icon">open<wbr>Invite<wbr>Dialog</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#openlogsfolder" class="tsd-kind-icon">open<wbr>Logs<wbr>Folder</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#openmodfolder" class="tsd-kind-icon">open<wbr>Mod<wbr>Folder</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#openmodsfolder" class="tsd-kind-icon">open<wbr>Mods<wbr>Folder</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#opensavefolder" class="tsd-kind-icon">open<wbr>Save<wbr>Folder</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#openurl" class="tsd-kind-icon">open<wbr>Url</a></li>
@@ -173,6 +175,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#setupmultiplayerlog" class="tsd-kind-icon">setup<wbr>Multiplayer<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#startplaytimetracking" class="tsd-kind-icon">start<wbr>Playtime<wbr>Tracking</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#stopplaytimetracking" class="tsd-kind-icon">stop<wbr>Playtime<wbr>Tracking</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#togglecontenttracingrecording" class="tsd-kind-icon">toggle<wbr>Content<wbr>Tracing<wbr>Recording</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#toggledevelopertools" class="tsd-kind-icon">toggle<wbr>Developer<wbr>Tools</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="steamworks.html#updatediscordpresence" class="tsd-kind-icon">update<wbr>Discord<wbr>Presence</a></li>
@@ -190,9 +193,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/isteamworksevents.html" class="tsd-signature-type">ISteamworksEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="corpsemanager.html">CorpseManager</a>.<a href="corpsemanager.html#event">event</a></p>
+						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:259</li>
+							<li>Defined in src/event/EventEmitter.ts:287</li>
 						</ul>
 					</aside>
 				</section>
@@ -209,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:191</li>
+									<li>Defined in src/steamworks/Steamworks.ts:196</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -229,7 +232,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:576</li>
+									<li>Defined in src/steamworks/Steamworks.ts:615</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -246,7 +249,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:208</li>
+									<li>Defined in src/steamworks/Steamworks.ts:213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -263,7 +266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:882</li>
+									<li>Defined in src/steamworks/Steamworks.ts:921</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,7 +289,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:707</li>
+									<li>Defined in src/steamworks/Steamworks.ts:746</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -309,7 +312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1087</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -335,7 +338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1236</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1293</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -358,7 +361,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:460</li>
+									<li>Defined in src/steamworks/Steamworks.ts:471</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -375,7 +378,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1384</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1441</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iremotefile.html" class="tsd-signature-type">IRemoteFile</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -392,7 +395,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:780</li>
+									<li>Defined in src/steamworks/Steamworks.ts:819</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -418,7 +421,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:238</li>
+									<li>Defined in src/steamworks/Steamworks.ts:243</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -441,7 +444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:254</li>
+									<li>Defined in src/steamworks/Steamworks.ts:259</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -464,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:508</li>
+									<li>Defined in src/steamworks/Steamworks.ts:519</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -481,7 +484,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:512</li>
+									<li>Defined in src/steamworks/Steamworks.ts:523</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -498,7 +501,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:274</li>
+									<li>Defined in src/steamworks/Steamworks.ts:279</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idedicatedserverinfo.html" class="tsd-signature-type">IDedicatedServerInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -515,7 +518,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:500</li>
+									<li>Defined in src/steamworks/Steamworks.ts:511</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isteamfriend.html" class="tsd-signature-type">ISteamFriend</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -532,7 +535,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:536</li>
+									<li>Defined in src/steamworks/Steamworks.ts:547</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -555,7 +558,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:734</li>
+									<li>Defined in src/steamworks/Steamworks.ts:773</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -578,7 +581,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:699</li>
+									<li>Defined in src/steamworks/Steamworks.ts:738</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -595,7 +598,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:759</li>
+									<li>Defined in src/steamworks/Steamworks.ts:798</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isteamfriend.html" class="tsd-signature-type">ISteamFriend</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -612,7 +615,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:751</li>
+									<li>Defined in src/steamworks/Steamworks.ts:790</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -629,7 +632,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:278</li>
+									<li>Defined in src/steamworks/Steamworks.ts:283</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imatchmakingserver.html" class="tsd-signature-type">IMatchmakingServer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -646,7 +649,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1018</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1074</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -678,7 +681,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1356</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1413</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -695,7 +698,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:892</li>
+									<li>Defined in src/steamworks/Steamworks.ts:931</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iworkshopitem.html" class="tsd-signature-type">IWorkshopItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -712,7 +715,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:767</li>
+									<li>Defined in src/steamworks/Steamworks.ts:806</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -735,7 +738,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:516</li>
+									<li>Defined in src/steamworks/Steamworks.ts:527</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iworkshopitem.html" class="tsd-signature-type">IWorkshopItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -752,7 +755,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:504</li>
+									<li>Defined in src/steamworks/Steamworks.ts:515</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -769,7 +772,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:520</li>
+									<li>Defined in src/steamworks/Steamworks.ts:531</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -792,7 +795,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:496</li>
+									<li>Defined in src/steamworks/Steamworks.ts:507</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isteamid.html" class="tsd-signature-type">ISteamId</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -809,7 +812,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:282</li>
+									<li>Defined in src/steamworks/Steamworks.ts:287</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ISteamworksNetworking</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -826,7 +829,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1244</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1301</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -843,7 +846,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1191</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1248</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -877,7 +880,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:524</li>
+									<li>Defined in src/steamworks/Steamworks.ts:535</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -900,7 +903,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:286</li>
+									<li>Defined in src/steamworks/Steamworks.ts:291</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -917,7 +920,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:246</li>
+									<li>Defined in src/steamworks/Steamworks.ts:251</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -926,6 +929,23 @@
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="iscontenttracingrecording" class="tsd-anchor"></a>
+					<h3>is<wbr>Content<wbr>Tracing<wbr>Recording</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Content<wbr>Tracing<wbr>Recording<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/Steamworks.ts:551</li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -940,7 +960,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:270</li>
+									<li>Defined in src/steamworks/Steamworks.ts:275</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -957,7 +977,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:195</li>
+									<li>Defined in src/steamworks/Steamworks.ts:200</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -974,7 +994,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:226</li>
+									<li>Defined in src/steamworks/Steamworks.ts:231</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -991,7 +1011,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:703</li>
+									<li>Defined in src/steamworks/Steamworks.ts:742</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1008,7 +1028,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:230</li>
+									<li>Defined in src/steamworks/Steamworks.ts:235</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1025,7 +1045,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:222</li>
+									<li>Defined in src/steamworks/Steamworks.ts:227</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1042,7 +1062,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:234</li>
+									<li>Defined in src/steamworks/Steamworks.ts:239</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1059,7 +1079,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:266</li>
+									<li>Defined in src/steamworks/Steamworks.ts:271</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1076,7 +1096,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:262</li>
+									<li>Defined in src/steamworks/Steamworks.ts:267</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1093,7 +1113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:729</li>
+									<li>Defined in src/steamworks/Steamworks.ts:768</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1116,7 +1136,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:720</li>
+									<li>Defined in src/steamworks/Steamworks.ts:759</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1133,7 +1153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1360</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1417</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1156,7 +1176,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1376</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1433</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1179,7 +1199,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1368</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1425</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1202,7 +1222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1005</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1061</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1249,7 +1269,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1248</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1305</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1266,7 +1286,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:464</li>
+									<li>Defined in src/steamworks/Steamworks.ts:475</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1283,7 +1303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:950</li>
+									<li>Defined in src/steamworks/Steamworks.ts:989</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1300,9 +1320,32 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:975</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1031</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="openmodfolder" class="tsd-anchor"></a>
+					<h3>open<wbr>Mod<wbr>Folder</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Mod<wbr>Folder<span class="tsd-signature-symbol">(</span>modIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/Steamworks.ts:1014</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>modIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -1317,7 +1360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:965</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1004</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1334,7 +1377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:958</li>
+									<li>Defined in src/steamworks/Steamworks.ts:997</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1351,7 +1394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:907</li>
+									<li>Defined in src/steamworks/Steamworks.ts:946</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1374,7 +1417,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:923</li>
+									<li>Defined in src/steamworks/Steamworks.ts:962</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1397,7 +1440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1260</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1317</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1420,7 +1463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:796</li>
+									<li>Defined in src/steamworks/Steamworks.ts:835</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1443,7 +1486,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:199</li>
+									<li>Defined in src/steamworks/Steamworks.ts:204</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1460,7 +1503,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:994</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1050</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1486,7 +1529,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:654</li>
+									<li>Defined in src/steamworks/Steamworks.ts:693</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1509,7 +1552,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:742</li>
+									<li>Defined in src/steamworks/Steamworks.ts:781</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1535,7 +1578,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:712</li>
+									<li>Defined in src/steamworks/Steamworks.ts:751</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1558,7 +1601,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:470</li>
+									<li>Defined in src/steamworks/Steamworks.ts:481</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1581,7 +1624,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:572</li>
+									<li>Defined in src/steamworks/Steamworks.ts:611</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1607,7 +1650,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:479</li>
+									<li>Defined in src/steamworks/Steamworks.ts:490</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1624,7 +1667,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1352</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1409</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1641,7 +1684,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:540</li>
+									<li>Defined in src/steamworks/Steamworks.ts:579</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1658,10 +1701,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:560</li>
+									<li>Defined in src/steamworks/Steamworks.ts:599</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="togglecontenttracingrecording" class="tsd-anchor"></a>
+					<h3>toggle<wbr>Content<wbr>Tracing<wbr>Recording</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Content<wbr>Tracing<wbr>Recording<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/steamworks/Steamworks.ts:555</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1675,7 +1735,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:1014</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1070</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1692,7 +1752,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:981</li>
+									<li>Defined in src/steamworks/Steamworks.ts:1037</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1715,7 +1775,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:619</li>
+									<li>Defined in src/steamworks/Steamworks.ts:658</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1732,7 +1792,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/steamworks/Steamworks.ts:583</li>
+									<li>Defined in src/steamworks/Steamworks.ts:622</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1868,6 +1928,9 @@
 								<a href="steamworks.html#isabsolutepath" class="tsd-kind-icon">is<wbr>Absolute<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="steamworks.html#iscontenttracingrecording" class="tsd-kind-icon">is<wbr>Content<wbr>Tracing<wbr>Recording</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="steamworks.html#isdedicatedserver" class="tsd-kind-icon">is<wbr>Dedicated<wbr>Server</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1925,6 +1988,9 @@
 								<a href="steamworks.html#openlogsfolder" class="tsd-kind-icon">open<wbr>Logs<wbr>Folder</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="steamworks.html#openmodfolder" class="tsd-kind-icon">open<wbr>Mod<wbr>Folder</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="steamworks.html#openmodsfolder" class="tsd-kind-icon">open<wbr>Mods<wbr>Folder</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1974,6 +2040,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="steamworks.html#stopplaytimetracking" class="tsd-kind-icon">stop<wbr>Playtime<wbr>Tracking</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="steamworks.html#togglecontenttracingrecording" class="tsd-kind-icon">toggle<wbr>Content<wbr>Tracing<wbr>Recording</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="steamworks.html#toggledevelopertools" class="tsd-kind-icon">toggle<wbr>Developer<wbr>Tools</a>

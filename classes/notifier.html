@@ -91,11 +91,16 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#addcreature" class="tsd-kind-icon">add<wbr>Creature</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#additem" class="tsd-kind-icon">add<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#addnotifiericon" class="tsd-kind-icon">add<wbr>Notifier<wbr>Icon</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#addstat" class="tsd-kind-icon">add<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#addstatuseffect" class="tsd-kind-icon">add<wbr>Status<wbr>Effect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#clear" class="tsd-kind-icon">clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#render" class="tsd-kind-icon">render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#resume" class="tsd-kind-icon">resume</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#settexture" class="tsd-kind-icon">set<wbr>Texture</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#suspend" class="tsd-kind-icon">suspend</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
@@ -114,7 +119,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:200</li>
+									<li>Defined in src/renderer/Notifier.ts:222</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,26 +139,91 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="additem" class="tsd-anchor"></a>
-					<h3>add<wbr>Item</h3>
+					<a name="addcreature" class="tsd-anchor"></a>
+					<h3>add<wbr>Creature</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Item<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Creature<span class="tsd-signature-symbol">(</span>location<span class="tsd-signature-symbol">: </span><a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a>, creatureNotifierType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturenotifiertype.html" class="tsd-signature-type">CreatureNotifierType</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, aberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#additem">addItem</a></p>
+								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#addcreature">addCreature</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:230</li>
+									<li>Defined in src/renderer/Notifier.ts:308</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entity: <a href="entity.html" class="tsd-signature-type">Entity</a></h5>
+									<h5>location: <a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a></h5>
+								</li>
+								<li>
+									<h5>creatureNotifierType: <a href="../enums/creaturenotifiertype.html" class="tsd-signature-type">CreatureNotifierType</a></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> aberrant: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="additem" class="tsd-anchor"></a>
+					<h3>add<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Item<span class="tsd-signature-symbol">(</span>location<span class="tsd-signature-symbol">: </span><a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a>, itemNotifierType<span class="tsd-signature-symbol">: </span><a href="../enums/itemnotifiertype.html" class="tsd-signature-type">ItemNotifierType</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, _broken<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/Notifier.ts:254</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>location: <a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a></h5>
+								</li>
+								<li>
+									<h5>itemNotifierType: <a href="../enums/itemnotifiertype.html" class="tsd-signature-type">ItemNotifierType</a></h5>
 								</li>
 								<li>
 									<h5>type: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _broken: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addnotifiericon" class="tsd-anchor"></a>
+					<h3>add<wbr>Notifier<wbr>Icon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Notifier<wbr>Icon<span class="tsd-signature-symbol">(</span>location<span class="tsd-signature-symbol">: </span><a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/notifiericontype.html" class="tsd-signature-type">NotifierIconType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#addnotifiericon">addNotifierIcon</a></p>
+								<ul>
+									<li>Defined in src/renderer/Notifier.ts:411</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>location: <a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/notifiericontype.html" class="tsd-signature-type">NotifierIconType</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -164,26 +234,56 @@
 					<a name="addstat" class="tsd-anchor"></a>
 					<h3>add<wbr>Stat</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Stat<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/statnotificationtype.html" class="tsd-signature-type">StatNotificationType</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Stat<span class="tsd-signature-symbol">(</span>location<span class="tsd-signature-symbol">: </span><a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/statnotificationtype.html" class="tsd-signature-type">StatNotificationType</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#addstat">addStat</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:242</li>
+									<li>Defined in src/renderer/Notifier.ts:350</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entity: <a href="entity.html" class="tsd-signature-type">Entity</a></h5>
+									<h5>location: <a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a></h5>
 								</li>
 								<li>
 									<h5>type: <a href="../enums/statnotificationtype.html" class="tsd-signature-type">StatNotificationType</a></h5>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addstatuseffect" class="tsd-anchor"></a>
+					<h3>add<wbr>Status<wbr>Effect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Status<wbr>Effect<span class="tsd-signature-symbol">(</span>location<span class="tsd-signature-symbol">: </span><a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a>, statusEffect<span class="tsd-signature-symbol">: </span><a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a>, reason<span class="tsd-signature-symbol">: </span><a href="../enums/statuseffectchangereason.html" class="tsd-signature-type">StatusEffectChangeReason</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#addstatuseffect">addStatusEffect</a></p>
+								<ul>
+									<li>Defined in src/renderer/Notifier.ts:363</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>location: <a href="../interfaces/inotifierlocation.html" class="tsd-signature-type">INotifierLocation</a></h5>
+								</li>
+								<li>
+									<h5>statusEffect: <a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a></h5>
+								</li>
+								<li>
+									<h5>reason: <a href="../enums/statuseffectchangereason.html" class="tsd-signature-type">StatusEffectChangeReason</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -201,7 +301,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:218</li>
+									<li>Defined in src/renderer/Notifier.ts:241</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -219,7 +319,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#render">render</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:291</li>
+									<li>Defined in src/renderer/Notifier.ts:472</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -248,6 +348,24 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="resume" class="tsd-anchor"></a>
+					<h3>resume</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">resume<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#resume">resume</a></p>
+								<ul>
+									<li>Defined in src/renderer/Notifier.ts:432</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="settexture" class="tsd-anchor"></a>
 					<h3>set<wbr>Texture</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -258,7 +376,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#settexture">setTexture</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:213</li>
+									<li>Defined in src/renderer/Notifier.ts:236</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -275,6 +393,24 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="suspend" class="tsd-anchor"></a>
+					<h3>suspend</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">suspend<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#suspend">suspend</a></p>
+								<ul>
+									<li>Defined in src/renderer/Notifier.ts:428</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="update" class="tsd-anchor"></a>
 					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -285,7 +421,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/inotifier.html">INotifier</a>.<a href="../interfaces/inotifier.html#update">update</a></p>
 								<ul>
-									<li>Defined in src/renderer/Notifier.ts:255</li>
+									<li>Defined in src/renderer/Notifier.ts:436</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -319,10 +455,19 @@
 								<a href="notifier.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#addcreature" class="tsd-kind-icon">add<wbr>Creature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="notifier.html#additem" class="tsd-kind-icon">add<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#addnotifiericon" class="tsd-kind-icon">add<wbr>Notifier<wbr>Icon</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="notifier.html#addstat" class="tsd-kind-icon">add<wbr>Stat</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#addstatuseffect" class="tsd-kind-icon">add<wbr>Status<wbr>Effect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="notifier.html#clear" class="tsd-kind-icon">clear</a>
@@ -331,7 +476,13 @@
 								<a href="notifier.html#render" class="tsd-kind-icon">render</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#resume" class="tsd-kind-icon">resume</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="notifier.html#settexture" class="tsd-kind-icon">set<wbr>Texture</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#suspend" class="tsd-kind-icon">suspend</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="notifier.html#update" class="tsd-kind-icon">update</a>

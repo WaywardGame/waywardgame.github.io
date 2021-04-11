@@ -93,6 +93,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="translationsprovider.html#contextrules" class="tsd-kind-icon">context<wbr>Rules</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="translationsprovider.html#dictionaries" class="tsd-kind-icon">dictionaries</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="translationsprovider.html#language" class="tsd-kind-icon">language</a></li>
 							</ul>
@@ -102,6 +103,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#gettranslation" class="tsd-kind-icon">get<wbr>Translation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#setarticlerules" class="tsd-kind-icon">set<wbr>Article<wbr>Rules</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#setcontextrules" class="tsd-kind-icon">set<wbr>Context<wbr>Rules</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#setdictionary" class="tsd-kind-icon">set<wbr>Dictionary</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#setirregularrules" class="tsd-kind-icon">set<wbr>Irregular<wbr>Rules</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="translationsprovider.html#setpluralizationrules" class="tsd-kind-icon">set<wbr>Pluralization<wbr>Rules</a></li>
@@ -130,7 +132,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:41</li>
+									<li>Defined in src/language/TranslationsProvider.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -147,12 +149,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="contextrules" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> context<wbr>Rules</h3>
+					<div class="tsd-signature tsd-kind-icon">context<wbr>Rules<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icontextrules.html" class="tsd-signature-type">IContextRules</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/language/TranslationsProvider.ts:52</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="dictionaries" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> dictionaries</h3>
 					<div class="tsd-signature tsd-kind-icon">dictionaries<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map&lt;string, Map&lt;string, string[]&gt;&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/language/TranslationsProvider.ts:33</li>
+							<li>Defined in src/language/TranslationsProvider.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -162,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">language<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/language/TranslationsProvider.ts:34</li>
+							<li>Defined in src/language/TranslationsProvider.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -179,7 +191,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:47</li>
+									<li>Defined in src/language/TranslationsProvider.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -199,19 +211,44 @@
 					<a name="setarticlerules" class="tsd-anchor"></a>
 					<h3>set<wbr>Article<wbr>Rules</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Article<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#namerule" class="tsd-signature-type">NameRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Article<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#namerule" class="tsd-signature-type">NameRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:82</li>
+									<li>Defined in src/language/TranslationsProvider.ts:93</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#namerule" class="tsd-signature-type">NameRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#namerule" class="tsd-signature-type">NameRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcontextrules" class="tsd-anchor"></a>
+					<h3>set<wbr>Context<wbr>Rules</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Context<wbr>Rules<span class="tsd-signature-symbol">(</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/language/TranslationsProvider.ts:98</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rules: <span class="tsd-signature-symbol">{}</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -222,13 +259,13 @@
 					<a name="setdictionary" class="tsd-anchor"></a>
 					<h3>set<wbr>Dictionary</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Dictionary<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, translations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Dictionary<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, translations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:52</li>
+									<li>Defined in src/language/TranslationsProvider.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,12 +274,7 @@
 									<h5>dictionary: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>translations: <span class="tsd-signature-symbol">{}</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-index-signature">
-											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-										</li>
-									</ul>
+									<h5>translations: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -253,19 +285,19 @@
 					<a name="setirregularrules" class="tsd-anchor"></a>
 					<h3>set<wbr>Irregular<wbr>Rules</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Irregular<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Irregular<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:62</li>
+									<li>Defined in src/language/TranslationsProvider.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -276,19 +308,19 @@
 					<a name="setpluralizationrules" class="tsd-anchor"></a>
 					<h3>set<wbr>Pluralization<wbr>Rules</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Pluralization<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#pluralrule" class="tsd-signature-type">PluralRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Pluralization<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#pluralrule" class="tsd-signature-type">PluralRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:67</li>
+									<li>Defined in src/language/TranslationsProvider.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#pluralrule" class="tsd-signature-type">PluralRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#pluralrule" class="tsd-signature-type">PluralRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -299,19 +331,19 @@
 					<a name="setsingularizationrules" class="tsd-anchor"></a>
 					<h3>set<wbr>Singularization<wbr>Rules</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Singularization<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#singularrule" class="tsd-signature-type">SingularRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Singularization<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#singularrule" class="tsd-signature-type">SingularRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:72</li>
+									<li>Defined in src/language/TranslationsProvider.ts:83</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#singularrule" class="tsd-signature-type">SingularRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#singularrule" class="tsd-signature-type">SingularRule</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -322,19 +354,19 @@
 					<a name="setuncountablerules" class="tsd-anchor"></a>
 					<h3>set<wbr>Uncountable<wbr>Rules</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Uncountable<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Uncountable<wbr>Rules<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>rules<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/__global.regexp.html" class="tsd-signature-type">RegExp</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/language/TranslationsProvider.ts:77</li>
+									<li>Defined in src/language/TranslationsProvider.ts:88</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rules: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/__global.regexp.html" class="tsd-signature-type">RegExp</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -350,7 +382,7 @@
 					<div class="tsd-signature tsd-kind-icon">pluralization<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/language/TranslationsProvider.ts:35</li>
+							<li>Defined in src/language/TranslationsProvider.ts:44</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -359,7 +391,7 @@
 						<div class="tsd-signature tsd-kind-icon">article<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/language/TranslationsProvider.ts:40</li>
+								<li>Defined in src/language/TranslationsProvider.ts:49</li>
 							</ul>
 						</aside>
 					</section>
@@ -369,7 +401,7 @@
 						<div class="tsd-signature tsd-kind-icon">irregular<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/language/TranslationsProvider.ts:39</li>
+								<li>Defined in src/language/TranslationsProvider.ts:48</li>
 							</ul>
 						</aside>
 					</section>
@@ -379,7 +411,7 @@
 						<div class="tsd-signature tsd-kind-icon">plural<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/language/TranslationsProvider.ts:36</li>
+								<li>Defined in src/language/TranslationsProvider.ts:45</li>
 							</ul>
 						</aside>
 					</section>
@@ -389,7 +421,7 @@
 						<div class="tsd-signature tsd-kind-icon">singular<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/language/TranslationsProvider.ts:37</li>
+								<li>Defined in src/language/TranslationsProvider.ts:46</li>
 							</ul>
 						</aside>
 					</section>
@@ -399,7 +431,7 @@
 						<div class="tsd-signature tsd-kind-icon">uncountables<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/language/TranslationsProvider.ts:38</li>
+								<li>Defined in src/language/TranslationsProvider.ts:47</li>
 							</ul>
 						</aside>
 					</section>
@@ -425,6 +457,9 @@
 								<a href="translationsprovider.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="translationsprovider.html#contextrules" class="tsd-kind-icon">context<wbr>Rules</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="translationsprovider.html#dictionaries" class="tsd-kind-icon">dictionaries</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -435,6 +470,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="translationsprovider.html#setarticlerules" class="tsd-kind-icon">set<wbr>Article<wbr>Rules</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="translationsprovider.html#setcontextrules" class="tsd-kind-icon">set<wbr>Context<wbr>Rules</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="translationsprovider.html#setdictionary" class="tsd-kind-icon">set<wbr>Dictionary</a>
