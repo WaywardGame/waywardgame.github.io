@@ -107,6 +107,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="referenceinspectionslist.html#attributes" class="tsd-kind-icon">attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="referenceinspectionslist.html#classes" class="tsd-kind-icon">classes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="referenceinspectionslist.html#context" class="tsd-kind-icon">context</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="referenceinspectionslist.html#data" class="tsd-kind-icon">data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="referenceinspectionslist.html#event" class="tsd-kind-icon">event</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="referenceinspectionslist.html#inspectionshandler" class="tsd-kind-icon">inspections<wbr>Handler</a></li>
@@ -198,18 +199,21 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Reference<wbr>Inspections<wbr>List<span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><a href="../globals.html#reference" class="tsd-signature-type">Reference</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="referenceinspectionslist.html" class="tsd-signature-type">ReferenceInspectionsList</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Reference<wbr>Inspections<wbr>List<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a>, reference<span class="tsd-signature-symbol">: </span><a href="../globals.html#reference" class="tsd-signature-type">Reference</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="referenceinspectionslist.html" class="tsd-signature-type">ReferenceInspectionsList</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionslist.html">InspectionsList</a>.<a href="inspectionslist.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:45</li>
+									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:44</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>context: <a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a></h5>
+								</li>
 								<li>
 									<h5>reference: <a href="../globals.html#reference" class="tsd-signature-type">Reference</a></h5>
 								</li>
@@ -245,6 +249,17 @@
 						<p>Inherited from <a href="screen.html">Screen</a>.<a href="screen.html#classes">classes</a></p>
 						<ul>
 							<li>Defined in src/ui/component/Component.ts:307</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="context" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> context</h3>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="inspectionslist.html">InspectionsList</a>.<a href="inspectionslist.html#context">context</a></p>
+						<ul>
+							<li>Defined in src/ui/screen/screens/game/component/InspectionsList.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -896,7 +911,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionslist.html">InspectionsList</a>.<a href="inspectionslist.html#initializeinspections">initializeInspections</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:65</li>
+									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="referenceinspectionshandler.html" class="tsd-signature-type">ReferenceInspectionsHandler</a></h4>
@@ -932,7 +947,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionslist.html">InspectionsList</a>.<a href="inspectionslist.html#isvalid">isValid</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:52</li>
+									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1040,7 +1055,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:72</li>
+									<li>Defined in src/ui/screen/screens/game/ReferenceTooltipHandler.ts:71</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2511,6 +2526,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="referenceinspectionslist.html#classes" class="tsd-kind-icon">classes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="referenceinspectionslist.html#context" class="tsd-kind-icon">context</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="referenceinspectionslist.html#data" class="tsd-kind-icon">data</a>

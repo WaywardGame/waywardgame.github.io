@@ -116,7 +116,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="connection.html#pid" class="tsd-kind-icon">pid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="connection.html#playeridentifier" class="tsd-kind-icon">player<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="connection.html#playersteamid" class="tsd-kind-icon">player<wbr>Steam<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="connection.html#queuedpackets" class="tsd-kind-icon">queued<wbr>Packets</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -125,15 +124,18 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#addconnectiontimeout" class="tsd-kind-icon">add<wbr>Connection<wbr>Timeout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#addkeepalivetimeout" class="tsd-kind-icon">add<wbr>Keep<wbr>Alive<wbr>Timeout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#addtimeout" class="tsd-kind-icon">add<wbr>Timeout</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#clearqueuedpackets" class="tsd-kind-icon">clear<wbr>Queued<wbr>Packets</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#cleartimeout" class="tsd-kind-icon">clear<wbr>Timeout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#close" class="tsd-kind-icon">close</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#getstate" class="tsd-kind-icon">get<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#isconnected" class="tsd-kind-icon">is<wbr>Connected</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#processmatchmakingmessage" class="tsd-kind-icon">process<wbr>Matchmaking<wbr>Message</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#processqueueddata" class="tsd-kind-icon">process<wbr>Queued<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#queuepacketdata" class="tsd-kind-icon">queue<wbr>Packet<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#processqueuedpackets" class="tsd-kind-icon">process<wbr>Queued<wbr>Packets</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#queuepacket" class="tsd-kind-icon">queue<wbr>Packet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#send" class="tsd-kind-icon">send</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#sendkeepalive" class="tsd-kind-icon">send<wbr>Keep<wbr>Alive</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#serializepacket" class="tsd-kind-icon">serialize<wbr>Packet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#setstate" class="tsd-kind-icon">set<wbr>State</a></li>
 							</ul>
 						</section>
@@ -152,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:52</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -174,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">_matchmaking<wbr>Info<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imatchmakinginfo.html" class="tsd-signature-type">IMatchmakingInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:41</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:37</li>
 						</ul>
 					</aside>
 				</section>
@@ -185,7 +187,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#buffer">buffer</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:35</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +198,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#bufferoffset">bufferOffset</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:36</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:32</li>
 						</ul>
 					</aside>
 				</section>
@@ -207,7 +209,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#bufferpacketid">bufferPacketId</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:37</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:33</li>
 						</ul>
 					</aside>
 				</section>
@@ -218,7 +220,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#lastpacketnumberreceived">lastPacketNumberReceived</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:39</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -229,7 +231,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#lastpacketnumbersent">lastPacketNumberSent</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:38</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:34</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +242,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#matchmakingidentifier">matchmakingIdentifier</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:25</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:27</li>
 						</ul>
 					</aside>
 				</section>
@@ -251,7 +253,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#name">name</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:21</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:23</li>
 						</ul>
 					</aside>
 				</section>
@@ -262,7 +264,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#pid">pid</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:27</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -273,7 +275,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#playeridentifier">playerIdentifier</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:23</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:25</li>
 						</ul>
 					</aside>
 				</section>
@@ -284,26 +286,9 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#playersteamid">playerSteamId</a></p>
 						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:24</li>
+							<li>Defined in src/multiplayer/networking/Connection.ts:26</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="queuedpackets" class="tsd-anchor"></a>
-					<h3>queued<wbr>Packets</h3>
-					<div class="tsd-signature tsd-kind-icon">queued<wbr>Packets<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#queuedpackets">queuedPackets</a></p>
-						<ul>
-							<li>Defined in src/multiplayer/networking/Connection.ts:33</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Packets are queued while the player is connected.
-							They are dequeued once the client loads the world - catch up logic</p>
-						</div>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -319,7 +304,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#addconnectiontimeout">addConnectionTimeout</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:71</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -337,7 +322,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#addkeepalivetimeout">addKeepAliveTimeout</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:95</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:96</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -354,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:78</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -383,6 +368,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearqueuedpackets" class="tsd-anchor"></a>
+					<h3>clear<wbr>Queued<wbr>Packets</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Queued<wbr>Packets<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#clearqueuedpackets">clearQueuedPackets</a></p>
+								<ul>
+									<li>Defined in src/multiplayer/networking/Connection.ts:163</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clears queued packets</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="cleartimeout" class="tsd-anchor"></a>
 					<h3>clear<wbr>Timeout</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -393,7 +401,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#cleartimeout">clearTimeout</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:84</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:85</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -411,7 +419,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#close">close</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:62</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -429,7 +437,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#getstate">getState</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:113</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:114</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/connectionstate.html" class="tsd-signature-type">ConnectionState</a></h4>
@@ -447,7 +455,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#isconnected">isConnected</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:193</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:266</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -464,7 +472,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:195</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:268</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -478,40 +486,52 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="processqueueddata" class="tsd-anchor"></a>
-					<h3>process<wbr>Queued<wbr>Data</h3>
+					<a name="processqueuedpackets" class="tsd-anchor"></a>
+					<h3>process<wbr>Queued<wbr>Packets</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">process<wbr>Queued<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Queued<wbr>Packets<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#processqueuedpackets">processQueuedPackets</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:139</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:185</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends queued packets w/ flow control</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="queuepacketdata" class="tsd-anchor"></a>
-					<h3>queue<wbr>Packet<wbr>Data</h3>
+					<a name="queuepacket" class="tsd-anchor"></a>
+					<h3>queue<wbr>Packet</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">queue<wbr>Packet<wbr>Data<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">queue<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#queuepacketdata">queuePacketData</a></p>
+								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#queuepacket">queuePacket</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:129</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:155</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Queues a packet to be sent soon
+									Note: packets are serialized when queued</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <span class="tsd-signature-type">ArrayBuffer</span></h5>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -529,7 +549,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#send">send</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:194</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:267</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -553,10 +573,62 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#sendkeepalive">sendKeepAlive</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:102</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:103</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="sendpacket" class="tsd-anchor"></a>
+					<h3>send<wbr>Packet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#sendpacket">sendPacket</a></p>
+								<ul>
+									<li>Defined in src/multiplayer/networking/Connection.ts:170</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a packet to the connection w/ flow control</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="serializepacket" class="tsd-anchor"></a>
+					<h3>serialize<wbr>Packet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">serialize<wbr>Packet<span class="tsd-signature-symbol">(</span>packet<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/multiplayer/networking/Connection.ts:130</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>packet: <a href="../interfaces/ipacket.html" class="tsd-signature-type">IPacket</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ArrayBuffer</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -571,7 +643,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iconnection.html">IConnection</a>.<a href="../interfaces/iconnection.html#setstate">setState</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/networking/Connection.ts:117</li>
+									<li>Defined in src/multiplayer/networking/Connection.ts:118</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -637,9 +709,6 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="connection.html#playersteamid" class="tsd-kind-icon">player<wbr>Steam<wbr>Id</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="connection.html#queuedpackets" class="tsd-kind-icon">queued<wbr>Packets</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#addconnectiontimeout" class="tsd-kind-icon">add<wbr>Connection<wbr>Timeout</a>
 							</li>
@@ -648,6 +717,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#addtimeout" class="tsd-kind-icon">add<wbr>Timeout</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="connection.html#clearqueuedpackets" class="tsd-kind-icon">clear<wbr>Queued<wbr>Packets</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#cleartimeout" class="tsd-kind-icon">clear<wbr>Timeout</a>
@@ -665,16 +737,22 @@
 								<a href="connection.html#processmatchmakingmessage" class="tsd-kind-icon">process<wbr>Matchmaking<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="connection.html#processqueueddata" class="tsd-kind-icon">process<wbr>Queued<wbr>Data</a>
+								<a href="connection.html#processqueuedpackets" class="tsd-kind-icon">process<wbr>Queued<wbr>Packets</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="connection.html#queuepacketdata" class="tsd-kind-icon">queue<wbr>Packet<wbr>Data</a>
+								<a href="connection.html#queuepacket" class="tsd-kind-icon">queue<wbr>Packet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#send" class="tsd-kind-icon">send</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#sendkeepalive" class="tsd-kind-icon">send<wbr>Keep<wbr>Alive</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="connection.html#sendpacket" class="tsd-kind-icon">send<wbr>Packet</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="connection.html#serializepacket" class="tsd-kind-icon">serialize<wbr>Packet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="connection.html#setstate" class="tsd-kind-icon">set<wbr>State</a>
