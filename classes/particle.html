@@ -96,6 +96,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#createmultiple" class="tsd-kind-icon">create<wbr>Multiple</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#render" class="tsd-kind-icon">render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#simulate" class="tsd-kind-icon">simulate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="particle.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="particle.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a></li>
 							</ul>
 						</section>
 					</div>
@@ -113,7 +115,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:42</li>
+									<li>Defined in src/renderer/particle/Particle.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -143,7 +145,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:106</li>
+									<li>Defined in src/renderer/particle/Particle.ts:115</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -161,7 +163,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#create">create</a></p>
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:91</li>
+									<li>Defined in src/renderer/particle/Particle.ts:100</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -193,7 +195,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:95</li>
+									<li>Defined in src/renderer/particle/Particle.ts:104</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -234,7 +236,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:153</li>
+									<li>Defined in src/renderer/particle/Particle.ts:162</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -261,10 +263,50 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#simulate">simulate</a></p>
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:114</li>
+									<li>Defined in src/renderer/particle/Particle.ts:123</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="createshaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Shaders</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Shaders<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/particle/Particle.ts:46</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="linkshaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> link<wbr>Shaders</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">link<wbr>Shaders<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/renderer/particle/Particle.ts:50</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -302,6 +344,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="particle.html#simulate" class="tsd-kind-icon">simulate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="particle.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="particle.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a>
 							</li>
 						</ul>
 					</li>
