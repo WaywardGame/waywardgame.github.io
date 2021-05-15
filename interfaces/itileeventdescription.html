@@ -102,6 +102,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="itileeventdescription.html#decaymax" class="tsd-kind-icon">decay<wbr>Max</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#decaytemperaturerange" class="tsd-kind-icon">decay<wbr>Temperature<wbr>Range</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#durability" class="tsd-kind-icon">durability</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#excludedterrains" class="tsd-kind-icon">excluded<wbr>Terrains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#freezesinto" class="tsd-kind-icon">freezes<wbr>Into</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itileeventdescription.html#graphicvariation" class="tsd-kind-icon">graphic<wbr>Variation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="itileeventdescription.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a></li>
@@ -150,7 +151,7 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Multiple<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:56</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -175,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">blocks<wbr>Tile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:44</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,7 +191,7 @@
 					<div class="tsd-signature tsd-kind-icon">can<wbr>Burn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:72</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,7 +238,7 @@
 					<div class="tsd-signature tsd-kind-icon">decay<wbr>Temperature<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="idecaytemperaturerange.html" class="tsd-signature-type">IDecayTemperatureRange</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:73</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:77</li>
 						</ul>
 					</aside>
 				</section>
@@ -252,12 +253,27 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="excludedterrains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> excluded<wbr>Terrains</h3>
+					<div class="tsd-signature tsd-kind-icon">excluded<wbr>Terrains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/tile/ITileEvent.ts:44</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Prevents the event from being created on these types</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="freezesinto" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> freezes<wbr>Into</h3>
 					<div class="tsd-signature tsd-kind-icon">freezes<wbr>Into<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:68</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -298,7 +314,7 @@
 					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:52</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -323,7 +339,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Minor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:48</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -388,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">melts<wbr>Into<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:64</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -507,7 +523,7 @@
 					<div class="tsd-signature tsd-kind-icon">water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/tile/ITileEvent.ts:60</li>
+							<li>Defined in src/game/tile/ITileEvent.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -540,7 +556,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/tile/ITileEvent.ts:74</li>
+									<li>Defined in src/game/tile/ITileEvent.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -575,7 +591,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/tile/ITileEvent.ts:75</li>
+									<li>Defined in src/game/tile/ITileEvent.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -599,7 +615,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="../modules/itemperaturesource.html">ITemperatureSource</a>.<a href="../modules/itemperaturesource.html#getproducedtemperature">getProducedTemperature</a></p>
 								<ul>
-									<li>Defined in src/game/tile/ITileEvent.ts:83</li>
+									<li>Defined in src/game/tile/ITileEvent.ts:87</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -629,7 +645,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/temperature/ITemperature.ts:63</li>
+									<li>Defined in src/game/temperature/ITemperature.ts:65</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -652,7 +668,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/tile/ITileEvent.ts:76</li>
+									<li>Defined in src/game/tile/ITileEvent.ts:80</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -675,7 +691,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/tile/ITileEvent.ts:77</li>
+									<li>Defined in src/game/tile/ITileEvent.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -731,6 +747,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="itileeventdescription.html#durability" class="tsd-kind-icon">durability</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="itileeventdescription.html#excludedterrains" class="tsd-kind-icon">excluded<wbr>Terrains</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="itileeventdescription.html#freezesinto" class="tsd-kind-icon">freezes<wbr>Into</a>
