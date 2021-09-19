@@ -139,6 +139,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="island.html#hydratefromoldgame" class="tsd-kind-icon">hydrate<wbr>From<wbr>Old<wbr>Game</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="island.html#registereventbus" class="tsd-kind-icon">register<wbr>Event<wbr>Bus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="island.html#unregistereventbus" class="tsd-kind-icon">unregister<wbr>Event<wbr>Bus</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="island.html#calcualtebaseseed" class="tsd-kind-icon">calcualte<wbr>Base<wbr>Seed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="island.html#generatepositionhash" class="tsd-kind-icon">generate<wbr>Position<wbr>Hash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="island.html#idtoposition" class="tsd-kind-icon">id<wbr>ToPosition</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="island.html#positiontoid" class="tsd-kind-icon">position<wbr>ToId</a></li>
 							</ul>
@@ -158,13 +160,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Island<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a>, startingSeed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Island<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a>, initialSeed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:82</li>
+									<li>Defined in src/game/Island.ts:98</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -173,7 +175,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> position: <a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startingSeed: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initialSeed: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="island.html" class="tsd-signature-type">Island</a></h4>
@@ -427,7 +429,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:116</li>
+									<li>Defined in src/game/Island.ts:130</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ibiomedescription.html" class="tsd-signature-type">IBiomeDescription</a></h4>
@@ -444,7 +446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:112</li>
+									<li>Defined in src/game/Island.ts:126</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -464,7 +466,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:171</li>
+									<li>Defined in src/game/Island.ts:185</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -496,7 +498,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:204</li>
+									<li>Defined in src/game/Island.ts:218</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -519,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:140</li>
+									<li>Defined in src/game/Island.ts:154</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -542,7 +544,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:120</li>
+									<li>Defined in src/game/Island.ts:134</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -559,10 +561,70 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/Island.ts:130</li>
+									<li>Defined in src/game/Island.ts:144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="calcualtebaseseed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> calcualte<wbr>Base<wbr>Seed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">calcualte<wbr>Base<wbr>Seed<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, initialSeed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/Island.ts:94</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>initialSeed: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="generatepositionhash" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Position<wbr>Hash</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Position<wbr>Hash<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/Island.ts:87</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Szudzik&#39;s function (signed)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -764,6 +826,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="island.html#unregistereventbus" class="tsd-kind-icon">unregister<wbr>Event<wbr>Bus</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="island.html#calcualtebaseseed" class="tsd-kind-icon">calcualte<wbr>Base<wbr>Seed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="island.html#generatepositionhash" class="tsd-kind-icon">generate<wbr>Position<wbr>Hash</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="island.html#idtoposition" class="tsd-kind-icon">id<wbr>ToPosition</a>
