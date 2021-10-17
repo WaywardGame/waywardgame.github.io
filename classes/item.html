@@ -180,6 +180,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getitemusebonus" class="tsd-kind-icon">get<wbr>Item<wbr>Use<wbr>Bonus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmagicalpropertyinfo" class="tsd-kind-icon">get<wbr>Magical<wbr>Property<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmaxdecay" class="tsd-kind-icon">get<wbr>Max<wbr>Decay</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmaxdurability" class="tsd-kind-icon">get<wbr>Max<wbr>Durability</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmaxreinforcement" class="tsd-kind-icon">get<wbr>Max<wbr>Reinforcement</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#getonusebonus" class="tsd-kind-icon">get<wbr>OnUse<wbr>Bonus</a></li>
@@ -657,7 +659,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1462</li>
+									<li>Defined in src/game/item/Item.ts:1467</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -697,19 +699,22 @@
 					<a name="addmagicalproperty" class="tsd-anchor"></a>
 					<h3>add<wbr>Magical<wbr>Property</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Magical<wbr>Property<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Magical<wbr>Property<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a>, subType<span class="tsd-signature-symbol">?: </span><a href="../globals.html#magicalsubpropertysubtypes" class="tsd-signature-type">MagicalSubPropertySubTypes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1279</li>
+									<li>Defined in src/game/item/Item.ts:1284</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>type: <a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subType: <a href="../globals.html#magicalsubpropertysubtypes" class="tsd-signature-type">MagicalSubPropertySubTypes</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -726,7 +731,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1688</li>
+									<li>Defined in src/game/item/Item.ts:1693</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -743,7 +748,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1607</li>
+									<li>Defined in src/game/item/Item.ts:1612</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -933,7 +938,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1876</li>
+									<li>Defined in src/game/item/Item.ts:1881</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -964,7 +969,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1638</li>
+									<li>Defined in src/game/item/Item.ts:1643</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -982,7 +987,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ihasinsulation.html">IHasInsulation</a>.<a href="../interfaces/ihasinsulation.html#getbasetemperature">getBaseTemperature</a></p>
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1749</li>
+									<li>Defined in src/game/item/Item.ts:1754</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
@@ -999,7 +1004,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1740</li>
+									<li>Defined in src/game/item/Item.ts:1745</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1022,7 +1027,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1677</li>
+									<li>Defined in src/game/item/Item.ts:1682</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1067,7 +1072,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1822</li>
+									<li>Defined in src/game/item/Item.ts:1827</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1172,7 +1177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1649</li>
+									<li>Defined in src/game/item/Item.ts:1654</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1206,7 +1211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1744</li>
+									<li>Defined in src/game/item/Item.ts:1749</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1246,7 +1251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1803</li>
+									<li>Defined in src/game/item/Item.ts:1808</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1268,7 +1273,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1840</li>
+									<li>Defined in src/game/item/Item.ts:1845</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1300,7 +1305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1298</li>
+									<li>Defined in src/game/item/Item.ts:1303</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1323,7 +1328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1769</li>
+									<li>Defined in src/game/item/Item.ts:1774</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1348,6 +1353,76 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 							<p>A number equal to the maximum item decay or 0 if the item should not have decay at all.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmaxdurability" class="tsd-anchor"></a>
+					<h3>get<wbr>Max<wbr>Durability</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Max<wbr>Durability<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/item/Item.ts:1895</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the maximum durability for an item based on many factors.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Player that we checking to get the maximum item durability (as game options can affect this).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The maximum durability of the item as a number.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmaxreinforcement" class="tsd-anchor"></a>
+					<h3>get<wbr>Max<wbr>Reinforcement</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Max<wbr>Reinforcement<span class="tsd-signature-symbol">(</span>maxDurability<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, actionTier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/item/Item.ts:1910</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the maximum reinforcement allowed for an item based on many factors.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>maxDurability: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum durability that the item should have.</p>
+									</div>
+								</li>
+								<li>
+									<h5>actionTier: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Any bonus from the item&#39;s action tier.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The maximum reinforcement of the item as a number.</p>
 						</li>
 					</ul>
 				</section>
@@ -1448,7 +1523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1527</li>
+									<li>Defined in src/game/item/Item.ts:1532</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1499,7 +1574,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1719</li>
+									<li>Defined in src/game/item/Item.ts:1724</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1516,7 +1591,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1852</li>
+									<li>Defined in src/game/item/Item.ts:1857</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1539,7 +1614,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1512</li>
+									<li>Defined in src/game/item/Item.ts:1517</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1556,7 +1631,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1502</li>
+									<li>Defined in src/game/item/Item.ts:1507</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1619,7 +1694,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1594</li>
+									<li>Defined in src/game/item/Item.ts:1599</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1697,7 +1772,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1547</li>
+									<li>Defined in src/game/item/Item.ts:1552</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1920,7 +1995,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1885</li>
+									<li>Defined in src/game/item/Item.ts:1920</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1969,7 +2044,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1732</li>
+									<li>Defined in src/game/item/Item.ts:1737</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1980,7 +2055,7 @@
 					<a name="rerollmagicalproperty" class="tsd-anchor"></a>
 					<h3>reroll<wbr>Magical<wbr>Property</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reroll<wbr>Magical<wbr>Property<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">reroll<wbr>Magical<wbr>Property<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a>, subType<span class="tsd-signature-symbol">?: </span><a href="../globals.html#magicalsubpropertysubtypes" class="tsd-signature-type">MagicalSubPropertySubTypes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1993,6 +2068,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>type: <a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subType: <a href="../globals.html#magicalsubpropertysubtypes" class="tsd-signature-type">MagicalSubPropertySubTypes</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2063,7 +2141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1653</li>
+									<li>Defined in src/game/item/Item.ts:1658</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2086,7 +2164,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1756</li>
+									<li>Defined in src/game/item/Item.ts:1761</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2526,6 +2604,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#getmaxdecay" class="tsd-kind-icon">get<wbr>Max<wbr>Decay</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#getmaxdurability" class="tsd-kind-icon">get<wbr>Max<wbr>Durability</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#getmaxreinforcement" class="tsd-kind-icon">get<wbr>Max<wbr>Reinforcement</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#getmovementprogress" class="tsd-kind-icon">get<wbr>Movement<wbr>Progress</a>
