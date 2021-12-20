@@ -93,6 +93,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="serializer.html#byteoffset" class="tsd-kind-icon">byte<wbr>Offset</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="serializer.html#dataview" class="tsd-kind-icon">data<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="serializer.html#metadata" class="tsd-kind-icon">metadata</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="serializer.html#stringtokenizer" class="tsd-kind-icon">string<wbr>Tokenizer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="serializer.html#version" class="tsd-kind-icon">version</a></li>
 							</ul>
 						</section>
@@ -121,6 +123,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="serializer.html#writeproperty" class="tsd-kind-icon">write<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="serializer.html#writeset" class="tsd-kind-icon">write<wbr>Set</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="serializer.html#writestring" class="tsd-kind-icon">write<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="serializer.html#convertstringtouint8array" class="tsd-kind-icon">convert<wbr>String<wbr>ToUint8<wbr>Array</a></li>
 							</ul>
 						</section>
 					</div>
@@ -132,19 +135,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Serializer<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/iserializeroptions.html" class="tsd-signature-type">ISerializerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="serializer.html" class="tsd-signature-type">Serializer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Serializer<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/iserializeroptions.html" class="tsd-signature-type">ISerializerOptions</a>, stringTokenizer<span class="tsd-signature-symbol">?: </span><a href="stringtokenizer.html" class="tsd-signature-type">StringTokenizer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="serializer.html" class="tsd-signature-type">Serializer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:120</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:143</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>options: <a href="../interfaces/iserializeroptions.html" class="tsd-signature-type">ISerializerOptions</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> stringTokenizer: <a href="stringtokenizer.html" class="tsd-signature-type">StringTokenizer</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="serializer.html" class="tsd-signature-type">Serializer</a></h4>
@@ -161,7 +167,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#byteoffset">byteOffset</a></p>
 						<ul>
-							<li>Defined in src/save/Serializer.ts:115</li>
+							<li>Defined in src/game/save/serializer/Serializer.ts:138</li>
 						</ul>
 					</aside>
 				</section>
@@ -172,7 +178,28 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#dataview">dataView</a></p>
 						<ul>
-							<li>Defined in src/save/Serializer.ts:114</li>
+							<li>Defined in src/game/save/serializer/Serializer.ts:137</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="metadata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> metadata</h3>
+					<div class="tsd-signature tsd-kind-icon">metadata<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/serializermetadatakey.html" class="tsd-signature-type">SerializerMetadataKey</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#metadata">metadata</a></p>
+						<ul>
+							<li>Defined in src/game/save/serializer/Serializer.ts:135</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="stringtokenizer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> string<wbr>Tokenizer</h3>
+					<div class="tsd-signature tsd-kind-icon">string<wbr>Tokenizer<span class="tsd-signature-symbol">:</span> <a href="stringtokenizer.html" class="tsd-signature-type">StringTokenizer</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/save/serializer/Serializer.ts:145</li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +210,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#version">version</a></p>
 						<ul>
-							<li>Defined in src/save/Serializer.ts:117</li>
+							<li>Defined in src/game/save/serializer/Serializer.ts:140</li>
 						</ul>
 					</aside>
 				</section>
@@ -200,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:227</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:272</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -227,7 +254,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#load">load</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:277</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:287</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -257,7 +284,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#loadfromstring">loadFromString</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:303</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:326</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -287,7 +314,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#loadfromuint8array">loadFromUint8Array</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:286</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:296</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -316,7 +343,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:910</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:988</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -333,7 +360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:859</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:937</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -359,7 +386,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:876</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:954</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -385,7 +412,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:892</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:970</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -412,7 +439,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#readmap">readMap</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:933</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1021</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -432,13 +459,13 @@
 					<a name="readobject" class="tsd-anchor"></a>
 					<h3>read<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Object<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Object<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, dataType<span class="tsd-signature-symbol">: </span><a href="../enums/types.html" class="tsd-signature-type">Types</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:768</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:832</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -448,6 +475,9 @@
 								</li>
 								<li>
 									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>dataType: <a href="../enums/types.html" class="tsd-signature-type">Types</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -465,7 +495,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#readproperty">readProperty</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:320</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:336</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -491,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:959</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1047</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -517,7 +547,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:846</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:924</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -535,7 +565,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#savetostring">saveToString</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:222</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:267</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -562,7 +592,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iserializer.html">ISerializer</a>.<a href="../interfaces/iserializer.html#savetouint8array">saveToUint8Array</a></p>
 								<ul>
-									<li>Defined in src/save/Serializer.ts:129</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:156</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -582,25 +612,31 @@
 					<a name="writearraybuffer" class="tsd-anchor"></a>
 					<h3>write<wbr>Array<wbr>Buffer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Array<wbr>Buffer<span class="tsd-signature-symbol">(</span>typedArray<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>BYTES_PER_ELEMENT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>byteLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Array<wbr>Buffer<span class="tsd-signature-symbol">(</span>typedArray<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>BYTES_PER_ELEMENT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>buffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferLike</span><span class="tsd-signature-symbol">; </span>byteLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:1062</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1160</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>typedArray: <span class="tsd-signature-symbol">{ </span>BYTES_PER_ELEMENT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>byteLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>typedArray: <span class="tsd-signature-symbol">{ </span>BYTES_PER_ELEMENT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>buffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferLike</span><span class="tsd-signature-symbol">; </span>byteLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5>BYTES_<wbr>PER_<wbr>ELEMENT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 										</li>
 										<li class="tsd-parameter">
+											<h5>buffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferLike</span></h5>
+										</li>
+										<li class="tsd-parameter">
 											<h5>byte<wbr>Length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 										</li>
 									</ul>
 								</li>
@@ -619,7 +655,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:1044</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1142</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -648,7 +684,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:1087</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1187</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -674,7 +710,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:981</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1069</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -700,13 +736,13 @@
 					<a name="writeproperty" class="tsd-anchor"></a>
 					<h3>write<wbr>Property</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Property<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, chain<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, flags<span class="tsd-signature-symbol">?: </span><a href="../enums/savepropertyflag.html" class="tsd-signature-type">SavePropertyFlag</a>, propertyIsJitDeserialized<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Property<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, chain<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, flags<span class="tsd-signature-symbol">?: </span><a href="../enums/savepropertyflag.html" class="tsd-signature-type">SavePropertyFlag</a>, propertyIsJitDeserialized<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:503</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:549</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -724,7 +760,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> flags: <a href="../enums/savepropertyflag.html" class="tsd-signature-type">SavePropertyFlag</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> propertyIsJitDeserialized: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> propertyIsJitDeserialized: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -741,7 +777,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:1097</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1197</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -767,7 +803,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/Serializer.ts:1034</li>
+									<li>Defined in src/game/save/serializer/Serializer.ts:1132</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -777,6 +813,29 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="convertstringtouint8array" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> convert<wbr>String<wbr>ToUint8<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>String<wbr>ToUint8<wbr>Array<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/save/serializer/Serializer.ts:116</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Uint8Array</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -805,6 +864,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="serializer.html#dataview" class="tsd-kind-icon">data<wbr>View</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="serializer.html#metadata" class="tsd-kind-icon">metadata</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="serializer.html#stringtokenizer" class="tsd-kind-icon">string<wbr>Tokenizer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="serializer.html#version" class="tsd-kind-icon">version</a>
@@ -874,6 +939,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="serializer.html#writestring" class="tsd-kind-icon">write<wbr>String</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="serializer.html#convertstringtouint8array" class="tsd-kind-icon">convert<wbr>String<wbr>ToUint8<wbr>Array</a>
 							</li>
 						</ul>
 					</li>

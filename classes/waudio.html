@@ -130,7 +130,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/audio/Audio.ts:80</li>
+									<li>Defined in src/game/audio/Audio.ts:92</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="waudio.html" class="tsd-signature-type">WAudio</a></h4>
@@ -146,9 +146,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iaudioevents.html" class="tsd-signature-type">IAudioEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -166,7 +166,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#getmusichandler">getMusicHandler</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:90</li>
+									<li>Defined in src/game/audio/Audio.ts:102</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,7 +189,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#playmusic">playMusic</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:120</li>
+									<li>Defined in src/game/audio/Audio.ts:132</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +212,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#processeffects">processEffects</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:222</li>
+									<li>Defined in src/game/audio/Audio.ts:237</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -223,19 +223,22 @@
 					<a name="queueeffect" class="tsd-anchor"></a>
 					<h3>queue<wbr>Effect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">queue<wbr>Effect<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, speed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, noPosition<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">queue<wbr>Effect<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a>, island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, speed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, noPosition<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/audio/Audio.ts:175</li>
+									<li>Defined in src/game/audio/Audio.ts:189</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>type: <a href="../enums/sfxtype.html" class="tsd-signature-type">SfxType</a></h5>
+								</li>
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
 									<h5>x: <span class="tsd-signature-type">number</span></h5>
@@ -274,7 +277,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#resetmusichandler">resetMusicHandler</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:113</li>
+									<li>Defined in src/game/audio/Audio.ts:125</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -297,7 +300,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#setmusichandler">setMusicHandler</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:101</li>
+									<li>Defined in src/game/audio/Audio.ts:113</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -326,7 +329,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#stopmusic">stopMusic</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:127</li>
+									<li>Defined in src/game/audio/Audio.ts:139</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -344,7 +347,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#updatemusicspeed">updateMusicSpeed</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:131</li>
+									<li>Defined in src/game/audio/Audio.ts:143</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -368,7 +371,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#updateposition">updatePosition</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:161</li>
+									<li>Defined in src/game/audio/Audio.ts:174</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -386,7 +389,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iaudio.html">IAudio</a>.<a href="../interfaces/iaudio.html#updatevolume">updateVolume</a></p>
 								<ul>
-									<li>Defined in src/audio/Audio.ts:143</li>
+									<li>Defined in src/game/audio/Audio.ts:155</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

@@ -99,7 +99,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#deregister" class="tsd-kind-icon">deregister</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#disable" class="tsd-kind-icon">disable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#disableuntil" class="tsd-kind-icon">disable<wbr>Until</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#enable" class="tsd-kind-icon">enable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#extractmodifiers" class="tsd-kind-icon">extract<wbr>Modifiers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#getcatalyst" class="tsd-kind-icon">get<wbr>Catalyst</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="inputmanager.html#isdisabled" class="tsd-kind-icon">is<wbr>Disabled</a></li>
@@ -120,9 +122,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iinputmanagerevents.html" class="tsd-signature-type">IInputManagerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -132,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <a href="globalinputinfo.html" class="tsd-signature-type">GlobalInputInfo</a><span class="tsd-signature-symbol"> = new GlobalInputInfo().event.subscribe(&quot;unpress&quot;, this.onUnpress)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/ui/input/InputManager.ts:257</li>
+							<li>Defined in src/game/ui/input/InputManager.ts:262</li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">mouse<span class="tsd-signature-symbol">:</span> <a href="globalmouseinfo.html" class="tsd-signature-type">GlobalMouseInfo</a><span class="tsd-signature-symbol"> = new GlobalMouseInfo()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/ui/input/InputManager.ts:256</li>
+							<li>Defined in src/game/ui/input/InputManager.ts:261</li>
 						</ul>
 					</aside>
 				</section>
@@ -159,10 +161,38 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:302</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:307</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="disable" class="tsd-anchor"></a>
+					<h3>disable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">disable<span class="tsd-signature-symbol">(</span>disabler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/ui/input/InputManager.ts:422</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>disabler: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Each <code>disable</code> call should be given a unique <code>disabler</code></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -176,14 +206,43 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:393</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:402</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>until: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
+								<li>
+									<h5>disabler: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Each <code>disableUntil</code> call should be given a unique <code>disabler</code>,
+										as this system uses the timing from the latest <code>disableUntil</code> call</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="enable" class="tsd-anchor"></a>
+					<h3>enable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">enable<span class="tsd-signature-symbol">(</span>disabler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/ui/input/InputManager.ts:436</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
 								<li>
 									<h5>disabler: <span class="tsd-signature-type">string</span></h5>
 								</li>
@@ -202,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:355</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:360</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,7 +290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:369</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:374</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -254,7 +313,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:414</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:442</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -271,7 +330,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:418</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:446</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -294,7 +353,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:331</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:336</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -311,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:267</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:272</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -334,7 +393,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/input/InputManager.ts:335</li>
+									<li>Defined in src/game/ui/input/InputManager.ts:340</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -371,7 +430,13 @@
 								<a href="inputmanager.html#deregister" class="tsd-kind-icon">deregister</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="inputmanager.html#disable" class="tsd-kind-icon">disable</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="inputmanager.html#disableuntil" class="tsd-kind-icon">disable<wbr>Until</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="inputmanager.html#enable" class="tsd-kind-icon">enable</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="inputmanager.html#extractmodifiers" class="tsd-kind-icon">extract<wbr>Modifiers</a>

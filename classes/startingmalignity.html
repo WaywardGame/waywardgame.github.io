@@ -57,13 +57,21 @@
 					<a href="startingmalignity.html">StartingMalignity</a>
 				</li>
 			</ul>
-			<h1>Class StartingMalignity</h1>
+			<h1>Class StartingMalignity&lt;INSTANCE_ARGS&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>INSTANCE_ARGS<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -96,23 +104,18 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#challenge" class="tsd-kind-icon">challenge</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#imagepath" class="tsd-kind-icon">image<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#random" class="tsd-kind-icon">random</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#tooltipargs" class="tsd-kind-icon">tooltip<wbr>Args</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="startingmalignity.html#weight" class="tsd-kind-icon">weight</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#getrandom" class="tsd-kind-icon">get<wbr>Random</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#gettooltip" class="tsd-kind-icon">get<wbr>Tooltip</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#initialize" class="tsd-kind-icon">initialize</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#isenabledforplayer" class="tsd-kind-icon">is<wbr>Enabled<wbr>For<wbr>Player</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="startingmalignity.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="startingmalignity.html#getrandom" class="tsd-kind-icon">get<wbr>Random</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="startingmalignity.html#initialize" class="tsd-kind-icon">initialize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="startingmalignity.html#instantiate" class="tsd-kind-icon">instantiate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="startingmalignity.html#uninitialize" class="tsd-kind-icon">uninitialize</a></li>
 							</ul>
 						</section>
@@ -125,14 +128,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Starting<wbr>Malignity<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><a href="challenge.html" class="tsd-signature-type">Challenge</a>, random<span class="tsd-signature-symbol">?: </span><a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="startingmalignity.html" class="tsd-signature-type">StartingMalignity</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Starting<wbr>Malignity<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><a href="challenge.html" class="tsd-signature-type">Challenge</a>, random<span class="tsd-signature-symbol">?: </span><a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a><span class="tsd-signature-symbol"> | </span><a href="../modules/randomreference.html" class="tsd-signature-type">RandomReference</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="startingmalignity.html" class="tsd-signature-type">StartingMalignity</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:28</li>
+									<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:60</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -141,7 +144,7 @@
 									<h5>id: <a href="challenge.html" class="tsd-signature-type">Challenge</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> random: <a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a><span class="tsd-signature-symbol"> = RandomInstance.Seeded</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> random: <a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a><span class="tsd-signature-symbol"> | </span><a href="../modules/randomreference.html" class="tsd-signature-type">RandomReference</a><span class="tsd-signature-symbol"> = RandomInstance.Seeded</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="startingmalignity.html" class="tsd-signature-type">StartingMalignity</a></h4>
@@ -152,63 +155,36 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="challenge" class="tsd-anchor"></a>
-					<h3>challenge</h3>
-					<div class="tsd-signature tsd-kind-icon">challenge<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="challengemodifier.html">ChallengeModifier</a>.<a href="challengemodifier.html#challenge">challenge</a></p>
-						<ul>
-							<li>Defined in src/game/options/modifiers/challenge/ChallengeModifier.ts:27</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>How much &quot;challenge&quot; this modifier adds (or subtracts!). Defaults to <code>0</code>. Added to the result of <code>apply</code>.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <a href="challenge.html" class="tsd-signature-type">Challenge</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/game/options/modifiers/GameplayModifier.ts:30</li>
+							<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:63</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="imagepath" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> image<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">image<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">image<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ihasimagepath.html">IHasImagePath</a>.<a href="../interfaces/ihasimagepath.html#imagepath">imagePath</a></p>
 						<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#imagepath">imagePath</a></p>
 						<ul>
-							<li>Defined in src/game/options/modifiers/GameplayModifier.ts:21</li>
+							<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:60</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="random" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> random</h3>
-					<div class="tsd-signature tsd-kind-icon">random<span class="tsd-signature-symbol">:</span> <a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a></div>
+					<div class="tsd-signature tsd-kind-icon">random<span class="tsd-signature-symbol">:</span> <a href="../enums/randominstance.html" class="tsd-signature-type">RandomInstance</a><span class="tsd-signature-symbol"> | </span><a href="../modules/randomreference.html" class="tsd-signature-type">RandomReference</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#random">random</a></p>
 						<ul>
-							<li>Defined in src/game/options/modifiers/GameplayModifier.ts:30</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="tooltipargs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tooltip<wbr>Args</h3>
-					<div class="tsd-signature tsd-kind-icon">tooltip<wbr>Args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="challengemodifier.html">ChallengeModifier</a>.<a href="challengemodifier.html#tooltipargs">tooltipArgs</a></p>
-						<ul>
-							<li>Defined in src/game/options/modifiers/challenge/ChallengeModifier.ts:29</li>
+							<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -219,41 +195,17 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="challengemodifier.html">ChallengeModifier</a>.<a href="challengemodifier.html#weight">weight</a></p>
 						<ul>
-							<li>Defined in src/game/options/modifiers/challenge/modifiers/StartingMalignity.ts:18</li>
+							<li>Defined in src/game/game/options/modifiers/challenge/modifiers/StartingMalignity.ts:18</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="getoptions" class="tsd-anchor"></a>
-					<h3>get<wbr>Options</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>resolve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>milestoneModifiers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#getoptions">getOptions</a></p>
-								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:44</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> resolve: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>milestoneModifiers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="getrandom" class="tsd-anchor"></a>
-					<h3>get<wbr>Random</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Random</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Random<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -261,117 +213,59 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#getrandom">getRandom</a></p>
 								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:56</li>
+									<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="gettooltip" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> get<wbr>Tooltip</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tooltip<span class="tsd-signature-symbol">(</span>tooltip<span class="tsd-signature-symbol">: </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="challengemodifier.html">ChallengeModifier</a>.<a href="challengemodifier.html#gettooltip">getTooltip</a></p>
-								<ul>
-									<li>Defined in src/game/options/modifiers/challenge/ChallengeModifier.ts:31</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>tooltip: <a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="initialize" class="tsd-anchor"></a>
 					<h3>initialize</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span>instance<span class="tsd-signature-symbol">: </span><a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#initialize">initialize</a></p>
+								<p>Overrides <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#initialize">initialize</a></p>
 								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:32</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="isenabledforplayer" class="tsd-anchor"></a>
-					<h3>is<wbr>Enabled<wbr>For<wbr>Player</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Enabled<wbr>For<wbr>Player<span class="tsd-signature-symbol">(</span>_entity<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#isenabledforplayer">isEnabledForPlayer</a></p>
-								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:52</li>
+									<li>Defined in src/game/game/options/modifiers/challenge/modifiers/StartingMalignity.ts:20</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>_entity: <a href="entity.html" class="tsd-signature-type">Entity</a></h5>
+									<h5>instance: <a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a name="options" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> options</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>player<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="instantiate" class="tsd-anchor"></a>
+					<h3>instantiate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">instantiate<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><a href="challenge.html" class="tsd-signature-type">Challenge</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#options">options</a></p>
+								<p>Inherited from <a href="challengemodifier.html">ChallengeModifier</a>.<a href="challengemodifier.html#instantiate">instantiate</a></p>
+								<p>Overrides <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#instantiate">instantiate</a></p>
 								<ul>
-									<li>Defined in src/game/options/modifiers/challenge/modifiers/StartingMalignity.ts:19</li>
+									<li>Defined in src/game/game/options/modifiers/challenge/ChallengeModifier.ts:52</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>player<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
-								<li class="tsd-parameter">
-									<h5>player<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>inventory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
-											<ul class="tsd-parameters">
-												<li class="tsd-parameter">
-													<h5>additional<wbr>Items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-												</li>
-											</ul>
-										</li>
-										<li class="tsd-parameter">
-											<h5>reputation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
-											<ul class="tsd-parameters">
-												<li class="tsd-parameter">
-													<h5>initial<wbr>Malignity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-												</li>
-											</ul>
-										</li>
-									</ul>
+								<li>
+									<h5>id: <a href="challenge.html" class="tsd-signature-type">Challenge</a></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -379,17 +273,23 @@
 					<a name="uninitialize" class="tsd-anchor"></a>
 					<h3>uninitialize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">uninitialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">uninitialize<span class="tsd-signature-symbol">(</span>instance<span class="tsd-signature-symbol">: </span><a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="gameplaymodifier.html">GameplayModifier</a>.<a href="gameplaymodifier.html#uninitialize">uninitialize</a></p>
 								<ul>
-									<li>Defined in src/game/options/modifiers/GameplayModifier.ts:38</li>
+									<li>Defined in src/game/game/options/modifiers/GameplayModifier.ts:71</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>instance: <a href="challengemodifierinstance.html" class="tsd-signature-type">ChallengeModifierInstance</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -407,14 +307,11 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="startingmalignity.html" class="tsd-kind-icon">Starting<wbr>Malignity</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="startingmalignity.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="startingmalignity.html#challenge" class="tsd-kind-icon">challenge</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="startingmalignity.html#id" class="tsd-kind-icon">id</a>
@@ -425,29 +322,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="startingmalignity.html#random" class="tsd-kind-icon">random</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="startingmalignity.html#tooltipargs" class="tsd-kind-icon">tooltip<wbr>Args</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="startingmalignity.html#weight" class="tsd-kind-icon">weight</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="startingmalignity.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="startingmalignity.html#getrandom" class="tsd-kind-icon">get<wbr>Random</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="startingmalignity.html#gettooltip" class="tsd-kind-icon">get<wbr>Tooltip</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="startingmalignity.html#initialize" class="tsd-kind-icon">initialize</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="startingmalignity.html#isenabledforplayer" class="tsd-kind-icon">is<wbr>Enabled<wbr>For<wbr>Player</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="startingmalignity.html#options" class="tsd-kind-icon">options</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="startingmalignity.html#instantiate" class="tsd-kind-icon">instantiate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="startingmalignity.html#uninitialize" class="tsd-kind-icon">uninitialize</a>

@@ -83,9 +83,9 @@
 					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/idoodadevents.html" class="tsd-signature-type">IDoodadEvents</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/ireferenceable.html" class="tsd-signature-type">IReferenceable</a></li>
 					<li><a href="../interfaces/iunserializedcallback.html" class="tsd-signature-type">IUnserializedCallback</a></li>
-					<li><a href="../interfaces/iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/idoodadoptions.html" class="tsd-signature-type">IDoodadOptions</a></li>
-					<li><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+					<li><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					<li><span class="tsd-signature-symbol">{}</span></li>
 					<li><a href="../modules/itemperaturesource.html" class="tsd-signature-type">ITemperatureSource</a></li>
 					<li><a href="../interfaces/ihasinsulation.html" class="tsd-signature-type">IHasInsulation</a></li>
@@ -115,6 +115,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#gfx" class="tsd-kind-icon">gfx</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#hitchedcreature" class="tsd-kind-icon">hitched<wbr>Creature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#islandid" class="tsd-kind-icon">island<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#itemorders" class="tsd-kind-icon">item<wbr>Orders</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#magic" class="tsd-kind-icon">magic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="doodad.html#maxdur" class="tsd-kind-icon">max<wbr>Dur</a></li>
@@ -143,6 +144,7 @@
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="doodad.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="doodad.html#island" class="tsd-kind-icon">island</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -157,6 +159,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#canharvest" class="tsd-kind-icon">can<wbr>Harvest</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#canpickup" class="tsd-kind-icon">can<wbr>Pickup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#cantrample" class="tsd-kind-icon">can<wbr>Trample</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#changecivilizationscore" class="tsd-kind-icon">change<wbr>Civilization<wbr>Score</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#changetype" class="tsd-kind-icon">change<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#checkfortrampling" class="tsd-kind-icon">check<wbr>For<wbr>Trampling</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#damage" class="tsd-kind-icon">damage</a></li>
@@ -188,6 +191,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isembers" class="tsd-kind-icon">is<wbr>Embers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isgatherable" class="tsd-kind-icon">is<wbr>Gatherable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isingroup" class="tsd-kind-icon">is<wbr>InGroup</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#istall" class="tsd-kind-icon">is<wbr>Tall</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="doodad.html#refillsolarstill" class="tsd-kind-icon">refill<wbr>Solar<wbr>Still</a></li>
@@ -217,19 +221,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Doodad<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><a href="../enums/enumid.html#doodadtype" class="tsd-signature-type">DoodadType</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/idoodadoptions.html" class="tsd-signature-type">IDoodadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodad.html" class="tsd-signature-type">Doodad</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Doodad<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a>, islandId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&#x60;${number},${number}&#x60;</span>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/idoodadoptions.html" class="tsd-signature-type">IDoodadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doodad.html" class="tsd-signature-type">Doodad</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:180</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:195</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <a href="../enums/enumid.html#doodadtype" class="tsd-signature-type">DoodadType</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> islandId: <span class="tsd-signature-type">&#x60;${number},${number}&#x60;</span><span class="tsd-signature-symbol"> = &quot;&quot; as IslandId</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
@@ -254,11 +261,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="aberrant" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> aberrant</h3>
-					<div class="tsd-signature tsd-kind-icon">aberrant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">aberrant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#aberrant">aberrant</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:170</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:182</li>
 						</ul>
 					</aside>
 				</section>
@@ -268,18 +275,18 @@
 					<div class="tsd-signature tsd-kind-icon">contained<wbr>Items<span class="tsd-signature-symbol">:</span> <a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:144</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:156</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="decay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> decay</h3>
-					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#decay">decay</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:145</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:157</li>
 						</ul>
 					</aside>
 				</section>
@@ -290,7 +297,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#disassembly">disassembly</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:148</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:160</li>
 						</ul>
 					</aside>
 				</section>
@@ -300,42 +307,42 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idoodadevents.html" class="tsd-signature-type">IDoodadEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="gatherready" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gather<wbr>Ready</h3>
-					<div class="tsd-signature tsd-kind-icon">gather<wbr>Ready<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">gather<wbr>Ready<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#gatherready">gatherReady</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:149</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:161</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="gfx" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gfx</h3>
-					<div class="tsd-signature tsd-kind-icon">gfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">gfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#gfx">gfx</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:151</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:163</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="hitchedcreature" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hitched<wbr>Creature</h3>
-					<div class="tsd-signature tsd-kind-icon">hitched<wbr>Creature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">hitched<wbr>Creature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#hitchedcreature">hitchedCreature</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:168</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:180</li>
 						</ul>
 					</aside>
 				</section>
@@ -346,7 +353,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:152</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:164</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="islandid" class="tsd-anchor"></a>
+					<h3>island<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">island<wbr>Id<span class="tsd-signature-symbol">:</span> <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/doodad/Doodad.ts:188</li>
 						</ul>
 					</aside>
 				</section>
@@ -356,7 +373,7 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Orders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:154</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:166</li>
 						</ul>
 					</aside>
 				</section>
@@ -367,7 +384,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ihasmagic.html">IHasMagic</a>.<a href="../interfaces/ihasmagic.html#magic">magic</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:171</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:184</li>
 						</ul>
 					</aside>
 				</section>
@@ -378,18 +395,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#maxdur">maxDur</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:155</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:167</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="meltdecay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> melt<wbr>Decay</h3>
-					<div class="tsd-signature tsd-kind-icon">melt<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">melt<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#meltdecay">meltDecay</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:147</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:159</li>
 						</ul>
 					</aside>
 				</section>
@@ -400,7 +417,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#mindur">minDur</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:156</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:168</li>
 						</ul>
 					</aside>
 				</section>
@@ -411,7 +428,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#objecttype">objectType</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:142</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:154</li>
 						</ul>
 					</aside>
 				</section>
@@ -421,40 +438,40 @@
 					<div class="tsd-signature tsd-kind-icon">orientation<span class="tsd-signature-symbol">:</span> <a href="../enums/doororientation.html" class="tsd-signature-type">DoorOrientation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:157</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:169</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="owneridentifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> owner<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#owneridentifier">ownerIdentifier</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:158</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:170</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="quality" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> quality</h3>
-					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <a href="../enums/message.html#quality" class="tsd-signature-type">Quality</a></div>
+					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <a href="../enums/quality.html" class="tsd-signature-type">Quality</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#quality">quality</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:159</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:171</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="referenceid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reference<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ireferenceable.html">IReferenceable</a>.<a href="../interfaces/ireferenceable.html#referenceid">referenceId</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:153</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:165</li>
 						</ul>
 					</aside>
 				</section>
@@ -465,28 +482,28 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:160</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:172</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spread" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> spread</h3>
-					<div class="tsd-signature tsd-kind-icon">spread<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">spread<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#spread">spread</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:161</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:173</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="startingdecay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> starting<wbr>Decay</h3>
-					<div class="tsd-signature tsd-kind-icon">starting<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">starting<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:146</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:158</li>
 						</ul>
 					</aside>
 				</section>
@@ -497,18 +514,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#step">step</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:167</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:179</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="stillcontainer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> still<wbr>Container</h3>
-					<div class="tsd-signature tsd-kind-icon">still<wbr>Container<span class="tsd-signature-symbol">:</span> <a href="../enums/types.html#item" class="tsd-signature-type">Item</a></div>
+					<div class="tsd-signature tsd-kind-icon">still<wbr>Container<span class="tsd-signature-symbol">:</span> <a href="item.html" class="tsd-signature-type">Item</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#stillcontainer">stillContainer</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:150</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:162</li>
 						</ul>
 					</aside>
 				</section>
@@ -518,29 +535,29 @@
 					<div class="tsd-signature tsd-kind-icon">traded<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:169</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:181</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DoodadType</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:162</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:174</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="weight" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> weight</h3>
-					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/idoodadoptions.html">IDoodadOptions</a>.<a href="../interfaces/idoodadoptions.html#weight">weight</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:163</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:175</li>
 						</ul>
 					</aside>
 				</section>
@@ -549,9 +566,8 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> x</h3>
 					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#x">x</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:164</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:176</li>
 						</ul>
 					</aside>
 				</section>
@@ -560,9 +576,8 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> y</h3>
 					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#y">y</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:165</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:177</li>
 						</ul>
 					</aside>
 				</section>
@@ -571,9 +586,8 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> z</h3>
 					<div class="tsd-signature tsd-kind-icon">z<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#z">z</a></p>
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:166</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:178</li>
 						</ul>
 					</aside>
 				</section>
@@ -583,7 +597,7 @@
 					<div class="tsd-signature tsd-kind-icon">registrar<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/doodad/Doodad.ts:140</li>
+							<li>Defined in src/game/game/doodad/Doodad.ts:152</li>
 						</ul>
 					</aside>
 				</section>
@@ -600,10 +614,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:127</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:139</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="doodad.html" class="tsd-signature-type">Doodad</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="island" class="tsd-anchor"></a>
+					<h3>island</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> island<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/doodad/Doodad.ts:295</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="island.html" class="tsd-signature-type">Island</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -620,7 +651,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:870</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:917</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -637,7 +668,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:904</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:952</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -660,7 +691,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:944</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:992</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -677,7 +708,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1008</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1056</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -694,7 +725,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:514</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:565</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -716,7 +747,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:417</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:441</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -733,7 +764,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:554</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:601</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -750,7 +781,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:479</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:530</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -767,13 +798,13 @@
 					<a name="cantrample" class="tsd-anchor"></a>
 					<h3>can<wbr>Trample</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>Trample<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></li>
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Trample<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:571</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:618</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -781,7 +812,35 @@
 									<p>Returns whether the doodad can be trampled</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="changecivilizationscore" class="tsd-anchor"></a>
+					<h3>change<wbr>Civilization<wbr>Score</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Civilization<wbr>Score<span class="tsd-signature-symbol">(</span>add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1665</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gives civilization score based on how much is defined for this doodad.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>add: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -789,19 +848,19 @@
 					<a name="changetype" class="tsd-anchor"></a>
 					<h3>change<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Type<span class="tsd-signature-symbol">(</span>doodadType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Type<span class="tsd-signature-symbol">(</span>doodadType<span class="tsd-signature-symbol">: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:332</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:356</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>doodadType: <span class="tsd-signature-type">DoodadType</span></h5>
+									<h5>doodadType: <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -818,7 +877,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:580</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:627</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -841,7 +900,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:765</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:812</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -867,16 +926,16 @@
 					<a name="description" class="tsd-anchor"></a>
 					<h3>description</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></li>
+						<li class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:314</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:334</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -890,7 +949,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:912</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:960</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -913,7 +972,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:506</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:557</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -930,7 +989,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:718</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:765</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -956,7 +1015,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:866</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:913</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -967,13 +1026,13 @@
 					<a name="getdescriptiontranslation" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Description<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Description<wbr>Translation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Description<wbr>Translation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1305</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1353</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -982,7 +1041,7 @@
 									<dd></dd>
 								</dl>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -990,16 +1049,16 @@
 					<a name="getgrowingstage" class="tsd-anchor"></a>
 					<h3>get<wbr>Growing<wbr>Stage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Growing<wbr>Stage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">GrowingStage</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Growing<wbr>Stage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:426</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:450</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">GrowingStage</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1013,7 +1072,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1061</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1109</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/irgb.html" class="tsd-signature-type">IRGB</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1024,14 +1083,14 @@
 					<a name="getinsulation" class="tsd-anchor"></a>
 					<h3>get<wbr>Insulation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Insulation<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/temptype.html" class="tsd-signature-type">TempType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Insulation<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/temptype.html" class="tsd-signature-type">TempType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ihasinsulation.html">IHasInsulation</a>.<a href="../interfaces/ihasinsulation.html#getinsulation">getInsulation</a></p>
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1196</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1244</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1040,7 +1099,7 @@
 									<h5>type: <a href="../enums/temptype.html" class="tsd-signature-type">TempType</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1054,7 +1113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1226</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1274</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1080,13 +1139,13 @@
 					<a name="getmeltrate" class="tsd-anchor"></a>
 					<h3>get<wbr>Melt<wbr>Rate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Melt<wbr>Rate<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a>, point<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Melt<wbr>Rate<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a>, point<span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1586</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1635</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1100,7 +1159,7 @@
 									<h5>description: <a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></h5>
 								</li>
 								<li>
-									<h5>point: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+									<h5>point: <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The point of the tile the doodad is on.</p>
 									</div>
@@ -1115,13 +1174,13 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:296</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:316</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1129,13 +1188,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether to include an article for the name of the doodad. Uses the article rules on the language. Defaults to <code>true</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of this doodad that you&#39;re getting the name of. Defaults to <code>1</code>.</p>
 										<p>Examples:</p>
@@ -1147,7 +1206,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1155,13 +1214,13 @@
 					<a name="getnametranslation" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Name<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<wbr>Translation<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<wbr>Translation<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1298</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1346</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1173,13 +1232,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1194,7 +1253,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ihasowner.html">IHasOwner</a>.<a href="../interfaces/ihasowner.html#getowner">getOwner</a></p>
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:742</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:789</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1216,7 +1275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:749</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:796</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1238,7 +1297,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:497</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:548</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1249,16 +1308,16 @@
 					<a name="getpoint" class="tsd-anchor"></a>
 					<h3>get<wbr>Point</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:409</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:433</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1272,7 +1331,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1183</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1231</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1289,7 +1348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:283</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:303</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1300,15 +1359,21 @@
 					<a name="gettile" class="tsd-anchor"></a>
 					<h3>get<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span>ignoreCache<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:393</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:417</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreCache: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
 						</li>
 					</ul>
@@ -1323,7 +1388,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:401</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:425</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1340,7 +1405,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1105</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1153</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1365,13 +1430,13 @@
 					<a name="healorharmplant" class="tsd-anchor"></a>
 					<h3>heal<wbr>OrHarm<wbr>Plant</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">heal<wbr>OrHarm<wbr>Plant<span class="tsd-signature-symbol">(</span>liquid<span class="tsd-signature-symbol">: </span><a href="../enums/liquidtype.html" class="tsd-signature-type">LiquidType</a>, growthBonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">heal<wbr>OrHarm<wbr>Plant<span class="tsd-signature-symbol">(</span>liquid<span class="tsd-signature-symbol">: </span><a href="../enums/liquidtype.html" class="tsd-signature-type">LiquidType</a>, growthBonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1246</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1294</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1388,7 +1453,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> growthBonus: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> growthBonus: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The bonus that is applied (on top of a default of 10) to the plants decay (so it grows faster).</p>
 									</div>
@@ -1402,13 +1467,13 @@
 					<a name="increasefertility" class="tsd-anchor"></a>
 					<h3>increase<wbr>Fertility</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">increase<wbr>Fertility<span class="tsd-signature-symbol">(</span>bypassChange<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">increase<wbr>Fertility<span class="tsd-signature-symbol">(</span>bypassChange<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1076</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1124</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1419,7 +1484,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassChange: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassChange: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Set to true if you just want to check if fertility can be increased.</p>
 									</div>
@@ -1440,7 +1505,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:703</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:750</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1463,7 +1528,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:541</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:592</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1480,7 +1545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:531</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:582</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1502,7 +1567,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:378</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:402</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1516,6 +1581,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="istall" class="tsd-anchor"></a>
+					<h3>is<wbr>Tall</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Tall<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/doodad/Doodad.ts:507</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if the doodad will be rendered as tall (2 tiles)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>True if the doodad is tall</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -1525,7 +1613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:374</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:398</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1543,7 +1631,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1290</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1338</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1560,7 +1648,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1203</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1251</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1582,7 +1670,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1280</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1328</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1598,22 +1686,22 @@
 					<a name="setgrowingstage" class="tsd-anchor"></a>
 					<h3>set<wbr>Growing<wbr>Stage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Growing<wbr>Stage<span class="tsd-signature-symbol">(</span>stage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">GrowingStage</span>, updateTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Growing<wbr>Stage<span class="tsd-signature-symbol">(</span>stage<span class="tsd-signature-symbol">: </span><a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a>, updateTile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:460</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:484</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stage: <span class="tsd-signature-type">GrowingStage</span></h5>
+									<h5>stage: <a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> updateTile: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> updateTile: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1630,7 +1718,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1600</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1649</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1646,13 +1734,13 @@
 					<a name="setofftrap" class="tsd-anchor"></a>
 					<h3>set<wbr>Off<wbr>Trap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Off<wbr>Trap<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">?: </span><a href="human.html" class="tsd-signature-type">Human</a>, withMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Off<wbr>Trap<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">?: </span><a href="human.html" class="tsd-signature-type">Human</a>, withMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1028</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1076</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1661,7 +1749,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> withMessage: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> withMessage: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1678,7 +1766,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1119</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1167</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1700,7 +1788,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:1165</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1213</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1722,7 +1810,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:279</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:299</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1739,7 +1827,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:754</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:801</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1756,7 +1844,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:960</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:1008</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1785,7 +1873,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:387</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:411</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1808,7 +1896,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:322</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:342</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1825,13 +1913,13 @@
 					<a name="getgrowingstagetranslation" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Growing<wbr>Stage<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Growing<wbr>Stage<wbr>Translation<span class="tsd-signature-symbol">(</span>growingStage<span class="tsd-signature-symbol">?: </span><a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a>, description<span class="tsd-signature-symbol">?: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Growing<wbr>Stage<wbr>Translation<span class="tsd-signature-symbol">(</span>growingStage<span class="tsd-signature-symbol">?: </span><a href="../enums/growingstage.html" class="tsd-signature-type">GrowingStage</a>, description<span class="tsd-signature-symbol">?: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:117</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:129</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1849,7 +1937,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> description: <a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1863,7 +1951,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:132</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1880,7 +1968,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:110</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:122</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1903,7 +1991,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/doodad/Doodad.ts:136</li>
+									<li>Defined in src/game/game/doodad/Doodad.ts:148</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1962,6 +2050,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodad.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="doodad.html#islandid" class="tsd-kind-icon">island<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="doodad.html#itemorders" class="tsd-kind-icon">item<wbr>Orders</a>
@@ -2032,6 +2123,9 @@
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="doodad.html#constructorfunction" class="tsd-kind-icon">constructor<wbr>Function</a>
 							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="doodad.html#island" class="tsd-kind-icon">island</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#addtreasurechestloot" class="tsd-kind-icon">add<wbr>Treasure<wbr>Chest<wbr>Loot</a>
 							</li>
@@ -2058,6 +2152,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#cantrample" class="tsd-kind-icon">can<wbr>Trample</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#changecivilizationscore" class="tsd-kind-icon">change<wbr>Civilization<wbr>Score</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#changetype" class="tsd-kind-icon">change<wbr>Type</a>
@@ -2151,6 +2248,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#isingroup" class="tsd-kind-icon">is<wbr>InGroup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="doodad.html#istall" class="tsd-kind-icon">is<wbr>Tall</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="doodad.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>

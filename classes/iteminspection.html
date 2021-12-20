@@ -141,6 +141,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="iteminspection.html#isworldinspection" class="tsd-kind-icon">is<wbr>World<wbr>Inspection</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="iteminspection.html#list" class="tsd-kind-icon">list</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="iteminspection.html#of" class="tsd-kind-icon">of</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="iteminspection.html#ofcomponent" class="tsd-kind-icon">of<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="iteminspection.html#title" class="tsd-kind-icon">title</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="iteminspection.html#verifyhumanity" class="tsd-kind-icon">verify<wbr>Humanity</a></li>
 							</ul>
@@ -161,7 +162,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspection.html">Inspection</a>.<a href="inspection.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:80</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:84</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,9 +183,9 @@
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> component</h3>
 					<div class="tsd-signature tsd-kind-icon">component<span class="tsd-signature-symbol">:</span> <a href="component.html" class="tsd-signature-type">Component</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#component">component</a></p>
+						<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#component">component</a></p>
 						<ul>
-							<li>Defined in src/game/inspection/InfoProvider.ts:90</li>
+							<li>Defined in src/game/game/inspection/InfoProvider.ts:124</li>
 						</ul>
 					</aside>
 				</section>
@@ -193,9 +194,9 @@
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> context</h3>
 					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#context">context</a></p>
+						<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#context">context</a></p>
 						<ul>
-							<li>Defined in src/game/inspection/InfoProvider.ts:91</li>
+							<li>Defined in src/game/game/inspection/InfoProvider.ts:125</li>
 						</ul>
 					</aside>
 				</section>
@@ -205,19 +206,19 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iinfoproviderevents.html" class="tsd-signature-type">IInfoProviderEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="item" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> item</h3>
-					<div class="tsd-signature tsd-kind-icon">item<span class="tsd-signature-symbol">:</span> <a href="../enums/types.html#item" class="tsd-signature-type">Item</a></div>
+					<div class="tsd-signature tsd-kind-icon">item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WeakRef</span><span class="tsd-signature-symbol">&lt;</span><a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/inspection/inspections/ItemInspection.ts:75</li>
+							<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:79</li>
 						</ul>
 					</aside>
 				</section>
@@ -226,9 +227,9 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/inspecttype.html" class="tsd-signature-type">InspectType</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#type">type</a></p>
+						<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/game/inspection/Inspection.ts:40</li>
+							<li>Defined in src/game/game/inspection/Inspection.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -237,9 +238,9 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> value</h3>
 					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#value">value</a></p>
+						<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#value">value</a></p>
 						<ul>
-							<li>Defined in src/game/inspection/Inspection.ts:40</li>
+							<li>Defined in src/game/game/inspection/Inspection.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -250,20 +251,20 @@
 					<a name="createidfromvector3" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>IdFrom<wbr>Vector3</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>IdFrom<wbr>Vector3<span class="tsd-signature-symbol">(</span>vec3<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>IdFrom<wbr>Vector3<span class="tsd-signature-symbol">(</span>vec3<span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#createidfromvector3">createIdFromVector3</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#createidfromvector3">createIdFromVector3</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:61</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>vec3: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+									<h5>vec3: <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -274,14 +275,14 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol"> | </span><a href="simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="labelledvalue.html" class="tsd-signature-type">LabelledValue</a><span class="tsd-signature-symbol"> | </span><a href="magicalpropertiesinfoprovider.html" class="tsd-signature-type">MagicalPropertiesInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="qualityinfoprovider.html" class="tsd-signature-type">QualityInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="doodaduses.html" class="tsd-signature-type">DoodadUses</a><span class="tsd-signature-symbol"> | </span><a href="itemworthinfoprovider.html" class="tsd-signature-type">ItemWorthInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemdetailsinfoprovider.html" class="tsd-signature-type">ItemDetailsInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemdurabilityinfoprovider.html" class="tsd-signature-type">ItemDurabilityInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemprotectedinfoprovider.html" class="tsd-signature-type">ItemProtectedInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemuses.html" class="tsd-signature-type">ItemUses</a><span class="tsd-signature-symbol"> | </span><a href="itemweightinfoprovider.html" class="tsd-signature-type">ItemWeightInfoProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#get">get</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:127</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:138</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -290,7 +291,7 @@
 									<h5>context: <a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><a href="translation.html" class="tsd-signature-type">Translation</a><span class="tsd-signature-symbol"> | </span><a href="simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="labelledvalue.html" class="tsd-signature-type">LabelledValue</a><span class="tsd-signature-symbol"> | </span><a href="magicalpropertiesinfoprovider.html" class="tsd-signature-type">MagicalPropertiesInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="qualityinfoprovider.html" class="tsd-signature-type">QualityInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="doodaduses.html" class="tsd-signature-type">DoodadUses</a><span class="tsd-signature-symbol"> | </span><a href="itemworthinfoprovider.html" class="tsd-signature-type">ItemWorthInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemdetailsinfoprovider.html" class="tsd-signature-type">ItemDetailsInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemdurabilityinfoprovider.html" class="tsd-signature-type">ItemDurabilityInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemprotectedinfoprovider.html" class="tsd-signature-type">ItemProtectedInfoProvider</a><span class="tsd-signature-symbol"> | </span><a href="itemuses.html" class="tsd-signature-type">ItemUses</a><span class="tsd-signature-symbol"> | </span><a href="itemweightinfoprovider.html" class="tsd-signature-type">ItemWeightInfoProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -298,17 +299,17 @@
 					<a name="getborder" class="tsd-anchor"></a>
 					<h3>get<wbr>Border</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Border<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Border<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="inspection.html">Inspection</a>.<a href="inspection.html#getborder">getBorder</a></p>
+								<p>Overrides <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#getborder">getBorder</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:97</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:101</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -321,10 +322,10 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#getclass">getClass</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#getclass">getClass</a></p>
 								<p>Overrides <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#getclass">getClass</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:44</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -340,9 +341,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#getdefaultdisplaylevel">getDefaultDisplayLevel</a></p>
+								<p>Overrides <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#getdefaultdisplaylevel">getDefaultDisplayLevel</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:101</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:106</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/infodisplaylevel.html" class="tsd-signature-type">InfoDisplayLevel</a></h4>
@@ -358,9 +359,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#getdisplaylevel">getDisplayLevel</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#getdisplaylevel">getDisplayLevel</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:114</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:148</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -377,17 +378,17 @@
 					<a name="geticon" class="tsd-anchor"></a>
 					<h3>get<wbr>Icon</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Icon<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Icon<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#geticon">getIcon</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#geticon">getIcon</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:133</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:167</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -395,17 +396,17 @@
 					<a name="getid" class="tsd-anchor"></a>
 					<h3>get<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspection.html">Inspection</a>.<a href="inspection.html#getid">getId</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:93</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:97</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -418,9 +419,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#getpriority">getPriority</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#getpriority">getPriority</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:52</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -436,9 +437,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#hascontent">hasContent</a></p>
+								<p>Overrides <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#hascontent">hasContent</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:105</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:110</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -460,9 +461,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#init">init</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#init">init</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:152</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:186</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -478,10 +479,10 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#initchildtextcomponent">initChildTextComponent</a></p>
-								<p>Overrides <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#initchildtextcomponent">initChildTextComponent</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#initchildtextcomponent">initChildTextComponent</a></p>
+								<p>Overrides <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#initchildtextcomponent">initChildTextComponent</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:65</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -503,9 +504,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#initcomponent">initComponent</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#initcomponent">initComponent</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:234</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:268</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -542,7 +543,7 @@
 										<li class="tsd-description">
 											<aside class="tsd-sources">
 												<ul>
-													<li>Defined in src/game/inspection/InfoProvider.ts:419</li>
+													<li>Defined in src/game/game/inspection/InfoProvider.ts:473</li>
 												</ul>
 											</aside>
 											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -563,7 +564,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:160</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:173</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -589,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:167</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:180</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -605,9 +606,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#recheckhascontent">recheckHasContent</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#recheckhascontent">recheckHasContent</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:213</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:247</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -629,9 +630,9 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/irefreshable.html">IRefreshable</a>.<a href="../interfaces/irefreshable.html#refresh">refresh</a></p>
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#refresh">refresh</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#refresh">refresh</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:205</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:239</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -652,9 +653,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#refreshdisplaylevel">refreshDisplayLevel</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#refreshdisplaylevel">refreshDisplayLevel</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:221</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:255</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -675,9 +676,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#remove">remove</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:229</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:263</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -698,9 +699,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#setcomponent">setComponent</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#setcomponent">setComponent</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:127</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:161</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -722,9 +723,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#setdisplaylevel">setDisplayLevel</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#setdisplaylevel">setDisplayLevel</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:103</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:137</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -741,20 +742,20 @@
 					<a name="seticon" class="tsd-anchor"></a>
 					<h3>set<wbr>Icon</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Icon<span class="tsd-signature-symbol">(</span>icon<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Icon<span class="tsd-signature-symbol">(</span>icon<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#seticon">setIcon</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#seticon">setIcon</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:137</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:171</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> icon: <a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> icon: <a href="../interfaces/iicon.html" class="tsd-signature-type">IIcon</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -770,9 +771,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#setsynchronous">setSynchronous</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#setsynchronous">setSynchronous</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:147</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:181</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -789,9 +790,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#subscriberefreshon">subscribeRefreshOn</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#subscriberefreshon">subscribeRefreshOn</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:162</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:196</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -822,9 +823,9 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#subscriberefreshon">subscribeRefreshOn</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#subscriberefreshon">subscribeRefreshOn</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:167</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:201</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -864,9 +865,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#create">create</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#create">create</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:60</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -883,14 +884,14 @@
 					<a name="createenumreferencehandler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Enum<wbr>Reference<wbr>Handler</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Enum<wbr>Reference<wbr>Handler&lt;R, E, K&gt;<span class="tsd-signature-symbol">(</span>referenceType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span>, enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span>, predicate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span>, context<span class="tsd-signature-symbol">?: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Enum<wbr>Reference<wbr>Handler&lt;R, E, K&gt;<span class="tsd-signature-symbol">(</span>referenceType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span>, enumObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span>, predicate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span>, context<span class="tsd-signature-symbol">?: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#createenumreferencehandler">createEnumReferenceHandler</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#createenumreferencehandler">createEnumReferenceHandler</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:24</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:25</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -916,7 +917,28 @@
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> predicate: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span>, context<span class="tsd-signature-symbol">?: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> predicate: <span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span>, context<span class="tsd-signature-symbol">?: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>reference<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span>, context<span class="tsd-signature-symbol">?: </span><a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>reference: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <a href="infoprovidercontext.html" class="tsd-signature-type">InfoProviderContext</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
@@ -932,9 +954,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#description">description</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#description">description</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:76</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:90</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -956,9 +978,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#getdefaultpriority">getDefaultPriority</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#getdefaultpriority">getDefaultPriority</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:36</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -975,19 +997,19 @@
 					<a name="getfromtile" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>From<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>From<wbr>Tile<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a>, _<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, inspectType<span class="tsd-signature-symbol">: </span><a href="../enums/inspecttype.html" class="tsd-signature-type">InspectType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>From<wbr>Tile<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a>, _<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, inspectType<span class="tsd-signature-symbol">: </span><a href="../enums/inspecttype.html" class="tsd-signature-type">InspectType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iteminspection.html" class="tsd-signature-type">ItemInspection</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:49</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>position: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+									<h5>position: <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 								<li>
 									<h5>_: <span class="tsd-signature-type">any</span></h5>
@@ -996,7 +1018,7 @@
 									<h5>inspectType: <a href="../enums/inspecttype.html" class="tsd-signature-type">InspectType</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="iteminspection.html" class="tsd-signature-type">ItemInspection</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1010,7 +1032,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:62</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1036,7 +1058,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/inspections/ItemInspection.ts:58</li>
+									<li>Defined in src/game/game/inspection/inspections/ItemInspection.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1058,9 +1080,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#list">list</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#list">list</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:82</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:96</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1082,9 +1104,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#of">of</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#of">of</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:65</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1098,6 +1120,42 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="ofcomponent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> of<wbr>Component</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">of<wbr>Component<span class="tsd-signature-symbol">(</span>componentSupplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="infoprovider.html" class="tsd-signature-type">InfoProvider</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#ofcomponent">ofComponent</a></p>
+								<ul>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:103</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>componentSupplier: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="component.html" class="tsd-signature-type">Component</a></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="component.html" class="tsd-signature-type">Component</a></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <a href="component.html" class="tsd-signature-type">Component</a></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="infoprovider.html" class="tsd-signature-type">InfoProvider</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="title" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> title</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
@@ -1106,9 +1164,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="infoprovider.html">InfoProvider</a>.<a href="infoprovider.html#title">title</a></p>
+								<p>Inherited from <a href="fireinfoprovider.html">FireInfoProvider</a>.<a href="fireinfoprovider.html#title">title</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:70</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:84</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1130,9 +1188,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="inspection.html">Inspection</a>.<a href="inspection.html#verifyhumanity">verifyHumanity</a></p>
+								<p>Inherited from <a href="listinspection.html">ListInspection</a>.<a href="listinspection.html#verifyhumanity">verifyHumanity</a></p>
 								<ul>
-									<li>Defined in src/game/inspection/Inspection.ts:32</li>
+									<li>Defined in src/game/game/inspection/Inspection.ts:33</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1284,6 +1342,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="iteminspection.html#of" class="tsd-kind-icon">of</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="iteminspection.html#ofcomponent" class="tsd-kind-icon">of<wbr>Component</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="iteminspection.html#title" class="tsd-kind-icon">title</a>

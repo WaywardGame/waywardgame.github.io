@@ -93,6 +93,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ientityevents.html#created" class="tsd-kind-icon">created</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ientityevents.html#kill" class="tsd-kind-icon">kill</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ientityevents.html#postmove" class="tsd-kind-icon">post<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ientityevents.html#premove" class="tsd-kind-icon">pre<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ientityevents.html#removed" class="tsd-kind-icon">removed</a></li>
@@ -120,7 +121,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/IEntity.ts:36</li>
+									<li>Defined in src/game/game/entity/IEntity.ts:44</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -129,6 +130,34 @@
 									Also called for players that &quot;rejoin&quot; the game</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="kill" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> kill</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">kill<span class="tsd-signature-symbol">(</span>attacker<span class="tsd-signature-symbol">: </span><a href="../classes/entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol"> | </span><a href="../classes/doodad.html" class="tsd-signature-type">Doodad</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/entity/IEntity.ts:25</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when an entity is killed by another entity.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>attacker: <a href="../classes/entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol"> | </span><a href="../classes/doodad.html" class="tsd-signature-type">Doodad</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -143,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/IEntity.ts:44</li>
+									<li>Defined in src/game/game/entity/IEntity.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -187,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/IEntity.ts:43</li>
+									<li>Defined in src/game/game/entity/IEntity.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -231,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/IEntity.ts:41</li>
+									<li>Defined in src/game/game/entity/IEntity.ts:49</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,14 +276,14 @@
 					<a name="statbonuschanged" class="tsd-anchor"></a>
 					<h3>stat<wbr>Bonus<wbr>Changed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">stat<wbr>Bonus<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">stat<wbr>Bonus<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#statbonuschanged">statBonusChanged</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#statbonuschanged">statBonusChanged</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:197</li>
+									<li>Defined in src/game/game/entity/IStats.ts:197</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -271,7 +300,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The value that the stat changed from</p>
 									</div>
@@ -296,9 +325,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#statchanged">statChanged</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#statchanged">statChanged</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:165</li>
+									<li>Defined in src/game/game/entity/IStats.ts:165</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -335,14 +364,14 @@
 					<a name="statmaxchanged" class="tsd-anchor"></a>
 					<h3>stat<wbr>Max<wbr>Changed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">stat<wbr>Max<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="istatmax.html" class="tsd-signature-type">IStatMax</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">stat<wbr>Max<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="istatmax.html" class="tsd-signature-type">IStatMax</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, info<span class="tsd-signature-symbol">?: </span><a href="../modules/istatchangeinfo.html" class="tsd-signature-type">IStatChangeInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#statmaxchanged">statMaxChanged</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#statmaxchanged">statMaxChanged</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:190</li>
+									<li>Defined in src/game/game/entity/IStats.ts:190</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,7 +388,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The value that the stat changed from</p>
 									</div>
@@ -379,14 +408,14 @@
 					<a name="stattimerchanged" class="tsd-anchor"></a>
 					<h3>stat<wbr>Timer<wbr>Changed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">stat<wbr>Timer<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">stat<wbr>Timer<wbr>Changed<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="../globals.html#istat" class="tsd-signature-type">IStat</a>, oldValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#stattimerchanged">statTimerChanged</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#stattimerchanged">statTimerChanged</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:171</li>
+									<li>Defined in src/game/game/entity/IStats.ts:171</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -403,7 +432,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldValue: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The value that the stat changed from</p>
 									</div>
@@ -422,9 +451,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#stattimerremoved">statTimerRemoved</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#stattimerremoved">statTimerRemoved</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:183</li>
+									<li>Defined in src/game/game/entity/IStats.ts:183</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -454,9 +483,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="istatevents.html">IStatEvents</a>.<a href="istatevents.html#stattimerwillchange">statTimerWillChange</a></p>
+								<p>Inherited from <a href="iplayerevents.html">IPlayerEvents</a>.<a href="iplayerevents.html#stattimerwillchange">statTimerWillChange</a></p>
 								<ul>
-									<li>Defined in src/game/entity/IStats.ts:178</li>
+									<li>Defined in src/game/game/entity/IStats.ts:178</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -494,7 +523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/IEntity.ts:26</li>
+									<li>Defined in src/game/game/entity/IEntity.ts:34</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -546,6 +575,9 @@
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ientityevents.html#created" class="tsd-kind-icon">created</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ientityevents.html#kill" class="tsd-kind-icon">kill</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="ientityevents.html#postmove" class="tsd-kind-icon">post<wbr>Move</a>

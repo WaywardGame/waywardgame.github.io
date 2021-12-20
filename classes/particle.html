@@ -72,12 +72,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/iparticle.html" class="tsd-signature-type">IParticle</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -94,10 +88,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#clear" class="tsd-kind-icon">clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#createmultiple" class="tsd-kind-icon">create<wbr>Multiple</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#render" class="tsd-kind-icon">render</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#simulate" class="tsd-kind-icon">simulate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="particle.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="particle.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="particle.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="particle.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,19 +103,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Particle<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, maxParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="particle.html" class="tsd-signature-type">Particle</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Particle<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="renderercontext.html" class="tsd-signature-type">RendererContext</a>, worldRenderer<span class="tsd-signature-symbol">: </span><a href="worldrenderer.html" class="tsd-signature-type">WorldRenderer</a>, maxParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="particle.html" class="tsd-signature-type">Particle</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:52</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:61</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>context: <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></h5>
+								</li>
+								<li>
+									<h5>worldRenderer: <a href="worldrenderer.html" class="tsd-signature-type">WorldRenderer</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxParticles: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 256</span></h5>
@@ -143,9 +140,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:115</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:141</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -156,18 +152,20 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, particle<span class="tsd-signature-symbol">: </span><a href="../interfaces/irgb.html" class="tsd-signature-type">IRGB</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, particle<span class="tsd-signature-symbol">: </span><a href="../interfaces/irgb.html" class="tsd-signature-type">IRGB</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#create">create</a></p>
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:100</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:126</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
 								</li>
@@ -189,17 +187,20 @@
 					<a name="createmultiple" class="tsd-anchor"></a>
 					<h3>create<wbr>Multiple</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Multiple<span class="tsd-signature-symbol">(</span>tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, particle<span class="tsd-signature-symbol">: </span><a href="../interfaces/irgb.html" class="tsd-signature-type">IRGB</a>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, intensity<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, ignoreFieldOfView<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Multiple<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, particle<span class="tsd-signature-symbol">: </span><a href="../interfaces/irgb.html" class="tsd-signature-type">IRGB</a>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, intensity<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, ignoreFieldOfView<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:104</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:130</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
 								</li>
@@ -227,6 +228,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/particle/Particle.ts:112</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="render" class="tsd-anchor"></a>
 					<h3>render</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -236,7 +254,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:162</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:196</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -253,40 +271,22 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="simulate" class="tsd-anchor"></a>
-					<h3>simulate</h3>
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">simulate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iparticle.html">IParticle</a>.<a href="../interfaces/iparticle.html#simulate">simulate</a></p>
-								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:123</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="createshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Shaders</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Shaders<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>timeStamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:46</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:149</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>timeStamp: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -294,18 +294,24 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="linkshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> link<wbr>Shaders</h3>
+					<a name="initializeprograms" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Programs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">link<wbr>Shaders<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Programs<span class="tsd-signature-symbol">(</span>webGlContext<span class="tsd-signature-symbol">: </span><a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/particle/Particle.ts:50</li>
+									<li>Defined in src/game/renderer/particle/Particle.ts:59</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>webGlContext: <a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -340,16 +346,16 @@
 								<a href="particle.html#createmultiple" class="tsd-kind-icon">create<wbr>Multiple</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="particle.html#delete" class="tsd-kind-icon">delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="particle.html#render" class="tsd-kind-icon">render</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="particle.html#simulate" class="tsd-kind-icon">simulate</a>
+								<a href="particle.html#update" class="tsd-kind-icon">update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="particle.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="particle.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a>
+								<a href="particle.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a>
 							</li>
 						</ul>
 					</li>

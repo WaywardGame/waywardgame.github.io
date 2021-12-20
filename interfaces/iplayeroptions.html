@@ -79,12 +79,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#absentplayerindex" class="tsd-kind-icon">absent<wbr>Player<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#character" class="tsd-kind-icon">character</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#crafted" class="tsd-kind-icon">crafted</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#identifier" class="tsd-kind-icon">identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#milestonemodifiers" class="tsd-kind-icon">milestone<wbr>Modifiers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#spawnislandid" class="tsd-kind-icon">spawn<wbr>Island<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iplayeroptions.html#spawnposition" class="tsd-kind-icon">spawn<wbr>Position</a></li>
 							</ul>
 						</section>
@@ -94,12 +96,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="absentplayerindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> absent<wbr>Player<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">absent<wbr>Player<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/IGame.ts:198</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="character" class="tsd-anchor"></a>
 					<h3>character</h3>
 					<div class="tsd-signature tsd-kind-icon">character<span class="tsd-signature-symbol">:</span> <a href="icharacter.html" class="tsd-signature-type">ICharacter</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:195</li>
+							<li>Defined in src/game/game/IGame.ts:202</li>
 						</ul>
 					</aside>
 				</section>
@@ -109,57 +121,67 @@
 					<div class="tsd-signature tsd-kind-icon">crafted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="icrafted.html" class="tsd-signature-type">ICrafted</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:196</li>
+							<li>Defined in src/game/game/IGame.ts:203</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="id" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:191</li>
+							<li>Defined in src/game/game/IGame.ts:196</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="identifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:192</li>
+							<li>Defined in src/game/game/IGame.ts:197</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="milestonemodifiers" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> milestone<wbr>Modifiers</h3>
-					<div class="tsd-signature tsd-kind-icon">milestone<wbr>Modifiers<span class="tsd-signature-symbol">:</span> <a href="../enums/types.html#set" class="tsd-signature-type">Set</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/milestone.html" class="tsd-signature-type">Milestone</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">milestone<wbr>Modifiers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/milestone.html" class="tsd-signature-type">Milestone</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:197</li>
+							<li>Defined in src/game/game/IGame.ts:204</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="options" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="ioptions.html" class="tsd-signature-type">IOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="ioptions.html" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:193</li>
+							<li>Defined in src/game/game/IGame.ts:199</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="spawnislandid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> spawn<wbr>Island<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">spawn<wbr>Island<wbr>Id<span class="tsd-signature-symbol">:</span> <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/IGame.ts:200</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="spawnposition" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> spawn<wbr>Position</h3>
-					<div class="tsd-signature tsd-kind-icon">spawn<wbr>Position<span class="tsd-signature-symbol">:</span> <a href="ivector3.html" class="tsd-signature-type">IVector3</a></div>
+					<div class="tsd-signature tsd-kind-icon">spawn<wbr>Position<span class="tsd-signature-symbol">:</span> <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/IGame.ts:194</li>
+							<li>Defined in src/game/game/IGame.ts:201</li>
 						</ul>
 					</aside>
 				</section>
@@ -181,6 +203,9 @@
 						<a href="iplayeroptions.html" class="tsd-kind-icon">IPlayer<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iplayeroptions.html#absentplayerindex" class="tsd-kind-icon">absent<wbr>Player<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iplayeroptions.html#character" class="tsd-kind-icon">character</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -197,6 +222,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iplayeroptions.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iplayeroptions.html#spawnislandid" class="tsd-kind-icon">spawn<wbr>Island<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iplayeroptions.html#spawnposition" class="tsd-kind-icon">spawn<wbr>Position</a>

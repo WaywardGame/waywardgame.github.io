@@ -112,6 +112,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#constructedfrom" class="tsd-kind-icon">constructed<wbr>From</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#containeditems" class="tsd-kind-icon">contained<wbr>Items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#containedwithin" class="tsd-kind-icon">contained<wbr>Within</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#containscreature" class="tsd-kind-icon">contains<wbr>Creature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#decay" class="tsd-kind-icon">decay</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#disassembly" class="tsd-kind-icon">disassembly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#driverid" class="tsd-kind-icon">driver<wbr>Id</a></li>
@@ -122,6 +123,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#fromx" class="tsd-kind-icon">fromX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#fromy" class="tsd-kind-icon">fromY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#islandid" class="tsd-kind-icon">island<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#itemorders" class="tsd-kind-icon">item<wbr>Orders</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#magic" class="tsd-kind-icon">magic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#map" class="tsd-kind-icon">map</a></li>
@@ -130,7 +132,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#objecttype" class="tsd-kind-icon">object<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#offsetx" class="tsd-kind-icon">offsetX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#offsety" class="tsd-kind-icon">offsetY</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#order" class="tsd-kind-icon">order</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#owneridentifier" class="tsd-kind-icon">owner<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#pid" class="tsd-kind-icon">pid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#protected" class="tsd-kind-icon">protected</a></li>
@@ -144,6 +145,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#used" class="tsd-kind-icon">used</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#weight" class="tsd-kind-icon">weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="item.html#weightfraction" class="tsd-kind-icon">weight<wbr>Fraction</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="item.html#island" class="tsd-kind-icon">island</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -223,6 +230,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#spawnondecay" class="tsd-kind-icon">spawn<wbr>OnDecay</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#verifyandfixitem" class="tsd-kind-icon">verify<wbr>And<wbr>Fix<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#verifymagicalitemweight" class="tsd-kind-icon">verify<wbr>Magical<wbr>Item<wbr>Weight</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="item.html#willbreakondamage" class="tsd-kind-icon">will<wbr>Break<wbr>OnDamage</a></li>
 							</ul>
 						</section>
 					</div>
@@ -234,13 +243,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<span class="tsd-signature-symbol">(</span>itemType<span class="tsd-signature-symbol">?: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, quality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Quality</span>, human<span class="tsd-signature-symbol">?: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="item.html" class="tsd-signature-type">Item</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<span class="tsd-signature-symbol">(</span>itemType<span class="tsd-signature-symbol">?: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, islandId<span class="tsd-signature-symbol">?: </span><a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a>, quality<span class="tsd-signature-symbol">?: </span><a href="../enums/quality.html" class="tsd-signature-type">Quality</a>, human<span class="tsd-signature-symbol">?: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="item.html" class="tsd-signature-type">Item</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:137</li>
+									<li>Defined in src/game/game/item/Item.ts:174</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -249,7 +258,10 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> itemType: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> quality: <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> = Quality.Random</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> islandId: <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> quality: <a href="../enums/quality.html" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol"> = Quality.Random</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
@@ -269,7 +281,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainable.html">IContainable</a>.<a href="../interfaces/icontainable.html#_symbol_container_cached_reference_">[SYMBOL_CONTAINER_CACHED_REFERENCE]</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:130</li>
+							<li>Defined in src/game/game/item/Item.ts:167</li>
 						</ul>
 					</aside>
 				</section>
@@ -279,7 +291,7 @@
 					<div class="tsd-signature tsd-kind-icon">book<span class="tsd-signature-symbol">:</span> <a href="../enums/booktype.html" class="tsd-signature-type">BookType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:95</li>
+							<li>Defined in src/game/game/item/Item.ts:129</li>
 						</ul>
 					</aside>
 				</section>
@@ -289,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">constructed<wbr>From<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iconstructedinfo.html" class="tsd-signature-type">IConstructedInfo</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:96</li>
+							<li>Defined in src/game/game/item/Item.ts:130</li>
 						</ul>
 					</aside>
 				</section>
@@ -299,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">contained<wbr>Items<span class="tsd-signature-symbol">:</span> <a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:97</li>
+							<li>Defined in src/game/game/item/Item.ts:131</li>
 						</ul>
 					</aside>
 				</section>
@@ -310,18 +322,28 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/icontainable.html">IContainable</a>.<a href="../interfaces/icontainable.html#containedwithin">containedWithin</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:98</li>
+							<li>Defined in src/game/game/item/Item.ts:132</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="containscreature" class="tsd-anchor"></a>
+					<h3>contains<wbr>Creature</h3>
+					<div class="tsd-signature tsd-kind-icon">contains<wbr>Creature<span class="tsd-signature-symbol">:</span> <a href="creature.html" class="tsd-signature-type">Creature</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/item/Item.ts:133</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="decay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> decay</h3>
-					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#decay">decay</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:99</li>
+							<li>Defined in src/game/game/item/Item.ts:134</li>
 						</ul>
 					</aside>
 				</section>
@@ -331,27 +353,27 @@
 					<div class="tsd-signature tsd-kind-icon">disassembly<span class="tsd-signature-symbol">:</span> <a href="item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:100</li>
+							<li>Defined in src/game/game/item/Item.ts:135</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="driverid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> driver<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">driver<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">driver<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:101</li>
+							<li>Defined in src/game/game/item/Item.ts:136</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="equippedid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> equipped<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:102</li>
+							<li>Defined in src/game/game/item/Item.ts:137</li>
 						</ul>
 					</aside>
 				</section>
@@ -361,7 +383,7 @@
 					<div class="tsd-signature tsd-kind-icon">equipped<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/entitytype.html" class="tsd-signature-type">EntityType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:103</li>
+							<li>Defined in src/game/game/item/Item.ts:138</li>
 						</ul>
 					</aside>
 				</section>
@@ -371,9 +393,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iitemevents.html" class="tsd-signature-type">IItemEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -383,27 +405,27 @@
 					<div class="tsd-signature tsd-kind-icon">fire<wbr>Stage<span class="tsd-signature-symbol">:</span> <a href="../enums/firestage.html" class="tsd-signature-type">FireStage</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:104</li>
+							<li>Defined in src/game/game/item/Item.ts:139</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="fromx" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fromX</h3>
-					<div class="tsd-signature tsd-kind-icon">fromX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">fromX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:128</li>
+							<li>Defined in src/game/game/item/Item.ts:165</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="fromy" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fromY</h3>
-					<div class="tsd-signature tsd-kind-icon">fromY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">fromY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:129</li>
+							<li>Defined in src/game/game/item/Item.ts:166</li>
 						</ul>
 					</aside>
 				</section>
@@ -414,7 +436,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:105</li>
+							<li>Defined in src/game/game/item/Item.ts:140</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="islandid" class="tsd-anchor"></a>
+					<h3>island<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">island<wbr>Id<span class="tsd-signature-symbol">:</span> <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/item/Item.ts:161</li>
 						</ul>
 					</aside>
 				</section>
@@ -424,7 +456,7 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Orders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:106</li>
+							<li>Defined in src/game/game/item/Item.ts:141</li>
 						</ul>
 					</aside>
 				</section>
@@ -435,7 +467,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ihasmagic.html">IHasMagic</a>.<a href="../interfaces/ihasmagic.html#magic">magic</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:107</li>
+							<li>Defined in src/game/game/item/Item.ts:158</li>
 						</ul>
 					</aside>
 				</section>
@@ -445,7 +477,7 @@
 					<div class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">:</span> <a href="itemmapmanager.html" class="tsd-signature-type">ItemMapManager</a><span class="tsd-signature-symbol"> = new ItemMapManager()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:108</li>
+							<li>Defined in src/game/game/item/Item.ts:159</li>
 						</ul>
 					</aside>
 				</section>
@@ -456,7 +488,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#maxdur">maxDur</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:109</li>
+							<li>Defined in src/game/game/item/Item.ts:142</li>
 						</ul>
 					</aside>
 				</section>
@@ -467,7 +499,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#mindur">minDur</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:110</li>
+							<li>Defined in src/game/game/item/Item.ts:143</li>
 						</ul>
 					</aside>
 				</section>
@@ -478,47 +510,37 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#objecttype">objectType</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:92</li>
+							<li>Defined in src/game/game/item/Item.ts:126</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="offsetx" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offsetX</h3>
-					<div class="tsd-signature tsd-kind-icon">offsetX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">offsetX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:126</li>
+							<li>Defined in src/game/game/item/Item.ts:163</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="offsety" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offsetY</h3>
-					<div class="tsd-signature tsd-kind-icon">offsetY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">offsetY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:127</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="order" class="tsd-anchor"></a>
-					<h3>order</h3>
-					<div class="tsd-signature tsd-kind-icon">order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/game/item/Item.ts:111</li>
+							<li>Defined in src/game/game/item/Item.ts:164</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="owneridentifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> owner<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">owner<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:112</li>
+							<li>Defined in src/game/game/item/Item.ts:144</li>
 						</ul>
 					</aside>
 				</section>
@@ -528,49 +550,49 @@
 					<div class="tsd-signature tsd-kind-icon">pid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:113</li>
+							<li>Defined in src/game/game/item/Item.ts:145</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="protected" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> protected</h3>
-					<div class="tsd-signature tsd-kind-icon">protected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">protected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:114</li>
+							<li>Defined in src/game/game/item/Item.ts:146</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="quality" class="tsd-anchor"></a>
 					<h3>quality</h3>
-					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <a href="../enums/quality.html" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectoptions.html">IObjectOptions</a>.<a href="../interfaces/iobjectoptions.html#quality">quality</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:115</li>
+							<li>Defined in src/game/game/item/Item.ts:147</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="quickslot" class="tsd-anchor"></a>
 					<h3>quick<wbr>Slot</h3>
-					<div class="tsd-signature tsd-kind-icon">quick<wbr>Slot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">quick<wbr>Slot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:124</li>
+							<li>Defined in src/game/game/item/Item.ts:156</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="referenceid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reference<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ireferenceable.html">IReferenceable</a>.<a href="../interfaces/ireferenceable.html#referenceid">referenceId</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:116</li>
+							<li>Defined in src/game/game/item/Item.ts:148</li>
 						</ul>
 					</aside>
 				</section>
@@ -581,17 +603,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:117</li>
+							<li>Defined in src/game/game/item/Item.ts:149</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="startingdecay" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> starting<wbr>Decay</h3>
-					<div class="tsd-signature tsd-kind-icon">starting<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">starting<wbr>Decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:118</li>
+							<li>Defined in src/game/game/item/Item.ts:150</li>
 						</ul>
 					</aside>
 				</section>
@@ -601,7 +623,7 @@
 					<div class="tsd-signature tsd-kind-icon">traded<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:119</li>
+							<li>Defined in src/game/game/item/Item.ts:151</li>
 						</ul>
 					</aside>
 				</section>
@@ -612,7 +634,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/game/item/Item.ts:120</li>
+							<li>Defined in src/game/game/item/Item.ts:152</li>
 						</ul>
 					</aside>
 				</section>
@@ -622,7 +644,7 @@
 					<div class="tsd-signature tsd-kind-icon">used<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iitemused.html" class="tsd-signature-type">IItemUsed</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:121</li>
+							<li>Defined in src/game/game/item/Item.ts:153</li>
 						</ul>
 					</aside>
 				</section>
@@ -632,19 +654,39 @@
 					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:122</li>
+							<li>Defined in src/game/game/item/Item.ts:154</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="weightfraction" class="tsd-anchor"></a>
-					<h3>weight<wbr>Fraction</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> weight<wbr>Fraction</h3>
 					<div class="tsd-signature tsd-kind-icon">weight<wbr>Fraction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/item/Item.ts:123</li>
+							<li>Defined in src/game/game/item/Item.ts:155</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="island" class="tsd-anchor"></a>
+					<h3>island</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> island<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/item/Item.ts:230</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="island.html" class="tsd-signature-type">Island</a></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -659,7 +701,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1467</li>
+									<li>Defined in src/game/game/item/Item.ts:1559</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -682,7 +724,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1251</li>
+									<li>Defined in src/game/game/item/Item.ts:1330</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -705,7 +747,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1284</li>
+									<li>Defined in src/game/game/item/Item.ts:1363</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -731,7 +773,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1693</li>
+									<li>Defined in src/game/game/item/Item.ts:1792</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -748,7 +790,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1612</li>
+									<li>Defined in src/game/game/item/Item.ts:1707</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -759,13 +801,13 @@
 					<a name="candecay" class="tsd-anchor"></a>
 					<h3>can<wbr>Decay</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>Decay<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Decay<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:355</li>
+									<li>Defined in src/game/game/item/Item.ts:400</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -773,7 +815,7 @@
 									<p>Returns the maximum decay of an item, or undefined if the item does not have the decayMax property.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 							<p>A number or undefined.</p>
 						</li>
 					</ul>
@@ -782,13 +824,13 @@
 					<a name="changeinto" class="tsd-anchor"></a>
 					<h3>change<wbr>Into</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Into<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, emitTransformation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Into<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, emitTransformation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:809</li>
+									<li>Defined in src/game/game/item/Item.ts:858</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -797,7 +839,7 @@
 									<h5>type: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> emitTransformation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
@@ -817,7 +859,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:800</li>
+									<li>Defined in src/game/game/item/Item.ts:847</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -834,7 +876,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:926</li>
+									<li>Defined in src/game/game/item/Item.ts:1001</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -857,22 +899,36 @@
 					<a name="damage" class="tsd-anchor"></a>
 					<h3>damage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, modifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, min<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:663</li>
+									<li>Defined in src/game/game/item/Item.ts:715</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>source: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A string representing the reason for this damage. Used for multiplayer debugging. Just put a unique string of characters here</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modifier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> modifier: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The amount of damage to take. Defaults to 1.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> min: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The minimum durability that this item should have remaining. Defaults to n/a</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -889,7 +945,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:308</li>
+									<li>Defined in src/game/game/item/Item.ts:353</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitemdescription.html" class="tsd-signature-type">IItemDescription</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -900,13 +956,13 @@
 					<a name="dropinwater" class="tsd-anchor"></a>
 					<h3>drop<wbr>InWater</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, skipParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">drop<wbr>InWater<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, skipParticles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:989</li>
+									<li>Defined in src/game/game/item/Item.ts:1063</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -915,13 +971,13 @@
 									<h5>human: <a href="human.html" class="tsd-signature-type">Human</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> x: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParticles: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> skipParticles: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -938,7 +994,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1881</li>
+									<li>Defined in src/game/game/item/Item.ts:1978</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -969,7 +1025,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1643</li>
+									<li>Defined in src/game/game/item/Item.ts:1738</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -980,17 +1036,17 @@
 					<a name="getbasetemperature" class="tsd-anchor"></a>
 					<h3>get<wbr>Base<wbr>Temperature</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Base<wbr>Temperature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Base<wbr>Temperature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ihasinsulation.html">IHasInsulation</a>.<a href="../interfaces/ihasinsulation.html#getbasetemperature">getBaseTemperature</a></p>
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1754</li>
+									<li>Defined in src/game/game/item/Item.ts:1853</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1004,7 +1060,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1745</li>
+									<li>Defined in src/game/game/item/Item.ts:1844</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1027,7 +1083,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1682</li>
+									<li>Defined in src/game/game/item/Item.ts:1777</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1050,7 +1106,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:744</li>
+									<li>Defined in src/game/game/item/Item.ts:801</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1072,7 +1128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1827</li>
+									<li>Defined in src/game/game/item/Item.ts:1927</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1103,7 +1159,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:342</li>
+									<li>Defined in src/game/game/item/Item.ts:387</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1120,7 +1176,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:359</li>
+									<li>Defined in src/game/game/item/Item.ts:404</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1143,7 +1199,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:429</li>
+									<li>Defined in src/game/game/item/Item.ts:474</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iitemdisassembleresult.html" class="tsd-signature-type">IItemDisassembleResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1160,7 +1216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:403</li>
+									<li>Defined in src/game/game/item/Item.ts:448</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1177,7 +1233,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1654</li>
+									<li>Defined in src/game/game/item/Item.ts:1749</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1194,7 +1250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:774</li>
+									<li>Defined in src/game/game/item/Item.ts:831</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/equiptype.html" class="tsd-signature-type">EquipType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1211,7 +1267,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1749</li>
+									<li>Defined in src/game/game/item/Item.ts:1848</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1234,7 +1290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:760</li>
+									<li>Defined in src/game/game/item/Item.ts:817</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1251,7 +1307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1808</li>
+									<li>Defined in src/game/game/item/Item.ts:1908</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1273,7 +1329,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1845</li>
+									<li>Defined in src/game/game/item/Item.ts:1945</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1305,7 +1361,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1303</li>
+									<li>Defined in src/game/game/item/Item.ts:1382</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1322,13 +1378,13 @@
 					<a name="getmaxdecay" class="tsd-anchor"></a>
 					<h3>get<wbr>Max<wbr>Decay</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Max<wbr>Decay<span class="tsd-signature-symbol">(</span>overrideDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, withRandomization<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Max<wbr>Decay<span class="tsd-signature-symbol">(</span>overrideDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, withRandomization<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1774</li>
+									<li>Defined in src/game/game/item/Item.ts:1873</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1339,13 +1395,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> overrideDefault: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> overrideDefault: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Override the item&#39;s decayMax definition with something else.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> withRandomization: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> withRandomization: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>True if you want to return a randomized value (useful when setting the value on an item).</p>
 									</div>
@@ -1366,7 +1422,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1895</li>
+									<li>Defined in src/game/game/item/Item.ts:1992</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1398,7 +1454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1910</li>
+									<li>Defined in src/game/game/item/Item.ts:2007</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1436,7 +1492,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1120</li>
+									<li>Defined in src/game/game/item/Item.ts:1194</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1453,13 +1509,13 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showQuality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showRenamedQuotes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showMagicalType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, showCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showQuality<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showRenamedQuotes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, showMagicalType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:265</li>
+									<li>Defined in src/game/game/item/Item.ts:310</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1467,13 +1523,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether to include an article for the name of the item. Uses the article rules on the language. Defaults to <code>true</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of this item that you&#39;re getting the name of. Defaults to <code>1</code>.</p>
 									</div>
@@ -1509,7 +1565,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1523,7 +1579,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1532</li>
+									<li>Defined in src/game/game/item/Item.ts:1625</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1534,16 +1590,16 @@
 					<a name="getpoint" class="tsd-anchor"></a>
 					<h3>get<wbr>Point</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vector3.html" class="tsd-signature-type">Vector3</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:985</li>
+									<li>Defined in src/game/game/item/Item.ts:1059</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="vector3.html" class="tsd-signature-type">Vector3</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1557,7 +1613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:368</li>
+									<li>Defined in src/game/game/item/Item.ts:413</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1574,7 +1630,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1724</li>
+									<li>Defined in src/game/game/item/Item.ts:1823</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1591,7 +1647,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1857</li>
+									<li>Defined in src/game/game/item/Item.ts:1954</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1614,7 +1670,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1517</li>
+									<li>Defined in src/game/game/item/Item.ts:1609</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1631,7 +1687,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1507</li>
+									<li>Defined in src/game/game/item/Item.ts:1599</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1648,7 +1704,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:376</li>
+									<li>Defined in src/game/game/item/Item.ts:421</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1665,19 +1721,19 @@
 					<a name="gettotalweight" class="tsd-anchor"></a>
 					<h3>get<wbr>Total<wbr>Weight</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Total<wbr>Weight<span class="tsd-signature-symbol">(</span>bypassContainer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Total<wbr>Weight<span class="tsd-signature-symbol">(</span>bypassContainer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:390</li>
+									<li>Defined in src/game/game/item/Item.ts:435</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassContainer: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypassContainer: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -1688,13 +1744,13 @@
 					<a name="gettradersellprice" class="tsd-anchor"></a>
 					<h3>get<wbr>Trader<wbr>Sell<wbr>Price</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Trader<wbr>Sell<wbr>Price<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, magicalWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Trader<wbr>Sell<wbr>Price<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, magicalWorth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1599</li>
+									<li>Defined in src/game/game/item/Item.ts:1694</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1711,7 +1767,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> magicalWorth: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> magicalWorth: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Include the value of <code>MagicalPropertyType.Worth</code>, defaults to true</p>
 									</div>
@@ -1731,7 +1787,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1167</li>
+									<li>Defined in src/game/game/item/Item.ts:1241</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/magicalpropertytype.html" class="tsd-signature-type">MagicalPropertyType</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -1742,13 +1798,13 @@
 					<a name="getweight" class="tsd-anchor"></a>
 					<h3>get<wbr>Weight</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Weight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Weight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:247</li>
+									<li>Defined in src/game/game/item/Item.ts:293</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1758,7 +1814,7 @@
 									</dd>
 								</dl>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1772,7 +1828,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1552</li>
+									<li>Defined in src/game/game/item/Item.ts:1646</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1809,7 +1865,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:748</li>
+									<li>Defined in src/game/game/item/Item.ts:805</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1826,7 +1882,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:804</li>
+									<li>Defined in src/game/game/item/Item.ts:853</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1843,7 +1899,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:756</li>
+									<li>Defined in src/game/game/item/Item.ts:813</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1860,7 +1916,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:752</li>
+									<li>Defined in src/game/game/item/Item.ts:809</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1877,7 +1933,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1116</li>
+									<li>Defined in src/game/game/item/Item.ts:1190</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1888,13 +1944,13 @@
 					<a name="isnearby" class="tsd-anchor"></a>
 					<h3>is<wbr>Nearby</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Nearby<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, allowNearby<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Nearby<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><a href="entity.html" class="tsd-signature-type">Entity</a>, allowNearby<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:525</li>
+									<li>Defined in src/game/game/item/Item.ts:570</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1906,7 +1962,7 @@
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> allowNearby: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1920,7 +1976,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:324</li>
+									<li>Defined in src/game/game/item/Item.ts:369</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1937,7 +1993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:316</li>
+									<li>Defined in src/game/game/item/Item.ts:361</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1954,7 +2010,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:320</li>
+									<li>Defined in src/game/game/item/Item.ts:365</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1971,7 +2027,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1091</li>
+									<li>Defined in src/game/game/item/Item.ts:1165</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1995,7 +2051,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1920</li>
+									<li>Defined in src/game/game/item/Item.ts:2031</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2012,7 +2068,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1048</li>
+									<li>Defined in src/game/game/item/Item.ts:1122</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2044,7 +2100,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1737</li>
+									<li>Defined in src/game/game/item/Item.ts:1836</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2061,7 +2117,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1268</li>
+									<li>Defined in src/game/game/item/Item.ts:1347</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2087,7 +2143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1273</li>
+									<li>Defined in src/game/game/item/Item.ts:1352</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2098,13 +2154,13 @@
 					<a name="returns" class="tsd-anchor"></a>
 					<h3>returns</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">returns<span class="tsd-signature-symbol">(</span>disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, craft<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">returns<span class="tsd-signature-symbol">(</span>disableNotify<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, craft<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:876</li>
+									<li>Defined in src/game/game/item/Item.ts:951</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2115,13 +2171,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disableNotify: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Set to true if no notification should be shown for the new item above the player.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> craft: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> craft: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Set to true when returning consumed items to check for whenCrafted property in returnOnUseAndDecay.</p>
 									</div>
@@ -2141,7 +2197,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1658</li>
+									<li>Defined in src/game/game/item/Item.ts:1753</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2158,13 +2214,13 @@
 					<a name="setdecay" class="tsd-anchor"></a>
 					<h3>set<wbr>Decay</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Decay<span class="tsd-signature-symbol">(</span>overrideDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Decay<span class="tsd-signature-symbol">(</span>overrideDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1761</li>
+									<li>Defined in src/game/game/item/Item.ts:1860</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2175,7 +2231,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> overrideDefault: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> overrideDefault: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2186,13 +2242,13 @@
 					<a name="setmagicalchancefromquality" class="tsd-anchor"></a>
 					<h3>set<wbr>Magical<wbr>Chance<wbr>From<wbr>Quality</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Magical<wbr>Chance<wbr>From<wbr>Quality<span class="tsd-signature-symbol">(</span>bonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, propertiesBypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Magical<wbr>Chance<wbr>From<wbr>Quality<span class="tsd-signature-symbol">(</span>bonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, propertiesBypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:202</li>
+									<li>Defined in src/game/game/item/Item.ts:244</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2209,7 +2265,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> propertiesBypass: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> propertiesBypass: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of magical properties to force on to the item</p>
 									</div>
@@ -2224,13 +2280,13 @@
 					<a name="setquality" class="tsd-anchor"></a>
 					<h3>set<wbr>Quality</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Quality<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, quality<span class="tsd-signature-symbol">?: </span><a href="../enums/message.html#quality" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Quality<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, quality<span class="tsd-signature-symbol">?: </span><a href="../enums/quality.html" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:1154</li>
+									<li>Defined in src/game/game/item/Item.ts:1228</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2239,7 +2295,7 @@
 									<h5>human: <a href="human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> quality: <a href="../enums/message.html#quality" class="tsd-signature-type">Quality</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> quality: <a href="../enums/quality.html" class="tsd-signature-type">Quality</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2256,7 +2312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:778</li>
+									<li>Defined in src/game/game/item/Item.ts:835</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2282,7 +2338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:914</li>
+									<li>Defined in src/game/game/item/Item.ts:989</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2302,13 +2358,13 @@
 					<a name="spawncreatureonitem" class="tsd-anchor"></a>
 					<h3>spawn<wbr>Creature<wbr>OnItem</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Creature<wbr>OnItem<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, preferFacingDirection<span class="tsd-signature-symbol">?: </span><a href="../enums/types.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Creature<wbr>OnItem<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, forceAberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, preferFacingDirection<span class="tsd-signature-symbol">?: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:941</li>
+									<li>Defined in src/game/game/item/Item.ts:1016</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2317,13 +2373,13 @@
 									<h5>creatureType: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> forceAberrant: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> forceAberrant: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> preferFacingDirection: <a href="../enums/types.html#player" class="tsd-signature-type">Player</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> preferFacingDirection: <a href="player.html" class="tsd-signature-type">Player</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -2340,7 +2396,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:936</li>
+									<li>Defined in src/game/game/item/Item.ts:1011</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -2357,7 +2413,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:192</li>
+									<li>Defined in src/game/game/item/Item.ts:234</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -2374,10 +2430,62 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/Item.ts:531</li>
+									<li>Defined in src/game/game/item/Item.ts:576</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="verifymagicalitemweight" class="tsd-anchor"></a>
+					<h3>verify<wbr>Magical<wbr>Item<wbr>Weight</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">verify<wbr>Magical<wbr>Item<wbr>Weight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/itemweightchange.html" class="tsd-signature-type">ItemWeightChange</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/item/Item.ts:925</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Verifies an item has a proper weight combined with its magical item weight (featherweight) property and changes it if not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/itemweightchange.html" class="tsd-signature-type">ItemWeightChange</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>A type of change via ItemWeightChange for showing a new magical property was added or a new magical weight was added. If no change happened, it will return undefined.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="willbreakondamage" class="tsd-anchor"></a>
+					<h3>will<wbr>Break<wbr>OnDamage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">will<wbr>Break<wbr>OnDamage<span class="tsd-signature-symbol">(</span>actionType<span class="tsd-signature-symbol">?: </span><a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/item/Item.ts:2021</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if an item will break on damage.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionType: <a href="../enums/actiontype.html" class="tsd-signature-type">ActionType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>True or false if the item will be broken when being damaged.</p>
 						</li>
 					</ul>
 				</section>
@@ -2417,6 +2525,9 @@
 								<a href="item.html#containedwithin" class="tsd-kind-icon">contained<wbr>Within</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#containscreature" class="tsd-kind-icon">contains<wbr>Creature</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#decay" class="tsd-kind-icon">decay</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -2447,6 +2558,9 @@
 								<a href="item.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="item.html#islandid" class="tsd-kind-icon">island<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#itemorders" class="tsd-kind-icon">item<wbr>Orders</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -2469,9 +2583,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#offsety" class="tsd-kind-icon">offsetY</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="item.html#order" class="tsd-kind-icon">order</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#owneridentifier" class="tsd-kind-icon">owner<wbr>Identifier</a>
@@ -2511,6 +2622,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="item.html#weightfraction" class="tsd-kind-icon">weight<wbr>Fraction</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="item.html#island" class="tsd-kind-icon">island</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#acquirenotify" class="tsd-kind-icon">acquire<wbr>Notify</a>
@@ -2733,6 +2847,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="item.html#verifyandfixitem" class="tsd-kind-icon">verify<wbr>And<wbr>Fix<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#verifymagicalitemweight" class="tsd-kind-icon">verify<wbr>Magical<wbr>Item<wbr>Weight</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="item.html#willbreakondamage" class="tsd-kind-icon">will<wbr>Break<wbr>OnDamage</a>
 							</li>
 						</ul>
 					</li>

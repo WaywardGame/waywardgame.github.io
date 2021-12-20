@@ -72,12 +72,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -93,11 +87,13 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#exploredmap" class="tsd-kind-icon">explored<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#instance" class="tsd-kind-icon">instance</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#island" class="tsd-kind-icon">island</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#level" class="tsd-kind-icon">level</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#lightblockmap" class="tsd-kind-icon">light<wbr>Block<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#lightlevelmap" class="tsd-kind-icon">light<wbr>Level<wbr>Map</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#ondoodadupdate" class="tsd-kind-icon">on<wbr>Doodad<wbr>Update</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#ontileupdate" class="tsd-kind-icon">on<wbr>Tile<wbr>Update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#ondoodadupdates" class="tsd-kind-icon">on<wbr>Doodad<wbr>Updates</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#ontileupdates" class="tsd-kind-icon">on<wbr>Tile<wbr>Updates</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayer.html#width" class="tsd-kind-icon">width</a></li>
 							</ul>
 						</section>
@@ -108,6 +104,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettiledecoration" class="tsd-kind-icon">get<wbr>Tile<wbr>Decoration</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettiletype" class="tsd-kind-icon">get<wbr>Tile<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettileupdate" class="tsd-kind-icon">get<wbr>Tile<wbr>Update</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#gettype" class="tsd-kind-icon">get<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#isdoodadanimationdisabled" class="tsd-kind-icon">is<wbr>Doodad<wbr>Animation<wbr>Disabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayer.html#isdoodadoverhidden" class="tsd-kind-icon">is<wbr>Doodad<wbr>Over<wbr>Hidden</a></li>
@@ -128,17 +125,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:32</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>width: <span class="tsd-signature-type">number</span></h5>
 								</li>
@@ -159,11 +159,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="exploredmap" class="tsd-anchor"></a>
 					<h3>explored<wbr>Map</h3>
-					<div class="tsd-signature tsd-kind-icon">explored<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iexploremap.html" class="tsd-signature-type">IExploreMap</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">explored<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="exploremap.html" class="tsd-signature-type">ExploreMap</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#exploredmap">exploredMap</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:27</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:32</li>
 						</ul>
 					</aside>
 				</section>
@@ -172,9 +171,28 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> height</h3>
 					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#height">height</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:34</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:41</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="instance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> instance</h3>
+					<div class="tsd-signature tsd-kind-icon">instance<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iworldlayercpp.html" class="tsd-signature-type">IWorldLayerCPP</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:39</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="island" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> island</h3>
+					<div class="tsd-signature tsd-kind-icon">island<span class="tsd-signature-symbol">:</span> <a href="island.html" class="tsd-signature-type">Island</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -183,53 +201,48 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> level</h3>
 					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <a href="../enums/worldz.html" class="tsd-signature-type">WorldZ</a></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#level">level</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:34</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:41</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lightblockmap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> light<wbr>Block<wbr>Map</h3>
-					<div class="tsd-signature tsd-kind-icon">light<wbr>Block<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ibytegrid.html" class="tsd-signature-type">IByteGrid</a></div>
+					<div class="tsd-signature tsd-kind-icon">light<wbr>Block<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IByteGrid</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#lightblockmap">lightBlockMap</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:25</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:30</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lightlevelmap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> light<wbr>Level<wbr>Map</h3>
-					<div class="tsd-signature tsd-kind-icon">light<wbr>Level<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/__global.icolorgrid.html" class="tsd-signature-type">IColorGrid</a></div>
+					<div class="tsd-signature tsd-kind-icon">light<wbr>Level<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icolorgrid.html" class="tsd-signature-type">IColorGrid</a></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#lightlevelmap">lightLevelMap</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:24</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:29</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ondoodadupdate" class="tsd-anchor"></a>
-					<h3>on<wbr>Doodad<wbr>Update</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Doodad<wbr>Update<span class="tsd-signature-symbol">:</span> <a href="../globals.html#ondoodadupdatedelegate" class="tsd-signature-type">onDoodadUpdateDelegate</a></div>
+					<a name="ondoodadupdates" class="tsd-anchor"></a>
+					<h3>on<wbr>Doodad<wbr>Updates</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Doodad<wbr>Updates<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#ondoodadupdatedelegate" class="tsd-signature-type">onDoodadUpdateDelegate</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#ondoodadupdate">onDoodadUpdate</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:29</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:36</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ontileupdate" class="tsd-anchor"></a>
-					<h3>on<wbr>Tile<wbr>Update</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Tile<wbr>Update<span class="tsd-signature-symbol">:</span> <a href="../globals.html#ontileupdatedelegate" class="tsd-signature-type">onTileUpdateDelegate</a></div>
+					<a name="ontileupdates" class="tsd-anchor"></a>
+					<h3>on<wbr>Tile<wbr>Updates</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Tile<wbr>Updates<span class="tsd-signature-symbol">:</span> <a href="defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#ontileupdatedelegate" class="tsd-signature-type">onTileUpdateDelegate</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#ontileupdate">onTileUpdate</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:28</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -238,9 +251,8 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> width</h3>
 					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#width">width</a></p>
 						<ul>
-							<li>Defined in src/renderer/WorldLayer.ts:34</li>
+							<li>Defined in src/game/renderer/world/WorldLayer.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -256,9 +268,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:42</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -274,9 +285,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettile">getTile</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:50</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:62</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -296,14 +306,13 @@
 					<a name="gettiledecoration" class="tsd-anchor"></a>
 					<h3>get<wbr>Tile<wbr>Decoration</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Decoration<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Decoration<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettiledecoration">getTileDecoration</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:58</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -315,7 +324,7 @@
 									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -323,14 +332,13 @@
 					<a name="gettiletype" class="tsd-anchor"></a>
 					<h3>get<wbr>Tile<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Type<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Type<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettiletype">getTileType</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:46</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -342,7 +350,36 @@
 									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TerrainType</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettileupdate" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Update<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">?: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itileupdate.html" class="tsd-signature-type">ITileUpdate</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:183</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a><span class="tsd-signature-symbol"> = this.island.getTile(x, y, this.level)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itileupdate.html" class="tsd-signature-type">ITileUpdate</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -350,14 +387,13 @@
 					<a name="gettype" class="tsd-anchor"></a>
 					<h3>get<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span>terrain<span class="tsd-signature-symbol">: </span><a href="../globals.html#terraindata" class="tsd-signature-type">TerrainData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<span class="tsd-signature-symbol">(</span>terrain<span class="tsd-signature-symbol">: </span><a href="../globals.html#terraindata" class="tsd-signature-type">TerrainData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#gettype">getType</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:54</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -366,7 +402,7 @@
 									<h5>terrain: <a href="../globals.html#terraindata" class="tsd-signature-type">TerrainData</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TerrainType</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -380,7 +416,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:78</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:90</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -402,9 +438,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#isdoodadoverhidden">isDoodadOverHidden</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:74</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:86</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -426,9 +461,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#isfence">isFence</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:66</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -450,9 +484,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#istilled">isTilled</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:70</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -474,9 +507,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#iswall">isWall</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:62</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:74</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -493,13 +525,13 @@
 					<a name="settile" class="tsd-anchor"></a>
 					<h3>set<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, terrainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TerrainType</span>, terrainMasks<span class="tsd-signature-symbol">?: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, terrainType<span class="tsd-signature-symbol">: </span><a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a>, terrainMasks<span class="tsd-signature-symbol">?: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:82</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:94</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -511,7 +543,7 @@
 									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>terrainType: <span class="tsd-signature-type">TerrainType</span></h5>
+									<h5>terrainType: <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> terrainMasks: <a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol"> = TerrainMask.None</span></h5>
@@ -530,9 +562,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworldlayer.html">IWorldLayer</a>.<a href="../interfaces/iworldlayer.html#updateall">updateAll</a></p>
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:86</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:98</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -543,13 +574,13 @@
 					<a name="updatetile" class="tsd-anchor"></a>
 					<h3>update<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, shouldUpdate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, updateNeighbors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, flushImmediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, recentlyUpdatedFiles<span class="tsd-signature-symbol">?: </span><a href="../enums/types.html#set" class="tsd-signature-type">Set</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, shouldUpdate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, updateNeighbors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, flushImmediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, recentlyUpdatedTiles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayer.ts:101</li>
+									<li>Defined in src/game/renderer/world/WorldLayer.ts:125</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -570,13 +601,13 @@
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> updateNeighbors: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flushImmediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = shouldUpdate &amp;&amp; world.isLoaded()</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flushImmediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = shouldUpdate &amp;&amp; this.island.world.loaded</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> recentlyUpdatedFiles: <a href="../enums/types.html#set" class="tsd-signature-type">Set</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> recentlyUpdatedTiles: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> debug: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> debug: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -610,6 +641,12 @@
 								<a href="worldlayer.html#height" class="tsd-kind-icon">height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="worldlayer.html#instance" class="tsd-kind-icon">instance</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="worldlayer.html#island" class="tsd-kind-icon">island</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="worldlayer.html#level" class="tsd-kind-icon">level</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -619,10 +656,10 @@
 								<a href="worldlayer.html#lightlevelmap" class="tsd-kind-icon">light<wbr>Level<wbr>Map</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="worldlayer.html#ondoodadupdate" class="tsd-kind-icon">on<wbr>Doodad<wbr>Update</a>
+								<a href="worldlayer.html#ondoodadupdates" class="tsd-kind-icon">on<wbr>Doodad<wbr>Updates</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="worldlayer.html#ontileupdate" class="tsd-kind-icon">on<wbr>Tile<wbr>Update</a>
+								<a href="worldlayer.html#ontileupdates" class="tsd-kind-icon">on<wbr>Tile<wbr>Updates</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="worldlayer.html#width" class="tsd-kind-icon">width</a>
@@ -638,6 +675,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayer.html#gettiletype" class="tsd-kind-icon">get<wbr>Tile<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayer.html#gettileupdate" class="tsd-kind-icon">get<wbr>Tile<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayer.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>

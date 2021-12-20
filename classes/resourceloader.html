@@ -81,13 +81,18 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iresourceloaderevents.html" class="tsd-signature-type">IResourceLoaderEvents</a><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><a href="../interfaces/iresourceloader.html" class="tsd-signature-type">IResourceLoader</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="resourceloader.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
@@ -98,22 +103,48 @@
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="resourceloader.html#isloading" class="tsd-kind-icon">is<wbr>Loading</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="resourceloader.html#resourcecontainer" class="tsd-kind-icon">resource<wbr>Container</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#continueloading" class="tsd-kind-icon">continue<wbr>Loading</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#getimageoverride" class="tsd-kind-icon">get<wbr>Image<wbr>Override</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#loadresources" class="tsd-kind-icon">load<wbr>Resources</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="resourceloader.html#onglobalslotready" class="tsd-kind-icon">on<wbr>Global<wbr>Slot<wbr>Ready</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#releaseloadingslot" class="tsd-kind-icon">release<wbr>Loading<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#takeloadingslot" class="tsd-kind-icon">take<wbr>Loading<wbr>Slot</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceloader.html#updateimageoverrides" class="tsd-kind-icon">update<wbr>Image<wbr>Overrides</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Resource<wbr>Loader<span class="tsd-signature-symbol">(</span>webGlContext<span class="tsd-signature-symbol">: </span><a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resourceloader.html" class="tsd-signature-type">ResourceLoader</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/resource/ResourceLoader.ts:69</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>webGlContext: <a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="resourceloader.html" class="tsd-signature-type">ResourceLoader</a></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
@@ -124,9 +155,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iresourceloaderevents.html" class="tsd-signature-type">IResourceLoaderEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -143,10 +174,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:61</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="resourcecontainer" class="tsd-anchor"></a>
+					<h3>resource<wbr>Container</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> resourceContainer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iresourcecontainer.html" class="tsd-signature-type">IResourceContainer</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/resource/ResourceLoader.ts:85</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iresourcecontainer.html" class="tsd-signature-type">IResourceContainer</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -163,7 +211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:100</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:115</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -171,26 +219,19 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getimageoverride" class="tsd-anchor"></a>
-					<h3>get<wbr>Image<wbr>Override</h3>
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Image<wbr>Override<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iresourceloader.html">IResourceLoader</a>.<a href="../interfaces/iresourceloader.html#getimageoverride">getImageOverride</a></p>
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:124</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:77</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>src: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -198,25 +239,15 @@
 					<a name="initialize" class="tsd-anchor"></a>
 					<h3>initialize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, container<span class="tsd-signature-symbol">: </span><a href="../interfaces/iresourcecontainer.html" class="tsd-signature-type">IResourceContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iresourceloader.html">IResourceLoader</a>.<a href="../interfaces/iresourceloader.html#initialize">initialize</a></p>
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:74</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:89</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
-								</li>
-								<li>
-									<h5>container: <a href="../interfaces/iresourcecontainer.html" class="tsd-signature-type">IResourceContainer</a></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -225,15 +256,21 @@
 					<a name="loadresources" class="tsd-anchor"></a>
 					<h3>load<wbr>Resources</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>Resources<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Resources<span class="tsd-signature-symbol">(</span>background<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:89</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:100</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> background: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -248,7 +285,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:172</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:140</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -264,9 +301,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iresourceloader.html">IResourceLoader</a>.<a href="../interfaces/iresourceloader.html#releaseloadingslot">releaseLoadingSlot</a></p>
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:120</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:135</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -283,7 +319,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:116</li>
+									<li>Defined in src/game/resource/ResourceLoader.ts:131</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -308,24 +344,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updateimageoverrides" class="tsd-anchor"></a>
-					<h3>update<wbr>Image<wbr>Overrides</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Image<wbr>Overrides<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iresourceloader.html">IResourceLoader</a>.<a href="../interfaces/iresourceloader.html#updateimageoverrides">updateImageOverrides</a></p>
-								<ul>
-									<li>Defined in src/resource/ResourceLoader.ts:128</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 			</section>
 			<nav class="tsd-navigation primary">
 				<ul>
@@ -343,17 +361,23 @@
 					<li class="current tsd-kind-class">
 						<a href="resourceloader.html" class="tsd-kind-icon">Resource<wbr>Loader</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="resourceloader.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="resourceloader.html#event" class="tsd-kind-icon">event</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="resourceloader.html#isloading" class="tsd-kind-icon">is<wbr>Loading</a>
 							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="resourceloader.html#resourcecontainer" class="tsd-kind-icon">resource<wbr>Container</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="resourceloader.html#continueloading" class="tsd-kind-icon">continue<wbr>Loading</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="resourceloader.html#getimageoverride" class="tsd-kind-icon">get<wbr>Image<wbr>Override</a>
+								<a href="resourceloader.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="resourceloader.html#initialize" class="tsd-kind-icon">initialize</a>
@@ -369,9 +393,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="resourceloader.html#takeloadingslot" class="tsd-kind-icon">take<wbr>Loading<wbr>Slot</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="resourceloader.html#updateimageoverrides" class="tsd-kind-icon">update<wbr>Image<wbr>Overrides</a>
 							</li>
 						</ul>
 					</li>

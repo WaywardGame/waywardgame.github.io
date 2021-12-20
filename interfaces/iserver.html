@@ -81,6 +81,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#gamedetails" class="tsd-kind-icon">game<wbr>Details</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#pendingcheckconnectionpromise" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Promise</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#pendingcheckconnectionresolve" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Resolve</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#pendingcheckconnectiontimeoutid" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Timeout<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iserver.html#serverdetails" class="tsd-kind-icon">server<wbr>Details</a></li>
 							</ul>
 						</section>
@@ -92,10 +95,12 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="gamedetails" class="tsd-anchor"></a>
 					<h3>game<wbr>Details</h3>
-					<div class="tsd-signature tsd-kind-icon">game<wbr>Details<span class="tsd-signature-symbol">:</span> <a href="iservergamedetails.html" class="tsd-signature-type">IServerGameDetails</a></div>
+					<div class="tsd-signature tsd-kind-icon">game<wbr>Details<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IServerGameDetails</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/matchmaking/IMatchmaking.ts:112</li>
+							<li>Defined in src/game/multiplayer/matchmaking/IMatchmaking.ts:112</li>
+							<li>Defined in src/matchmakingserver/shared.ts:48</li>
+							<li>Defined in src/game/node_modules/@wayward/matchmakingserver/shared.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -105,17 +110,73 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/matchmaking/IMatchmaking.ts:110</li>
+							<li>Defined in src/game/multiplayer/matchmaking/IMatchmaking.ts:110</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pendingcheckconnectionpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pending<wbr>Check<wbr>Connection<wbr>Promise</h3>
+					<div class="tsd-signature tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Promise<span class="tsd-signature-symbol">:</span> <a href="../classes/resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICheckConnectionServerDirectoryResponse</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/matchmakingserver/shared.ts:50</li>
+							<li>Defined in src/game/node_modules/@wayward/matchmakingserver/shared.ts:50</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pendingcheckconnectionresolve" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pending<wbr>Check<wbr>Connection<wbr>Resolve</h3>
+					<div class="tsd-signature tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Resolve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICheckConnectionServerDirectoryResponse</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/matchmakingserver/shared.ts:51</li>
+							<li>Defined in src/game/node_modules/@wayward/matchmakingserver/shared.ts:51</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICheckConnectionServerDirectoryResponse</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>response: <span class="tsd-signature-type">ICheckConnectionServerDirectoryResponse</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pendingcheckconnectiontimeoutid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pending<wbr>Check<wbr>Connection<wbr>Timeout<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Timeout<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Timer</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/matchmakingserver/shared.ts:49</li>
+							<li>Defined in src/game/node_modules/@wayward/matchmakingserver/shared.ts:49</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="serverdetails" class="tsd-anchor"></a>
 					<h3>server<wbr>Details</h3>
-					<div class="tsd-signature tsd-kind-icon">server<wbr>Details<span class="tsd-signature-symbol">:</span> <a href="iserverserverdetails.html" class="tsd-signature-type">IServerServerDetails</a></div>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Details<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IServerServerDetails</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/matchmaking/IMatchmaking.ts:111</li>
+							<li>Defined in src/game/multiplayer/matchmaking/IMatchmaking.ts:111</li>
+							<li>Defined in src/matchmakingserver/shared.ts:47</li>
+							<li>Defined in src/game/node_modules/@wayward/matchmakingserver/shared.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -141,6 +202,15 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iserver.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iserver.html#pendingcheckconnectionpromise" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iserver.html#pendingcheckconnectionresolve" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Resolve</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iserver.html#pendingcheckconnectiontimeoutid" class="tsd-kind-icon">pending<wbr>Check<wbr>Connection<wbr>Timeout<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iserver.html#serverdetails" class="tsd-kind-icon">server<wbr>Details</a>

@@ -84,6 +84,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#getcreaturespritebatchlayer" class="tsd-kind-icon">get<wbr>Creature<wbr>Sprite<wbr>Batch<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#getmaxspritesforlayer" class="tsd-kind-icon">get<wbr>Max<wbr>Sprites<wbr>For<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#getplayerspritebatchlayer" class="tsd-kind-icon">get<wbr>Player<wbr>Sprite<wbr>Batch<wbr>Layer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#postrenderpostprocess" class="tsd-kind-icon">post<wbr>Render<wbr>Post<wbr>Process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#postrenderworld" class="tsd-kind-icon">post<wbr>Render<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#prerenderpostprocess" class="tsd-kind-icon">pre<wbr>Render<wbr>Post<wbr>Process</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#prerenderworld" class="tsd-kind-icon">pre<wbr>Render<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#renderoverlay" class="tsd-kind-icon">render<wbr>Overlay</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#shouldrender" class="tsd-kind-icon">should<wbr>Render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iworldrendererevents.html#updatezoom" class="tsd-kind-icon">update<wbr>Zoom</a></li>
 							</ul>
 						</section>
@@ -102,7 +108,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:85</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:120</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:93</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:128</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +184,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:101</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:136</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -216,7 +222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:117</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:152</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -248,26 +254,26 @@
 					<a name="getplayerspritebatchlayer" class="tsd-anchor"></a>
 					<h3>get<wbr>Player<wbr>Sprite<wbr>Batch<wbr>Layer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Player<wbr>Sprite<wbr>Batch<wbr>Layer<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="../classes/player.html" class="tsd-signature-type">Player</a>, batchLayer<span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Player<wbr>Sprite<wbr>Batch<wbr>Layer<span class="tsd-signature-symbol">(</span>origin<span class="tsd-signature-symbol">: </span><a href="irendererorigin.html" class="tsd-signature-type">IRendererOrigin</a>, batchLayer<span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/spritebatchlayer.html" class="tsd-signature-type">SpriteBatchLayer</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:109</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:144</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Called when rendering the player in the viewport</p>
+									<p>Called when rendering the origin in the viewport</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>player: <a href="../classes/player.html" class="tsd-signature-type">Player</a></h5>
+									<h5>origin: <a href="irendererorigin.html" class="tsd-signature-type">IRendererOrigin</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The player object</p>
+										<p>The origin object</p>
 									</div>
 								</li>
 								<li>
@@ -283,6 +289,190 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="postrenderpostprocess" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> post<wbr>Render<wbr>Post<wbr>Process</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">post<wbr>Render<wbr>Post<wbr>Process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:183</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Caller after post processing the world render</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="postrenderworld" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> post<wbr>Render<wbr>World</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">post<wbr>Render<wbr>World<span class="tsd-signature-symbol">(</span>tileScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:173</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Caller after rendering the world</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileScale: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The tile scale</p>
+									</div>
+								</li>
+								<li>
+									<h5>viewWidth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The width of the view port</p>
+									</div>
+								</li>
+								<li>
+									<h5>viewHeight: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The height of the view port</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="prerenderpostprocess" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pre<wbr>Render<wbr>Post<wbr>Process</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pre<wbr>Render<wbr>Post<wbr>Process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:178</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Caller before post processing the world render</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="prerenderworld" class="tsd-anchor"></a>
+					<h3>pre<wbr>Render<wbr>World</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pre<wbr>Render<wbr>World<span class="tsd-signature-symbol">(</span>tileScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:165</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called before rendering the world</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileScale: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The tile scale</p>
+									</div>
+								</li>
+								<li>
+									<h5>viewWidth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The width of the view port</p>
+									</div>
+								</li>
+								<li>
+									<h5>viewHeight: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The height of the view port</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="renderoverlay" class="tsd-anchor"></a>
+					<h3>render<wbr>Overlay</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">render<wbr>Overlay<span class="tsd-signature-symbol">(</span>spriteBatch<span class="tsd-signature-symbol">: </span><a href="ispritebatch.html" class="tsd-signature-type">ISpriteBatch</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:189</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when rendering the overlay</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>spriteBatch: <a href="ispritebatch.html" class="tsd-signature-type">ISpriteBatch</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The overlay sprite batch</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="shouldrender" class="tsd-anchor"></a>
+					<h3>should<wbr>Render</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Render<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/renderflag.html" class="tsd-signature-type">RenderFlag</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:195</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when different object types are rendered</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/renderflag.html" class="tsd-signature-type">RenderFlag</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>A bitwise list of render flags or undefined to use the default logic</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="updatezoom" class="tsd-anchor"></a>
 					<h3>update<wbr>Zoom</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -292,7 +482,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldRenderer.ts:122</li>
+									<li>Defined in src/game/renderer/world/WorldRenderer.ts:157</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -344,6 +534,24 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iworldrendererevents.html#getplayerspritebatchlayer" class="tsd-kind-icon">get<wbr>Player<wbr>Sprite<wbr>Batch<wbr>Layer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#postrenderpostprocess" class="tsd-kind-icon">post<wbr>Render<wbr>Post<wbr>Process</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#postrenderworld" class="tsd-kind-icon">post<wbr>Render<wbr>World</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#prerenderpostprocess" class="tsd-kind-icon">pre<wbr>Render<wbr>Post<wbr>Process</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#prerenderworld" class="tsd-kind-icon">pre<wbr>Render<wbr>World</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#renderoverlay" class="tsd-kind-icon">render<wbr>Overlay</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iworldrendererevents.html#shouldrender" class="tsd-kind-icon">should<wbr>Render</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iworldrendererevents.html#updatezoom" class="tsd-kind-icon">update<wbr>Zoom</a>

@@ -88,9 +88,8 @@
 					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ientityevents.html" class="tsd-signature-type">IEntityEvents</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/ireferenceable.html" class="tsd-signature-type">IReferenceable</a></li>
 					<li><a href="../interfaces/iinspector.html" class="tsd-signature-type">IInspector</a></li>
-					<li><a href="../interfaces/iunserializedcallback.html" class="tsd-signature-type">IUnserializedCallback</a></li>
 					<li><a href="../modules/itemperaturesource.html" class="tsd-signature-type">ITemperatureSource</a></li>
-					<li><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+					<li><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					<li><a href="../interfaces/iunserializedcallback.html" class="tsd-signature-type">IUnserializedCallback</a></li>
 					<li><a href="../interfaces/iobject.html" class="tsd-signature-type">IObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
@@ -113,6 +112,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#anim" class="tsd-kind-icon">anim</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#attackanimationendtime" class="tsd-kind-icon">attack<wbr>Animation<wbr>End<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#attackanimationtype" class="tsd-kind-icon">attack<wbr>Animation<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#direction" class="tsd-kind-icon">direction</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#enemy" class="tsd-kind-icon">enemy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#enemyattacks" class="tsd-kind-icon">enemy<wbr>Attacks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#enemyattempts" class="tsd-kind-icon">enemy<wbr>Attempts</a></li>
@@ -124,6 +124,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#fromy" class="tsd-kind-icon">fromY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#hitchedto" class="tsd-kind-icon">hitched<wbr>To</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#ismovingclientside" class="tsd-kind-icon">is<wbr>Moving<wbr>Clientside</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#islandid" class="tsd-kind-icon">island<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#movetype" class="tsd-kind-icon">move<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#objecttype" class="tsd-kind-icon">object<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="creature.html#originalmovetype" class="tsd-kind-icon">original<wbr>Move<wbr>Type</a></li>
@@ -148,8 +150,10 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#ascreature" class="tsd-kind-icon">as<wbr>Creature</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#asentity" class="tsd-kind-icon">as<wbr>Entity</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#ashuman" class="tsd-kind-icon">as<wbr>Human</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#aslocalplayer" class="tsd-kind-icon">as<wbr>Local<wbr>Player</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#asnpc" class="tsd-kind-icon">asNPC</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#asplayer" class="tsd-kind-icon">as<wbr>Player</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#island" class="tsd-kind-icon">island</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -203,13 +207,14 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#notifystat" class="tsd-kind-icon">notify<wbr>Stat</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#offer" class="tsd-kind-icon">offer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="creature.html#onstatchange" class="tsd-kind-icon">on<wbr>Stat<wbr>Change</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="creature.html#premove" class="tsd-kind-icon">pre<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#preventnextmovement" class="tsd-kind-icon">prevent<wbr>Next<wbr>Movement</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#processattack" class="tsd-kind-icon">process<wbr>Attack</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#processspecialabilities" class="tsd-kind-icon">process<wbr>Special<wbr>Abilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="creature.html#queuesoundeffect" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#queuesoundeffectinfront" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#refreshstatuseffects" class="tsd-kind-icon">refresh<wbr>Status<wbr>Effects</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="creature.html#release" class="tsd-kind-icon">release</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#removeproperty" class="tsd-kind-icon">remove<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#setinfov" class="tsd-kind-icon">set<wbr>InFov</a></li>
@@ -225,12 +230,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="creature.html#is" class="tsd-kind-icon">is</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
-							<h3>Object literals</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited"><a href="creature.html#direction" class="tsd-kind-icon">direction</a></li>
-							</ul>
-						</section>
 					</div>
 				</section>
 			</section>
@@ -240,20 +239,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Creature<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">?: </span><a href="../enums/enumid.html#creaturetype" class="tsd-signature-type">CreatureType</a>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, aberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Creature<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">?: </span><a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a>, islandId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&#x60;${number},${number}&#x60;</span>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, aberrant<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="creature.html" class="tsd-signature-type">Creature</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:87</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:97</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureType: <a href="../enums/enumid.html#creaturetype" class="tsd-signature-type">CreatureType</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureType: <a href="../enums/creaturetype.html" class="tsd-signature-type">CreatureType</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> islandId: <span class="tsd-signature-type">&#x60;${number},${number}&#x60;</span><span class="tsd-signature-symbol"> = &quot;&quot; as IslandId</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
@@ -265,7 +267,7 @@
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> z: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> aberrant: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> aberrant: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a></h4>
@@ -278,10 +280,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="aberrant" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> aberrant</h3>
-					<div class="tsd-signature tsd-kind-icon">aberrant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">aberrant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:75</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:85</li>
 						</ul>
 					</aside>
 				</section>
@@ -291,7 +293,7 @@
 					<div class="tsd-signature tsd-kind-icon">ai<span class="tsd-signature-symbol">:</span> <a href="../enums/aitype.html" class="tsd-signature-type">AiType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:76</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:86</li>
 						</ul>
 					</aside>
 				</section>
@@ -302,7 +304,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#anim">anim</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:70</li>
+							<li>Defined in src/game/game/entity/Entity.ts:82</li>
 						</ul>
 					</aside>
 				</section>
@@ -313,7 +315,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#attackanimationendtime">attackAnimationEndTime</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:82</li>
+							<li>Defined in src/game/game/entity/Entity.ts:96</li>
 						</ul>
 					</aside>
 				</section>
@@ -324,47 +326,58 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#attackanimationtype">attackAnimationType</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:81</li>
+							<li>Defined in src/game/game/entity/Entity.ts:95</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="direction" class="tsd-anchor"></a>
+					<h3>direction</h3>
+					<div class="tsd-signature tsd-kind-icon">direction<span class="tsd-signature-symbol">:</span> <a href="vector2.html" class="tsd-signature-type">Vector2</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#direction">direction</a></p>
+						<ul>
+							<li>Defined in src/game/game/entity/Entity.ts:85</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enemy" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enemy</h3>
-					<div class="tsd-signature tsd-kind-icon">enemy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">enemy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:77</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:87</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enemyattacks" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enemy<wbr>Attacks</h3>
-					<div class="tsd-signature tsd-kind-icon">enemy<wbr>Attacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">enemy<wbr>Attacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:79</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:89</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enemyattempts" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enemy<wbr>Attempts</h3>
-					<div class="tsd-signature tsd-kind-icon">enemy<wbr>Attempts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">enemy<wbr>Attempts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:78</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:88</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enemyisplayer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enemy<wbr>IsPlayer</h3>
-					<div class="tsd-signature tsd-kind-icon">enemy<wbr>IsPlayer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">enemy<wbr>IsPlayer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:80</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:90</li>
 						</ul>
 					</aside>
 				</section>
@@ -375,7 +388,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="human.html">Human</a>.<a href="human.html#entitytype">entityType</a></p>
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:73</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:83</li>
 						</ul>
 					</aside>
 				</section>
@@ -385,9 +398,9 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/icreatureevents.html" class="tsd-signature-type">ICreatureEvents</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Overrides <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Overrides <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:71</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:81</li>
 						</ul>
 					</aside>
 				</section>
@@ -398,7 +411,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#facingdirection">facingDirection</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:74</li>
+							<li>Defined in src/game/game/entity/Entity.ts:86</li>
 						</ul>
 					</aside>
 				</section>
@@ -409,7 +422,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#fromx">fromX</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:61</li>
+							<li>Defined in src/game/game/entity/Entity.ts:73</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -425,7 +438,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#fromy">fromY</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:66</li>
+							<li>Defined in src/game/game/entity/Entity.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -437,10 +450,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="hitchedto" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hitched<wbr>To</h3>
-					<div class="tsd-signature tsd-kind-icon">hitched<wbr>To<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">hitched<wbr>To<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:85</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:95</li>
 						</ul>
 					</aside>
 				</section>
@@ -452,7 +465,29 @@
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#id">id</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#id">id</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:50</li>
+							<li>Defined in src/game/game/entity/Entity.ts:62</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="ismovingclientside" class="tsd-anchor"></a>
+					<h3>is<wbr>Moving<wbr>Clientside</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Moving<wbr>Clientside<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#ismovingclientside">isMovingClientside</a></p>
+						<ul>
+							<li>Defined in src/game/game/entity/Entity.ts:98</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="islandid" class="tsd-anchor"></a>
+					<h3>island<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">island<wbr>Id<span class="tsd-signature-symbol">:</span> <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="entity.html">Entity</a>.<a href="entity.html#islandid">islandId</a></p>
+						<ul>
+							<li>Defined in src/game/game/entity/Entity.ts:93</li>
 						</ul>
 					</aside>
 				</section>
@@ -463,7 +498,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#movetype">moveType</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:68</li>
+							<li>Defined in src/game/game/entity/Entity.ts:80</li>
 						</ul>
 					</aside>
 				</section>
@@ -474,7 +509,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#objecttype">objectType</a></p>
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:69</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:79</li>
 						</ul>
 					</aside>
 				</section>
@@ -484,7 +519,7 @@
 					<div class="tsd-signature tsd-kind-icon">original<wbr>Move<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:84</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:94</li>
 						</ul>
 					</aside>
 				</section>
@@ -495,19 +530,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#properties">properties</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:79</li>
+							<li>Defined in src/game/game/entity/Entity.ts:91</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="referenceid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reference<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ireferenceable.html">IReferenceable</a>.<a href="../interfaces/ireferenceable.html#referenceid">referenceId</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#referenceid">referenceId</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:51</li>
+							<li>Defined in src/game/game/entity/Entity.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -519,17 +554,17 @@
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#renamed">renamed</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#renamed">renamed</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:52</li>
+							<li>Defined in src/game/game/entity/Entity.ts:64</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="respawned" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> respawned</h3>
-					<div class="tsd-signature tsd-kind-icon">respawned<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">respawned<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:81</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:91</li>
 						</ul>
 					</aside>
 				</section>
@@ -539,18 +574,18 @@
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Skip<wbr>Next<wbr>Update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:82</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:92</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="stat" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> stat</h3>
-					<div class="tsd-signature tsd-kind-icon">stat<span class="tsd-signature-symbol">:</span> <a href="stats.html" class="tsd-signature-type">Stats</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Stats(this)</span></div>
+					<div class="tsd-signature tsd-kind-icon">stat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Stats</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Stats(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#stat">stat</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:46</li>
+							<li>Defined in src/game/game/entity/Entity.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -561,7 +596,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#stats">stats</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:76</li>
+							<li>Defined in src/game/game/entity/Entity.ts:88</li>
 						</ul>
 					</aside>
 				</section>
@@ -572,7 +607,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#status">status</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:77</li>
+							<li>Defined in src/game/game/entity/Entity.ts:89</li>
 						</ul>
 					</aside>
 				</section>
@@ -583,7 +618,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#stopnextmovement">stopNextMovement</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:71</li>
+							<li>Defined in src/game/game/entity/Entity.ts:83</li>
 						</ul>
 					</aside>
 				</section>
@@ -594,7 +629,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobject.html">IObject</a>.<a href="../interfaces/iobject.html#type">type</a></p>
 						<ul>
-							<li>Defined in src/game/entity/creature/Creature.ts:83</li>
+							<li>Defined in src/game/game/entity/creature/Creature.ts:93</li>
 						</ul>
 					</aside>
 				</section>
@@ -603,10 +638,9 @@
 					<h3>x</h3>
 					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#x">x</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#x">x</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:55</li>
+							<li>Defined in src/game/game/entity/Entity.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -615,10 +649,9 @@
 					<h3>y</h3>
 					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#y">y</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#y">y</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:56</li>
+							<li>Defined in src/game/game/entity/Entity.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -627,10 +660,9 @@
 					<h3>z</h3>
 					<div class="tsd-signature tsd-kind-icon">z<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ivector3.html">IVector3</a>.<a href="../interfaces/ivector3.html#z">z</a></p>
 						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#z">z</a></p>
 						<ul>
-							<li>Defined in src/game/entity/Entity.ts:54</li>
+							<li>Defined in src/game/game/entity/Entity.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -648,7 +680,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#ascreature">asCreature</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:2134</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:2193</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="creature.html" class="tsd-signature-type">Creature</a></h4>
@@ -666,7 +698,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#asentity">asEntity</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:390</li>
+									<li>Defined in src/game/game/entity/Entity.ts:408</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="entity.html" class="tsd-signature-type">Entity</a></h4>
@@ -684,7 +716,25 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#ashuman">asHuman</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:2137</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:2196</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+					<a name="aslocalplayer" class="tsd-anchor"></a>
+					<h3>as<wbr>Local<wbr>Player</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> asLocalPlayer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="human.html">Human</a>.<a href="human.html#aslocalplayer">asLocalPlayer</a></p>
+								<ul>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:2205</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
@@ -702,7 +752,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="human.html">Human</a>.<a href="human.html#asnpc">asNPC</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:2140</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:2199</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
@@ -720,10 +770,28 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="human.html">Human</a>.<a href="human.html#asplayer">asPlayer</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:2143</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:2202</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="island" class="tsd-anchor"></a>
+					<h3>island</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> island<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#island">island</a></p>
+								<ul>
+									<li>Defined in src/game/game/entity/Entity.ts:134</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="island.html" class="tsd-signature-type">Island</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -741,7 +809,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#addproperty">addProperty</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:370</li>
+									<li>Defined in src/game/game/entity/Entity.ts:388</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -768,7 +836,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#animateattack">animateAttack</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:279</li>
+									<li>Defined in src/game/game/entity/Entity.ts:297</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -792,7 +860,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#animatebumptowards">animateBumpTowards</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:271</li>
+									<li>Defined in src/game/game/entity/Entity.ts:289</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -817,14 +885,14 @@
 					<a name="canseeobject" class="tsd-anchor"></a>
 					<h3>can<wbr>See<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Object<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a>, object<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Object<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a>, object<span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span>, fieldOfView<span class="tsd-signature-symbol">?: </span><a href="fieldofview.html" class="tsd-signature-type">FieldOfView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#canseeobject">canSeeObject</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:342</li>
+									<li>Defined in src/game/game/entity/Entity.ts:360</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -833,7 +901,10 @@
 									<h5>type: <a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a></h5>
 								</li>
 								<li>
-									<h5>object: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>object: <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fieldOfView: <a href="fieldofview.html" class="tsd-signature-type">FieldOfView</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -844,14 +915,14 @@
 					<a name="canseeposition" class="tsd-anchor"></a>
 					<h3>can<wbr>See<wbr>Position</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Position<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a>, tileX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">can<wbr>See<wbr>Position<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fieldOfView<span class="tsd-signature-symbol">?: </span><a href="fieldofview.html" class="tsd-signature-type">FieldOfView</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, customRadius<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#canseeposition">canSeePosition</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:338</li>
+									<li>Defined in src/game/game/entity/Entity.ts:356</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -860,13 +931,19 @@
 									<h5>type: <a href="../enums/canaseebtype.html" class="tsd-signature-type">CanASeeBType</a></h5>
 								</li>
 								<li>
-									<h5>tileX: <span class="tsd-signature-type">number</span></h5>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>tileY: <span class="tsd-signature-type">number</span></h5>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>tileZ: <span class="tsd-signature-type">number</span></h5>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fieldOfView: <a href="fieldofview.html" class="tsd-signature-type">FieldOfView</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> = renderer?.fieldOfView</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> customRadius: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -883,7 +960,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:611</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:622</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -920,7 +997,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:220</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:231</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -943,7 +1020,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:481</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:492</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -970,14 +1047,14 @@
 					<h3>damage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>damageInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>damageInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a>, creatureX<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, creatureY<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, creatureZ<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">damage<span class="tsd-signature-symbol">(</span>damageInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a>, creatureX<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, creatureY<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, creatureZ<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#damage">damage</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:637</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:648</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -992,7 +1069,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="entity.html">Entity</a>.<a href="entity.html#damage">damage</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:638</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:649</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1001,13 +1078,13 @@
 									<h5>damageInfo: <a href="../interfaces/idamageinfo.html" class="tsd-signature-type">IDamageInfo</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureX: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureX: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureY: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureY: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureZ: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> creatureZ: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1018,16 +1095,16 @@
 					<a name="description" class="tsd-anchor"></a>
 					<h3>description</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a></li>
+						<li class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:182</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:193</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/icreaturedescription.html" class="tsd-signature-type">ICreatureDescription</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1035,13 +1112,13 @@
 					<a name="findpath" class="tsd-anchor"></a>
 					<h3>find<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Path<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a>, maxNodesChecked<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, ignorePlayer<span class="tsd-signature-symbol">?: </span><a href="../enums/types.html#player" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Path<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a>, maxNodesChecked<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, ignorePlayer<span class="tsd-signature-symbol">?: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1541</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1570</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1050,10 +1127,10 @@
 									<h5>target: <a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxNodesChecked: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxNodesChecked: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignorePlayer: <a href="../enums/types.html#player" class="tsd-signature-type">Player</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignorePlayer: <a href="player.html" class="tsd-signature-type">Player</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector2.html" class="tsd-signature-type">IVector2</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1064,14 +1141,14 @@
 					<a name="getactivestatuses" class="tsd-anchor"></a>
 					<h3>get<wbr>Active<wbr>Statuses</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Active<wbr>Statuses<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Active<wbr>Statuses<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getactivestatuses">getActiveStatuses</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:186</li>
+									<li>Defined in src/game/game/entity/Entity.ts:206</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1079,7 +1156,7 @@
 									<p>Generator for status effects on the entity.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1094,7 +1171,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="human.html">Human</a>.<a href="human.html#getapplicablestatuseffects">getApplicableStatusEffects</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1478</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1507</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1112,7 +1189,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getcraftingdifficulty">getCraftingDifficulty</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:195</li>
+									<li>Defined in src/game/game/entity/Entity.ts:213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1129,17 +1206,17 @@
 					<a name="getfacingpoint" class="tsd-anchor"></a>
 					<h3>get<wbr>Facing<wbr>Point</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Facing<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Facing<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getfacingpoint">getFacingPoint</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:217</li>
+									<li>Defined in src/game/game/entity/Entity.ts:235</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1154,7 +1231,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getfacingtile">getFacingTile</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:225</li>
+									<li>Defined in src/game/game/entity/Entity.ts:243</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
@@ -1173,7 +1250,7 @@
 								<p>Implementation of <a href="../interfaces/iinspector.html">IInspector</a>.<a href="../interfaces/iinspector.html#getinspectionid">getInspectionId</a></p>
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getinspectionid">getInspectionId</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:129</li>
+									<li>Defined in src/game/game/entity/Entity.ts:144</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1191,7 +1268,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getmovetype">getMoveType</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:366</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:377</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/movetype.html" class="tsd-signature-type">MoveType</a></h4>
@@ -1209,7 +1286,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getmovementfinishtime">getMovementFinishTime</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:314</li>
+									<li>Defined in src/game/game/entity/Entity.ts:332</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1233,7 +1310,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getmovementpoint">getMovementPoint</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:295</li>
+									<li>Defined in src/game/game/entity/Entity.ts:313</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1257,7 +1334,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getmovementprogress">getMovementProgress</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:304</li>
+									<li>Defined in src/game/game/entity/Entity.ts:322</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1274,14 +1351,14 @@
 					<a name="getname" class="tsd-anchor"></a>
 					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span>article<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/translation.html" class="tsd-signature-type">Translation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="human.html">Human</a>.<a href="human.html#getname">getName</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:178</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:189</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1289,13 +1366,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> article: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether to include an article for the name of the creature. Uses the article rules on the language. Defaults to <code>true</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of this creature that you&#39;re getting the name of. Defaults to <code>1</code>.</p>
 										<p>Examples:</p>
@@ -1307,7 +1384,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/translation.html" class="tsd-signature-type">Translation</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1321,7 +1398,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:623</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:634</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -1332,17 +1409,17 @@
 					<a name="getpoint" class="tsd-anchor"></a>
 					<h3>get<wbr>Point</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Point<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getpoint">getPoint</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:209</li>
+									<li>Defined in src/game/game/entity/Entity.ts:227</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1350,17 +1427,17 @@
 					<a name="getproducedtemperature" class="tsd-anchor"></a>
 					<h3>get<wbr>Produced<wbr>Temperature</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Produced<wbr>Temperature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Produced<wbr>Temperature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getproducedtemperature">getProducedTemperature</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1474</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1503</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1375,7 +1452,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getproperty">getProperty</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:378</li>
+									<li>Defined in src/game/game/entity/Entity.ts:396</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1398,14 +1475,14 @@
 					<a name="getstatus" class="tsd-anchor"></a>
 					<h3>get<wbr>Status</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Status&lt;S&gt;<span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">S</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Status&lt;S&gt;<span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getstatus">getStatus</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:170</li>
+									<li>Defined in src/game/game/entity/Entity.ts:190</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1425,7 +1502,7 @@
 									<h5>status: <a href="../enums/statustype.html" class="tsd-signature-type">StatusType</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">S</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">S</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1433,14 +1510,14 @@
 					<a name="getstatuses" class="tsd-anchor"></a>
 					<h3>get<wbr>Statuses</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Statuses<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Statuses<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#getstatuses">getStatuses</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:177</li>
+									<li>Defined in src/game/game/entity/Entity.ts:197</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1448,7 +1525,7 @@
 									<p>Generator for status effects on the entity.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="statuseffect.html" class="tsd-signature-type">StatusEffect</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1463,7 +1540,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#gettile">getTile</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:205</li>
+									<li>Defined in src/game/game/entity/Entity.ts:223</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h4>
@@ -1481,7 +1558,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#gettileupdatetype">getTileUpdateType</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:199</li>
+									<li>Defined in src/game/game/entity/Entity.ts:217</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/tileupdatetype.html" class="tsd-signature-type">TileUpdateType</a></h4>
@@ -1498,7 +1575,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:190</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:201</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1522,7 +1599,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#hasproperty">hasProperty</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:366</li>
+									<li>Defined in src/game/game/entity/Entity.ts:384</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1546,7 +1623,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#hasstatus">hasStatus</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:141</li>
+									<li>Defined in src/game/game/entity/Entity.ts:156</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1577,7 +1654,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:301</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:312</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1594,7 +1671,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1150</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1170</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1611,13 +1688,13 @@
 					<a name="initializestats" class="tsd-anchor"></a>
 					<h3>initialize<wbr>Stats</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Stats<span class="tsd-signature-symbol">(</span>hp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxhp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Stats<span class="tsd-signature-symbol">(</span>hp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxhp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:145</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:156</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1631,7 +1708,7 @@
 									<h5>hp: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxhp: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxhp: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1648,7 +1725,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:198</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:209</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1665,7 +1742,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:194</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:205</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1683,7 +1760,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#isinfov">isInFov</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:326</li>
+									<li>Defined in src/game/game/entity/Entity.ts:344</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1701,7 +1778,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#isnearby">isNearby</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:264</li>
+									<li>Defined in src/game/game/entity/Entity.ts:282</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1725,7 +1802,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#isonfire">isOnFire</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:334</li>
+									<li>Defined in src/game/game/entity/Entity.ts:352</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/firetype.html" class="tsd-signature-type">FireType</a></h4>
@@ -1742,7 +1819,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:202</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1759,7 +1836,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:206</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:217</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1777,7 +1854,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#moveto">moveTo</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:229</li>
+									<li>Defined in src/game/game/entity/Entity.ts:247</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1807,7 +1884,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#notifyitem">notifyItem</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:358</li>
+									<li>Defined in src/game/game/entity/Entity.ts:376</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1834,7 +1911,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#notifystat">notifyStat</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:362</li>
+									<li>Defined in src/game/game/entity/Entity.ts:380</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1860,7 +1937,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:787</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:803</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1883,7 +1960,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1504</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1533</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1902,19 +1979,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="onunserialized" class="tsd-anchor"></a>
 					<h3>on<wbr>Unserialized</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">on<wbr>Unserialized<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
-								<p>Overrides <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1156</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1176</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1931,7 +2007,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1488</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1517</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1975,7 +2051,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:210</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:221</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1992,7 +2068,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1180</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1209</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2018,13 +2094,13 @@
 					<a name="processspecialabilities" class="tsd-anchor"></a>
 					<h3>process<wbr>Special<wbr>Abilities</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">process<wbr>Special<wbr>Abilities<span class="tsd-signature-symbol">(</span>enemy<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Special<wbr>Abilities<span class="tsd-signature-symbol">(</span>enemy<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:825</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:841</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2033,7 +2109,7 @@
 									<h5>enemy: <a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol"> | </span><a href="creature.html" class="tsd-signature-type">Creature</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2051,7 +2127,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#queuesoundeffect">queueSoundEffect</a></p>
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:380</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:391</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2081,7 +2157,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#queuesoundeffectinfront">queueSoundEffectInFront</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:354</li>
+									<li>Defined in src/game/game/entity/Entity.ts:372</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2103,6 +2179,24 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="refreshstatuseffects" class="tsd-anchor"></a>
+					<h3>refresh<wbr>Status<wbr>Effects</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">refresh<wbr>Status<wbr>Effects<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#refreshstatuseffects">refreshStatusEffects</a></p>
+								<ul>
+									<li>Defined in src/game/game/entity/Entity.ts:419</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="release" class="tsd-anchor"></a>
 					<h3>release</h3>
@@ -2113,7 +2207,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:310</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:321</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2131,7 +2225,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#removeproperty">removeProperty</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:382</li>
+									<li>Defined in src/game/game/entity/Entity.ts:400</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2155,7 +2249,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#setinfov">setInFov</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:330</li>
+									<li>Defined in src/game/game/entity/Entity.ts:348</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2179,7 +2273,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#setmovetype">setMoveType</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:322</li>
+									<li>Defined in src/game/game/entity/Entity.ts:340</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2203,7 +2297,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#setstatus">setStatus</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:152</li>
+									<li>Defined in src/game/game/entity/Entity.ts:167</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2247,7 +2341,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:362</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:373</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2264,7 +2358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:250</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:261</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2291,7 +2385,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#tostring">toString</a></p>
 								<ul>
-									<li>Defined in src/game/entity/Entity.ts:125</li>
+									<li>Defined in src/game/game/entity/Entity.ts:140</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -2308,7 +2402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:351</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:362</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2325,7 +2419,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:385</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:396</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2342,20 +2436,19 @@
 					<a name="updatedoodadoverhiddenstate" class="tsd-anchor"></a>
 					<h3>update<wbr>Doodad<wbr>Over<wbr>Hidden<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Doodad<wbr>Over<wbr>Hidden<wbr>State<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, hidden<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Doodad<wbr>Over<wbr>Hidden<wbr>State<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a>, shouldBeHidden<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1166</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1185</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Updates the DoodadOverHidden tile flag if the creature is large
-										large creatures should render over the doodad over layer
-									which means we should hide the doodad over layer for doodads on the creature</p>
+									<p>Updates the DoodadOverHidden tile flag if the creature is large.
+									Large creatures should render over the doodad over layer, which means we should hide the doodad over layer for doodads on the creatures tile.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2373,7 +2466,7 @@
 									<h5>tile: <a href="../interfaces/itile.html" class="tsd-signature-type">ITile</a></h5>
 								</li>
 								<li>
-									<h5>hidden: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>shouldBeHidden: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2390,7 +2483,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:1483</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:1512</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2413,7 +2506,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/creature/Creature.ts:65</li>
+									<li>Defined in src/game/game/entity/creature/Creature.ts:75</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2425,40 +2518,6 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Creature</span></h4>
 						</li>
 					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
-				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited">
-					<a name="direction" class="tsd-anchor"></a>
-					<h3>direction</h3>
-					<div class="tsd-signature tsd-kind-icon">direction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="deathknightnpc.html">DeathKnightNPC</a>.<a href="deathknightnpc.html#direction">direction</a></p>
-						<ul>
-							<li>Defined in src/game/entity/Entity.ts:73</li>
-						</ul>
-					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="direction.x-1" class="tsd-anchor"></a>
-						<h3>x</h3>
-						<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in src/game/entity/Entity.ts:73</li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="direction.y-1" class="tsd-anchor"></a>
-						<h3>y</h3>
-						<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in src/game/entity/Entity.ts:73</li>
-							</ul>
-						</aside>
-					</section>
 				</section>
 			</section>
 			<nav class="tsd-navigation primary">
@@ -2495,6 +2554,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#attackanimationtype" class="tsd-kind-icon">attack<wbr>Animation<wbr>Type</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#direction" class="tsd-kind-icon">direction</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="creature.html#enemy" class="tsd-kind-icon">enemy</a>
 							</li>
@@ -2527,6 +2589,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#ismovingclientside" class="tsd-kind-icon">is<wbr>Moving<wbr>Clientside</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#islandid" class="tsd-kind-icon">island<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#movetype" class="tsd-kind-icon">move<wbr>Type</a>
@@ -2586,10 +2654,16 @@
 								<a href="creature.html#ashuman" class="tsd-kind-icon">as<wbr>Human</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+								<a href="creature.html#aslocalplayer" class="tsd-kind-icon">as<wbr>Local<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 								<a href="creature.html#asnpc" class="tsd-kind-icon">asNPC</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 								<a href="creature.html#asplayer" class="tsd-kind-icon">as<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#island" class="tsd-kind-icon">island</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#addproperty" class="tsd-kind-icon">add<wbr>Property</a>
@@ -2735,7 +2809,7 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="creature.html#onstatchange" class="tsd-kind-icon">on<wbr>Stat<wbr>Change</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#onunserialized" class="tsd-kind-icon">on<wbr>Unserialized</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
@@ -2755,6 +2829,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="creature.html#queuesoundeffectinfront" class="tsd-kind-icon">queue<wbr>Sound<wbr>Effect<wbr>InFront</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="creature.html#refreshstatuseffects" class="tsd-kind-icon">refresh<wbr>Status<wbr>Effects</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="creature.html#release" class="tsd-kind-icon">release</a>
@@ -2794,9 +2871,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="creature.html#is" class="tsd-kind-icon">is</a>
-							</li>
-							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited">
-								<a href="creature.html#direction" class="tsd-kind-icon">direction</a>
 							</li>
 						</ul>
 					</li>

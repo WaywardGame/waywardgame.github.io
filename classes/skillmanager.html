@@ -90,6 +90,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#get" class="tsd-kind-icon">get</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#getbonus" class="tsd-kind-icon">get<wbr>Bonus</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#getcore" class="tsd-kind-icon">get<wbr>Core</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#getfraction" class="tsd-kind-icon">get<wbr>Fraction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#getskillandactiontiervalue" class="tsd-kind-icon">get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#gettotal" class="tsd-kind-icon">get<wbr>Total</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="skillmanager.html#has" class="tsd-kind-icon">has</a></li>
@@ -111,19 +112,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Skill<wbr>Manager<span class="tsd-signature-symbol">(</span>eventHost<span class="tsd-signature-symbol">: </span><a href="eventemitter.host.html" class="tsd-signature-type">Host</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iskillevents.html" class="tsd-signature-type">ISkillEvents</a><span class="tsd-signature-symbol">&gt;</span>, configuration<span class="tsd-signature-symbol">: </span><a href="../interfaces/iskillconfiguration.html" class="tsd-signature-type">ISkillConfiguration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="skillmanager.html" class="tsd-signature-type">SkillManager</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Skill<wbr>Manager<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><a href="../interfaces/iskillhost.html" class="tsd-signature-type">ISkillHost</a>, configuration<span class="tsd-signature-symbol">: </span><a href="../interfaces/iskillconfiguration.html" class="tsd-signature-type">ISkillConfiguration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="skillmanager.html" class="tsd-signature-type">SkillManager</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:49</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:56</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>eventHost: <a href="eventemitter.host.html" class="tsd-signature-type">Host</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iskillevents.html" class="tsd-signature-type">ISkillEvents</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>host: <a href="../interfaces/iskillhost.html" class="tsd-signature-type">ISkillHost</a></h5>
 								</li>
 								<li>
 									<h5>configuration: <a href="../interfaces/iskillconfiguration.html" class="tsd-signature-type">ISkillConfiguration</a></h5>
@@ -146,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:100</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:127</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>type<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -157,13 +158,13 @@
 					<a name="gain" class="tsd-anchor"></a>
 					<h3>gain</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">gain<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, mod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">gain<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, multiplier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, bypass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:170</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:197</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -172,13 +173,13 @@
 									<h5>skill: <a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mod: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> multiplier: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bypass: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -195,7 +196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:67</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:85</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -221,7 +222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:83</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:110</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:75</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:102</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -264,16 +265,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getskillandactiontiervalue" class="tsd-anchor"></a>
-					<h3>get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value</h3>
+					<a name="getfraction" class="tsd-anchor"></a>
+					<h3>get<wbr>Fraction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Fraction<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:166</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:94</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>skill: <a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The value of the given skill, represented as a decimal number 0-1, where 0 is 0% and 1 is 100%.
+							The value may exceed 1 given skill bonuses.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getskillandactiontiervalue" class="tsd-anchor"></a>
+					<h3>get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:193</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -282,7 +310,7 @@
 									<h5>skill: <a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -299,7 +327,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:91</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:118</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -319,7 +347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:53</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:71</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -342,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:60</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:78</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -362,13 +390,13 @@
 					<a name="set" class="tsd-anchor"></a>
 					<h3>set</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, core<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, bonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, core<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, bonus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:106</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:133</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -377,10 +405,10 @@
 									<h5>skill: <a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> core: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> core: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bonus: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> bonus: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -397,7 +425,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:231</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:260</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -420,7 +448,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:146</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:173</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -446,7 +474,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:151</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:178</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -469,7 +497,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:141</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:168</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -500,13 +528,13 @@
 					<a name="skillandactiontiercheck" class="tsd-anchor"></a>
 					<h3>skill<wbr>And<wbr>Action<wbr>Tier<wbr>Check</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">skill<wbr>And<wbr>Action<wbr>Tier<wbr>Check<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, check<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">skill<wbr>And<wbr>Action<wbr>Tier<wbr>Check<span class="tsd-signature-symbol">(</span>skill<span class="tsd-signature-symbol">: </span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a>, check<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, actionTier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/skill/SkillManager.ts:162</li>
+									<li>Defined in src/game/game/entity/skill/SkillManager.ts:189</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -520,7 +548,7 @@
 									<h5>check: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> actionTier: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -562,6 +590,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="skillmanager.html#getcore" class="tsd-kind-icon">get<wbr>Core</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="skillmanager.html#getfraction" class="tsd-kind-icon">get<wbr>Fraction</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="skillmanager.html#getskillandactiontiervalue" class="tsd-kind-icon">get<wbr>Skill<wbr>And<wbr>Action<wbr>Tier<wbr>Value</a>

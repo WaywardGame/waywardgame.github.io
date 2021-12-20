@@ -106,6 +106,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#gettiletlbg" class="tsd-kind-icon">get<wbr>TileTLBG</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#gettiletlfg" class="tsd-kind-icon">get<wbr>TileTLFG</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#render" class="tsd-kind-icon">render</a></li>
@@ -119,9 +120,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#settiletlfg" class="tsd-kind-icon">set<wbr>TileTLFG</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#settiletrbg" class="tsd-kind-icon">set<wbr>TileTRBG</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="tilelayer.html#settiletrfg" class="tsd-kind-icon">set<wbr>TileTRFG</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tilelayer.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tilelayer.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tilelayer.html#settiletexture" class="tsd-kind-icon">set<wbr>Tile<wbr>Texture</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tilelayer.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a></li>
 							</ul>
 						</section>
 					</div>
@@ -133,17 +132,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Tile<wbr>Layer<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/tilelayertype.html" class="tsd-signature-type">TileLayerType</a>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, positionBuffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLBuffer</span>, isFixedDepth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, yRenderOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, tileAnimationFrames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, syncDoodadAnimationFrames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="tilelayer.html" class="tsd-signature-type">TileLayer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Tile<wbr>Layer<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="renderercontext.html" class="tsd-signature-type">RendererContext</a>, type<span class="tsd-signature-symbol">: </span><a href="../enums/tilelayertype.html" class="tsd-signature-type">TileLayerType</a>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, positionBuffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLBuffer</span>, isFixedDepth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, yRenderOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, tileAnimationFrames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, syncDoodadAnimationFrames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="tilelayer.html" class="tsd-signature-type">TileLayer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:53</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>context: <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></h5>
+								</li>
 								<li>
 									<h5>type: <a href="../enums/tilelayertype.html" class="tsd-signature-type">TileLayerType</a></h5>
 								</li>
@@ -152,9 +154,6 @@
 								</li>
 								<li>
 									<h5>height: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
 								</li>
 								<li>
 									<h5>positionBuffer: <span class="tsd-signature-type">WebGLBuffer</span></h5>
@@ -185,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Fixed<wbr>Depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/TileLayer.ts:61</li>
+							<li>Defined in src/game/renderer/tile/TileLayer.ts:61</li>
 						</ul>
 					</aside>
 				</section>
@@ -195,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">render<wbr>Layer<wbr>Flag<span class="tsd-signature-symbol">:</span> <a href="../enums/renderlayerflag.html" class="tsd-signature-type">RenderLayerFlag</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/TileLayer.ts:43</li>
+							<li>Defined in src/game/renderer/tile/TileLayer.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -205,13 +204,30 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/tilelayertype.html" class="tsd-signature-type">TileLayerType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/TileLayer.ts:56</li>
+							<li>Defined in src/game/renderer/tile/TileLayer.ts:57</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:120</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gettiletlbg" class="tsd-anchor"></a>
 					<h3>get<wbr>TileTLBG</h3>
@@ -222,7 +238,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:132</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:150</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -245,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:108</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:126</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -262,19 +278,19 @@
 					<a name="render" class="tsd-anchor"></a>
 					<h3>render</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">render<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, subTileSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">render<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="renderercontext.html" class="tsd-signature-type">RendererContext</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, subTileSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, viewHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ticks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:172</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:190</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>context: <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></h5>
 								</li>
 								<li>
 									<h5>x: <span class="tsd-signature-type">number</span></h5>
@@ -294,6 +310,9 @@
 								<li>
 									<h5>viewHeight: <span class="tsd-signature-type">number</span></h5>
 								</li>
+								<li>
+									<h5>ticks: <span class="tsd-signature-type">number</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -309,7 +328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:156</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:174</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -338,7 +357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:167</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:185</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -361,7 +380,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:146</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:164</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -390,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:122</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:140</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -419,7 +438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:151</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:169</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -448,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:127</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:145</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -477,7 +496,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:136</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:154</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -506,7 +525,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:112</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:130</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -535,7 +554,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:141</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:159</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -564,7 +583,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:117</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:135</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -584,68 +603,25 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="createshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Shaders</h3>
+					<a name="initializeprograms" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Programs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Shaders<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Programs<span class="tsd-signature-symbol">(</span>webGlContext<span class="tsd-signature-symbol">: </span><a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:27</li>
+									<li>Defined in src/game/renderer/tile/TileLayer.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>webGlContext: <a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="linkshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> link<wbr>Shaders</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">link<wbr>Shaders<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:31</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="settiletexture" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> set<wbr>Tile<wbr>Texture</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Tile<wbr>Texture<span class="tsd-signature-symbol">(</span>texture<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span>, textureSizeInversed<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/renderer/TileLayer.ts:35</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>texture: <span class="tsd-signature-type">WebGLTexture</span></h5>
-								</li>
-								<li>
-									<h5>textureSizeInversed: <a href="vector2.html" class="tsd-signature-type">Vector2</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -677,6 +653,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="tilelayer.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="tilelayer.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="tilelayer.html#gettiletlbg" class="tsd-kind-icon">get<wbr>TileTLBG</a>
@@ -718,13 +697,7 @@
 								<a href="tilelayer.html#settiletrfg" class="tsd-kind-icon">set<wbr>TileTRFG</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="tilelayer.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="tilelayer.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="tilelayer.html#settiletexture" class="tsd-kind-icon">set<wbr>Tile<wbr>Texture</a>
+								<a href="tilelayer.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a>
 							</li>
 						</ul>
 					</li>

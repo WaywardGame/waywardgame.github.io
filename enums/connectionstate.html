@@ -73,9 +73,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#all" class="tsd-kind-icon">All</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#catchingup" class="tsd-kind-icon">Catching<wbr>Up</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#closed" class="tsd-kind-icon">Closed</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#closing" class="tsd-kind-icon">Closing</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#connected" class="tsd-kind-icon">Connected</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#connecting" class="tsd-kind-icon">Connecting</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#disconnecting" class="tsd-kind-icon">Disconnecting</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#queuingpackets" class="tsd-kind-icon">Queuing<wbr>Packets</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="connectionstate.html#ready" class="tsd-kind-icon">Ready</a></li>
 							</ul>
@@ -88,10 +89,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="all" class="tsd-anchor"></a>
 					<h3>All</h3>
-					<div class="tsd-signature tsd-kind-icon">All<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = Connecting | Connected | QueuingPackets | CatchingUp | Ready | Disconnecting</span></div>
+					<div class="tsd-signature tsd-kind-icon">All<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = Connecting | Connected | QueuingPackets | CatchingUp | Ready | Closing | Closed</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:22</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:23</li>
 						</ul>
 					</aside>
 				</section>
@@ -101,7 +102,27 @@
 					<div class="tsd-signature tsd-kind-icon">Catching<wbr>Up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 8</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:19</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:19</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="closed" class="tsd-anchor"></a>
+					<h3>Closed</h3>
+					<div class="tsd-signature tsd-kind-icon">Closed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 64</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:22</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="closing" class="tsd-anchor"></a>
+					<h3>Closing</h3>
+					<div class="tsd-signature tsd-kind-icon">Closing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 32</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:21</li>
 						</ul>
 					</aside>
 				</section>
@@ -111,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">Connected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 2</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:17</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:17</li>
 						</ul>
 					</aside>
 				</section>
@@ -121,17 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">Connecting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:16</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="disconnecting" class="tsd-anchor"></a>
-					<h3>Disconnecting</h3>
-					<div class="tsd-signature tsd-kind-icon">Disconnecting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 32</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:21</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:16</li>
 						</ul>
 					</aside>
 				</section>
@@ -141,7 +152,7 @@
 					<div class="tsd-signature tsd-kind-icon">Queuing<wbr>Packets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 4</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:18</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -151,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">Ready<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 16</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/multiplayer/networking/IConnection.ts:20</li>
+							<li>Defined in src/game/multiplayer/networking/IConnection.ts:20</li>
 						</ul>
 					</aside>
 				</section>
@@ -179,13 +190,16 @@
 								<a href="connectionstate.html#catchingup" class="tsd-kind-icon">Catching<wbr>Up</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="connectionstate.html#closed" class="tsd-kind-icon">Closed</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="connectionstate.html#closing" class="tsd-kind-icon">Closing</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="connectionstate.html#connected" class="tsd-kind-icon">Connected</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="connectionstate.html#connecting" class="tsd-kind-icon">Connecting</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="connectionstate.html#disconnecting" class="tsd-kind-icon">Disconnecting</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="connectionstate.html#queuingpackets" class="tsd-kind-icon">Queuing<wbr>Packets</a>

@@ -80,6 +80,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/igenericmanager.html" class="tsd-signature-type">IGenericManager</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/icommand.html" class="tsd-signature-type">ICommand</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/icommandmanager.html" class="tsd-signature-type">ICommandManager</a></li>
 				</ul>
@@ -92,6 +93,12 @@
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="commandmanager.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="commandmanager.html#event" class="tsd-kind-icon">event</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -123,12 +130,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:17</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="commandmanager.html" class="tsd-signature-type">CommandManager</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="event" class="tsd-anchor"></a>
+					<h3>event</h3>
+					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/icommandmanagerevents.html" class="tsd-signature-type">ICommandManagerEvents</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
+						<p>Overrides <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
+						<ul>
+							<li>Defined in src/game/command/CommandManager.ts:37</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -145,7 +167,7 @@
 								<p>Implementation of <a href="../interfaces/icommandmanager.html">ICommandManager</a>.<a href="../interfaces/icommandmanager.html#add">add</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#add">add</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:30</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,14 +184,14 @@
 					<a name="execute" class="tsd-anchor"></a>
 					<h3>execute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a>, cmd<span class="tsd-signature-symbol">: </span><a href="../enums/command.html" class="tsd-signature-type">Command</a>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a>, cmd<span class="tsd-signature-symbol">: </span><a href="../enums/command.html" class="tsd-signature-type">Command</a>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icommandmanager.html">ICommandManager</a>.<a href="../interfaces/icommandmanager.html#execute">execute</a></p>
 								<ul>
-									<li>Defined in src/command/CommandManager.ts:29</li>
+									<li>Defined in src/game/command/CommandManager.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -181,7 +203,7 @@
 									<h5>cmd: <a href="../enums/command.html" class="tsd-signature-type">Command</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -200,7 +222,7 @@
 								<p>Implementation of <a href="../interfaces/icommandmanager.html">ICommandManager</a>.<a href="../interfaces/icommandmanager.html#get">get</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#get">get</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:38</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -224,7 +246,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#getenumobject">getEnumObject</a></p>
 								<ul>
-									<li>Defined in src/command/CommandManager.ts:51</li>
+									<li>Defined in src/game/command/CommandManager.ts:65</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -242,7 +264,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#getsource">getSource</a></p>
 								<ul>
-									<li>Defined in src/command/CommandManager.ts:47</li>
+									<li>Defined in src/game/command/CommandManager.ts:61</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a></h4>
@@ -261,7 +283,7 @@
 								<p>Implementation of <a href="../interfaces/icommandmanager.html">ICommandManager</a>.<a href="../interfaces/icommandmanager.html#has">has</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#has">has</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:26</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,7 +308,7 @@
 								<p>Implementation of <a href="../interfaces/icommandmanager.html">ICommandManager</a>.<a href="../interfaces/icommandmanager.html#remove">remove</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:47</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -310,7 +332,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#setup">setup</a></p>
 								<ul>
-									<li>Defined in src/command/CommandManager.ts:25</li>
+									<li>Defined in src/game/command/CommandManager.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -342,6 +364,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="commandmanager.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="commandmanager.html#event" class="tsd-kind-icon">event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="commandmanager.html#add" class="tsd-kind-icon">add</a>

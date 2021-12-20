@@ -93,6 +93,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="drawnmap.html#event" class="tsd-kind-icon">event</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="drawnmap.html#islandid" class="tsd-kind-icon">island<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="drawnmap.html#tiles" class="tsd-kind-icon">tiles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="drawnmap.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
@@ -101,6 +102,7 @@
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="drawnmap.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="drawnmap.html#island" class="tsd-kind-icon">island</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="drawnmap.html#position" class="tsd-kind-icon">position</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="drawnmap.html#radius" class="tsd-kind-icon">radius</a></li>
 							</ul>
@@ -139,9 +141,19 @@
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idrawnmapevents.html" class="tsd-signature-type">IDrawnMapEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="islandid" class="tsd-anchor"></a>
+					<h3>island<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">island<wbr>Id<span class="tsd-signature-symbol">:</span> <a href="../globals.html#islandid" class="tsd-signature-type">IslandId</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/game/mapping/DrawnMap.ts:341</li>
 						</ul>
 					</aside>
 				</section>
@@ -151,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">tiles<span class="tsd-signature-symbol">:</span> <a href="sampler.html" class="tsd-signature-type">Sampler</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/imaptiledata.html" class="tsd-signature-type">IMapTileData</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/mapping/DrawnMap.ts:317</li>
+							<li>Defined in src/game/game/mapping/DrawnMap.ts:327</li>
 						</ul>
 					</aside>
 				</section>
@@ -161,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/drawnmaptype.html" class="tsd-signature-type">DrawnMapType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/mapping/DrawnMap.ts:331</li>
+							<li>Defined in src/game/game/mapping/DrawnMap.ts:344</li>
 						</ul>
 					</aside>
 				</section>
@@ -178,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:339</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:355</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -186,16 +198,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="position" class="tsd-anchor"></a>
-					<h3>position</h3>
+					<a name="island" class="tsd-anchor"></a>
+					<h3>island</h3>
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> island<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:321</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:359</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="island.html" class="tsd-signature-type">Island</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="position" class="tsd-anchor"></a>
+					<h3>position</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:332</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -203,7 +232,7 @@
 									<p>The top-left position of this map</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -217,7 +246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:324</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:336</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -231,13 +260,13 @@
 					<a name="addtreasure" class="tsd-anchor"></a>
 					<h3>add<wbr>Treasure</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Treasure<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, chest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Treasure<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, chest<span class="tsd-signature-symbol">: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:386</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:411</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -249,7 +278,7 @@
 									<h5>y: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>chest: <span class="tsd-signature-type">DoodadType</span></h5>
+									<h5>chest: <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -266,7 +295,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:397</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:422</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -295,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:532</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:555</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="mapbackground.html" class="tsd-signature-type">MapBackground</a></h4>
@@ -306,16 +335,16 @@
 					<a name="getcenterposition" class="tsd-anchor"></a>
 					<h3>get<wbr>Center<wbr>Position</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Center<wbr>Position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Center<wbr>Position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:408</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:433</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -329,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:528</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:551</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="obfuscation.html" class="tsd-signature-type">Obfuscation</a></h4>
@@ -340,16 +369,16 @@
 					<a name="getriddle" class="tsd-anchor"></a>
 					<h3>get<wbr>Riddle</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Riddle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Riddle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:536</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:559</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -363,7 +392,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:361</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:386</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><a href="../interfaces/itreasure.html" class="tsd-signature-type">ITreasure</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -380,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:365</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:390</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/itreasure.html" class="tsd-signature-type">ITreasure</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -397,7 +426,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:378</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:403</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -414,7 +443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:382</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:407</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -432,7 +461,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:369</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:394</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -446,7 +475,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:370</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:395</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -473,7 +502,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iunserializedcallback.html">IUnserializedCallback</a>.<a href="../interfaces/iunserializedcallback.html#onunserialized">onUnserialized</a></p>
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:353</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:378</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -489,9 +518,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/ipreserializecallback.html">IPreSerializeCallback</a>.<a href="../interfaces/ipreserializecallback.html#preserializeobject">preSerializeObject</a></p>
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:349</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:374</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -508,7 +536,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:416</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:441</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -525,13 +553,13 @@
 					<a name="generateislandtreasuremaps" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Island<wbr>Treasure<wbr>Maps</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Island<wbr>Treasure<wbr>Maps<span class="tsd-signature-symbol">(</span>generationSettings<span class="tsd-signature-symbol">: </span><a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Island<wbr>Treasure<wbr>Maps<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, generationSettings<span class="tsd-signature-symbol">: </span><a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:124</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:131</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -545,6 +573,9 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
+								<li>
 									<h5>generationSettings: <a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a></h5>
 								</li>
 							</ul>
@@ -556,13 +587,13 @@
 					<a name="initializeislandtreasuremaps" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Island<wbr>Treasure<wbr>Maps</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Island<wbr>Treasure<wbr>Maps<span class="tsd-signature-symbol">(</span>generationSettings<span class="tsd-signature-symbol">: </span><a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a>, mapGenOutput<span class="tsd-signature-symbol">: </span><a href="../interfaces/imapgengenerateoutput.html" class="tsd-signature-type">IMapGenGenerateOutput</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Island<wbr>Treasure<wbr>Maps<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, generationSettings<span class="tsd-signature-symbol">: </span><a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a>, mapGenOutput<span class="tsd-signature-symbol">: </span><a href="../interfaces/imapgengenerateoutput.html" class="tsd-signature-type">IMapGenGenerateOutput</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:139</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:145</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -573,6 +604,9 @@
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>generationSettings: <a href="../interfaces/itreasuremapgenerationsettings.html" class="tsd-signature-type">ITreasureMapGenerationSettings</a></h5>
 								</li>
@@ -588,15 +622,21 @@
 					<a name="initializeislandtreasuremapsdifferences" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Island<wbr>Treasure<wbr>Maps<wbr>Differences</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Island<wbr>Treasure<wbr>Maps<wbr>Differences<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Island<wbr>Treasure<wbr>Maps<wbr>Differences<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:160</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:168</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -605,17 +645,20 @@
 					<a name="plotregion" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> plot<wbr>Region</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">plot<wbr>Region<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, random<span class="tsd-signature-symbol">?: </span><a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/irandomgenerator.html" class="tsd-signature-type">IRandomGenerator</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, map<span class="tsd-signature-symbol">?: </span><a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a></li>
+						<li class="tsd-signature tsd-kind-icon">plot<wbr>Region<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, random<span class="tsd-signature-symbol">?: </span><a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/irandomgenerator.html" class="tsd-signature-type">IRandomGenerator</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, map<span class="tsd-signature-symbol">?: </span><a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/mapping/DrawnMap.ts:173</li>
+									<li>Defined in src/game/game/mapping/DrawnMap.ts:181</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>x: <span class="tsd-signature-type">number</span></h5>
 								</li>
@@ -626,10 +669,10 @@
 									<h5>z: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> random: <a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/irandomgenerator.html" class="tsd-signature-type">IRandomGenerator</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = seededRandom</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> random: <a href="random.html" class="tsd-signature-type">Random</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/irandomgenerator.html" class="tsd-signature-type">IRandomGenerator</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="seededgenerator.html" class="tsd-signature-type">SeededGenerator</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = island.seededRandom</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> map: <a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a><span class="tsd-signature-symbol"> = new DrawnMap(DrawnMapType.Drawn)</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> map: <a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a><span class="tsd-signature-symbol"> = new DrawnMap(island, DrawnMapType.Drawn)</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="drawnmap.html" class="tsd-signature-type">DrawnMap</a></h4>
@@ -657,6 +700,9 @@
 								<a href="drawnmap.html#event" class="tsd-kind-icon">event</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="drawnmap.html#islandid" class="tsd-kind-icon">island<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="drawnmap.html#tiles" class="tsd-kind-icon">tiles</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -664,6 +710,9 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="drawnmap.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="drawnmap.html#island" class="tsd-kind-icon">island</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="drawnmap.html#position" class="tsd-kind-icon">position</a>

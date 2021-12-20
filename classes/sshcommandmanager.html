@@ -80,6 +80,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/igenericmanager.html" class="tsd-signature-type">IGenericManager</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/isshcommand.html" class="tsd-signature-type">ISshCommand</a><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/isshcommandmanager.html" class="tsd-signature-type">ISshCommandManager</a></li>
 				</ul>
@@ -92,6 +93,12 @@
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="sshcommandmanager.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="sshcommandmanager.html#event" class="tsd-kind-icon">event</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -123,12 +130,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:17</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="sshcommandmanager.html" class="tsd-signature-type">SshCommandManager</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="event" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> event</h3>
+					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
+						<ul>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -145,7 +167,7 @@
 								<p>Implementation of <a href="../interfaces/isshcommandmanager.html">ISshCommandManager</a>.<a href="../interfaces/isshcommandmanager.html#add">add</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#add">add</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:30</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,14 +184,14 @@
 					<a name="execute" class="tsd-anchor"></a>
 					<h3>execute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>shell<span class="tsd-signature-symbol">: </span><a href="../interfaces/isshshell.html" class="tsd-signature-type">ISshShell</a>, sshCommand<span class="tsd-signature-symbol">: </span><a href="../enums/sshcommandtype.html" class="tsd-signature-type">SshCommandType</a>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#sshcommandresult" class="tsd-signature-type">SshCommandResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>shell<span class="tsd-signature-symbol">: </span><a href="../interfaces/isshshell.html" class="tsd-signature-type">ISshShell</a>, sshCommand<span class="tsd-signature-symbol">: </span><a href="../enums/sshcommandtype.html" class="tsd-signature-type">SshCommandType</a>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#sshcommandresult" class="tsd-signature-type">SshCommandResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/isshcommandmanager.html">ISshCommandManager</a>.<a href="../interfaces/isshcommandmanager.html#execute">execute</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:58</li>
+									<li>Defined in src/game/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:59</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -181,7 +203,7 @@
 									<h5>sshCommand: <a href="../enums/sshcommandtype.html" class="tsd-signature-type">SshCommandType</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#sshcommandresult" class="tsd-signature-type">SshCommandResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -200,7 +222,7 @@
 								<p>Implementation of <a href="../interfaces/isshcommandmanager.html">ISshCommandManager</a>.<a href="../interfaces/isshcommandmanager.html#get">get</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#get">get</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:38</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -224,7 +246,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#getenumobject">getEnumObject</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:71</li>
+									<li>Defined in src/game/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:72</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -242,7 +264,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#getsource">getSource</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:67</li>
+									<li>Defined in src/game/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/logsource.html" class="tsd-signature-type">LogSource</a></h4>
@@ -261,7 +283,7 @@
 								<p>Implementation of <a href="../interfaces/isshcommandmanager.html">ISshCommandManager</a>.<a href="../interfaces/isshcommandmanager.html#has">has</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#has">has</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:26</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,7 +308,7 @@
 								<p>Implementation of <a href="../interfaces/isshcommandmanager.html">ISshCommandManager</a>.<a href="../interfaces/isshcommandmanager.html#remove">remove</a></p>
 								<p>Inherited from <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/utilities/generic/GenericManager.ts:47</li>
+									<li>Defined in src/game/utilities/generic/GenericManager.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -310,7 +332,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="genericmanager.html">GenericManager</a>.<a href="genericmanager.html#setup">setup</a></p>
 								<ul>
-									<li>Defined in src/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:38</li>
+									<li>Defined in src/game/multiplayer/dedicatedServer/ssh/SshCommandManager.ts:39</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -342,6 +364,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="sshcommandmanager.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="sshcommandmanager.html#event" class="tsd-kind-icon">event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="sshcommandmanager.html#add" class="tsd-kind-icon">add</a>

@@ -89,7 +89,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="gameoptions.igameoptionsold.html#creatures" class="tsd-kind-icon">creatures</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="gameoptions.igameoptionsold.html#disablemods" class="tsd-kind-icon">disable<wbr>Mods</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="gameoptions.igameoptionsold.html#island" class="tsd-kind-icon">island</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="gameoptions.igameoptionsold.html#island" class="tsd-kind-icon">island</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="gameoptions.igameoptionsold.html#items" class="tsd-kind-icon">items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="gameoptions.igameoptionsold.html#milestonemodifiers" class="tsd-kind-icon">milestone<wbr>Modifiers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="gameoptions.igameoptionsold.html#npcs" class="tsd-kind-icon">npcs</a></li>
@@ -108,11 +108,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="creatures" class="tsd-anchor"></a>
 					<h3>creatures</h3>
-					<div class="tsd-signature tsd-kind-icon">creatures<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IGameOptions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"creatures"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>globalAberrantSpawns<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">creatures<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IGameOptions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"creatures"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>globalAberrantSpawns<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides <a href="igameoptions.html">IGameOptions</a>.<a href="igameoptions.html#creatures">creatures</a></p>
 						<ul>
-							<li>Defined in src/game/options/GameOptions.ts:157</li>
+							<li>Defined in src/game/game/options/GameOptions.ts:168</li>
 						</ul>
 					</aside>
 				</section>
@@ -123,7 +123,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#disablemods">disableMods</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:151</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -132,37 +132,16 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="island" class="tsd-anchor"></a>
 					<h3>island</h3>
-					<div class="tsd-signature tsd-kind-icon">island<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>applyTravelingEffects<span class="tsd-signature-symbol">: </span><a href="../enums/travelingeffectstrategy.html" class="tsd-signature-type">TravelingEffectStrategy</a><span class="tsd-signature-symbol">; </span>startingBiomeType<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">island<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IGameOptions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"island"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>applyTravelingEffects<span class="tsd-signature-symbol">?: </span><a href="../enums/gameoptions.travelingeffectstrategy.html" class="tsd-signature-type">TravelingEffectStrategy</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#island">island</a></p>
+						<p>Overrides <a href="igameoptions.html">IGameOptions</a>.<a href="igameoptions.html#island">island</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:46</li>
+							<li>Defined in src/game/game/options/GameOptions.ts:171</li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>apply<wbr>Traveling<wbr>Effects<span class="tsd-signature-symbol">: </span><a href="../enums/travelingeffectstrategy.html" class="tsd-signature-type">TravelingEffectStrategy</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Traveling effect options</p>
-									</div>
-								</div>
-							</li>
-							<li class="tsd-parameter">
-								<h5>starting<wbr>Biome<wbr>Type<span class="tsd-signature-symbol">: </span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Biome type for the first island</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="items" class="tsd-anchor"></a>
@@ -171,7 +150,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#items">items</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:155</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:159</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -195,7 +174,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#milestonemodifiers">milestoneModifiers</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:153</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:157</li>
 						</ul>
 					</aside>
 				</section>
@@ -206,7 +185,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#npcs">npcs</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:134</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:138</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -239,21 +218,21 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="peaceful" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> peaceful</h3>
-					<div class="tsd-signature tsd-kind-icon">peaceful<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">peaceful<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/options/GameOptions.ts:156</li>
+							<li>Defined in src/game/game/options/GameOptions.ts:167</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="player" class="tsd-anchor"></a>
 					<h3>player</h3>
-					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IGameOptions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"player"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>actions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>spawnGuardiansOnLockpick<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>globalSkills<span class="tsd-signature-symbol">: </span><a href="igameoptionsskill.html" class="tsd-signature-type">IGameOptionsSkill</a><span class="tsd-signature-symbol">; </span>initialItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>randomSkills<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>skills<span class="tsd-signature-symbol">: </span><a href="../classes/defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a><span class="tsd-signature-symbol">, </span><a href="igameoptionsskill.html" class="tsd-signature-type">IGameOptionsSkill</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IGameOptions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"player"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>actions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>spawnGuardiansOnLockpick<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>globalSkills<span class="tsd-signature-symbol">: </span><a href="igameoptionsskill.html" class="tsd-signature-type">IGameOptionsSkill</a><span class="tsd-signature-symbol">; </span>initialItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>randomSkills<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>skills<span class="tsd-signature-symbol">: </span><a href="../classes/defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a><span class="tsd-signature-symbol">, </span><a href="igameoptionsskill.html" class="tsd-signature-type">IGameOptionsSkill</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides <a href="igameoptions.html">IGameOptions</a>.<a href="igameoptions.html#player">player</a></p>
 						<ul>
-							<li>Defined in src/game/options/GameOptions.ts:160</li>
+							<li>Defined in src/game/game/options/GameOptions.ts:174</li>
 						</ul>
 					</aside>
 				</section>
@@ -264,7 +243,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#respawn">respawn</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:44</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -276,18 +255,18 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="rest" class="tsd-anchor"></a>
 					<h3>rest</h3>
-					<div class="tsd-signature tsd-kind-icon">rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>startDelay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>tickInterval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>startDelay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>tickInterval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#rest">rest</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:120</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> start<wbr>Delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> start<wbr>Delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>How long to delay before resting begins</p>
@@ -295,7 +274,7 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> tick<wbr>Interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> tick<wbr>Interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>Delay between rest ticks</p>
@@ -308,18 +287,18 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="time" class="tsd-anchor"></a>
 					<h3>time</h3>
-					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>dayLength<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>dayPercent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>frozen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>initial<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>dayLength<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>dayPercent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>frozen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>initial<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="gameoptions.igameoptionsold.html">IGameOptionsOld</a>.<a href="gameoptions.igameoptionsold.html#time">time</a></p>
 						<ul>
-							<li>Defined in src/game/options/IGameOptions.ts:98</li>
+							<li>Defined in src/game/game/options/IGameOptions.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> day<wbr>Length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> day<wbr>Length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>The number of turns/ticks in a day.</p>
@@ -327,7 +306,7 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> day<wbr>Percent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> day<wbr>Percent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>A number between <code>0</code> and <code>1</code> representing how much of the day is &quot;daytime&quot; and how much of the day is &quot;night time&quot;.</p>
@@ -368,6 +347,9 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/gameoptions.travelingeffectstrategy.html" class="tsd-kind-icon">Traveling<wbr>Effect<wbr>Strategy</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
@@ -379,7 +361,7 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="gameoptions.igameoptionsold.html#disablemods" class="tsd-kind-icon">disable<wbr>Mods</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="gameoptions.igameoptionsold.html#island" class="tsd-kind-icon">island</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">

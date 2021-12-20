@@ -102,12 +102,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#add" class="tsd-kind-icon">add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#begin" class="tsd-kind-icon">begin</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#end" class="tsd-kind-icon">end</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#render" class="tsd-kind-icon">render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spritebatch.html#setup" class="tsd-kind-icon">setup</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="spritebatch.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="spritebatch.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="spritebatch.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a></li>
 							</ul>
 						</section>
 					</div>
@@ -119,22 +118,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Batch<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, maxSprites<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, depthOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, yOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spritebatch.html" class="tsd-signature-type">SpriteBatch</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Batch<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="renderercontext.html" class="tsd-signature-type">RendererContext</a>, capacity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, depthOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, yOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spritebatch.html" class="tsd-signature-type">SpriteBatch</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:42</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>context: <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></h5>
 								</li>
 								<li>
-									<h5>maxSprites: <span class="tsd-signature-type">number</span></h5>
+									<h5>capacity: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> depthOffset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
@@ -152,31 +151,31 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="capacity" class="tsd-anchor"></a>
-					<h3>capacity</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> capacity</h3>
 					<div class="tsd-signature tsd-kind-icon">capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpriteBatch.ts:22</li>
+							<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:47</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="inversespritetexturesize" class="tsd-anchor"></a>
 					<h3>inverse<wbr>Sprite<wbr>Texture<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">inverse<wbr>Sprite<wbr>Texture<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="vector2.html" class="tsd-signature-type">Vector2</a></div>
+					<div class="tsd-signature tsd-kind-icon">inverse<wbr>Sprite<wbr>Texture<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpriteBatch.ts:24</li>
+							<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:32</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="texsprites" class="tsd-anchor"></a>
 					<h3>tex<wbr>Sprites</h3>
-					<div class="tsd-signature tsd-kind-icon">tex<wbr>Sprites<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
+					<div class="tsd-signature tsd-kind-icon">tex<wbr>Sprites<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/SpriteBatch.ts:23</li>
+							<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -192,8 +191,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/ispritebatch.html">ISpriteBatch</a>.<a href="../interfaces/ispritebatch.html#add">add</a></p>
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:131</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:146</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -249,7 +249,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:122</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:137</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -266,7 +266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:118</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:133</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -274,16 +274,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="dispose" class="tsd-anchor"></a>
-					<h3>dispose</h3>
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:109</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:124</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -300,7 +300,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:164</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:179</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -317,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:188</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:203</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -352,7 +352,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:87</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:92</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -360,41 +360,24 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="createshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Shaders</h3>
+					<a name="initializeprograms" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Programs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Shaders<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Programs<span class="tsd-signature-symbol">(</span>webGlContext<span class="tsd-signature-symbol">: </span><a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:36</li>
+									<li>Defined in src/game/renderer/spriteBatch/SpriteBatch.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>webGlContext: <a href="webglcontext.html" class="tsd-signature-type">WebGlContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="linkshaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> link<wbr>Shaders</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">link<wbr>Shaders<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/renderer/SpriteBatch.ts:40</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -438,7 +421,7 @@
 								<a href="spritebatch.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="spritebatch.html#dispose" class="tsd-kind-icon">dispose</a>
+								<a href="spritebatch.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="spritebatch.html#end" class="tsd-kind-icon">end</a>
@@ -450,10 +433,7 @@
 								<a href="spritebatch.html#setup" class="tsd-kind-icon">setup</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="spritebatch.html#createshaders" class="tsd-kind-icon">create<wbr>Shaders</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="spritebatch.html#linkshaders" class="tsd-kind-icon">link<wbr>Shaders</a>
+								<a href="spritebatch.html#initializeprograms" class="tsd-kind-icon">initialize<wbr>Programs</a>
 							</li>
 						</ul>
 					</li>

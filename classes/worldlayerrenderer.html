@@ -96,14 +96,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#context" class="tsd-kind-icon">context</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="worldlayerrenderer.html#event" class="tsd-kind-icon">event</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#gl" class="tsd-kind-icon">gl</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#height" class="tsd-kind-icon">height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="worldlayerrenderer.html#renderer" class="tsd-kind-icon">renderer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#texexplored" class="tsd-kind-icon">tex<wbr>Explored</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#texlightblock" class="tsd-kind-icon">tex<wbr>Light<wbr>Block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#texlightlevel" class="tsd-kind-icon">tex<wbr>Light<wbr>Level</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="worldlayerrenderer.html#width" class="tsd-kind-icon">width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="worldlayerrenderer.html#worldrenderer" class="tsd-kind-icon">world<wbr>Renderer</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -113,14 +113,19 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#clearbackgroundlayer" class="tsd-kind-icon">clear<wbr>Background<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#clearforegroundlayer" class="tsd-kind-icon">clear<wbr>Foreground<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#clearlayer" class="tsd-kind-icon">clear<wbr>Layer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#ensurerendered" class="tsd-kind-icon">ensure<wbr>Rendered</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#getdataindex" class="tsd-kind-icon">get<wbr>Data<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#renderfullbright" class="tsd-kind-icon">render<wbr>Fullbright</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setbackgroundlayer" class="tsd-kind-icon">set<wbr>Background<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setbackgroundtoforegroundlayer" class="tsd-kind-icon">set<wbr>Background<wbr>ToForeground<wbr>Layer</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setdoodad" class="tsd-kind-icon">set<wbr>Doodad</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setforegroundlayer" class="tsd-kind-icon">set<wbr>Foreground<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setlayer" class="tsd-kind-icon">set<wbr>Layer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#setworldlayer" class="tsd-kind-icon">set<wbr>World<wbr>Layer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#updateall" class="tsd-kind-icon">update<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#updatedoodad" class="tsd-kind-icon">update<wbr>Doodad</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="worldlayerrenderer.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
 							</ul>
 						</section>
 					</div>
@@ -132,31 +137,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<wbr>Renderer<span class="tsd-signature-symbol">(</span>gl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGL2RenderingContext</span>, renderer<span class="tsd-signature-symbol">: </span><a href="../interfaces/iworldrenderer.html" class="tsd-signature-type">IWorldRenderer</a>, worldLayer<span class="tsd-signature-symbol">: </span><a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, positionBuffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLBuffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>World<wbr>Layer<wbr>Renderer<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="renderercontext.html" class="tsd-signature-type">RendererContext</a>, worldRenderer<span class="tsd-signature-symbol">: </span><a href="worldrenderer.html" class="tsd-signature-type">WorldRenderer</a>, positionBuffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLBuffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="worldlayerrenderer.html" class="tsd-signature-type">WorldLayerRenderer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:55</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:70</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>gl: <span class="tsd-signature-type">WebGL2RenderingContext</span></h5>
+									<h5>context: <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></h5>
 								</li>
 								<li>
-									<h5>renderer: <a href="../interfaces/iworldrenderer.html" class="tsd-signature-type">IWorldRenderer</a></h5>
-								</li>
-								<li>
-									<h5>worldLayer: <a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a></h5>
-								</li>
-								<li>
-									<h5>width: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>height: <span class="tsd-signature-type">number</span></h5>
+									<h5>worldRenderer: <a href="worldrenderer.html" class="tsd-signature-type">WorldRenderer</a></h5>
 								</li>
 								<li>
 									<h5>positionBuffer: <span class="tsd-signature-type">WebGLBuffer</span></h5>
@@ -169,25 +165,25 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="context" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> context</h3>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="renderercontext.html" class="tsd-signature-type">RendererContext</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:73</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="event" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> event</h3>
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iworldlayerrendererevents.html" class="tsd-signature-type">IWorldLayerRendererEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="gl" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> gl</h3>
-					<div class="tsd-signature tsd-kind-icon">gl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGL2RenderingContext</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:57</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -197,17 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:57</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-					<a name="renderer" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> renderer</h3>
-					<div class="tsd-signature tsd-kind-icon">renderer<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iworldrenderer.html" class="tsd-signature-type">IWorldRenderer</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:57</li>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -217,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>Explored<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:43</li>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:53</li>
 						</ul>
 					</aside>
 				</section>
@@ -227,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>Light<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:41</li>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -237,7 +223,7 @@
 					<div class="tsd-signature tsd-kind-icon">tex<wbr>Light<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:42</li>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -247,7 +233,17 @@
 					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/renderer/WorldLayerRenderer.ts:57</li>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:48</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="worldrenderer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> world<wbr>Renderer</h3>
+					<div class="tsd-signature tsd-kind-icon">world<wbr>Renderer<span class="tsd-signature-symbol">:</span> <a href="worldrenderer.html" class="tsd-signature-type">WorldRenderer</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:74</li>
 						</ul>
 					</aside>
 				</section>
@@ -264,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:127</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:226</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -287,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:337</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:440</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -313,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:326</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:429</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -339,7 +335,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:321</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:424</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -356,6 +352,60 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:90</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ensurerendered" class="tsd-anchor"></a>
+					<h3>ensure<wbr>Rendered</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ensure<wbr>Rendered<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>max<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:455</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Ensures tiles in the view are rendered/flushed
+									Tiles &amp; doodads are flushed the first time they are visible within the fov</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>max<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>max<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>min<span class="tsd-signature-symbol">: </span><a href="vector2.html" class="tsd-signature-type">Vector2</a></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getdataindex" class="tsd-anchor"></a>
 					<h3>get<wbr>Data<wbr>Index</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -365,7 +415,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:291</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:394</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -391,7 +441,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:274</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:377</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -423,6 +473,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:117</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setbackgroundlayer" class="tsd-anchor"></a>
 					<h3>set<wbr>Background<wbr>Layer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -432,7 +499,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:307</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:410</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -464,7 +531,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:314</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:417</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -487,56 +554,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setdoodad" class="tsd-anchor"></a>
-					<h3>set<wbr>Doodad</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Doodad<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, doodadDescription<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, doodad<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, doodadInfo<span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, variationX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, variationY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, hasGraphicVariation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, terrainMasks<span class="tsd-signature-symbol">: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a>, flushImmediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:144</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>x: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>y: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>doodadDescription: <a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-								</li>
-								<li>
-									<h5>doodad: <span class="tsd-signature-type">DoodadType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-								</li>
-								<li>
-									<h5>doodadInfo: <a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-								</li>
-								<li>
-									<h5>variationX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>variationY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>hasGraphicVariation: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>terrainMasks: <a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flushImmediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setforegroundlayer" class="tsd-anchor"></a>
 					<h3>set<wbr>Foreground<wbr>Layer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -546,7 +563,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:300</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:403</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -578,7 +595,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:295</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:398</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -598,6 +615,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setworldlayer" class="tsd-anchor"></a>
+					<h3>set<wbr>World<wbr>Layer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>World<wbr>Layer<span class="tsd-signature-symbol">(</span>worldLayer<span class="tsd-signature-symbol">: </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:126</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldLayer: <a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updateall" class="tsd-anchor"></a>
 					<h3>update<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -607,9 +647,93 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/WorldLayerRenderer.ts:132</li>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:231</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatedoodad" class="tsd-anchor"></a>
+					<h3>update<wbr>Doodad</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Doodad<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, flushImmediate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, __namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>doodadDescription<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol">; </span>doodadInfo<span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">; </span>doodadType<span class="tsd-signature-symbol">: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a><span class="tsd-signature-symbol">; </span>doodadVariationX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>doodadVariationY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>terrainMasks<span class="tsd-signature-symbol">: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:247</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>flushImmediate: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>doodadDescription<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a><span class="tsd-signature-symbol">; </span>doodadInfo<span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a><span class="tsd-signature-symbol">; </span>doodadType<span class="tsd-signature-symbol">: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a><span class="tsd-signature-symbol">; </span>doodadVariationX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>doodadVariationY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>terrainMasks<span class="tsd-signature-symbol">: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>doodad<wbr>Description<span class="tsd-signature-symbol">: </span><a href="../interfaces/idoodaddescription.html" class="tsd-signature-type">IDoodadDescription</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>doodad<wbr>Info<span class="tsd-signature-symbol">: </span><a href="doodadinfo.html" class="tsd-signature-type">DoodadInfo</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>doodad<wbr>Type<span class="tsd-signature-symbol">: </span><a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>doodad<wbr>VariationX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>doodad<wbr>VariationY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>terrain<wbr>Masks<span class="tsd-signature-symbol">: </span><a href="../enums/terrainmask.html" class="tsd-signature-type">TerrainMask</a></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatetile" class="tsd-anchor"></a>
+					<h3>update<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, flushImmediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/WorldLayerRenderer.ts:525</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flushImmediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> debug: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -634,17 +758,14 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#context" class="tsd-kind-icon">context</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="worldlayerrenderer.html#event" class="tsd-kind-icon">event</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="worldlayerrenderer.html#gl" class="tsd-kind-icon">gl</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#height" class="tsd-kind-icon">height</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="worldlayerrenderer.html#renderer" class="tsd-kind-icon">renderer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#texexplored" class="tsd-kind-icon">tex<wbr>Explored</a>
@@ -657,6 +778,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="worldlayerrenderer.html#worldrenderer" class="tsd-kind-icon">world<wbr>Renderer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#addtilelayer" class="tsd-kind-icon">add<wbr>Tile<wbr>Layer</a>
@@ -671,10 +795,19 @@
 								<a href="worldlayerrenderer.html#clearlayer" class="tsd-kind-icon">clear<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#delete" class="tsd-kind-icon">delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#ensurerendered" class="tsd-kind-icon">ensure<wbr>Rendered</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#getdataindex" class="tsd-kind-icon">get<wbr>Data<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#renderfullbright" class="tsd-kind-icon">render<wbr>Fullbright</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#reset" class="tsd-kind-icon">reset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#setbackgroundlayer" class="tsd-kind-icon">set<wbr>Background<wbr>Layer</a>
@@ -683,16 +816,22 @@
 								<a href="worldlayerrenderer.html#setbackgroundtoforegroundlayer" class="tsd-kind-icon">set<wbr>Background<wbr>ToForeground<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="worldlayerrenderer.html#setdoodad" class="tsd-kind-icon">set<wbr>Doodad</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#setforegroundlayer" class="tsd-kind-icon">set<wbr>Foreground<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#setlayer" class="tsd-kind-icon">set<wbr>Layer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#setworldlayer" class="tsd-kind-icon">set<wbr>World<wbr>Layer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="worldlayerrenderer.html#updateall" class="tsd-kind-icon">update<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#updatedoodad" class="tsd-kind-icon">update<wbr>Doodad</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="worldlayerrenderer.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a>
 							</li>
 						</ul>
 					</li>

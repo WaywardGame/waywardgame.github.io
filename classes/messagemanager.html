@@ -94,6 +94,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#addtohistory" class="tsd-kind-icon">add<wbr>ToHistory</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#clear" class="tsd-kind-icon">clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#getmessagehistory" class="tsd-kind-icon">get<wbr>Message<wbr>History</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#ifis" class="tsd-kind-icon">if<wbr>Is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#ifisnot" class="tsd-kind-icon">if<wbr>IsNot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#ifonisland" class="tsd-kind-icon">if<wbr>OnIsland</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#ifvisible" class="tsd-kind-icon">if<wbr>Visible</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#prunemessagehistory" class="tsd-kind-icon">prune<wbr>Message<wbr>History</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="messagemanager.html#send" class="tsd-kind-icon">send</a></li>
@@ -112,19 +115,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Message<wbr>Manager<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><a href="../interfaces/imessagemanagerhost.html" class="tsd-signature-type">IMessageManagerHost</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Message<wbr>Manager<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a>, options<span class="tsd-signature-symbol">: </span><a href="../interfaces/imessagemanageroptions.html" class="tsd-signature-type">IMessageManagerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:105</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:112</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>host: <a href="../interfaces/imessagemanagerhost.html" class="tsd-signature-type">IMessageManagerHost</a></h5>
+									<h5>host: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/imessagemanageroptions.html" class="tsd-signature-type">IMessageManagerOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="messagemanager.html" class="tsd-signature-type">MessageManager</a></h4>
@@ -144,7 +150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:257</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:283</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -168,7 +174,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:137</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:146</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,7 +197,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#getmessagehistory">getMessageHistory</a></p>
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:109</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:118</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Stream</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/imessage.html" class="tsd-signature-type">IMessage</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -199,27 +205,112 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="ifvisible" class="tsd-anchor"></a>
-					<h3>if<wbr>Visible</h3>
+					<a name="ifis" class="tsd-anchor"></a>
+					<h3>if<wbr>Is</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">if<wbr>Visible<span class="tsd-signature-symbol">(</span>canSee<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">if<wbr>Is<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:182</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:207</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>If the position is visible to this human, the message will be sent.</p>
+									<p>If this human is not the given player, the message won&#39;t be sent.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> canSee: <a href="../interfaces/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
+									<h5>player: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifisnot" class="tsd-anchor"></a>
+					<h3>if<wbr>IsNot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>IsNot<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:215</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If this human is the given player, the message won&#39;t be sent.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>player: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifonisland" class="tsd-anchor"></a>
+					<h3>if<wbr>OnIsland</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>OnIsland<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:199</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If this human is not on the given island, the message won&#39;t be sent.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifvisible" class="tsd-anchor"></a>
+					<h3>if<wbr>Visible</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>Visible<span class="tsd-signature-symbol">(</span>canSee<span class="tsd-signature-symbol">?: </span><a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#ifvisible">ifVisible</a></p>
+								<ul>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:191</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If the position is not visible to this human, the message won&#39;t be sent.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> canSee: <a href="../modules/ivector3.html" class="tsd-signature-type">IVector3</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -236,7 +327,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:124</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:133</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -252,13 +343,13 @@
 					<a name="send" class="tsd-anchor"></a>
 					<h3>send</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="../modules/translation.html" class="tsd-signature-type">Translation</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:194</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:227</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +360,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>message: <a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="translation.html" class="tsd-signature-type">Translation</a></h5>
+									<h5>message: <a href="../enums/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol"> | </span><a href="../modules/translation.html" class="tsd-signature-type">Translation</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The message to send.</p>
 									</div>
@@ -296,7 +387,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:269</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:295</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -318,15 +409,15 @@
 					<a name="source" class="tsd-anchor"></a>
 					<h3>source</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">(</span>noGameSource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span>, <span class="tsd-signature-symbol">...</span>sources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-						<li class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>sources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">(</span>noGameSource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span>, <span class="tsd-signature-symbol">...</span>sources<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>sources<span class="tsd-signature-symbol">: </span><a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#source">source</a></p>
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:147</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:156</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -341,7 +432,7 @@
 									<h5>noGameSource: <span class="tsd-signature-type">true</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sources: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sources: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -350,7 +441,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#source">source</a></p>
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:153</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:162</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -362,7 +453,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sources: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sources: <a href="../interfaces/__global.array.html" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/source.html" class="tsd-signature-type">Source</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
@@ -380,7 +471,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imessagemanager.html">IMessageManager</a>.<a href="../interfaces/imessagemanager.html#type">type</a></p>
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:174</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:183</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -402,13 +493,13 @@
 					<a name="toall" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>manager<span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a>, player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>manager<span class="tsd-signature-symbol">: </span><a href="messagemanager.html" class="tsd-signature-type">MessageManager</a>, player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/entity/player/MessageManager.ts:89</li>
+									<li>Defined in src/game/game/entity/player/MessageManager.ts:91</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -450,7 +541,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -482,6 +573,15 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="messagemanager.html#getmessagehistory" class="tsd-kind-icon">get<wbr>Message<wbr>History</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="messagemanager.html#ifis" class="tsd-kind-icon">if<wbr>Is</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="messagemanager.html#ifisnot" class="tsd-kind-icon">if<wbr>IsNot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="messagemanager.html#ifonisland" class="tsd-kind-icon">if<wbr>OnIsland</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="messagemanager.html#ifvisible" class="tsd-kind-icon">if<wbr>Visible</a>

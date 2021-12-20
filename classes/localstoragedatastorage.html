@@ -75,7 +75,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/idatastorage.html" class="tsd-signature-type">IDataStorage</a></li>
+					<li><span class="tsd-signature-symbol">{}</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -88,11 +88,13 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#deletealldata" class="tsd-kind-icon">delete<wbr>All<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#deleteallslots" class="tsd-kind-icon">delete<wbr>All<wbr>Slots</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#getusedslots" class="tsd-kind-icon">get<wbr>Used<wbr>Slots</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#isenabled" class="tsd-kind-icon">is<wbr>Enabled</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#isready" class="tsd-kind-icon">is<wbr>Ready</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#isslotused" class="tsd-kind-icon">is<wbr>Slot<wbr>Used</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#loadfromslot" class="tsd-kind-icon">load<wbr>From<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#savetoslot" class="tsd-kind-icon">save<wbr>ToSlot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="localstoragedatastorage.html#savetoslotsynchronous" class="tsd-kind-icon">save<wbr>ToSlot<wbr>Synchronous</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,9 +111,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#deletealldata">deleteAllData</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:84</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:128</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -122,17 +123,16 @@
 					<a name="deleteallslots" class="tsd-anchor"></a>
 					<h3>delete<wbr>All<wbr>Slots</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>All<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#deleteallslots">deleteAllSlots</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:76</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:121</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -140,14 +140,13 @@
 					<a name="deleteslot" class="tsd-anchor"></a>
 					<h3>delete<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#deleteslot">deleteSlot</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:64</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:114</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,7 +155,41 @@
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getusedslots" class="tsd-anchor"></a>
+					<h3>get<wbr>Used<wbr>Slots</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Used<wbr>Slots<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:38</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initialize" class="tsd-anchor"></a>
+					<h3>initialize</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:26</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -169,27 +202,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#isenabled">isEnabled</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:21</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isready" class="tsd-anchor"></a>
-					<h3>is<wbr>Ready</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Ready<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#isready">isReady</a></p>
-								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:25</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:30</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -200,14 +214,13 @@
 					<a name="isslotused" class="tsd-anchor"></a>
 					<h3>is<wbr>Slot<wbr>Used</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, _interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Slot<wbr>Used<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, _interval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#isslotused">isSlotUsed</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:29</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -216,7 +229,7 @@
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _interval: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _interval: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -227,20 +240,22 @@
 					<a name="loadfromslot" class="tsd-anchor"></a>
 					<h3>load<wbr>From<wbr>Slot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>From<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>From<wbr>Slot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, specificKeys<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/idatastorage.html">IDataStorage</a>.<a href="../interfaces/idatastorage.html#loadfromslot">loadFromSlot</a></p>
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:49</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:85</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>slot: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specificKeys: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a></h4>
@@ -251,13 +266,13 @@
 					<a name="savetoslot" class="tsd-anchor"></a>
 					<h3>save<wbr>ToSlot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>ToSlot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>ToSlot<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a>, specificKeys<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/datastorage/LocalStorageDataStorage.ts:33</li>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -267,6 +282,38 @@
 								</li>
 								<li>
 									<h5>saveObject: <a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specificKeys: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="savetoslotsynchronous" class="tsd-anchor"></a>
+					<h3>save<wbr>ToSlot<wbr>Synchronous</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">save<wbr>ToSlot<wbr>Synchronous<span class="tsd-signature-symbol">(</span>slot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, saveObject<span class="tsd-signature-symbol">: </span><a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a>, specificKeys<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/save/datastorage/LocalStorageDataStorage.ts:81</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>slot: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>saveObject: <a href="../interfaces/isaveobject.html" class="tsd-signature-type">ISaveObject</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specificKeys: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -300,10 +347,13 @@
 								<a href="localstoragedatastorage.html#deleteslot" class="tsd-kind-icon">delete<wbr>Slot</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="localstoragedatastorage.html#isenabled" class="tsd-kind-icon">is<wbr>Enabled</a>
+								<a href="localstoragedatastorage.html#getusedslots" class="tsd-kind-icon">get<wbr>Used<wbr>Slots</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="localstoragedatastorage.html#isready" class="tsd-kind-icon">is<wbr>Ready</a>
+								<a href="localstoragedatastorage.html#initialize" class="tsd-kind-icon">initialize</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="localstoragedatastorage.html#isenabled" class="tsd-kind-icon">is<wbr>Enabled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="localstoragedatastorage.html#isslotused" class="tsd-kind-icon">is<wbr>Slot<wbr>Used</a>
@@ -313,6 +363,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="localstoragedatastorage.html#savetoslot" class="tsd-kind-icon">save<wbr>ToSlot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="localstoragedatastorage.html#savetoslotsynchronous" class="tsd-kind-icon">save<wbr>ToSlot<wbr>Synchronous</a>
 							</li>
 						</ul>
 					</li>

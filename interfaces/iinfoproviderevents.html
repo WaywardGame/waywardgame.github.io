@@ -80,6 +80,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#init" class="tsd-kind-icon">init</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#initcontent" class="tsd-kind-icon">init<wbr>Content</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#initdone" class="tsd-kind-icon">init<wbr>Done</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#initskip" class="tsd-kind-icon">init<wbr>Skip</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#recheckhascontent" class="tsd-kind-icon">recheck<wbr>Has<wbr>Content</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#refresh" class="tsd-kind-icon">refresh</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iinfoproviderevents.html#refreshdisplaylevel" class="tsd-kind-icon">refresh<wbr>Display<wbr>Level</a></li>
@@ -102,7 +105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:28</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:30</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -121,6 +124,78 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="initcontent" class="tsd-anchor"></a>
+					<h3>init<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Content<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="../classes/component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:38</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Emitted when the info provider finishes initializing its content (does not get called if initialization is cancelled)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>component: <a href="../classes/component.html" class="tsd-signature-type">Component</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="initdone" class="tsd-anchor"></a>
+					<h3>init<wbr>Done</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Done<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:34</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Emitted when the info provider finishes initializing (will still be called when it cancels initialization)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="initskip" class="tsd-anchor"></a>
+					<h3>init<wbr>Skip</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Skip<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:42</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Should be emitted when the info provider skipped initializing</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="recheckhascontent" class="tsd-anchor"></a>
 					<h3>recheck<wbr>Has<wbr>Content</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -130,7 +205,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:48</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -152,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:32</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:46</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -174,7 +249,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:44</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:58</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,7 +271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:36</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,7 +293,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/InfoProvider.ts:40</li>
+									<li>Defined in src/game/game/inspection/InfoProvider.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,6 +336,15 @@
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iinfoproviderevents.html#init" class="tsd-kind-icon">init</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#initcontent" class="tsd-kind-icon">init<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#initdone" class="tsd-kind-icon">init<wbr>Done</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iinfoproviderevents.html#initskip" class="tsd-kind-icon">init<wbr>Skip</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iinfoproviderevents.html#recheckhascontent" class="tsd-kind-icon">recheck<wbr>Has<wbr>Content</a>

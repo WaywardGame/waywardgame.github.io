@@ -93,6 +93,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="worldtooltiphandler.html#gettooltipclass" class="tsd-kind-icon">get<wbr>Tooltip<wbr>Class</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="worldtooltiphandler.html#initializeinspections" class="tsd-kind-icon">initialize<wbr>Inspections</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="worldtooltiphandler.html#initializetooltip" class="tsd-kind-icon">initialize<wbr>Tooltip</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="worldtooltiphandler.html#onmovetoisland" class="tsd-kind-icon">on<wbr>Move<wbr>ToIsland</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="worldtooltiphandler.html#onupdatetooltipposition" class="tsd-kind-icon">on<wbr>Update<wbr>Tooltip<wbr>Position</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="worldtooltiphandler.html#remove" class="tsd-kind-icon">remove</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="worldtooltiphandler.html#updateposition" class="tsd-kind-icon">update<wbr>Position</a></li>
@@ -107,11 +108,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="current" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> current</h3>
-					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>informationGuide<span class="tsd-signature-symbol">?: </span><a href="../interfaces/itext.html" class="tsd-signature-type">IText</a><span class="tsd-signature-symbol">; </span>initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>inspectionsList<span class="tsd-signature-symbol">: </span><a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a><span class="tsd-signature-symbol">; </span>showExtraInfo<span class="tsd-signature-symbol">?: </span><a href="../interfaces/itext.html" class="tsd-signature-type">IText</a><span class="tsd-signature-symbol">; </span>tooltip<span class="tsd-signature-symbol">: </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>informationGuide<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>inspectionsList<span class="tsd-signature-symbol">: </span><a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a><span class="tsd-signature-symbol">; </span>removed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>showExtraInfo<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>tooltip<span class="tsd-signature-symbol">: </span><a href="tooltip.html" class="tsd-signature-type">Tooltip</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#current">current</a></p>
 						<ul>
-							<li>Defined in src/ui/screen/screens/game/InspectionsTooltipHandler.ts:25</li>
+							<li>Defined in src/game/ui/screen/screens/game/InspectionsTooltipHandler.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -129,7 +130,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#gettooltipclass">getTooltipClass</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/WorldTooltipHandler.ts:28</li>
+									<li>Defined in src/game/ui/screen/screens/game/WorldTooltipHandler.ts:28</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -147,7 +148,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#initializeinspections">initializeInspections</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/WorldTooltipHandler.ts:32</li>
+									<li>Defined in src/game/ui/screen/screens/game/WorldTooltipHandler.ts:32</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a></h4>
@@ -158,23 +159,41 @@
 					<a name="initializetooltip" class="tsd-anchor"></a>
 					<h3>initialize<wbr>Tooltip</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Tooltip<span class="tsd-signature-symbol">(</span>tooltip<span class="tsd-signature-symbol">: </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></li>
+						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Tooltip<span class="tsd-signature-symbol">(</span>tooltip<span class="tsd-signature-symbol">: </span><a href="tooltip.html" class="tsd-signature-type">Tooltip</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#initializetooltip">initializeTooltip</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/InspectionsTooltipHandler.ts:36</li>
+									<li>Defined in src/game/ui/screen/screens/game/InspectionsTooltipHandler.ts:40</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>tooltip: <a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></h5>
+									<h5>tooltip: <a href="tooltip.html" class="tsd-signature-type">Tooltip</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/itooltip.html" class="tsd-signature-type">ITooltip</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="onmovetoisland" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Move<wbr>ToIsland</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Move<wbr>ToIsland<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#onmovetoisland">onMoveToIsland</a></p>
+								<ul>
+									<li>Defined in src/game/ui/screen/screens/game/InspectionsTooltipHandler.ts:162</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -189,7 +208,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#onupdatetooltipposition">onUpdateTooltipPosition</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/WorldTooltipHandler.ts:37</li>
+									<li>Defined in src/game/ui/screen/screens/game/WorldTooltipHandler.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -206,17 +225,43 @@
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>tooltip<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>informationGuide<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>inspectionsList<span class="tsd-signature-symbol">: </span><a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a><span class="tsd-signature-symbol">; </span>removed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>showExtraInfo<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>tooltip<span class="tsd-signature-symbol">: </span><a href="tooltip.html" class="tsd-signature-type">Tooltip</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/InspectionsTooltipHandler.ts:104</li>
+									<li>Defined in src/game/ui/screen/screens/game/InspectionsTooltipHandler.ts:92</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> tooltip: <span class="tsd-signature-symbol">{ </span>informationGuide<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>inspectionsList<span class="tsd-signature-symbol">: </span><a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a><span class="tsd-signature-symbol">; </span>removed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>showExtraInfo<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">; </span>tooltip<span class="tsd-signature-symbol">: </span><a href="tooltip.html" class="tsd-signature-type">Tooltip</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = this.current</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> information<wbr>Guide<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>inspections<wbr>List<span class="tsd-signature-symbol">: </span><a href="tileinspectionslist.html" class="tsd-signature-type">TileInspectionsList</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>removed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> show<wbr>Extra<wbr>Info<span class="tsd-signature-symbol">?: </span><a href="text.html" class="tsd-signature-type">Text</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>tooltip<span class="tsd-signature-symbol">: </span><a href="tooltip.html" class="tsd-signature-type">Tooltip</a></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="resolvablepromise.html#promise" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -230,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/WorldTooltipHandler.ts:59</li>
+									<li>Defined in src/game/ui/screen/screens/game/WorldTooltipHandler.ts:64</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -248,7 +293,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="inspectionstooltiphandler.html">InspectionsTooltipHandler</a>.<a href="inspectionstooltiphandler.html#updatetooltipposition">updateTooltipPosition</a></p>
 								<ul>
-									<li>Defined in src/ui/screen/screens/game/InspectionsTooltipHandler.ts:124</li>
+									<li>Defined in src/game/ui/screen/screens/game/InspectionsTooltipHandler.ts:119</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -289,6 +334,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="worldtooltiphandler.html#initializetooltip" class="tsd-kind-icon">initialize<wbr>Tooltip</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="worldtooltiphandler.html#onmovetoisland" class="tsd-kind-icon">on<wbr>Move<wbr>ToIsland</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
 								<a href="worldtooltiphandler.html#onupdatetooltipposition" class="tsd-kind-icon">on<wbr>Update<wbr>Tooltip<wbr>Position</a>

@@ -89,6 +89,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#background" class="tsd-kind-icon">background</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#baseterrain" class="tsd-kind-icon">base<wbr>Terrain</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#burnitem" class="tsd-kind-icon">burn<wbr>Item</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#civilizationscore" class="tsd-kind-icon">civilization<wbr>Score</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#contaminatedtype" class="tsd-kind-icon">contaminated<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#cooledtile" class="tsd-kind-icon">cooled<wbr>Tile</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#decaytemperaturerange" class="tsd-kind-icon">decay<wbr>Temperature<wbr>Range</a></li>
@@ -103,6 +104,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#group" class="tsd-kind-icon">group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#hasmound" class="tsd-kind-icon">has<wbr>Mound</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#ice" class="tsd-kind-icon">ice</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#isgrass" class="tsd-kind-icon">is<wbr>Grass</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#ismountain" class="tsd-kind-icon">is<wbr>Mountain</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#ismountainground" class="tsd-kind-icon">is<wbr>Mountain<wbr>Ground</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iterrainregistrationdescription.html#isore" class="tsd-kind-icon">is<wbr>Ore</a></li>
@@ -141,11 +143,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="abovetype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> above<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">above<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TerrainType</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">above<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/__global.html#optionaldescriptions" class="tsd-signature-type">OptionalDescriptions</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/biometype.html" class="tsd-signature-type">BiomeType</a><span class="tsd-signature-symbol">, </span><a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#abovetype">aboveType</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:93</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,55 +159,71 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="animated" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> animated</h3>
-					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#animated">animated</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:56</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:58</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="background" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> background</h3>
-					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#background">background</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:53</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:55</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="baseterrain" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> base<wbr>Terrain</h3>
-					<div class="tsd-signature tsd-kind-icon">base<wbr>Terrain<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Terrain<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#baseterrain">baseTerrain</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:49</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:51</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="burnitem" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> burn<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">burn<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
+					<div class="tsd-signature tsd-kind-icon">burn<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#burnitem">burnItem</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:65</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:67</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="civilizationscore" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> civilization<wbr>Score</h3>
+					<div class="tsd-signature tsd-kind-icon">civilization<wbr>Score<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#civilizationscore">civilizationScore</a></p>
+						<ul>
+							<li>Defined in src/game/game/tile/ITerrain.ts:116</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount of civilization score to give when building this.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="contaminatedtype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> contaminated<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">contaminated<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">contaminated<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#contaminatedtype">contaminatedType</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:85</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -217,11 +235,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="cooledtile" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cooled<wbr>Tile</h3>
-					<div class="tsd-signature tsd-kind-icon">cooled<wbr>Tile<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">cooled<wbr>Tile<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#cooledtile">cooledTile</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:106</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:108</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,50 +255,50 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#decaytemperaturerange">decayTemperatureRange</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:94</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:96</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="deepwater" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> deep<wbr>Water</h3>
-					<div class="tsd-signature tsd-kind-icon">deep<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">deep<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#deepwater">deepWater</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:59</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:61</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="defaultitem" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/mod/ModRegistry.ts:310</li>
+							<li>Defined in src/game/mod/ModRegistry.ts:317</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="doodad" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> doodad</h3>
-					<div class="tsd-signature tsd-kind-icon">doodad<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#doodadtype" class="tsd-signature-type">DoodadType</a></div>
+					<div class="tsd-signature tsd-kind-icon">doodad<span class="tsd-signature-symbol">:</span> <a href="../enums/doodadtype.html" class="tsd-signature-type">DoodadType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#doodad">doodad</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:51</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:53</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="durability" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> durability</h3>
-					<div class="tsd-signature tsd-kind-icon">durability<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
+					<div class="tsd-signature tsd-kind-icon">durability<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#durability">durability</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:38</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,44 +310,44 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="flammable" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> flammable</h3>
-					<div class="tsd-signature tsd-kind-icon">flammable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">flammable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#flammable">flammable</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:45</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:47</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="freshwater" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fresh<wbr>Water</h3>
-					<div class="tsd-signature tsd-kind-icon">fresh<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">fresh<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#freshwater">freshWater</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:41</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:43</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="gather" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gather</h3>
-					<div class="tsd-signature tsd-kind-icon">gather<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">gather<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#gather">gather</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:42</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:44</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="gatherskilluse" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gather<wbr>Skill<wbr>Use</h3>
-					<div class="tsd-signature tsd-kind-icon">gather<wbr>Skill<wbr>Use<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#skilltype" class="tsd-signature-type">SkillType</a></div>
+					<div class="tsd-signature tsd-kind-icon">gather<wbr>Skill<wbr>Use<span class="tsd-signature-symbol">:</span> <a href="../enums/skilltype.html" class="tsd-signature-type">SkillType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#gatherskilluse">gatherSkillUse</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:46</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -340,62 +358,78 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#group">group</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:76</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:78</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="hasmound" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> has<wbr>Mound</h3>
-					<div class="tsd-signature tsd-kind-icon">has<wbr>Mound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">has<wbr>Mound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#hasmound">hasMound</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:58</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:60</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="ice" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ice</h3>
-					<div class="tsd-signature tsd-kind-icon">ice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">ice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#ice">ice</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:66</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:68</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="isgrass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Grass</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Grass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#isgrass">isGrass</a></p>
+						<ul>
+							<li>Defined in src/game/game/tile/ITerrain.ts:120</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When tilling this terrain, you will attempt to dig up the grass instead.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="ismountain" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Mountain</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#ismountain">isMountain</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:52</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:54</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="ismountainground" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Mountain<wbr>Ground</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<wbr>Ground<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Mountain<wbr>Ground<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#ismountainground">isMountainGround</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:64</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:66</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="isore" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Ore</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Ore<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Ore<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#isore">isOre</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:55</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -406,18 +440,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#leftovers">leftOvers</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:48</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:50</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="meltfromitem" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> melt<wbr>From<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">melt<wbr>From<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#itemtype" class="tsd-signature-type">ItemType</a></div>
+					<div class="tsd-signature tsd-kind-icon">melt<wbr>From<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#meltfromitem">meltFromItem</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:102</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -433,7 +467,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#meltsinto">meltsInto</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:98</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -445,55 +479,55 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="modindex" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> mod<wbr>Index</h3>
-					<div class="tsd-signature tsd-kind-icon">mod<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">mod<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="itileeventdescription.html">ITileEventDescription</a>.<a href="itileeventdescription.html#modindex">modIndex</a></p>
+						<p>Inherited from <a href="ihelparticle.html">IHelpArticle</a>.<a href="ihelparticle.html#modindex">modIndex</a></p>
 						<ul>
-							<li>Defined in src/mod/ModRegistry.ts:63</li>
+							<li>Defined in src/game/mod/ModRegistry.ts:67</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nobackground" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>Background</h3>
-					<div class="tsd-signature tsd-kind-icon">no<wbr>Background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">no<wbr>Background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#nobackground">noBackground</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:54</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:56</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nogfxswitch" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>Gfx<wbr>Switch</h3>
-					<div class="tsd-signature tsd-kind-icon">no<wbr>Gfx<wbr>Switch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">no<wbr>Gfx<wbr>Switch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#nogfxswitch">noGfxSwitch</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:43</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:45</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nolos" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>Los</h3>
-					<div class="tsd-signature tsd-kind-icon">no<wbr>Los<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">no<wbr>Los<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#nolos">noLos</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:44</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:46</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="noresting" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>Resting</h3>
-					<div class="tsd-signature tsd-kind-icon">no<wbr>Resting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">no<wbr>Resting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#noresting">noResting</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:61</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -504,29 +538,29 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#particles">particles</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:34</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:36</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="passable" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> passable</h3>
-					<div class="tsd-signature tsd-kind-icon">passable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">passable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#passable">passable</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:33</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:35</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="puddletype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> puddle<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">puddle<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#tileeventtype" class="tsd-signature-type">TileEventType</a></div>
+					<div class="tsd-signature tsd-kind-icon">puddle<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/tileeventtype.html" class="tsd-signature-type">TileEventType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#puddletype">puddleType</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:110</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -538,22 +572,22 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="reducerest" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reduce<wbr>Rest</h3>
-					<div class="tsd-signature tsd-kind-icon">reduce<wbr>Rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">reduce<wbr>Rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#reducerest">reduceRest</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:60</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:62</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="renderoverothermountains" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> render<wbr>Over<wbr>Other<wbr>Mountains</h3>
-					<div class="tsd-signature tsd-kind-icon">render<wbr>Over<wbr>Other<wbr>Mountains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">render<wbr>Over<wbr>Other<wbr>Mountains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#renderoverothermountains">renderOverOtherMountains</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:67</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:69</li>
 						</ul>
 					</aside>
 				</section>
@@ -563,18 +597,18 @@
 					<div class="tsd-signature tsd-kind-icon">resources<span class="tsd-signature-symbol">:</span> <a href="iterrainlootitem.html" class="tsd-signature-type">ITerrainLootItem</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/mod/ModRegistry.ts:309</li>
+							<li>Defined in src/game/mod/ModRegistry.ts:316</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="shallowwater" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> shallow<wbr>Water</h3>
-					<div class="tsd-signature tsd-kind-icon">shallow<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">shallow<wbr>Water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#shallowwater">shallowWater</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:40</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -585,18 +619,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#sound">sound</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:47</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:49</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="temperature" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> temperature</h3>
-					<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#temperature">temperature</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:89</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -608,55 +642,55 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="terraintype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> terrain<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">terrain<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">terrain<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#terraintype">terrainType</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:50</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:52</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="tileonconsume" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tile<wbr>OnConsume</h3>
-					<div class="tsd-signature tsd-kind-icon">tile<wbr>OnConsume<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">tile<wbr>OnConsume<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#tileonconsume">tileOnConsume</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:63</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:65</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="tillable" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tillable</h3>
-					<div class="tsd-signature tsd-kind-icon">tillable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">tillable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#tillable">tillable</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:57</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:59</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="water" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> water</h3>
-					<div class="tsd-signature tsd-kind-icon">water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">water<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#water">water</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:39</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:41</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="waterbasetype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> water<wbr>Base<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">water<wbr>Base<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">water<wbr>Base<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#waterbasetype">waterBaseType</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:81</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -668,11 +702,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="waterterrainondig" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> water<wbr>Terrain<wbr>OnDig</h3>
-					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnDig<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnDig<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#waterterrainondig">waterTerrainOnDig</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:71</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:73</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -684,11 +718,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="waterterrainonroute" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> water<wbr>Terrain<wbr>OnRoute</h3>
-					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnRoute<span class="tsd-signature-symbol">:</span> <a href="../enums/enumid.html#terraintype" class="tsd-signature-type">TerrainType</a></div>
+					<div class="tsd-signature tsd-kind-icon">water<wbr>Terrain<wbr>OnRoute<span class="tsd-signature-symbol">:</span> <a href="../enums/terraintype.html" class="tsd-signature-type">TerrainType</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#waterterrainonroute">waterTerrainOnRoute</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:75</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -700,11 +734,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="wet" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> wet</h3>
-					<div class="tsd-signature tsd-kind-icon">wet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">wet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iterrainregistrationdescription.html">ITerrainRegistrationDescription</a>.<a href="iterrainregistrationdescription.html#wet">wet</a></p>
 						<ul>
-							<li>Defined in src/game/tile/ITerrain.ts:62</li>
+							<li>Defined in src/game/game/tile/ITerrain.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -739,6 +773,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iterrainregistrationdescription.html#burnitem" class="tsd-kind-icon">burn<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iterrainregistrationdescription.html#civilizationscore" class="tsd-kind-icon">civilization<wbr>Score</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iterrainregistrationdescription.html#contaminatedtype" class="tsd-kind-icon">contaminated<wbr>Type</a>
@@ -781,6 +818,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iterrainregistrationdescription.html#ice" class="tsd-kind-icon">ice</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iterrainregistrationdescription.html#isgrass" class="tsd-kind-icon">is<wbr>Grass</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iterrainregistrationdescription.html#ismountain" class="tsd-kind-icon">is<wbr>Mountain</a>

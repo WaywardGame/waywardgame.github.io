@@ -84,8 +84,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemadd" class="tsd-kind-icon">container<wbr>Item<wbr>Add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemremove" class="tsd-kind-icon">container<wbr>Item<wbr>Remove</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#craft" class="tsd-kind-icon">craft</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iitemmanagerevents.html#shouldcraft" class="tsd-kind-icon">should<wbr>Craft</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,7 +105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:83</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:91</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -126,13 +128,13 @@
 					<a name="canmoveitems" class="tsd-anchor"></a>
 					<h3>can<wbr>Move<wbr>Items</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>Move<wbr>Items<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../classes/human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, fromContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a>, toContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a>, itemType<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, ofQuality<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Move<wbr>Items<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../classes/human.html" class="tsd-signature-type">Human</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, fromContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a>, toContainer<span class="tsd-signature-symbol">: </span><a href="icontainer.html" class="tsd-signature-type">IContainer</a>, itemType<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, ofQuality<span class="tsd-signature-symbol">: </span><a href="../enums/quality.html" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:84</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:92</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -150,7 +152,7 @@
 									<h5>itemType: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 								<li>
-									<h5>ofQuality: <span class="tsd-signature-type">Quality</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>ofQuality: <a href="../enums/quality.html" class="tsd-signature-type">Quality</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
@@ -167,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:105</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:113</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +206,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:91</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,7 +249,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:99</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:107</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -287,6 +289,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="craft" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> craft</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">craft<span class="tsd-signature-symbol">(</span>human<span class="tsd-signature-symbol">: </span><a href="../classes/human.html" class="tsd-signature-type">Human</a>, item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/item/ItemManager.ts:128</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when an item is crafted</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>human: <a href="../classes/human.html" class="tsd-signature-type">Human</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human object</p>
+									</div>
+								</li>
+								<li>
+									<h5>item: <a href="../classes/item.html" class="tsd-signature-type">Item</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item that was crafted</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -296,7 +335,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:81</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:89</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -319,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/item/ItemManager.ts:82</li>
+									<li>Defined in src/game/game/item/ItemManager.ts:90</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -329,6 +368,50 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="shouldcraft" class="tsd-anchor"></a>
+					<h3>should<wbr>Craft</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Craft<span class="tsd-signature-symbol">(</span>requirementsMet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, item<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, checker<span class="tsd-signature-symbol">: </span><a href="../classes/itemreciperequirementchecker.html" class="tsd-signature-type">ItemRecipeRequirementChecker</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/game/item/ItemManager.ts:121</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a craft is &quot;requested&quot;. This currently happens when clicking an item in the crafting dialog.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>requirementsMet: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the requirements are currently met. This hook is a <code>reduce</code> hook, so this will contain
+										whatever the result of the last hook host was, or the value of <code>checker.requirementsMet()</code>, by default.</p>
+									</div>
+								</li>
+								<li>
+									<h5>item: <a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to be crafted.</p>
+									</div>
+								</li>
+								<li>
+									<h5>checker: <a href="../classes/itemreciperequirementchecker.html" class="tsd-signature-type">ItemRecipeRequirementChecker</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The recipe requirement checker for this craft.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -365,10 +448,16 @@
 								<a href="iitemmanagerevents.html#containeritemupdate" class="tsd-kind-icon">container<wbr>Item<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iitemmanagerevents.html#craft" class="tsd-kind-icon">craft</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitemmanagerevents.html#create" class="tsd-kind-icon">create</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iitemmanagerevents.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iitemmanagerevents.html#shouldcraft" class="tsd-kind-icon">should<wbr>Craft</a>
 							</li>
 						</ul>
 					</li>

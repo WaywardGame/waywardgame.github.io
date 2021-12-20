@@ -74,6 +74,7 @@
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#all" class="tsd-kind-icon">All</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#excludefromgamestatejson" class="tsd-kind-icon">Exclude<wbr>From<wbr>Game<wbr>State<wbr>Json</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#excludefromgamestatejsoninsingleplayer" class="tsd-kind-icon">Exclude<wbr>From<wbr>Game<wbr>State<wbr>Json<wbr>InSingleplayer</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#excludefromjitdeserialization" class="tsd-kind-icon">Exclude<wbr>FromJITDeserialization</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#jitdeserialization" class="tsd-kind-icon">JITDeserialization</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="savepropertyflag.html#normal" class="tsd-kind-icon">Normal</a></li>
 							</ul>
@@ -89,7 +90,7 @@
 					<div class="tsd-signature tsd-kind-icon">All<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 65535</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/save/ISerializer.ts:155</li>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:175</li>
 						</ul>
 					</aside>
 				</section>
@@ -99,7 +100,7 @@
 					<div class="tsd-signature tsd-kind-icon">Exclude<wbr>From<wbr>Game<wbr>State<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 2</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/save/ISerializer.ts:142</li>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:157</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -115,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">Exclude<wbr>From<wbr>Game<wbr>State<wbr>Json<wbr>InSingleplayer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 4</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/save/ISerializer.ts:148</li>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:163</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -126,12 +127,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="excludefromjitdeserialization" class="tsd-anchor"></a>
+					<h3>Exclude<wbr>FromJITDeserialization</h3>
+					<div class="tsd-signature tsd-kind-icon">Exclude<wbr>FromJITDeserialization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 16</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:173</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Explicitly excludes the property from using JIT Deserialization (overrides JITDeserialization flag)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="jitdeserialization" class="tsd-anchor"></a>
 					<h3>JITDeserialization</h3>
 					<div class="tsd-signature tsd-kind-icon">JITDeserialization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 8</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/save/ISerializer.ts:153</li>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:168</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -146,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">Normal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/save/ISerializer.ts:136</li>
+							<li>Defined in src/game/save/serializer/ISerializer.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -180,6 +196,9 @@
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="savepropertyflag.html#excludefromgamestatejsoninsingleplayer" class="tsd-kind-icon">Exclude<wbr>From<wbr>Game<wbr>State<wbr>Json<wbr>InSingleplayer</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="savepropertyflag.html#excludefromjitdeserialization" class="tsd-kind-icon">Exclude<wbr>FromJITDeserialization</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="savepropertyflag.html#jitdeserialization" class="tsd-kind-icon">JITDeserialization</a>

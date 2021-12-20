@@ -81,7 +81,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/ieventemitterhost.html" class="tsd-signature-type">IEventEmitterHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iworldevents.html" class="tsd-signature-type">IWorldEvents</a><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><a href="../interfaces/iworld.html" class="tsd-signature-type">IWorld</a></li>
+					<li><a href="../interfaces/iserializable.html" class="tsd-signature-type">ISerializable</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -97,10 +97,18 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="world.html#_loaded" class="tsd-kind-icon">_loaded</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="world.html#event" class="tsd-kind-icon">event</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="world.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="world.html#island" class="tsd-kind-icon">island</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="world.html#layers" class="tsd-kind-icon">layers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="world.html#width" class="tsd-kind-icon">width</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="world.html#loaded" class="tsd-kind-icon">loaded</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -110,13 +118,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#deserializeobject" class="tsd-kind-icon">deserialize<wbr>Object</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#endupdatetilebatch" class="tsd-kind-icon">end<wbr>Update<wbr>Tile<wbr>Batch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#isloaded" class="tsd-kind-icon">is<wbr>Loaded</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#load" class="tsd-kind-icon">load</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#serializeobject" class="tsd-kind-icon">serialize<wbr>Object</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#setupexploredmap" class="tsd-kind-icon">setup<wbr>Explored<wbr>Map</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#startupdatetilebatch" class="tsd-kind-icon">start<wbr>Update<wbr>Tile<wbr>Batch</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#updateall" class="tsd-kind-icon">update<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="world.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
 							</ul>
 						</section>
@@ -129,17 +135,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>World<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="world.html" class="tsd-signature-type">World</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>World<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="island.html" class="tsd-signature-type">Island</a>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="world.html" class="tsd-signature-type">World</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/World.ts:37</li>
+									<li>Defined in src/game/renderer/world/World.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>island: <a href="island.html" class="tsd-signature-type">Island</a></h5>
+								</li>
 								<li>
 									<h5>width: <span class="tsd-signature-type">number</span></h5>
 								</li>
@@ -154,15 +163,25 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="_loaded" class="tsd-anchor"></a>
+					<h3>_loaded</h3>
+					<div class="tsd-signature tsd-kind-icon">_loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/World.ts:36</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="event" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> event</h3>
 					<div class="tsd-signature tsd-kind-icon">event<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ieventemitter.html" class="tsd-signature-type">IEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iworldevents.html" class="tsd-signature-type">IWorldEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;this, E&gt;(this)</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/ieventemitterhost.html">IEventEmitterHost</a>.<a href="../interfaces/ieventemitterhost.html#event">event</a></p>
-						<p>Inherited from <a href="../interfaces/istathost.html">IStatHost</a>.<a href="../interfaces/istathost.html#event">event</a></p>
+						<p>Inherited from <a href="eventemitter.host.html">Host</a>.<a href="eventemitter.host.html#event">event</a></p>
 						<ul>
-							<li>Defined in src/event/EventEmitter.ts:285</li>
+							<li>Defined in src/game/event/EventEmitter.ts:285</li>
 						</ul>
 					</aside>
 				</section>
@@ -171,20 +190,28 @@
 					<h3>height</h3>
 					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#height">height</a></p>
 						<ul>
-							<li>Defined in src/renderer/World.ts:39</li>
+							<li>Defined in src/game/renderer/world/World.ts:39</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="island" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> island</h3>
+					<div class="tsd-signature tsd-kind-icon">island<span class="tsd-signature-symbol">:</span> <a href="island.html" class="tsd-signature-type">Island</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/game/renderer/world/World.ts:39</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="layers" class="tsd-anchor"></a>
 					<h3>layers</h3>
-					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/iworldlayer.html" class="tsd-signature-type">IWorldLayer</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="worldlayer.html" class="tsd-signature-type">WorldLayer</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#layers">layers</a></p>
 						<ul>
-							<li>Defined in src/renderer/World.ts:35</li>
+							<li>Defined in src/game/renderer/world/World.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -193,11 +220,30 @@
 					<h3>width</h3>
 					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#width">width</a></p>
 						<ul>
-							<li>Defined in src/renderer/World.ts:39</li>
+							<li>Defined in src/game/renderer/world/World.ts:39</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="loaded" class="tsd-anchor"></a>
+					<h3>loaded</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> loaded<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/game/renderer/world/World.ts:56</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -212,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/World.ts:71</li>
+									<li>Defined in src/game/renderer/world/World.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -234,9 +280,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:45</li>
+									<li>Defined in src/game/renderer/world/World.ts:45</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -247,14 +292,13 @@
 					<a name="deserializeobject" class="tsd-anchor"></a>
 					<h3>deserialize<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">deserialize<wbr>Object<span class="tsd-signature-symbol">(</span>serializer<span class="tsd-signature-symbol">: </span><a href="../interfaces/iserializer.html" class="tsd-signature-type">ISerializer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">deserialize<wbr>Object<span class="tsd-signature-symbol">(</span>serializer<span class="tsd-signature-symbol">: </span><a href="../interfaces/iserializer.html" class="tsd-signature-type">ISerializer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#deserializeobject">deserializeObject</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:136</li>
+									<li>Defined in src/game/renderer/world/World.ts:138</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -263,7 +307,7 @@
 									<h5>serializer: <a href="../interfaces/iserializer.html" class="tsd-signature-type">ISerializer</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -277,28 +321,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/World.ts:118</li>
+									<li>Defined in src/game/renderer/world/World.ts:119</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isloaded" class="tsd-anchor"></a>
-					<h3>is<wbr>Loaded</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Loaded<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#isloaded">isLoaded</a></p>
-								<ul>
-									<li>Defined in src/renderer/World.ts:80</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -311,9 +337,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#load">load</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:75</li>
+									<li>Defined in src/game/renderer/world/World.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -329,9 +354,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#serializeobject">serializeObject</a></p>
+								<p>Implementation of <a href="../interfaces/iserializable.html">ISerializable</a>.<a href="../interfaces/iserializable.html#serializeobject">serializeObject</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:132</li>
+									<li>Defined in src/game/renderer/world/World.ts:133</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -348,16 +373,21 @@
 					<a name="setupexploredmap" class="tsd-anchor"></a>
 					<h3>setup<wbr>Explored<wbr>Map</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">setup<wbr>Explored<wbr>Map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">setup<wbr>Explored<wbr>Map<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#setupexploredmap">setupExploredMap</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:91</li>
+									<li>Defined in src/game/renderer/world/World.ts:92</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>player: <a href="player.html" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -372,7 +402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/World.ts:114</li>
+									<li>Defined in src/game/renderer/world/World.ts:115</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -388,9 +418,8 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#tolocal">toLocal</a></p>
 								<ul>
-									<li>Defined in src/renderer/World.ts:53</li>
+									<li>Defined in src/game/renderer/world/World.ts:60</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -407,24 +436,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updateall" class="tsd-anchor"></a>
-					<h3>update<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/iworld.html">IWorld</a>.<a href="../interfaces/iworld.html#updateall">updateAll</a></p>
-								<ul>
-									<li>Defined in src/renderer/World.ts:84</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updatetile" class="tsd-anchor"></a>
 					<h3>update<wbr>Tile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -434,7 +445,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/renderer/World.ts:99</li>
+									<li>Defined in src/game/renderer/world/World.ts:100</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -482,6 +493,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="world.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="world.html#_loaded" class="tsd-kind-icon">_loaded</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="world.html#event" class="tsd-kind-icon">event</a>
 							</li>
@@ -489,10 +503,16 @@
 								<a href="world.html#height" class="tsd-kind-icon">height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="world.html#island" class="tsd-kind-icon">island</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="world.html#layers" class="tsd-kind-icon">layers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="world.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="world.html#loaded" class="tsd-kind-icon">loaded</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="world.html#addlayer" class="tsd-kind-icon">add<wbr>Layer</a>
@@ -505,9 +525,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="world.html#endupdatetilebatch" class="tsd-kind-icon">end<wbr>Update<wbr>Tile<wbr>Batch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="world.html#isloaded" class="tsd-kind-icon">is<wbr>Loaded</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="world.html#load" class="tsd-kind-icon">load</a>
@@ -523,9 +540,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="world.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="world.html#updateall" class="tsd-kind-icon">update<wbr>All</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="world.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a>

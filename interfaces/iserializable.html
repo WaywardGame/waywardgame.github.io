@@ -69,11 +69,6 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">ISerializable</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="iworld.html" class="tsd-signature-type">IWorld</a>
-							</li>
-						</ul>
 					</li>
 				</ul>
 			</section>
@@ -85,6 +80,7 @@
 					<li><a href="../classes/savedtilesserializer.html" class="tsd-signature-type">SavedTilesSerializer</a></li>
 					<li><a href="../classes/vector2.html" class="tsd-signature-type">Vector2</a></li>
 					<li><a href="../classes/vector3.html" class="tsd-signature-type">Vector3</a></li>
+					<li><a href="../classes/world.html" class="tsd-signature-type">World</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -107,13 +103,13 @@
 					<a name="deserializeobject" class="tsd-anchor"></a>
 					<h3>deserialize<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">deserialize<wbr>Object<span class="tsd-signature-symbol">(</span>serializer<span class="tsd-signature-symbol">: </span><a href="iserializer.html" class="tsd-signature-type">ISerializer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">deserialize<wbr>Object<span class="tsd-signature-symbol">(</span>serializer<span class="tsd-signature-symbol">: </span><a href="iserializer.html" class="tsd-signature-type">ISerializer</a>, dataType<span class="tsd-signature-symbol">: </span><a href="../enums/types.html" class="tsd-signature-type">Types</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/ISerializer.ts:59</li>
+									<li>Defined in src/game/save/serializer/ISerializer.ts:69</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -121,8 +117,11 @@
 								<li>
 									<h5>serializer: <a href="iserializer.html" class="tsd-signature-type">ISerializer</a></h5>
 								</li>
+								<li>
+									<h5>dataType: <a href="../enums/types.html" class="tsd-signature-type">Types</a></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -136,7 +135,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/save/ISerializer.ts:58</li>
+									<li>Defined in src/game/save/serializer/ISerializer.ts:68</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

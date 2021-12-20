@@ -101,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"action"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"standalone"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:31</li>
+							<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:33</li>
 						</ul>
 					</aside>
 				</section>
@@ -114,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">SYMBOL_<wbr>IS_<wbr>DISMANTLE_<wbr>INSPECTION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unique symbol</span><span class="tsd-signature-symbol"> = Symbol(&quot;IS_DISMANTLE_INSPECTION&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:110</li>
+							<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:112</li>
 						</ul>
 					</aside>
 				</section>
@@ -124,7 +124,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Info<span class="tsd-signature-symbol">:</span> <a href="../classes/useinfo.html" class="tsd-signature-type">UseInfo</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><a href="../enums/actiontype.html#dismantle" class="tsd-signature-type">Dismantle</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><a href="../classes/item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = UseInfo.of&lt;Item&gt;().actions(ActionType.Dismantle).handle(info &#x3D;&gt; {const dismantle &#x3D; info.description.dismantle;if (!dismantle) {return undefined;}if (info.details.has(SYMBOL_IS_DISMANTLE_INSPECTION)) {return undefined; // dismantle action info shouldn&#x27;t show for dismantle inspections}return { ...info, dismantle };}).apply(({ type, dismantle }) &#x3D;&gt; [getRequired(type, dismantle),LabelledValue.label(UiTranslation.GameTooltipItemUseActionDismantleProduces).add(...getProduced(dismantle)).addClasses(&quot;labelled-list&quot;, &quot;display-inline&quot;).setComponent(Text).setInline(),]).setDisplayLevel(InfoDisplayLevel.Extra)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:112</li>
+							<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:114</li>
 						</ul>
 					</aside>
 				</section>
@@ -135,13 +135,13 @@
 					<a name="getproduced" class="tsd-anchor"></a>
 					<h3>get<wbr>Produced</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Produced<span class="tsd-signature-symbol">(</span>dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, iconScale<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/itemdismantleoutputinfoprovider.html" class="tsd-signature-type">ItemDismantleOutputInfoProvider</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Produced<span class="tsd-signature-symbol">(</span>dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, iconScale<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/itemdismantleoutputinfoprovider.html" class="tsd-signature-type">ItemDismantleOutputInfoProvider</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:106</li>
+									<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:108</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -150,7 +150,7 @@
 									<h5>dismantle: <a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> iconScale: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> iconScale: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../classes/itemdismantleoutputinfoprovider.html" class="tsd-signature-type">ItemDismantleOutputInfoProvider</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -161,13 +161,13 @@
 					<a name="getrequired" class="tsd-anchor"></a>
 					<h3>get<wbr>Required</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Required<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, mode<span class="tsd-signature-symbol">?: </span><a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Required<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../enums/itemtype.html" class="tsd-signature-type">ItemType</a>, dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, mode<span class="tsd-signature-symbol">?: </span><a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:33</li>
+									<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,7 +182,7 @@
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mode: <a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol"> = &quot;action&quot;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/simpleinfoprovider.html" class="tsd-signature-type">SimpleInfoProvider</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -196,7 +196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:44</li>
+									<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:46</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -219,13 +219,13 @@
 					<a name="getrequiredtranslation" class="tsd-anchor"></a>
 					<h3>get<wbr>Required<wbr>Translation</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Required<wbr>Translation<span class="tsd-signature-symbol">(</span>dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, mode<span class="tsd-signature-symbol">: </span><a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>translation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Required<wbr>Translation<span class="tsd-signature-symbol">(</span>dismantle<span class="tsd-signature-symbol">: </span><a href="../interfaces/idismantledescription.html" class="tsd-signature-type">IDismantleDescription</a>, mode<span class="tsd-signature-symbol">: </span><a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">; </span>translation<span class="tsd-signature-symbol">: </span><a href="../classes/translationimpl.html" class="tsd-signature-type">TranslationImpl</a><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:90</li>
+									<li>Defined in src/game/game/inspection/infoProviders/item/use/ItemDismantleInfo.ts:92</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,7 +237,15 @@
 									<h5>mode: <a href="itemdismantleinfo.html#mode" class="tsd-signature-type">Mode</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>translation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a><span class="tsd-signature-symbol">; </span>translation<span class="tsd-signature-symbol">: </span><a href="../classes/translationimpl.html" class="tsd-signature-type">TranslationImpl</a><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>item<span class="tsd-signature-symbol">: </span><a href="../classes/item.html" class="tsd-signature-type">Item</a></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>translation<span class="tsd-signature-symbol">: </span><a href="../classes/translationimpl.html" class="tsd-signature-type">TranslationImpl</a></h5>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
