@@ -18,10 +18,8 @@
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><a href="event_EventEmitter.default.Host.html" class="tsd-signature-type" data-tsd-kind="Class">Host</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/renderer_world_World.IWorldEvents.html" class="tsd-signature-type" data-tsd-kind="Interface">IWorldEvents</a><span class="tsd-signature-symbol">&gt;</span>
-<section class="tsd-panel tsd-hierarchy">
-<h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><span class="target">default</span></li></ul></section></li></ul></section>
+<li><span class="target">default</span></li></ul></li></ul></section>
 <section class="tsd-panel">
 <h4>Implements</h4>
 <ul class="tsd-hierarchy">
@@ -57,10 +55,13 @@
 <a href="renderer_world_World.default.html#deserializeObject" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>deserialize<wbr/>Object</span></a>
 <a href="renderer_world_World.default.html#endUpdateTileBatch" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>end<wbr/>Update<wbr/>Tile<wbr/>Batch</span></a>
 <a href="renderer_world_World.default.html#load" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>load</span></a>
+<a href="renderer_world_World.default.html#resumeLayerUpdates" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>resume<wbr/>Layer<wbr/>Updates</span></a>
 <a href="renderer_world_World.default.html#serializeObject" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>serialize<wbr/>Object</span></a>
 <a href="renderer_world_World.default.html#startUpdateTileBatch" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>start<wbr/>Update<wbr/>Tile<wbr/>Batch</span></a>
+<a href="renderer_world_World.default.html#suspendLayerUpdates" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>suspend<wbr/>Layer<wbr/>Updates</span></a>
 <a href="renderer_world_World.default.html#toLocal" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>to<wbr/>Local</span></a>
 <a href="renderer_world_World.default.html#updateTile" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>update<wbr/>Tile</span></a>
+<a href="renderer_world_World.default.html#updateTileLayer" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>update<wbr/>Tile<wbr/>Layer</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -81,7 +82,7 @@
 <h4 class="tsd-returns-title">Returns <a href="renderer_world_World.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="event_EventEmitter.default.Host.html">Host</a>.<a href="event_EventEmitter.default.Host.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:37</li></ul></aside></li></ul></section></section>
+<li>Defined in src/game/renderer/world/World.ts:38</li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="_loaded" class="tsd-anchor"></a>
@@ -99,12 +100,12 @@
 <h3 class="tsd-anchor-link"><span>height</span><a href="#height" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:37</li></ul></aside></section>
+<li>Defined in src/game/renderer/world/World.ts:38</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="island" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>island</span><a href="#island" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">island<span class="tsd-signature-symbol">:</span> <a href="game_island_Island.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:37</li></ul></aside></section>
+<li>Defined in src/game/renderer/world/World.ts:38</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="layers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>layers</span><a href="#layers" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="renderer_world_WorldLayer.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
@@ -114,7 +115,7 @@
 <h3 class="tsd-anchor-link"><span>width</span><a href="#width" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:37</li></ul></aside></section></section>
+<li>Defined in src/game/renderer/world/World.ts:38</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="loaded" class="tsd-anchor"></a>
@@ -124,7 +125,7 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:54</li></ul></aside></li></ul></section></section>
+<li>Defined in src/game/renderer/world/World.ts:55</li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="addLayer" class="tsd-anchor"></a>
@@ -139,7 +140,7 @@
 <h5>level: <a href="../enums/game_WorldZ.WorldZ.html" class="tsd-signature-type" data-tsd-kind="Enumeration">WorldZ</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:76</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:77</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="delete" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete</span><a href="#delete" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -147,7 +148,7 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:43</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:44</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="deserializeObject" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>deserialize<wbr/>Object</span><a href="#deserializeObject" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -161,7 +162,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/save_serializer_ISerializer.ISerializable.html">ISerializable</a>.<a href="../interfaces/save_serializer_ISerializer.ISerializable.html#deserializeObject">deserializeObject</a></p>
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:134</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:150</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="endUpdateTileBatch" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>end<wbr/>Update<wbr/>Tile<wbr/>Batch</span><a href="#endUpdateTileBatch" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -169,7 +170,7 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:114</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:130</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="load" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>load</span><a href="#load" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -177,7 +178,15 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:83</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:84</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="resumeLayerUpdates" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>resume<wbr/>Layer<wbr/>Updates</span><a href="#resumeLayerUpdates" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="resumeLayerUpdates.resumeLayerUpdates-1">resume<wbr/>Layer<wbr/>Updates<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#resumeLayerUpdates.resumeLayerUpdates-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/renderer/world/World.ts:100</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="serializeObject" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>serialize<wbr/>Object</span><a href="#serializeObject" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -191,7 +200,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/save_serializer_ISerializer.ISerializable.html">ISerializable</a>.<a href="../interfaces/save_serializer_ISerializer.ISerializable.html#serializeObject">serializeObject</a></p>
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:128</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:144</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="startUpdateTileBatch" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>start<wbr/>Update<wbr/>Tile<wbr/>Batch</span><a href="#startUpdateTileBatch" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -199,7 +208,15 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:110</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:126</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="suspendLayerUpdates" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>suspend<wbr/>Layer<wbr/>Updates</span><a href="#suspendLayerUpdates" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="suspendLayerUpdates.suspendLayerUpdates-1">suspend<wbr/>Layer<wbr/>Updates<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#suspendLayerUpdates.suspendLayerUpdates-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/renderer/world/World.ts:96</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="toLocal" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>Local</span><a href="#toLocal" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -214,7 +231,7 @@
 <h5>local: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:58</li></ul></aside></li></ul></section>
+<li>Defined in src/game/renderer/world/World.ts:59</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="updateTile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Tile</span><a href="#updateTile" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -239,7 +256,30 @@
 <h5>flush: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/renderer/world/World.ts:95</li></ul></aside></li></ul></section></section></div>
+<li>Defined in src/game/renderer/world/World.ts:104</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="updateTileLayer" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>update<wbr/>Tile<wbr/>Layer</span><a href="#updateTileLayer" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="updateTileLayer.updateTileLayer-1">update<wbr/>Tile<wbr/>Layer<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tile<span class="tsd-signature-symbol">: </span><a href="../interfaces/game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, updateNeighbors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, flush<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#updateTileLayer.updateTileLayer-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>x: <span class="tsd-signature-type">number</span></h5></li>
+<li>
+<h5>y: <span class="tsd-signature-type">number</span></h5></li>
+<li>
+<h5>z: <span class="tsd-signature-type">number</span></h5></li>
+<li>
+<h5>tile: <a href="../interfaces/game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5></li>
+<li>
+<h5>updateNeighbors: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5></li>
+<li>
+<h5>flush: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/renderer/world/World.ts:119</li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -270,10 +310,13 @@
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#deserializeObject" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>deserialize<wbr/>Object</a></li>
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#endUpdateTileBatch" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>end<wbr/>Update<wbr/>Tile<wbr/>Batch</a></li>
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#load" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>load</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#resumeLayerUpdates" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>resume<wbr/>Layer<wbr/>Updates</a></li>
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#serializeObject" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>serialize<wbr/>Object</a></li>
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#startUpdateTileBatch" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>start<wbr/>Update<wbr/>Tile<wbr/>Batch</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#suspendLayerUpdates" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>suspend<wbr/>Layer<wbr/>Updates</a></li>
 <li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#toLocal" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>to<wbr/>Local</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#updateTile" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>update<wbr/>Tile</a></li></ul></li></ul></nav></div></div>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#updateTile" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>update<wbr/>Tile</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="renderer_world_World.default.html#updateTileLayer" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>update<wbr/>Tile<wbr/>Layer</a></li></ul></li></ul></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div><script src="../assets/main.js"></script></body></html>

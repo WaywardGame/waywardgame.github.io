@@ -18,10 +18,8 @@
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><a href="../types/event_EventEmitter.Events.html" class="tsd-signature-type" data-tsd-kind="Type alias">Events</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/game_entity_Human.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&gt;</span>
-<section class="tsd-panel tsd-hierarchy">
-<h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><span class="target">IPlayerEvents</span></li></ul></section></li></ul></section><aside class="tsd-sources">
+<li><span class="target">IPlayerEvents</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/player/IPlayer.ts:28</li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
@@ -51,6 +49,7 @@
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#getWeightOrStaminaMovementPenalty" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Weight<wbr/>Or<wbr/>Stamina<wbr/>Movement<wbr/>Penalty</span></a>
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#getWeightStatus" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Weight<wbr/>Status</span></a>
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#idChanged" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>id<wbr/>Changed</span></a>
+<a href="game_entity_player_IPlayer.IPlayerEvents.html#idChanging" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>id<wbr/>Changing</span></a>
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemAdd" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Add</span></a>
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemRemove" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Remove</span></a>
 <a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemUpdate" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Update</span></a>
@@ -457,6 +456,31 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h3 class="tsd-anchor-link"><span>id<wbr/>Changed</span><a href="#idChanged" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
 <li class="tsd-signature tsd-anchor-link" id="idChanged.idChanged-1">id<wbr/>Changed<span class="tsd-signature-symbol">(</span>currentId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, newId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isAbsentPlayer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#idChanged.idChanged-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Called when the players id has changed</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>currentId: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>The players current id</p>
+</div></li>
+<li>
+<h5>newId: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>The new id for the player</p>
+</div></li>
+<li>
+<h5>isAbsentPlayer: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>True if the player is absent</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/player/IPlayer.ts:145</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="idChanging" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>id<wbr/>Changing</span><a href="#idChanging" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="idChanging.idChanging-1">id<wbr/>Changing<span class="tsd-signature-symbol">(</span>currentId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, newId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isAbsentPlayer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#idChanging.idChanging-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when the players id is changing</p>
 </div>
@@ -1291,13 +1315,11 @@ no further handlers will be called.</p>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="updateOption.updateOption-1">update<wbr/>Option<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">O</span>, value<span class="tsd-signature-symbol">: </span><a href="save_data_ISaveDataGlobal.IOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IOptions</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">O</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#updateOption.updateOption-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-type-parameters">
-<h4 class="tsd-type-parameters-title">Type Parameters</h4>
 <section class="tsd-panel tsd-type-parameters">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameters">
 <li>
-<h4>O<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><a href="save_data_ISaveDataGlobal.IOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IOptions</a></h4></li></ul></section></div>
+<h4>O<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><a href="save_data_ISaveDataGlobal.IOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IOptions</a></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -1443,6 +1465,7 @@ no further handlers will be called.</p>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_player_IPlayer.IPlayerEvents.html#getWeightOrStaminaMovementPenalty" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Weight<wbr/>Or<wbr/>Stamina<wbr/>Movement<wbr/>Penalty</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_player_IPlayer.IPlayerEvents.html#getWeightStatus" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Weight<wbr/>Status</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_player_IPlayer.IPlayerEvents.html#idChanged" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>id<wbr/>Changed</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_player_IPlayer.IPlayerEvents.html#idChanging" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>id<wbr/>Changing</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemAdd" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Add</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemRemove" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Remove</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_player_IPlayer.IPlayerEvents.html#inventoryItemUpdate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Update</a></li>
