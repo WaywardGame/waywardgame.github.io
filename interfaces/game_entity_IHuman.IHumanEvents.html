@@ -19,7 +19,7 @@
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><a href="../types/event_EventEmitter.Events.html" class="tsd-signature-type" data-tsd-kind="Type alias">Events</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/game_entity_Entity.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&gt;</span></li>
+<li><a href="../types/event_EventEmitter.Events.html" class="tsd-signature-type" data-tsd-kind="Type alias">Events</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/game_entity_EntityWithStats.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&gt;</span></li>
 <li><a href="game_entity_skill_SkillManager.ISkillEvents.html" class="tsd-signature-type" data-tsd-kind="Interface">ISkillEvents</a>
 <ul class="tsd-hierarchy">
 <li><span class="target">IHumanEvents</span></li></ul></li></ul></section><aside class="tsd-sources">
@@ -42,13 +42,16 @@
 <a href="game_entity_IHuman.IHumanEvents.html#created" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>created</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#damage" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>damage</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#deregister" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>deregister</span></a>
+<a href="game_entity_IHuman.IHumanEvents.html#discoverVulnOrResist" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>discover<wbr/>Vuln<wbr/>Or<wbr/>Resist</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#equip" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>equip?</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#equipFailed" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>equip<wbr/>Failed?</span></a>
+<a href="game_entity_IHuman.IHumanEvents.html#getDiscoveredVulnsAndResists" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Discovered<wbr/>Vulns<wbr/>And<wbr/>Resists</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#getMaxHealth" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Max<wbr/>Health</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#getMaxWeight" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Max<wbr/>Weight</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#getMovementIntent" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Movement<wbr/>Intent</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#getWeightOrStaminaMovementPenalty" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Weight<wbr/>Or<wbr/>Stamina<wbr/>Movement<wbr/>Penalty</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#getWeightStatus" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Weight<wbr/>Status</span></a>
+<a href="game_entity_IHuman.IHumanEvents.html#hasDiscoveredVulnOrResist" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>has<wbr/>Discovered<wbr/>Vuln<wbr/>Or<wbr/>Resist</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#inventoryItemAdd" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Add</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#inventoryItemRemove" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Remove</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#inventoryItemUpdate" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>inventory<wbr/>Item<wbr/>Update</span></a>
@@ -59,6 +62,7 @@
 <a href="game_entity_IHuman.IHumanEvents.html#moveToIsland" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>move<wbr/>To<wbr/>Island</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#noInput" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>no<wbr/>Input</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#openBook" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>open<wbr/>Book?</span></a>
+<a href="game_entity_IHuman.IHumanEvents.html#pickUpDoodad" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>pick<wbr/>Up<wbr/>Doodad?</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#postMove" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>post<wbr/>Move</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#preMove" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>pre<wbr/>Move</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#preMoveToIsland" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>pre<wbr/>Move<wbr/>To<wbr/>Island</span></a>
@@ -68,6 +72,7 @@
 <a href="game_entity_IHuman.IHumanEvents.html#reregister" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>reregister</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#restEnd" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rest<wbr/>End</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#restStart" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rest<wbr/>Start</span></a>
+<a href="game_entity_IHuman.IHumanEvents.html#setPosition" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Position</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#shouldDie" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>should<wbr/>Die</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#skillChange" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>skill<wbr/>Change</span></a>
 <a href="game_entity_IHuman.IHumanEvents.html#skillCheck" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>skill<wbr/>Check</span></a>
@@ -94,7 +99,7 @@
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="build" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>build</span><a href="#build" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="build.build-1">build<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, tile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, doodad<span class="tsd-signature-symbol">: </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#build.build-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="build.build-1">build<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, tile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, doodad<span class="tsd-signature-symbol">: </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#build.build-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when something is built on a tile</p>
 </div>
@@ -106,7 +111,7 @@
 <div class="tsd-comment tsd-typography"><p>The item used to build the object</p>
 </div></li>
 <li>
-<h5>tile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5>
+<h5>tile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
 <div class="tsd-comment tsd-typography"><p>The tile something was built on</p>
 </div></li>
 <li>
@@ -173,7 +178,7 @@
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="canDropItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>can<wbr/>Drop<wbr/>Item</span><a href="#canDropItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="canDropItem.canDropItem-1">can<wbr/>Drop<wbr/>Item<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, tile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, dropAll<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, dropAllQuality<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/game_IObject.Quality.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Quality</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><a href="#canDropItem.canDropItem-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="canDropItem.canDropItem-1">can<wbr/>Drop<wbr/>Item<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, tile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, dropAll<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, dropAllQuality<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/game_IObject.Quality.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Quality</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><a href="#canDropItem.canDropItem-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when an item is being dropped</p>
 
@@ -187,7 +192,7 @@
 <div class="tsd-comment tsd-typography"><p>The item to be dropped</p>
 </div></li>
 <li>
-<h5>tile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5>
+<h5>tile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
 <div class="tsd-comment tsd-typography"><p>The tile the item will be dropped on</p>
 </div></li>
 <li>
@@ -248,7 +253,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.created</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:47</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IEntity.ts:38</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="damage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>damage</span><a href="#damage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -277,7 +282,22 @@ Also called for players that &quot;rejoin&quot; the game</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:294</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:300</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="discoverVulnOrResist" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>discover<wbr/>Vuln<wbr/>Or<wbr/>Resist</span><a href="#discoverVulnOrResist" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="discoverVulnOrResist.discoverVulnOrResist-1">discover<wbr/>Vuln<wbr/>Or<wbr/>Resist<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a>, damageType<span class="tsd-signature-symbol">: </span><a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#discoverVulnOrResist.discoverVulnOrResist-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>creatureType: <a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a></h5></li>
+<li>
+<h5>damageType: <a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/IHuman.ts:335</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="equip" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>equip</span><a href="#equip" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -320,6 +340,14 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/IHuman.ts:100</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getDiscoveredVulnsAndResists" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Discovered<wbr/>Vulns<wbr/>And<wbr/>Resists</span><a href="#getDiscoveredVulnsAndResists" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getDiscoveredVulnsAndResists.getDiscoveredVulnsAndResists-1">get<wbr/>Discovered<wbr/>Vulns<wbr/>And<wbr/>Resists<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#getDiscoveredVulnsAndResists.getDiscoveredVulnsAndResists-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/IHuman.ts:337</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getMaxHealth" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Max<wbr/>Health</span><a href="#getMaxHealth" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -390,10 +418,27 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/game_entity_player_IPlayer.WeightStatus.html" class="tsd-signature-type" data-tsd-kind="Enumeration">WeightStatus</a></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/IHuman.ts:170</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hasDiscoveredVulnOrResist" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>has<wbr/>Discovered<wbr/>Vuln<wbr/>Or<wbr/>Resist</span><a href="#hasDiscoveredVulnOrResist" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="hasDiscoveredVulnOrResist.hasDiscoveredVulnOrResist-1">has<wbr/>Discovered<wbr/>Vuln<wbr/>Or<wbr/>Resist<span class="tsd-signature-symbol">(</span>creatureType<span class="tsd-signature-symbol">: </span><a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a>, damageType<span class="tsd-signature-symbol">: </span><a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a>, defaultState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><a href="#hasDiscoveredVulnOrResist.hasDiscoveredVulnOrResist-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>creatureType: <a href="../enums/game_entity_creature_ICreature.CreatureType.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CreatureType</a></h5></li>
+<li>
+<h5>damageType: <a href="../enums/game_entity_IEntity.DamageType-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DamageType</a></h5></li>
+<li>
+<h5>defaultState: <span class="tsd-signature-type">boolean</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/IHuman.ts:336</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="inventoryItemAdd" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>inventory<wbr/>Item<wbr/>Add</span><a href="#inventoryItemAdd" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="inventoryItemAdd.inventoryItemAdd-1">inventory<wbr/>Item<wbr/>Add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemAdd.inventoryItemAdd-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="inventoryItemAdd.inventoryItemAdd-1">inventory<wbr/>Item<wbr/>Add<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemAdd.inventoryItemAdd-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when an item is added to the player&#39;s inventory</p>
 </div>
@@ -401,12 +446,10 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>item: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
-<div class="tsd-comment tsd-typography"><p>The item object</p>
-</div></li>
+<h5>items: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span></h5></li>
 <li>
 <h5>container: <a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a></h5>
-<div class="tsd-comment tsd-typography"><p>The container object the item was added to. This container might be inventory or a container within the inventory.</p>
+<div class="tsd-comment tsd-typography"><p>The container object the items were added to. This container might be inventory or a container within the inventory.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
@@ -414,7 +457,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="inventoryItemRemove" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>inventory<wbr/>Item<wbr/>Remove</span><a href="#inventoryItemRemove" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="inventoryItemRemove.inventoryItemRemove-1">inventory<wbr/>Item<wbr/>Remove<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemRemove.inventoryItemRemove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="inventoryItemRemove.inventoryItemRemove-1">inventory<wbr/>Item<wbr/>Remove<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemRemove.inventoryItemRemove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when an item is removed from the players inventory</p>
 </div>
@@ -422,12 +465,10 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>item: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
-<div class="tsd-comment tsd-typography"><p>The item object</p>
-</div></li>
+<h5>items: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span></h5></li>
 <li>
 <h5>container: <a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a></h5>
-<div class="tsd-comment tsd-typography"><p>The container object the item was moved to.</p>
+<div class="tsd-comment tsd-typography"><p>The container object the items were moved to.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
@@ -435,7 +476,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="inventoryItemUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>inventory<wbr/>Item<wbr/>Update</span><a href="#inventoryItemUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="inventoryItemUpdate.inventoryItemUpdate-1">inventory<wbr/>Item<wbr/>Update<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a>, previousContainer<span class="tsd-signature-symbol">?: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemUpdate.inventoryItemUpdate-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="inventoryItemUpdate.inventoryItemUpdate-1">inventory<wbr/>Item<wbr/>Update<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span>, container<span class="tsd-signature-symbol">: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a>, previousContainer<span class="tsd-signature-symbol">?: </span><a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#inventoryItemUpdate.inventoryItemUpdate-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when an item is moved from one container to another, while still in the players inventory.</p>
 </div>
@@ -443,16 +484,16 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>item: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
-<div class="tsd-comment tsd-typography"><p>The item object</p>
+<h5>items: <a href="../classes/game_item_Item.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>The items</p>
 </div></li>
 <li>
 <h5>container: <a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a></h5>
-<div class="tsd-comment tsd-typography"><p>The container object the item was moved to. This container might be inventory or a container within the inventory.</p>
+<div class="tsd-comment tsd-typography"><p>The container object the items were moved to. This container might be inventory or a container within the inventory.</p>
 </div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> previousContainer: <a href="game_item_IItem.IContainer.html" class="tsd-signature-type" data-tsd-kind="Interface">IContainer</a></h5>
-<div class="tsd-comment tsd-typography"><p>The container object the item was moved from. This container might be inventory or a container within the inventory.</p>
+<div class="tsd-comment tsd-typography"><p>The container object the items were moved from. This container might be inventory or a container within the inventory.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
@@ -475,11 +516,11 @@ Also called for players that &quot;rejoin&quot; the game</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:277</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:283</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="kill" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>kill</span><a href="#kill" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-<li class="tsd-signature tsd-anchor-link" id="kill.kill-1">kill<span class="tsd-signature-symbol">(</span>attacker<span class="tsd-signature-symbol">: </span><a href="../classes/game_entity_Entity.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol"> | </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#kill.kill-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="kill.kill-1">kill<span class="tsd-signature-symbol">(</span>attacker<span class="tsd-signature-symbol">: </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol"> | </span><a href="../classes/game_entity_Entity.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#kill.kill-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when an entity is killed by another entity.</p>
 </div>
@@ -487,7 +528,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>attacker: <a href="../classes/game_entity_Entity.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol"> | </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li></ul></div>
+<h5>attacker: <a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol"> | </span><a href="../classes/game_entity_Entity.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.kill</p>
 <ul>
@@ -495,7 +536,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="loadedOnIsland" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>loaded<wbr/>On<wbr/>Island</span><a href="#loadedOnIsland" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="loadedOnIsland.loadedOnIsland-1">loaded<wbr/>On<wbr/>Island<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="../classes/game_island_Island.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="game_entity_player_IPlayer.ILoadOnIslandOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ILoadOnIslandOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#loadedOnIsland.loadedOnIsland-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="loadedOnIsland.loadedOnIsland-1">loaded<wbr/>On<wbr/>Island<span class="tsd-signature-symbol">(</span>island<span class="tsd-signature-symbol">: </span><a href="../classes/game_island_Island.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="game_entity_IHuman.ILoadOnIslandOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ILoadOnIslandOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#loadedOnIsland.loadedOnIsland-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when the human is loaded onto an island</p>
 </div>
@@ -505,12 +546,12 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <li>
 <h5>island: <a href="../classes/game_island_Island.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="game_entity_player_IPlayer.ILoadOnIslandOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ILoadOnIslandOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="game_entity_IHuman.ILoadOnIslandOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ILoadOnIslandOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
 <div class="tsd-comment tsd-typography"><p>Load island options</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:314</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:320</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="moveComplete" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>move<wbr/>Complete</span><a href="#moveComplete" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -541,7 +582,7 @@ Also called for players that &quot;rejoin&quot; the game</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:308</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:314</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="noInput" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>no<wbr/>Input</span><a href="#noInput" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -567,38 +608,47 @@ Also called for players that &quot;rejoin&quot; the game</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/IHuman.ts:231</li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="postMove" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>post<wbr/>Move</span><a href="#postMove" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-<li class="tsd-signature tsd-anchor-link" id="postMove.postMove-1">post<wbr/>Move<span class="tsd-signature-symbol">(</span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromTile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, toX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toTile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#postMove.postMove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="pickUpDoodad" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>pick<wbr/>Up<wbr/>Doodad</span><a href="#pickUpDoodad" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="pickUpDoodad.pickUpDoodad-1">pick<wbr/>Up<wbr/>Doodad<span class="tsd-signature-symbol">(</span>doodad<span class="tsd-signature-symbol">: </span><a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#pickUpDoodad.pickUpDoodad-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Called when an doodad is picked up</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>fromX: <span class="tsd-signature-type">number</span></h5></li>
+<h5>doodad: <a href="../classes/game_doodad_Doodad.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
+<div class="tsd-comment tsd-typography"><p>The doodad object</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/IHuman.ts:252</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="postMove" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>post<wbr/>Move</span><a href="#postMove" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
+<li class="tsd-signature tsd-anchor-link" id="postMove.postMove-1">post<wbr/>Move<span class="tsd-signature-symbol">(</span>fromTile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, toTile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, flags<span class="tsd-signature-symbol">: </span><a href="../enums/game_entity_IEntity.MoveFlag.html" class="tsd-signature-type" data-tsd-kind="Enumeration">MoveFlag</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#postMove.postMove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Called after moving.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
 <li>
-<h5>fromY: <span class="tsd-signature-type">number</span></h5></li>
+<h5>fromTile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li>
 <li>
-<h5>fromZ: <span class="tsd-signature-type">number</span></h5></li>
+<h5>toTile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li>
 <li>
-<h5>fromTile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5></li>
-<li>
-<h5>toX: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toY: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toZ: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toTile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5></li></ul></div>
+<h5>flags: <a href="../enums/game_entity_IEntity.MoveFlag.html" class="tsd-signature-type" data-tsd-kind="Enumeration">MoveFlag</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.postMove</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:65</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/EntityMovable.ts:48</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="preMove" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>pre<wbr/>Move</span><a href="#preMove" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-<li class="tsd-signature tsd-anchor-link" id="preMove.preMove-1">pre<wbr/>Move<span class="tsd-signature-symbol">(</span>fromX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromTile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, toX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toTile<span class="tsd-signature-symbol">: </span><a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a>, isMoving<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><a href="#preMove.preMove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="preMove.preMove-1">pre<wbr/>Move<span class="tsd-signature-symbol">(</span>fromTile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, toTile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, isMoving<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><a href="#preMove.preMove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called before moving.
 Can be called twice for humans</p>
@@ -607,21 +657,9 @@ Can be called twice for humans</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>fromX: <span class="tsd-signature-type">number</span></h5></li>
+<h5>fromTile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li>
 <li>
-<h5>fromY: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>fromZ: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>fromTile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5></li>
-<li>
-<h5>toX: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toY: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toZ: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>toTile: <a href="game_tile_ITerrain.ITile.html" class="tsd-signature-type" data-tsd-kind="Interface">ITile</a></h5></li>
+<h5>toTile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5></li>
 <li>
 <h5>isMoving: <span class="tsd-signature-type">boolean</span></h5>
 <div class="tsd-comment tsd-typography"><p>True the second time it&#39;s called, right as the entity is about to actually move</p>
@@ -629,7 +667,7 @@ Can be called twice for humans</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.preMove</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:64</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/EntityMovable.ts:43</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="preMoveToIsland" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>pre<wbr/>Move<wbr/>To<wbr/>Island</span><a href="#preMoveToIsland" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -650,7 +688,7 @@ Can be called twice for humans</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:301</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:307</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="processInput" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>process<wbr/>Input</span><a href="#processInput" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -673,7 +711,7 @@ Can be called twice for humans</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.removed</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:57</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IEntity.ts:48</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="renamed" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>renamed</span><a href="#renamed" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
@@ -684,7 +722,7 @@ Can be called twice for humans</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.renamed</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:52</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IEntity.ts:43</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="reregister" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>reregister</span><a href="#reregister" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -695,7 +733,7 @@ This may be called more than once on the same player</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:289</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:295</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="restEnd" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rest<wbr/>End</span><a href="#restEnd" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -730,6 +768,23 @@ This may be called more than once on the same player</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/IHuman.ts:54</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="setPosition" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>set<wbr/>Position</span><a href="#setPosition" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="setPosition.setPosition-1">set<wbr/>Position<span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setPosition.setPosition-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Called when the human position is set, from a teleport type of movement</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>tile: <a href="../classes/game_tile_Tile.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
+<div class="tsd-comment tsd-typography"><p>Tile the human is now on</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in src/game/game/entity/IHuman.ts:333</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="shouldDie" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>should<wbr/>Die</span><a href="#shouldDie" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -742,7 +797,7 @@ no further handlers will be called.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:321</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:327</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a id="skillChange" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>skill<wbr/>Change</span><a href="#skillChange" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
@@ -971,7 +1026,7 @@ no further handlers will be called.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from Events.statusChange</p>
 <ul>
-<li>Defined in src/game/game/entity/IEntity.ts:37</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/EntityWithStats.ts:39</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="tickEnd" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tick<wbr/>End</span><a href="#tickEnd" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -981,7 +1036,7 @@ no further handlers will be called.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:260</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:266</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="tickStart" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tick<wbr/>Start</span><a href="#tickStart" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -991,7 +1046,7 @@ no further handlers will be called.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:255</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:261</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="turnEnd" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>turn<wbr/>End</span><a href="#turnEnd" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -1001,7 +1056,7 @@ no further handlers will be called.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:270</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:276</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="turnStart" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>turn<wbr/>Start</span><a href="#turnStart" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -1011,7 +1066,7 @@ no further handlers will be called.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:265</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:271</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="unequip" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>unequip</span><a href="#unequip" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -1073,7 +1128,7 @@ no further handlers will be called.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in src/game/game/entity/IHuman.ts:283</li></ul></aside></li></ul></section>
+<li>Defined in src/game/game/entity/IHuman.ts:289</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="updateWeight" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Weight</span><a href="#updateWeight" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -1096,7 +1151,7 @@ no further handlers will be called.</p>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="walkPathChange" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>walk<wbr/>Path<wbr/>Change</span><a href="#walkPathChange" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-<li class="tsd-signature tsd-anchor-link" id="walkPathChange.walkPathChange-1">walk<wbr/>Path<wbr/>Change<span class="tsd-signature-symbol">(</span>walkPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="utilities_math_IVector.IVector2.html" class="tsd-signature-type" data-tsd-kind="Interface">IVector2</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#walkPathChange.walkPathChange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="walkPathChange.walkPathChange-1">walk<wbr/>Path<wbr/>Change<span class="tsd-signature-symbol">(</span>walkPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="utilities_math_IVector.IVector2-1.html" class="tsd-signature-type" data-tsd-kind="Interface">IVector2</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#walkPathChange.walkPathChange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Called when the walk path of the player changes.</p>
 </div>
@@ -1104,7 +1159,7 @@ no further handlers will be called.</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>walkPath: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="utilities_math_IVector.IVector2.html" class="tsd-signature-type" data-tsd-kind="Interface">IVector2</a><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5>walkPath: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="utilities_math_IVector.IVector2-1.html" class="tsd-signature-type" data-tsd-kind="Interface">IVector2</a><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
 <li>Defined in src/game/game/entity/IHuman.ts:206</li></ul></aside></li></ul></section></section></div>
@@ -1135,13 +1190,16 @@ no further handlers will be called.</p>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_IHuman.IHumanEvents.html#created" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>created</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#damage" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>damage</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#deregister" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>deregister</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#discoverVulnOrResist" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>discover<wbr/>Vuln<wbr/>Or<wbr/>Resist</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#equip" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>equip?</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#equipFailed" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>equip<wbr/>Failed?</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getDiscoveredVulnsAndResists" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Discovered<wbr/>Vulns<wbr/>And<wbr/>Resists</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getMaxHealth" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Max<wbr/>Health</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getMaxWeight" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Max<wbr/>Weight</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getMovementIntent" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Movement<wbr/>Intent</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getWeightOrStaminaMovementPenalty" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Weight<wbr/>Or<wbr/>Stamina<wbr/>Movement<wbr/>Penalty</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#getWeightStatus" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Weight<wbr/>Status</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#hasDiscoveredVulnOrResist" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>has<wbr/>Discovered<wbr/>Vuln<wbr/>Or<wbr/>Resist</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#inventoryItemAdd" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Add</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#inventoryItemRemove" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Remove</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#inventoryItemUpdate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>inventory<wbr/>Item<wbr/>Update</a></li>
@@ -1152,6 +1210,7 @@ no further handlers will be called.</p>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#moveToIsland" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>move<wbr/>To<wbr/>Island</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#noInput" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>no<wbr/>Input</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#openBook" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>open<wbr/>Book?</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#pickUpDoodad" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>pick<wbr/>Up<wbr/>Doodad?</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_IHuman.IHumanEvents.html#postMove" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>post<wbr/>Move</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_IHuman.IHumanEvents.html#preMove" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>pre<wbr/>Move</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#preMoveToIsland" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>pre<wbr/>Move<wbr/>To<wbr/>Island</a></li>
@@ -1161,6 +1220,7 @@ no further handlers will be called.</p>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#reregister" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>reregister</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#restEnd" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rest<wbr/>End</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#restStart" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rest<wbr/>Start</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#setPosition" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Position</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="game_entity_IHuman.IHumanEvents.html#shouldDie" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>should<wbr/>Die</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_IHuman.IHumanEvents.html#skillChange" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>skill<wbr/>Change</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="game_entity_IHuman.IHumanEvents.html#skillCheck" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>skill<wbr/>Check</a></li>
