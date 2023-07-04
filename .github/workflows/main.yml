@@ -37,8 +37,9 @@ jobs:
           
       - name: Copy
         run: |
-          mkdir gh-pages/development
           cp -r master/* gh-pages
+          touch gh-pages/.nojekyll
+          mkdir gh-pages/development
           cp -r development/* gh-pages/development
 
       - name: Commit and push changes
