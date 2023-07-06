@@ -12,12 +12,80 @@
 <div class="col-8 col-content">
 <div class="tsd-page-title">
 <h2>Wayward Types Viewer</h2></div>
-<div class="tsd-panel tsd-typography"><p>This website is generated automatically using <a href="https://typedoc.org/">TypeDoc</a> and is updated every release.</p>
+<div class="tsd-panel tsd-typography"><p>This website documents the &quot;types&quot; of Wayward — basically, the structure of the game&#39;s code.</p>
+
+<a href="#finding-an-export" id="finding-an-export" style="color: inherit; text-decoration: none;">
+  <h2>Finding an export</h2>
+</a>
+<p>Sometimes, while modding, you&#39;ll see examples which reference something you don&#39;t have, such as <code>ItemType</code>,
+and VSCode will put a red underline under it because you haven&#39;t imported it yet. In cases where VSCode is unable to automatically
+import it for you, you can find the path in this documentation.</p>
+<p>Clicking on the magnifying glass icon at the top allows you to search the documentation for the export you&#39;re looking for.
+In the case of <code>ItemType</code>, one of the suggestions is <code>game/item/IItem.ItemType</code>. Clicking on it goes to the definition.</p>
+<p>Your import will be <code>import { NAME } from &quot;PATH&quot;;</code>, where NAME is the export you were looking for (ie <code>ItemType</code>),
+and PATH is the text of the <em>second</em> link in the breadcrumbs (ie at the top it might say, for example, <strong>Wayward Types Viewer</strong> / <strong>game/item/IItem</strong> / <strong>ItemType</strong> /).
+For example <code>import { ItemType } from &quot;game/item/IItem&quot;;</code>.</p>
+<p>Some imports will be the &quot;default&quot; export from a module. In that case the import will be, for example, <code>import Register from &quot;mod/ModRegistry&quot;;</code>
+Notice how the import is the name without the <code>{}</code> curly braces.</p>
+
+<a href="#other-tips-to-using-this-site" id="other-tips-to-using-this-site" style="color: inherit; text-decoration: none;">
+  <h2>Other tips to using this site</h2>
+</a>
+<p>The <a href="./modules.html">Module Index</a> contains a list of every single file in the game, and therefore all possible paths for you to import from.</p>
+<p>The <strong>Common Modules</strong> section of the sidebar lists some commonly-referenced things for Wayward modding. Take a look!</p>
+<p>You can visit <a href="https://waywardgame.github.io/development/">https://waywardgame.github.io/development/</a> to see a copy of the types specific for the &quot;development&quot; branch in the Steam betas.</p>
+
+<a href="#need-help" id="need-help" style="color: inherit; text-decoration: none;">
+  <h1>Need help?</h1>
+</a>
+
+<a href="#wayward-modding-guide" id="wayward-modding-guide" style="color: inherit; text-decoration: none;">
+  <h1><a href="https://github.com/WaywardGame/types/wiki">Wayward Modding Guide</a></h1>
+</a>
+<p>Learn how to mod Wayward.</p>
+
+<a href="#➡-new-modders-start-here-⬅" id="➡-new-modders-start-here-⬅" style="color: inherit; text-decoration: none;">
+  <h2><strong><a href="https://github.com/WaywardGame/types/wiki">➡ New Modders Start Here! ⬅</a></strong></h2>
+</a>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
 <ul>
-<li><a href="https://github.com/WaywardGame/types/wiki">Wayward Modding Guide</a> — Learn how to mod Wayward.</li>
-<li><a href="https://waywardgame.github.io/">Wayward Types Viewer</a> — A pretty, searchable list of all the types in Wayward.</li>
-<li><a href="https://github.com/WaywardGame/types">Wayward Types</a> — All the <em>raw</em> types files generated from the Wayward codebase, used for modding.</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/mod-create-&-update"><code>+mod create</code> &amp; <code>+mod update</code></a> — Documentation on the commands used to generate starter files for modding, and updating script mods.</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/mod.json"><code>mod.json</code></a> — Documentation on what all can be declared in the main mod metadata file.</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/Extracting-Wayward-Assets">Extracting assets</a> — A guide on extracting textures, sounds, and more from Wayward.</li>
 </ul>
+
+<a href="#mod-content" id="mod-content" style="color: inherit; text-decoration: none;">
+  <h2>Mod Content</h2>
+</a>
+<ul>
+<li><a href="https://github.com/WaywardGame/types/wiki/Script-Mods">Scripts</a> — Create mods that change the functionality of the game, or add new content</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/Languages-&-Extensions">Languages &amp; Extensions</a> — Adding new languages to Wayward, or adding translatable strings to mods.</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/Customizations">Customizations</a> — Adding new hair styles, hair colours, and skin tones</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/Image-Overrides">Image Overrides</a> — Replacing default sprites &amp; textures</li>
+<li><a href="https://github.com/WaywardGame/types/wiki/Stylesheets">Stylesheets</a> — Changing the appearance of the UI</li>
+</ul>
+
+<a href="#other-useful-links" id="other-useful-links" style="color: inherit; text-decoration: none;">
+  <h1>Other Useful Links</h1>
+</a>
+
+<a href="#wayward-types-viewer" id="wayward-types-viewer" style="color: inherit; text-decoration: none;">
+  <h2><a href="https://waywardgame.github.io/">Wayward Types Viewer</a></h2>
+</a>
+<p>A pretty, searchable list of all the type definitions in Wayward. For the raw form of these type definitions, see the <a href="https://github.com/WaywardGame/types"><code>types</code> repository on GitHub</a>.</p>
+
+<a href="#modding-examples" id="modding-examples" style="color: inherit; text-decoration: none;">
+  <h2><a href="https://github.com/WaywardGame">Modding Examples</a></h2>
+</a>
+<p>Every official mod created for Wayward, and some other Wayward-related projects.</p>
+
+<a href="#steam-workshop" id="steam-workshop" style="color: inherit; text-decoration: none;">
+  <h2><a href="http://steamcommunity.com/app/379210/workshop/">Steam Workshop</a></h2>
+</a>
+<p>Where Wayward mods are published.</p>
 </div></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
