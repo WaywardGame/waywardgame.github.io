@@ -1,54 +1,27 @@
-This website documents the "types" of Wayward — basically, the structure of the game's code.
+# [Wayward Modding Guide](https://github.com/WaywardGame/types/wiki)
+Learn how to mod Wayward.
 
-## Finding an export
-Sometimes, while modding, you'll see examples which reference something you don't have, such as `ItemType`,
-and VSCode will put a red underline under it because you haven't imported it yet. In cases where VSCode is unable to automatically
-import it for you, you can find the path in this documentation.
-
-Clicking on the magnifying glass icon at the top allows you to search the documentation for the export you're looking for.
-In the case of `ItemType`, one of the suggestions is `game/item/IItem.ItemType`. Clicking on it goes to the definition.
-
-Your import will be `import { NAME } from "PATH";`, where NAME is the export you were looking for (ie `ItemType`),
-and PATH is the text of the *second* link in the breadcrumbs (ie at the top it might say, for example, __Wayward Types Viewer__ / __game/item/IItem__ / __ItemType__ /).
-For example `import { ItemType } from "game/item/IItem";`.
-
-Some imports will be the "default" export from a module. In that case the import will be, for example, `import Register from "mod/ModRegistry";`
-Notice how the import is the name without the `{}` curly braces.
-
-
-## Other tips to using this site
-
-The [Module Index](./modules.html) contains a list of every single file in the game, and therefore all possible paths for you to import from.
-
-The **Common Modules** section of the sidebar lists some commonly-referenced things for Wayward modding. Take a look!
-
-You can visit https://waywardgame.github.io/development/ to see a copy of the types specific for the "development" branch in the Steam betas.
-
-
-# Need help?
-
-## Wayward Modding Guide
-**https://github.com/WaywardGame/types/wiki — If you're new, start here!**
+## **[➡ New Modders Start Here! ⬅](https://github.com/WaywardGame/types/wiki)**
 
 ## Documentation
-* `+mod create` & `+mod update` — https://github.com/WaywardGame/types/wiki/mod-create-&-update
-* `mod.json` — https://github.com/WaywardGame/types/wiki/mod.json
-* Extracting assets — https://github.com/WaywardGame/types/wiki/Extracting-Wayward-Assets
+- [\`+mod create\` & \`+mod update\`](https://github.com/WaywardGame/types/wiki/mod-create-&-update) — Documentation on the commands used to generate starter files for modding, and updating script mods.
+- [\`mod.json\`](https://github.com/WaywardGame/types/wiki/mod.json) — Documentation on what all can be declared in the main mod metadata file.
+- [Extracting assets](https://github.com/WaywardGame/types/wiki/Extracting-Wayward-Assets) — A guide on extracting textures, sounds, and more from Wayward.
 
 ## Mod Content
-* Script mods — https://github.com/WaywardGame/types/wiki/Script-Mods
-* Language mods & adding language to script mods — https://github.com/WaywardGame/types/wiki/Languages-&-Extensions
-* Customizations (hair styles, hair colours, skin tones) — https://github.com/WaywardGame/types/wiki/Customizations
-* Image Overrides (replacing sprites & textures) — https://github.com/WaywardGame/types/wiki/Image-Overrides
-* Stylesheets (changing the appearance of the UI) — https://github.com/WaywardGame/types/wiki/Stylesheets
+- [Scripts](https://github.com/WaywardGame/types/wiki/Script-Mods) — Create mods that change the functionality of the game, or add new content
+- [Languages & Extensions](https://github.com/WaywardGame/types/wiki/Languages-&-Extensions) — Adding new languages to Wayward, or adding translatable strings to mods.
+- [Customizations](https://github.com/WaywardGame/types/wiki/Customizations) — Adding new hair styles, hair colours, and skin tones
+- [Image Overrides](https://github.com/WaywardGame/types/wiki/Image-Overrides) — Replacing default sprites & textures
+- [Stylesheets](https://github.com/WaywardGame/types/wiki/Stylesheets) — Changing the appearance of the UI
 
+# Other Useful Links
 
-## Other useful quick-links:
+## [Wayward Types Viewer](https://waywardgame.github.io/)
+A pretty, searchable list of all the type definitions in Wayward. For the raw form of these type definitions, see the [\`types\` repository on GitHub](https://github.com/WaywardGame/types).
 
-* Modding Examples: https://github.com/WaywardGame
+## [Modding Examples](https://github.com/WaywardGame)
+Every official mod created for Wayward, and some other Wayward-related projects.
 
-* Steam Workshop: http://steamcommunity.com/app/379210/workshop/
-
-* Wayward Types Viewer: https://waywardgame.github.io/ — A pretty, searchable website documenting all the "types" of Wayward. If you need to figure out how to do something, or want to see your options, try searching for it on this site! 
-  * Expert users can feel free to search the raw files here: https://github.com/WaywardGame/types/tree/master/definitions
-  * After you have a development environment set up, you can also look in node_modules/@wayward/types/definitions in your mod's directory.
+## [Steam Workshop](http://steamcommunity.com/app/379210/workshop/)
+Where Wayward mods are published.
