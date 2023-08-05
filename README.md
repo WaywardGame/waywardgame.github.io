@@ -4,8 +4,8 @@ Learn how to mod Wayward.
 ## **[➡ New Modders Start Here! ⬅](https://github.com/WaywardGame/types/wiki)**
 
 ## Documentation
-- [\`+mod create\` & \`+mod update\`](https://github.com/WaywardGame/types/wiki/mod-create-&-update) — Documentation on the commands used to generate starter files for modding, and updating script mods.
-- [\`mod.json\`](https://github.com/WaywardGame/types/wiki/mod.json) — Documentation on what all can be declared in the main mod metadata file.
+- [`+mod create` & `+mod update`](https://github.com/WaywardGame/types/wiki/mod-create-&-update) — Documentation on the commands used to generate starter files for modding, and updating script mods.
+- [`mod.json`](https://github.com/WaywardGame/types/wiki/mod.json) — Documentation on what all can be declared in the main mod metadata file.
 - [Extracting assets](https://github.com/WaywardGame/types/wiki/Extracting-Wayward-Assets) — A guide on extracting textures, sounds, and more from Wayward.
 
 ## Mod Content
@@ -18,7 +18,7 @@ Learn how to mod Wayward.
 # Other Useful Links
 
 ## [Wayward Types Viewer](https://waywardgame.github.io/)
-A pretty, searchable list of all the type definitions in Wayward. For the raw form of these type definitions, see the [\`types\` repository on GitHub](https://github.com/WaywardGame/types).
+A pretty, searchable list of all the type definitions in Wayward. For the raw form of these type definitions, see the [`types` repository on GitHub](https://github.com/WaywardGame/types).
 
 ## [Modding Examples](https://github.com/WaywardGame)
 Every official mod created for Wayward, and some other Wayward-related projects.
