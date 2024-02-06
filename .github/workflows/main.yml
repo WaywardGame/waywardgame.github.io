@@ -1,0 +1,55 @@
+name: pages build & deploy
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches:
+      - master
+      - development
+
+jobs:
+  copy_contents:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout destination branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Clean
+        run: |
+          cd gh-pages
+          git rm -rf .
+          cd ..
+          
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: master
+          
+      - name: Checkout development
+        uses: actions/checkout@v2
+        with:
+          ref: development
+          path: development
+          
+      - name: Copy
+        run: |
+          cp -r master/* gh-pages
+          touch gh-pages/.nojekyll
+          mkdir gh-pages/development
+          cp -r development/* gh-pages/development
+
+      - name: Commit and push changes
+        run: |
+          cd gh-pages
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update from ${{ github.ref }}"
+          git push
+    
