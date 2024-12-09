@@ -1,3 +1,7 @@
+This resource is no longer updated and has been archived. Please follow the links below for more information on modding.
+
+---
+
 # [Wayward Modding Guide](https://github.com/WaywardGame/types/wiki)
 Learn how to mod Wayward.
 
@@ -16,9 +20,6 @@ Learn how to mod Wayward.
 - [Stylesheets](https://github.com/WaywardGame/types/wiki/Stylesheets) — Changing the appearance of the UI
 
 # Other Useful Links
-
-## [Wayward Types Viewer](https://waywardgame.github.io/)
-A pretty, searchable list of all the type definitions in Wayward. For the raw form of these type definitions, see the [`types` repository on GitHub](https://github.com/WaywardGame/types).
 
 ## [Modding Examples](https://github.com/WaywardGame)
 Every official mod created for Wayward, and some other Wayward-related projects.
